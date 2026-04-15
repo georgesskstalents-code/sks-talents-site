@@ -1,0 +1,6 @@
+<svg width="320" height="140" viewBox="0 0 320 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="140" rx="24" fill="white"/>
+  <path d="M232 30C245 30 257 42 257 56C257 67 249 77 239 80C247 68 241 51 228 44C229 36 230 30 232 30Z" fill="#0E5BA8"/>
+  <path d="M222 24C239 24 256 39 258 57C249 45 235 39 217 40C213 34 212 29 214 25C217 24 219 24 222 24Z" fill="#FF5C4D"/>
+  <text x="24" y="98" fill="#FF5C4D" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="64" letter-spacing="1">visionix</text>
+</svg>

@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8f8f8;
+  --foreground: #1e2a2a;
+  --card: rgba(255, 255, 255, 0.84);
+  --border: rgba(65, 160, 164, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    linear-gradient(180deg, rgba(223, 243, 241, 0.56), transparent 18%),
+    var(--background);
+  color: var(--foreground);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(65, 160, 164, 0.2);
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.card-surface {
+  @apply rounded-[28px] border border-white/60 bg-white/80 shadow-soft backdrop-blur;
+}
+
+.eyebrow {
+  @apply mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/20 bg-brand-mint px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-stone;
+}
+
+.section-title {
+  @apply font-display text-4xl font-semibold leading-tight text-brand-ink sm:text-5xl;
+}
+
+.section-copy {
+  @apply max-w-3xl text-base leading-8 text-brand-stone sm:text-lg;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blob-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-16px, 20px, 0) scale(1.05);
+  }
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out both;
+}
+
+.animate-blob {
+  animation: blob-float 12s ease-in-out infinite;
+}
+
+.animate-marquee {
+  animation: marquee-left 28s linear infinite;
+}
+
+.animate-marquee-testimonials {
+  animation: marquee-left 42s linear infinite;
+  will-change: transform;
+}

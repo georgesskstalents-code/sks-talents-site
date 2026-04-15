@@ -1,0 +1,35 @@
+import { notFound } from "next/navigation";
+import PageHero from "@/components/PageHero";
+import { animalHealthHub, getSectorPage } from "@/data/sectors";
+
+const categorySlug = "medical-vet";
+
+export function generateStaticParams() {
+  return ["pharma-vaccins", "biotech-animal"].map((slug) => ({ slug }));
+}
+
+export default async function MedicalVetDetailPage({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const page = getSectorPage("animal-health", categorySlug, slug);
+
+  if (!page) {
+    notFound();
+  }
+
+  return (
+    <>
+      <PageHero kicker={animalHealthHub.title} title={page.title} description={page.summary} />
+      <section className="container-shell py-8">
+        <div className="card-surface max-w-4xl p-8">
+          <p className="text-base leading-8 text-brand-stone">
+            Cette page est prête pour accueillir promesse sectorielle, proof points, FAQ SEO et CTA.
+          </p>
+        </div>
+      </section>
+    </>
+  );
+}

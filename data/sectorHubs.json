@@ -1,0 +1,49 @@
+{
+  "life-sciences": {
+    "label": "Life Sciences",
+    "overviewPath": "/life-sciences",
+    "links": [
+      {
+        "href": "/life-sciences",
+        "label": "Hub",
+        "description": "Vue d'ensemble biotech, diagnostic et data"
+      },
+      {
+        "href": "/life-sciences/biotech",
+        "label": "Biotech",
+        "description": "ARN, CRISPR, cell therapy et deeptech"
+      },
+      {
+        "href": "/life-sciences/diagnostic",
+        "label": "Diagnostic",
+        "description": "IVD, NGS, AI diagnostics et genomique"
+      }
+    ]
+  },
+  "animal-health": {
+    "label": "Animal Health",
+    "overviewPath": "/animal-health",
+    "links": [
+      {
+        "href": "/animal-health",
+        "label": "Hub",
+        "description": "Vue d'ensemble pharma, cliniques et petfood"
+      },
+      {
+        "href": "/animal-health/medical-vet",
+        "label": "Medical Vet",
+        "description": "Pharma veterinaire, vaccins et biotech"
+      },
+      {
+        "href": "/animal-health/veterinary",
+        "label": "Veterinary",
+        "description": "Cliniques, care et telemedecine"
+      },
+      {
+        "href": "/animal-health/petfood",
+        "label": "Petfood",
+        "description": "Nutrition, innovation et premium brands"
+      }
+    ]
+  }
+}

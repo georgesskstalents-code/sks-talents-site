@@ -1,0 +1,8 @@
+<svg width="320" height="140" viewBox="0 0 320 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="140" rx="24" fill="white"/>
+  <path d="M42 20L86 96H-2L42 20Z" fill="#37239A"/>
+  <circle cx="36" cy="40" r="13" stroke="white" stroke-width="4"/>
+  <circle cx="22" cy="72" r="11" stroke="white" stroke-width="4"/>
+  <path d="M54 54C64 42 80 40 92 49L70 89C56 84 47 71 54 54Z" fill="#FF7A1B"/>
+  <text x="76" y="114" fill="#37239A" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Miltenyi Biotec</text>
+</svg>
