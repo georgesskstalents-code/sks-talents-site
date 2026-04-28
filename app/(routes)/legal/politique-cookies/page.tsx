@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import CookiePreferencesButton from "@/components/CookiePreferencesButton";
 
@@ -63,12 +64,12 @@ export default function PolitiqueCookiesPage() {
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <CookiePreferencesButton className="inline-flex rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10" />
-              <a
+              <Link
                 href="/legal/politique-confidentialite"
                 className="inline-flex rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 Voir la politique de confidentialité
-              </a>
+              </Link>
             </div>
           </div>
         </div>
