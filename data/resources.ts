@@ -17,9 +17,84 @@ export type ExternalResourceLink = {
   logoUrl: string;
 };
 
-const favicon = (url: string) => `https://www.google.com/s2/favicons?sz=128&domain_url=${encodeURIComponent(url)}`;
+const favicon = (url: string) => {
+  return `https://www.google.com/s2/favicons?sz=256&domain_url=${encodeURIComponent(url)}`;
+};
 
-export const schools: ResourceItem[] = [
+const schoolDirectory: Record<string, string> = {
+  "universite-strasbourg-life-sciences": "https://www.unistra.fr/",
+  "universite-paris-saclay-biology": "https://www.universite-paris-saclay.fr/",
+  "universite-paris-saclay": "https://www.universite-paris-saclay.fr/",
+  "insa-lyon-bioengineering": "https://www.insa-lyon.fr/",
+  supbiotech: "https://www.supbiotech.fr/",
+  "utc-biomed": "https://www.utc.fr/",
+  "esigen-bioinformatique": "https://www.u-bourgogne.fr/",
+  "universite-evry-paris-saclay-genomics": "https://www.univ-evry.fr/",
+  "genopole-campus-evry": "https://www.genopole.fr/",
+  "centrale-supelec-health": "https://www.centralesupelec.fr/",
+  "universite-montpellier-pharma": "https://www.umontpellier.fr/",
+  "universite-lille-biotech": "https://www.univ-lille.fr/",
+  "em-lyon-healthcare": "https://em-lyon.com/",
+  "essec-healthcare": "https://www.essec.edu/",
+  "audencia-animal-health": "https://www.audencia.com/",
+  "isa-lille-nutrition": "https://www.junia.com/",
+  "agrocampus-ouest": "https://www.institut-agro-rennes-angers.fr/",
+  "ecole-biologie-industrielle-cergy": "https://www.ebi-edu.com/",
+  "universite-angers-veterinary-sciences": "https://www.univ-angers.fr/",
+  "skema-life-sciences-business": "https://www.skema.edu/",
+  "iuem-ubo-plouzane": "https://www-iuem.univ-brest.fr/",
+  "mines-nancy": "https://mines-nancy.univ-lorraine.fr/",
+  "institut-littoral-urbain-durable-intelligent-la-rochelle": "https://www.univ-larochelle.fr/",
+  "icap-montpellier": "https://www.umontpellier.fr/",
+  "mines-paris-tech": "https://www.minesparis.psl.eu/",
+  "telecom-paris-tech": "https://www.telecom-paris.fr/",
+  "isae-supaero": "https://www.isae-supaero.fr/",
+  enpc: "https://www.ecoledesponts.fr/",
+  epita: "https://www.epita.fr/",
+  "grenoble-inp-ensimag": "https://ensimag.grenoble-inp.fr/",
+  "imt-atlantique": "https://www.imt-atlantique.fr/",
+  "topcos-nantes": "https://pharmacie.univ-nantes.fr/",
+  "faculte-pharmacie-universite-strasbourg": "https://pharma.unistra.fr/",
+  esilv: "https://www.esilv.fr/",
+  "grenoble-inp-phelma": "https://phelma.grenoble-inp.fr/",
+  "faculte-sciences-et-ingenieur-lorient": "https://www.univ-ubs.fr/",
+  "ensta-paris-tech": "https://www.ensta-paris.fr/",
+  espci: "https://www.espci.psl.eu/",
+  "efrei-paris": "https://www.efrei.fr/",
+  "centrale-nantes": "https://www.ec-nantes.fr/",
+  "cesi-ecole-ingenieurs": "https://ecole-ingenieurs.cesi.fr/",
+  "uco-biotechnologies-produits-cosmetiques": "https://www.uco.fr/",
+  "centrale-lyon": "https://www.ec-lyon.fr/",
+  "chimie-paris-tech": "https://www.chimieparistech.psl.eu/",
+  "esbs-strasbourg": "https://esbs.unistra.fr/",
+  centralesupelec: "https://www.centralesupelec.fr/",
+  "arpac-le-havre": "https://www.univ-lehavre.fr/",
+  "sciences-agro-bordeaux": "https://www.agro-bordeaux.fr/",
+  "institut-agro-dijon": "https://institut-agro-dijon.fr/",
+  "iut-orleans": "https://www.univ-orleans.fr/fr/iut-orleans",
+  "institut-agro-rennes-angers": "https://www.institut-agro-rennes-angers.fr/",
+  "uco-guingamp": "https://www.uco.fr/",
+  "institut-agro-montpellier": "https://www.institut-agro-montpellier.fr/",
+  ensat: "https://www.ensat.fr/",
+  itech: "https://www.itech.fr/",
+  "escom-compiegne": "https://www.escom.fr/",
+  "enscmu-mulhouse": "https://www.enscmu.uha.fr/",
+  "essec-cergy": "https://www.essec.edu/",
+  "cif-lille": "https://www.univ-lille.fr/",
+  ensaia: "https://ensaia.univ-lorraine.fr/",
+  "master-sciences-du-medicament-orleans": "https://www.univ-orleans.fr/",
+  "ecole-superieure-du-parfum": "https://www.ecole-parfum.com/",
+  "esepac-saint-germain-laprade": "https://www.esepac.com/",
+  "ipil-lyon": "https://www.ipil.fr/",
+  "foqual-nice": "https://univ-cotedazur.fr/",
+  "ubs-vannes": "https://www.univ-ubs.fr/",
+  "universite-d-angers": "https://www.univ-angers.fr/",
+  "master-formulation-data-mining-cergy": "https://www.cyu.fr/",
+  "isipca-versailles": "https://www.isipca.fr/",
+  polytechnique: "https://www.polytechnique.edu/"
+};
+
+const rawSchools: ResourceItem[] = [
   { slug: "agroparistech", title: "AgroParisTech", summary: "Grande école de référence pour les sciences du vivant, l’agroalimentaire et l’innovation.", sector: "Life Sciences", location: "Paris", href: "https://www.agroparistech.fr/", logoUrl: favicon("https://www.agroparistech.fr/") },
   { slug: "oniris", title: "Oniris", summary: "École nationale vétérinaire et agroalimentaire, vivier de talents santé animale.", sector: "Animal Health", location: "Nantes", href: "https://www.oniris-nantes.fr/", logoUrl: favicon("https://www.oniris-nantes.fr/") },
   { slug: "vetagro-sup", title: "VetAgro Sup", summary: "Formation vétérinaire, agronomie et santé publique vétérinaire.", sector: "Animal Health", location: "Lyon", href: "https://www.vetagro-sup.fr/", logoUrl: favicon("https://www.vetagro-sup.fr/") },
@@ -98,6 +173,16 @@ export const schools: ResourceItem[] = [
   { slug: "polytechnique", title: "École Polytechnique", summary: "Profils d’excellence pour deeptech, data, medtech, biotech et innovation scientifique.", sector: "MedTech", location: "Palaiseau", dateLabel: "17 avr. 2023" }
 ];
 
+export const schools: ResourceItem[] = rawSchools.map((item) => {
+  const href = item.href ?? schoolDirectory[item.slug];
+
+  return {
+    ...item,
+    href,
+    logoUrl: item.logoUrl ?? (href ? favicon(href) : undefined)
+  };
+});
+
 export const institutionalPartners: ExternalResourceLink[] = [
   { name: "Business France", href: "https://www.businessfrance.fr/", summary: "Attractivité, export et accompagnement des entreprises françaises à l’international.", meta: "Partenaire institutionnel", logoUrl: favicon("https://www.businessfrance.fr/") },
   { name: "Conférence des DG de CHRU", href: "https://www.dg-chru.fr/la-conference/", summary: "Conférence des directeurs généraux de CHRU, interface importante entre hôpital, recherche et innovation.", meta: "Partenaire institutionnel", logoUrl: favicon("https://www.dg-chru.fr/") },
@@ -112,12 +197,13 @@ export const financialPartners: ExternalResourceLink[] = [
 ];
 
 export const associationsAndNetworks: ExternalResourceLink[] = [
+  { name: "Abidjanaises In Tech", href: "https://www.abidjanaisesintech.ci/", summary: "Réseau d’expertise et club d’affaires basé à Abidjan, dédié à l’inclusion, à l’excellence des femmes dans la tech et au développement de l’écosystème numérique en Côte d’Ivoire et en Afrique francophone.", meta: "Écosystème Afrique francophone", logoUrl: favicon("https://www.abidjanaisesintech.ci/") },
   { name: "Femmes de Santé", href: "https://www.femmesdesante.fr/", summary: "Réseau d’influence et de leadership dans la santé.", meta: "Réseau professionnel", logoUrl: favicon("https://www.femmesdesante.fr/") },
   { name: "FemTech France", href: "https://www.femtechfrance.org/", summary: "Association dédiée à l’innovation en santé des femmes.", meta: "Réseau professionnel", logoUrl: favicon("https://www.femtechfrance.org/") },
   { name: "France Deeptech", href: "https://www.francedeeptech.org/", summary: "Communauté qui rassemble les acteurs de la deeptech française.", meta: "Réseau professionnel", logoUrl: favicon("https://www.francedeeptech.org/") },
   { name: "France Digitale", href: "https://francedigitale.org/", summary: "Association d’entrepreneurs et d’investisseurs tech en France.", meta: "Réseau professionnel", logoUrl: favicon("https://francedigitale.org/") },
   { name: "French Healthcare", href: "https://frenchhealthcare.fr/", summary: "Initiative public-privé pour promouvoir les expertises françaises de santé à l’international.", meta: "Réseau professionnel", logoUrl: favicon("https://frenchhealthcare.fr/") },
-  { name: "La French Tech", href: "https://lafrenchtech.gouv.fr/", summary: "Écosystème public de soutien aux startups et à l’innovation.", meta: "Réseau professionnel", logoUrl: favicon("https://lafrenchtech.gouv.fr/") },
+  { name: "La French Tech", href: "https://lafrenchtech.gouv.fr/fr/", summary: "La Mission French Tech déploie les politiques publiques en faveur des start-up françaises, fédère l’écosystème et anime un réseau de Capitales et Communautés en France et à l’international.", meta: "Mission & réseau public", logoUrl: favicon("https://lafrenchtech.gouv.fr/fr/") },
   { name: "Leem", href: "https://www.leem.org/", summary: "Organisation professionnelle des entreprises du médicament en France.", meta: "Fédération", logoUrl: favicon("https://www.leem.org/") },
   { name: "MabDesign", href: "https://mabdesign.fr/", summary: "Réseau industriel et expert des biothérapies et biomédicaments.", meta: "Réseau professionnel", logoUrl: favicon("https://mabdesign.fr/") },
   { name: "MedTech in France", href: "https://www.medtechinfrance.fr/", summary: "Association des entreprises françaises des technologies médicales.", meta: "Association MedTech", logoUrl: favicon("https://www.medtechinfrance.fr/") },
@@ -161,6 +247,77 @@ export const veterinaryOfficialResources: ExternalResourceLink[] = [
 ];
 
 export const events: ResourceItem[] = [
+  {
+    slug: "france-biotech-medecine-nucleaire-riv-paris-sante-campus",
+    title:
+      "France Biotech : médecine nucléaire et radiothérapie interne vectorisée à PariSanté Campus",
+    summary:
+      "Événement France Biotech consacré aux enjeux, perspectives et à la structuration de la filière médecine nucléaire et RIV en France.",
+    sector: "Médecine nucléaire",
+    location: "Paris",
+    dateLabel: "4 avril 2025",
+    href: "https://france-biotech.fr/wp-content/uploads/2025/06/France-Biotech-CP-Etat-des-Lieux-med-nucleaire-VDEF-1.pdf"
+  },
+  {
+    slug: "bpifrance-le-hub-ia-agentique-modele-operatoire",
+    title: "Bpifrance Le Hub : IA agentique et modèle opératoire",
+    summary:
+      "Événement Le Hub sur l’IA agentique et la transformation des modèles opératoires des grands groupes.",
+    sector: "Tech & Innovation",
+    location: "Paris",
+    dateLabel: "17 mars 2026",
+    href: "https://lehub.bpifrance.fr/"
+  },
+  {
+    slug: "bpifrance-le-hub-ia-au-feminin",
+    title: "Bpifrance Le Hub : l’IA au féminin",
+    summary:
+      "Événement Le Hub consacré aux leviers concrets pour renforcer la parité dans la tech et l’IA.",
+    sector: "Écosystème Tech",
+    location: "Paris",
+    dateLabel: "24 mars 2026",
+    href: "https://lehub.bpifrance.fr/"
+  },
+  {
+    slug: "bpifrance-le-hub-trend-up-tendances-tech",
+    title: "Bpifrance Le Hub : Trend’Up, les tendances tech décryptées",
+    summary:
+      "Rendez-vous Le Hub pour suivre les signaux tech, innovation et croissance utiles aux dirigeants et DRH.",
+    sector: "Tech & Innovation",
+    location: "Paris",
+    dateLabel: "31 mars 2026",
+    href: "https://lehub.bpifrance.fr/"
+  },
+  {
+    slug: "business-france-vie-webinaire-apec-france-travail",
+    title: "Business France / V.I.E : webinaire avec l’APEC et France Travail",
+    summary:
+      "Webinaire digital Business France autour du dispositif V.I.E pour accélérer le recrutement et l’internationalisation.",
+    sector: "International RH",
+    location: "Digital",
+    dateLabel: "12 janvier 2026",
+    href: "https://vie.businessfrance.fr/evenements/2026-01-12/"
+  },
+  {
+    slug: "business-france-vie-connect-2026",
+    title: "Business France / V.I.E Connect 2026",
+    summary:
+      "Événement Business France dédié au recrutement international V.I.E, avec journée réseau à Paris et relais digital.",
+    sector: "International RH",
+    location: "Paris",
+    dateLabel: "3 novembre 2026",
+    href: "https://vie.businessfrance.fr/evenements/v-i-e-connect-2026/"
+  },
+  {
+    slug: "centre-europeen-medecine-nucleaire-abidjan-annonce",
+    title: "Abidjan : annonce du Centre européen de médecine nucléaire",
+    summary:
+      "Annonce institutionnelle du futur centre de médecine nucléaire d’Abidjan, présenté comme une première en Afrique de l’Ouest.",
+    sector: "Médecine nucléaire",
+    location: "Abidjan",
+    dateLabel: "14 avril 2026",
+    href: "https://dominiqueouattara.ci/"
+  },
   { slug: "france-vet", title: "France Vet", summary: "Le rendez-vous des vétérinaires praticiens, réseaux et fournisseurs.", sector: "Animal Health", location: "Paris", dateLabel: "Juin 2026" },
   { slug: "forum-labo", title: "Forum Labo", summary: "Salon de référence pour laboratoires, instrumentation et diagnostic.", sector: "Diagnostic", location: "Paris", dateLabel: "Mars 2026" },
   { slug: "biofit", title: "BioFIT", summary: "Événement majeur pour partenariats biotech, licensing et innovation santé.", sector: "Biotech", location: "Lille", dateLabel: "Décembre 2026" },

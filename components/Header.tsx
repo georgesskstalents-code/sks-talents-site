@@ -1,16 +1,23 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-
-const calendlyUrl =
-  process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/g-kengue/talentconsulting";
+import { Search } from "lucide-react";
+import { Suspense, useState } from "react";
+import SiteLanguageSelector from "@/components/SiteLanguageSelector";
 
 const navGroups = [
   {
     href: "/about",
     label: "Qui sommes-nous",
     children: [
+      {
+        href: "/about",
+        label: "Notre histoire et nos valeurs"
+      },
+      {
+        href: "/mission",
+        label: "Notre mission"
+      },
       {
         href: "/team",
         label: "Notre équipe"
@@ -39,6 +46,18 @@ const navGroups = [
   }
 ];
 
+function LanguageSelectorFallback() {
+  return (
+    <div
+      className="inline-flex min-h-[44px] items-center gap-1 rounded-full border border-brand-teal/20 bg-white/90 p-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-stone shadow-soft"
+      aria-hidden="true"
+    >
+      <span className="rounded-full bg-brand-mint px-3 py-2 text-brand-teal">FR</span>
+      <span className="px-3 py-2">EN</span>
+    </div>
+  );
+}
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -47,7 +66,7 @@ export default function Header() {
       <div className="container-shell flex min-h-[84px] items-center gap-4 xl:gap-7">
         <Link href="/" className="mr-1 flex shrink-0 items-center xl:mr-3">
           <img
-            src="/brand/logo-sks-talents.svg"
+            src="/brand/logo-sks-talents-signature.svg"
             alt="SKS TALENTS"
             className="h-12 w-auto max-w-none object-contain object-left sm:h-14"
           />
@@ -72,12 +91,6 @@ export default function Header() {
                       ▾
                     </summary>
                     <div className="absolute left-0 top-full z-40 mt-3 min-w-[240px] rounded-[22px] border border-brand-line bg-white p-3 shadow-[0_20px_45px_rgba(15,23,42,0.12)]">
-                      <Link
-                        href={item.href}
-                        className="block rounded-[16px] px-4 py-3 text-sm font-semibold text-brand-stone transition hover:bg-brand-mint/40 hover:text-brand-teal"
-                      >
-                        La page Qui sommes-nous
-                      </Link>
                       {item.children.map((child) => (
                         <Link
                           key={child.href}
@@ -105,19 +118,15 @@ export default function Header() {
 
         <div className="ml-auto hidden items-center gap-3 md:flex">
           <Link
-            href="/contact#rappel"
-            className="rounded-full border border-brand-teal/30 px-5 py-3 text-sm font-semibold text-brand-teal transition hover:bg-brand-mint"
+            href="/search"
+            className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-brand-teal/20 px-5 py-3 text-sm font-semibold text-brand-stone transition hover:bg-brand-mint hover:text-brand-teal"
           >
-            Être rappelé
+            <Search size={16} />
+            Chercher
           </Link>
-          <a
-            href={calendlyUrl}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="rounded-full bg-brand-teal px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
-          >
-            Réserver un call
-          </a>
+          <Suspense fallback={<LanguageSelectorFallback />}>
+            <SiteLanguageSelector />
+          </Suspense>
         </div>
 
         <button
@@ -138,13 +147,6 @@ export default function Header() {
                   <>
                     <p className="text-base font-semibold text-brand-stone">{item.label}</p>
                     <div className="ml-4 flex flex-col gap-2 border-l border-brand-line pl-4">
-                      <Link
-                        href={item.href}
-                        className="text-sm font-semibold text-brand-stone/80"
-                        onClick={() => setMenuOpen(false)}
-                      >
-                        La page Qui sommes-nous
-                      </Link>
                       {item.children.map((child) => (
                         <Link
                           key={child.href}
@@ -169,12 +171,18 @@ export default function Header() {
               </div>
             ))}
             <Link
-              href="/contact#rappel"
-              className="rounded-full bg-brand-teal px-5 py-3 text-center text-sm font-semibold text-white"
+              href="/search"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-brand-teal/20 px-5 py-3 text-center text-sm font-semibold text-brand-stone"
               onClick={() => setMenuOpen(false)}
             >
-              Être rappelé
+              <Search size={16} />
+              Chercher
             </Link>
+            <div className="pt-1">
+              <Suspense fallback={<LanguageSelectorFallback />}>
+                <SiteLanguageSelector />
+              </Suspense>
+            </div>
           </div>
         </div>
       ) : null}

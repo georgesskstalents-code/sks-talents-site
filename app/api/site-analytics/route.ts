@@ -8,11 +8,20 @@ import {
 } from "@/lib/requestSecurity";
 
 type SiteAnalyticsBody = {
-  type?: "pageview" | "agent_query" | "agent_click" | "cta_click";
+  type?:
+    | "pageview"
+    | "agent_query"
+    | "agent_click"
+    | "cta_click"
+    | "form_submit"
+    | "form_success"
+    | "form_error"
+    | "frontend_error";
   path?: string;
   title?: string;
   query?: string;
   target?: string;
+  message?: string;
   sessionId?: string;
 };
 
@@ -43,8 +52,22 @@ export async function POST(request: Request) {
   }
 
   const body = parsedBody.body;
-  const type: "pageview" | "agent_query" | "agent_click" | "cta_click" =
-    body.type === "agent_query" || body.type === "agent_click" || body.type === "cta_click"
+  const type:
+    | "pageview"
+    | "agent_query"
+    | "agent_click"
+    | "cta_click"
+    | "form_submit"
+    | "form_success"
+    | "form_error"
+    | "frontend_error" =
+    body.type === "agent_query" ||
+    body.type === "agent_click" ||
+    body.type === "cta_click" ||
+    body.type === "form_submit" ||
+    body.type === "form_success" ||
+    body.type === "form_error" ||
+    body.type === "frontend_error"
       ? body.type
       : "pageview";
 
@@ -54,6 +77,7 @@ export async function POST(request: Request) {
     title: normalizeText(body.title, 180),
     query: normalizeText(body.query, 240),
     target: normalizeText(body.target, 240),
+    message: normalizeText(body.message, 320),
     sessionId: normalizeText(body.sessionId, 80),
     createdAt: new Date().toISOString()
   };

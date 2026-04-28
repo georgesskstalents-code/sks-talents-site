@@ -1,7 +1,11 @@
+import FAQSection from "@/components/FAQSection";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
+import GEOAnswerCard from "@/components/GEOAnswerCard";
 import ListingCard from "@/components/ListingCard";
 import ExternalLinkGrid from "@/components/ExternalLinkGrid";
+import ResourcesAlertsCard from "@/components/ResourcesAlertsCard";
+import Link from "next/link";
 import {
   associationsAndNetworks,
   clustersAndIncubators,
@@ -15,8 +19,21 @@ import {
 } from "@/data/resources";
 import { ecosystemStudy } from "@/data/ecosystemTargets";
 import { trackedInvestmentFundsDirectory } from "@/data/investmentFunds";
+import { getNotionSiteContentList } from "@/lib/notion";
 
-export default function ResourcesPage() {
+export const dynamic = "force-dynamic";
+
+export default async function ResourcesPage() {
+  let notionEvents: Awaited<ReturnType<typeof getNotionSiteContentList>> = [];
+
+  try {
+    notionEvents = await getNotionSiteContentList("event", 100);
+  } catch (error) {
+    console.error("Resources page: failed to load Notion events, using local fallback.", error);
+  }
+
+  const eventCount = new Set([...events.map((item) => item.slug), ...notionEvents.map((item) => item.slug)]).size;
+
   return (
     <>
       <PageHero
@@ -24,9 +41,41 @@ export default function ResourcesPage() {
         title="Des hubs éditoriaux conçus pour capter les recherches à forte valeur."
         description="Salaires, fiches métiers, fonds, écoles, comparatifs et insights marché structurés comme des pages de référence à mettre à jour régulièrement, avec un focus sur les entreprises en Seed, Série A et Série B."
       />
+      <section className="container-shell grid gap-4 py-4 lg:grid-cols-3">
+        <GEOAnswerCard
+          title="Que trouve-t-on dans les ressources SKS TALENTS ?"
+          answer="Les ressources SKS TALENTS regroupent les pages les plus utiles pour répondre vite à une question métier, salaire, école, fonds, événement ou signal marché dans les Life Sciences et l’Animal Health."
+          bullets={[
+            "Pages salaires et calcul brut/net",
+            "Fiches métiers et comparatifs",
+            "Écoles, fonds, événements et hubs marché",
+            "Maillage interne pensé pour SEO et conversion"
+          ]}
+        />
+        <GEOAnswerCard
+          title="Pourquoi cette page est-elle importante pour Google et les IA ?"
+          answer="Parce qu’elle organise tout le corpus SKS TALENTS en blocs explicites, faciles à parcourir et à comprendre, avec des intitulés très proches des requêtes réelles des décideurs, candidats et recruteurs."
+          bullets={[
+            "Réponses directes en haut de page",
+            "Titres orientés question ou intention utilisateur",
+            "Liens clairs vers les hubs les plus utiles",
+            "Couverture France, EMEA et Afrique francophone"
+          ]}
+        />
+        <GEOAnswerCard
+          title="Quels profils de visiteurs peuvent utiliser cette page ?"
+          answer="Un CEO ou COO peut l’utiliser pour lire un marché, un DRH pour cadrer un recrutement, un candidat pour comprendre un rôle, et un partenaire pour identifier les réseaux, médias, fonds ou écoles à suivre."
+          bullets={[
+            "CEO / COO : signaux marché et croissance",
+            "DRH / CPO : métiers, pénurie et salaires",
+            "Candidats : orientation et compréhension des rôles",
+            "Partenaires : écosystème, médias et événements"
+          ]}
+        />
+      </section>
       <SectionShell
-        eyebrow="Éditorial"
-        title="Des contenus pensés par persona, secteur et topic."
+        eyebrow="Question fréquente"
+        title="Comment utiliser cette base de ressources pour répondre à une question précise ?"
         description="La structure proposée permet de faire vivre plus de 50 articles, 35 fiches métiers et plusieurs hubs thématiques, notamment sur les recrutements critiques qui suivent une levée Seed, Série A ou Série B."
       >
         <div className="mb-8 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
@@ -83,7 +132,7 @@ export default function ResourcesPage() {
           <ListingCard
             href="/events"
             title="Événements & séminaires"
-            description={`${events.length} pages événements pour travailler visibilité, maillage interne et preuves d’écosystème.`}
+            description={`${eventCount} pages événements pour travailler visibilité, maillage interne et preuves d’écosystème.`}
             meta="Écosystème"
           />
           <ListingCard
@@ -143,8 +192,152 @@ export default function ResourcesPage() {
         </div>
       </SectionShell>
       <SectionShell
-        eyebrow="Fonds d’investissement"
-        title="Une base de fonds santé à suivre avec liens officiels"
+        eyebrow="Formats SEO"
+        title="Quels formats de contenu renforcent le mieux votre visibilité ?"
+        description="Les formats les plus efficaces pour le SEO spécialisé ne se limitent pas aux articles. Votre site couvre déjà plusieurs briques fortes ; cette matrice les rend plus lisibles pour les visiteurs, pour Google et pour les moteurs conversationnels."
+      >
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <ListingCard
+            href="/blog"
+            title="Articles de fond"
+            description="Des contenus longs pour capter la longue traîne, répondre à des questions précises et asseoir l’expertise SKS TALENTS sur les Life Sciences et l’Animal Health."
+            meta="Autorité & longue traîne"
+          />
+          <ListingCard
+            href="/studies"
+            title="Guides pratiques & études"
+            description="Des formats plus structurés pour traiter les sujets “comment faire”, transformer une veille en méthode et convertir des lecteurs qualifiés en leads."
+            meta="How-to & lead magnet"
+          />
+          <ListingCard
+            href="/comparatifs"
+            title="Comparatifs & formats listes"
+            description="Des pages conçues pour les requêtes à forte intention, les arbitrages rapides et les lecteurs qui cherchent une réponse simple avant de décider."
+            meta="Intentions fortes"
+          />
+          <ListingCard
+            href="/references"
+            title="Études de cas & preuves"
+            description="Le format le plus utile pour renforcer la confiance, montrer des environnements déjà traités et soutenir la conversion sur des marchés exigeants."
+            meta="Confiance & conversion"
+          />
+          <ListingCard
+            href="/services/website"
+            title="Vidéo embarquée & présentation"
+            description="Un format d’engagement utile pour retenir l’attention, expliquer votre positionnement et garder le trafic sur le site avec un support visuel plus vivant."
+            meta="Engagement & réassurance"
+          />
+          <ListingCard
+            href="/studies"
+            title="Repères visuels & infographies"
+            description="Des synthèses visuelles pour simplifier des sujets complexes, rendre les contenus plus partageables et soutenir une lecture plus rapide sur mobile."
+            meta="Visuel & backlinks"
+          />
+          <ListingCard
+            href="/salary-benchmarks"
+            title="FAQ & réponses directes"
+            description="Des blocs courts, structurés et lisibles pour capter la position zéro, répondre aux requêtes conversationnelles et nourrir Google comme les LLM."
+            meta="Position zéro & GEO"
+          />
+          <ListingCard
+            href="/job-roles"
+            title="Fiches métiers détaillées"
+            description="Un format SEO très fort pour travailler la pénurie, les compétences, la rémunération, le marché et la décision de recrutement dans une même page."
+            meta="SEO métier"
+          />
+          <ListingCard
+            href="/news"
+            title="Actualités à enrichir"
+            description="Les signaux chauds, nominations, financements et mouvements d’écosystème à transformer ensuite en articles de fond, guides ou études de cas."
+            meta="Freshness & intent"
+          />
+        </div>
+      </SectionShell>
+      <SectionShell
+        eyebrow="Matrice de décision"
+        title="Quel format choisir selon votre objectif SEO ?"
+        description="Le bon format dépend du résultat attendu. Cette lecture simple reprend la logique la plus utile pour un site expert : trafic qualifié, position zéro, backlinks, confiance et conversion."
+      >
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {[
+            {
+              title: "Attirer un trafic qualifié",
+              copy: "Privilégiez des articles de fond et des fiches métiers longues traînes pour répondre à des requêtes précises, contextualisées et proches des besoins terrain.",
+              links: [
+                { href: "/blog", label: "Articles de fond" },
+                { href: "/job-roles", label: "Fiches métiers" }
+              ]
+            },
+            {
+              title: "Capter la position zéro",
+              copy: "Les guides structurés, les réponses courtes et les FAQ restent les formats les plus lisibles pour les requêtes “comment”, “pourquoi” et les moteurs conversationnels.",
+              links: [
+                { href: "/studies", label: "Guides & études" },
+                { href: "/salary-benchmarks", label: "FAQ & réponses directes" }
+              ]
+            },
+            {
+              title: "Générer des backlinks",
+              copy: "Les synthèses visuelles, repères marché et pages data simplifient le complexe et se partagent plus facilement quand une donnée mérite d’être citée.",
+              links: [
+                { href: "/studies", label: "Repères visuels" },
+                { href: "/news", label: "Données & signaux marché" }
+              ]
+            },
+            {
+              title: "Renforcer la confiance",
+              copy: "Les études de cas, références et preuves d’exécution sont les meilleurs formats pour montrer que vous savez opérer sur des marchés exigeants.",
+              links: [
+                { href: "/references", label: "Références" },
+                { href: "/team", label: "Équipe & expertise" }
+              ]
+            },
+            {
+              title: "Retenir et convertir",
+              copy: "La vidéo embarquée, les comparatifs et les pages de service aident à garder le visiteur sur le site puis à l’orienter vers une prise de contact utile.",
+              links: [
+                { href: "/services/website", label: "Vidéo embarquée" },
+                { href: "/comparatifs", label: "Comparatifs" }
+              ]
+            },
+            {
+              title: "Transformer l’actualité en autorité",
+              copy: "Les signaux chauds ont plus de valeur lorsqu’ils sont réécrits ensuite en article de fond, guide pratique ou étude plus durable.",
+              links: [
+                { href: "/news", label: "Actualités" },
+                { href: "/blog", label: "Passer en article de fond" }
+              ]
+            }
+          ].map((item) => (
+            <article key={item.title} className="card-surface p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">Objectif prioritaire</p>
+              <h3 className="mt-3 font-display text-2xl text-brand-ink">{item.title}</h3>
+              <p className="mt-4 text-sm leading-7 text-brand-stone">{item.copy}</p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                {item.links.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="rounded-full border border-brand-teal/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-brand-teal transition hover:border-brand-teal/40 hover:bg-brand-teal hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </SectionShell>
+      <SectionShell
+        eyebrow="Veille continue"
+        title="Souhaitez-vous recevoir les prochaines ressources à forte valeur ?"
+        description="Un point d’entrée simple pour rester exposé aux prochains contenus utiles publiés par SKS TALENTS : signaux marché, métiers, salaires, événements, écoles, fonds et ressources d’écosystème."
+      >
+        <ResourcesAlertsCard />
+      </SectionShell>
+      <SectionShell
+        eyebrow="Question fréquente"
+        title="Quels fonds santé suivre pour comprendre un marché ou une levée ?"
         description="Cette sélection s’appuie sur la synthèse publique France Biotech 2024 et sur des sources officielles complémentaires comme Mars x Digitalis Ventures et Angels Santé."
       >
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -174,36 +367,36 @@ export default function ResourcesPage() {
         </div>
       </SectionShell>
       <SectionShell
-        eyebrow="Partenaires institutionnels"
-        title="Des acteurs publics et institutionnels qui comptent dans l’écosystème"
+        eyebrow="Question fréquente"
+        title="Quels partenaires institutionnels et publics comptent vraiment dans cet écosystème ?"
         description="Cette sélection aide à capter les recherches liées à l’export, au financement, à la santé et à l’accompagnement des entreprises innovantes."
       >
         <ExternalLinkGrid items={institutionalPartners} />
       </SectionShell>
       <SectionShell
-        eyebrow="Partenaires financiers"
-        title="Fonds, banques et plateformes utiles pour la croissance"
+        eyebrow="Question fréquente"
+        title="Quels partenaires financiers suivre pour la croissance ?"
         description="Des sources utiles pour les recherches autour du financement, des levées, des marchés et des partenaires capital marché."
       >
         <ExternalLinkGrid items={financialPartners} />
       </SectionShell>
       <SectionShell
-        eyebrow="Associations & réseaux"
-        title="Les fédérations et réseaux professionnels à surveiller"
+        eyebrow="Question fréquente"
+        title="Quelles associations et quels réseaux professionnels faut-il surveiller ?"
         description="Ces pages renforcent votre couverture des requêtes liées aux réseaux santé, deeptech, medtech, biotech et leaders d’opinion."
       >
         <ExternalLinkGrid items={associationsAndNetworks} />
       </SectionShell>
       <SectionShell
-        eyebrow="Pôles & clusters"
-        title="Les hubs d’innovation, clusters et incubateurs à suivre"
+        eyebrow="Question fréquente"
+        title="Quels clusters, pôles et incubateurs suivre dans les sciences du vivant ?"
         description="Un maillage utile pour les pages backlinks, l’autorité sectorielle et les recherches entreprises liées aux bassins d’innovation."
       >
         <ExternalLinkGrid items={clustersAndIncubators} />
       </SectionShell>
       <SectionShell
-        eyebrow="Ressources vétérinaires"
-        title="Des entrées officielles pour les étudiants, jeunes diplômés et structures vétérinaires"
+        eyebrow="Question fréquente"
+        title="Où trouver des ressources vétérinaires fiables ?"
         description="L’Ordre national des vétérinaires offre des ressources solides pour les recherches autour de la profession, des conditions d’exercice et des démarches."
       >
         <ExternalLinkGrid items={veterinaryOfficialResources} />
@@ -223,12 +416,49 @@ export default function ResourcesPage() {
         </div>
       </SectionShell>
       <SectionShell
-        eyebrow="Médias"
-        title="Les médias spécialisés à suivre"
+        eyebrow="Question fréquente"
+        title="Quels médias spécialisés suivre pour les signaux marché ?"
         description="Des références éditoriales utiles pour relayer les signaux marché, le financement et les mouvements d’acteurs du secteur."
       >
         <ExternalLinkGrid items={mediaPartners} />
       </SectionShell>
+      <FAQSection
+        eyebrow="FAQ GEO"
+        title="Questions fréquentes sur les ressources SKS TALENTS"
+        description="Une FAQ structurée pour rendre cette page encore plus lisible par Google, ChatGPT, Claude, Mistral et Perplexity, ainsi que par vos visiteurs."
+        items={[
+          {
+            question: "Que trouve-t-on dans les ressources SKS TALENTS ?",
+            answer:
+              "Les ressources SKS TALENTS regroupent des hubs salaires, métiers, écoles, fonds, événements, comparatifs, médias, partenaires institutionnels et réseaux sectoriels pour répondre rapidement à une recherche de marché ou de recrutement."
+          },
+          {
+            question: "Quelles ressources sont les plus utiles pour un CEO, COO ou DRH ?",
+            answer:
+              "Un CEO ou COO utilisera surtout les pages marché, fonds, comparatifs et événements. Un DRH ou CPO utilisera davantage les fiches métiers, benchmarks salaires, écoles spécialisées et pages ressources liées à la pénurie ou à la structuration RH."
+          },
+          {
+            question: "Comment utiliser cette page pour répondre à une question précise ?",
+            answer:
+              "La logique la plus efficace consiste à partir d’une question métier, salaire, école, événement, levée ou écosystème, puis à suivre les passerelles internes entre hubs. Cette structure a été pensée pour accélérer la recherche d’information utile et transformer la lecture en action."
+          },
+          {
+            question: "Quel format choisir selon son objectif SEO ?",
+            answer:
+              "Pour du trafic qualifié, les articles de fond et fiches métiers restent les plus solides. Pour la position zéro, les guides pratiques et FAQ sont les plus efficaces. Pour la conversion, les études de cas, références, comparatifs et vidéos embarquées apportent plus de réassurance."
+          },
+          {
+            question: "Pourquoi combiner plusieurs formats sur un même site ?",
+            answer:
+              "Parce qu’un site d’autorité ne repose pas sur un seul type de page. Les articles captent la longue traîne, les FAQ répondent vite, les études de cas rassurent, les visuels simplifient les sujets complexes et les vidéos augmentent le temps d’attention."
+          },
+          {
+            question: "Pourquoi cette page peut-elle être citée par les IA ?",
+            answer:
+              "Parce qu’elle concentre des réponses courtes, des catégories explicites, des liens clairs et des blocs thématiques fortement alignés avec les requêtes réelles sur les Life Sciences, l’Animal Health, le diagnostic, les fonds, les écoles et les contenus d’autorité."
+          }
+        ]}
+      />
     </>
   );
 }

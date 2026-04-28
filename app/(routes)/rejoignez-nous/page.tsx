@@ -33,7 +33,7 @@ const faqItems = [
   {
     question: "Comment prendre contact avec SKS TALENTS ?",
     answer:
-      "Vous pouvez réserver un créneau via Calendly, demander à être rappelé depuis le formulaire inline ou écrire directement à infos@skstalents.com."
+      "Vous pouvez réserver un créneau via Calendly, demander à être rappelé depuis le formulaire inline ou écrire directement à g.kengue@skstalents.com."
   }
 ] as const;
 
@@ -87,8 +87,8 @@ export default function RejoignezNousPage() {
             <div className="mt-6 flex flex-wrap gap-3">
               <CalendlyButton label="Réserver un call" tone="solid" />
               <CalendlyButton
-                label="Écrire à infos@skstalents.com"
-                href="mailto:infos@skstalents.com"
+                label="Écrire à g.kengue@skstalents.com"
+                href="mailto:g.kengue@skstalents.com"
                 tone="outline"
               />
             </div>
@@ -216,7 +216,7 @@ export default function RejoignezNousPage() {
           </div>
           <div className="card-surface p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">Contact direct</p>
-            <h3 className="mt-3 font-display text-3xl text-brand-ink">infos@skstalents.com</h3>
+            <h3 className="mt-3 font-display text-3xl text-brand-ink">g.kengue@skstalents.com</h3>
             <p className="mt-4 text-sm leading-7 text-brand-stone">
               Toutes les demandes de contact, de rappel et les leads qualifiés sont centralisés sur
               cette adresse pour garder un traitement simple, réactif et cohérent.

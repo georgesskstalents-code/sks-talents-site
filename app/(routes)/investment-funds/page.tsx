@@ -46,6 +46,114 @@ export default function InvestmentFundsPage() {
         </a>
       </section>
       <SectionShell
+        eyebrow="Entrées SEO"
+        title="Trois portes d’entrée pour capter les recherches Bpifrance, France Biotech et fonds santé"
+        description="Ces pages ont été conçues pour transformer des recherches source-first en lecture utile, puis en maillage vers l’annuaire des fonds, les actualités et les contenus recrutement."
+      >
+        <div className="grid gap-6 md:grid-cols-3">
+          <ListingCard
+            href="/bpifrance-biotech-medtech"
+            title="Bpifrance biotech medtech"
+            description="Lecture claire des véhicules biotech et medtech et de leurs implications croissance et recrutement."
+            meta="Source institutionnelle"
+          />
+          <ListingCard
+            href="/france-biotech-panorama-healthtech"
+            title="France Biotech et Panorama"
+            description="Lecture business des publications France Biotech pour dirigeants, RH et candidats."
+            meta="Source sectorielle"
+          />
+          <ListingCard
+            href="/fonds-sante-france"
+            title="Fonds santé France"
+            description="Page dédiée pour relier fonds, levées, scale-up et signaux hiring."
+            meta="Intent SEO / LLM"
+          />
+        </div>
+      </SectionShell>
+      <SectionShell
+        eyebrow="Focus sources"
+        title="Pages dédiées sur les gestionnaires et réseaux déjà visibles dans votre cluster fonds"
+        description="Ces entrées servent à capter des requêtes nominatives plus précises, souvent très qualifiées, puis à les relier à l’annuaire des fonds, aux pages growth et aux contenus de recrutement."
+      >
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+          <ListingCard
+            href="/angels-sante-business-angels-sante"
+            title="Angels Santé"
+            description="Lecture early-stage santé, business angels et premiers signaux de structuration."
+            meta="Amorçage santé"
+          />
+          <ListingCard
+            href="/seventure-partners-life-sciences"
+            title="Seventure Partners"
+            description="Lecture VC Life Sciences, segments financés et implications recrutement."
+            meta="VC santé"
+          />
+          <ListingCard
+            href="/kurma-partners-biotech-healthtech"
+            title="Kurma Partners"
+            description="Page dédiée pour relier Kurma au paysage biotech / healthtech et aux enjeux d’équipe."
+            meta="Fonds santé"
+          />
+          <ListingCard
+            href="/jeito-capital-biotech-healthtech"
+            title="Jeito Capital"
+            description="Lecture growth biotech / healthtech et signaux de structuration après financement."
+            meta="Growth"
+          />
+          <ListingCard
+            href="/eic-fund-deeptech-biotech"
+            title="EIC Fund"
+            description="Signal deeptech / biotech européen et implications scale-up."
+            meta="Europe"
+          />
+        </div>
+      </SectionShell>
+      <SectionShell
+        eyebrow="Cluster fonds"
+        title="Autres entrées nominatives à capter avant le déploiement"
+        description="Ces pages complètent le cluster pour que les recherches sur les gestionnaires les plus visibles du panorama santé retombent vers SKS TALENTS plutôt que de rester dispersées entre annuaires, classements et sites corporate."
+      >
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <ListingCard
+            href="/sofinnova-partners-life-sciences"
+            title="Sofinnova Partners"
+            description="Lecture Life Sciences, scale-up et implications recrutement."
+            meta="VC Life Sciences"
+          />
+          <ListingCard
+            href="/eurazeo-healthcare-growth"
+            title="Eurazeo Healthcare"
+            description="Lecture growth santé, exécution et structuration des équipes."
+            meta="Growth"
+          />
+          <ListingCard
+            href="/truffle-capital-biotech-medtech"
+            title="Truffle Capital"
+            description="Lecture biotech / medtech et signaux de structuration."
+            meta="Biotech / Medtech"
+          />
+          <ListingCard
+            href="/merieux-equity-partners-sante"
+            title="Mérieux Equity Partners"
+            description="Lecture fonds santé, crédibilité marché et exigences d’équipe."
+            meta="Santé"
+          />
+          <ListingCard
+            href="/cathay-capital-healthcare"
+            title="Cathay Capital Healthcare"
+            description="Lecture healthcare, growth et besoins d’exécution."
+            meta="Healthcare"
+          />
+          <ListingCard
+            href="/extens-digital-health-france"
+            title="Extens"
+            description="Lecture digital health, croissance et organisation."
+            meta="Digital Health"
+          />
+        </div>
+      </SectionShell>
+      <SectionShell
         eyebrow="Verified Data"
         title="Une base exploitable pour générer du contenu SEO sans hallucination"
         description="Chaque profil s’appuie sur des sources primaires officielles et une méthode stricte: pas de chiffre hiring inventé, pas de partenariat affirmé sans preuve, et distinction nette entre fait, estimation et inférence."

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Editorial Animation</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f1ede7;
+        --ink: #1f2a30;
+        --teal: #2f8a8a;
+        --pill-bg: #e6f2f1;
+        --pill-line: rgba(47, 138, 138, 0.15);
+        --pill-ink: #3a4a52;
+        --ease-premium: cubic-bezier(0.2, 0.9, 0.2, 1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        padding: 32px;
+        background: linear-gradient(180deg, #f7f3ee 0%, var(--bg) 100%);
+        color: var(--ink);
+        font-family: "Inter", system-ui, sans-serif;
+      }
+
+      .hero {
+        width: min(1120px, 100%);
+        padding: clamp(36px, 6vw, 72px);
+        border-radius: 36px;
+        background: var(--bg);
+        position: relative;
+        overflow: hidden;
+        box-shadow:
+          0 28px 80px rgba(31, 42, 48, 0.08),
+          inset 0 1px 0 rgba(255, 255, 255, 0.75);
+        cursor: default;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: -20% auto auto -10%;
+        width: 380px;
+        height: 380px;
+        background: radial-gradient(circle, rgba(47, 138, 138, 0.1), transparent 70%);
+        pointer-events: none;
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 22px;
+        border-radius: 999px;
+        border: 1px solid var(--pill-line);
+        background: var(--pill-bg);
+        color: var(--pill-ink);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        line-height: 1;
+        text-transform: uppercase;
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+
+      h1 {
+        margin: 28px 0 0;
+        position: relative;
+        color: var(--ink);
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(40px, 4.4vw, 56px);
+        font-weight: 500;
+        line-height: 1.15;
+        letter-spacing: -0.5px;
+      }
+
+      .line {
+        display: block;
+      }
+
+      .line + .line {
+        margin-top: 8px;
+      }
+
+      .line-2 {
+        position: relative;
+        color: var(--ink);
+      }
+
+      .line-2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0;
+        height: 2px;
+        border-radius: 999px;
+        background: var(--teal);
+      }
+
+      .mask {
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: top;
+        padding-bottom: 0.08em;
+      }
+
+      .mask.space {
+        width: 0.28em;
+      }
+
+      .word {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(110%);
+        filter: blur(12px);
+      }
+
+      .hero.animate .pill {
+        animation: pill-in 600ms var(--ease-premium) forwards;
+      }
+
+      .hero.animate .line-1 .word {
+        animation: word-in 700ms var(--ease-premium) forwards;
+      }
+
+      .hero.animate .line-2 .word {
+        animation: word-in 700ms var(--ease-premium) forwards;
+      }
+
+      .hero.animate .line-2 {
+        animation: line-2-color 600ms var(--ease-premium) 1100ms forwards;
+      }
+
+      .hero.animate .line-2::after {
+        animation: underline-in 700ms var(--ease-premium) 1500ms forwards;
+      }
+
+      .hero.animate .line-1 .word-1 { animation-delay: 300ms; }
+      .hero.animate .line-1 .word-2 { animation-delay: 350ms; }
+      .hero.animate .line-1 .word-3 { animation-delay: 400ms; }
+      .hero.animate .line-1 .word-4 { animation-delay: 450ms; }
+      .hero.animate .line-1 .word-5 { animation-delay: 500ms; }
+      .hero.animate .line-1 .word-6 { animation-delay: 550ms; }
+      .hero.animate .line-1 .word-7 { animation-delay: 600ms; }
+      .hero.animate .line-1 .word-8 { animation-delay: 650ms; }
+      .hero.animate .line-1 .word-9 { animation-delay: 700ms; }
+
+      .hero.animate .line-2 .word-1 { animation-delay: 800ms; }
+      .hero.animate .line-2 .word-2 { animation-delay: 860ms; }
+      .hero.animate .line-2 .word-3 { animation-delay: 920ms; }
+      .hero.animate .line-2 .word-4 { animation-delay: 980ms; }
+      .hero.animate .line-2 .word-5 { animation-delay: 1040ms; }
+
+      @keyframes pill-in {
+        from {
+          opacity: 0;
+          transform: translateY(-8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes word-in {
+        from {
+          opacity: 0;
+          transform: translateY(110%);
+          filter: blur(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+          filter: blur(0);
+        }
+      }
+
+      @keyframes line-2-color {
+        from {
+          color: var(--ink);
+        }
+        to {
+          color: var(--teal);
+        }
+      }
+
+      @keyframes underline-in {
+        from {
+          width: 0;
+        }
+        to {
+          width: 60%;
+        }
+      }
+
+      @media (max-width: 640px) {
+        body {
+          padding: 18px;
+        }
+
+        .hero {
+          border-radius: 28px;
+          padding: 28px 22px;
+        }
+
+        h1 {
+          font-size: clamp(38px, 11vw, 56px);
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <section
+      class="hero"
+      id="hero"
+      aria-label="Hero cabinet de recrutement"
+    >
+      <div class="hero-inner">
+        <div class="pill">Cabinet de recrutement Life Sciences &amp; Animal Health</div>
+
+        <h1>
+          <span class="line line-1" aria-label="Recruter les bons talents n'est pas un enjeu RH.">
+            <span class="mask"><span class="word word-1">Recruter</span></span><span class="mask space" aria-hidden="true"></span>
+            <span class="mask"><span class="word word-2">les</span></span><span class="mask space" aria-hidden="true"></span>
+            <span class="mask"><span class="word word-3">bons</span></span><span class="mask space" aria-hidden="true"></span>
+            <span class="mask"><span class="word word-4">talents</span></span><span class="mask space" aria-hidden="true"></span>
+            <span class="mask"><span class="word word-5">n'est</span></span><span class="mask space" aria-hidden="true"></span>
+            <span class="mask"><span class="word word-6">pas</span></span><span class="mask space" aria-hidden="true"></span>
+            <span class="mask"><span class="word word-7">un</span></span><span class="mask space" aria-hidden="true"></span>
+            <span class="mask"><span class="word word-8">enjeu</span></span><span class="mask space" aria-hidden="true"></span>
+            <span class="mask"><span class="word word-9">RH.</span></span>
+          </span>
+
+          <span class="line line-2" aria-label="C'est une décision stratégique.">
+            <span class="mask"><span class="word word-1">C'est</span></span><span class="mask space" aria-hidden="true"></span>
+            <span class="mask"><span class="word word-2">une</span></span><span class="mask space" aria-hidden="true"></span>
+            <span class="mask"><span class="word word-3">décision</span></span><span class="mask space" aria-hidden="true"></span>
+            <span class="mask"><span class="word word-4">stratégique.</span></span>
+          </span>
+        </h1>
+      </div>
+    </section>
+
+    <script>
+      const hero = document.getElementById("hero");
+
+      function playHeroAnimation() {
+        hero.classList.remove("animate");
+        void hero.offsetWidth;
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            hero.classList.add("animate");
+          });
+        });
+      }
+
+      if (document.readyState === "loading") {
+        window.addEventListener("DOMContentLoaded", playHeroAnimation, { once: true });
+      } else {
+        playHeroAnimation();
+      }
+
+      hero.addEventListener("mouseenter", playHeroAnimation);
+      hero.addEventListener("focusin", playHeroAnimation);
+    </script>
+  </body>
+</html>

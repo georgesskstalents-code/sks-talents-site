@@ -7,8 +7,8 @@ export default function ServicesPage() {
     <>
       <PageHero
         kicker="Nos services"
-        title="Executive search, onboarding et structuration RH."
-        description="Deux offres complémentaires pour sécuriser vos recrutements critiques et bâtir un cadre people robuste."
+        title="Executive search, RPO, onboarding et structuration RH."
+        description="Trois offres complémentaires pour sécuriser vos recrutements critiques, absorber un volume de hiring exigeant et bâtir un cadre people robuste."
       />
       <ServicesSection />
       <section className="container-shell py-8 pb-16">

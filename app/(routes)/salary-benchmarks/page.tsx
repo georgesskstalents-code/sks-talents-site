@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import GEOAnswerCard from "@/components/GEOAnswerCard";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
 import { jobRoles } from "@/data/jobRoles";
@@ -40,9 +41,21 @@ export default function SalaryBenchmarksPage() {
           { label: "Benchmarks salaires" }
         ]}
       />
+      <section className="container-shell py-4">
+        <GEOAnswerCard
+          title="Benchmarks salaires Life Sciences & Animal Health : à quoi sert cette page ?"
+          answer="Cette page aide à relier les recherches salaire aux vrais métiers, aux secteurs, aux stades de croissance et aux décisions de recrutement. Elle sert autant aux candidats qui veulent se situer qu’aux dirigeants et DRH qui veulent calibrer une offre ou lire la tension du marché."
+          bullets={[
+            "Repères par métier, secteur et catégorie de poste",
+            "Angles France, EMEA et contextes Seed / Série A / Série B quand le rôle le justifie",
+            "Passerelles vers fiches métiers, comparatifs et calculateur brut/net",
+            "Sources affichées pour éviter les généralisations abusives"
+          ]}
+        />
+      </section>
       <SectionShell
-        eyebrow="Lecture"
-        title="Pourquoi ce hub compte pour votre trafic."
+        eyebrow="Question fréquente"
+        title="Pourquoi consulter un benchmark salaire en 2026 ?"
         description="Les requêtes liées aux salaires sont très récurrentes, très concrètes et souvent proches d’une décision candidat ou recruteur, surtout quand une entreprise passe en Seed, Série A ou Série B."
       >
         <div className="grid gap-6 md:grid-cols-3">
@@ -59,8 +72,8 @@ export default function SalaryBenchmarksPage() {
         </div>
       </SectionShell>
       <SectionShell
-        eyebrow="Structure"
-        title="Un benchmark salaire doit répondre à trois intentions."
+        eyebrow="Question fréquente"
+        title="Comment lire un benchmark salaire sans surinterpréter les chiffres ?"
         description="Pour devenir une page de référence, ce hub relie chaque requête salaire à un rôle, une industrie, un contexte géographique et un stade de maturité d’entreprise."
       >
         <div className="grid gap-6 md:grid-cols-3">
@@ -132,6 +145,53 @@ export default function SalaryBenchmarksPage() {
           >
             Explorer toute la bibliothèque métiers
           </Link>
+        </div>
+      </SectionShell>
+      <SectionShell
+        eyebrow="Sources"
+        title="Sources et périmètre de confiance"
+        description="Les repères salariaux affichés ici sont des ordres de grandeur. Les sources et notes détaillées sont portées au niveau de chaque fiche métier pour éviter les généralisations."
+      >
+        <div className="card-surface p-8">
+          <ul className="space-y-3 text-sm leading-7 text-brand-stone">
+            <li>
+              Benchmarks principaux:{" "}
+              <a
+                href="https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="font-semibold text-brand-teal"
+              >
+                Aon
+              </a>{" "}
+              et{" "}
+              <a
+                href="https://france-biotech.fr/publications/le-panorama-france-healthtech/"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="font-semibold text-brand-teal"
+              >
+                France Biotech
+              </a>
+              .
+            </li>
+            <li>
+              Repères complémentaires (indicatifs):{" "}
+              <a
+                href="https://www.glassdoor.fr/"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="font-semibold text-brand-teal"
+              >
+                Glassdoor
+              </a>
+              , uniquement lorsque la fiche métier le précise (proxy, date observée, taille d’échantillon).
+            </li>
+            <li>
+              Règle éditoriale: ne pas extrapoler un salaire à un poste donné sans préciser la source, le contexte
+              (secteur, seniorité, zone) et la fiabilité perçue.
+            </li>
+          </ul>
         </div>
       </SectionShell>
     </>

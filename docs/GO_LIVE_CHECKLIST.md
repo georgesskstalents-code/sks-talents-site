@@ -6,12 +6,14 @@ Required
 
 - `OPENAI_API_KEY`
 - `OPENAI_MODEL`
+- `NEXT_PUBLIC_SITE_URL=https://www.skstalents.fr`
+- `SITE_URL=https://www.skstalents.fr`
 - `NOTION_TOKEN`
 - `NOTION_SITE_DATABASE_ID`
 - `NOTION_CONTENT_SYNC_SECRET`
-- `CONTACT_NOTIFICATION_EMAIL=infos@skstalents.com`
-- `FEEDBACK_NOTIFICATION_EMAIL=infos@skstalents.com`
-- `SITE_INTELLIGENCE_EMAIL=infos@skstalents.com`
+- `CONTACT_NOTIFICATION_EMAIL=g.kengue@skstalents.com`
+- `FEEDBACK_NOTIFICATION_EMAIL=g.kengue@skstalents.com`
+- `SITE_INTELLIGENCE_EMAIL=g.kengue@skstalents.com`
 
 Recommended security
 
@@ -42,10 +44,12 @@ Recommended analytics / SEO
 - Domain `skstalents.fr` added to Vercel
 - `www.skstalents.fr` added to Vercel
 - DNS points to Vercel
+- old Bubble DNS entries removed after cutover
 - SSL active
 - WAF enabled
 - Bot protection enabled
 - Rate limiting rule added on `/api/*`
+- Cloudflare cache purged after the DNS switch
 
 ## 4. Search Console
 
@@ -70,12 +74,15 @@ Recommended analytics / SEO
 - Chat opens and responds
 - Notion published article visible on `/blog`
 - Notion published job role visible on `/job-roles`
+- Notion published event visible on `/events`
 - Trustpilot / Senja widgets load if configured
+- Chatwoot authorized for `https://www.skstalents.fr`
 
 ## 6. After launch
 
 - Check Search Console indexing
 - Check GA4 real-time events
 - Check weekly editorial watch suggestions
-- Check feedback emails arrive on `infos@skstalents.com`
-- Check lead notifications arrive on `infos@skstalents.com`
+- Check feedback emails arrive on `g.kengue@skstalents.com`
+- Check lead notifications arrive on `g.kengue@skstalents.com`
+- Rotate any temporary local secrets used during setup

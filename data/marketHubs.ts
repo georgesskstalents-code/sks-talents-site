@@ -52,6 +52,11 @@ export const marketHubs: MarketHub[] = [
     angles: ["France Biotech", "Top fonds", "levées", "signaux hiring"],
     internalLinks: [
       { label: "Annuaire des fonds", href: "/investment-funds" },
+      { label: "Fonds santé France", href: "/fonds-sante-france" },
+      { label: "France Biotech et Panorama", href: "/france-biotech-panorama-healthtech" },
+      { label: "Angels Santé", href: "/angels-sante-business-angels-sante" },
+      { label: "Seventure Partners", href: "/seventure-partners-life-sciences" },
+      { label: "EIC Fund", href: "/eic-fund-deeptech-biotech" },
       { label: "Article France Biotech", href: "/blog/france-biotech-cartographie-fonds-sante-2024" },
       { label: "Actualités", href: "/news" }
     ]
@@ -128,7 +133,11 @@ export const marketHubs: MarketHub[] = [
     internalLinks: [
       { label: "Actualités", href: "/news" },
       { label: "Blog", href: "/blog" },
-      { label: "Fonds", href: "/investment-funds" }
+      { label: "Fonds", href: "/investment-funds" },
+      { label: "Bpifrance biotech medtech", href: "/bpifrance-biotech-medtech" },
+      { label: "Fonds santé France", href: "/fonds-sante-france" },
+      { label: "Seventure Partners", href: "/seventure-partners-life-sciences" },
+      { label: "Jeito Capital", href: "/jeito-capital-biotech-healthtech" }
     ]
   },
   {
@@ -162,4 +171,3 @@ export const marketHubs: MarketHub[] = [
     ]
   }
 ];
-

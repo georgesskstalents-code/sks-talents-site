@@ -146,4 +146,5 @@ export const orientationRecommendations: OrientationRecommendation[] = [
   }
 ];
 
-export const purpleCareerUrl = process.env.NEXT_PUBLIC_PURPLE_URL ?? "https://www.purplesquirrel.fr/";
+export const purpleCareerUrl =
+  process.env.NEXT_PUBLIC_PURPLE_URL ?? "https://www.purplesquirrel.fr/miniformation-dirigeant";

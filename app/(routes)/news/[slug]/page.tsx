@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import { newsHubs } from "@/data/resources";
 import { newsHubDetails } from "@/data/newsSignals";
@@ -80,6 +81,7 @@ export default async function NewsDetailPage({
           </div>
         </div>
       </section>
+      <ContentPageSignature description="Hub éditorial SKS TALENTS pour transformer les actualités sectorielles en angles de contenu, en signaux business et en pistes de recrutement." />
     </>
   );
 }

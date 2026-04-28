@@ -1,8 +1,10 @@
 "use client";
 
 import { useMemo, useState, useTransition } from "react";
+import { usePathname } from "next/navigation";
 import CalendlyButton from "@/components/CalendlyButton";
 import TurnstileWidget from "@/components/TurnstileWidget";
+import { trackSiteTelemetry } from "@/lib/siteTelemetryClient";
 
 type Props = {
   title: string;
@@ -35,6 +37,7 @@ export default function InlineLeadForm({
   sector = "Life Sciences",
   compact = false
 }: Props) {
+  const pathname = usePathname();
   const [form, setForm] = useState<FormState>(initialState);
   const [state, setState] = useState<"idle" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -62,12 +65,24 @@ export default function InlineLeadForm({
     event.preventDefault();
 
     if (!canSubmit) {
+      trackSiteTelemetry({
+        type: "form_error",
+        path: pathname || "/",
+        target: "inline-lead-form",
+        message: "client_validation"
+      });
       setState("error");
       setMessage("Merci de compléter prénom, nom, email et téléphone avant l’envoi.");
       return;
     }
 
     startTransition(async () => {
+      trackSiteTelemetry({
+        type: "form_submit",
+        path: pathname || "/",
+        target: "inline-lead-form"
+      });
+
       try {
         const response = await fetch("/api/callback-request", {
           method: "POST",
@@ -93,16 +108,33 @@ export default function InlineLeadForm({
         const payload = (await response.json()) as { ok?: boolean; message?: string };
 
         if (!response.ok || !payload.ok) {
+          trackSiteTelemetry({
+            type: "form_error",
+            path: pathname || "/",
+            target: "inline-lead-form",
+            message: payload.message ?? "api_rejected"
+          });
           setState("error");
           setMessage(payload.message ?? "Votre demande n’a pas pu être enregistrée.");
           return;
         }
 
+        trackSiteTelemetry({
+          type: "form_success",
+          path: pathname || "/",
+          target: "inline-lead-form"
+        });
         setForm(initialState);
         setTurnstileToken("");
         setState("success");
-        setMessage("Merci, votre demande a bien été envoyée à infos@skstalents.com.");
+        setMessage("Merci, votre demande a bien été envoyée à g.kengue@skstalents.com.");
       } catch {
+        trackSiteTelemetry({
+          type: "form_error",
+          path: pathname || "/",
+          target: "inline-lead-form",
+          message: "network_error"
+        });
         setState("error");
         setMessage("Un incident temporaire bloque l’envoi. Réessayez dans quelques instants.");
       }
@@ -188,10 +220,10 @@ export default function InlineLeadForm({
 
       <div className="mt-4 flex flex-wrap gap-3 text-sm text-brand-stone">
         <a
-          href="mailto:infos@skstalents.com"
+          href="mailto:g.kengue@skstalents.com"
           className="font-semibold text-brand-teal transition hover:opacity-80"
         >
-          infos@skstalents.com
+          g.kengue@skstalents.com
         </a>
         <a
           href="https://fr.trustpilot.com/review/skstalents.fr"

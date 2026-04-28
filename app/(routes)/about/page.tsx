@@ -1,5 +1,6 @@
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
+import CalendlyButton from "@/components/CalendlyButton";
 
 export default function AboutPage() {
   return (
@@ -25,6 +26,16 @@ export default function AboutPage() {
               <p className="mt-3 text-sm uppercase tracking-[0.2em] text-brand-stone">{label}</p>
             </div>
           ))}
+        </div>
+        <div className="mt-6 card-surface grid gap-4 p-6 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div>
+            <p className="eyebrow">À lire ensuite</p>
+            <h2 className="font-display text-3xl text-brand-ink">Notre Mission</h2>
+            <p className="mt-3 text-sm leading-7 text-brand-stone">
+              Une page dédiée pour comprendre plus clairement notre méthode, ce qui nous différencie et la valeur créée pour les dirigeants et équipes RH.
+            </p>
+          </div>
+          <CalendlyButton label="Découvrir notre mission" href="/mission" tone="outline" />
         </div>
       </SectionShell>
     </>

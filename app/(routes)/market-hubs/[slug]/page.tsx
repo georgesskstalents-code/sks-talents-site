@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import ContentPageSignature from "@/components/ContentPageSignature";
 import ListingCard from "@/components/ListingCard";
 import PageHero from "@/components/PageHero";
 import { marketHubs } from "@/data/marketHubs";
@@ -68,7 +69,7 @@ export default async function MarketHubDetailPage({
           />
         ))}
       </section>
+      <ContentPageSignature description="Hub de référence édité par SKS TALENTS pour renforcer le maillage interne, la lisibilité du marché et les chemins de conversion vers nos services." />
     </>
   );
 }
-

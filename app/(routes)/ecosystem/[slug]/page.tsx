@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ContentPageSignature from "@/components/ContentPageSignature";
 import InlineLeadForm from "@/components/InlineLeadForm";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
@@ -202,6 +203,7 @@ export default async function EcosystemDetailPage({ params }: Props) {
           compact
         />
       </SectionShell>
+      <ContentPageSignature description="Page écosystème éditée par SKS TALENTS pour relier réseaux, partenaires, acteurs clés et décisions de talent dans les marchés que nous couvrons." />
     </>
   );
 }

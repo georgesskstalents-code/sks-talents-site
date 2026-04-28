@@ -780,22 +780,23 @@ export const ecosystemCategories: EcosystemCategory[] = [
 ];
 
 export const ecosystemPriorityTargets = [
-  "France Biotech",
-  "Medicen Paris Region",
-  "Lyonbiopôle Auvergne-Rhône-Alpes",
-  "Cosmetic Valley",
-  "BioFIT",
-  "MEDFIT",
-  "France Vet",
-  "AgroParisTech",
-  "Oniris",
-  "VetAgro Sup",
-  "ISIPCA",
-  "EBI Cergy",
-  "Genopole",
-  "Faircraft.bio",
-  "Affinity Petcare"
-];
+  { name: "France Biotech", href: "https://france-biotech.fr/" },
+  { name: "Leem", href: "https://www.leem.org/" },
+  { name: "Sidiv", href: "https://www.sidiv.fr/" },
+  { name: "Snitem", href: "https://www.snitem.fr/" },
+  { name: "Medicen Paris Region", href: "https://www.medicen.org/" },
+  { name: "Lyonbiopôle Auvergne-Rhône-Alpes", href: "https://www.lyonbiopole.com/" },
+  { name: "Cosmetic Valley", href: "https://cosmetic-valley.com/" },
+  { name: "BioFIT", href: "https://www.biofit-event.com/" },
+  { name: "MEDFIT", href: "https://www.medfit-event.com/" },
+  { name: "France Vet", href: "https://france.vet/" },
+  { name: "AgroParisTech", href: "https://www.agroparistech.fr/" },
+  { name: "Oniris", href: "https://www.oniris-nantes.fr/" },
+  { name: "VetAgro Sup", href: "https://www.vetagro-sup.fr/" },
+  { name: "ISIPCA", href: "https://www.isipca.fr/" },
+  { name: "EBI Cergy", href: "https://www.ebi-edu.com/" },
+  { name: "Genopole", href: "https://www.genopole.fr/" }
+] as const;
 
 export const ecosystemDetailedPages: EcosystemDetailedPage[] = [
   {

@@ -2,11 +2,20 @@ import { appendFile, mkdir, readFile } from "node:fs/promises";
 import path from "node:path";
 
 export type SiteAnalyticsEvent = {
-  type: "pageview" | "agent_query" | "agent_click" | "cta_click";
+  type:
+    | "pageview"
+    | "agent_query"
+    | "agent_click"
+    | "cta_click"
+    | "form_submit"
+    | "form_success"
+    | "form_error"
+    | "frontend_error";
   path: string;
   title?: string;
   query?: string;
   target?: string;
+  message?: string;
   sessionId?: string;
   createdAt: string;
 };
@@ -58,4 +67,3 @@ export async function readLeadEventLog() {
     return [] as LeadEventLog[];
   }
 }
-

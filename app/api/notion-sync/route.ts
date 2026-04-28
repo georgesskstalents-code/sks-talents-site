@@ -5,6 +5,9 @@ type SyncBody = {
   secret?: string;
   articleLimit?: number;
   roleLimit?: number;
+  eventLimit?: number;
+  schoolLimit?: number;
+  referenceLimit?: number;
 };
 
 export async function POST(request: Request) {
@@ -29,9 +32,17 @@ export async function POST(request: Request) {
   try {
     const result = await syncNotionContent({
       articleLimit:
-        typeof body.articleLimit === "number" && body.articleLimit > 0 ? Math.min(body.articleLimit, 25) : 10,
+        typeof body.articleLimit === "number" && body.articleLimit >= 0 ? Math.min(body.articleLimit, 25) : 10,
       roleLimit:
-        typeof body.roleLimit === "number" && body.roleLimit > 0 ? Math.min(body.roleLimit, 40) : 20
+        typeof body.roleLimit === "number" && body.roleLimit >= 0 ? Math.min(body.roleLimit, 40) : 20,
+      eventLimit:
+        typeof body.eventLimit === "number" && body.eventLimit >= 0 ? Math.min(body.eventLimit, 40) : 20,
+      schoolLimit:
+        typeof body.schoolLimit === "number" && body.schoolLimit >= 0 ? Math.min(body.schoolLimit, 60) : 30,
+      referenceLimit:
+        typeof body.referenceLimit === "number" && body.referenceLimit >= 0
+          ? Math.min(body.referenceLimit, 40)
+          : 20
     });
 
     return noStoreJson({

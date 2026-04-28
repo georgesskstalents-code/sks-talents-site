@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
 import { getInvestmentFund, investmentFunds } from "@/data/investmentFunds";
@@ -163,6 +164,7 @@ export default async function InvestmentFundDetailPage({
           ))}
         </div>
       </SectionShell>
+      <ContentPageSignature description="Profil fonds édité par SKS TALENTS pour relier signaux d’investissement, sources officielles, portefeuille et implications talent de manière crédible." />
     </>
   );
 }

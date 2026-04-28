@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import { animalHealthHub, getSectorPage } from "@/data/sectors";
 
@@ -30,6 +31,7 @@ export default async function MedicalVetDetailPage({
           </p>
         </div>
       </section>
+      <ContentPageSignature description="Page sectorielle SKS TALENTS dédiée à la santé animale pour relier promesse marché, angles métier et conversion vers un échange qualifié." />
     </>
   );
 }

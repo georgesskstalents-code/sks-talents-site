@@ -1,10 +1,33 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import ContentPageSignature from "@/components/ContentPageSignature";
+import GEOAnswerCard from "@/components/GEOAnswerCard";
 import PageHero from "@/components/PageHero";
-import { findJobRoleBySlug, getRelatedJobRoles, jobRoles } from "@/data/jobRoles";
+import { findJobRoleBySlug, getRelatedJobRoles } from "@/data/jobRoles";
+import { getJobRoleEducationBundle } from "@/lib/jobRoleEducation";
 import { getNotionSiteContentBySlug } from "@/lib/notion";
 
 export const dynamic = "force-dynamic";
+
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const role = findJobRoleBySlug(slug);
+  const notionRole = await getNotionSiteContentBySlug(slug, "job_role");
+
+  if (!role && !notionRole) {
+    return {};
+  }
+
+  return {
+    title: notionRole?.seoTitle || notionRole?.title || role?.title,
+    description: notionRole?.metaDescription || notionRole?.excerpt || role?.summary
+  };
+}
 
 export default async function JobRoleDetailPage({
   params
@@ -45,6 +68,7 @@ export default async function JobRoleDetailPage({
 
   const resolvedRole = effectiveRole!;
   const relatedRoles = getRelatedJobRoles(resolvedRole.slug, resolvedRole.sector);
+  const educationBundle = getJobRoleEducationBundle(resolvedRole);
 
   return (
     <>
@@ -52,7 +76,20 @@ export default async function JobRoleDetailPage({
         kicker={`${resolvedRole.sector} · ${resolvedRole.category} · ${resolvedRole.salary}`}
         title={resolvedRole.title}
         description={resolvedRole.summary}
+        template="job-role"
       />
+      <section className="container-shell py-4">
+        <GEOAnswerCard
+          title={`${resolvedRole.title} : que faut-il savoir ?`}
+          answer={`${resolvedRole.title} est un rôle ${resolvedRole.category.toLowerCase()} suivi par SKS TALENTS dans ${resolvedRole.sector}. Les entreprises le recrutent lorsque la technicité du marché, l’exigence opérationnelle et la pression sur l’exécution rendent un mauvais cadrage coûteux.`}
+          bullets={[
+            `Fourchette observée : ${resolvedRole.salary}`,
+            `Tension marché : ${resolvedRole.shortageLevel}`,
+            `Pourquoi le poste existe : ${resolvedRole.summary}`,
+            `Secteur principal : ${resolvedRole.sector}`
+          ]}
+        />
+      </section>
       <section className="container-shell py-8">
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="card-surface p-8">
@@ -73,6 +110,16 @@ export default async function JobRoleDetailPage({
                 Categorie: {resolvedRole.category}
               </span>
             </div>
+          </div>
+          <div className="card-surface p-8">
+            <h2 className="font-display text-3xl">Pourquoi les entreprises recrutent ce rôle</h2>
+            <ul className="mt-6 space-y-3 text-sm leading-7 text-brand-stone">
+              {resolvedRole.successFactors.slice(0, 4).map((item) => (
+                <li key={item} className="rounded-2xl bg-brand-mint/35 px-4 py-3">
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
           <div className="card-surface p-8">
             <h2 className="font-display text-3xl">Repères de rémunération</h2>
@@ -146,19 +193,141 @@ export default async function JobRoleDetailPage({
           </div>
           <div className="card-surface p-8">
             <h2 className="font-display text-3xl">Etudes recommandees</h2>
-            <ul className="mt-6 space-y-3 text-sm leading-7 text-brand-stone">
-              {resolvedRole.studies.map((study) => (
-                <li key={study}>{study}</li>
+            <p className="mt-4 text-sm leading-7 text-brand-stone">
+              Nous relions chaque parcours recommandé à des viviers déjà présents dans la base
+              écoles SKS TALENTS, puis au site officiel de l’établissement quand il est connu.
+            </p>
+            <div className="mt-6 space-y-4">
+              {educationBundle.recommendations.map((entry) => (
+                <article
+                  key={`${resolvedRole.slug}-${entry.study}`}
+                  className="rounded-[28px] border border-brand-teal/12 bg-white px-5 py-5 shadow-soft"
+                >
+                  <h3 className="text-lg font-semibold text-brand-ink">{entry.study}</h3>
+                  <p className="mt-2 text-sm leading-7 text-brand-stone">{entry.sourceLabel}</p>
+                  {entry.programs.length ? (
+                    <div className="mt-4 grid gap-3">
+                      {entry.programs.map((program) => (
+                        <a
+                          key={`${entry.study}-${program.programUrl}`}
+                          href={program.programUrl}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="rounded-2xl border border-brand-teal/12 bg-white px-4 py-4 shadow-soft transition hover:-translate-y-0.5"
+                        >
+                          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-teal">
+                            {program.schoolTitle}
+                          </p>
+                          <p className="mt-2 text-sm font-semibold text-brand-ink">
+                            {program.programTitle}
+                          </p>
+                          <p className="mt-2 text-xs text-brand-stone">
+                            Ouvrir la formation officielle
+                          </p>
+                        </a>
+                      ))}
+                    </div>
+                  ) : null}
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    {entry.schools.map((school) => (
+                      <div
+                        key={`${entry.study}-${school.slug}`}
+                        className="rounded-2xl border border-brand-teal/12 bg-brand-mint/45 px-4 py-3"
+                      >
+                        <Link
+                          href={`/schools/${school.slug}`}
+                          className="text-sm font-semibold text-brand-ink transition hover:text-brand-teal"
+                        >
+                          {school.title}
+                        </Link>
+                        <p className="mt-1 text-xs uppercase tracking-[0.16em] text-brand-teal">
+                          {school.location || school.sector}
+                        </p>
+                        {school.href ? (
+                          <a
+                            href={school.href}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            className="mt-2 inline-flex text-xs font-semibold text-brand-teal transition hover:underline"
+                          >
+                            Source officielle
+                          </a>
+                        ) : (
+                          <p className="mt-2 text-xs text-brand-stone">
+                            Source officielle à compléter, école déjà documentée dans notre base.
+                          </p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </article>
               ))}
-            </ul>
+            </div>
+            <div className="mt-6 rounded-[28px] border border-brand-teal/12 bg-brand-mint/35 px-5 py-5">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-teal">
+                Méthode de sourcing
+              </h3>
+              <ul className="mt-3 space-y-2 text-sm leading-7 text-brand-stone">
+                {educationBundle.methodology.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
           </div>
           <div className="card-surface p-8">
             <h2 className="font-display text-3xl">Ecoles et viviers possibles</h2>
-            <ul className="mt-6 space-y-3 text-sm leading-7 text-brand-stone">
-              {resolvedRole.schools.map((school) => (
-                <li key={school}>{school}</li>
+            <p className="mt-4 text-sm leading-7 text-brand-stone">
+              Ces viviers sont les plus cohérents avec le rôle, le secteur et les parcours
+              recommandés de la fiche.
+            </p>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              {educationBundle.schoolPool.map((school) => (
+                <article
+                  key={`${resolvedRole.slug}-${school.slug}`}
+                  className="rounded-[28px] border border-brand-teal/12 bg-white px-5 py-5 shadow-soft"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <Link
+                        href={`/schools/${school.slug}`}
+                        className="text-base font-semibold text-brand-ink transition hover:text-brand-teal"
+                      >
+                        {school.title}
+                      </Link>
+                      <p className="mt-1 text-xs uppercase tracking-[0.16em] text-brand-teal">
+                        {school.sector} {school.location ? `· ${school.location}` : ""}
+                      </p>
+                    </div>
+                    <span className="rounded-full border border-brand-teal/16 bg-brand-mint px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-teal">
+                      {school.matchType === "explicit"
+                        ? "Cité dans la fiche"
+                        : school.matchType === "study"
+                          ? "Rapproché de l'étude"
+                          : "Cohérent avec le secteur"}
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm leading-7 text-brand-stone">{school.summary}</p>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    <Link
+                      href={`/schools/${school.slug}`}
+                      className="rounded-full border border-brand-teal/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-brand-teal transition hover:bg-brand-mint"
+                    >
+                      Voir la fiche école
+                    </Link>
+                    {school.href ? (
+                      <a
+                        href={school.href}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="rounded-full border border-brand-teal/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-brand-teal transition hover:bg-brand-mint"
+                      >
+                        Site officiel
+                      </a>
+                    ) : null}
+                  </div>
+                </article>
               ))}
-            </ul>
+            </div>
           </div>
           <div className="card-surface p-8 lg:col-span-2">
             <h2 className="font-display text-3xl">Industries connexes</h2>
@@ -218,6 +387,7 @@ export default async function JobRoleDetailPage({
           </div>
         </div>
       </section>
+      <ContentPageSignature description="Fiche métier SKS TALENTS pour aider entreprises, candidats et décideurs à cadrer missions, rémunération, compétences clés et signaux de tension du marché." />
     </>
   );
 }

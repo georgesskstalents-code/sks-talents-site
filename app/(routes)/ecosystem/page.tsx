@@ -90,12 +90,19 @@ export default function EcosystemPage() {
       >
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {ecosystemPriorityTargets.map((target) => (
-            <div key={target} className="card-surface p-5">
+            <a
+              key={target.name}
+              href={target.href}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="card-surface block p-5 transition hover:-translate-y-1"
+            >
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
                 Priorité immédiate
               </p>
-              <h3 className="mt-3 font-display text-3xl text-brand-ink">{target}</h3>
-            </div>
+              <h3 className="mt-3 font-display text-3xl text-brand-ink">{target.name}</h3>
+              <p className="mt-4 text-sm font-semibold text-brand-teal">Visiter le site</p>
+            </a>
           ))}
         </div>
       </SectionShell>

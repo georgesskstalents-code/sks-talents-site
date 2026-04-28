@@ -1,10 +1,36 @@
 import { notFound } from "next/navigation";
 import CalendlyButton from "@/components/CalendlyButton";
+import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import { references } from "@/data/references";
+import { getNotionSiteContentBySlug, mapNotionEntryToReference } from "@/lib/notion";
 
-export function generateStaticParams() {
-  return references.map((reference) => ({ slug: reference.slug }));
+export const dynamic = "force-dynamic";
+
+function mergeReference(
+  staticReference: (typeof references)[number] | undefined,
+  notionReference?: ReturnType<typeof mapNotionEntryToReference>
+) {
+  if (!staticReference && !notionReference) {
+    return undefined;
+  }
+
+  if (!staticReference) {
+    return notionReference;
+  }
+
+  if (!notionReference) {
+    return staticReference;
+  }
+
+  const shouldPreferStaticLogo =
+    !notionReference.logoPath || notionReference.logoPath.includes("logo.clearbit.com");
+
+  return {
+    ...staticReference,
+    ...notionReference,
+    logoPath: shouldPreferStaticLogo ? staticReference.logoPath : notionReference.logoPath
+  };
 }
 
 export default async function ReferenceDetailPage({
@@ -13,7 +39,12 @@ export default async function ReferenceDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const reference = references.find((entry) => entry.slug === slug);
+  const staticReference = references.find((entry) => entry.slug === slug);
+  const notionReference = await getNotionSiteContentBySlug(slug, "reference");
+  const reference = mergeReference(
+    staticReference,
+    notionReference ? mapNotionEntryToReference(notionReference) : undefined
+  );
 
   if (!reference) {
     notFound();
@@ -72,6 +103,7 @@ export default async function ReferenceDetailPage({
           </div>
         </div>
       </section>
+      <ContentPageSignature description="Référence SKS TALENTS éditée pour montrer le contexte de mission, l’impact observé et la manière dont nous sécurisons les recrutements les plus sensibles." />
     </>
   );
 }

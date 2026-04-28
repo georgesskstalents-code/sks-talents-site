@@ -134,10 +134,16 @@ function buildFallbackReply(query: string, language: "fr" | "en") {
       : "The best entry point for compensation is /salary-benchmarks. You will find benchmarks by role, sector and growth stage, then related pages in /job-roles.";
   }
 
+  if (/bpifrance|bpi|france biotech|panorama france healthtech|innobio|fonds sante|fonds santé|angels sante|angels santé|seventure|kurma|jeito|eic fund|\beic\b|sofinnova|eurazeo|truffle|merieux|mérieux|cathay|extens/.test(text)) {
+    return language === "fr"
+      ? "Pour Bpifrance, France Biotech, Angels Santé, Seventure, Kurma, Jeito, EIC Fund, Sofinnova, Eurazeo, Truffle, Mérieux, Cathay, Extens et les fonds santé, commencez par /fonds-sante-france puis les pages dédiées source-first du site. Ensuite, utilisez /investment-funds pour l’annuaire complet et /recrutement-apres-levee-de-fonds pour le pont vers les équipes."
+      : "For Bpifrance, France Biotech, Angels Santé, Seventure, Kurma, Jeito, EIC Fund, Sofinnova, Eurazeo, Truffle, Mérieux, Cathay, Extens and healthcare funds, start with /fonds-sante-france, then the dedicated source-first pages, and use /investment-funds for the full directory.";
+  }
+
   if (/fund|fonds|investment|invest|seed|serie a|series a|serie b|series b|levee|fundraising/.test(text)) {
     return language === "fr"
-      ? "Pour les sujets financement et structuration post-levée, commencez par /investment-funds, /news et /studies. Ces pages couvrent les fonds, la croissance Seed / Série A / Série B et les impacts recrutement."
-      : "For funding and post-raise team building topics, start with /investment-funds, /news and /studies. These pages cover funds, Seed / Series A / Series B growth and hiring impact.";
+      ? "Pour les sujets financement et structuration post-levée, commencez par /fonds-sante-france, /investment-funds, /news et /studies. Ces pages couvrent les fonds, la croissance Seed / Série A / Série B et les impacts recrutement."
+      : "For funding and post-raise team building topics, start with /fonds-sante-france, /investment-funds, /news and /studies. These pages cover funds, Seed / Series A / Series B growth and hiring impact.";
   }
 
   if (/veterin|animal|petfood|clinic|clinique|vet/.test(text)) {

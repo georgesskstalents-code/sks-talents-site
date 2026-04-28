@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
+import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import { events } from "@/data/resources";
+import { getNotionSiteContentBySlug, mapNotionEntryToResourceItem } from "@/lib/notion";
 
-export function generateStaticParams() {
-  return events.map((item) => ({ slug: item.slug }));
-}
+export const dynamic = "force-dynamic";
 
 export default async function EventDetailPage({
   params
@@ -12,7 +12,9 @@ export default async function EventDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const item = events.find((entry) => entry.slug === slug);
+  const staticItem = events.find((entry) => entry.slug === slug);
+  const notionItem = await getNotionSiteContentBySlug(slug, "event");
+  const item = notionItem ? { ...staticItem, ...mapNotionEntryToResourceItem(notionItem) } : staticItem;
 
   if (!item) {
     notFound();
@@ -48,9 +50,22 @@ export default async function EventDetailPage({
               <li>Pendant: insights terrain, networking et contenus courts pour LinkedIn ou blog.</li>
               <li>Après: synthèse des enseignements et opportunités de recrutement à ouvrir.</li>
             </ul>
+            {item.href ? (
+              <div className="mt-6">
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex rounded-full bg-brand-teal px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+                >
+                  Voir la page officielle de l’événement
+                </a>
+              </div>
+            ) : null}
           </div>
         </div>
       </section>
+      <ContentPageSignature description="Page événement éditée par SKS TALENTS pour transformer la veille en contenus utiles, en signaux marché exploitables et en opportunités de prise de contact." />
     </>
   );
 }

@@ -103,6 +103,18 @@ export default function TeamPage() {
           ))}
         </div>
       </SectionShell>
+      <SectionShell
+        eyebrow="À lire ensuite"
+        title="Notre mission, expliquée comme un parcours de décision."
+        description="Si vous voulez comprendre non seulement qui nous sommes, mais comment nous créons de la valeur pour un dirigeant ou un DRH, la page mission prolonge logiquement cette lecture."
+      >
+        <div className="card-surface grid gap-4 p-8 lg:grid-cols-[1fr_auto] lg:items-center">
+          <p className="text-sm leading-7 text-brand-stone">
+            Vous y trouverez notre positionnement, les problèmes que nous adressons, notre méthode, la valeur créée, notre différence et un parcours client simple à suivre.
+          </p>
+          <CalendlyButton label="Voir Notre Mission" href="/mission" tone="outline" />
+        </div>
+      </SectionShell>
     </>
   );
 }

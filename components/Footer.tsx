@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CookiePreferencesButton from "@/components/CookiePreferencesButton";
 
 const footerLinks = [
   { href: "/about", label: "Qui sommes-nous" },
@@ -15,6 +16,10 @@ const footerLinks = [
   { href: "/rejoignez-nous", label: "Rejoignez-nous" },
   { href: "/calcul-salaire-brut-net", label: "Calcul salaire brut/net" },
   { href: "/investment-funds", label: "Investment funds" },
+  { href: "/france", label: "Hub France" },
+  { href: "/senegal", label: "Hub Sénégal" },
+  { href: "/cote-divoire", label: "Hub Côte d’Ivoire" },
+  { href: "/benin", label: "Hub Bénin" },
   { href: "/references", label: "Références" },
   { href: "/contact", label: "Contact" }
 ];
@@ -23,6 +28,7 @@ const legalLinks = [
   { href: "/legal/mentions-legales", label: "Mentions légales" },
   { href: "/legal/cgu", label: "CGU" },
   { href: "/legal/politique-confidentialite", label: "Politique de confidentialité" },
+  { href: "/legal/politique-cookies", label: "Politique cookies" },
   {
     href: "/legal/politique-confidentialite",
     label: "Protection des données à caractère personnel"
@@ -49,11 +55,13 @@ export default function Footer() {
     <footer className="mt-24 border-t border-brand-teal/10 bg-[#163334] text-white">
       <div className="container-shell grid gap-10 py-14 md:grid-cols-[1.1fr_0.9fr]">
         <div className="space-y-4">
-          <img
-            src="/brand/logo-sks-talents.svg"
-            alt="SKS TALENTS"
-            className="h-16 w-[230px] object-contain object-left brightness-[1.08] contrast-125"
-          />
+          <div className="inline-flex items-center justify-center rounded-[26px] border border-white/10 bg-white px-5 py-4 shadow-[0_18px_40px_rgba(5,14,16,0.18)]">
+            <img
+              src="/brand/logo-sks-talents-signature.svg"
+              alt="SKS TALENTS"
+              className="h-16 w-[230px] object-contain object-center"
+            />
+          </div>
           <h2 className="font-display text-4xl">Recruter avec exigence et humanité.</h2>
           <p className="max-w-2xl text-sm leading-7 text-white/70">
             Cabinet spécialisé en executive search, talent acquisition et structuration RH pour
@@ -64,15 +72,19 @@ export default function Footer() {
               Contact direct
             </p>
             <a
-              href="mailto:infos@skstalents.com"
+              href="mailto:g.kengue@skstalents.com"
               className="mt-2 inline-flex text-base font-semibold text-white transition hover:text-teal-200"
             >
-              infos@skstalents.com
+              g.kengue@skstalents.com
             </a>
           </div>
           <div className="flex flex-wrap gap-3 pt-2">
             <a
-              href="https://calendly.com/g-kengue/talentconsulting"
+              href={
+                process.env.NEXT_PUBLIC_CALENDLY_URL && process.env.NEXT_PUBLIC_CALENDLY_URL.length > 0
+                  ? process.env.NEXT_PUBLIC_CALENDLY_URL
+                  : "https://calendly.com/g-kengue/talentconsulting"
+              }
               target="_blank"
               rel="noreferrer noopener"
               className="inline-flex rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white/90 transition hover:bg-white/10"
@@ -80,7 +92,7 @@ export default function Footer() {
               Prendre rendez-vous
             </a>
             <a
-              href="https://linkedin.com/m/search/results/all/?keywords=sks+talents&fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A86378852&position=0&origin=RICH_QUERY_TYPEAHEAD_HISTORY&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BrPgcaT3hSCqaGuomz7Pvvw%3D%3D"
+              href="https://www.linkedin.com/company/sks-talents/"
               target="_blank"
               rel="noreferrer noopener"
               className="inline-flex rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white/90 transition hover:bg-white/10"
@@ -141,16 +153,19 @@ export default function Footer() {
                 {link.label}
               </Link>
             ))}
+            <CookiePreferencesButton className="text-left text-sm font-semibold text-white/80 transition hover:text-white" />
           </div>
         </div>
       </div>
       <div className="border-t border-white/10 bg-brand-teal/90 px-6 py-14">
         <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-4 text-center">
-          <img
-            src="/brand/logo-sks-talents.svg"
-            alt="SKS TALENTS"
-            className="h-24 w-auto object-contain brightness-0 invert sm:h-28"
-          />
+          <div className="rounded-[30px] border border-white/15 bg-white px-6 py-5 shadow-[0_22px_50px_rgba(8,22,24,0.18)]">
+            <img
+              src="/brand/logo-sks-talents-signature.svg"
+              alt="SKS TALENTS"
+              className="h-24 w-auto object-contain sm:h-28"
+            />
+          </div>
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/80">
             Scaling teams without losing soul
           </p>

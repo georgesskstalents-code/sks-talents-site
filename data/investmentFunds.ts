@@ -221,7 +221,7 @@ export const investmentFunds: InvestmentFund[] = [
     keyFacts: [
       "The EIC Fund is the venture capital investment arm of the European Innovation Council.",
       "Official site states over EUR 4bn capitalisation and more than EUR 1.4bn signed investment agreements.",
-      "The overview page states 279 portfolio companies across 25 countries."
+      "The overview page states 279 portfolio companies across 25 countries (the public page does not always show a timestamp; re-check on refresh)."
     ],
     portfolioHighlights: [
       {

@@ -17,25 +17,38 @@ export default function TrustpilotWidget() {
   }
 
   return (
-    <div className="card-surface p-8">
-      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-teal">
+    <div className="card-surface p-6 lg:p-7">
+      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
         Trustpilot
       </p>
-      <h3 className="mt-4 font-display text-4xl text-brand-ink">4,5/5 sur 13 avis publics.</h3>
-      <p className="mt-4 text-base leading-8 text-brand-stone">
+      <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <h3 className="font-display text-4xl text-brand-ink sm:text-5xl">4,5/5</h3>
+          <p className="mt-2 text-sm font-medium uppercase tracking-[0.16em] text-brand-stone">
+            sur 13 avis publics
+          </p>
+        </div>
+        <img
+          src="/images/partners/trustpilot.svg"
+          alt="Trustpilot"
+          className="h-8 w-auto object-contain sm:mt-2"
+        />
+      </div>
+      <p className="mt-4 text-sm leading-7 text-brand-stone">
         La preuve sociale existe déjà sur Trustpilot. Le widget peut être connecté avec l’identifiant{" "}
         <span className="font-semibold">{widgetId}</span>, mais la page publique suffit déjà à
         rassurer avant conversion sur la qualité de relation et le sérieux des échanges.
       </p>
-      <div className="mt-6 rounded-3xl border border-brand-teal/10 bg-brand-mint/45 p-5">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
-          Signaux visibles
-        </p>
-        <ul className="mt-3 space-y-2 text-sm leading-7 text-brand-stone">
-          <li>4,5/5 sur Trustpilot</li>
-          <li>13 avis publics consultables</li>
-          <li>Signal externe utile avant prise de rendez-vous</li>
-        </ul>
+      <div className="mt-5 grid gap-3 sm:grid-cols-3">
+        {[
+          "4,5/5 sur Trustpilot",
+          "13 avis publics consultables",
+          "Signal externe utile avant prise de rendez-vous"
+        ].map((item) => (
+          <div key={item} className="rounded-[20px] border border-brand-teal/10 bg-brand-mint/45 px-4 py-4 text-sm leading-7 text-brand-stone">
+            {item}
+          </div>
+        ))}
       </div>
       <a
         href={reviewUrl}

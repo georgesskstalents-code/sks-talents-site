@@ -1,9 +1,49 @@
 import PageHero from "@/components/PageHero";
 import ReferenceMarquee from "@/components/ReferenceMarquee";
 import ReferenceGrid from "@/components/ReferenceGrid";
-import { references } from "@/data/references";
+import { Reference, references } from "@/data/references";
+import { getNotionSiteContentList, mapNotionEntryToReference } from "@/lib/notion";
 
-export default function ReferencesPage() {
+export const dynamic = "force-dynamic";
+
+function mergeReference(
+  staticItem: (typeof references)[number] | undefined,
+  notionItem?: ReturnType<typeof mapNotionEntryToReference>
+) {
+  if (!staticItem && !notionItem) {
+    return undefined;
+  }
+
+  if (!staticItem) {
+    return notionItem;
+  }
+
+  if (!notionItem) {
+    return staticItem;
+  }
+
+  const shouldPreferStaticLogo =
+    !notionItem.logoPath || notionItem.logoPath.includes("logo.clearbit.com");
+
+  return {
+    ...staticItem,
+    ...notionItem,
+    logoPath: shouldPreferStaticLogo ? staticItem.logoPath : notionItem.logoPath
+  };
+}
+
+export default async function ReferencesPage() {
+  const notionReferences = await getNotionSiteContentList("reference", 200);
+  const notionReferenceMap = new Map(
+    notionReferences.map(mapNotionEntryToReference).map((item) => [item.slug, item])
+  );
+  const mergedReferences = [
+    ...references.map((item) => mergeReference(item, notionReferenceMap.get(item.slug))),
+    ...Array.from(notionReferenceMap.entries())
+      .filter(([slug]) => !references.some((item) => item.slug === slug))
+      .map(([, item]) => item)
+  ].filter((item): item is Reference => Boolean(item));
+
   return (
     <>
       <PageHero
@@ -16,10 +56,10 @@ export default function ReferencesPage() {
         ]}
       />
       <section className="container-shell py-8">
-        <ReferenceMarquee items={references} />
+        <ReferenceMarquee items={mergedReferences} />
       </section>
       <section className="container-shell py-4">
-        <ReferenceGrid items={references} />
+        <ReferenceGrid items={mergedReferences} />
       </section>
     </>
   );

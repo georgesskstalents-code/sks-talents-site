@@ -1,7 +1,34 @@
-import ListingCard from "@/components/ListingCard";
 import ExternalLinkGrid from "@/components/ExternalLinkGrid";
 import PageHero from "@/components/PageHero";
-import { schools } from "@/data/resources";
+import ResourceLogo from "@/components/ResourceLogo";
+import { ResourceItem, schools } from "@/data/resources";
+import { getNotionSiteContentList, mapNotionEntryToResourceItem } from "@/lib/notion";
+import Link from "next/link";
+
+export const dynamic = "force-dynamic";
+
+function mergeSchoolItem(staticItem: (typeof schools)[number] | undefined, notionItem?: ReturnType<typeof mapNotionEntryToResourceItem>) {
+  if (!staticItem && !notionItem) {
+    return undefined;
+  }
+
+  if (!staticItem) {
+    return notionItem;
+  }
+
+  if (!notionItem) {
+    return staticItem;
+  }
+
+  const shouldPreferStaticLogo =
+    !notionItem.logoUrl || notionItem.logoUrl.includes("logo.clearbit.com");
+
+  return {
+    ...staticItem,
+    ...notionItem,
+    logoUrl: shouldPreferStaticLogo ? staticItem.logoUrl : notionItem.logoUrl
+  };
+}
 
 const faqItems = [
   {
@@ -34,8 +61,27 @@ const faqSchema = {
   }))
 };
 
-export default function SchoolsPage() {
-  const veterinarySchools = schools.filter((item) =>
+export default async function SchoolsPage() {
+  let notionSchools: Awaited<ReturnType<typeof getNotionSiteContentList>> = [];
+
+  try {
+    notionSchools = await getNotionSiteContentList("school", 200);
+  } catch (error) {
+    console.error("Schools page: failed to load Notion schools, using local fallback.", error);
+  }
+
+  const notionSchoolMap = new Map(
+    notionSchools.map(mapNotionEntryToResourceItem).map((item) => [item.slug, item])
+  );
+
+  const mergedSchools = [
+    ...schools.map((item) => mergeSchoolItem(item, notionSchoolMap.get(item.slug))),
+    ...Array.from(notionSchoolMap.entries())
+      .filter(([slug]) => !schools.some((item) => item.slug === slug))
+      .map(([, item]) => item)
+  ].filter((item): item is ResourceItem => Boolean(item));
+
+  const veterinarySchools = mergedSchools.filter((item) =>
     ["enva", "envt", "oniris", "vetagro-sup", "unilasalle-rouen-veterinaire"].includes(item.slug)
   );
 
@@ -98,6 +144,14 @@ export default function SchoolsPage() {
             école privée. Cette page relie ces écoles officielles aux recherches d’orientation, aux
             débouchés et aux viviers de talents en santé animale.
           </p>
+          <a
+            href="https://www.veterinaire.fr/la-profession-veterinaire/devenir-veterinaire/les-ecoles"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="mt-5 inline-flex text-sm font-semibold text-brand-teal"
+          >
+            Source officielle · Ordre national des vétérinaires
+          </a>
         </div>
       </section>
       <section className="container-shell py-4">
@@ -112,14 +166,24 @@ export default function SchoolsPage() {
         />
       </section>
       <section className="container-shell grid gap-6 py-8 md:grid-cols-2 xl:grid-cols-3">
-        {schools.map((item) => (
-          <ListingCard
+        {mergedSchools.map((item) => (
+          <Link
             key={item.slug}
             href={`/schools/${item.slug}`}
-            title={item.title}
-            description={item.summary}
-            meta={`${item.sector} · ${item.location}`}
-          />
+            className="card-surface block p-6 transition hover:-translate-y-1"
+          >
+            <div className="flex items-start gap-4">
+              <ResourceLogo name={item.title} logoUrl={item.logoUrl} />
+              <div className="min-w-0">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-teal">
+                  {`${item.sector} · ${item.location}`}
+                </p>
+                <h3 className="mt-3 font-display text-3xl text-brand-ink">{item.title}</h3>
+              </div>
+            </div>
+            <p className="mt-4 text-sm leading-7 text-brand-stone">{item.summary}</p>
+            <p className="mt-4 text-sm font-semibold text-brand-teal">Voir la page école</p>
+          </Link>
         ))}
       </section>
       <section className="container-shell grid gap-6 py-4 md:grid-cols-3">

@@ -134,7 +134,7 @@ export default function WebsiteServicesPage() {
       >
         <InlineLeadForm
           title="Être rappelé depuis la page service"
-          description="Laissez vos coordonnées et votre besoin sera envoyé directement à infos@skstalents.com."
+          description="Laissez vos coordonnées et votre besoin sera envoyé directement à g.kengue@skstalents.com."
           role="Direction / Talent"
           sector="Life Sciences"
         />

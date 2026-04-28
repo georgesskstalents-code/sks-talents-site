@@ -36,6 +36,7 @@ SITE / CONTENT PRIORITIES
 
 SOURCES TO PRIORITIZE
 - France Biotech
+- Business France
 - Bpifrance biotech / medtech pages
 - Leaders League healthcare investment rankings
 - Trustpilot SKS TALENTS profile
@@ -48,6 +49,7 @@ SOURCES TO PRIORITIZE
 - SIDIV
 - Angels Santé
 - Le Hub Bpifrance
+- Business France LinkedIn
 - approved LinkedIn company post feeds already whitelisted by SKS TALENTS
 - company official websites
 - official investor websites

@@ -4,7 +4,7 @@
 
 - Rotate any secret that has already been shared in chat or copied into non-secure places.
 - Use `.env.production.example` as the exact list of variables to paste into Vercel.
-- Keep `infos@skstalents.com` as the destination for leads, feedback, and weekly reports.
+- Keep `g.kengue@skstalents.com` as the destination for leads, feedback, and weekly reports.
 
 ## 2. Vercel
 
@@ -165,7 +165,7 @@ Check during the first 48 hours:
 
 - Search Console indexing
 - GA4 realtime
-- weekly report received on `infos@skstalents.com`
-- lead emails received on `infos@skstalents.com`
-- feedback emails received on `infos@skstalents.com`
+- weekly report received on `g.kengue@skstalents.com`
+- lead emails received on `g.kengue@skstalents.com`
+- feedback emails received on `g.kengue@skstalents.com`
 - Trustpilot / Senja widgets render correctly

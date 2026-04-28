@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import { getSectorPage, lifeSciencesHub } from "@/data/sectors";
 
@@ -31,6 +32,7 @@ export default async function BiotechDetailPage({
           </p>
         </div>
       </section>
+      <ContentPageSignature description="Page sectorielle SKS TALENTS sur la biotech pour relier innovation, financement, recrutement critique et structuration d’équipe." />
     </>
   );
 }

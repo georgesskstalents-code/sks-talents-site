@@ -9,6 +9,10 @@ const hub = sectorHubs["animal-health"];
 export default function AnimalHealthHeader() {
   const pathname = usePathname();
 
+  if (pathname === "/animal-health") {
+    return null;
+  }
+
   return (
     <section className="border-b border-brand-teal/10 bg-gradient-to-b from-white to-brand-mint/20 backdrop-blur">
       <div className="container-shell py-5">

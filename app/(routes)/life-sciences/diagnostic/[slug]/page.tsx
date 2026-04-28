@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import { getSectorPage, lifeSciencesHub } from "@/data/sectors";
 
@@ -31,6 +32,7 @@ export default async function DiagnosticDetailPage({
           </p>
         </div>
       </section>
+      <ContentPageSignature description="Page sectorielle SKS TALENTS sur le diagnostic pour connecter signaux marché, besoins de recrutement, contenu expert et conversion." />
     </>
   );
 }

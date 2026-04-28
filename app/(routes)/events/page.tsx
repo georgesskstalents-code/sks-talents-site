@@ -1,8 +1,18 @@
 import ListingCard from "@/components/ListingCard";
 import PageHero from "@/components/PageHero";
 import { events } from "@/data/resources";
+import { getNotionSiteContentList, mapNotionEntryToResourceItem } from "@/lib/notion";
 
-export default function EventsPage() {
+export const dynamic = "force-dynamic";
+
+export default async function EventsPage() {
+  const notionEvents = await getNotionSiteContentList("event", 100);
+  const mergedEvents = Array.from(
+    new Map(
+      [...events, ...notionEvents.map(mapNotionEntryToResourceItem)].map((item) => [item.slug, item])
+    ).values()
+  );
+
   return (
     <>
       <PageHero
@@ -12,7 +22,7 @@ export default function EventsPage() {
         variant="teal"
       />
       <section className="container-shell grid gap-6 py-8 md:grid-cols-2 xl:grid-cols-3">
-        {events.map((item) => (
+        {mergedEvents.map((item) => (
           <ListingCard
             key={item.slug}
             href={`/events/${item.slug}`}

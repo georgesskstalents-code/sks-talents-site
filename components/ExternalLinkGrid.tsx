@@ -1,3 +1,7 @@
+"use client";
+
+import ResourceLogo from "@/components/ResourceLogo";
+
 type ExternalLinkItem = {
   name: string;
   href: string;
@@ -22,13 +26,13 @@ export default function ExternalLinkGrid({
           className="card-surface block p-5 transition hover:-translate-y-0.5"
         >
           <div className="flex items-start gap-4">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-brand-line bg-white p-2">
-              <img
-                src={item.logoUrl}
-                alt={item.name}
-                className="max-h-full max-w-full object-contain"
-              />
-            </div>
+            <ResourceLogo
+              name={item.name}
+              logoUrl={item.logoUrl}
+              className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-brand-line bg-white p-2"
+              imageClassName="max-h-full max-w-full object-contain"
+              badgeClassName="flex h-full w-full items-center justify-center rounded-xl bg-brand-mint px-2 text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-teal"
+            />
             <div className="min-w-0">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
                 {item.meta}

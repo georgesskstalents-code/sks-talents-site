@@ -1,3 +1,4 @@
+import ResourceLogo from "@/components/ResourceLogo";
 import type { Reference } from "@/data/references";
 
 export default function ReferenceMarquee({ items }: { items: Reference[] }) {
@@ -16,20 +17,13 @@ export default function ReferenceMarquee({ items }: { items: Reference[] }) {
             aria-label={item.company}
             title={item.company}
           >
-            {item.logoPath ? (
-              <img
-                src={item.logoPath}
-                alt={item.company}
-                className="h-10 w-auto max-w-[150px] object-contain opacity-95"
-              />
-            ) : (
-              <div className="text-center">
-                <p className="text-sm font-semibold text-brand-ink">{item.company}</p>
-                <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-brand-stone">
-                  {item.category}
-                </p>
-              </div>
-            )}
+            <ResourceLogo
+              name={item.company}
+              logoUrl={item.logoPath}
+              className="relative flex h-12 w-[150px] shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-brand-line bg-white p-3"
+              imageClassName="h-full w-full object-contain"
+              badgeClassName="flex h-full w-full items-center justify-center rounded-xl bg-brand-mint px-3 text-center text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-teal"
+            />
           </a>
         ))}
       </div>

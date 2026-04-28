@@ -24,6 +24,7 @@ body {
     linear-gradient(180deg, rgba(223, 243, 241, 0.56), transparent 18%),
     var(--background);
   color: var(--foreground);
+  top: 0 !important;
 }
 
 a {
@@ -41,6 +42,58 @@ a {
 
 .card-surface {
   @apply rounded-[28px] border border-white/60 bg-white/80 shadow-soft backdrop-blur;
+}
+
+.card-luxe {
+  @apply rounded-[30px] border border-white/70 shadow-[0_22px_60px_rgba(22,51,52,0.08)] backdrop-blur transition duration-300;
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.panel-lift {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+  will-change: transform, box-shadow;
+}
+
+.panel-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 70px rgba(22, 51, 52, 0.12);
+  border-color: rgba(65, 160, 164, 0.22);
+}
+
+.chip-lift {
+  transition:
+    transform 0.22s ease,
+    background-color 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.chip-lift:hover {
+  transform: translateY(-1px);
+}
+
+.button-premium {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.button-premium:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 40px rgba(22, 51, 52, 0.12);
+}
+
+.mesh-panel {
+  @apply rounded-[34px] border border-white/70 bg-white/70 shadow-[0_26px_90px_rgba(22,51,52,0.08)] backdrop-blur;
+  background-image:
+    radial-gradient(circle at top left, rgba(223, 243, 241, 0.95), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(186, 234, 238, 0.48), transparent 32%);
 }
 
 .eyebrow {
@@ -100,4 +153,140 @@ a {
 .animate-marquee-testimonials {
   animation: marquee-left 42s linear infinite;
   will-change: transform;
+}
+
+@keyframes soft-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(65, 160, 164, 0.08);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 10px 30px 0 rgba(65, 160, 164, 0.12);
+    transform: translateY(-1px);
+  }
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 3.8s ease-in-out infinite;
+}
+
+@keyframes launcher-bob {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-1px) scale(1.08);
+  }
+}
+
+@keyframes launcher-glow {
+  0%,
+  100% {
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.22);
+  }
+  50% {
+    box-shadow: 0 26px 60px rgba(65, 160, 164, 0.18);
+  }
+}
+
+.animate-launcher-bob {
+  animation: launcher-bob 2.6s ease-in-out infinite;
+}
+
+.animate-launcher-glow {
+  animation: launcher-glow 3.6s ease-in-out infinite;
+}
+
+.reveal-on-scroll {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-on-scroll.is-ready {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-ready.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sks-elfsight-translator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  flex: 0 0 auto;
+  align-self: center;
+}
+
+.sks-elfsight-translator__mount {
+  display: block;
+  width: auto;
+  min-width: 132px;
+  min-height: 44px;
+}
+
+.sks-elfsight-translator iframe,
+.sks-elfsight-translator [class*="eapps-google-translate"],
+.sks-elfsight-translator [class*="eapps-widget"],
+.sks-elfsight-translator [class*="eapps-widget-toolbar"],
+.sks-elfsight-translator [class*="eapps-google-translate-switcher"] {
+  display: block !important;
+  height: auto !important;
+  min-height: 44px !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .sks-elfsight-translator {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .sks-elfsight-translator__mount {
+    min-width: 0;
+  }
+}
+
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame {
+  display: none !important;
+}
+
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel-lift,
+  .panel-lift:hover,
+  .chip-lift,
+  .chip-lift:hover,
+  .button-premium,
+  .button-premium:hover,
+  .animate-fade-in-up,
+  .animate-blob,
+  .animate-marquee,
+  .animate-marquee-testimonials,
+  .animate-soft-pulse,
+  .animate-launcher-bob,
+  .animate-launcher-glow,
+  .reveal-on-scroll,
+  .reveal-on-scroll.is-visible {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

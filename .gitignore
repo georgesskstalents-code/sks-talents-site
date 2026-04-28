@@ -1,11 +1,48 @@
 node_modules
 .next
 .next_stale_*
+.vercel
+
+# Env files (never commit real values)
 .env
 .env.local
 .env.production
+.env.*.local
+
+# Keys & certificates
+*.pem
+*.key
+
+# Codex backup files (legacy)
+*_BACKUP.txt
+*_SAFE.txt
+*_FIXED.txt
+*_MICHAEL_PAGE_STYLE.txt
+*_HOMEPAGE.txt
+*_OPENSOURCING_STYLE.txt
+*_HYDRATION.txt
+*_WITH_LOGO.txt
+
+# Runtime data / logs / leads (RGPD — never commit user data)
+data/*-log.jsonl
+data/*-log.json
+data/*-store.json
+data/*.jsonl
+
+# OS / editor noise
 .DS_Store
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Editor / Finder duplicates
+* 2.tsx
+* 2.ts
+* 2.tsx.bak
+* 2.json
+*.bak
+
+# Stray buggy files from terminal copy-paste accidents
+", item in html)*
+*.tmp.txt

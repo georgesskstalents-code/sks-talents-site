@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SKS Talents · Dashboard marketing</title>
+  <base href="/dashboard/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/style.css" />
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" src="src/data.jsx"></script>
+  <script type="text/babel" src="src/primitives.jsx"></script>
+  <script type="text/babel" src="src/topbar.jsx"></script>
+  <script type="text/babel" src="src/tab-summary.jsx"></script>
+  <script type="text/babel" src="src/tab-actions.jsx"></script>
+  <script type="text/babel" src="src/tabs.jsx"></script>
+
+  <script type="text/babel">
+    const TWEAK_DEFAULTS = {
+      accent: "teal",
+      density: "comfy"
+    };
+
+    const ACCENTS = {
+      teal: { value: "#41a0a4", soft: "rgba(65, 160, 164, 0.12)" },
+      lime: { value: "#b3c62e", soft: "rgba(179, 198, 46, 0.15)" },
+      ink: { value: "#0f1415", soft: "rgba(15, 20, 21, 0.08)" }
+    };
+
+    function SourceBadge({ item }) {
+      const color =
+        item.status === "configured"
+          ? "var(--good)"
+          : item.status === "demo"
+            ? "var(--warm)"
+            : "var(--ink-soft)";
+
+      return (
+        <span
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 6,
+            padding: "6px 10px",
+            borderRadius: 999,
+            border: "1px solid var(--line)",
+            background: "var(--bg-elev)",
+            fontSize: 12,
+            color: "var(--ink)"
+          }}
+        >
+          <span className="dot" style={{ background: color }} />
+          {item.label}
+        </span>
+      );
+    }
+
+    function RuntimePanel({ runtime, onRefresh }) {
+      return (
+        <section className="card" style={{ marginBottom: 24 }}>
+          <div className="row-between" style={{ gap: 16, flexWrap: "wrap" }}>
+            <div>
+              <div className="eyebrow">Pilotage</div>
+              <h2 className="section-title" style={{ marginTop: 6 }}>Vue live du dashboard</h2>
+              <p className="section-sub" style={{ marginTop: 8 }}>
+                {runtime.demoMode
+                  ? "Mode démo piloté localement. Les Notes et Actions peuvent déjà tourner en local ou via Notion."
+                  : "Données live chargées depuis les sources configurées."}
+              </p>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+              <span className="menu-footnote" style={{ padding: 0 }}>
+                Dernière mise à jour : {runtime.lastUpdatedLabel}
+              </span>
+              <button className="btn" onClick={() => onRefresh(true)}>
+                {runtime.loading ? "Chargement…" : "Rafraîchir maintenant"}
+              </button>
+            </div>
+          </div>
+
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 18 }}>
+            {(runtime.sourceStatus || []).map((item) => (
+              <SourceBadge key={item.id} item={item} />
+            ))}
+          </div>
+
+          {runtime.error && (
+            <div className="card-sub" style={{ marginTop: 16, color: "var(--bad)" }}>
+              {runtime.error}
+            </div>
+          )}
+        </section>
+      );
+    }
+
+    function renderActiveTab(state, setState) {
+      switch (state.tab) {
+        case "actions":
+          return <ActionsTab />;
+        case "traffic":
+          return <TrafficTab state={state} />;
+        case "seo":
+          return <SeoTab />;
+        case "paid":
+          return <PaidTab />;
+        case "conversions":
+          return <ConversionsTab />;
+        case "pages":
+          return <PagesTab />;
+        case "geo":
+          return <GeoTab />;
+        case "notes":
+          return <NotesTab />;
+        case "summary":
+        default:
+          return <SummaryTab state={state} setState={setState} />;
+      }
+    }
+
+    function App() {
+      const [tweaks] = React.useState(TWEAK_DEFAULTS);
+      const [state, setState] = React.useState({
+        tab: "summary",
+        datePreset: "30d",
+        channel: "Tous les canaux",
+        compare: true,
+        dark: false
+      });
+      const [version, setVersion] = React.useState(0);
+      const [runtime, setRuntime] = React.useState({
+        loading: true,
+        demoMode: true,
+        error: "",
+        lastUpdated: "",
+        lastUpdatedLabel: "—",
+        sourceStatus: []
+      });
+
+      const loadData = React.useCallback(async (manual = false) => {
+        setRuntime((current) => ({
+          ...current,
+          loading: true,
+          error: manual ? "" : current.error
+        }));
+
+        const payload = await window.fetchDashboardDataset({
+          range: state.datePreset,
+          channel: state.channel === "Tous les canaux" ? "all" : state.channel
+        });
+
+        const lastUpdated = payload.lastUpdated || new Date().toISOString();
+        const lastUpdatedLabel = new Intl.DateTimeFormat("fr-FR", {
+          day: "numeric",
+          month: "short",
+          hour: "2-digit",
+          minute: "2-digit"
+        }).format(new Date(lastUpdated));
+
+        setRuntime({
+          loading: false,
+          demoMode: Boolean(payload.demoMode),
+          error: payload.error || "",
+          lastUpdated,
+          lastUpdatedLabel,
+          sourceStatus: payload.sourceStatus || []
+        });
+        setVersion((current) => current + 1);
+      }, [state.datePreset, state.channel]);
+
+      React.useEffect(() => {
+        const accent = ACCENTS[tweaks.accent] || ACCENTS.teal;
+        document.documentElement.style.setProperty("--accent", accent.value);
+        document.documentElement.style.setProperty("--accent-soft", accent.soft);
+        document.documentElement.setAttribute("data-density", tweaks.density);
+        document.documentElement.setAttribute("data-theme", state.dark ? "dark" : "light");
+      }, [state.dark, tweaks]);
+
+      React.useEffect(() => {
+        loadData(false);
+        const id = window.setInterval(() => loadData(false), window.DASHBOARD_POLL_MS || 300000);
+        return () => window.clearInterval(id);
+      }, [loadData]);
+
+      return (
+        <div className="app" key={version}>
+          <TopBar state={state} setState={setState} runtime={runtime} onRefresh={loadData} />
+          <main className="main">
+            <RuntimePanel runtime={runtime} onRefresh={loadData} />
+            {runtime.loading && !window.DASHBOARD_LAST_PAYLOAD ? (
+              <section className="card">
+                <div className="section-sub">Chargement du dashboard…</div>
+              </section>
+            ) : (
+              renderActiveTab(state, setState)
+            )}
+          </main>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>

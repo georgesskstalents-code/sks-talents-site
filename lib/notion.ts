@@ -1,8 +1,17 @@
 import { articles, type Article } from "@/data/articles";
 import { jobRoles, type JobRole } from "@/data/jobRoles";
-import { validateArticleForSync, validateJobRoleForSync } from "@/lib/contentGovernance";
+import { references, type Reference } from "@/data/references";
+import { events, schools, type ResourceItem } from "@/data/resources";
+import {
+  validateArticleForSync,
+  validateEventForSync,
+  validateJobRoleForSync,
+  validateReferenceForSync,
+  validateSchoolForSync
+} from "@/lib/contentGovernance";
 
 const NOTION_VERSION = process.env.NOTION_VERSION ?? "2022-06-28";
+const NOTION_READ_TIMEOUT_MS = Number(process.env.NOTION_READ_TIMEOUT_MS ?? "2500");
 
 type NotionRichText = {
   type: "text";
@@ -20,10 +29,23 @@ type NotionPropertyValue =
   | { multi_select: { name: string }[] }
   | { number: number }
   | { date: { start: string } | null }
-  | { url: string | null };
+  | { url: string | null }
+  | {
+      files: Array<{
+        name?: string;
+        type?: "external" | "file";
+        external?: { url?: string };
+        file?: { url?: string };
+      }>;
+    };
 
 type NotionPage = {
   id: string;
+  cover?: {
+    type?: "external" | "file";
+    external?: { url?: string };
+    file?: { url?: string };
+  } | null;
   properties?: Record<
     string,
     {
@@ -34,12 +56,27 @@ type NotionPage = {
       status?: { name?: string };
       date?: { start?: string };
       url?: string | null;
+      files?: Array<{
+        name?: string;
+        type?: "external" | "file";
+        external?: { url?: string };
+        file?: { url?: string };
+      }>;
     }
   >;
 };
 
 type NotionDatabase = {
   properties?: Record<string, { type?: string }>;
+};
+
+type NotionFetchOptions = {
+  cache?: RequestCache;
+  timeoutMs?: number;
+  next?: {
+    revalidate?: number;
+    tags?: string[];
+  };
 };
 
 export type NotionSiteContentEntry = {
@@ -61,7 +98,34 @@ export type NotionSiteContentEntry = {
   industries: string;
   sourceName: string;
   sourceUrl: string;
+  heroImageUrl: string;
+  heroImageAlt: string;
 };
+
+export function mapNotionEntryToResourceItem(entry: NotionSiteContentEntry): ResourceItem {
+  return {
+    slug: entry.slug,
+    title: entry.title,
+    summary: entry.excerpt || entry.mainContent || entry.metaDescription,
+    sector: entry.vertical || entry.category || "Cross-sector",
+    location: entry.category || undefined,
+    dateLabel: entry.publishDate || undefined,
+    href: entry.sourceUrl || undefined
+  };
+}
+
+export function mapNotionEntryToReference(entry: NotionSiteContentEntry): Reference {
+  return {
+    slug: entry.slug,
+    company: entry.title,
+    category: entry.vertical || "Cross-sector",
+    descriptor: entry.category || undefined,
+    summary: entry.excerpt || entry.mainContent || entry.metaDescription,
+    impact:
+      entry.mainContent || "Référence éditoriale enrichie depuis Notion pour soutenir la preuve sociale du site.",
+    website: entry.sourceUrl || undefined
+  };
+}
 
 function notionText(value: string): NotionRichText[] {
   return value
@@ -89,15 +153,37 @@ function getHeaders() {
   };
 }
 
-async function notionRequest<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(`https://api.notion.com/v1${path}`, {
-    ...init,
-    headers: {
-      ...getHeaders(),
-      ...(init?.headers ?? {})
-    },
-    cache: "no-store"
-  });
+async function notionRequest<T>(
+  path: string,
+  init?: RequestInit,
+  timeoutMs = 10000,
+  fetchOptions?: NotionFetchOptions
+): Promise<T> {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+  let response: Response;
+
+  try {
+    response = await fetch(`https://api.notion.com/v1${path}`, {
+      ...init,
+      headers: {
+        ...getHeaders(),
+        ...(init?.headers ?? {})
+      },
+      cache: fetchOptions?.cache ?? "no-store",
+      next: fetchOptions?.next,
+      signal: controller.signal
+    });
+  } catch (error) {
+    if (error instanceof Error && error.name === "AbortError") {
+      throw new Error(`Notion request timeout after ${timeoutMs}ms`);
+    }
+
+    throw error;
+  } finally {
+    clearTimeout(timeoutId);
+  }
 
   if (!response.ok) {
     const body = await response.text();
@@ -142,19 +228,67 @@ function extractUrl(page: NotionPage, propertyName: string) {
   return page.properties?.[propertyName]?.url?.trim() ?? "";
 }
 
-async function findPageBySlug(databaseId: string, slug: string) {
-  const payload = await notionRequest<{ results: NotionPage[] }>(`/databases/${databaseId}/query`, {
-    method: "POST",
-    body: JSON.stringify({
-      filter: {
-        property: "Slug",
-        rich_text: {
-          equals: slug
-        }
-      },
-      page_size: 1
-    })
-  });
+function extractFilesUrl(page: NotionPage, propertyName: string) {
+  const files = page.properties?.[propertyName]?.files ?? [];
+  const firstFile = files.find((item) => item?.external?.url || item?.file?.url);
+  return firstFile?.external?.url?.trim() || firstFile?.file?.url?.trim() || "";
+}
+
+function extractCoverUrl(page: NotionPage) {
+  return page.cover?.external?.url?.trim() || page.cover?.file?.url?.trim() || "";
+}
+
+function extractFirstMatchingUrl(page: NotionPage, propertyNames: string[]) {
+  for (const propertyName of propertyNames) {
+    const url = extractUrl(page, propertyName);
+    if (url) return url;
+  }
+
+  return "";
+}
+
+function extractFirstMatchingFilesUrl(page: NotionPage, propertyNames: string[]) {
+  for (const propertyName of propertyNames) {
+    const url = extractFilesUrl(page, propertyName);
+    if (url) return url;
+  }
+
+  return "";
+}
+
+function extractHeroImageUrl(page: NotionPage) {
+  return (
+    extractFirstMatchingUrl(page, ["Hero Image URL", "Cover Image URL", "Image URL"]) ||
+    extractFirstMatchingFilesUrl(page, ["Hero Image", "Cover Image", "Image"]) ||
+    extractCoverUrl(page)
+  );
+}
+
+function extractHeroImageAlt(page: NotionPage) {
+  return (
+    extractRichText(page, "Hero Image Alt") ||
+    extractRichText(page, "Image Alt") ||
+    extractTitle(page)
+  );
+}
+
+async function findPageBySlug(databaseId: string, slug: string, timeoutMs = 10000) {
+  const payload = await notionRequest<{ results: NotionPage[] }>(
+    `/databases/${databaseId}/query`,
+    {
+      method: "POST",
+      body: JSON.stringify({
+        filter: {
+          property: "Slug",
+          rich_text: {
+            equals: slug
+          }
+        },
+        page_size: 1
+      })
+    },
+    timeoutMs
+  );
 
   return payload.results.find((entry) => extractSlug(entry) === slug) ?? null;
 }
@@ -338,9 +472,21 @@ function normalizeSingleDatabaseVertical(value: string) {
 
   const lower = value.toLowerCase();
   if (
+    lower.includes("animal") ||
+    lower.includes("medical vet") ||
+    lower.includes("veterinary") ||
+    lower.includes("petfood")
+  ) {
+    return "Animal Health";
+  }
+
+  if (lower.includes("medtech")) {
+    return "Life Sciences";
+  }
+
+  if (
     lower.includes("biotech") ||
     lower.includes("diagnostic") ||
-    lower.includes("medtech") ||
     lower.includes("cosm")
   ) {
     return "Life Sciences";
@@ -407,6 +553,66 @@ function mapRoleToSingleDatabaseProperties(role: JobRole): Record<string, Notion
   };
 }
 
+function mapEventToSingleDatabaseProperties(event: ResourceItem): Record<string, NotionPropertyValue> {
+  return {
+    Title: { title: notionText(event.title) },
+    Slug: { rich_text: notionText(event.slug) },
+    "Content Type": { select: { name: "event" } },
+    Status: { status: { name: "Published" } },
+    Vertical: { select: { name: normalizeSingleDatabaseVertical(event.sector) } },
+    Category: { select: { name: event.location || event.sector } },
+    Excerpt: { rich_text: notionText(event.summary) },
+    "Main Content": {
+      rich_text: notionText(
+        [event.summary, event.location, event.dateLabel].filter(Boolean).join(" · ")
+      )
+    },
+    "Publish date": {
+      date: /^\d{4}-\d{2}-\d{2}$/.test(event.dateLabel ?? "") ? { start: event.dateLabel! } : null
+    },
+    "SEO Title": { rich_text: notionText(event.title) },
+    "Meta Description": { rich_text: notionText(event.summary) },
+    "Source Name": { rich_text: notionText(event.title) },
+    "Source URL": { url: event.href ?? null }
+  };
+}
+
+function mapSchoolToSingleDatabaseProperties(school: ResourceItem): Record<string, NotionPropertyValue> {
+  return {
+    Title: { title: notionText(school.title) },
+    Slug: { rich_text: notionText(school.slug) },
+    "Content Type": { select: { name: "school" } },
+    Status: { status: { name: "Published" } },
+    Vertical: { select: { name: normalizeSingleDatabaseVertical(school.sector) } },
+    Category: { select: { name: school.location || school.sector } },
+    Excerpt: { rich_text: notionText(school.summary) },
+    "Main Content": {
+      rich_text: notionText([school.summary, school.location, school.sector].filter(Boolean).join(" · "))
+    },
+    "SEO Title": { rich_text: notionText(school.title) },
+    "Meta Description": { rich_text: notionText(school.summary) },
+    "Source Name": { rich_text: notionText(school.title) },
+    "Source URL": { url: school.href ?? null }
+  };
+}
+
+function mapReferenceToSingleDatabaseProperties(reference: Reference): Record<string, NotionPropertyValue> {
+  return {
+    Title: { title: notionText(reference.company) },
+    Slug: { rich_text: notionText(reference.slug) },
+    "Content Type": { select: { name: "reference" } },
+    Status: { status: { name: "Published" } },
+    Vertical: { select: { name: normalizeSingleDatabaseVertical(reference.category) } },
+    Category: { select: { name: reference.descriptor || reference.category } },
+    Excerpt: { rich_text: notionText(reference.summary) },
+    "Main Content": { rich_text: notionText(reference.impact) },
+    "SEO Title": { rich_text: notionText(reference.company) },
+    "Meta Description": { rich_text: notionText(reference.summary) },
+    "Source Name": { rich_text: notionText(reference.company) },
+    "Source URL": { url: reference.website ?? null }
+  };
+}
+
 export function hasNotionSyncConfig() {
   return Boolean(
     process.env.NOTION_TOKEN &&
@@ -438,7 +644,9 @@ function mapPageToSiteContentEntry(page: NotionPage): NotionSiteContentEntry {
     schools: extractRichText(page, "Schools"),
     industries: extractRichText(page, "Industries"),
     sourceName: extractRichText(page, "Source Name"),
-    sourceUrl: extractUrl(page, "Source URL")
+    sourceUrl: extractUrl(page, "Source URL"),
+    heroImageUrl: extractHeroImageUrl(page),
+    heroImageAlt: extractHeroImageAlt(page)
   };
 }
 
@@ -450,76 +658,100 @@ export async function getNotionSiteContentBySlug(
     return null;
   }
 
-  const databaseId = process.env.NOTION_SITE_DATABASE_ID!;
-  const page = await findPageBySlug(databaseId, slug);
-  if (!page) {
+  try {
+    const databaseId = process.env.NOTION_SITE_DATABASE_ID!;
+    const page = await findPageBySlug(databaseId, slug, NOTION_READ_TIMEOUT_MS);
+    if (!page) {
+      return null;
+    }
+
+    const entry = mapPageToSiteContentEntry(page);
+    if (entry.status !== "Published") {
+      return null;
+    }
+
+    if (expectedContentType && entry.contentType !== expectedContentType) {
+      return null;
+    }
+
+    return entry;
+  } catch (error) {
+    console.error(`Notion read fallback by slug for "${slug}".`, error);
     return null;
   }
-
-  const entry = mapPageToSiteContentEntry(page);
-  if (entry.status !== "Published") {
-    return null;
-  }
-
-  if (expectedContentType && entry.contentType !== expectedContentType) {
-    return null;
-  }
-
-  return entry;
 }
 
 export async function getNotionSiteContentList(
   expectedContentType?: string,
-  limit = 100
+  limit = 100,
+  fetchOptions?: NotionFetchOptions
 ): Promise<NotionSiteContentEntry[]> {
   if (!hasNotionReadConfig()) {
     return [];
   }
 
-  const databaseId = process.env.NOTION_SITE_DATABASE_ID!;
-  const filters: Array<Record<string, unknown>> = [
-    {
-      property: "Status",
-      status: {
-        equals: "Published"
-      }
-    }
-  ];
-
-  if (expectedContentType) {
-    filters.push({
-      property: "Content Type",
-      select: {
-        equals: expectedContentType
-      }
-    });
-  }
-
-  const payload = await notionRequest<{ results: NotionPage[] }>(`/databases/${databaseId}/query`, {
-    method: "POST",
-    body: JSON.stringify({
-      filter: {
-        and: filters
-      },
-      sorts: [
-        {
-          property: "Publish date",
-          direction: "descending"
+  try {
+    const databaseId = process.env.NOTION_SITE_DATABASE_ID!;
+    const filters: Array<Record<string, unknown>> = [
+      {
+        property: "Status",
+        status: {
+          equals: "Published"
         }
-      ],
-      page_size: limit
-    })
-  });
+      }
+    ];
 
-  return payload.results.map(mapPageToSiteContentEntry).filter((entry) => entry.status === "Published");
+    if (expectedContentType) {
+      filters.push({
+        property: "Content Type",
+        select: {
+          equals: expectedContentType
+        }
+      });
+    }
+
+    const payload = await notionRequest<{ results: NotionPage[] }>(
+      `/databases/${databaseId}/query`,
+      {
+        method: "POST",
+        body: JSON.stringify({
+          filter: {
+            and: filters
+          },
+          sorts: [
+            {
+              property: "Publish date",
+              direction: "descending"
+            }
+          ],
+          page_size: limit
+        })
+      },
+      fetchOptions?.timeoutMs ?? NOTION_READ_TIMEOUT_MS,
+      fetchOptions
+    );
+
+    return payload.results
+      .map(mapPageToSiteContentEntry)
+      .filter((entry) => entry.status === "Published");
+  } catch (error) {
+    console.error("Notion read fallback for site content list.", error);
+    return [];
+  }
 }
 
 export async function syncNotionContent({
   articleLimit = 10,
-  roleLimit = 20
+  roleLimit = 20,
+  eventLimit = 20,
+  schoolLimit = 30,
+  referenceLimit = 20
 }: {
   articleLimit?: number;
   roleLimit?: number;
+  eventLimit?: number;
+  schoolLimit?: number;
+  referenceLimit?: number;
 }) {
   if (!hasNotionSyncConfig()) {
     throw new Error("Notion sync config missing");
@@ -536,11 +768,26 @@ export async function syncNotionContent({
   const latestRoles = [...jobRoles]
     .sort((left, right) => right.shortageLevel.localeCompare(left.shortageLevel, "fr"))
     .slice(0, roleLimit);
+  const latestEvents = [...events]
+    .filter((event) => event.href)
+    .slice(0, eventLimit);
+  const latestSchools = [...schools]
+    .filter((school) => school.href)
+    .slice(0, schoolLimit);
+  const latestReferences = [...references]
+    .filter((reference) => reference.website)
+    .slice(0, referenceLimit);
 
   const articleResults: Array<{ action: "created" | "updated"; id: string }> = [];
   const roleResults: Array<{ action: "created" | "updated"; id: string }> = [];
+  const eventResults: Array<{ action: "created" | "updated"; id: string }> = [];
+  const schoolResults: Array<{ action: "created" | "updated"; id: string }> = [];
+  const referenceResults: Array<{ action: "created" | "updated"; id: string }> = [];
   const rejectedArticles: Array<{ slug: string; title: string; errors: string[] }> = [];
   const rejectedJobRoles: Array<{ slug: string; title: string; errors: string[] }> = [];
+  const rejectedEvents: Array<{ slug: string; title: string; errors: string[] }> = [];
+  const rejectedSchools: Array<{ slug: string; title: string; errors: string[] }> = [];
+  const rejectedReferences: Array<{ slug: string; title: string; errors: string[] }> = [];
 
   const validatedArticles = latestArticles.filter((article) => {
     const validation = validateArticleForSync(article);
@@ -562,6 +809,48 @@ export async function syncNotionContent({
       rejectedJobRoles.push({
         slug: role.slug,
         title: role.title,
+        errors: validation.errors
+      });
+      return false;
+    }
+
+    return true;
+  });
+
+  const validatedEvents = latestEvents.filter((event) => {
+    const validation = validateEventForSync(event);
+    if (!validation.ok) {
+      rejectedEvents.push({
+        slug: event.slug,
+        title: event.title,
+        errors: validation.errors
+      });
+      return false;
+    }
+
+    return true;
+  });
+
+  const validatedSchools = latestSchools.filter((school) => {
+    const validation = validateSchoolForSync(school);
+    if (!validation.ok) {
+      rejectedSchools.push({
+        slug: school.slug,
+        title: school.title,
+        errors: validation.errors
+      });
+      return false;
+    }
+
+    return true;
+  });
+
+  const validatedReferences = latestReferences.filter((reference) => {
+    const validation = validateReferenceForSync(reference);
+    if (!validation.ok) {
+      rejectedReferences.push({
+        slug: reference.slug,
+        title: reference.company,
         errors: validation.errors
       });
       return false;
@@ -592,6 +881,36 @@ export async function syncNotionContent({
         )
       );
     }
+
+    for (const event of validatedEvents) {
+      eventResults.push(
+        await upsertDatabasePage(
+          siteDatabaseId,
+          event.slug,
+          pickKnownProperties(mapEventToSingleDatabaseProperties(event), siteSchema.properties)
+        )
+      );
+    }
+
+    for (const school of validatedSchools) {
+      schoolResults.push(
+        await upsertDatabasePage(
+          siteDatabaseId,
+          school.slug,
+          pickKnownProperties(mapSchoolToSingleDatabaseProperties(school), siteSchema.properties)
+        )
+      );
+    }
+
+    for (const reference of validatedReferences) {
+      referenceResults.push(
+        await upsertDatabasePage(
+          siteDatabaseId,
+          reference.slug,
+          pickKnownProperties(mapReferenceToSingleDatabaseProperties(reference), siteSchema.properties)
+        )
+      );
+    }
   } else {
     for (const article of validatedArticles) {
       articleResults.push(
@@ -607,7 +926,13 @@ export async function syncNotionContent({
   return {
     articles: articleResults,
     jobRoles: roleResults,
+    events: eventResults,
+    schools: schoolResults,
+    references: referenceResults,
     rejectedArticles,
-    rejectedJobRoles
+    rejectedJobRoles,
+    rejectedEvents,
+    rejectedSchools,
+    rejectedReferences
   };
 }

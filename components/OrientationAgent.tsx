@@ -15,6 +15,7 @@ import {
   ThumbsUp
 } from "lucide-react";
 import { articles } from "@/data/articles";
+import EditorialInsightVisual from "@/components/EditorialInsightVisual";
 import {
   orientationQuestions,
   orientationRecommendations,
@@ -62,6 +63,7 @@ export default function OrientationAgent() {
   const [downloadMessage, setDownloadMessage] = useState("");
   const [intakeState, setIntakeState] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [intakeMessage, setIntakeMessage] = useState("");
+  const [pendingPath, setPendingPath] = useState<"student" | "professional">("student");
   const turnstileEnabled = Boolean(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY);
   const purpleUrl = process.env.NEXT_PUBLIC_PURPLE_URL ?? purpleCareerUrl;
 
@@ -99,6 +101,7 @@ export default function OrientationAgent() {
     });
     setDownloadState("idle");
     setDownloadMessage("");
+    setPendingPath("student");
     resetOrientation();
     setStep("intro");
   }
@@ -126,6 +129,52 @@ export default function OrientationAgent() {
       });
     }
   }, [lead.email, lead.firstName, lead.lastName]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return undefined;
+    }
+
+    const scrollToIntakeFromHash = () => {
+      if (window.location.hash !== "#orientation-intake") {
+        return;
+      }
+
+      window.setTimeout(() => {
+        const target = document.getElementById("orientation-intake");
+        target?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 120);
+    };
+
+    scrollToIntakeFromHash();
+    window.addEventListener("hashchange", scrollToIntakeFromHash);
+
+    return () => window.removeEventListener("hashchange", scrollToIntakeFromHash);
+  }, []);
+
+  function moveToIntake(desiredPath: "student" | "professional") {
+    setPendingPath(desiredPath);
+    setIntakeState("idle");
+      setIntakeMessage(
+        desiredPath === "student"
+          ? "Complétez vos coordonnées ci-dessous, puis lancez le parcours étudiant."
+          : "Complétez vos coordonnées ci-dessous, puis accédez à la mini-formation dirigeant."
+      );
+
+    if (typeof document !== "undefined") {
+      const target = document.getElementById("orientation-intake");
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  function handlePathEntry(desiredPath: "student" | "professional") {
+    if (!canStartJourney) {
+      moveToIntake(desiredPath);
+      return;
+    }
+
+    void handleStartJourney(desiredPath);
+  }
 
   async function handleStartJourney(desiredPath: "student" | "professional") {
     if (!canStartJourney) {
@@ -270,7 +319,7 @@ export default function OrientationAgent() {
                 })
                 .join("")}
               <h2>Prochaine étape</h2>
-              <p>Pour un bilan plus approfondi, contactez SKS TALENTS via infos@skstalents.com ou réservez directement un échange.</p>
+              <p>Pour un bilan plus approfondi, contactez SKS TALENTS via g.kengue@skstalents.com ou réservez directement un échange.</p>
             </div>
           </body>
         </html>
@@ -315,7 +364,7 @@ export default function OrientationAgent() {
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               <button
                 type="button"
-                onClick={() => handleStartJourney("student")}
+                onClick={() => handlePathEntry("student")}
                 className="rounded-[28px] border border-brand-teal/20 bg-gradient-to-br from-white to-brand-mint/60 p-6 text-left transition hover:-translate-y-1 hover:border-brand-teal/40"
               >
                 <div className="flex items-center gap-3">
@@ -327,42 +376,41 @@ export default function OrientationAgent() {
                   concrètes de rôles, d’écoles et de lectures.
                 </p>
                 <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-teal">
-                  S’inscrire et commencer
+                  Commencer le parcours étudiant
                   <ArrowRight size={16} />
                 </span>
               </button>
 
-              <button
-                type="button"
-                onClick={() => handleStartJourney("professional")}
+              <a
+                href={purpleUrl}
                 className="rounded-[28px] border border-brand-teal/20 bg-gradient-to-br from-[#163334] to-[#214b4d] p-6 text-left text-white transition hover:-translate-y-1 hover:border-teal-200/50"
               >
                 <div className="flex items-center gap-3">
                   <BriefcaseBusiness className="text-teal-200" size={28} />
-                  <p className="text-lg font-semibold">Bilan de carrière approfondi</p>
+                  <p className="text-lg font-semibold">Mini-formation dirigeant</p>
                 </div>
                 <p className="mt-4 text-sm leading-7 text-white/75">
-                  Pour les professionnels en poste, nous gardons une entrée plus cadrée: laissez
-                  vos coordonnées, puis nous vous redirigerons vers Purple si c’est la bonne suite
-                  pour votre trajectoire, votre mobilité ou votre repositionnement.
+                  Pour les cadres dirigeants en recherche d’emploi, en mobilité ou en
+                  repositionnement, accédez directement à une formation gratuite pensée pour
+                  clarifier votre suite de trajectoire.
                 </p>
                 <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-teal-200">
-                  S’inscrire et continuer
+                  Accéder à la mini-formation
                   <ArrowRight size={16} />
                 </span>
-              </button>
+              </a>
             </div>
           </div>
 
-          <div className="card-surface p-8 sm:p-10">
+          <div id="orientation-intake" className="card-surface scroll-mt-32 p-8 sm:p-10">
             <p className="eyebrow">Inscription préalable</p>
             <h2 className="font-display text-4xl text-brand-ink">
-              Laissez vos coordonnées avant de démarrer le parcours.
+              Laissez vos coordonnées avant de démarrer le parcours étudiant.
             </h2>
             <p className="mt-4 text-base leading-8 text-brand-stone">
-              Que vous soyez étudiant ou déjà en poste, l’entrée dans le parcours passe d’abord par
-              une inscription simple. Cela nous permet d’identifier les profils engagés et de vous
-              recontacter avec plus de contexte si besoin.
+              L’inscription sert à lancer le diagnostic étudiant et à vous recontacter si besoin
+              avec plus de contexte. Si vous êtes déjà cadre dirigeant, la mini-formation Purple
+              reste accessible directement depuis la carte de droite.
             </p>
             <div className="mt-8 grid gap-4">
               <input
@@ -484,9 +532,31 @@ export default function OrientationAgent() {
               </p>
             ) : null}
             <p className="mt-4 text-sm leading-7 text-brand-stone">
-              L’inscription est obligatoire avant l’orientation étudiant et avant la redirection vers
-              le bilan approfondi pour les professionnels.
+              L’inscription est obligatoire avant l’orientation étudiant. Les cadres dirigeants
+              peuvent accéder directement à la mini-formation dédiée.
             </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <button
+                type="button"
+                onClick={() => void handleStartJourney("student")}
+                disabled={!canStartJourney}
+                className={`inline-flex items-center justify-center gap-2 rounded-full px-5 py-4 text-sm font-semibold transition ${
+                  pendingPath === "student"
+                    ? "bg-brand-teal text-white"
+                    : "border border-brand-teal/20 text-brand-teal hover:bg-brand-mint"
+                } disabled:cursor-not-allowed disabled:opacity-50`}
+              >
+                Parcours étudiant
+                <ArrowRight size={16} />
+              </button>
+              <a
+                href={purpleUrl}
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-brand-teal/20 px-5 py-4 text-sm font-semibold text-brand-teal transition hover:bg-brand-mint"
+              >
+                Mini-formation dirigeant
+                <MoveRight size={16} />
+              </a>
+            </div>
           </div>
         </section>
       ) : null}
@@ -561,17 +631,19 @@ export default function OrientationAgent() {
                   SEO utile
                 </p>
                 <p className="mt-3 text-sm leading-7 text-brand-stone">
-                  Pour les personnes déjà en poste, le libellé qui convertit le mieux reste souvent
-                  “bilan de carrière” ou “évolution professionnelle”.
+                  Pour les cadres dirigeants, les entrées qui convertissent le mieux restent
+                  souvent “bilan de carrière”, “recherche d’emploi dirigeant” ou “évolution
+                  professionnelle”.
                 </p>
               </div>
               <div className="rounded-3xl bg-white p-5 shadow-soft">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-teal">
-                  Purple
+                  Formation gratuite
                 </p>
                 <p className="mt-3 text-sm leading-7 text-brand-stone">
-                  L’orientation “approfondie” a été gardée distincte pour ne pas mélanger un agent
-                  découverte étudiant avec une démarche de bilan plus mature.
+                  Le parcours approfondi renvoie vers une mini-formation dédiée aux cadres
+                  dirigeants en transition, pour ne pas mélanger un agent découverte étudiant avec
+                  une démarche beaucoup plus ciblée.
                 </p>
               </div>
             </div>
@@ -903,73 +975,85 @@ export default function OrientationAgent() {
           </div>
 
           <div className="card-surface p-8 sm:p-10">
-            <p className="eyebrow">Téléchargement du rapport</p>
-            <h3 className="font-display text-3xl text-brand-ink">
-              Le rapport est disponible après saisie de vos coordonnées.
-            </h3>
-            <p className="mt-4 max-w-3xl text-base leading-8 text-brand-stone">
-              Toute personne souhaitant télécharger son rapport d’orientation doit renseigner son
-              prénom, son nom et son email. Cela nous permet aussi d’identifier les profils les plus
-              engagés et de mieux vous recontacter si besoin.
-            </p>
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
-              <input
-                value={downloadLead.firstName}
-                onChange={(event) =>
-                  setDownloadLead((current) => ({ ...current, firstName: event.target.value }))
-                }
-                placeholder="Prénom*"
-                className="rounded-2xl border border-brand-teal/15 px-4 py-4 text-base outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
-              />
-              <input
-                value={downloadLead.lastName}
-                onChange={(event) =>
-                  setDownloadLead((current) => ({ ...current, lastName: event.target.value }))
-                }
-                placeholder="Nom*"
-                className="rounded-2xl border border-brand-teal/15 px-4 py-4 text-base outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
-              />
-              <input
-                value={downloadLead.email}
-                onChange={(event) =>
-                  setDownloadLead((current) => ({ ...current, email: event.target.value }))
-                }
-                placeholder="Email*"
-                inputMode="email"
-                className="rounded-2xl border border-brand-teal/15 px-4 py-4 text-base outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
+            <div className="grid gap-8 xl:grid-cols-[1fr_0.95fr] xl:items-start">
+              <div>
+                <p className="eyebrow">Téléchargement du rapport</p>
+                <h3 className="font-display text-3xl text-brand-ink">
+                  Le rapport est disponible après saisie de vos coordonnées.
+                </h3>
+                <p className="mt-4 max-w-3xl text-base leading-8 text-brand-stone">
+                  Toute personne souhaitant télécharger son rapport d’orientation doit renseigner
+                  son prénom, son nom et son email. Cela nous permet aussi d’identifier les profils
+                  les plus engagés et de mieux vous recontacter si besoin.
+                </p>
+                <div className="mt-8 grid gap-4 md:grid-cols-3">
+                  <input
+                    value={downloadLead.firstName}
+                    onChange={(event) =>
+                      setDownloadLead((current) => ({ ...current, firstName: event.target.value }))
+                    }
+                    placeholder="Prénom*"
+                    className="rounded-2xl border border-brand-teal/15 px-4 py-4 text-base outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
+                  />
+                  <input
+                    value={downloadLead.lastName}
+                    onChange={(event) =>
+                      setDownloadLead((current) => ({ ...current, lastName: event.target.value }))
+                    }
+                    placeholder="Nom*"
+                    className="rounded-2xl border border-brand-teal/15 px-4 py-4 text-base outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
+                  />
+                  <input
+                    value={downloadLead.email}
+                    onChange={(event) =>
+                      setDownloadLead((current) => ({ ...current, email: event.target.value }))
+                    }
+                    placeholder="Email*"
+                    inputMode="email"
+                    className="rounded-2xl border border-brand-teal/15 px-4 py-4 text-base outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
+                  />
+                </div>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <button
+                    type="button"
+                    onClick={handleReportDownload}
+                    disabled={!canDownloadReport}
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-teal px-6 py-4 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    Télécharger mon rapport
+                    <Download size={16} />
+                  </button>
+                  <p className="text-sm text-brand-stone">
+                    Les coordonnées sont demandées avant export, comme vous l’avez souhaité.
+                  </p>
+                </div>
+                <TurnstileWidget
+                  onVerify={setReportTurnstileToken}
+                  className="mt-4 rounded-2xl border border-brand-teal/10 bg-brand-mint/35 px-4 py-4"
+                />
+                {downloadMessage ? (
+                  <p
+                    className={`mt-4 rounded-2xl px-4 py-3 text-sm ${
+                      downloadState === "success"
+                        ? "bg-brand-mint text-brand-teal"
+                        : downloadState === "error"
+                          ? "bg-red-50 text-red-700"
+                          : "bg-white text-brand-stone"
+                    }`}
+                  >
+                    {downloadMessage}
+                  </p>
+                ) : null}
+              </div>
+
+              <EditorialInsightVisual
+                title="Livre blanc / rapport d’orientation"
+                verticalLabel={lead.targetSector || "Life Sciences"}
+                topicLabel="recruitment"
+                audienceLabel="Profils, métiers, salaires, écoles"
+                variant="lead"
               />
             </div>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <button
-                type="button"
-                onClick={handleReportDownload}
-                disabled={!canDownloadReport}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-teal px-6 py-4 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                Télécharger mon rapport
-                <Download size={16} />
-              </button>
-              <p className="text-sm text-brand-stone">
-                Les coordonnées sont demandées avant export, comme vous l’avez souhaité.
-              </p>
-            </div>
-            <TurnstileWidget
-              onVerify={setReportTurnstileToken}
-              className="mt-4 rounded-2xl border border-brand-teal/10 bg-brand-mint/35 px-4 py-4"
-            />
-            {downloadMessage ? (
-              <p
-                className={`mt-4 rounded-2xl px-4 py-3 text-sm ${
-                  downloadState === "success"
-                    ? "bg-brand-mint text-brand-teal"
-                    : downloadState === "error"
-                      ? "bg-red-50 text-red-700"
-                      : "bg-white text-brand-stone"
-                }`}
-              >
-                {downloadMessage}
-              </p>
-            ) : null}
           </div>
         </section>
       ) : null}

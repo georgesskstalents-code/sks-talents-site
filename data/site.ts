@@ -12,6 +12,18 @@ export const services = [
     ]
   },
   {
+    slug: "rpo",
+    title: "RPO",
+    metric: "Talent Advisory Partner",
+    description:
+      "Une capacité de recrutement embarquée pour absorber un volume critique, construire un pipeline durable et sécuriser les embauches dans les phases Seed, Série A, Série B et scale-up.",
+    bullets: [
+      "Pilotage opérationnel du recrutement sur plusieurs postes ou plusieurs équipes",
+      "Méthode, reporting, expérience candidat et coordination hiring managers / direction",
+      "Accélération du time-to-hire sans perdre l’exigence sectorielle Life Sciences & Animal Health"
+    ]
+  },
+  {
     slug: "structuration-rh",
     title: "Structuration RH",
     metric: "Audit + implémentation",

@@ -9,6 +9,10 @@ const hub = sectorHubs["life-sciences"];
 export default function LifeSciencesHeader() {
   const pathname = usePathname();
 
+  if (pathname === "/life-sciences") {
+    return null;
+  }
+
   return (
     <section className="border-b border-brand-teal/10 bg-gradient-to-b from-white to-brand-mint/20 backdrop-blur">
       <div className="container-shell py-5">

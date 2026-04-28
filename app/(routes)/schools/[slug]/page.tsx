@@ -1,9 +1,36 @@
 import { notFound } from "next/navigation";
+import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
+import ResourceLogo from "@/components/ResourceLogo";
 import { schools } from "@/data/resources";
+import { getNotionSiteContentBySlug, mapNotionEntryToResourceItem } from "@/lib/notion";
 
-export function generateStaticParams() {
-  return schools.map((item) => ({ slug: item.slug }));
+export const dynamic = "force-dynamic";
+
+function mergeSchoolItem(
+  staticItem: (typeof schools)[number] | undefined,
+  notionItem?: ReturnType<typeof mapNotionEntryToResourceItem>
+) {
+  if (!staticItem && !notionItem) {
+    return undefined;
+  }
+
+  if (!staticItem) {
+    return notionItem;
+  }
+
+  if (!notionItem) {
+    return staticItem;
+  }
+
+  const shouldPreferStaticLogo =
+    !notionItem.logoUrl || notionItem.logoUrl.includes("logo.clearbit.com");
+
+  return {
+    ...staticItem,
+    ...notionItem,
+    logoUrl: shouldPreferStaticLogo ? staticItem.logoUrl : notionItem.logoUrl
+  };
 }
 
 export default async function SchoolDetailPage({
@@ -12,7 +39,19 @@ export default async function SchoolDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const item = schools.find((entry) => entry.slug === slug);
+  const staticItem = schools.find((entry) => entry.slug === slug);
+  let notionItem = null;
+
+  try {
+    notionItem = await getNotionSiteContentBySlug(slug, "school");
+  } catch (error) {
+    console.error(`School detail page: failed to load Notion school for slug "${slug}".`, error);
+  }
+
+  const item = mergeSchoolItem(
+    staticItem,
+    notionItem ? mapNotionEntryToResourceItem(notionItem) : undefined
+  );
 
   if (!item) {
     notFound();
@@ -67,9 +106,13 @@ export default async function SchoolDetailPage({
         <section className="container-shell py-4">
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="card-surface flex items-center justify-center p-8">
-              {item.logoUrl ? (
-                <img src={item.logoUrl} alt={item.title} className="max-h-24 max-w-full object-contain" />
-              ) : null}
+              <ResourceLogo
+                name={item.title}
+                logoUrl={item.logoUrl}
+                className="relative flex h-28 w-28 items-center justify-center overflow-hidden rounded-[28px] border border-brand-line bg-white p-4"
+                imageClassName="max-h-full max-w-full object-contain"
+                badgeClassName="flex h-full w-full items-center justify-center rounded-[22px] bg-brand-mint px-3 text-center text-sm font-semibold uppercase tracking-[0.18em] text-brand-teal"
+              />
             </div>
             <div className="card-surface p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
@@ -96,6 +139,7 @@ export default async function SchoolDetailPage({
           </div>
         </section>
       ) : null}
+      <ContentPageSignature description="Page école éditée par SKS TALENTS pour relier viviers, parcours, métiers et besoins de recrutement dans les secteurs scientifiques, vétérinaires et techniques." />
     </>
   );
 }

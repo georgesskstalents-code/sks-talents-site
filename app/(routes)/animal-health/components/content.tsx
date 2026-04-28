@@ -1,12 +1,6 @@
-import VerticalLandingPage from "@/components/VerticalLandingPage";
-import { getVerticalLanding } from "@/data/verticalLandings";
+import SectorLandingPage from "@/components/SectorLandingPage";
+import { getSectorLandingPage } from "@/data/sectorLandingPages";
 
 export default function AnimalHealthContent() {
-  const config = getVerticalLanding("animal-health");
-
-  if (!config) {
-    return null;
-  }
-
-  return <VerticalLandingPage config={config} />;
+  return <SectorLandingPage config={getSectorLandingPage("animal")} />;
 }

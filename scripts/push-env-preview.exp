@@ -1,0 +1,36 @@
+#!/usr/bin/env expect -f
+# Push a single env var to Vercel preview environment.
+# Drives the interactive "Add to which Git branch?" prompt by pressing Enter (= all branches).
+# Usage: ./scripts/push-env-preview.exp KEY VALUE
+
+set key   [lindex $argv 0]
+set value [lindex $argv 1]
+set timeout 30
+
+# Unset Claude Code agent env vars so vercel CLI doesn't return JSON action_required
+unset -nocomplain ::env(AI_AGENT)
+unset -nocomplain ::env(CLAUDECODE)
+unset -nocomplain ::env(CLAUDE_AGENT_SDK_VERSION)
+unset -nocomplain ::env(CLAUDE_CODE_ENTRYPOINT)
+unset -nocomplain ::env(CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING)
+unset -nocomplain ::env(CLAUDE_CODE_EXECPATH)
+
+# NEXT_PUBLIC_* are public — push as non-sensitive so `vercel pull` can read them for prebuilt builds
+if {[string match "NEXT_PUBLIC_*" $key]} {
+    spawn ./node_modules/.bin/vercel env add $key preview --value $value --yes --no-sensitive
+} else {
+    spawn ./node_modules/.bin/vercel env add $key preview --value $value --yes
+}
+
+# Press Enter when asked about Git branch (= all preview branches)
+expect {
+    -re "Add .* to which Git branch" {
+        send "\r"
+        exp_continue
+    }
+    -re "Added Environment Variable" { exit 0 }
+    -re "Overrode Environment Variable" { exit 0 }
+    -re "already exists" { exit 0 }
+    timeout { exit 2 }
+    eof { exit 0 }
+}

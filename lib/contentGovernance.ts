@@ -1,6 +1,8 @@
 import { editorialAllowedDomains, weeklyEditorialWatchlist } from "@/data/editorialSources";
 import type { Article } from "@/data/articles";
 import type { JobRole } from "@/data/jobRoles";
+import type { ResourceItem } from "@/data/resources";
+import type { Reference } from "@/data/references";
 
 type TraceableSource = {
   name: string;
@@ -69,6 +71,54 @@ export function validateArticleForSync(article: Article): GovernanceValidationRe
 
 export function validateJobRoleForSync(role: JobRole): GovernanceValidationResult {
   return validateSources(`job_role:${role.slug}`, role.sources);
+}
+
+export function validateEventForSync(event: ResourceItem): GovernanceValidationResult {
+  if (!event.href) {
+    return {
+      ok: false,
+      errors: [`event:${event.slug}: source_url manquant.`]
+    };
+  }
+
+  return validateSources(`event:${event.slug}`, [
+    {
+      name: event.title,
+      url: event.href
+    }
+  ]);
+}
+
+export function validateSchoolForSync(school: ResourceItem): GovernanceValidationResult {
+  if (!school.href) {
+    return {
+      ok: false,
+      errors: [`school:${school.slug}: source_url manquant.`]
+    };
+  }
+
+  return validateSources(`school:${school.slug}`, [
+    {
+      name: school.title,
+      url: school.href
+    }
+  ]);
+}
+
+export function validateReferenceForSync(reference: Reference): GovernanceValidationResult {
+  if (!reference.website) {
+    return {
+      ok: false,
+      errors: [`reference:${reference.slug}: source_url manquant.`]
+    };
+  }
+
+  return validateSources(`reference:${reference.slug}`, [
+    {
+      name: reference.company,
+      url: reference.website
+    }
+  ]);
 }
 
 export function getWeeklyEditorialSourceBrief() {

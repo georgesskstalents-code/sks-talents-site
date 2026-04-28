@@ -1,8 +1,12 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Script from "next/script";
 import { usePathname, useSearchParams } from "next/navigation";
+import {
+  COOKIE_CONSENT_UPDATED_EVENT,
+  hasAnalyticsConsent
+} from "@/lib/cookieConsent";
 
 declare global {
   interface Window {
@@ -15,9 +19,19 @@ export default function Analytics() {
   const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "";
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    if (!measurementId || typeof window.gtag !== "function") {
+    setEnabled(hasAnalyticsConsent());
+
+    const handleUpdated = () => setEnabled(hasAnalyticsConsent());
+    window.addEventListener(COOKIE_CONSENT_UPDATED_EVENT, handleUpdated);
+
+    return () => window.removeEventListener(COOKIE_CONSENT_UPDATED_EVENT, handleUpdated);
+  }, []);
+
+  useEffect(() => {
+    if (!enabled || !measurementId || typeof window.gtag !== "function") {
       return;
     }
 
@@ -27,9 +41,9 @@ export default function Analytics() {
     window.gtag("config", measurementId, {
       page_path: pagePath
     });
-  }, [measurementId, pathname, searchParams]);
+  }, [enabled, measurementId, pathname, searchParams]);
 
-  if (!measurementId) {
+  if (!measurementId || !enabled) {
     return null;
   }
 

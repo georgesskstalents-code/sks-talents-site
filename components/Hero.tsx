@@ -1,104 +1,73 @@
 import CalendlyButton from "@/components/CalendlyButton";
-import LeadCapturePanel from "@/components/LeadCapturePanel";
+import HeroVideoCard from "@/components/HeroVideoCard";
+import InlineLeadForm from "@/components/InlineLeadForm";
 
 export default function Hero() {
-  const vimeoId = process.env.VIMEO_VIDEO_ID ?? "000000000";
+  const vimeoId = process.env.NEXT_PUBLIC_VIMEO_VIDEO_ID ?? process.env.VIMEO_VIDEO_ID ?? "851364422";
 
   return (
-    <section className="relative isolate overflow-hidden pb-10">
-      <div className="absolute inset-0 bg-grain" />
-      <div className="absolute left-0 top-0 h-[26rem] w-[26rem] rounded-full bg-brand-mint/70 blur-3xl" />
-      <div className="absolute right-0 top-24 h-[22rem] w-[22rem] rounded-full bg-cyan-100 blur-3xl" />
-      <div className="container-shell relative grid gap-10 py-16 lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:py-24">
-        <div className="space-y-8">
-          <div className="eyebrow">Cabinet de recrutement spécialisé Life Sciences & Animal Health</div>
-          <div className="space-y-5">
-            <h1 className="font-display text-5xl leading-none text-brand-ink sm:text-7xl">
-              Des talents qui accélèrent vos décisions.
-              <span className="mt-3 block text-brand-teal">
-                Des recrutements qui sécurisent votre croissance.
-              </span>
-            </h1>
-            <p className="max-w-2xl text-lg leading-8 text-brand-stone">
-              Un poste stratégique vacant ne ralentit pas seulement votre équipe. Il met en
-              tension toute votre roadmap.
-            </p>
+    <section className="container-shell pt-8 sm:pt-10">
+      <div className="grid gap-5 xl:grid-cols-[1.05fr_0.95fr] xl:items-start">
+        <div className="mesh-panel relative overflow-hidden p-7 sm:p-9">
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute left-[-4rem] top-[-5rem] h-40 w-40 rounded-full bg-brand-mint/45 blur-3xl" />
+            <div className="absolute right-[-3rem] top-10 h-28 w-28 rounded-full bg-cyan-100/70 blur-3xl" />
           </div>
-          <ul className="grid gap-3 text-lg leading-8 text-brand-ink">
-            {[
-              "Vous ne cherchez pas un CV. Vous cherchez un profil capable de comprendre vos enjeux et de s’aligner à votre culture.",
-              "Biotech, deeptech, animal health, petfood: les talents réellement impactants sont rares, sollicités et difficiles à capter.",
-              "Executive search ciblé, cadrage stratégique, sourcing spécialisé, onboarding et digitalisation RH.",
-              "Première shortlist qualifiée sous 10 jours sur les missions bien cadrées."
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <span className="mt-3 h-2.5 w-2.5 rounded-full bg-brand-teal" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <CalendlyButton label="Prendre rendez-vous" tone="solid" />
-            <CalendlyButton label="Nous contacter" href="/contact#rappel" tone="outline" />
-          </div>
-          <div className="grid gap-4 pt-4 sm:grid-cols-[auto_1fr] sm:items-center">
-            <div className="flex -space-x-2">
-              {["GK", "LS", "AH", "NGS", "RH"].map((avatar) => (
-                <div
-                  key={avatar}
-                  className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white bg-brand-mint text-sm font-bold text-brand-teal shadow-soft"
-                >
-                  {avatar}
-                </div>
-              ))}
+
+          <div className="relative max-w-3xl space-y-6">
+            <div className="space-y-4">
+              <p className="eyebrow">Cabinet de recrutement Life Sciences & Animal Health</p>
+              <h1 className="font-display text-4xl leading-[0.98] text-brand-ink sm:text-5xl xl:text-6xl">
+                Recruter les bons talents n’est pas un enjeu RH.{" "}
+                <span className="text-brand-teal">C’est une décision stratégique.</span>
+              </h1>
+              <p className="max-w-2xl text-base leading-8 text-brand-stone sm:text-lg">
+                Nous accompagnons CEO, COO, CPO et DRH dans le recrutement de profils clés en Life
+                Sciences, biotech, diagnostic, santé animale et petfood, pour sécuriser les talents
+                critiques, structurer les fonctions clés et soutenir la croissance.
+              </p>
             </div>
-            <div className="grid gap-1 sm:grid-cols-[auto_1fr] sm:items-center sm:gap-4">
-              <p className="text-2xl font-semibold text-brand-ink">4.5/5</p>
-              <p className="text-base text-brand-stone">
-                13 avis publics sur Trustpilot, 100+ placements réalisés et des missions prioritaires
-                couvertes entre 2 semaines et 3 mois selon le niveau du poste.
+
+            <p className="max-w-2xl text-sm leading-7 text-brand-stone sm:text-[15px]">
+              Spécialistes de l’executive search, nous intervenons de la phase seed à la scale-up,
+              de la Série A à la Série B, là où chaque recrutement compte pour la trajectoire de
+              l’entreprise.
+            </p>
+
+            <div className="flex flex-wrap gap-3">
+              <CalendlyButton label="Prendre rendez-vous" />
+              <a
+                href="#lead-form"
+                className="inline-flex items-center justify-center rounded-full border border-brand-teal/20 bg-white px-6 py-4 text-sm font-semibold text-brand-teal transition duration-300 hover:-translate-y-0.5 hover:bg-brand-mint"
+              >
+                Discuter de vos besoins
+              </a>
+            </div>
+
+            <div className="card-luxe max-w-2xl p-5 sm:p-6">
+              <p className="eyebrow">Pourquoi ça bloque</p>
+              <p className="mt-3 text-sm leading-7 text-brand-stone sm:text-[15px]">
+                Entre seed, série A, série B et scale-up, un recrutement mal cadré ralentit le
+                go-to-market, fragilise l’exécution et use les managers. Notre rôle est de rendre
+                le recrutement plus lisible, plus crédible et plus décidable pour les CEO, COO,
+                CPO et DRH qui doivent construire vite sans dégrader la qualité.
               </p>
             </div>
           </div>
         </div>
-        <LeadCapturePanel variant="hero" />
-      </div>
-      <div className="container-shell relative">
-        <div className="card-surface overflow-hidden p-4 sm:p-5">
-          <div className="grid gap-6 rounded-[28px] bg-[#163334] p-5 text-white lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-200">
-                Présentation
-              </p>
-              <h2 className="font-display text-4xl sm:text-5xl">
-                Vos marchés sont exigeants. Votre recrutement devrait l&apos;être aussi.
-              </h2>
-              <p className="max-w-2xl text-base leading-8 text-white/75">
-                Cadrage rapide, brief challengé, sourcing ciblé — pour les contextes où l&apos;erreur
-                ne pardonne pas.
-              </p>
-              <div className="grid gap-3 sm:grid-cols-3">
-                {[
-                  ["100+", "placements"],
-                  ["10 jours", "1re shortlist"],
-                  ["2 sem.-3 mois", "mission prioritaire ou de direction"]
-                ].map(([value, label]) => (
-                  <div key={label} className="rounded-2xl bg-white/5 px-4 py-4">
-                    <p className="font-display text-4xl text-teal-200">{value}</p>
-                    <p className="mt-2 text-xs uppercase tracking-[0.18em] text-white/60">{label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="aspect-video overflow-hidden rounded-[24px] border border-white/10 bg-black/20">
-              <iframe
-                title="Présentation SKS TALENTS"
-                src={`https://player.vimeo.com/video/${vimeoId}?background=1&autoplay=1&loop=1&muted=1`}
-                className="h-full w-full"
-                allow="autoplay; fullscreen; picture-in-picture"
-              />
-            </div>
-          </div>
+
+        <div
+          id="lead-form"
+          className="space-y-4"
+        >
+          <InlineLeadForm
+            title="Parlons de votre recrutement critique"
+            description="Déposez vos coordonnées. Nous revenons rapidement avec une lecture claire de la meilleure trajectoire pour une phase de seed, série A, série B ou scale-up : executive search, RPO, structuration RH ou échange de cadrage."
+            role="CEO / COO / CPO / DRH"
+            sector="Life Sciences & Animal Health"
+            compact
+          />
+          <HeroVideoCard vimeoId={vimeoId} compact />
         </div>
       </div>
     </section>

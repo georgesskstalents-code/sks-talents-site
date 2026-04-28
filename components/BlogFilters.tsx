@@ -7,7 +7,7 @@ import {
   type Article,
   type ArticlePersona
 } from "@/data/articles";
-import ListingCard from "@/components/ListingCard";
+import ArticleFlyerCard from "@/components/ArticleFlyerCard";
 
 type Props = {
   articles: Article[];
@@ -60,14 +60,17 @@ export default function BlogFilters({ articles }: Props) {
           </label>
         ))}
       </div>
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {filteredArticles.map((article) => (
-          <ListingCard
+          <ArticleFlyerCard
             key={article.slug}
             href={`/blog/${article.slug}`}
             title={article.title}
             description={article.excerpt}
-            meta={`${article.persona.join(", ")} · ${getArticleVerticalLabel(article.vertical)} · ${article.topic}`}
+            audienceLabel={article.persona.join(", ")}
+            verticalLabel={getArticleVerticalLabel(article.vertical)}
+            topicLabel={article.topic}
+            variant="compact"
           />
         ))}
       </div>

@@ -20,7 +20,7 @@
   - DKIM
   - DMARC
 - Recommended DMARC starting policy:
-  - `v=DMARC1; p=quarantine; rua=mailto:infos@skstalents.com`
+  - `v=DMARC1; p=quarantine; rua=mailto:g.kengue@skstalents.com`
 - If the mailbox provider is OVH, validate the exact DNS records from OVH Mail.
 
 ## Secrets rotation

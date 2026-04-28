@@ -2,12 +2,16 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import "./globals.css";
 import Analytics from "@/components/Analytics";
+import ChatwootWidget from "@/components/ChatwootWidget";
+import FrontendErrorMonitor from "@/components/FrontendErrorMonitor";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SiteFeedbackPrompt from "@/components/SiteFeedbackPrompt";
 import SiteIntelligenceAgent from "@/components/SiteIntelligenceAgent";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import PageViewTracker from "@/components/PageViewTracker";
+import CookieConsentBanner from "@/components/CookieConsentBanner";
+import CookiePreferencesLauncher from "@/components/CookiePreferencesLauncher";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -24,7 +28,11 @@ export const metadata: Metadata = {
     "structuration RH",
     "recrutement vétérinaire",
     "diagnostic hiring",
-    "petfood talent acquisition"
+    "petfood talent acquisition",
+    "recrutement sénégal life sciences",
+    "recrutement côte d'ivoire healthtech",
+    "recrutement bénin biotech",
+    "médecine nucléaire france"
   ],
   openGraph: {
     title: "SKS TALENTS",
@@ -53,6 +61,9 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <PageViewTracker />
         </Suspense>
+        <Suspense fallback={null}>
+          <FrontendErrorMonitor />
+        </Suspense>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -67,7 +78,10 @@ export default function RootLayout({
           <Footer />
           <StickyMobileCTA />
           <SiteFeedbackPrompt />
-          <SiteIntelligenceAgent />
+          <CookieConsentBanner />
+          <CookiePreferencesLauncher />
+          <ChatwootWidget />
+          <SiteIntelligenceAgent externalOnly />
         </div>
       </body>
     </html>

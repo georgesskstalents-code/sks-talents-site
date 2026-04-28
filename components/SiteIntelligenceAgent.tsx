@@ -71,10 +71,14 @@ const copy = {
   }
 } as const;
 
-export default function SiteIntelligenceAgent() {
+export default function SiteIntelligenceAgent({
+  externalOnly = false
+}: {
+  externalOnly?: boolean;
+}) {
   const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(!externalOnly);
   const [language, setLanguage] = useState<ChatLanguage>("fr");
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -89,6 +93,25 @@ export default function SiteIntelligenceAgent() {
     const nextLanguage = detectLanguage();
     setLanguage(nextLanguage);
     setMessages([createWelcomeMessage(nextLanguage)]);
+  }, []);
+
+  useEffect(() => {
+    if (externalOnly) {
+      setOpen(false);
+    }
+  }, [externalOnly]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const handleOpen = () => setOpen(true);
+    window.addEventListener("open-sks-local-chat", handleOpen);
+
+    return () => {
+      window.removeEventListener("open-sks-local-chat", handleOpen);
+    };
   }, []);
 
   useEffect(() => {
@@ -230,6 +253,10 @@ export default function SiteIntelligenceAgent() {
   }
 
   if (!mounted) {
+    return null;
+  }
+
+  if (externalOnly && !open) {
     return null;
   }
 

@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ContentPageSignature from "@/components/ContentPageSignature";
+import EditorialContentLayout, {
+  EditorialContentHero,
+  getEditorialHeroImage
+} from "@/components/EditorialContentLayout";
 import InlineLeadForm from "@/components/InlineLeadForm";
-import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
 import { articles } from "@/data/articles";
 import { ecosystemDetailedPages, ecosystemStudy } from "@/data/ecosystemTargets";
@@ -10,10 +14,13 @@ import { events, schools } from "@/data/resources";
 import { investmentFunds } from "@/data/investmentFunds";
 import { jobRoles } from "@/data/jobRoles";
 import { references } from "@/data/references";
+import { getNotionSiteContentBySlug } from "@/lib/notion";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
+
+export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   return [{ slug: ecosystemStudy.slug }];
@@ -21,21 +28,119 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  if (slug !== ecosystemStudy.slug) {
+  if (slug === ecosystemStudy.slug) {
+    return {
+      title: ecosystemStudy.title,
+      description: ecosystemStudy.summary
+    };
+  }
+
+  const notionStudy = await getNotionSiteContentBySlug(slug, "study");
+  if (!notionStudy) {
     return {};
   }
 
   return {
-    title: ecosystemStudy.title,
-    description: ecosystemStudy.summary
+    title: notionStudy.seoTitle || notionStudy.title,
+    description: notionStudy.metaDescription || notionStudy.excerpt,
+    openGraph: notionStudy.heroImageUrl
+      ? {
+          images: [
+            {
+              url: notionStudy.heroImageUrl,
+              alt: notionStudy.heroImageAlt || notionStudy.title
+            }
+          ]
+        }
+      : undefined
   };
 }
 
 export default async function StudyDetailPage({ params }: Props) {
   const { slug } = await params;
+  const notionStudy = slug === ecosystemStudy.slug ? null : await getNotionSiteContentBySlug(slug, "study");
 
-  if (slug !== ecosystemStudy.slug) {
+  if (slug !== ecosystemStudy.slug && !notionStudy) {
     notFound();
+  }
+
+  if (notionStudy) {
+    const body = notionStudy.mainContent || notionStudy.excerpt;
+    const paragraphs = body.split("\n\n").filter(Boolean);
+    const heroVisual = notionStudy.heroImageUrl
+      ? {
+          src: notionStudy.heroImageUrl,
+          alt: notionStudy.heroImageAlt || `Illustration pour ${notionStudy.title}`
+        }
+      : getEditorialHeroImage({
+          slug,
+          title: notionStudy.title,
+          topicLabel: notionStudy.category || "study",
+          verticalLabel: notionStudy.vertical || "Livre blanc"
+        });
+
+    return (
+      <>
+        <EditorialContentLayout
+          badge={notionStudy.vertical || "Livre blanc"}
+          title={notionStudy.title}
+          description={notionStudy.excerpt || notionStudy.metaDescription}
+          imageSrc={heroVisual.src}
+          imageAlt={heroVisual.alt}
+        >
+          <div className="space-y-6 text-base leading-8 text-brand-stone">
+            <div className="rounded-[22px] border border-brand-teal/12 bg-white/80 p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
+                Repères
+              </p>
+              <p className="mt-3 text-sm leading-7 text-brand-stone">
+                CEO, COO, CPO, DRH
+              </p>
+              <p className="mt-2 text-sm leading-7 text-brand-stone">
+                Livre blanc SKS TALENTS pour transformer un sujet RH, marché ou organisationnel en décision exploitable.
+              </p>
+            </div>
+            {paragraphs.map((paragraph, index) => (
+              <p
+                key={`${slug}-${index}`}
+                className={index === 0 ? "text-lg leading-9 text-brand-ink" : undefined}
+              >
+                {paragraph}
+              </p>
+            ))}
+            {notionStudy.sourceName && notionStudy.sourceUrl ? (
+              <div className="rounded-[24px] border border-brand-teal/10 bg-brand-mint/35 p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
+                  Source officielle
+                </p>
+                <a
+                  href={notionStudy.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="mt-4 inline-flex text-sm font-semibold text-brand-teal transition hover:opacity-80"
+                >
+                  {notionStudy.sourceName}
+                </a>
+              </div>
+            ) : null}
+          </div>
+        </EditorialContentLayout>
+        <SectionShell
+          eyebrow="Passer à l’action"
+          title="Recevoir le livre blanc et cadrer le prochain échange."
+          description="Laissez vos coordonnées si vous voulez utiliser cette lecture pour structurer une équipe, cadrer un besoin RH ou prioriser un sujet de recrutement."
+        >
+          <InlineLeadForm
+            title="Recevoir un rappel à partir de ce livre blanc"
+            description="Un échange confidentiel pour relier ce contenu à votre contexte d’entreprise."
+            role="Direction / RH"
+            sector={notionStudy.vertical || "Cross-sector"}
+            compact
+          />
+        </SectionShell>
+        <ContentPageSignature description="Étude éditée par SKS TALENTS pour transformer un sujet RH, marché ou organisationnel en décision exploitable par des dirigeants et des équipes RH." />
+      </>
+    );
   }
 
   const insightMetrics = [
@@ -76,6 +181,12 @@ export default async function StudyDetailPage({ params }: Props) {
       }
     ]
   };
+  const ecosystemHeroVisual = getEditorialHeroImage({
+    slug: ecosystemStudy.slug,
+    title: ecosystemStudy.title,
+    topicLabel: "market",
+    verticalLabel: "Life Sciences"
+  });
 
   return (
     <>
@@ -83,16 +194,12 @@ export default async function StudyDetailPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <PageHero
-        kicker="Étude signature"
+      <EditorialContentHero
+        badge="Étude signature"
         title={ecosystemStudy.title}
         description={ecosystemStudy.subtitle}
-        variant="ink"
-        breadcrumbs={[
-          { label: "Accueil", href: "/" },
-          { label: "Études", href: "/studies" },
-          { label: ecosystemStudy.title }
-        ]}
+        imageSrc={ecosystemHeroVisual.src}
+        imageAlt={ecosystemHeroVisual.alt}
       />
 
       <SectionShell
@@ -227,6 +334,7 @@ export default async function StudyDetailPage({ params }: Props) {
           compact
         />
       </SectionShell>
+      <ContentPageSignature description="Étude signature éditée par SKS TALENTS pour transformer une lecture sectorielle en actif SEO, commercial et conversationnel durable." />
     </>
   );
 }

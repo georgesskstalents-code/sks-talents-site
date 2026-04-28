@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { getArticleVerticalLabel, type Article } from "@/data/articles";
+import ArticleFlyerCard from "@/components/ArticleFlyerCard";
 
 type Props = {
   articles: Article[];
@@ -8,8 +8,8 @@ type Props = {
 
 export default function ResourceHub({ articles, resourceStats }: Props) {
   return (
-    <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
-      <div className="card-surface p-8">
+    <div className="grid items-start gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+      <div className="card-surface self-start p-8">
         <h3 className="font-display text-3xl">La machine éditoriale SKS TALENTS</h3>
         <div className="mt-6 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
           {resourceStats.map((stat) => (
@@ -19,20 +19,28 @@ export default function ResourceHub({ articles, resourceStats }: Props) {
             </div>
           ))}
         </div>
+        <div className="mt-6 rounded-[28px] border border-brand-teal/12 bg-white/82 p-5">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
+            Cadence éditoriale
+          </p>
+          <p className="mt-3 text-sm leading-7 text-brand-stone">
+            Une logique simple : publier des contenus utiles, capter les signaux de marché, puis
+            transformer les sujets qui tirent en conversations, leads et offres.
+          </p>
+        </div>
       </div>
-      <div className="grid gap-4">
+      <div className="grid gap-4 lg:grid-cols-2">
         {articles.map((article) => (
-          <Link
+          <ArticleFlyerCard
             key={article.slug}
             href={`/blog/${article.slug}`}
-            className="card-surface block p-6 transition hover:-translate-y-1"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-teal">
-              {article.persona.join(", ")} · {getArticleVerticalLabel(article.vertical)}
-            </p>
-            <h3 className="mt-3 text-2xl font-semibold text-brand-ink">{article.title}</h3>
-            <p className="mt-3 text-sm leading-7 text-brand-stone">{article.excerpt}</p>
-          </Link>
+            title={article.title}
+            description={article.excerpt}
+            audienceLabel={article.persona.join(", ")}
+            verticalLabel={getArticleVerticalLabel(article.vertical)}
+            topicLabel={article.topic}
+            variant="compact"
+          />
         ))}
       </div>
     </div>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import InlineLeadForm from "@/components/InlineLeadForm";
 import PageHero from "@/components/PageHero";
 import { ecosystemStudy } from "@/data/ecosystemTargets";
+import { getNotionSiteContentList } from "@/lib/notion";
 
 export const metadata: Metadata = {
   title: "Etudes & insights",
@@ -10,7 +11,17 @@ export const metadata: Metadata = {
     "Les études et insights SKS TALENTS pour relier recrutement spécialisé, signaux marché, écoles, funding, Seed, Série A, Série B et dynamiques sectorielles."
 };
 
-export default function StudiesPage() {
+export const dynamic = "force-dynamic";
+
+export default async function StudiesPage() {
+  const notionStudies = await getNotionSiteContentList("study", 100);
+  const studyCards = notionStudies.map((entry) => ({
+    slug: entry.slug,
+    title: entry.title,
+    summary: entry.excerpt || entry.metaDescription || entry.mainContent,
+    kicker: entry.vertical || "Livre blanc"
+  }));
+
   return (
     <>
       <PageHero
@@ -68,6 +79,17 @@ export default function StudiesPage() {
               rythme de recrutement sur les marchés Life Sciences & Animal Health.
             </p>
           </Link>
+          {studyCards.map((study) => (
+            <Link
+              key={study.slug}
+              href={`/studies/${study.slug}`}
+              className="card-surface block p-8 transition hover:-translate-y-1"
+            >
+              <p className="eyebrow">{study.kicker}</p>
+              <h2 className="font-display text-4xl text-brand-ink">{study.title}</h2>
+              <p className="mt-4 text-lg leading-8 text-brand-stone">{study.summary}</p>
+            </Link>
+          ))}
         </div>
       </section>
       <section className="container-shell pb-8">

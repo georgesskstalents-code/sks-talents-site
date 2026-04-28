@@ -2531,6 +2531,901 @@ const strategicExtras: JobRole[] = [
     studies: ["École de commerce", "Vétérinaire avec exposition terrain", "Master formation / management"],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "Universite d'Angers"],
     relatedIndustries: ["Medical Vet", "Animal health", "Vaccins vétérinaires", "Nutrition animale", "Distributor enablement"]
+  },
+  {
+    slug: "petfood-commercial-chiens-chats",
+    title: "Commercial Petfood (Chiens & Chats)",
+    salary: "48kEUR - 85kEUR + variable",
+    sector: "Petfood",
+    category: "Sales / développement commercial",
+    shortageLevel: "Elevee",
+    summary:
+      "Développe les ventes de gammes petfood chiens et chats en reliant animation terrain, distribution, sell-out et lecture fine des attentes clients sur des marchés très concurrentiels.",
+    skills: ["Développement commercial", "Petfood", "Sell-in / sell-out", "Animation réseau", "Négociation"],
+    successFactors: [
+      "Comprendre à la fois les leviers business du petfood premium et les contraintes très concrètes du terrain.",
+      "Savoir faire progresser les volumes sans dégrader le positionnement de marque.",
+      "Transformer les retours réseau en plans d'action commerciaux simples et efficaces."
+    ],
+    path: ["Chef de secteur", "Commercial réseau spécialisé", "Responsable commercial petfood"],
+    missions: [
+      "Développer les ventes des gammes chiens et chats auprès des réseaux spécialisés, distributeurs ou comptes stratégiques.",
+      "Piloter l'animation commerciale, les plans promotionnels et la visibilité terrain des références clés.",
+      "Faire remonter au marketing et à la direction commerciale les signaux marché, attentes clients et mouvements concurrentiels."
+    ],
+    studies: ["École de commerce", "Agroalimentaire", "Nutrition animale", "Business avec forte culture terrain"],
+    schools: ["AgroParisTech", "Institut Agro Montpellier", "ENSAIA", "EM Lyon"],
+    relatedIndustries: ["Petfood", "Nutrition animale", "Réseaux spécialisés", "Grande distribution sélective", "Animal health retail"]
+  },
+  {
+    slug: "veterinary-developpement-performance-clinique",
+    title: "Vétérinaire Développement & Performance Clinique",
+    salary: "55kEUR - 95kEUR + bonus",
+    sector: "Veterinary",
+    category: "Operations / performance clinique",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Accompagne un réseau de cliniques vétérinaires sur l'audit opérationnel, la performance économique, l'excellence de service et la montée en compétence des équipes terrain.",
+    skills: ["Audit opérationnel", "Coaching terrain", "Performance clinique", "Management d'équipes", "Pilotage KPI"],
+    successFactors: [
+      "Savoir challenger une clinique avec tact, sans casser l'engagement des équipes.",
+      "Relier qualité de soin, expérience client, rentabilité et exécution commerciale dans un même plan d'action.",
+      "Installer des améliorations durables grâce à un suivi terrain rigoureux et crédible."
+    ],
+    path: ["Vétérinaire praticien", "Practice manager", "Responsable performance clinique", "Directeur régional opérations"],
+    missions: [
+      "Réaliser des audits complets en clinique sur l'organisation, la gestion interne, la rentabilité, les ventes, le marketing et le management.",
+      "Définir les axes d'amélioration prioritaires puis accompagner la mise en œuvre d'un plan d'actions personnalisé.",
+      "Former et coacher les équipes sur les bonnes pratiques commerciales, les parcours client, les procédures et le suivi des résultats."
+    ],
+    studies: ["Vétérinaire", "Master management de la santé", "Formation complémentaire en opérations ou business"],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
+    relatedIndustries: ["Veterinary", "Groupes de cliniques", "Pet services", "Excellence opérationnelle", "Practice performance"]
+  },
+  {
+    slug: "veterinary-imageur",
+    title: "Vétérinaire Imageur",
+    salary: "60kEUR - 110kEUR",
+    sector: "Veterinary",
+    category: "Imagerie / diagnostic",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Pilote les examens d'imagerie vétérinaire, interprète scanners, échographies et radiographies, puis éclaire les décisions thérapeutiques en lien avec la chirurgie, l'oncologie et la médecine interne.",
+    skills: ["Scanner", "Échographie", "Radiologie", "Interprétation à distance", "Diagnostic vétérinaire"],
+    successFactors: [
+      "Allier excellence technique en imagerie et pédagogie claire auprès des équipes et des propriétaires.",
+      "Savoir transformer une image complexe en décision clinique rapide et compréhensible.",
+      "Partager ses connaissances pour faire progresser durablement le niveau collectif."
+    ],
+    path: ["Vétérinaire généraliste", "Vétérinaire référé", "Vétérinaire imageur", "Responsable imagerie"],
+    missions: [
+      "Réaliser les examens d'imagerie en clinique: scanner, échographie, radiographie et parfois endoscopie.",
+      "Interpréter à distance les scanners et formaliser des lectures utiles pour les équipes soignantes.",
+      "Contribuer aux décisions thérapeutiques avec l'oncologie, la chirurgie et la médecine interne tout en expliquant clairement les résultats."
+    ],
+    studies: ["Vétérinaire", "Internat / résidanat imagerie", "Formation approfondie en imagerie diagnostique"],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
+    relatedIndustries: ["Veterinary", "Imagerie vétérinaire", "Cliniques référées", "Oncologie vétérinaire", "Chirurgie vétérinaire"]
+  },
+  {
+    slug: "medical-vet-directeur-operations-learning",
+    title: "Directeur des Opérations Learning Santé Animale",
+    salary: "68kEUR - 92kEUR",
+    salarySource:
+      "Fourchette prudente pour la France, inspirée des repères Glassdoor 'Directeur des Opérations' observés en février 2026 et ajustée à un scope learning / delivery / santé animale plutôt qu'à un COO ou directeur de BU.",
+    sector: "Medical Vet",
+    category: "Operations / learning delivery",
+    shortageLevel: "Elevee",
+    summary:
+      "Pilote la performance opérationnelle d'une activité learning en santé animale, en structurant les équipes, les méthodes de travail, la qualité des livrables et la relation avec les grands comptes.",
+    skills: ["Operations management", "Project delivery", "KPI", "Leadership d'équipe", "Client management"],
+    successFactors: [
+      "Savoir faire grandir une organisation sans perdre en qualité d'exécution.",
+      "Relier vision stratégique, rigueur opérationnelle et satisfaction client dans un même pilotage.",
+      "Installer des méthodes de travail collaboratives qui tiennent dans un contexte de croissance."
+    ],
+    path: ["Chef de projet senior", "Responsable opérations", "Head of delivery", "Directeur des opérations learning"],
+    missions: [
+      "Encadrer une équipe pluridisciplinaire composée de chefs de projets, designers, développeurs et experts techniques.",
+      "Définir et suivre les indicateurs de performance sur les budgets, délais, qualité et charge projet.",
+      "Être l'interlocuteur clé des grands comptes et superviser les projets d'envergure de la conception à la livraison."
+    ],
+    studies: ["École de commerce", "Ingénierie", "Santé animale", "Management de projet ou formation équivalente"],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "Université Paris-Saclay"],
+    relatedIndustries: ["Medical Vet", "Animal health", "Learning & development", "Edtech santé", "Formation scientifique"],
+    sources: [
+      {
+        name: "Glassdoor - Directeur des Opérations France",
+        url: "https://www.glassdoor.fr/Salaires/directeur-operations-salaire-SRCH_KO0%2C20.htm"
+      }
+    ]
+  },
+  {
+    slug: "medical-vet-sales-developer-product-trainer-emea",
+    title: "Sales Developer & Product Trainer EMEA",
+    salary: "A calibrer selon le périmètre, la zone et la part variable",
+    sector: "Medical Vet",
+    category: "Sales / training / channel",
+    shortageLevel: "Elevee",
+    summary:
+      "Rôle hybride à l'interface entre développement commercial, formation produit et animation de partenaires, avec un impact direct sur la performance du réseau indirect en EMEA.",
+    skills: ["Développement commercial", "Formation produit", "Animation partenaires", "Analyse marché", "Anglais courant"],
+    successFactors: [
+      "Savoir vendre et former avec le même niveau d'impact.",
+      "Adapter les messages et méthodes de vente selon les marchés et les partenaires.",
+      "Créer une vraie relation terrain pour faire progresser durablement le sell-out."
+    ],
+    path: ["Commercial export", "Channel sales", "Product trainer", "Sales Developer & Product Trainer EMEA"],
+    missions: [
+      "Identifier de nouveaux partenaires, prospecter et ouvrir de nouveaux marchés en EMEA.",
+      "Former les équipes commerciales des partenaires, structurer les méthodes de vente et fournir les outils de performance.",
+      "Suivre la performance des partenaires, analyser le marché et la concurrence puis proposer des plans d'action."
+    ],
+    studies: ["Bac +3 / +5 business", "Bac +3 / +5 marketing", "Bac +3 / +5 sciences"],
+    schools: ["École de commerce", "Master marketing", "Formation scientifique"],
+    relatedIndustries: ["Medtech", "Biotech", "Animal health", "Industrie internationale", "Réseaux de partenaires"]
+  },
+  {
+    slug: "biotech-csv-validation-engineer",
+    title: "Ingénieur Validation CSV & Data Integrity Biotech",
+    salary: "55kEUR - 85kEUR",
+    sector: "Biotech",
+    category: "Validation / data integrity",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Sécurise la conformité GxP des systèmes informatisés (CSV), la traçabilité et la data integrity sur des environnements biotech où une dérive documentaire ou technique coûte très cher.",
+    skills: ["CSV", "Data integrity", "GxP", "Risk assessment", "Validation documentation"],
+    successFactors: [
+      "Traduire des contraintes réglementaires en exigences testables et pragmatiques.",
+      "Faire converger qualité, IT, production et métiers sans créer de lourdeur.",
+      "Avoir une discipline documentaire irréprochable sans perdre le terrain."
+    ],
+    path: ["Validation engineer", "CSV lead", "Quality systems / validation manager"],
+    missions: [
+      "Définir le plan de validation CSV (V-model, URS, risk assessment, protocoles, rapports).",
+      "Auditer et fiabiliser les contrôles data integrity (ALCOA+) sur les systèmes critiques.",
+      "Accompagner les équipes lors d'audits, inspections et revues qualité."
+    ],
+    studies: ["Ingénieur informatique", "Ingénieur qualité / procédés", "Master systèmes d'information", "Master qualité"],
+    schools: ["Telecom Paris", "EPITA", "CentraleSupélec", "Universite Paris-Saclay"],
+    relatedIndustries: ["Biotech", "Bioproduction", "CDMO", "GxP", "Digital manufacturing"],
+    sources: [...defaultRoleSources]
+  },
+  {
+    slug: "biotech-sterility-assurance-lead",
+    title: "Sterility Assurance Lead Biotech",
+    salary: "65kEUR - 105kEUR",
+    sector: "Biotech",
+    category: "Qualité / stérilité",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Pilote les sujets de maîtrise de la contamination, stérilité et microbiologie sur des lignes biotech où la moindre dérive peut bloquer un batch, une libération ou un audit.",
+    skills: ["Sterility assurance", "Microbiology", "GMP", "Environmental monitoring", "Deviation/CAPA"],
+    successFactors: [
+      "Voir les risques avant qu'ils ne deviennent des écarts.",
+      "Tenir un standard stérilité élevé sans rendre la production ingérable.",
+      "Être crédible à la fois auprès du terrain et lors des audits."
+    ],
+    path: ["QC microbiology", "Sterility assurance lead", "Head of QA/QC sterility"],
+    missions: [
+      "Définir et piloter les plans de surveillance environnementale (EM) et les tendances.",
+      "Encadrer investigations, déviations et CAPA liées à la microbiologie/stérilité.",
+      "Former les équipes et renforcer les routines aseptiques et la culture qualité."
+    ],
+    studies: ["Pharmacie", "Microbiologie", "Master qualité", "Ingénieur bioprocédés"],
+    schools: ["Faculte de pharmacie Strasbourg", "Universite Paris-Saclay", "Institut Pasteur", "AgroParisTech"],
+    relatedIndustries: ["Biotech", "Bioproduction", "Aseptic manufacturing", "Cell therapy", "CDMO"],
+    sources: [...defaultRoleSources]
+  },
+  {
+    slug: "biotech-automation-controls-engineer",
+    title: "Automation & Controls Engineer Biotech",
+    salary: "55kEUR - 90kEUR",
+    sector: "Biotech",
+    category: "Automation / maintenance",
+    shortageLevel: "Elevee",
+    summary:
+      "Garantit la disponibilité et la fiabilité des automates, boucles de contrôle et systèmes industriels sur des environnements biotech où l'arrêt coûte en temps et en qualité.",
+    skills: ["Automation", "Controls", "Troubleshooting", "Validation awareness", "Maintenance planning"],
+    successFactors: [
+      "Résoudre vite, documenter proprement, et éviter la récidive.",
+      "Faire dialoguer production, maintenance, qualité et fournisseurs.",
+      "Construire une fiabilité durable plutôt que gérer des urgences."
+    ],
+    path: ["Maintenance / automation engineer", "Automation lead", "Site reliability / engineering manager"],
+    missions: [
+      "Assurer le diagnostic et la remise en service d'équipements et systèmes automatisés critiques.",
+      "Optimiser plans de maintenance, pièces critiques et routines de fiabilisation.",
+      "Contribuer aux changements techniques en respectant les exigences qualité/validation."
+    ],
+    studies: ["Ingénieur automatisme", "Ingénieur maintenance", "Ingénieur instrumentation", "Master systèmes industriels"],
+    schools: ["CentraleSupélec", "Mines Paris", "Grenoble INP", "Universite Paris-Saclay"],
+    relatedIndustries: ["Biotech", "Bioproduction", "Industrie 4.0", "Maintenance critique", "CDMO"],
+    sources: [...defaultRoleSources]
+  },
+  {
+    slug: "biotech-mes-implementation-lead",
+    title: "MES Implementation Lead Biotech",
+    salary: "70kEUR - 115kEUR",
+    sector: "Biotech",
+    category: "Digital / operations",
+    shortageLevel: "Elevee",
+    summary:
+      "Pilote le déploiement d'un MES et la digitalisation des dossiers de lot, en reliant qualité, production et IT pour fiabiliser la traçabilité et accélérer la libération.",
+    skills: ["MES", "Digital manufacturing", "Change management", "GxP literacy", "Process mapping"],
+    successFactors: [
+      "Ancrer le projet dans les usages terrain plutôt que dans un cahier des charges abstrait.",
+      "Tenir ensemble conformité, adoption et vitesse d'exécution.",
+      "Prioriser les workflows qui créent un gain réel pour la libération et l'audit."
+    ],
+    path: ["Manufacturing systems analyst", "MES lead", "Digital manufacturing manager"],
+    missions: [
+      "Cartographier les processus production/qualité et définir les exigences MES.",
+      "Piloter intégrateurs, tests, validation, formation et adoption terrain.",
+      "Sécuriser la continuité d'activité et la qualité des données durant le déploiement."
+    ],
+    studies: ["Ingénieur industriel", "Ingénieur informatique", "Master systèmes d'information", "Master qualité"],
+    schools: ["Telecom Paris", "CentraleSupélec", "EPITA", "Universite Paris-Saclay"],
+    relatedIndustries: ["Biotech", "Bioproduction", "GxP", "Industrial IT", "CDMO"],
+    sources: [...defaultRoleSources]
+  },
+  {
+    slug: "biotech-clinical-operations-manager",
+    title: "Clinical Operations Manager Biotech",
+    salary: "65kEUR - 105kEUR",
+    sector: "Biotech",
+    category: "Clinique / essais",
+    shortageLevel: "Elevee",
+    summary:
+      "Pilote l'exécution des essais cliniques (planning, prestataires, centres, qualité) sur des biotech où les délais et la rigueur opérationnelle déterminent l'accès au financement et au marché.",
+    skills: ["Clinical operations", "Vendor management", "Study timelines", "Quality oversight", "Stakeholder coordination"],
+    successFactors: [
+      "Garder la maîtrise des risques opérationnels avant qu'ils n'impactent le protocole.",
+      "Créer une exécution simple dans un environnement multi-acteurs.",
+      "Être très rigoureux sans ralentir l'avancement."
+    ],
+    path: ["Clinical trial assistant", "Clinical project manager", "Clinical operations manager"],
+    missions: [
+      "Planifier et suivre l'exécution des essais (sites, CRO, fournisseurs, budgets et jalons).",
+      "Mettre en place la supervision qualité et les routines de pilotage projet.",
+      "Coordonner clinique, médical, data, réglementaire et équipes internes."
+    ],
+    studies: ["Pharmacie", "Master recherche clinique", "Master santé publique", "Sciences de la vie + clinique"],
+    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Sciences Po", "ESSEC"],
+    relatedIndustries: ["Biotech", "Biopharma", "Clinical trials", "CRO", "Regulated environments"],
+    sources: [...defaultRoleSources]
+  },
+  {
+    slug: "biotech-pharmacovigilance-manager",
+    title: "Pharmacovigilance Manager Biotech",
+    salary: "65kEUR - 110kEUR",
+    sector: "Biotech",
+    category: "Sécurité / pharmacovigilance",
+    shortageLevel: "Elevee",
+    summary:
+      "Structure et pilote la pharmacovigilance (process, prestataires, compliance, signal management) sur des biotech où la crédibilité sécurité impacte directement le développement.",
+    skills: ["Pharmacovigilance", "Signal management", "Vendor oversight", "Compliance", "Medical writing literacy"],
+    successFactors: [
+      "Construire une fonction PV robuste sans surdimensionner la structure.",
+      "Travailler étroitement avec médical et clinique tout en gardant une discipline compliance.",
+      "Anticiper les risques sécurité et préparer les réponses auditables."
+    ],
+    path: ["PV specialist", "PV manager", "Head of pharmacovigilance"],
+    missions: [
+      "Définir les processus PV (cases, signaux, reporting, audits) et les indicateurs.",
+      "Superviser les prestataires et la qualité des livrables sécurité.",
+      "Assurer l'alignement entre PV, médical, clinique et réglementaire."
+    ],
+    studies: ["Pharmacie", "Médecine", "Master pharmacovigilance", "Master santé publique"],
+    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Universite de Montpellier pharmacie"],
+    relatedIndustries: ["Biotech", "Biopharma", "Clinical development", "Drug safety", "Regulatory"],
+    sources: [...defaultRoleSources, { name: "LEEM", url: "https://www.leem.org/" }]
+  },
+  {
+    slug: "biotech-process-development-scientist",
+    title: "Process Development Scientist (Upstream/Downstream) Biotech",
+    salary: "55kEUR - 90kEUR",
+    sector: "Biotech",
+    category: "R&D / process development",
+    shortageLevel: "Elevee",
+    summary:
+      "Développe et optimise les procédés upstream/downstream pour sécuriser la montée en échelle, la robustesse et la transférabilité industrielle des produits biotech.",
+    skills: ["Bioprocess", "Scale-up", "DoE", "Tech transfer mindset", "Data analysis"],
+    successFactors: [
+      "Transformer des résultats labo en procédés transférables et stables.",
+      "Travailler en continuité avec MSAT, production et qualité.",
+      "Documenter et capitaliser sans ralentir l'itération."
+    ],
+    path: ["Scientist", "Senior scientist", "Process development lead"],
+    missions: [
+      "Concevoir et conduire des expérimentations pour optimiser rendement, qualité et robustesse.",
+      "Préparer le scale-up et les transferts vers MSAT/production/CDMO.",
+      "Analyser données procédés et formaliser les recommandations."
+    ],
+    studies: ["Doctorat sciences de la vie", "Ingénieur bioprocédés", "Master biotechnologies"],
+    schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech"],
+    relatedIndustries: ["Biotech", "Bioproduction", "Cell therapy", "CDMO", "Industrialization"],
+    sources: [...defaultRoleSources, { name: "France Biotech - Panorama 2026", url: FRANCE_BIOTECH_PANORAMA_2026_URL }]
+  },
+  {
+    slug: "diagnostic-lims-administrator",
+    title: "LIMS Administrator Diagnostic",
+    salary: "50kEUR - 80kEUR",
+    sector: "Diagnostic",
+    category: "Applications / systèmes laboratoire",
+    shortageLevel: "Elevee",
+    summary:
+      "Administre et fiabilise un LIMS (paramétrage, incidents, évolutions, interfaces) sur des environnements diagnostics où l'indisponibilité du système bloque la chaîne laboratoire.",
+    skills: ["LIMS", "Support applicatif", "Data quality", "Process mapping", "Stakeholder management"],
+    successFactors: [
+      "Comprendre le labo et ses contraintes avant de toucher au paramétrage.",
+      "Garder une discipline de changements et de traçabilité sans rigidifier.",
+      "Fiabiliser les interfaces et les données plutôt que multiplier les contournements."
+    ],
+    path: ["Lab systems specialist", "LIMS administrator", "Lab IT lead"],
+    missions: [
+      "Configurer et maintenir le LIMS (workflows, droits, référentiels, templates).",
+      "Gérer incidents, évolutions et demandes utilisateurs avec une gouvernance claire.",
+      "Coordonner intégrations et échanges de données avec instruments et middleware."
+    ],
+    studies: ["Bioinformatique", "Ingénieur informatique", "Master systèmes d'information", "Sciences + informatique"],
+    schools: ["Telecom Paris", "EPITA", "Grenoble INP - Ensimag", "Universite Paris-Saclay"],
+    relatedIndustries: ["Diagnostic", "IVD", "Laboratoires d'analyses", "Health data", "Interoperability"],
+    sources: [
+      ...defaultRoleSources,
+      { name: "SIDIV", url: "https://sidiv.fr/" },
+      { name: "Roche Diagnostics", url: "https://diagnostics.roche.com/" }
+    ]
+  },
+  {
+    slug: "diagnostic-hl7-integration-specialist",
+    title: "HL7 / Interoperability Integration Specialist Diagnostic",
+    salary: "55kEUR - 90kEUR",
+    sector: "Diagnostic",
+    category: "Middleware / interoperability",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Conçoit, déploie et maintient les interfaces HL7 (et autres standards) entre instruments, middleware, LIS/LIMS et SI hospitaliers pour sécuriser les flux diagnostics.",
+    skills: ["HL7", "Integration", "Troubleshooting", "Clinical workflows", "Documentation"],
+    successFactors: [
+      "Diagnostiquer vite des incidents d'interface sans mettre en danger la continuité.",
+      "Traduire le métier laboratoire en spécifications d'interopérabilité.",
+      "Sécuriser la maintenance et la traçabilité des changements."
+    ],
+    path: ["Integration engineer", "Middleware specialist", "Interoperability lead"],
+    missions: [
+      "Analyser les flux cibles et mettre en place les interfaces et mapping nécessaires.",
+      "Assurer la supervision, le support et la résolution des incidents d'intégration.",
+      "Documenter, tester et sécuriser les changements sur des environnements critiques."
+    ],
+    studies: ["Ingénieur informatique", "Master systèmes d'information", "Bioinformatique", "Ingénierie biomédicale"],
+    schools: ["Telecom Paris", "Grenoble INP - Ensimag", "EPITA", "CentraleSupélec"],
+    relatedIndustries: ["Diagnostic", "IVD", "Hôpital", "Interopérabilité", "Health IT"],
+    sources: [
+      ...defaultRoleSources,
+      { name: "SIDIV", url: "https://sidiv.fr/" },
+      { name: "Mindray", url: "https://www.mindray.com/" }
+    ]
+  },
+  {
+    slug: "diagnostic-ivdr-regulatory-affairs-specialist",
+    title: "Regulatory Affairs Specialist IVDR (IVD)",
+    salary: "60kEUR - 95kEUR",
+    sector: "Diagnostic",
+    category: "Affaires réglementaires (IVD)",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Porte les dossiers techniques, la conformité IVDR et la coordination interne/externe sur des produits diagnostics où la robustesse documentaire conditionne l'accès au marché.",
+    skills: ["IVDR", "Technical documentation", "Regulatory strategy", "Quality interfaces", "Stakeholder management"],
+    successFactors: [
+      "Rendre la complexité réglementaire lisible pour les équipes produit et qualité.",
+      "Anticiper les points bloquants pour éviter les retards de mise sur le marché.",
+      "Tenir une discipline documentaire audit-ready."
+    ],
+    path: ["Regulatory specialist", "Regulatory affairs manager", "Head of regulatory IVD"],
+    missions: [
+      "Construire et maintenir la documentation technique et les preuves de conformité.",
+      "Coordonner qualité, clinique, R&D, industriels et partenaires externes.",
+      "Préparer audits, interactions et jalons critiques du cycle de vie réglementaire."
+    ],
+    studies: ["Pharmacie", "Ingénieur biomédical", "Master affaires réglementaires", "Master qualité"],
+    schools: ["Faculte de pharmacie Strasbourg", "Universite Paris-Saclay", "Telecom Paris"],
+    relatedIndustries: ["Diagnostic", "IVD", "Regulatory", "Quality systems", "Hospital ecosystem"],
+    sources: [
+      ...defaultRoleSources,
+      { name: "SIDIV", url: "https://sidiv.fr/" }
+    ]
+  },
+  {
+    slug: "diagnostic-clinical-data-manager",
+    title: "Clinical Data Manager Diagnostic & Medtech",
+    salary: "55kEUR - 90kEUR",
+    sector: "Diagnostic",
+    category: "Data / clinique",
+    shortageLevel: "Elevee",
+    summary:
+      "Sécurise la qualité, la complétude et la traçabilité des données cliniques sur des projets diagnostic/medtech où la preuve et la conformité data conditionnent l'adoption et l'accès au marché.",
+    skills: ["Clinical data", "Data quality", "Query management", "Process governance", "Stakeholder coordination"],
+    successFactors: [
+      "Être rigoureux sur la donnée sans ralentir l'équipe clinique.",
+      "Créer des standards simples, compris et tenus dans la durée.",
+      "Transformer la complexité des datasets en décisions actionnables."
+    ],
+    path: ["Data coordinator", "Clinical data manager", "Data management lead"],
+    missions: [
+      "Définir les standards data, contrôler la qualité et piloter les corrections (queries).",
+      "Coordonner équipes cliniques, data, qualité et partenaires externes.",
+      "Préparer les exports et livrables data pour analyses, audits et dossiers."
+    ],
+    studies: ["Bioinformatique", "Biostatistiques", "Master data santé", "Sciences de la vie"],
+    schools: ["Universite Paris-Saclay", "Telecom Paris", "Grenoble INP - Ensimag"],
+    relatedIndustries: ["Diagnostic", "Medtech", "Clinical evidence", "Health data", "Regulated environments"],
+    sources: [...defaultRoleSources]
+  },
+  {
+    slug: "diagnostic-technical-support-lead",
+    title: "Technical Support Lead Diagnostic",
+    salary: "55kEUR - 90kEUR",
+    sector: "Diagnostic",
+    category: "Support / customer service",
+    shortageLevel: "Elevee",
+    summary:
+      "Structure et pilote un support technique (niveau 2/3) sur des équipements et logiciels diagnostics, en sécurisant délais, qualité de réponse et escalades.",
+    skills: ["Technical support", "Incident triage", "Customer communication", "Knowledge base", "Cross-team coordination"],
+    successFactors: [
+      "Réduire le temps de résolution sans sacrifier la qualité des diagnostics.",
+      "Créer une base de connaissances qui évite la répétition des incidents.",
+      "Coordonner R&D, qualité, service terrain et clients avec un langage clair."
+    ],
+    path: ["Support engineer", "Technical support lead", "Customer support manager"],
+    missions: [
+      "Mettre en place la gouvernance support (SLA, triage, escalade, reporting).",
+      "Traiter les cas complexes et améliorer la résolution au premier contact.",
+      "Faire remonter les signaux récurrents vers qualité, produit et ingénierie."
+    ],
+    studies: ["Ingénieur biomédical", "Ingénieur informatique", "Sciences + support", "Master systèmes"],
+    schools: ["Telecom Paris", "UTC Biomed", "EPITA"],
+    relatedIndustries: ["Diagnostic", "Medtech", "Customer support", "After-sales", "Hospital ecosystem"],
+    sources: [
+      ...defaultRoleSources,
+      { name: "Roche Diagnostics", url: "https://diagnostics.roche.com/" }
+    ]
+  },
+  {
+    slug: "diagnostic-ot-cybersecurity-specialist",
+    title: "OT Cybersecurity Specialist (Lab & Medtech)",
+    salary: "65kEUR - 105kEUR",
+    sector: "Diagnostic",
+    category: "Cybersecurite / OT",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Protège les environnements OT et dispositifs connectés (laboratoire, production, service) en réduisant les risques cyber sans casser la disponibilité ni la conformité.",
+    skills: ["OT security", "Risk assessment", "Segmentation", "Incident response", "GxP awareness"],
+    successFactors: [
+      "Comprendre la réalité opérationnelle avant d'imposer des contrôles.",
+      "Prioriser les vrais risques (disponibilité, confidentialité, intégrité) sur des flux critiques.",
+      "Créer des standards applicables et maintenables."
+    ],
+    path: ["Security engineer", "OT security specialist", "Cyber lead / CISO adjoint"],
+    missions: [
+      "Cartographier les actifs, flux et vulnérabilités OT liés au diagnostic/medtech.",
+      "Définir les mesures de protection (segmentation, durcissement, gestion accès, monitoring).",
+      "Contribuer aux plans de réponse incidents et à la coordination avec service/IT/qualité."
+    ],
+    studies: ["Master cybersecurite", "Ingénieur informatique", "Master systèmes d'information"],
+    schools: ["Telecom Paris", "EPITA", "CentraleSupélec"],
+    relatedIndustries: ["Diagnostic", "Medtech", "Health data", "Service operations", "Industrial IT"],
+    sources: [...defaultRoleSources]
+  },
+  {
+    slug: "medical-vet-pharmacovigilance-manager",
+    title: "Pharmacovigilance Manager Santé Animale",
+    salary: "60kEUR - 100kEUR",
+    sector: "Medical Vet",
+    category: "Sécurité / pharmacovigilance",
+    shortageLevel: "Elevee",
+    summary:
+      "Pilote la pharmacovigilance vétérinaire (cas, signaux, compliance, prestataires) pour sécuriser le portefeuille et renforcer la crédibilité scientifique sur les marchés santé animale.",
+    skills: ["Veterinary pharmacovigilance", "Signal management", "Compliance", "Vendor oversight", "Scientific communication"],
+    successFactors: [
+      "Tenir une discipline sécurité robuste avec des équipes souvent compactes.",
+      "Rester proche du terrain et des vétérinaires tout en gardant une lecture compliance.",
+      "Transformer les signaux en décisions utiles pour qualité et médical."
+    ],
+    path: ["PV specialist", "PV manager", "Head of pharmacovigilance veterinary"],
+    missions: [
+      "Structurer le process PV, les indicateurs et la gouvernance sécurité.",
+      "Superviser prestataires et qualité des livrables, audits et plans d'amélioration.",
+      "Travailler avec médical, qualité, réglementaire et réseaux vétérinaires."
+    ],
+    studies: ["Vétérinaire", "Pharmacie", "Master pharmacovigilance", "Master santé publique"],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "Faculte de pharmacie Strasbourg"],
+    relatedIndustries: ["Medical Vet", "Animal health", "Vet pharma", "Vaccins veterinaires", "Drug safety"],
+    sources: [
+      {
+        name: "Aon - Benchmarks de remuneration",
+        url: AON_REWARDS_URL
+      }
+    ]
+  },
+  {
+    slug: "medical-vet-country-manager-afrique-francophone",
+    title: "Country Manager Afrique Francophone (Santé Animale)",
+    salary: "70kEUR - 120kEUR + variable",
+    sector: "Medical Vet",
+    category: "Export / Afrique",
+    shortageLevel: "Elevee",
+    summary:
+      "Développe la présence commerciale et partenaires en Afrique francophone sur des portefeuilles santé animale, en intégrant distribution, réglementation, pricing et exécution terrain.",
+    skills: ["Export Africa", "Channel strategy", "Partner management", "Go-to-market", "Market intelligence"],
+    successFactors: [
+      "Être très opérationnel sur l'exécution distributeur et la disponibilité produit.",
+      "Construire une relation institutionnelle et terrain crédible sur la durée.",
+      "Adapter le modèle sans perdre la discipline commerciale."
+    ],
+    path: ["Export manager", "Regional sales manager", "Country manager Afrique francophone"],
+    missions: [
+      "Définir la stratégie pays/région, les priorités et les plans d'activation.",
+      "Sélectionner, animer et faire progresser les distributeurs et partenaires.",
+      "Assurer une coordination robuste avec supply, réglementaire, marketing et finance."
+    ],
+    studies: ["École de commerce", "Master commerce international", "Vétérinaire avec exposition business", "Sciences + business"],
+    schools: ["EM Lyon", "ESSEC", "Oniris", "Audencia"],
+    relatedIndustries: ["Animal health", "Export", "Distribution spécialisée", "Afrique francophone", "Medtech"],
+    sources: [
+      { name: "Business France", url: "https://www.businessfrance.fr/" },
+      { name: "Bpifrance", url: "https://www.bpifrance.fr/" }
+    ]
+  },
+  {
+    slug: "veterinary-hospital-director",
+    title: "Directeur d'Hôpital / Centre Vétérinaire Référé",
+    salary: "65kEUR - 110kEUR + bonus",
+    sector: "Veterinary",
+    category: "Direction / operations",
+    shortageLevel: "Elevee",
+    summary:
+      "Pilote un centre vétérinaire référé ou un hôpital, en sécurisant qualité de soins, organisation médicale, performance opérationnelle et attractivité des équipes dans un marché sous tension.",
+    skills: ["Clinic leadership", "Operations", "Talent retention", "Quality of care", "Financial literacy"],
+    successFactors: [
+      "Relier excellence clinique et discipline opérationnelle sans dégrader l'expérience équipe.",
+      "Stabiliser l'organisation sur des métiers pénuriques (vétérinaires, ASV, spécialistes).",
+      "Créer une culture de qualité et de formation continue."
+    ],
+    path: ["Vétérinaire référé", "Responsable de service", "Directeur de centre vétérinaire"],
+    missions: [
+      "Structurer l'organisation médicale, la planification et la continuité de service.",
+      "Piloter les indicateurs clés (activité, satisfaction, qualité, finances) et les plans d'amélioration.",
+      "Recruter, fidéliser et faire progresser les équipes cliniques et support."
+    ],
+    studies: ["Vétérinaire", "Management en santé", "Formation leadership"],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
+    relatedIndustries: ["Veterinary", "Groupes de cliniques", "Centres référés", "Services vétérinaires", "Petcare"],
+    sources: [
+      { name: "Ordre national des vétérinaires", url: "https://www.veterinaire.fr/" },
+      { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
+    ]
+  },
+  {
+    slug: "petfood-quality-food-safety-manager",
+    title: "Quality & Food Safety Manager Petfood",
+    salary: "55kEUR - 90kEUR",
+    sector: "Petfood",
+    category: "Qualité / food safety",
+    shortageLevel: "Elevee",
+    summary:
+      "Structure et pilote la qualité et la sécurité des aliments sur des lignes petfood où la conformité, la traçabilité et la gestion des incidents impactent directement la marque.",
+    skills: ["Food safety", "Quality systems", "HACCP mindset", "Supplier quality", "Incident management"],
+    successFactors: [
+      "Prévenir plutôt que subir : standards, audits et routines qui tiennent.",
+      "Parler autant à l'usine qu'aux équipes marque et supply chain.",
+      "Gérer les incidents avec sang-froid et discipline de communication."
+    ],
+    path: ["Quality engineer", "Quality manager", "Quality & food safety manager"],
+    missions: [
+      "Définir les standards qualité, audits et plans de contrôle sur la chaîne petfood.",
+      "Piloter la conformité, les incidents et les actions correctives/préventives.",
+      "Travailler avec achats, production, R&D et fournisseurs pour sécuriser les ingrédients."
+    ],
+    studies: ["Ingénieur agroalimentaire", "Qualité", "Master sécurité des aliments", "Ingénieur procédés"],
+    schools: ["Institut Agro Montpellier", "AgroParisTech", "Sciences Agro Bordeaux", "ENSAIA"],
+    relatedIndustries: ["Petfood", "Nutrition animale", "Premium FMCG", "Food safety", "Supply chain"],
+    sources: [
+      { name: "Mars", url: "https://www.mars.com/" },
+      { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
+    ]
+  },
+  {
+    slug: "petfood-procurement-manager-ingredients",
+    title: "Procurement Manager Ingrédients Petfood",
+    salary: "55kEUR - 95kEUR",
+    sector: "Petfood",
+    category: "Achats / supply chain",
+    shortageLevel: "Elevee",
+    summary:
+      "Sécurise les achats d'ingrédients critiques (qualité, disponibilité, coût) pour des industriels petfood confrontés à des marchés matières premières volatils et à des contraintes qualité fortes.",
+    skills: ["Strategic sourcing", "Supplier negotiation", "Quality alignment", "Risk management", "Cost modeling"],
+    successFactors: [
+      "Arbitrer entre coût, qualité, disponibilité et risque sans décision court-termiste.",
+      "Créer une relation fournisseur solide et audit-ready.",
+      "Donner de la visibilité à la production et à la R&D sur les risques matières."
+    ],
+    path: ["Buyer", "Senior buyer", "Procurement manager ingredients"],
+    missions: [
+      "Piloter la stratégie achats sur les familles ingrédients et les fournisseurs critiques.",
+      "Mettre en place des plans de sécurisation (multi-sourcing, stocks, contrats).",
+      "Travailler avec qualité, R&D et production pour garantir conformité et continuité."
+    ],
+    studies: ["Ingénieur agroalimentaire", "École de commerce", "Master achats", "Supply chain"],
+    schools: ["AgroParisTech", "Institut Agro Dijon", "Sciences Agro Bordeaux", "EM Lyon"],
+    relatedIndustries: ["Petfood", "Nutrition animale", "Procurement", "Agro-industrie", "Supply chain"],
+    sources: [
+      { name: "Mars", url: "https://www.mars.com/" },
+      { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
+    ]
+  },
+  {
+    slug: "cosmetique-cosmetic-safety-assessor",
+    title: "Cosmetic Safety Assessor / Toxicologue Cosmétique",
+    salary: "55kEUR - 95kEUR",
+    sector: "Cosmetique",
+    category: "Sécurité / réglementation",
+    shortageLevel: "Elevee",
+    summary:
+      "Évalue la sécurité des produits cosmétiques, structure les dossiers, et sécurise la conformité des lancements sur des portefeuilles où la crédibilité scientifique est déterminante.",
+    skills: ["Safety assessment", "Toxicology literacy", "Regulatory mindset", "Risk communication", "Documentation"],
+    successFactors: [
+      "Transformer une analyse scientifique en décision claire pour les équipes produit.",
+      "Être rigoureux sur la documentation sans ralentir l'innovation.",
+      "Anticiper les sujets ingrédients/claims avant le go-to-market."
+    ],
+    path: ["Regulatory specialist", "Safety assessor", "Head of safety / regulatory"],
+    missions: [
+      "Réaliser les évaluations sécurité et consolider les éléments nécessaires aux dossiers.",
+      "Travailler avec formulation, R&D, qualité et marketing sur les choix ingrédients/claims.",
+      "Sécuriser les revues internes et la traçabilité des décisions scientifiques."
+    ],
+    studies: ["Pharmacie", "Toxicologie", "Master chimie", "Master réglementation cosmétique"],
+    schools: ["ISIPCA", "ICAP Montpellier", "Chimie ParisTech", "ESCOM Compiegne"],
+    relatedIndustries: ["Cosmetique", "Dermocosmetique", "Ingredients actifs", "Regulatory", "Beauty tech"],
+    sources: [
+      { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
+    ]
+  },
+  {
+    slug: "cosmetique-packaging-development-engineer",
+    title: "Packaging Development Engineer Cosmétique",
+    salary: "50kEUR - 85kEUR",
+    sector: "Cosmetique",
+    category: "R&D / packaging",
+    shortageLevel: "Moderee",
+    summary:
+      "Développe des packagings cosmétiques robustes, premium et industrialisables, en intégrant contraintes qualité, coût, supply chain et objectifs de durabilité.",
+    skills: ["Packaging development", "Industrialization", "Supplier coordination", "Quality mindset", "Project management"],
+    successFactors: [
+      "Relier esthétique, usage et industrialisation sans compromis fragile.",
+      "Créer une exécution fluide avec fournisseurs et usines.",
+      "Anticiper les risques qualité et transport dès la conception."
+    ],
+    path: ["Packaging engineer", "Packaging development engineer", "Packaging lead"],
+    missions: [
+      "Piloter la conception packaging avec les équipes produit, R&D et marketing.",
+      "Coordonner tests, validations, industrialisation et choix fournisseurs.",
+      "Optimiser la fiabilité (qualité, transport, compatibilité) et les coûts."
+    ],
+    studies: ["Ingénieur matériaux", "Ingénieur packaging", "Chimie", "Design industriel"],
+    schools: ["Chimie ParisTech", "ESCOM Compiegne", "ISIPCA"],
+    relatedIndustries: ["Cosmetique", "Packaging premium", "Green chemistry", "Industrialization", "Premium FMCG"],
+    sources: [
+      { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
+    ]
+  },
+  {
+    slug: "cross-sector-talent-acquisition-lead-emea",
+    title: "Talent Acquisition Lead EMEA (Life Sciences)",
+    salary: "60kEUR - 105kEUR",
+    sector: "Cross-sector",
+    category: "HR / talent acquisition",
+    shortageLevel: "Elevee",
+    summary:
+      "Construit une stratégie de recrutement multi-pays en EMEA (process, sourcing, marque employeur, stakeholders) sur des rôles pénuriques life sciences et fonctions support critiques.",
+    skills: ["Talent acquisition", "Sourcing", "Stakeholder management", "Process design", "Employer branding"],
+    successFactors: [
+      "Savoir sourcer des niches sans sur-automatiser ni dégrader l'expérience candidat.",
+      "Créer une discipline de recrutement scalable (KPIs, priorités, process).",
+      "Parler le langage business (time-to-fill, impact) autant que RH."
+    ],
+    path: ["Recruiter", "Senior recruiter", "Talent acquisition lead EMEA"],
+    missions: [
+      "Définir les priorités de recrutement et les canaux de sourcing par pays et par rôle.",
+      "Mettre en place des routines de pilotage (pipeline, délais, qualité, conversions).",
+      "Accompagner les managers sur cadrage, messages, entretien et décision."
+    ],
+    studies: ["École de commerce", "Master RH", "Psychologie du travail", "Management"],
+    schools: ["EM Lyon", "ESSEC", "Sciences Po", "Audencia"],
+    relatedIndustries: ["Life Sciences", "Biotech", "Diagnostic", "Medtech", "HR"],
+    sources: [
+      { name: "Culture RH", url: "https://culture-rh.com/" },
+      { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
+    ]
+  }
+];
+
+const nuclearMedicineRoles: JobRole[] = [
+  {
+    slug: "diagnostic-nuclear-medicine-business-unit-director",
+    title: "Business Unit Director Médecine Nucléaire",
+    salary: "110kEUR - 165kEUR + variable",
+    sector: "Diagnostic",
+    category: "Direction générale / BU",
+    shortageLevel: "Elevee",
+    summary:
+      "Pilote une business unit en médecine nucléaire, en reliant stratégie de croissance, exécution commerciale, accès hôpital et coordination industrielle.",
+    skills: ["P&L", "Go-to-market hôpital", "Leadership cross-functional", "Healthtech strategy", "Key account leadership"],
+    successFactors: [
+      "Savoir relier enjeux cliniques, industriels et commerciaux dans une seule feuille de route.",
+      "Arbitrer vite entre croissance, accès marché et faisabilité opérationnelle.",
+      "Porter une narration crédible face aux hôpitaux, investisseurs et partenaires."
+    ],
+    path: ["Directeur commercial", "General manager", "Business unit director"],
+    missions: [
+      "Définir la stratégie de croissance de l'activité médecine nucléaire sur le territoire.",
+      "Aligner ventes, market access, opérations, qualité et affaires médicales.",
+      "Piloter les comptes stratégiques, les partenaires clés et les indicateurs de performance."
+    ],
+    studies: ["École de commerce", "Ingénieur + business", "Pharmacien ou scientifique avec forte exposition marché"],
+    schools: ["HEC Paris", "ESSEC", "CentraleSupélec", "Université Paris-Saclay"],
+    relatedIndustries: ["Médecine nucléaire", "Diagnostic", "Oncologie", "Radiopharmacie", "RIV"],
+    sources: [
+      {
+        name: "France Biotech - État des lieux de la médecine nucléaire",
+        url: "https://france-biotech.fr/wp-content/uploads/2025/06/France-Biotech-CP-Etat-des-Lieux-med-nucleaire-VDEF-1.pdf"
+      },
+      {
+        name: "Aon",
+        url: "https://www.aon.com/"
+      }
+    ]
+  },
+  {
+    slug: "diagnostic-radiopharmacy-operations-director",
+    title: "Directeur des Opérations Radiopharmacie",
+    salary: "95kEUR - 145kEUR",
+    sector: "Diagnostic",
+    category: "Operations / industrialisation",
+    shortageLevel: "Elevee",
+    summary:
+      "Structure les opérations radiopharmaceutiques, la qualité et la continuité d'exécution sur des environnements où le temps, la sûreté et la conformité sont critiques.",
+    skills: ["GMP", "Operations leadership", "Quality systems", "Supply chain critique", "Industrial execution"],
+    successFactors: [
+      "Tenir une discipline qualité sans ralentir l'exécution.",
+      "Maîtriser des environnements où la fenêtre de production et de livraison est très contrainte.",
+      "Créer des routines d'exploitation robustes et auditable."
+    ],
+    path: ["Production manager", "Site operations leader", "Operations director"],
+    missions: [
+      "Piloter les opérations quotidiennes, la qualité et la coordination des flux radiopharmaceutiques.",
+      "Sécuriser la conformité, la disponibilité des capacités et la fiabilité des processus.",
+      "Structurer les équipes opérations, qualité, maintenance et supply."
+    ],
+    studies: ["Ingénieur procédés", "Pharmacien industriel", "Master qualité / production"],
+    schools: ["Mines Paris", "Chimie ParisTech", "Université Paris-Saclay", "Faculté de pharmacie Strasbourg"],
+    relatedIndustries: ["Radiopharmacie", "Médecine nucléaire", "Bioproduction", "Diagnostic", "Oncologie"],
+    sources: [
+      {
+        name: "Orano - Médecine nucléaire",
+        url: "https://www.orano.group/fr/"
+      },
+      {
+        name: "Aon",
+        url: "https://www.aon.com/"
+      }
+    ]
+  },
+  {
+    slug: "diagnostic-market-access-director-riv",
+    title: "Directeur Market Access & Affaires Publiques RIV",
+    salary: "90kEUR - 150kEUR + variable",
+    sector: "Diagnostic",
+    category: "Market access / affaires publiques",
+    shortageLevel: "Elevee",
+    summary:
+      "Porte les sujets de valorisation, accès au marché et structuration institutionnelle dans la radiothérapie interne vectorisée et la médecine nucléaire.",
+    skills: ["Market access", "Public affairs", "Health economics", "Stakeholder engagement", "Hospital ecosystem"],
+    successFactors: [
+      "Parler à la fois le langage clinique, institutionnel et économique.",
+      "Comprendre les blocages d'accès marché avant qu'ils n'allongent les cycles.",
+      "Transformer la complexité réglementaire en feuille de route lisible."
+    ],
+    path: ["Public affairs manager", "Market access lead", "Market access director"],
+    missions: [
+      "Construire la stratégie d'accès au marché et d'influence institutionnelle.",
+      "Coordonner dossiers de valorisation, parcours de soin et messages publics.",
+      "Travailler avec sociétés savantes, associations, autorités et directions internes."
+    ],
+    studies: ["Pharmacien", "École de commerce", "Master santé publique / économie de la santé"],
+    schools: ["Sciences Po", "Université Paris-Saclay", "ESSEC", "Faculté de pharmacie Montpellier"],
+    relatedIndustries: ["RIV", "Médecine nucléaire", "Oncologie", "Diagnostic", "Health policy"],
+    sources: [
+      {
+        name: "France Biotech - Task force dédiée à l'innovation en médecine nucléaire",
+        url: "https://france-biotech.fr/communiques-de-presse/france-biotech-annonce-le-lancement-dune-nouvelle-task-force-dediee-a-linnovation-en-medecine-nucleaire-radiotherapie-interne-vectorisee/"
+      },
+      {
+        name: "Aon",
+        url: "https://www.aon.com/"
+      }
+    ]
+  },
+  {
+    slug: "diagnostic-nuclear-medicine-key-account-director",
+    title: "Key Account Director Médecine Nucléaire Hôpital",
+    salary: "85kEUR - 140kEUR + variable",
+    sector: "Diagnostic",
+    category: "Sales / comptes stratégiques",
+    shortageLevel: "Elevee",
+    summary:
+      "Développe les comptes hospitaliers et centres experts en médecine nucléaire, avec une forte dimension clinique, parcours patient et structuration de l'adoption.",
+    skills: ["Key account management", "Hospital sales", "Complex selling", "Clinical stakeholder mapping", "Tender strategy"],
+    successFactors: [
+      "Savoir vendre sans simplifier à l'excès un sujet hautement technique.",
+      "Comprendre les décideurs médicaux, pharmaceutiques et administratifs.",
+      "Faire progresser les comptes sur le long terme plutôt que chercher un coup court."
+    ],
+    path: ["KAM hôpital", "National account manager", "Key account director"],
+    missions: [
+      "Cartographier et développer les centres hospitaliers et les comptes universitaires stratégiques.",
+      "Coordonner offres, appels d'offres, adoption clinique et relations long terme.",
+      "Faire remonter les besoins terrain vers marketing, médical, service et direction."
+    ],
+    studies: ["École de commerce", "Pharmacien avec exposition commerciale", "Scientifique + business"],
+    schools: ["ESSEC", "EM Lyon", "Université Paris-Saclay", "Faculté de pharmacie Strasbourg"],
+    relatedIndustries: ["Médecine nucléaire", "Diagnostic", "Oncologie", "RIV", "Hôpital"],
+    sources: [
+      {
+        name: "Centre Oscar Lambret - La médecine nucléaire",
+        url: "https://www.centreoscarlambret.fr/medecine-nucleaire/"
+      },
+      {
+        name: "Aon",
+        url: "https://www.aon.com/"
+      }
+    ]
+  },
+  {
+    slug: "diagnostic-cyclotron-and-pet-operations-manager",
+    title: "Cyclotron & PET Operations Manager",
+    salary: "70kEUR - 110kEUR",
+    sector: "Diagnostic",
+    category: "Operations / site",
+    shortageLevel: "Elevee",
+    summary:
+      "Supervise les opérations d'un environnement cyclotron et PET scan, en sécurisant disponibilité, maintenance, sûreté et coordination des équipes techniques.",
+    skills: ["Site operations", "Equipment management", "Maintenance planning", "Safety culture", "Technical coordination"],
+    successFactors: [
+      "Faire cohabiter fiabilité technique, exigences de sûreté et pression service.",
+      "Garder une lecture très opérationnelle des risques de disponibilité.",
+      "Créer une exécution simple dans un environnement intrinsèquement complexe."
+    ],
+    path: ["Field service manager", "Technical operations manager", "Site operations manager"],
+    missions: [
+      "Piloter les opérations du site, la maintenance et la disponibilité des équipements critiques.",
+      "Coordonner équipes techniques, partenaires, qualité et exploitation clinique.",
+      "Suivre les indicateurs de sûreté, de performance et de continuité d'activité."
+    ],
+    studies: ["Ingénieur biomédical", "Ingénieur instrumentation", "Master physique appliquée"],
+    schools: ["Télécom Paris", "CentraleSupélec", "Université Paris-Saclay", "Grenoble INP"],
+    relatedIndustries: ["Médecine nucléaire", "PET scan", "Cyclotron", "Diagnostic", "Maintenance critique"],
+    sources: [
+      {
+        name: "Dominique Ouattara - Centre Européen de Médecine Nucléaire annoncé à Abidjan",
+        url: "https://dominiqueouattara.ci/"
+      },
+      {
+        name: "Aon",
+        url: "https://www.aon.com/"
+      }
+    ]
   }
 ];
 
@@ -2559,7 +3454,7 @@ const withDefaultRoleMetadata = (role: JobRole): JobRole => {
   };
 };
 
-export const jobRoles: JobRole[] = [...coreRoles, ...strategicExtras]
+export const jobRoles: JobRole[] = [...coreRoles, ...strategicExtras, ...nuclearMedicineRoles]
   .map(withDefaultRoleMetadata)
   .sort((a, b) => a.title.localeCompare(b.title, "fr"));
 

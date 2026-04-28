@@ -1,45 +1,37 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
-
-function getSessionId() {
-  const key = "sks-session-id";
-  const existing = window.sessionStorage.getItem(key);
-  if (existing) {
-    return existing;
-  }
-
-  const created = crypto.randomUUID();
-  window.sessionStorage.setItem(key, created);
-  return created;
-}
+import { useEffect, useState } from "react";
+import {
+  COOKIE_CONSENT_UPDATED_EVENT,
+  hasAnalyticsConsent
+} from "@/lib/cookieConsent";
+import { trackSiteTelemetry } from "@/lib/siteTelemetryClient";
 
 export default function PageViewTracker() {
   const pathname = usePathname();
+  const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    if (!pathname) {
+    setEnabled(hasAnalyticsConsent());
+
+    const handleUpdated = () => setEnabled(hasAnalyticsConsent());
+    window.addEventListener(COOKIE_CONSENT_UPDATED_EVENT, handleUpdated);
+
+    return () => window.removeEventListener(COOKIE_CONSENT_UPDATED_EVENT, handleUpdated);
+  }, []);
+
+  useEffect(() => {
+    if (!enabled || !pathname) {
       return;
     }
 
-    const payload = {
+    trackSiteTelemetry({
       type: "pageview",
       path: pathname,
-      title: document.title,
-      sessionId: getSessionId()
-    };
-
-    void fetch("/api/site-analytics", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(payload),
-      keepalive: true
-    }).catch(() => undefined);
-  }, [pathname]);
+      title: document.title
+    });
+  }, [enabled, pathname]);
 
   return null;
 }
-

@@ -63,6 +63,7 @@ export const references: Reference[] = [
     descriptor: "Petfood / nutrition animale",
     summary: "Recherche de profils de direction commerciale et leadership dans un marché concurrentiel.",
     impact: "Consolidation de la croissance commerciale et meilleure lisibilité du leadership attendu.",
+    logoPath: "/images/partners/saga-nutrition-logo.svg",
     website: "https://www.saga-nutrition.com/"
   },
   {
@@ -140,12 +141,12 @@ export const references: Reference[] = [
   },
   {
     slug: "conexsante",
-    company: "Conexsante",
+    company: "Connex Sante",
     category: "Télémedecine",
     descriptor: "Télémedecine et santé connectée",
     summary: "Aide à la structuration d’une équipe dans un contexte tech et santé.",
     impact: "Clarification des besoins et montée en compétence organisationnelle.",
-    logoPath: "/images/partners/conexsante.svg",
+    logoPath: "/images/partners/connex-sante-wordmark.svg",
     website: "https://conexsante.com/"
   },
   {
@@ -168,5 +169,17 @@ export const references: Reference[] = [
     impact: "Renforcement de la capacité à approcher des profils techniques opérant sur des marchés rigoureux.",
     logoPath: "/images/partners/eurofins.svg",
     website: "https://www.eurofins.com/"
+  },
+  {
+    slug: "microline-surgical",
+    company: "Microline Surgical",
+    category: "Medtech chirurgicale",
+    descriptor: "Dispositifs et instrumentation chirurgicale",
+    summary:
+      "SKS TALENTS a recruté 2 commerciaux pour accompagner le développement terrain de Microline Surgical sur des cycles de vente exigeants.",
+    impact:
+      "Renforcement ciblé de la force commerciale et meilleure couverture des comptes à fort enjeu dans l'environnement chirurgical.",
+    logoPath: "/images/partners/microline-surgical-logo.jpeg",
+    website: "https://www.microlinesurgical.com/"
   }
 ];

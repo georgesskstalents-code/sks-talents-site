@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import ContentPageSignature from "@/components/ContentPageSignature";
+import GEOAnswerCard from "@/components/GEOAnswerCard";
 import InlineLeadForm from "@/components/InlineLeadForm";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
@@ -65,6 +67,13 @@ export default async function ComparisonDetailPage({ params }: Props) {
           { label: comparison.title }
         ]}
       />
+      <section className="container-shell py-4">
+        <GEOAnswerCard
+          title={`${comparison.title} : réponse directe`}
+          answer={comparison.points[0]}
+          bullets={comparison.points.slice(1, 3)}
+        />
+      </section>
       <SectionShell
         eyebrow="Comparaison"
         title="Ce qu’il faut retenir."
@@ -103,6 +112,7 @@ export default async function ComparisonDetailPage({ params }: Props) {
           compact
         />
       </SectionShell>
+      <ContentPageSignature description="Comparatif édité par SKS TALENTS pour aider à décider plus vite sur des sujets de recrutement, structuration d’équipe et arbitrages de croissance." />
     </>
   );
 }

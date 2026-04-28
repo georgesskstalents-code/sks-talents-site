@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import { animalHealthHub, getSectorPage } from "@/data/sectors";
 
@@ -31,6 +32,7 @@ export default async function PetfoodDetailPage({
           </p>
         </div>
       </section>
+      <ContentPageSignature description="Page sectorielle SKS TALENTS sur le petfood pour connecter premiumisation, innovation, talents business et décisions de croissance." />
     </>
   );
 }
