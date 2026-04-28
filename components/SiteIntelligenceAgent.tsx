@@ -3,6 +3,58 @@
 import { Loader2, MessageCircle, SendHorizonal, Sparkles, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+// Render text with clickable links: full URLs (https://...) and internal paths (/orientation, /contact, etc.)
+function renderMessageContent(content: string) {
+  // Match: full URLs OR internal paths (/word or /word/word, optionally with query)
+  const pattern = /(https?:\/\/[^\s<>"]+|\/[a-z0-9][a-z0-9\-/]*(?:\?[^\s<>"]*)?(?=[\s.,;:!?)\]]|$))/gi;
+  const parts: Array<{ type: "text" | "external" | "internal"; value: string }> = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  while ((match = pattern.exec(content)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push({ type: "text", value: content.slice(lastIndex, match.index) });
+    }
+    const url = match[0];
+    parts.push({
+      type: url.startsWith("http") ? "external" : "internal",
+      value: url
+    });
+    lastIndex = match.index + url.length;
+  }
+  if (lastIndex < content.length) {
+    parts.push({ type: "text", value: content.slice(lastIndex) });
+  }
+
+  return parts.map((part, idx) => {
+    if (part.type === "external") {
+      return (
+        <a
+          key={idx}
+          href={part.value}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="font-semibold text-brand-teal underline decoration-brand-teal/40 underline-offset-2 hover:decoration-brand-teal"
+        >
+          {part.value}
+        </a>
+      );
+    }
+    if (part.type === "internal") {
+      return (
+        <Link
+          key={idx}
+          href={part.value}
+          className="font-semibold text-brand-teal underline decoration-brand-teal/40 underline-offset-2 hover:decoration-brand-teal"
+        >
+          {part.value}
+        </Link>
+      );
+    }
+    return <span key={idx}>{part.value}</span>;
+  });
+}
 
 type ChatRole = "user" | "assistant";
 type ChatLanguage = "fr" | "en";
@@ -292,13 +344,15 @@ export default function SiteIntelligenceAgent({
                 className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`max-w-[85%] rounded-[22px] px-4 py-3 text-sm leading-7 shadow-sm ${
+                  className={`max-w-[85%] whitespace-pre-wrap break-words rounded-[22px] px-4 py-3 text-sm leading-7 shadow-sm ${
                     message.role === "user"
                       ? "bg-brand-teal text-white"
                       : "border border-brand-line bg-white text-brand-stone"
                   }`}
                 >
-                  {message.content}
+                  {message.role === "assistant"
+                    ? renderMessageContent(message.content)
+                    : message.content}
                 </div>
               </div>
             ))}

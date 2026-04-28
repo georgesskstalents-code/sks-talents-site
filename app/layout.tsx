@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import "./globals.css";
-import Analytics from "@/components/Analytics";
-import ChatwootWidget from "@/components/ChatwootWidget";
-import FrontendErrorMonitor from "@/components/FrontendErrorMonitor";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SiteFeedbackPrompt from "@/components/SiteFeedbackPrompt";
-import SiteIntelligenceAgent from "@/components/SiteIntelligenceAgent";
-import StickyMobileCTA from "@/components/StickyMobileCTA";
-import PageViewTracker from "@/components/PageViewTracker";
-import CookieConsentBanner from "@/components/CookieConsentBanner";
-import CookiePreferencesLauncher from "@/components/CookiePreferencesLauncher";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
+
+// Lazy-load non-critical widgets (defer ~500KB of JS off the critical path)
+const Analytics = dynamic(() => import("@/components/Analytics"));
+const PageViewTracker = dynamic(() => import("@/components/PageViewTracker"));
+const FrontendErrorMonitor = dynamic(() => import("@/components/FrontendErrorMonitor"));
+const StickyMobileCTA = dynamic(() => import("@/components/StickyMobileCTA"));
+const SiteFeedbackPrompt = dynamic(() => import("@/components/SiteFeedbackPrompt"));
+const CookieConsentBanner = dynamic(() => import("@/components/CookieConsentBanner"));
+const CookiePreferencesLauncher = dynamic(() => import("@/components/CookiePreferencesLauncher"));
+const ChatwootWidget = dynamic(() => import("@/components/ChatwootWidget"));
+const SiteIntelligenceAgent = dynamic(() => import("@/components/SiteIntelligenceAgent"));
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.skstalents.fr"),

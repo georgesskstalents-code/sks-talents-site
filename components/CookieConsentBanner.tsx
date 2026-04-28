@@ -42,43 +42,50 @@ export default function CookieConsentBanner() {
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-[90] border-t border-brand-ink/10 bg-white shadow-[0_-18px_80px_rgba(15,23,42,0.16)]">
-      <div className="mx-auto max-w-6xl px-5 py-5 sm:px-8">
-        <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-end">
-          <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
+      <div className="mx-auto max-w-6xl px-4 py-4 sm:px-8 sm:py-5">
+        <div className="grid gap-3 sm:gap-5 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div className="space-y-2 sm:space-y-4">
+            <p className="hidden text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal sm:block">
               Confidentialité
             </p>
-            <div className="space-y-3">
-              <h2 className="font-display text-3xl text-brand-ink sm:text-4xl">
-                Vos données vous appartiennent
+            <div className="space-y-2 sm:space-y-3">
+              <h2 className="font-display text-xl text-brand-ink sm:text-3xl lg:text-4xl">
+                <span className="sm:hidden">Cookies</span>
+                <span className="hidden sm:inline">Vos données vous appartiennent</span>
               </h2>
-              <p className="max-w-3xl text-base leading-8 text-brand-stone">
-                SKS TALENTS utilise sur ce site des cookies destinés à son bon fonctionnement et,
-                avec votre accord, à mesurer la fréquentation afin d’évaluer les performances des
-                contenus, des parcours et des campagnes d’information.
+              <p className="max-w-3xl text-sm leading-6 text-brand-stone sm:text-base sm:leading-8">
+                <span className="sm:hidden">
+                  SKS TALENTS utilise des cookies pour le fonctionnement du site et, avec votre
+                  accord, mesurer la fréquentation. Aucune donnée n’est cédée à des tiers.
+                </span>
+                <span className="hidden sm:inline">
+                  SKS TALENTS utilise sur ce site des cookies destinés à son bon fonctionnement et,
+                  avec votre accord, à mesurer la fréquentation afin d’évaluer les performances des
+                  contenus, des parcours et des campagnes d’information.
+                </span>
               </p>
-              <p className="max-w-3xl text-base leading-8 text-brand-stone">
+              <p className="hidden max-w-3xl text-base leading-8 text-brand-stone sm:block">
                 SKS TALENTS ne vend, ne cède et ne communique aucune donnée personnelle à des tiers.
               </p>
-              <p className="max-w-3xl text-sm leading-7 text-brand-stone/90">
+              <p className="hidden max-w-3xl text-sm leading-7 text-brand-stone/90 sm:block">
                 Pour modifier vos préférences plus tard, cliquez sur le lien{" "}
                 <span className="font-semibold text-brand-ink">Préférences cookies</span> situé
                 dans le pied de page.
               </p>
             </div>
           </div>
-          <div className="grid gap-3 sm:min-w-[300px]">
+          <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-1 lg:min-w-[300px]">
             <button
               type="button"
               onClick={() => setDetailOpen((current) => !current)}
-              className="inline-flex items-center justify-center rounded-full border border-brand-ink/12 px-5 py-3 text-sm font-semibold text-brand-ink transition hover:bg-brand-mint/45"
+              className="inline-flex items-center justify-center rounded-full border border-brand-ink/12 px-4 py-2.5 text-xs font-semibold text-brand-ink transition hover:bg-brand-mint/45 sm:px-5 sm:py-3 sm:text-sm"
             >
-              {detailOpen ? "Masquer le détail" : "Voir en détail"}
+              {detailOpen ? "Masquer" : "Détails"}
             </button>
             <button
               type="button"
               onClick={() => setStoredCookieConsent("accepted")}
-              className="inline-flex items-center justify-center rounded-full bg-[#f5b70a] px-5 py-3 text-sm font-semibold text-white transition hover:brightness-95"
+              className="inline-flex items-center justify-center rounded-full bg-[#f5b70a] px-4 py-2.5 text-xs font-semibold text-white transition hover:brightness-95 sm:px-5 sm:py-3 sm:text-sm"
             >
               OK pour moi
             </button>
