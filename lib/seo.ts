@@ -35,8 +35,15 @@ export const organizationSchema = {
   ],
   sameAs: [
     "https://fr.trustpilot.com/review/skstalents.fr",
-    "https://linkedin.com/m/search/results/all/?keywords=sks+talents&fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A86378852&position=0&origin=RICH_QUERY_TYPEAHEAD_HISTORY&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BrPgcaT3hSCqaGuomz7Pvvw%3D%3D"
+    "https://www.linkedin.com/company/sks-talents/",
+    "https://www.linkedin.com/in/georges-kengue-81988b36/"
   ],
+  founder: {
+    "@type": "Person",
+    name: "Georges Kengue",
+    jobTitle: "Fondateur",
+    sameAs: "https://www.linkedin.com/in/georges-kengue-81988b36/"
+  },
   contactPoint: [
     {
       "@type": "ContactPoint",
