@@ -1,6 +1,7 @@
 import CalendlyButton from "@/components/CalendlyButton";
 import CountUpStat from "@/components/CountUpStat";
 import EcosystemTrustBar from "@/components/EcosystemTrustBar";
+import GuaranteeBadge from "@/components/GuaranteeBadge";
 import Hero from "@/components/Hero";
 import HomeSearchSection from "@/components/HomeSearchSection";
 import LatestInsights from "@/components/LatestInsights";
@@ -78,6 +79,10 @@ export default function HomePage() {
 
       <RevealOnScroll>
         <EcosystemTrustBar />
+      </RevealOnScroll>
+
+      <RevealOnScroll delayMs={40}>
+        <GuaranteeBadge />
       </RevealOnScroll>
 
       <RevealOnScroll>

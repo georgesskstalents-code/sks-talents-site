@@ -3,6 +3,7 @@
 import { useMemo, useState, useTransition } from "react";
 import { usePathname } from "next/navigation";
 import CalendlyButton from "@/components/CalendlyButton";
+import GuaranteeBadge from "@/components/GuaranteeBadge";
 import TurnstileWidget from "@/components/TurnstileWidget";
 import { trackSiteTelemetry } from "@/lib/siteTelemetryClient";
 
@@ -149,6 +150,10 @@ export default function InlineLeadForm({
         <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-teal animate-pulse" />
         Déjà 100+ dirigeants Life Sciences &amp; Santé animale accompagnés
       </p>
+
+      <div className="mt-4">
+        <GuaranteeBadge variant="compact" />
+      </div>
 
       <form className="mt-6 grid gap-4" onSubmit={handleSubmit} noValidate>
         <input
