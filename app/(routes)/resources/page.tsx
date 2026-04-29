@@ -1,7 +1,6 @@
 import FAQSection from "@/components/FAQSection";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
-import GEOAnswerCard from "@/components/GEOAnswerCard";
 import ListingCard from "@/components/ListingCard";
 import ExternalLinkGrid from "@/components/ExternalLinkGrid";
 import ResourcesAlertsCard from "@/components/ResourcesAlertsCard";
@@ -23,6 +22,10 @@ import { getNotionSiteContentList } from "@/lib/notion";
 
 export const dynamic = "force-dynamic";
 
+// Masque les blocs SEO internes (Formats SEO, Matrice de décision, FAQ GEO,
+// 'Question fréquente' externes). Ces sections ne concernent pas le lecteur.
+const SHOW_INTERNAL_SEO_BLOCKS = false;
+
 export default async function ResourcesPage() {
   let notionEvents: Awaited<ReturnType<typeof getNotionSiteContentList>> = [];
 
@@ -42,9 +45,9 @@ export default async function ResourcesPage() {
         description="Salaires, fiches métiers, fonds, écoles, comparatifs et insights marché structurés comme des pages de référence à mettre à jour régulièrement, avec un focus sur les entreprises en Seed, Série A et Série B."
       />
       <SectionShell
-        eyebrow="Question fréquente"
-        title="Comment utiliser cette base de ressources pour répondre à une question précise ?"
-        description="La structure proposée permet de faire vivre plus de 50 articles, 35 fiches métiers et plusieurs hubs thématiques, notamment sur les recrutements critiques qui suivent une levée Seed, Série A ou Série B."
+        eyebrow="Comment naviguer"
+        title="Cinq hubs pour aller droit à l’information utile."
+        description="Salaires, métiers, fonds, écoles et comparatifs : chaque hub regroupe les pages de référence du site, à mettre à jour en continu pour les recrutements Seed, Série A et Série B."
       >
         <div className="mb-8 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
           {[
@@ -116,58 +119,69 @@ export default async function ResourcesPage() {
             href="/ecosystem"
             title="Écosystème & réseaux"
             description="100 acteurs à suivre entre écoles, clusters, fonds, médias, plateformes et partenaires pour cartographier les réseaux qui comptent."
-            meta="Backlinks & autorité"
+            meta="Écosystème & réseaux"
           />
-          <ListingCard
-            href="/comparatifs"
-            title="Comparatifs SEO"
-            description="Des pages comparatives pour capter les requêtes à forte intention et mieux convertir sur des sujets spécialisés."
-            meta="Comparaison"
-          />
-          <ListingCard
-            href="/market-hubs"
-            title="Hubs de référence"
-            description="10 pages hub plus fortes par thème pour renforcer le référencement, la navigation et l’autorité sectorielle, y compris autour des cycles de croissance et de financement."
-            meta="High traffic pages"
-          />
-          <ListingCard
-            href={`/studies/${ecosystemStudy.slug}`}
-            title="Étude signature SKS TALENTS"
-            description={ecosystemStudy.summary}
-            meta="Insight 2026"
-          />
-          <ListingCard
-            href="/team"
-            title="Équipe & expertise"
-            description="La page crédibilité pour présenter le positionnement, la spécialisation et la méthode SKS TALENTS."
-            meta="Confiance"
-          />
-          <ListingCard
-            href="/rejoignez-nous"
-            title="Rejoignez-nous"
-            description="Une landing page orientée conversion qui combine vision fondatrice, preuve sociale, méthode et CTA pour recruteurs, partenaires et talents."
-            meta="Conversion"
-          />
-          <ListingCard
-            href="/press"
-            title="Presse & publications"
-            description="Interventions, publications et actifs de marque à centraliser pour journalistes, partenaires et moteurs de recherche."
-            meta="Autorité"
-          />
-          <ListingCard
-            href="/media-kit"
-            title="Media kit"
-            description="La base pour structurer vos futures offres publicitaires, sponsorisées et études co-brandées."
-            meta="Monétisation"
-          />
-          <ListingCard
-            href="/partenaires-media"
-            title="Partenaires & sponsorings"
-            description="Une page dédiée aux offres de visibilité pour les partenaires, sponsors et marques de votre écosystème."
-            meta="Partenariats"
-          />
+          {SHOW_INTERNAL_SEO_BLOCKS && (
+            <ListingCard
+              href="/comparatifs"
+              title="Comparatifs SEO"
+              description="Des pages comparatives pour capter les requêtes à forte intention et mieux convertir sur des sujets spécialisés."
+              meta="Comparaison"
+            />
+          )}
+          {SHOW_INTERNAL_SEO_BLOCKS && (
+            <>
+              <ListingCard
+                href="/market-hubs"
+                title="Hubs de référence"
+                description="10 pages hub plus fortes par thème pour renforcer le référencement, la navigation et l’autorité sectorielle, y compris autour des cycles de croissance et de financement."
+                meta="High traffic pages"
+              />
+              <ListingCard
+                href={`/studies/${ecosystemStudy.slug}`}
+                title="Étude signature SKS TALENTS"
+                description={ecosystemStudy.summary}
+                meta="Insight 2026"
+              />
+              <ListingCard
+                href="/team"
+                title="Équipe & expertise"
+                description="La page crédibilité pour présenter le positionnement, la spécialisation et la méthode SKS TALENTS."
+                meta="Confiance"
+              />
+            </>
+          )}
+          {SHOW_INTERNAL_SEO_BLOCKS && (
+            <>
+              <ListingCard
+                href="/rejoignez-nous"
+                title="Rejoignez-nous"
+                description="Une landing page orientée conversion qui combine vision fondatrice, preuve sociale, méthode et CTA pour recruteurs, partenaires et talents."
+                meta="Conversion"
+              />
+              <ListingCard
+                href="/press"
+                title="Presse & publications"
+                description="Interventions, publications et actifs de marque à centraliser pour journalistes, partenaires et moteurs de recherche."
+                meta="Autorité"
+              />
+              <ListingCard
+                href="/media-kit"
+                title="Media kit"
+                description="La base pour structurer vos futures offres publicitaires, sponsorisées et études co-brandées."
+                meta="Monétisation"
+              />
+              <ListingCard
+                href="/partenaires-media"
+                title="Partenaires & sponsorings"
+                description="Une page dédiée aux offres de visibilité pour les partenaires, sponsors et marques de votre écosystème."
+                meta="Partenariats"
+              />
+            </>
+          )}
         </div>
       </SectionShell>
+      {SHOW_INTERNAL_SEO_BLOCKS && (
       <SectionShell
         eyebrow="Formats SEO"
         title="Quels formats de contenu renforcent le mieux votre visibilité ?"
@@ -230,6 +244,8 @@ export default async function ResourcesPage() {
           />
         </div>
       </SectionShell>
+      )}
+      {SHOW_INTERNAL_SEO_BLOCKS && (
       <SectionShell
         eyebrow="Matrice de décision"
         title="Quel format choisir selon votre objectif SEO ?"
@@ -305,6 +321,7 @@ export default async function ResourcesPage() {
           ))}
         </div>
       </SectionShell>
+      )}
       <SectionShell
         eyebrow="Veille continue"
         title="Souhaitez-vous recevoir les prochaines ressources à forte valeur ?"
@@ -312,6 +329,8 @@ export default async function ResourcesPage() {
       >
         <ResourcesAlertsCard />
       </SectionShell>
+      {SHOW_INTERNAL_SEO_BLOCKS && (
+      <>
       <SectionShell
         eyebrow="Question fréquente"
         title="Quels fonds santé suivre pour comprendre un marché ou une levée ?"
@@ -436,6 +455,8 @@ export default async function ResourcesPage() {
           }
         ]}
       />
+      </>
+      )}
     </>
   );
 }
