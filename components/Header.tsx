@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Search } from "lucide-react";
 import { Suspense, useEffect, useState } from "react";
+import NavDropdown from "@/components/NavDropdown";
 import SiteLanguageSelector from "@/components/SiteLanguageSelector";
 
 const navGroups = [
@@ -97,35 +98,12 @@ export default function Header() {
         <nav className="hidden flex-1 items-center gap-5 lg:flex xl:gap-7">
           {navGroups.map((item) => (
             item.children ? (
-              <div key={item.href} className="relative">
-                <div className="flex items-center gap-2">
-                  <Link
-                    href={item.href}
-                    className="whitespace-nowrap text-[15px] font-semibold leading-none text-brand-stone transition hover:text-brand-teal"
-                  >
-                    {item.label}
-                  </Link>
-                  <details className="relative">
-                    <summary
-                      className="inline-flex h-7 w-7 cursor-pointer list-none items-center justify-center rounded-full border border-brand-teal/15 bg-white text-xs text-brand-stone transition hover:bg-brand-mint hover:text-brand-teal"
-                      aria-label="Ouvrir le menu Qui sommes-nous"
-                    >
-                      ▾
-                    </summary>
-                    <div className="absolute left-0 top-full z-40 mt-3 min-w-[240px] rounded-[22px] border border-brand-line bg-white p-3 shadow-[0_20px_45px_rgba(15,23,42,0.12)]">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="block rounded-[16px] px-4 py-3 text-sm font-semibold text-brand-stone transition hover:bg-brand-mint/40 hover:text-brand-teal"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </details>
-                </div>
-              </div>
+              <NavDropdown
+                key={item.href}
+                label={item.label}
+                items={item.children}
+                triggerClassName="inline-flex items-center gap-1 whitespace-nowrap text-[15px] font-semibold leading-none text-brand-stone transition hover:text-brand-teal"
+              />
             ) : (
               <Link
                 key={item.href}

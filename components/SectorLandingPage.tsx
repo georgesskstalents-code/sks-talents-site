@@ -12,6 +12,10 @@ import type {
 import { trackSiteTelemetry } from "@/lib/siteTelemetryClient";
 import styles from "./SectorLandingPage.module.css";
 
+// Soft-cut: hide secondary sections that overlap with hero / problem / services / how / proof.
+// Set to true to restore the full landing experience with 9 sections.
+const SHOW_FULL_LANDING_BLOCKS = false;
+
 type Props = {
   config: SectorLandingPageConfig;
 };
@@ -597,6 +601,7 @@ export default function SectorLandingPage({ config }: Props) {
         </div>
       </section>
 
+      {SHOW_FULL_LANDING_BLOCKS && (
       <section
         id="what"
         aria-labelledby={`${config.key}-what-title`}
@@ -716,6 +721,7 @@ export default function SectorLandingPage({ config }: Props) {
           </div>
         </div>
       </section>
+      )}
 
       <section
         id="services"
@@ -784,6 +790,7 @@ export default function SectorLandingPage({ config }: Props) {
         </div>
       </section>
 
+      {SHOW_FULL_LANDING_BLOCKS && (
       <section
         id="specificity"
         aria-labelledby={`${config.key}-specificity-title`}
@@ -841,6 +848,7 @@ export default function SectorLandingPage({ config }: Props) {
           ) : null}
         </div>
       </section>
+      )}
 
       <section
         id="how"
@@ -923,6 +931,7 @@ export default function SectorLandingPage({ config }: Props) {
         </div>
       </section>
 
+      {SHOW_FULL_LANDING_BLOCKS && (
       <section
         id="faq"
         aria-labelledby={`${config.key}-faq-title`}
@@ -954,6 +963,7 @@ export default function SectorLandingPage({ config }: Props) {
           </div>
         </div>
       </section>
+      )}
 
       <section
         id="final-cta"
