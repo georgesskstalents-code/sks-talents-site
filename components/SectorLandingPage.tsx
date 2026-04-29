@@ -3,6 +3,7 @@
 import { Fragment, useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import HeroVideoCard from "@/components/HeroVideoCard";
 import ResourceLogo from "@/components/ResourceLogo";
 import type {
   SectorLandingMetric,
@@ -532,6 +533,19 @@ export default function SectorLandingPage({ config }: Props) {
               </div>
             </SectionReveal>
           ) : null}
+
+          <SectionReveal delay={420}>
+            <div className="mt-10 max-w-md">
+              <HeroVideoCard
+                vimeoId={
+                  process.env.NEXT_PUBLIC_VIMEO_VIDEO_ID ??
+                  process.env.VIMEO_VIDEO_ID ??
+                  "851364422"
+                }
+                compact
+              />
+            </div>
+          </SectionReveal>
         </div>
       </section>
 

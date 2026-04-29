@@ -1,7 +1,6 @@
 import CalendlyButton from "@/components/CalendlyButton";
-import CountUpStat from "@/components/CountUpStat";
 import EcosystemTrustBar from "@/components/EcosystemTrustBar";
-import GuaranteeBadge from "@/components/GuaranteeBadge";
+import FounderCard from "@/components/FounderCard";
 import Hero from "@/components/Hero";
 import HomeSearchSection from "@/components/HomeSearchSection";
 import LatestInsights from "@/components/LatestInsights";
@@ -64,12 +63,6 @@ const insightSignals = [
   }
 ];
 
-const proofStats = [
-  ["100+", "placements"],
-  ["10 jours", "1re shortlist"],
-  ["4.5/5", "Trustpilot"]
-];
-
 export default function HomePage() {
   return (
     <>
@@ -80,30 +73,8 @@ export default function HomePage() {
         <EcosystemTrustBar />
       </RevealOnScroll>
 
-      <RevealOnScroll delayMs={40}>
-        <GuaranteeBadge />
-      </RevealOnScroll>
-
-      <RevealOnScroll>
-        <section className="container-shell -mt-2 pb-8">
-          <div className="mesh-panel relative overflow-hidden p-4 sm:p-5">
-            <div className="pointer-events-none absolute inset-0">
-              <ParallaxLayer
-                offset={5}
-                className="absolute -left-10 top-0 h-32 w-32 rounded-full bg-brand-mint/45 blur-3xl"
-              />
-              <ParallaxLayer
-                offset={4}
-                className="absolute right-0 bottom-[-2rem] h-28 w-28 rounded-full bg-cyan-100/70 blur-3xl"
-              />
-            </div>
-            <div className="relative grid gap-4 md:grid-cols-3">
-              {proofStats.map(([value, label]) => (
-                <CountUpStat key={label} value={value} label={label} />
-              ))}
-            </div>
-          </div>
-        </section>
+      <RevealOnScroll delayMs={50}>
+        <FounderCard />
       </RevealOnScroll>
 
       <RevealOnScroll delayMs={90}>
