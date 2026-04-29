@@ -17,20 +17,25 @@ import TestimonialMarquee from "@/components/TestimonialMarquee";
 import { references } from "@/data/references";
 import Link from "next/link";
 
-const youAreHerePoints: { html: string }[] = [
+const youAreHerePoints: { title: string; html: string }[] = [
   {
+    title: "Constituer un COMEX aligné",
     html: "Vous devez constituer un <strong>COMEX aligné</strong> sur votre <strong>stratégie</strong> et vos <strong>valeurs</strong>, et chaque recrutement <strong>impacte directement votre exécution</strong>."
   },
   {
+    title: "Passer en phase scale-up",
     html: "Vous passez en phase <strong>scale-up</strong> (Série A, B ou au-delà) : vos <strong>processus de recrutement</strong> et votre <strong>employer branding</strong> ne tiennent plus la charge."
   },
   {
+    title: "Structurer la fonction RH",
     html: "Vous voulez <strong>structurer la fonction RH</strong> et industrialiser le <strong>talent acquisition</strong> pour soutenir la <strong>roadmap business</strong>, sans alourdir l’organisation."
   },
   {
+    title: "Automatiser les tâches à faible valeur",
     html: "Vous voulez <strong>automatiser les tâches RH à faible valeur ajoutée</strong> pour libérer la direction sur ce qui compte : <strong>la stratégie, la culture, l’humain</strong>."
   },
   {
+    title: "Trouver un partenaire spécialisé",
     html: "Vous cherchez un partenaire qui maîtrise les enjeux <strong>Life Sciences & Animal Health</strong> (biotech, diagnostic, vétérinaire, petfood), pas un cabinet généraliste qui fait « aussi » de la santé."
   }
 ];
@@ -78,26 +83,32 @@ export default function HomePage() {
           eyebrow="5 signaux qu’il est temps d’agir"
           title="Vous vous reconnaissez si :"
         >
-          <div className="mx-auto max-w-4xl">
-            <ol className="divide-y divide-brand-teal/10">
-              {youAreHerePoints.map((point, index) => (
-                <li
-                  key={index}
-                  className="grid grid-cols-[64px_1fr] items-start gap-5 py-6 sm:grid-cols-[88px_1fr] sm:gap-8 sm:py-8"
+          <div className="mx-auto max-w-4xl space-y-4">
+            {youAreHerePoints.map((point, index) => (
+              <article
+                key={index}
+                className="card-luxe panel-lift flex gap-5 p-6 sm:p-8"
+              >
+                <span
+                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white shadow-[0_8px_24px_rgba(20,82,84,0.25)]"
+                  aria-hidden="true"
                 >
-                  <span
-                    className="font-display text-3xl italic leading-none text-brand-teal sm:text-4xl"
-                    aria-hidden="true"
-                  >
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div className="flex-1 space-y-3">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                    Signal {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="font-display text-2xl leading-[1.15] text-brand-ink sm:text-[28px]">
+                    {point.title}
+                  </h3>
                   <p
-                    className="text-sm leading-7 text-brand-stone sm:text-base sm:leading-8"
+                    className="text-sm leading-7 text-brand-stone sm:text-[15px] sm:leading-8"
                     dangerouslySetInnerHTML={{ __html: point.html }}
                   />
-                </li>
-              ))}
-            </ol>
+                </div>
+              </article>
+            ))}
           </div>
         </SectionShell>
       </RevealOnScroll>
