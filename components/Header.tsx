@@ -11,8 +11,12 @@ const navGroups = [
     label: "Qui sommes-nous",
     children: [
       {
-        href: "/about",
-        label: "Notre histoire et nos valeurs"
+        href: "/about#histoire",
+        label: "Notre histoire"
+      },
+      {
+        href: "/about#valeurs",
+        label: "Nos valeurs"
       },
       {
         href: "/mission",
