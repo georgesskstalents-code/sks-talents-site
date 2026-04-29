@@ -12,7 +12,6 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import ReferenceMarquee from "@/components/ReferenceMarquee";
 import ReferenceGrid from "@/components/ReferenceGrid";
 import SectionShell from "@/components/SectionShell";
-import ServicesSection from "@/components/ServicesSection";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import TestimonialMarquee from "@/components/TestimonialMarquee";
 import { references } from "@/data/references";
@@ -207,10 +206,6 @@ export default function HomePage() {
             </div>
           </div>
         </SectionShell>
-      </RevealOnScroll>
-
-      <RevealOnScroll delayMs={130}>
-        <ServicesSection />
       </RevealOnScroll>
 
       <RevealOnScroll delayMs={140}>
