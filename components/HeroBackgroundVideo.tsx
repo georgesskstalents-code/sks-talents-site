@@ -57,7 +57,7 @@ export default function HeroBackgroundVideo({ vimeoId }: Props) {
       tabIndex={-1}
       loading="lazy"
       allow="autoplay; fullscreen; picture-in-picture"
-      className="absolute left-1/2 top-1/2 h-[140%] w-[140%] -translate-x-1/2 -translate-y-1/2 opacity-30"
+      className="absolute left-1/2 top-1/2 h-[140%] w-[140%] -translate-x-1/2 -translate-y-1/2 opacity-15 blur-[2px]"
       frameBorder={0}
     />
   );

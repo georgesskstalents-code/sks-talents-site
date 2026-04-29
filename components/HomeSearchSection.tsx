@@ -7,7 +7,6 @@ import { FormEvent, useState } from "react";
 const quickSearches = [
   "Diagnostic recrutement",
   "Lexique RH Life Sciences",
-  "Orientez-vous",
   "Calcul salaire brut/net",
   "Benchmarks salaires",
   "Actualités",

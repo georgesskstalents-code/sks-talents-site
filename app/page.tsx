@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import HomeSearchSection from "@/components/HomeSearchSection";
 import LatestInsights from "@/components/LatestInsights";
 import MethodNarrative from "@/components/MethodNarrative";
+import OrientationTeaser from "@/components/OrientationTeaser";
 import ParallaxLayer from "@/components/ParallaxLayer";
 import RibbonCTA from "@/components/RibbonCTA";
 import RevealOnScroll from "@/components/RevealOnScroll";
@@ -227,6 +228,10 @@ export default function HomePage() {
 
       <RevealOnScroll delayMs={195}>
         <HomeSearchSection />
+      </RevealOnScroll>
+
+      <RevealOnScroll delayMs={205}>
+        <OrientationTeaser />
       </RevealOnScroll>
 
       <RevealOnScroll delayMs={210}>
