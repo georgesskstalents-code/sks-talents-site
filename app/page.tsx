@@ -17,12 +17,22 @@ import TestimonialMarquee from "@/components/TestimonialMarquee";
 import { references } from "@/data/references";
 import Link from "next/link";
 
-const youAreHerePoints = [
-  "Vous devez constituer une équipe dirigeante alignée sur votre stratégie et vos valeurs, et chaque profil compte double.",
-  "Vous êtes en phase d’industrialisation ou de commercialisation, et vos recrutements d’hier ne suffisent plus pour le scale d’aujourd’hui.",
-  "Vous voulez structurer votre fonction RH pour soutenir votre montée en charge, sans alourdir votre organisation.",
-  "Vous voulez automatiser vos tâches répétitives pour vous concentrer sur ce qui crée vraiment de la valeur : la stratégie, le closing, la vision.",
-  "Vous cherchez un partenaire qui comprend les enjeux Life Sciences & Animal Health de l’intérieur — pas un cabinet généraliste qui fait « aussi » de la santé."
+const youAreHerePoints: { html: string }[] = [
+  {
+    html: "Vous devez constituer un <strong>COMEX aligné</strong> sur votre <strong>stratégie</strong> et vos <strong>valeurs</strong>, et chaque recrutement <strong>impacte directement votre exécution</strong>."
+  },
+  {
+    html: "Vous passez en phase <strong>scale-up</strong> (Série A, B ou au-delà) : vos <strong>processus de recrutement</strong> et votre <strong>employer branding</strong> ne tiennent plus la charge."
+  },
+  {
+    html: "Vous voulez <strong>structurer la fonction RH</strong> et industrialiser le <strong>talent acquisition</strong> pour soutenir la <strong>roadmap business</strong>, sans alourdir l’organisation."
+  },
+  {
+    html: "Vous voulez <strong>automatiser les tâches RH à faible valeur ajoutée</strong> pour libérer la direction sur ce qui compte : <strong>la stratégie, la culture, l’humain</strong>."
+  },
+  {
+    html: "Vous cherchez un partenaire qui maîtrise les enjeux <strong>Life Sciences & Animal Health</strong> (biotech, diagnostic, medtech, vétérinaire, petfood), pas un cabinet généraliste qui fait « aussi » de la santé."
+  }
 ];
 
 const diagnosticSignals = [
@@ -65,25 +75,29 @@ export default function HomePage() {
 
       <RevealOnScroll delayMs={90}>
         <SectionShell
-          eyebrow="Si vous êtes ici"
-          title="Vous avez un poste critique qui traîne. C’est ce qu’on règle."
-          description="Roadmap qui glisse, équipes sous tension, profils rares à convaincre. Avant la solution, il faut nommer le vrai problème."
+          eyebrow="5 signaux qu’il est temps d’agir"
+          title="Vous vous reconnaissez si :"
         >
-          <div className="card-luxe mx-auto max-w-3xl p-6 sm:p-8">
-            <p className="font-display text-xl text-brand-ink sm:text-2xl">
-              Vous vous reconnaissez si :
-            </p>
-            <ul className="mt-5 space-y-3.5">
+          <div className="mx-auto max-w-4xl">
+            <ol className="divide-y divide-brand-teal/10">
               {youAreHerePoints.map((point, index) => (
                 <li
                   key={index}
-                  className="flex gap-3 text-sm leading-7 text-brand-stone sm:text-[15px]"
+                  className="grid grid-cols-[64px_1fr] items-start gap-5 py-6 sm:grid-cols-[88px_1fr] sm:gap-8 sm:py-8"
                 >
-                  <span className="mt-0.5 shrink-0 font-semibold text-brand-teal">→</span>
-                  <span>{point}</span>
+                  <span
+                    className="font-display text-3xl italic leading-none text-brand-teal sm:text-4xl"
+                    aria-hidden="true"
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <p
+                    className="text-sm leading-7 text-brand-stone sm:text-base sm:leading-8"
+                    dangerouslySetInnerHTML={{ __html: point.html }}
+                  />
                 </li>
               ))}
-            </ul>
+            </ol>
           </div>
         </SectionShell>
       </RevealOnScroll>
