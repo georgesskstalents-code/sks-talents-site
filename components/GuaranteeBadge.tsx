@@ -14,8 +14,7 @@ export default function GuaranteeBadge({ variant = "banner" }: Props) {
             Garantie SKS Talents
           </p>
           <p className="mt-1 text-sm leading-6 text-brand-ink">
-            <strong>Première shortlist en 10 jours ouvrés</strong> ou acompte intégralement
-            remboursé.
+            <strong>Première shortlist en 10 jours ouvrés.</strong>
           </p>
         </div>
       </div>
@@ -35,12 +34,11 @@ export default function GuaranteeBadge({ variant = "banner" }: Props) {
               Garantie SKS Talents
             </p>
             <h3 className="font-display text-2xl leading-[1.15] text-brand-ink sm:text-3xl">
-              <span className="text-[#b87a00]">Première shortlist en 10 jours ouvrés</span> ou
-              acompte intégralement remboursé.
+              <span className="text-[#b87a00]">Première shortlist en 10 jours ouvrés.</span>
             </h3>
             <p className="text-sm leading-7 text-brand-stone sm:text-[15px]">
-              Engagement de moyen et de résultat. Pas de shortlist sous 10 jours = vous récupérez
-              l’acompte, sans friction et sans question.
+              Engagement de moyen sur la première shortlist : un brief cadré, une lecture marché
+              activée et 3 profils lisibles présentés sous 10 jours ouvrés.
             </p>
           </div>
         </div>
