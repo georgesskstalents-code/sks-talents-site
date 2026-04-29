@@ -1,4 +1,4 @@
-import { Mail, Star } from "lucide-react";
+import { CalendarClock, Mail, Star } from "lucide-react";
 
 function LinkedinIcon({ size = 14 }: { size?: number }) {
   return (
@@ -36,6 +36,15 @@ export default function FounderCard() {
                 Fondateur SKS TALENTS · Executive Search Life Sciences &amp; Santé animale
               </p>
               <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+                <a
+                  href="https://calendly.com/g-kengue/talentconsulting"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex items-center gap-1.5 font-semibold text-brand-teal transition hover:opacity-80"
+                >
+                  <CalendarClock size={14} />
+                  Réserver 15 min
+                </a>
                 <a
                   href="mailto:g.kengue@skstalents.com"
                   className="inline-flex items-center gap-1.5 font-semibold text-brand-teal transition hover:opacity-80"

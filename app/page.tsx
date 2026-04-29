@@ -17,27 +17,12 @@ import TestimonialMarquee from "@/components/TestimonialMarquee";
 import { references } from "@/data/references";
 import Link from "next/link";
 
-const painPoints = [
-  {
-    title: "Le recrutement prend trop de temps",
-    description:
-      "Un poste-clé Série A ou Série B reste vacant, la roadmap glisse et la pression remonte sur le COMEX et les équipes déjà en place."
-  },
-  {
-    title: "Les bons profils sont difficiles à trouver",
-    description:
-      "En Life Sciences & Santé animale, les profils rares (R&D, Affaires Réglementaires, Medical, Tech) sont sollicités et difficiles à convaincre si le besoin est mal cadré."
-  },
-  {
-    title: "Les équipes ne passent pas correctement à l’échelle",
-    description:
-      "Au passage scale-up, recrutement, onboarding et structuration RH décrochent — la croissance devient fragile et coûteuse pour la direction."
-  },
-  {
-    title: "La structure RH absorbe la stratégie au lieu de la servir",
-    description:
-      "Tâches RH à faible valeur ajoutée, process manuels, reporting éclaté : l’énergie managériale part dans l’admin au lieu du business. Sans digitalisation et automatisation, la fonction RH ralentit la décision."
-  }
+const youAreHerePoints = [
+  "Vous devez constituer une équipe dirigeante alignée sur votre stratégie et vos valeurs, et chaque profil compte double.",
+  "Vous êtes en phase d’industrialisation ou de commercialisation, et vos recrutements d’hier ne suffisent plus pour le scale d’aujourd’hui.",
+  "Vous voulez structurer votre fonction RH pour soutenir votre montée en charge, sans alourdir votre organisation.",
+  "Vous voulez automatiser vos tâches répétitives pour vous concentrer sur ce qui crée vraiment de la valeur : la stratégie, le closing, la vision.",
+  "Vous cherchez un partenaire qui comprend les enjeux Life Sciences & Animal Health de l’intérieur — pas un cabinet généraliste qui fait « aussi » de la santé."
 ];
 
 const diagnosticSignals = [
@@ -84,19 +69,21 @@ export default function HomePage() {
           title="Vous avez un poste critique qui traîne. C’est ce qu’on règle."
           description="Roadmap qui glisse, équipes sous tension, profils rares à convaincre. Avant la solution, il faut nommer le vrai problème."
         >
-          <div className="grid gap-5 md:grid-cols-2 2xl:grid-cols-4">
-            {painPoints.map((item) => (
-              <div
-                key={item.title}
-                className="card-luxe panel-lift flex h-full flex-col justify-between p-8"
-              >
-                <span className="mb-6 inline-flex w-fit rounded-full border border-brand-teal/12 bg-brand-mint px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-teal">
-                  Point de friction
-                </span>
-                <h2 className="font-display text-3xl text-brand-ink">{item.title}</h2>
-                <p className="mt-4 text-sm leading-7 text-brand-stone">{item.description}</p>
-              </div>
-            ))}
+          <div className="card-luxe mx-auto max-w-3xl p-6 sm:p-8">
+            <p className="font-display text-xl text-brand-ink sm:text-2xl">
+              Vous vous reconnaissez si :
+            </p>
+            <ul className="mt-5 space-y-3.5">
+              {youAreHerePoints.map((point, index) => (
+                <li
+                  key={index}
+                  className="flex gap-3 text-sm leading-7 text-brand-stone sm:text-[15px]"
+                >
+                  <span className="mt-0.5 shrink-0 font-semibold text-brand-teal">→</span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </SectionShell>
       </RevealOnScroll>
