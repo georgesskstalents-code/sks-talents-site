@@ -116,7 +116,7 @@ export default function HomePage() {
       <RevealOnScroll delayMs={100}>
         <RibbonCTA
           eyebrow="Prochaine étape"
-          title="Vous reconnaissez l'un de ces blocages ? Parlons-en 15 minutes."
+          title="Si l’un de ces blocages résonne, ou si vous en vivez d’autres, donnons-nous 15 minutes."
           primaryLabel="Réserver 15 min d’analyse"
           secondaryHref="/diagnostic"
           secondaryLabel="Faire le diagnostic"
