@@ -31,8 +31,8 @@ export default function Hero() {
           </h1>
           <p className="max-w-2xl text-sm leading-7 text-brand-stone sm:text-base">
             Nous aidons les CEO, COO et DRH à recruter en{" "}
-            <strong>Life Sciences &amp; Santé animale</strong> — biotech, diagnostic, medtech,
-            vétérinaire, petfood — de la <strong>Série A</strong> à la <strong>Série B</strong>{" "}
+            <strong>Life Sciences &amp; Santé animale</strong> — biotech, diagnostic, vétérinaire,
+            petfood — de la <strong>Série A</strong> à la <strong>Série B</strong>{" "}
             et au <strong>scale-up</strong>. Vite, juste, sans dégrader la qualité.
           </p>
 

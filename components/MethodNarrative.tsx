@@ -11,7 +11,7 @@ const chapters = [
     chapter: "Chapitre 2",
     title: "On lit le marché à votre place",
     body:
-      "Pénurie réelle ou imaginaire ? Qui bouge dans votre vertical biotech, diagnostic, medtech, vétérinaire ou petfood ? Quels concurrents Série A/B recrutent les mêmes profils ? Nous activons notre réseau spécialisé Life Sciences & Santé animale pour vous apporter une lecture marché claire — pas une liste de CV."
+      "Pénurie réelle ou imaginaire ? Qui bouge dans votre vertical biotech, diagnostic, vétérinaire ou petfood ? Quels concurrents Série A/B recrutent les mêmes profils ? Nous activons notre réseau spécialisé Life Sciences & Santé animale pour vous apporter une lecture marché claire — pas une liste de CV."
   },
   {
     chapter: "Chapitre 3",

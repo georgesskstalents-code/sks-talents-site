@@ -31,7 +31,7 @@ const youAreHerePoints: { html: string }[] = [
     html: "Vous voulez <strong>automatiser les tâches RH à faible valeur ajoutée</strong> pour libérer la direction sur ce qui compte : <strong>la stratégie, la culture, l’humain</strong>."
   },
   {
-    html: "Vous cherchez un partenaire qui maîtrise les enjeux <strong>Life Sciences & Animal Health</strong> (biotech, diagnostic, medtech, vétérinaire, petfood), pas un cabinet généraliste qui fait « aussi » de la santé."
+    html: "Vous cherchez un partenaire qui maîtrise les enjeux <strong>Life Sciences & Animal Health</strong> (biotech, diagnostic, vétérinaire, petfood), pas un cabinet généraliste qui fait « aussi » de la santé."
   }
 ];
 
@@ -50,7 +50,7 @@ const insightSignals = [
   {
     title: "Pression marché",
     description:
-      "En biotech, diagnostic, medtech, vétérinaire et petfood, chaque retard de recrutement se répercute sur l’exécution commerciale, technique, médicale ou managériale — et fragilise la roadmap COMEX."
+      "En biotech, diagnostic, vétérinaire et petfood, chaque retard de recrutement se répercute sur l’exécution commerciale, technique, médicale ou managériale — et fragilise la roadmap COMEX."
   },
   {
     title: "Structuration RH digitalisée",
