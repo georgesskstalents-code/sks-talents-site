@@ -1,9 +1,57 @@
 "use client";
 
-import { Loader2, MessageCircle, SendHorizonal, Sparkles, X } from "lucide-react";
+import { Loader2, MessageCircle, Mic, MicOff, SendHorizonal, Sparkles, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useCookieConsent } from "@/lib/useCookieConsent";
+
+// Phrases an LLM uses when it doesn't have the info — used to detect content gaps
+const CONTENT_GAP_PHRASES = [
+  "je ne sais pas",
+  "je n'ai pas",
+  "je ne dispose pas",
+  "désolé, je",
+  "désolée, je",
+  "pas en mesure",
+  "pas d'information",
+  "pas d’information",
+  "i don't know",
+  "i don’t know",
+  "i don't have",
+  "i don’t have",
+  "i'm not sure",
+  "i’m not sure",
+  "sorry, i",
+  "i'm unable",
+  "i am unable"
+];
+
+function looksLikeContentGap(answer: string) {
+  const lower = answer.toLowerCase();
+  return CONTENT_GAP_PHRASES.some((phrase) => lower.includes(phrase));
+}
+
+function reportContentGap(query: string, answer: string, path: string, sessionId: string) {
+  // Fire-and-forget — log to /api/site-analytics for dashboard surfacing
+  try {
+    fetch("/api/site-analytics", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      keepalive: true,
+      body: JSON.stringify({
+        type: "agent_content_gap",
+        path,
+        query,
+        message: answer.slice(0, 320),
+        sessionId,
+        createdAt: new Date().toISOString()
+      })
+    }).catch(() => undefined);
+  } catch {
+    // Ignore — best-effort only
+  }
+}
 
 // Render text with clickable links: full URLs (https://...) and internal paths (/orientation, /contact, etc.)
 function renderMessageContent(content: string) {
@@ -136,9 +184,88 @@ export default function SiteIntelligenceAgent({
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [listening, setListening] = useState(false);
+  const [voiceSupported, setVoiceSupported] = useState(false);
+  const recognitionRef = useRef<SpeechRecognition | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const currentPath = useMemo(() => pathname ?? "/", [pathname]);
   const ui = copy[language];
+  const consent = useCookieConsent();
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const Recognition =
+      (window as unknown as { SpeechRecognition?: typeof SpeechRecognition }).SpeechRecognition ||
+      (window as unknown as { webkitSpeechRecognition?: typeof SpeechRecognition })
+        .webkitSpeechRecognition;
+    setVoiceSupported(Boolean(Recognition));
+  }, []);
+
+  function toggleVoiceInput() {
+    if (typeof window === "undefined") return;
+    if (listening) {
+      recognitionRef.current?.stop();
+      return;
+    }
+
+    const Recognition =
+      (window as unknown as { SpeechRecognition?: typeof SpeechRecognition }).SpeechRecognition ||
+      (window as unknown as { webkitSpeechRecognition?: typeof SpeechRecognition })
+        .webkitSpeechRecognition;
+    if (!Recognition) return;
+
+    const recognition = new Recognition();
+    recognition.lang = language === "fr" ? "fr-FR" : "en-US";
+    recognition.continuous = false;
+    recognition.interimResults = true;
+    recognition.maxAlternatives = 1;
+
+    recognition.onstart = () => setListening(true);
+    recognition.onerror = () => {
+      setListening(false);
+      setError(
+        language === "fr"
+          ? "Micro indisponible. Vérifiez les permissions du navigateur."
+          : "Microphone unavailable. Check browser permissions."
+      );
+    };
+    recognition.onend = () => setListening(false);
+    recognition.onresult = (event: SpeechRecognitionEvent) => {
+      const transcript = Array.from(event.results)
+        .map((r) => r[0]?.transcript ?? "")
+        .join(" ")
+        .trim();
+      if (transcript) {
+        setInput(transcript);
+      }
+      // Auto-submit when final result is in
+      const lastResult = event.results[event.results.length - 1];
+      if (lastResult?.isFinal && transcript.length > 1) {
+        recognition.stop();
+        // Mark this query as voice-originated for analytics
+        try {
+          fetch("/api/site-analytics", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            keepalive: true,
+            body: JSON.stringify({
+              type: "agent_query_voice",
+              path: currentPath,
+              query: transcript,
+              sessionId: getSessionId(),
+              createdAt: new Date().toISOString()
+            })
+          }).catch(() => undefined);
+        } catch {
+          // ignore
+        }
+        void submitMessage(transcript);
+      }
+    };
+
+    recognitionRef.current = recognition;
+    recognition.start();
+  }
 
   useEffect(() => {
     setMounted(true);
@@ -277,6 +404,19 @@ export default function SiteIntelligenceAgent({
           }
         }
       }
+      // After streaming completes, check whether the assistant answer indicates a content gap
+      setMessages((current) => {
+        const finalAssistant = current.find((item) => item.id === nextAssistantMessage.id);
+        if (finalAssistant && looksLikeContentGap(finalAssistant.content)) {
+          reportContentGap(
+            trimmed,
+            finalAssistant.content,
+            currentPath,
+            getSessionId()
+          );
+        }
+        return current;
+      });
     } catch (requestError) {
       const fallback =
         requestError instanceof Error
@@ -309,6 +449,12 @@ export default function SiteIntelligenceAgent({
   }
 
   if (externalOnly && !open) {
+    return null;
+  }
+
+  // Hide chat widget while cookie consent is still pending so it doesn't overlap
+  // the cookie banner buttons on mobile.
+  if (consent === null && !open) {
     return null;
   }
 
@@ -424,9 +570,37 @@ export default function SiteIntelligenceAgent({
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
                 rows={2}
-                placeholder={ui.placeholder}
-                className="min-h-[56px] flex-1 resize-none rounded-[18px] border border-brand-line px-4 py-3 text-sm outline-none transition focus:border-brand-teal"
+                placeholder={listening ? (language === "fr" ? "À l’écoute…" : "Listening…") : ui.placeholder}
+                className={`min-h-[56px] flex-1 resize-none rounded-[18px] border px-4 py-3 text-sm outline-none transition ${
+                  listening
+                    ? "border-brand-teal ring-2 ring-brand-teal/20 bg-brand-mint/15"
+                    : "border-brand-line focus:border-brand-teal"
+                }`}
               />
+              {voiceSupported ? (
+                <button
+                  type="button"
+                  onClick={toggleVoiceInput}
+                  disabled={loading}
+                  aria-pressed={listening}
+                  aria-label={
+                    listening
+                      ? language === "fr"
+                        ? "Arrêter la dictée vocale"
+                        : "Stop voice input"
+                      : language === "fr"
+                        ? "Activer la dictée vocale"
+                        : "Start voice input"
+                  }
+                  className={`inline-flex h-12 w-12 items-center justify-center rounded-full transition disabled:cursor-not-allowed disabled:opacity-50 ${
+                    listening
+                      ? "bg-red-500 text-white animate-pulse"
+                      : "border border-brand-teal/30 bg-white text-brand-teal hover:bg-brand-mint"
+                  }`}
+                >
+                  {listening ? <MicOff size={18} /> : <Mic size={18} />}
+                </button>
+              ) : null}
               <button
                 type="submit"
                 disabled={loading || input.trim().length < 2}

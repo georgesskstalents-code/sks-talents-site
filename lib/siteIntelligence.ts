@@ -5,6 +5,8 @@ export type SiteAnalyticsEvent = {
   type:
     | "pageview"
     | "agent_query"
+    | "agent_query_voice"
+    | "agent_content_gap"
     | "agent_click"
     | "cta_click"
     | "form_submit"

@@ -2,6 +2,7 @@
 
 import { MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useCookieConsent } from "@/lib/useCookieConsent";
 
 const COPY = {
   fr: {
@@ -23,6 +24,7 @@ type Lang = keyof typeof COPY;
 export default function ChatwootWidget() {
   const [hintVisible, setHintVisible] = useState(false);
   const [lang, setLang] = useState<Lang>("fr");
+  const consent = useCookieConsent();
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -74,6 +76,10 @@ export default function ChatwootWidget() {
   }, []);
 
   const t = COPY[lang];
+
+  // Hide the floating button while the cookie banner is still asking for consent
+  // (otherwise it overlaps the banner buttons on mobile). Reappears once a choice is made.
+  if (consent === null) return null;
 
   const dismissHint = () => {
     setHintVisible(false);

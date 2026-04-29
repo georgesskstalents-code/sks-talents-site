@@ -48,9 +48,7 @@ export default function InlineLeadForm({
   const canSubmit = useMemo(
     () =>
       form.firstName.trim().length > 1 &&
-      form.lastName.trim().length > 1 &&
       /\S+@\S+\.\S+/.test(form.email) &&
-      form.phone.replace(/[^\d+]/g, "").length >= 8 &&
       (!turnstileEnabled || turnstileToken.length > 10),
     [form, turnstileEnabled, turnstileToken]
   );
@@ -72,7 +70,7 @@ export default function InlineLeadForm({
         message: "client_validation"
       });
       setState("error");
-      setMessage("Merci de compléter prénom, nom, email et téléphone avant l’envoi.");
+      setMessage("Merci de renseigner votre prénom et votre email avant l’envoi.");
       return;
     }
 
@@ -147,50 +145,51 @@ export default function InlineLeadForm({
       <h3 className="font-display text-4xl text-brand-ink">{title}</h3>
       <p className="mt-4 text-base leading-8 text-brand-stone">{description}</p>
 
-      <form className="mt-6 grid gap-4" onSubmit={handleSubmit} noValidate>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <input
-            value={form.firstName}
-            onChange={(event) => updateField("firstName", event.target.value)}
-            className="rounded-2xl border border-brand-teal/15 px-4 py-4 text-base outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
-            placeholder="Prénom*"
-            autoComplete="given-name"
-          />
-          <input
-            value={form.lastName}
-            onChange={(event) => updateField("lastName", event.target.value)}
-            className="rounded-2xl border border-brand-teal/15 px-4 py-4 text-base outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
-            placeholder="Nom*"
-            autoComplete="family-name"
-          />
-        </div>
+      <p className="mt-2 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
+        <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-teal animate-pulse" />
+        Déjà 100+ dirigeants Life Sciences &amp; Santé animale accompagnés
+      </p>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          <input
-            value={form.email}
-            onChange={(event) => updateField("email", event.target.value)}
-            className="rounded-2xl border border-brand-teal/15 px-4 py-4 text-base outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
-            placeholder="Email professionnel*"
-            autoComplete="email"
-            inputMode="email"
-          />
-          <input
-            value={form.phone}
-            onChange={(event) => updateField("phone", event.target.value)}
-            className="rounded-2xl border border-brand-teal/15 px-4 py-4 text-base outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
-            placeholder="Téléphone*"
-            autoComplete="tel"
-            inputMode="tel"
-          />
-        </div>
+      <form className="mt-6 grid gap-4" onSubmit={handleSubmit} noValidate>
+        <input
+          value={form.firstName}
+          onChange={(event) => updateField("firstName", event.target.value)}
+          className="rounded-2xl border border-brand-teal/15 px-4 py-4 text-base outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
+          placeholder="Prénom*"
+          autoComplete="given-name"
+        />
 
         <input
-          value={form.company}
-          onChange={(event) => updateField("company", event.target.value)}
+          value={form.email}
+          onChange={(event) => updateField("email", event.target.value)}
           className="rounded-2xl border border-brand-teal/15 px-4 py-4 text-base outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
-          placeholder="Entreprise"
-          autoComplete="organization"
+          placeholder="Email professionnel*"
+          autoComplete="email"
+          inputMode="email"
         />
+
+        <details className="group rounded-2xl border border-brand-teal/10 bg-brand-mint/15 px-4 py-3">
+          <summary className="cursor-pointer text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
+            + Ajouter téléphone &amp; entreprise (optionnel)
+          </summary>
+          <div className="mt-3 grid gap-3 sm:grid-cols-2">
+            <input
+              value={form.phone}
+              onChange={(event) => updateField("phone", event.target.value)}
+              className="rounded-2xl border border-brand-teal/15 px-4 py-3 text-sm outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
+              placeholder="Téléphone"
+              autoComplete="tel"
+              inputMode="tel"
+            />
+            <input
+              value={form.company}
+              onChange={(event) => updateField("company", event.target.value)}
+              className="rounded-2xl border border-brand-teal/15 px-4 py-3 text-sm outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
+              placeholder="Entreprise"
+              autoComplete="organization"
+            />
+          </div>
+        </details>
 
         <TurnstileWidget onVerify={setTurnstileToken} className="rounded-2xl border border-brand-teal/10 bg-brand-mint/35 px-4 py-4" />
 
@@ -212,11 +211,48 @@ export default function InlineLeadForm({
             disabled={isPending}
             className="inline-flex items-center justify-center rounded-full bg-brand-teal px-6 py-4 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {isPending ? "Envoi..." : "Être rappelé"}
+            {isPending ? "Envoi..." : "Réserver 15 min d’analyse"}
           </button>
           <CalendlyButton label="Ou réserver un call" tone="outline" />
         </div>
       </form>
+
+      <div className="mt-6 rounded-2xl border border-brand-teal/10 bg-brand-mint/15 p-4">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-teal">
+          Votre interlocuteur direct
+        </p>
+        <div className="mt-3 flex items-center gap-4">
+          <img
+            src="/images/georges-kengue.jpeg"
+            alt="Georges Kengue, fondateur de SKS Talents"
+            className="h-14 w-14 rounded-full object-cover ring-2 ring-white shadow-soft"
+            loading="lazy"
+          />
+          <div className="min-w-0 flex-1">
+            <p className="font-display text-lg leading-tight text-brand-ink">Georges Kengue</p>
+            <p className="text-xs leading-5 text-brand-stone">
+              Fondateur SKS TALENTS · Executive Search Life Sciences
+            </p>
+          </div>
+          <a
+            href="https://www.linkedin.com/in/georges-kengue-81988b36/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Profil LinkedIn de Georges Kengue"
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal text-white transition hover:opacity-90"
+          >
+            <svg
+              role="img"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="h-4 w-4"
+            >
+              <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67h-3.55V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.78C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.78 24h20.44C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
 
       <div className="mt-4 flex flex-wrap gap-3 text-sm text-brand-stone">
         <a

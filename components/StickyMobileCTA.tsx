@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import CalendlyButton from "@/components/CalendlyButton";
+import { useCookieConsent } from "@/lib/useCookieConsent";
 
 const visiblePrefixes = [
   "/",
@@ -15,11 +16,17 @@ const visiblePrefixes = [
 
 export default function StickyMobileCTA() {
   const pathname = usePathname() ?? "";
+  const consent = useCookieConsent();
   const isVisible = visiblePrefixes.some((prefix) =>
     prefix === "/" ? pathname === "/" : pathname.startsWith(prefix)
   );
 
   if (!isVisible) {
+    return null;
+  }
+
+  // Hide while cookie banner is still asking — avoids overlap on mobile
+  if (consent === null) {
     return null;
   }
 

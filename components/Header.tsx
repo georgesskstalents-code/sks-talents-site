@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Search } from "lucide-react";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import SiteLanguageSelector from "@/components/SiteLanguageSelector";
 
 const navGroups = [
@@ -60,15 +60,33 @@ function LanguageSelectorFallback() {
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-brand-teal/10 bg-white/90 backdrop-blur-xl">
-      <div className="container-shell flex min-h-[84px] items-center gap-4 xl:gap-7">
+    <header
+      className={`sticky top-0 z-50 border-b border-brand-teal/10 backdrop-blur-xl transition-all duration-300 ${
+        scrolled ? "bg-white/95 shadow-[0_6px_24px_rgba(15,23,42,0.06)]" : "bg-white/90"
+      }`}
+    >
+      <div
+        className={`container-shell flex items-center gap-4 transition-all duration-300 xl:gap-7 ${
+          scrolled ? "min-h-[64px]" : "min-h-[84px]"
+        }`}
+      >
         <Link href="/" className="mr-1 flex shrink-0 items-center xl:mr-3">
           <img
             src="/brand/logo-sks-talents-signature.svg"
             alt="SKS TALENTS"
-            className="h-12 w-auto max-w-none object-contain object-left sm:h-14"
+            className={`w-auto max-w-none object-contain object-left transition-all duration-300 ${
+              scrolled ? "h-9 sm:h-11" : "h-12 sm:h-14"
+            }`}
           />
         </Link>
 
