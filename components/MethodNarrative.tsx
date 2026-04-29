@@ -30,51 +30,45 @@ const chapters = [
 export default function MethodNarrative() {
   return (
     <section className="container-shell pb-8">
-      <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-        <div className="lg:sticky lg:top-32 space-y-6">
-          <p className="eyebrow">Notre méthode racontée</p>
-          <h2 className="font-display text-4xl leading-[1.05] text-brand-ink sm:text-5xl">
-            <span className="text-brand-teal">4 chapitres</span> qui transforment un recrutement
-            sensible en mission lisible.
-          </h2>
-          <p className="text-base leading-8 text-brand-stone">
-            Beaucoup de cabinets vendent un process en 4 étapes. Nous racontons le nôtre comme une
-            histoire, parce que recruter un dirigeant Life Sciences &amp; Santé animale en Série A,
-            Série B ou scale-up ressemble plus à un voyage qu’à une checklist. Chaque chapitre est
-            une étape concrète, traçable, et explicable au COMEX.
-          </p>
-          <div className="flex flex-wrap gap-3 pt-2">
-            <CalendlyButton label="Réserver 15 min d’analyse" tone="solid" />
-            <CalendlyButton label="Voir un cas concret" href="/references" tone="outline" />
-          </div>
+      {/* Intro on top, full width, compact */}
+      <div className="mx-auto mb-8 max-w-3xl space-y-4 text-center">
+        <p className="eyebrow">Notre méthode racontée</p>
+        <h2 className="font-display text-3xl leading-[1.1] text-brand-ink sm:text-4xl">
+          <span className="text-brand-teal">4 chapitres</span> qui transforment un recrutement
+          sensible en mission lisible.
+        </h2>
+        <p className="mx-auto max-w-2xl text-sm leading-7 text-brand-stone sm:text-[15px]">
+          Recruter un dirigeant Life Sciences &amp; Santé animale en Série A, Série B ou scale-up
+          ressemble plus à un voyage qu’à une checklist. Chaque chapitre est une étape concrète,
+          traçable, et explicable au COMEX.
+        </p>
+        <div className="flex flex-wrap justify-center gap-3 pt-1">
+          <CalendlyButton label="Réserver 15 min d’analyse" tone="solid" />
+          <CalendlyButton label="Voir un cas concret" href="/references" tone="outline" />
         </div>
+      </div>
 
-        <div className="relative space-y-5">
-          <div className="pointer-events-none absolute left-[2.05rem] top-2 bottom-2 hidden w-px bg-gradient-to-b from-brand-teal/30 via-brand-teal/10 to-transparent sm:block" />
-          {chapters.map((chap, idx) => (
-            <article
-              key={chap.title}
-              className="card-luxe panel-lift relative flex gap-5 p-6 sm:p-8"
-            >
-              <div className="relative flex shrink-0 flex-col items-center">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white shadow-[0_8px_24px_rgba(20,82,84,0.25)]">
-                  {String(idx + 1).padStart(2, "0")}
-                </span>
-              </div>
-              <div className="flex-1 space-y-3">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
-                  {chap.chapter}
-                </p>
-                <h3 className="font-display text-2xl leading-[1.15] text-brand-ink sm:text-[28px]">
-                  {chap.title}
-                </h3>
-                <p className="text-sm leading-7 text-brand-stone sm:text-[15px] sm:leading-8">
-                  {chap.body}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
+      {/* 4 chapters in a 2x2 grid — more compact than vertical stack */}
+      <div className="grid gap-4 md:grid-cols-2">
+        {chapters.map((chap, idx) => (
+          <article
+            key={chap.title}
+            className="card-luxe panel-lift flex gap-4 p-5 sm:p-6"
+          >
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal text-xs font-bold text-white shadow-[0_6px_18px_rgba(20,82,84,0.22)]">
+              {String(idx + 1).padStart(2, "0")}
+            </span>
+            <div className="flex-1 space-y-2">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                {chap.chapter}
+              </p>
+              <h3 className="font-display text-lg leading-[1.2] text-brand-ink sm:text-xl">
+                {chap.title}
+              </h3>
+              <p className="text-[13px] leading-6 text-brand-stone">{chap.body}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
