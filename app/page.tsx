@@ -21,46 +21,46 @@ const painPoints = [
   {
     title: "Le recrutement prend trop de temps",
     description:
-      "Un poste prioritaire reste vacant, la roadmap glisse et la pression remonte sur les équipes déjà en place."
+      "Un poste-clé Série A ou Série B reste vacant, la roadmap glisse et la pression remonte sur le COMEX et les équipes déjà en place."
   },
   {
     title: "Les bons profils sont difficiles à trouver",
     description:
-      "Les bons profils existent, mais ils sont rares, sollicités et difficiles à convaincre si le besoin est mal cadré."
+      "En Life Sciences & Santé animale, les profils rares (R&D, Affaires Réglementaires, Medical, Tech) sont sollicités et difficiles à convaincre si le besoin est mal cadré."
   },
   {
     title: "Les équipes ne passent pas correctement à l’échelle",
     description:
-      "Quand le recrutement, l’onboarding et la structuration RH ne sont pas alignés, la croissance devient plus fragile."
+      "Au passage scale-up, recrutement, onboarding et structuration RH décrochent — la croissance devient fragile et coûteuse pour la direction."
   },
   {
-    title: "La structure RH n’est pas prête pour la suite",
+    title: "La structure RH absorbe la stratégie au lieu de la servir",
     description:
-      "Dans les secteurs scientifiques, techniques et régulés, une mauvaise embauche coûte du temps, de la crédibilité et de l’énergie managériale."
+      "Tâches RH à faible valeur ajoutée, process manuels, reporting éclaté : l’énergie managériale part dans l’admin au lieu du business. Sans digitalisation et automatisation, la fonction RH ralentit la décision."
   }
 ];
 
 const diagnosticSignals = [
-  "Mon recrutement bloque sur des rôles clés",
-  "Je perds trop de temps côté direction ou management",
-  "Je dois structurer mes RH avant de recruter davantage"
+  "Mon recrutement bloque sur des rôles clés (Série A, Série B, scale-up)",
+  "Je perds trop de temps côté COMEX et management sur des tâches RH à faible valeur ajoutée",
+  "Je dois structurer mes RH par la digitalisation avant de recruter davantage"
 ];
 
 const insightSignals = [
   {
     title: "Pénurie ciblée",
     description:
-      "Le marché ne manque pas de profils au sens large. Il manque surtout des profils rares, convaincables et crédibles pour votre contexte exact."
+      "Le marché Life Sciences & Santé animale ne manque pas de CV. Il manque les profils rares, convaincables et crédibles pour un contexte Série A, Série B ou scale-up précis."
   },
   {
     title: "Pression marché",
     description:
-      "Dans les environnements biotech, diagnostic, medtech ou santé animale, chaque retard de recrutement se répercute sur l’exécution commerciale, technique ou managériale."
+      "En biotech, diagnostic, medtech, vétérinaire et petfood, chaque retard de recrutement se répercute sur l’exécution commerciale, technique, médicale ou managériale — et fragilise la roadmap COMEX."
   },
   {
-    title: "Mauvais alignement",
+    title: "Structuration RH digitalisée",
     description:
-      "Le vrai blocage n’est pas seulement la rareté. C’est l’écart entre le besoin réel, le message marché, la shortlist et la capacité d’intégration."
+      "Le vrai levier RH aujourd’hui : digitaliser le recrutement, automatiser les tâches à faible valeur ajoutée et libérer la direction RH pour la stratégie et l’humain — là où se joue le succès des projets."
   }
 ];
 
@@ -262,8 +262,8 @@ export default function HomePage() {
         <RibbonCTA
           variant="final"
           eyebrow="Dernière étape"
-          title="Recrutez le bon dirigeant Life Sciences. Sans perdre 6 mois."
-          description="100+ profils placés. 10 jours en moyenne pour la première shortlist. Une méthode qui transforme un recrutement sensible en mission lisible — et défendable au COMEX."
+          title="Recrutez le bon dirigeant Life Sciences & Santé animale. Sans perdre 6 mois."
+          description="100+ profils placés en Série A, Série B et scale-up. 10 jours en moyenne pour la première shortlist. Une méthode qui transforme un recrutement sensible en mission lisible — et défendable au COMEX."
           primaryLabel="Réserver 15 min d’analyse"
           secondaryHref="/references"
           secondaryLabel="Voir nos références"

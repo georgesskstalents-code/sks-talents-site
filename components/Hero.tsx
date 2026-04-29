@@ -27,14 +27,16 @@ export default function Hero() {
         <div className="grid gap-8 xl:grid-cols-[1.05fr_0.95fr] xl:items-start">
           {/* LEFT — copy, CTAs, KPIs */}
           <div className="max-w-2xl space-y-7">
-            <p className="eyebrow">Executive search · Life Sciences &amp; Animal Health</p>
+            <p className="eyebrow">Executive search · Life Sciences &amp; Santé animale</p>
             <h1 className="font-display text-4xl leading-[0.98] text-brand-ink sm:text-5xl xl:text-[64px]">
               Recruter les bons talents n’est pas un enjeu RH.{" "}
-              <span className="text-brand-teal">C’est une décision stratégique.</span>
+              <span className="text-brand-teal">C’est une décision stratégique pour votre COMEX.</span>
             </h1>
             <p className="max-w-xl text-base leading-8 text-brand-stone sm:text-lg">
-              Nous aidons les CEO, COO et DRH à recruter en biotech, diagnostic, santé animale et
-              petfood — vite, juste, et sans dégrader la qualité.
+              Nous aidons les CEO, COO et DRH à recruter en{" "}
+              <strong>Life Sciences &amp; Santé animale</strong> — biotech, diagnostic, medtech,
+              vétérinaire, petfood — de la <strong>Série A</strong> à la <strong>Série B</strong>{" "}
+              et au <strong>scale-up</strong>. Vite, juste, sans dégrader la qualité.
             </p>
 
             <div className="flex flex-wrap gap-3">

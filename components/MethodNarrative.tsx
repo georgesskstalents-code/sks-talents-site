@@ -5,25 +5,25 @@ const chapters = [
     chapter: "Chapitre 1",
     title: "On part du vrai problème, pas du brief",
     body:
-      "Avant de poster un job ou d’ouvrir un mandat, nous passons une heure avec vous à challenger le besoin. Pourquoi ce poste maintenant ? Quel impact business attendu ? Quelle marge de manœuvre RH ? Cette étape évite 80 % des recrutements qui patinent."
+      "Avant d’ouvrir un mandat, nous passons une heure avec vous à challenger le besoin : pourquoi ce poste maintenant en Série A, Série B ou scale-up ? Quel impact business attendu ? Quelle marge de manœuvre RH ? Cette étape évite 80 % des recrutements Life Sciences & Santé animale qui patinent."
   },
   {
     chapter: "Chapitre 2",
     title: "On lit le marché à votre place",
     body:
-      "Pénurie réelle ou imaginaire ? Qui bouge dans votre vertical ? Quels concurrents recrutent les mêmes profils ? Nous activons notre réseau biotech, diagnostic, animal health pour vous apporter une lecture marché claire — pas une liste de CV."
+      "Pénurie réelle ou imaginaire ? Qui bouge dans votre vertical biotech, diagnostic, medtech, vétérinaire ou petfood ? Quels concurrents Série A/B recrutent les mêmes profils ? Nous activons notre réseau spécialisé Life Sciences & Santé animale pour vous apporter une lecture marché claire — pas une liste de CV."
   },
   {
     chapter: "Chapitre 3",
     title: "On présente peu, mais juste",
     body:
-      "Une shortlist de 3 candidats lisibles vaut mieux que 12 CV à trier. Chaque profil arrive avec un dossier comparatif (parcours, motivations, fit business, signaux à creuser) pour que la décision soit rapide et défendable."
+      "Une shortlist de 3 candidats lisibles vaut mieux que 12 CV à trier. Chaque profil arrive avec un dossier comparatif (parcours, motivations, fit business, signaux à creuser) pour que la décision soit rapide et défendable au COMEX."
   },
   {
     chapter: "Chapitre 4",
-    title: "On reste après la signature",
+    title: "On structure pour libérer la stratégie et l’humain",
     body:
-      "Le recrutement n’est terminé qu’après les 90 premiers jours. Nous restons en lien avec le candidat et le manager pour sécuriser l’intégration, ajuster les attentes et signaler les écarts avant qu’ils deviennent des risques."
+      "Au-delà du recrutement, nous structurons la fonction RH par la digitalisation et l’automatisation des tâches à faible valeur ajoutée. La direction se concentre sur la stratégie et l’humain — là où se joue vraiment le succès des projets Life Sciences & Santé animale."
   }
 ];
 
@@ -39,8 +39,9 @@ export default function MethodNarrative() {
           </h2>
           <p className="text-base leading-8 text-brand-stone">
             Beaucoup de cabinets vendent un process en 4 étapes. Nous racontons le nôtre comme une
-            histoire, parce que recruter un dirigeant Life Sciences ressemble plus à un voyage qu’à
-            une checklist. Chaque chapitre est une étape concrète, traçable, et explicable au COMEX.
+            histoire, parce que recruter un dirigeant Life Sciences &amp; Santé animale en Série A,
+            Série B ou scale-up ressemble plus à un voyage qu’à une checklist. Chaque chapitre est
+            une étape concrète, traçable, et explicable au COMEX.
           </p>
           <div className="flex flex-wrap gap-3 pt-2">
             <CalendlyButton label="Réserver 15 min d’analyse" tone="solid" />

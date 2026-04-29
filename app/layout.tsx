@@ -20,27 +20,32 @@ const SiteIntelligenceAgent = dynamic(() => import("@/components/SiteIntelligenc
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.skstalents.fr"),
   title: {
-    default: "SKS TALENTS | Recrutement Life Sciences & Animal Health",
+    default: "SKS TALENTS | Executive Search Life Sciences & Santé animale",
     template: "%s | SKS TALENTS"
   },
   description:
-    "Cabinet de recrutement et structuration RH dédié aux Life Sciences, au diagnostic, à la santé animale et au petfood premium.",
+    "Cabinet d'executive search et structuration RH dédié aux Life Sciences & Santé animale (biotech, diagnostic, medtech, vétérinaire, petfood). Recrutement Série A, Série B, scale-up — décisions COMEX, digitalisation RH et automatisation des tâches à faible valeur ajoutée.",
   keywords: [
-    "recrutement life sciences",
-    "executive search biotech",
-    "structuration RH",
-    "recrutement vétérinaire",
-    "diagnostic hiring",
-    "petfood talent acquisition",
-    "recrutement sénégal life sciences",
-    "recrutement côte d'ivoire healthtech",
-    "recrutement bénin biotech",
-    "médecine nucléaire france"
+    "executive search Life Sciences",
+    "executive search Santé animale",
+    "recrutement biotech Série A",
+    "recrutement biotech Série B",
+    "recrutement scale-up Life Sciences",
+    "recrutement COMEX biotech",
+    "structuration RH digitalisation",
+    "automatisation tâches RH",
+    "executive search diagnostic",
+    "executive search medtech",
+    "recrutement vétérinaire dirigeant",
+    "recrutement petfood direction",
+    "talent acquisition Life Sciences",
+    "RPO biotech",
+    "stratégie RH humain projets Life Sciences"
   ],
   openGraph: {
-    title: "SKS TALENTS",
+    title: "SKS TALENTS — Executive Search Life Sciences & Santé animale",
     description:
-      "Scaling teams without losing soul dans les Life Sciences et l'Animal Health.",
+      "Recrutement Série A, Série B et scale-up en biotech, diagnostic, medtech, vétérinaire, petfood. Structuration RH par la digitalisation. Décisions COMEX, stratégie et humain.",
     type: "website",
     locale: "fr_FR",
     url: "https://www.skstalents.fr"
