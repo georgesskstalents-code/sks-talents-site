@@ -227,13 +227,17 @@ export default function HomePage() {
         <LatestInsights />
       </RevealOnScroll>
 
-      <RevealOnScroll delayMs={195}>
-        <HomeSearchSection />
-      </RevealOnScroll>
+      {false && (
+        <RevealOnScroll delayMs={195}>
+          <HomeSearchSection />
+        </RevealOnScroll>
+      )}
 
-      <RevealOnScroll delayMs={205}>
-        <OrientationTeaser />
-      </RevealOnScroll>
+      {false && (
+        <RevealOnScroll delayMs={205}>
+          <OrientationTeaser />
+        </RevealOnScroll>
+      )}
 
       <RevealOnScroll delayMs={210}>
         <RibbonCTA
