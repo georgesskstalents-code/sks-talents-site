@@ -252,17 +252,19 @@ export default function HomePage() {
         </RevealOnScroll>
       )}
 
-      <RevealOnScroll delayMs={210}>
-        <RibbonCTA
-          variant="final"
-          eyebrow="Dernière étape"
-          title="Recrutez le bon dirigeant Life Sciences & Santé animale. Sans perdre 6 mois."
-          description="100+ profils placés en Série A, Série B et scale-up. 10 jours en moyenne pour la première shortlist. Une méthode qui transforme un recrutement sensible en mission lisible — et défendable au COMEX."
-          primaryLabel="Réserver 15 min d’analyse"
-          secondaryHref="/references"
-          secondaryLabel="Voir nos références"
-        />
-      </RevealOnScroll>
+      {false && (
+        <RevealOnScroll delayMs={210}>
+          <RibbonCTA
+            variant="final"
+            eyebrow="Dernière étape"
+            title="Recrutez le bon dirigeant Life Sciences & Santé animale. Sans perdre 6 mois."
+            description="100+ profils placés en Série A, Série B et scale-up. 10 jours en moyenne pour la première shortlist. Une méthode qui transforme un recrutement sensible en mission lisible — et défendable au COMEX."
+            primaryLabel="Réserver 15 min d’analyse"
+            secondaryHref="/references"
+            secondaryLabel="Voir nos références"
+          />
+        </RevealOnScroll>
+      )}
     </>
   );
 }
