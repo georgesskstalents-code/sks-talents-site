@@ -1,4 +1,4 @@
-import { CalendarClock, Mail, Star } from "lucide-react";
+import { CalendarClock, Star } from "lucide-react";
 
 function LinkedinIcon({ size = 14 }: { size?: number }) {
   return (
@@ -44,13 +44,6 @@ export default function FounderCard() {
                 >
                   <CalendarClock size={14} />
                   Réserver 15 min
-                </a>
-                <a
-                  href="mailto:g.kengue@skstalents.com"
-                  className="inline-flex items-center gap-1.5 font-semibold text-brand-teal transition hover:opacity-80"
-                >
-                  <Mail size={14} />
-                  g.kengue@skstalents.com
                 </a>
                 <a
                   href="https://www.linkedin.com/in/georges-kengue-81988b36/"
