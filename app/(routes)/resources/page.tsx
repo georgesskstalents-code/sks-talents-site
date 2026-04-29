@@ -41,38 +41,6 @@ export default async function ResourcesPage() {
         title="Des hubs éditoriaux conçus pour capter les recherches à forte valeur."
         description="Salaires, fiches métiers, fonds, écoles, comparatifs et insights marché structurés comme des pages de référence à mettre à jour régulièrement, avec un focus sur les entreprises en Seed, Série A et Série B."
       />
-      <section className="container-shell grid gap-4 py-4 lg:grid-cols-3">
-        <GEOAnswerCard
-          title="Que trouve-t-on dans les ressources SKS TALENTS ?"
-          answer="Les ressources SKS TALENTS regroupent les pages les plus utiles pour répondre vite à une question métier, salaire, école, fonds, événement ou signal marché dans les Life Sciences et l’Animal Health."
-          bullets={[
-            "Pages salaires et calcul brut/net",
-            "Fiches métiers et comparatifs",
-            "Écoles, fonds, événements et hubs marché",
-            "Maillage interne pensé pour SEO et conversion"
-          ]}
-        />
-        <GEOAnswerCard
-          title="Pourquoi cette page est-elle importante pour Google et les IA ?"
-          answer="Parce qu’elle organise tout le corpus SKS TALENTS en blocs explicites, faciles à parcourir et à comprendre, avec des intitulés très proches des requêtes réelles des décideurs, candidats et recruteurs."
-          bullets={[
-            "Réponses directes en haut de page",
-            "Titres orientés question ou intention utilisateur",
-            "Liens clairs vers les hubs les plus utiles",
-            "Couverture France, EMEA et Afrique francophone"
-          ]}
-        />
-        <GEOAnswerCard
-          title="Quels profils de visiteurs peuvent utiliser cette page ?"
-          answer="Un CEO ou COO peut l’utiliser pour lire un marché, un DRH pour cadrer un recrutement, un candidat pour comprendre un rôle, et un partenaire pour identifier les réseaux, médias, fonds ou écoles à suivre."
-          bullets={[
-            "CEO / COO : signaux marché et croissance",
-            "DRH / CPO : métiers, pénurie et salaires",
-            "Candidats : orientation et compréhension des rôles",
-            "Partenaires : écosystème, médias et événements"
-          ]}
-        />
-      </section>
       <SectionShell
         eyebrow="Question fréquente"
         title="Comment utiliser cette base de ressources pour répondre à une question précise ?"
@@ -80,16 +48,25 @@ export default async function ResourcesPage() {
       >
         <div className="mb-8 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
           {[
-            ["Salaires", "Benchmarks par rôle, secteur, géographie et stade Seed / Série A / Série B."],
-            ["Métiers", "Fiches de poste longues traînes, fonctions pénuriques et rôles ouverts après levée."],
-            ["Fonds", "Top biotech companies, VC santé et écosystèmes financés en Seed, Série A ou Série B."],
-            ["Écoles", "Pipelines talents, orientation et bassins académiques."],
-            ["Comparatifs", "Requêtes à forte intention pour convertir plus vite sur des marchés en croissance."]
-          ].map(([title, copy]) => (
-            <div key={title} className="card-surface p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">{title}</p>
-              <p className="mt-3 text-sm leading-7 text-brand-stone">{copy}</p>
-            </div>
+            { title: "Salaires", href: "/salary-benchmarks", copy: "Benchmarks par rôle, secteur, géographie et stade Seed / Série A / Série B." },
+            { title: "Métiers", href: "/job-roles", copy: "Fiches de poste longues traînes, fonctions pénuriques et rôles ouverts après levée." },
+            { title: "Fonds", href: "/investment-funds", copy: "Top biotech companies, VC santé et écosystèmes financés en Seed, Série A ou Série B." },
+            { title: "Écoles", href: "/schools", copy: "Pipelines talents, orientation et bassins académiques." },
+            { title: "Comparatifs", href: "/comparatifs", copy: "Requêtes à forte intention pour convertir plus vite sur des marchés en croissance." }
+          ].map((item) => (
+            <Link
+              key={item.title}
+              href={item.href}
+              className="card-surface group flex h-full flex-col p-5 transition hover:-translate-y-0.5 hover:shadow-soft"
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
+                {item.title}
+              </p>
+              <p className="mt-3 flex-1 text-sm leading-7 text-brand-stone">{item.copy}</p>
+              <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-brand-teal transition group-hover:gap-1.5">
+                Voir le hub →
+              </span>
+            </Link>
           ))}
         </div>
         <div className="grid gap-6 md:grid-cols-3">
