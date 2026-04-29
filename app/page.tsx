@@ -234,9 +234,11 @@ export default function HomePage() {
         </SectionShell>
       </RevealOnScroll>
 
-      <RevealOnScroll delayMs={185}>
-        <LatestInsights />
-      </RevealOnScroll>
+      {false && (
+        <RevealOnScroll delayMs={185}>
+          <LatestInsights />
+        </RevealOnScroll>
+      )}
 
       {false && (
         <RevealOnScroll delayMs={195}>
