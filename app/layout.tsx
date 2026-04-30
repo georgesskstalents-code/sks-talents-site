@@ -16,6 +16,7 @@ const CookieConsentBanner = dynamic(() => import("@/components/CookieConsentBann
 const CookiePreferencesLauncher = dynamic(() => import("@/components/CookiePreferencesLauncher"));
 const ChatwootWidget = dynamic(() => import("@/components/ChatwootWidget"));
 const SiteIntelligenceAgent = dynamic(() => import("@/components/SiteIntelligenceAgent"));
+const MobileTrustpilotPrompt = dynamic(() => import("@/components/MobileTrustpilotPrompt"));
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.skstalents.fr"),
@@ -98,6 +99,7 @@ export default function RootLayout({
           <CookiePreferencesLauncher />
           <ChatwootWidget />
           <SiteIntelligenceAgent externalOnly />
+          <MobileTrustpilotPrompt />
         </div>
       </body>
     </html>

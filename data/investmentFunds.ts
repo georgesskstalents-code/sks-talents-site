@@ -221,7 +221,7 @@ export const investmentFunds: InvestmentFund[] = [
     keyFacts: [
       "The EIC Fund is the venture capital investment arm of the European Innovation Council.",
       "Official site states over EUR 4bn capitalisation and more than EUR 1.4bn signed investment agreements.",
-      "The overview page states 279 portfolio companies across 25 countries (the public page does not always show a timestamp; re-check on refresh)."
+      "Official portfolio directory lists 301 invested companies and the overview summarises this as 300+ companies across 25 countries (the public page does not always show a timestamp; re-check on refresh)."
     ],
     portfolioHighlights: [
       {
@@ -243,9 +243,9 @@ export const investmentFunds: InvestmentFund[] = [
         note: "Official overview with capitalisation, signed investments and portfolio-company count."
       },
       {
-        name: "EIC Fund beneficiaries",
-        url: "https://eic.ec.europa.eu/investment-opportunities/eic-fund-equity-investments-beneficiaries_en",
-        note: "Official beneficiary directory entry point."
+        name: "EIC Fund invested companies",
+        url: "https://eic.ec.europa.eu/eic-fund/eic-fund-invested-companies_en",
+        note: "Official portfolio directory (invested companies list)."
       }
     ],
     seo: {

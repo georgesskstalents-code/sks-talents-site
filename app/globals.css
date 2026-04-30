@@ -15,6 +15,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Mobile: prevent any horizontal scroll caused by 3rd-party widgets / decorative absolute layers */
+  overflow-x: hidden;
 }
 
 body {
@@ -25,6 +27,29 @@ body {
     var(--background);
   color: var(--foreground);
   top: 0 !important;
+  overflow-x: hidden;
+  /* Mobile: bigger tap targets feel + smoother momentum scrolling on iOS */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch;
+  /* Ensure base font is at least 16px on small screens to prevent iOS zoom on input focus */
+  font-size: 16px;
+}
+
+/* Mobile-only refinements (≤ 640px) — desktop layout untouched */
+@media (max-width: 640px) {
+  /* Make all primary tap targets at least 44px (WCAG / Apple HIG) */
+  button,
+  a[role="button"],
+  [type="submit"],
+  [type="button"] {
+    min-height: 44px;
+  }
+  /* Form inputs: prevent iOS auto-zoom + comfortable touch */
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
 }
 
 a {
