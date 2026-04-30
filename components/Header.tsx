@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Search } from "lucide-react";
+import { ChevronDown, Search, X } from "lucide-react";
 import { Suspense, useEffect, useState } from "react";
 import NavDropdown from "@/components/NavDropdown";
 import SiteLanguageSelector from "@/components/SiteLanguageSelector";
@@ -13,19 +13,23 @@ const navGroups = [
     children: [
       {
         href: "/about#histoire",
-        label: "Notre histoire"
+        label: "Notre histoire",
+        icon: "📖"
       },
       {
         href: "/about#valeurs",
-        label: "Nos valeurs"
+        label: "Nos valeurs",
+        icon: "💎"
       },
       {
         href: "/mission",
-        label: "Notre mission"
+        label: "Notre mission",
+        icon: "🎯"
       },
       {
         href: "/team",
-        label: "Notre équipe"
+        label: "Notre équipe",
+        icon: "👥"
       }
     ]
   },
@@ -66,6 +70,7 @@ function LanguageSelectorFallback() {
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [openGroup, setOpenGroup] = useState<string>("/about");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -73,6 +78,18 @@ export default function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Lock body scroll when mobile drawer is open
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    if (menuOpen) {
+      const original = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = original;
+      };
+    }
+  }, [menuOpen]);
 
   return (
     <header
@@ -139,49 +156,134 @@ export default function Header() {
         </button>
       </div>
       {menuOpen ? (
-        <div className="border-t border-brand-teal/10 bg-white lg:hidden">
-          <div className="container-shell flex flex-col gap-4 py-6">
-            {navGroups.map((item) => (
-              <div key={item.href} className="flex flex-col gap-2">
-                {item.children?.length ? (
-                  <>
-                    <p className="text-base font-semibold text-brand-stone">{item.label}</p>
-                    <div className="ml-4 flex flex-col gap-2 border-l border-brand-line pl-4">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="text-sm font-semibold text-brand-stone/80"
-                          onClick={() => setMenuOpen(false)}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className="text-base font-semibold text-brand-stone"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                )}
-              </div>
-            ))}
+        <div className="fixed inset-0 z-[80] flex flex-col bg-white lg:hidden" role="dialog" aria-modal="true">
+          {/* Drawer header */}
+          <div className="flex items-center justify-between border-b border-brand-teal/10 px-5 py-4">
             <Link
-              href="/search"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-brand-teal/20 px-5 py-3 text-center text-sm font-semibold text-brand-stone"
+              href="/"
               onClick={() => setMenuOpen(false)}
+              className="font-display text-lg font-semibold tracking-tight text-brand-ink"
             >
-              <Search size={16} />
-              Chercher
+              SKS TALENTS
             </Link>
-            <div className="pt-1">
+            <button
+              type="button"
+              onClick={() => setMenuOpen(false)}
+              aria-label="Fermer le menu"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-teal/15 bg-white text-brand-stone transition active:scale-95"
+            >
+              <X size={18} />
+            </button>
+          </div>
+
+          {/* Scrollable nav body */}
+          <div className="flex-1 overflow-y-auto px-3 pb-6 pt-2">
+            <ul className="flex flex-col">
+              {navGroups.map((item) => {
+                const isOpen = item.children?.length ? openGroup === item.href : false;
+                if (item.children?.length) {
+                  return (
+                    <li key={item.href} className="border-b border-brand-teal/8">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setOpenGroup((current) => (current === item.href ? "" : item.href))
+                        }
+                        aria-expanded={isOpen}
+                        className="flex w-full items-center justify-between px-2 py-4 text-left text-[15px] font-semibold uppercase tracking-[0.08em] text-brand-ink"
+                      >
+                        <span>{item.label}</span>
+                        <ChevronDown
+                          size={18}
+                          className={`shrink-0 text-brand-teal transition-transform ${
+                            isOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                      {isOpen ? (
+                        <ul className="flex flex-col gap-0.5 pb-3 pl-2">
+                          {item.children.map((child) => (
+                            <li key={child.href}>
+                              <Link
+                                href={child.href}
+                                onClick={() => setMenuOpen(false)}
+                                className="flex items-center gap-3 rounded-2xl px-3 py-3 text-[15px] font-semibold text-brand-stone transition active:bg-brand-mint/45 active:text-brand-teal"
+                              >
+                                {"icon" in child && child.icon ? (
+                                  <span aria-hidden="true" className="text-lg">
+                                    {child.icon}
+                                  </span>
+                                ) : null}
+                                <span>{child.label}</span>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </li>
+                  );
+                }
+                return (
+                  <li key={item.href} className="border-b border-brand-teal/8">
+                    <Link
+                      href={item.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="flex items-center justify-between px-2 py-4 text-[15px] font-semibold uppercase tracking-[0.08em] text-brand-ink"
+                    >
+                      <span>{item.label}</span>
+                      <span aria-hidden="true" className="text-brand-teal">›</span>
+                    </Link>
+                  </li>
+                );
+              })}
+              <li className="border-b border-brand-teal/8">
+                <Link
+                  href="/search"
+                  onClick={() => setMenuOpen(false)}
+                  className="flex items-center justify-between px-2 py-4 text-[15px] font-semibold uppercase tracking-[0.08em] text-brand-ink"
+                >
+                  <span className="inline-flex items-center gap-2">
+                    <Search size={16} className="text-brand-teal" />
+                    Recherche
+                  </span>
+                  <span aria-hidden="true" className="text-brand-teal">›</span>
+                </Link>
+              </li>
+            </ul>
+
+            {/* Language */}
+            <div className="mt-5 px-2">
+              <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-stone/70">
+                Langue
+              </p>
               <Suspense fallback={<LanguageSelectorFallback />}>
                 <SiteLanguageSelector />
               </Suspense>
+            </div>
+          </div>
+
+          {/* Sticky CTA footer */}
+          <div
+            className="border-t border-brand-teal/12 bg-white px-4 pt-3"
+            style={{ paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 0.75rem)" }}
+          >
+            <div className="grid gap-2.5">
+              <a
+                href="https://calendly.com/g-kengue/talentconsulting"
+                target="_blank"
+                rel="noreferrer noopener"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex items-center justify-center gap-1 rounded-full bg-brand-teal px-5 py-3.5 text-sm font-semibold text-white transition active:scale-95"
+              >
+                Réserver 15 min →
+              </a>
+              <Link
+                href="/diagnostic"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex items-center justify-center rounded-full border border-brand-teal/25 bg-white px-5 py-3.5 text-sm font-semibold text-brand-teal transition active:scale-95"
+              >
+                Faire le diagnostic
+              </Link>
             </div>
           </div>
         </div>

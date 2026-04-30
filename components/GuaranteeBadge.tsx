@@ -34,7 +34,7 @@ export default function GuaranteeBadge({ variant = "banner" }: Props) {
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
               Garantie SKS Talents
             </p>
-            <h3 className="font-display text-2xl leading-[1.15] text-brand-ink sm:text-3xl">
+            <h3 className="font-display text-xl leading-[1.2] text-brand-ink sm:text-3xl sm:leading-[1.15]">
               <span className="text-brand-teal">Première shortlist en 10 jours ouvrés.</span>
             </h3>
             <p className="text-sm leading-7 text-brand-stone sm:text-[15px]">

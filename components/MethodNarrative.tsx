@@ -33,7 +33,7 @@ export default function MethodNarrative() {
       {/* Intro on top, full width, compact */}
       <div className="mx-auto mb-8 max-w-3xl space-y-4 text-center">
         <p className="eyebrow">Notre méthode racontée</p>
-        <h2 className="font-display text-3xl leading-[1.1] text-brand-ink sm:text-4xl">
+        <h2 className="font-display text-[26px] leading-[1.15] text-brand-ink sm:text-4xl sm:leading-[1.1]">
           <span className="text-brand-teal">4 chapitres</span> qui transforment un recrutement
           sensible en mission lisible.
         </h2>
@@ -62,7 +62,7 @@ export default function MethodNarrative() {
               <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
                 {chap.chapter}
               </p>
-              <h3 className="font-display text-lg leading-[1.2] text-brand-ink sm:text-xl">
+              <h3 className="font-display text-base leading-[1.25] text-brand-ink sm:text-xl sm:leading-[1.2]">
                 {chap.title}
               </h3>
               <p className="text-[13px] leading-6 text-brand-stone">{chap.body}</p>

@@ -65,7 +65,7 @@ export default function RibbonCTA({
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
             {eyebrow}
           </p>
-          <p className="font-display text-2xl leading-[1.15] text-brand-ink sm:text-3xl">
+          <p className="font-display text-lg leading-[1.25] text-brand-ink sm:text-3xl sm:leading-[1.15]">
             {title}
           </p>
         </div>

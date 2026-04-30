@@ -99,7 +99,7 @@ export default function HomePage() {
                   <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
                     Signal {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="font-display text-2xl leading-[1.15] text-brand-ink sm:text-[28px]">
+                  <h3 className="font-display text-lg leading-[1.2] text-brand-ink sm:text-[28px] sm:leading-[1.15]">
                     {point.title}
                   </h3>
                   <p

@@ -126,11 +126,13 @@ a {
 }
 
 .section-title {
-  @apply font-display text-4xl font-semibold leading-tight text-brand-ink sm:text-5xl;
+  /* Mobile: 28px (Material Design headline scale). Desktop unchanged at 48px. */
+  @apply font-display text-[28px] font-semibold leading-[1.15] text-brand-ink sm:text-5xl sm:leading-tight;
 }
 
 .section-copy {
-  @apply max-w-3xl text-base leading-8 text-brand-stone sm:text-lg;
+  /* Mobile: 15px / line-height 26px for comfortable reading. Desktop: 18px. */
+  @apply max-w-3xl text-[15px] leading-[1.7] text-brand-stone sm:text-lg sm:leading-8;
 }
 
 @keyframes fade-in-up {

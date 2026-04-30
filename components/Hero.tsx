@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="container-shell relative pb-6 pt-6 sm:pt-8 lg:pb-10 lg:pt-10">
         <div className="mx-auto max-w-4xl space-y-4 text-left">
           <p className="eyebrow">Executive search · Life Sciences &amp; Santé animale</p>
-          <h1 className="font-display text-3xl leading-[1] text-brand-ink sm:text-4xl lg:text-[44px]">
+          <h1 className="font-display text-[26px] leading-[1.1] text-brand-ink sm:text-4xl sm:leading-[1] lg:text-[44px]">
             Recruter les bons talents n’est pas un enjeu RH.{" "}
             <span className="text-brand-teal">C’est une décision stratégique pour votre COMEX.</span>
           </h1>

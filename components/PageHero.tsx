@@ -47,10 +47,10 @@ export default function PageHero({
                   <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-teal">
                     La fiche métier
                   </p>
-                  <h1 className="max-w-4xl font-display text-5xl leading-[0.95] text-brand-ink sm:text-6xl">
+                  <h1 className="max-w-4xl font-display text-[28px] leading-[1.15] text-brand-ink sm:text-5xl sm:leading-[0.95] lg:text-6xl">
                     {title}
                   </h1>
-                  <p className="max-w-3xl text-lg leading-8 text-brand-stone">{description}</p>
+                  <p className="max-w-3xl text-[15px] leading-[1.7] text-brand-stone sm:text-lg sm:leading-8">{description}</p>
                 </div>
               </div>
             </div>
@@ -93,10 +93,10 @@ export default function PageHero({
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-teal">
                     Lecture éditoriale SKS
                   </p>
-                  <h1 className="max-w-4xl font-display text-[3.35rem] leading-[0.92] text-brand-ink sm:text-[4.5rem]">
+                  <h1 className="max-w-4xl font-display text-[28px] leading-[1.15] text-brand-ink sm:text-[3.35rem] sm:leading-[0.92] lg:text-[4.5rem]">
                     {title}
                   </h1>
-                  <p className="max-w-2xl text-lg leading-8 text-brand-stone">{description}</p>
+                  <p className="max-w-2xl text-[15px] leading-[1.7] text-brand-stone sm:text-lg sm:leading-8">{description}</p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-3">
                   {[
@@ -199,8 +199,8 @@ export default function PageHero({
             {kicker}
           </p>
         </div>
-        <h1 className="max-w-4xl font-display text-5xl leading-none sm:text-6xl">{title}</h1>
-        <p className={`mt-6 max-w-3xl text-lg leading-8 ${isDark ? "text-white/78" : "text-brand-stone"}`}>
+        <h1 className="max-w-4xl font-display text-[28px] leading-[1.15] sm:text-5xl sm:leading-none lg:text-6xl">{title}</h1>
+        <p className={`mt-5 max-w-3xl text-[15px] leading-[1.7] sm:mt-6 sm:text-lg sm:leading-8 ${isDark ? "text-white/78" : "text-brand-stone"}`}>
           {description}
         </p>
       </div>

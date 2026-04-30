@@ -31,7 +31,7 @@ export default function FounderCard() {
               loading="lazy"
             />
             <div className="min-w-0 flex-1">
-              <p className="font-display text-2xl leading-tight text-brand-ink">Georges Kengue</p>
+              <p className="font-display text-xl leading-tight text-brand-ink sm:text-2xl">Georges Kengue</p>
               <p className="mt-1 text-sm leading-6 text-brand-stone">
                 Fondateur SKS TALENTS · Executive Search Life Sciences &amp; Santé animale
               </p>

@@ -228,11 +228,18 @@
 .heroTitle {
   margin-top: 1.4rem;
   font-family: "Source Serif 4", Georgia, serif;
-  font-size: clamp(3rem, 7vw, 6.2rem);
-  line-height: 1.02;
+  /* Mobile: ~28px (1.75rem), Desktop: same as before (6.2rem max) */
+  font-size: clamp(1.75rem, 7vw, 6.2rem);
+  line-height: 1.12;
   letter-spacing: -0.03em;
   font-weight: 400;
   color: var(--ink);
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    line-height: 1.02;
+  }
 }
 
 .heroLine {
@@ -657,10 +664,20 @@
 .finalTitle {
   margin-top: 1rem;
   font-family: "Source Serif 4", Georgia, serif;
-  font-size: clamp(2.2rem, 4.2vw, 3.8rem);
-  line-height: 1.08;
+  /* Mobile: ~26px (1.6rem), Desktop: 3.8rem unchanged */
+  font-size: clamp(1.6rem, 4.2vw, 3.8rem);
+  line-height: 1.18;
   letter-spacing: -0.02em;
   font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .balancedTitle,
+  .statsHeadline,
+  .processHeadline,
+  .finalTitle {
+    line-height: 1.08;
+  }
 }
 
 .titleAccent,

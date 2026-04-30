@@ -1,38 +1,77 @@
 "use client";
 
 import { Star, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useCookieConsent } from "@/lib/useCookieConsent";
 
-const DISMISS_KEY = "sks-trustpilot-prompt-dismissed";
-const APPEAR_AFTER_MS = 90_000; // 1 min 30
+const SHOWS_KEY = "sks-trustpilot-shows-count";
+const DISMISSED_AT_KEY = "sks-trustpilot-dismissed-at";
+const FIRST_APPEAR_AFTER_MS = 6 * 60 * 1000; // 6 min after page load
+const REAPPEAR_AFTER_MS = 5 * 60 * 1000; // 5 min after first dismiss
 const TRUSTPILOT_URL = "https://fr.trustpilot.com/review/skstalents.fr";
 
 /**
- * Mobile-only floating button that surfaces the Trustpilot reviews link
- * after 90 seconds of navigation, *only* once the cookie banner has been
- * answered. Dismissible — remembered for the session.
+ * Mobile-only floating Trustpilot prompt.
+ * Choreography (per CEO direction):
+ *   1. First appearance after 6 minutes of navigation (only once cookie banner is answered).
+ *   2. If dismissed → reappears once, 5 minutes later.
+ *   3. After the second dismiss → never again in this session.
  *
- * Hidden on tablets/desktops (md:hidden) to keep the desktop layout untouched.
+ * State persists in sessionStorage so navigation between pages does not reset the timer.
  */
 export default function MobileTrustpilotPrompt() {
   const consent = useCookieConsent();
   const [visible, setVisible] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     setMounted(true);
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
   }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (consent === null) return; // wait until cookie banner answered
+    if (consent === null) return;
 
-    if (window.sessionStorage.getItem(DISMISS_KEY)) return;
+    const showsCount = Number(window.sessionStorage.getItem(SHOWS_KEY) ?? "0");
 
-    const timer = window.setTimeout(() => setVisible(true), APPEAR_AFTER_MS);
-    return () => window.clearTimeout(timer);
+    // Already shown twice — never again
+    if (showsCount >= 2) return;
+
+    if (timerRef.current) clearTimeout(timerRef.current);
+
+    if (showsCount === 0) {
+      // First appearance: 6 min after first load (or remaining time if user navigated)
+      timerRef.current = setTimeout(() => setVisible(true), FIRST_APPEAR_AFTER_MS);
+      return;
+    }
+
+    // showsCount === 1 → reappear 5 min after dismiss timestamp
+    const dismissedAt = Number(window.sessionStorage.getItem(DISMISSED_AT_KEY) ?? "0");
+    const elapsed = Date.now() - dismissedAt;
+    const remaining = REAPPEAR_AFTER_MS - elapsed;
+
+    if (remaining <= 0) {
+      setVisible(true);
+    } else {
+      timerRef.current = setTimeout(() => setVisible(true), remaining);
+    }
   }, [consent]);
+
+  // Mark as shown when it actually becomes visible (so refresh doesn't double-count)
+  useEffect(() => {
+    if (!visible || typeof window === "undefined") return;
+    const showsCount = Number(window.sessionStorage.getItem(SHOWS_KEY) ?? "0");
+    if (showsCount === 0) {
+      window.sessionStorage.setItem(SHOWS_KEY, "1");
+    } else if (showsCount === 1) {
+      // Mark second appearance
+      window.sessionStorage.setItem(SHOWS_KEY, "2");
+    }
+  }, [visible]);
 
   if (!mounted) return null;
   if (!visible) return null;
@@ -40,9 +79,15 @@ export default function MobileTrustpilotPrompt() {
 
   const handleDismiss = (event: React.MouseEvent) => {
     event.stopPropagation();
+    event.preventDefault();
     setVisible(false);
     if (typeof window !== "undefined") {
-      window.sessionStorage.setItem(DISMISS_KEY, "1");
+      const showsCount = Number(window.sessionStorage.getItem(SHOWS_KEY) ?? "1");
+      if (showsCount === 1) {
+        // First dismiss: schedule reappearance in 5 min
+        window.sessionStorage.setItem(DISMISSED_AT_KEY, String(Date.now()));
+      }
+      // showsCount === 2: nothing more to do — won't reappear
     }
   };
 
