@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCookieConsent } from "@/lib/useCookieConsent";
 
@@ -44,12 +45,12 @@ export default function StickyMobileCTA() {
         >
           Réserver un call
         </a>
-        <a
+        <Link
           href="/contact#rappel"
           className="flex flex-1 items-center justify-center bg-brand-ink px-4 py-3 text-sm font-semibold text-white transition active:opacity-80"
         >
           Être rappelé
-        </a>
+        </Link>
       </div>
     </div>
   );
