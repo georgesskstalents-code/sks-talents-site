@@ -54,6 +54,22 @@ export default function Hero() {
               </div>
             ))}
           </div>
+
+          {/* Mobile-only: compact star + rating row (per CEO mockup) */}
+          <a
+            href="https://fr.trustpilot.com/review/skstalents.fr"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="inline-flex items-center gap-3 rounded-full border border-brand-teal/15 bg-white/85 px-4 py-2.5 text-xs font-semibold text-brand-ink shadow-sm backdrop-blur transition active:scale-95 sm:hidden"
+          >
+            <span className="text-[#f5b70a]" aria-hidden="true">
+              ★★★★★
+            </span>
+            <span className="text-brand-ink">
+              4,5/5 <span className="text-brand-stone/60">·</span>{" "}
+              <span className="text-brand-stone">100+ placements</span>
+            </span>
+          </a>
         </div>
       </div>
     </section>

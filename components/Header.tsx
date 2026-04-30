@@ -146,9 +146,19 @@ export default function Header() {
           </Suspense>
         </div>
 
+        {/* Mobile-only: quick 'Réserver' CTA next to hamburger (per CEO mockup) */}
+        <a
+          href="https://calendly.com/g-kengue/talentconsulting"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="ml-auto inline-flex items-center justify-center rounded-full bg-brand-teal px-4 py-2.5 text-sm font-semibold text-white transition active:scale-95 lg:hidden"
+        >
+          Réserver
+        </a>
+
         <button
           type="button"
-          className="ml-auto inline-flex rounded-full border border-brand-teal/20 p-3 text-brand-teal lg:hidden"
+          className="ml-2 inline-flex rounded-full border border-brand-teal/20 p-3 text-brand-teal lg:hidden"
           onClick={() => setMenuOpen((current) => !current)}
           aria-label="Ouvrir le menu"
         >

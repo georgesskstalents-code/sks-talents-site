@@ -1,7 +1,6 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import CalendlyButton from "@/components/CalendlyButton";
 import { useCookieConsent } from "@/lib/useCookieConsent";
 
 const visiblePrefixes = [
@@ -32,12 +31,25 @@ export default function StickyMobileCTA() {
 
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-brand-teal/10 bg-white/96 px-4 pt-3 shadow-[0_-12px_30px_rgba(22,51,52,0.12)] backdrop-blur md:hidden"
+      className="fixed inset-x-0 bottom-0 z-50 px-4 pt-3 md:hidden"
       style={{ paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 0.75rem)" }}
     >
-      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-3">
-        <CalendlyButton label="Être rappelé" href="/contact#rappel" tone="outline" />
-        <CalendlyButton label="Réserver un call" tone="solid" />
+      {/* Floating segmented pill (per CEO mockup) — no full-width bar, lighter visual */}
+      <div className="mx-auto inline-flex w-full max-w-md overflow-hidden rounded-full border border-brand-ink/10 bg-white shadow-[0_18px_40px_rgba(15,23,42,0.18)]">
+        <a
+          href="https://calendly.com/g-kengue/talentconsulting"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="flex flex-1 items-center justify-center px-4 py-3 text-sm font-semibold text-brand-ink transition active:bg-brand-mint/45"
+        >
+          Réserver un call
+        </a>
+        <a
+          href="/contact#rappel"
+          className="flex flex-1 items-center justify-center bg-brand-ink px-4 py-3 text-sm font-semibold text-white transition active:opacity-80"
+        >
+          Être rappelé
+        </a>
       </div>
     </div>
   );
