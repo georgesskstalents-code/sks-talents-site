@@ -47,7 +47,7 @@ export default function MobileTrustpilotPrompt() {
   };
 
   return (
-    <div className="fixed bottom-24 right-4 z-[2147482998] md:hidden">
+    <div className="fixed bottom-[calc(env(safe-area-inset-bottom,0px)+10rem)] right-4 z-[2147482998] md:hidden">
       <a
         href={TRUSTPILOT_URL}
         target="_blank"

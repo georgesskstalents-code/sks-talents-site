@@ -54,7 +54,7 @@ export default function CookiePreferencesLauncher() {
   }
 
   return (
-    <div className="fixed bottom-[5.5rem] left-5 z-[66]">
+    <div className="fixed bottom-[5.5rem] left-5 z-[66] hidden md:block">
       <CookiePreferencesButton className="rounded-full border border-brand-teal/20 bg-white/95 px-5 py-3 text-sm font-semibold text-brand-stone shadow-xl backdrop-blur transition hover:-translate-y-0.5 hover:bg-brand-mint/45" />
     </div>
   );

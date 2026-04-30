@@ -194,7 +194,7 @@ export default function SiteFeedbackPrompt() {
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="animate-soft-pulse fixed bottom-5 left-5 z-[69] rounded-full border border-brand-teal/20 bg-white/95 px-5 py-3 text-left shadow-xl backdrop-blur transition hover:-translate-y-0.5"
+          className="animate-soft-pulse fixed bottom-5 left-5 z-[69] hidden rounded-full border border-brand-teal/20 bg-white/95 px-5 py-3 text-left shadow-xl backdrop-blur transition hover:-translate-y-0.5 md:inline-block"
         >
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-teal">
             Votre avis

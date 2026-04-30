@@ -96,7 +96,7 @@ export default function ChatwootWidget() {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-[2147482999]">
+    <div className="fixed bottom-[calc(env(safe-area-inset-bottom,0px)+5.5rem)] right-4 z-[2147482999] md:bottom-5 md:right-5">
       {hintVisible ? (
         <button
           type="button"

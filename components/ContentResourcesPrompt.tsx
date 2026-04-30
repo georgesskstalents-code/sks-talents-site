@@ -73,7 +73,7 @@ export default function ContentResourcesPrompt() {
   }
 
   return (
-    <div className="fixed inset-x-0 bottom-5 z-[68] flex justify-center px-4">
+    <div className="fixed inset-x-0 bottom-5 z-[68] hidden justify-center px-4 md:flex">
       <div className="w-full max-w-xl rounded-[30px] border border-brand-teal/15 bg-white/96 p-6 shadow-[0_30px_80px_rgba(15,23,42,0.18)] backdrop-blur">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
           Ressources utiles
