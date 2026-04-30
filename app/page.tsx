@@ -70,9 +70,11 @@ export default function HomePage() {
       <SmoothScrollProvider />
       <Hero />
 
-      <RevealOnScroll>
-        <EcosystemTrustBar />
-      </RevealOnScroll>
+      <div className="hidden md:block">
+        <RevealOnScroll>
+          <EcosystemTrustBar />
+        </RevealOnScroll>
+      </div>
 
       <RevealOnScroll delayMs={50}>
         <FounderCard />
@@ -113,15 +115,17 @@ export default function HomePage() {
         </SectionShell>
       </RevealOnScroll>
 
-      <RevealOnScroll delayMs={100}>
-        <RibbonCTA
-          eyebrow="Prochaine étape"
-          title="Si l’un de ces blocages résonne, ou si vous en vivez d’autres, donnons-nous 15 minutes."
-          primaryLabel="Réserver 15 min d’analyse"
-          secondaryHref="/diagnostic"
-          secondaryLabel="Faire le diagnostic"
-        />
-      </RevealOnScroll>
+      <div className="hidden md:block">
+        <RevealOnScroll delayMs={100}>
+          <RibbonCTA
+            eyebrow="Prochaine étape"
+            title="Si l’un de ces blocages résonne, ou si vous en vivez d’autres, donnons-nous 15 minutes."
+            primaryLabel="Réserver 15 min d’analyse"
+            secondaryHref="/diagnostic"
+            secondaryLabel="Faire le diagnostic"
+          />
+        </RevealOnScroll>
+      </div>
 
       <RevealOnScroll delayMs={110}>
         <section className="container-shell pb-4">
@@ -166,45 +170,51 @@ export default function HomePage() {
         </section>
       </RevealOnScroll>
 
-      <RevealOnScroll delayMs={120}>
-        <SectionShell
-          eyebrow="Insight"
-          title="Ce n’est pas la pénurie. C’est l’alignement."
-          description="Brief flou, message marché bancal ou onboarding mal préparé : trois angles morts qui bloquent même avec de bons candidats."
-        >
-          <div className="relative overflow-hidden rounded-[34px]">
-            <div className="pointer-events-none absolute inset-0">
-              <ParallaxLayer
-                offset={4}
-                className="absolute left-1/2 top-0 h-40 w-40 -translate-x-1/2 rounded-full bg-brand-mint/35 blur-3xl"
-              />
+      <div className="hidden md:block">
+        <RevealOnScroll delayMs={120}>
+          <SectionShell
+            eyebrow="Insight"
+            title="Ce n’est pas la pénurie. C’est l’alignement."
+            description="Brief flou, message marché bancal ou onboarding mal préparé : trois angles morts qui bloquent même avec de bons candidats."
+          >
+            <div className="relative overflow-hidden rounded-[34px]">
+              <div className="pointer-events-none absolute inset-0">
+                <ParallaxLayer
+                  offset={4}
+                  className="absolute left-1/2 top-0 h-40 w-40 -translate-x-1/2 rounded-full bg-brand-mint/35 blur-3xl"
+                />
+              </div>
+              <div className="relative grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                {insightSignals.map((item) => (
+                  <div key={item.title} className="card-luxe panel-lift p-8">
+                    <p className="eyebrow">Insight</p>
+                    <h3 className="font-display text-3xl text-brand-ink">{item.title}</h3>
+                    <p className="mt-4 text-sm leading-7 text-brand-stone">{item.description}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="relative grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-              {insightSignals.map((item) => (
-                <div key={item.title} className="card-luxe panel-lift p-8">
-                  <p className="eyebrow">Insight</p>
-                  <h3 className="font-display text-3xl text-brand-ink">{item.title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-brand-stone">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </SectionShell>
-      </RevealOnScroll>
+          </SectionShell>
+        </RevealOnScroll>
+      </div>
 
-      <RevealOnScroll delayMs={140}>
-        <MethodNarrative />
-      </RevealOnScroll>
+      <div className="hidden md:block">
+        <RevealOnScroll delayMs={140}>
+          <MethodNarrative />
+        </RevealOnScroll>
+      </div>
 
-      <RevealOnScroll delayMs={150}>
-        <RibbonCTA
-          eyebrow="On en parle ?"
-          title="15 minutes pour identifier votre vrai blocage recrutement."
-          primaryLabel="Réserver 15 min d’analyse"
-          secondaryHref="/services"
-          secondaryLabel="Voir nos services"
-        />
-      </RevealOnScroll>
+      <div className="hidden md:block">
+        <RevealOnScroll delayMs={150}>
+          <RibbonCTA
+            eyebrow="On en parle ?"
+            title="15 minutes pour identifier votre vrai blocage recrutement."
+            primaryLabel="Réserver 15 min d’analyse"
+            secondaryHref="/services"
+            secondaryLabel="Voir nos services"
+          />
+        </RevealOnScroll>
+      </div>
 
       <RevealOnScroll delayMs={165}>
         <SectionShell
