@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import HomeSearchSection from "@/components/HomeSearchSection";
 import LatestInsights from "@/components/LatestInsights";
 import MethodNarrative from "@/components/MethodNarrative";
+import MobileOrientationSection from "@/components/MobileOrientationSection";
 import OrientationTeaser from "@/components/OrientationTeaser";
 import ParallaxLayer from "@/components/ParallaxLayer";
 import RibbonCTA from "@/components/RibbonCTA";
@@ -242,6 +243,11 @@ export default function HomePage() {
             <TestimonialMarquee />
           </div>
         </SectionShell>
+      </RevealOnScroll>
+
+      {/* Mobile-only: orientation + tools (Étudiant / Dirigeant / Calcul salaire / Écoles) */}
+      <RevealOnScroll delayMs={175}>
+        <MobileOrientationSection />
       </RevealOnScroll>
 
       {false && (
