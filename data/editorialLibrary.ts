@@ -151,6 +151,26 @@ export const editorialTracks: EditorialTrack[] = [
         title: "Regulatory Affairs Specialist IVDR (IVD)",
         href: "/job-roles/diagnostic-ivdr-regulatory-affairs-specialist",
         summary: "La conformité IVDR devient un sujet talent critique."
+      },
+      {
+        title: "Quality Systems Manager Biotech (GMP)",
+        href: "/job-roles/biotech-quality-systems-manager",
+        summary: "Un role cle pour stabiliser SOP, change control, deviations et CAPA."
+      },
+      {
+        title: "Product Manager IVD (Diagnostic & Medtech)",
+        href: "/job-roles/diagnostic-product-manager-ivd",
+        summary: "Aligne roadmap, evidence, support et IVDR pour accélérer l'adoption."
+      },
+      {
+        title: "Vétérinaire Urgences & Soins Intensifs (ECC)",
+        href: "/job-roles/veterinary-emergency-critical-care-veterinarian",
+        summary: "Un goulot d'exécution 24/7 en forte tension dans les réseaux."
+      },
+      {
+        title: "Chief Information Security Officer (CISO) Life Sciences",
+        href: "/job-roles/cross-sector-chief-information-security-officer",
+        summary: "La cyber devient un sujet d'exécution (data, OT, conformité) au comité de direction."
       }
     ]
   },

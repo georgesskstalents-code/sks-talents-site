@@ -536,6 +536,7 @@ function mapRoleToSingleDatabaseProperties(role: JobRole): Record<string, Notion
     Category: { select: { name: role.category } },
     "Salary Range": { rich_text: notionText(role.salary) },
     Excerpt: { rich_text: notionText(role.summary) },
+    "Publish date": role.publishDate ? { date: { start: role.publishDate } } : { date: null },
     "Main Content": {
       rich_text: notionText(
         [
@@ -766,7 +767,11 @@ export async function syncNotionContent({
     .slice(0, articleLimit);
 
   const latestRoles = [...jobRoles]
-    .sort((left, right) => right.shortageLevel.localeCompare(left.shortageLevel, "fr"))
+    .sort(
+      (left, right) =>
+        (right.publishDate ?? "").localeCompare(left.publishDate ?? "") ||
+        left.title.localeCompare(right.title, "fr")
+    )
     .slice(0, roleLimit);
   const latestEvents = [...events]
     .filter((event) => event.href)

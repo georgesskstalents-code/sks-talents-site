@@ -38,6 +38,8 @@ function composeArticleContent(base: string, ...sections: string[]) {
   return [base, ...sections].join("\n\n");
 }
 
+const may2026EditorialBatchDate = "2026-05-04";
+
 const peopleOpsSignals = {
   marketStructure:
     "Repère marché : le segment HealthTech français compte environ 2 800 entreprises, dont un tiers a moins de 5 ans. Le marché est donc encore jeune, avec beaucoup d’improvisation organisationnelle. Le problème des RH aujourd’hui, ce n’est pas le manque d’outils, c’est le manque de structuration.",
@@ -72,6 +74,538 @@ const peopleOpsSignals = {
 };
 
 export const articles: Article[] = [
+  {
+    id: "life-sciences-hiring-priorities-2026",
+    title: "Life Sciences Hiring Priorities: May 2026 Batch",
+    slug: "life-sciences-hiring-priorities-2026",
+    vertical: "biotech",
+    persona: ["CEO", "DRH"],
+    topic: "recruitment",
+    excerpt: "Les 10 recrutements qui debloquent l'execution en life sciences ce mois-ci.",
+    content:
+      "Reponse courte : si votre organisation life sciences reste concentree sur la R&D, le frein n'est plus seulement le recrutement scientifique. Le vrai point de rupture, en mai 2026, se trouve dans les fonctions qui relient preuve, qualite, industrialisation et commercialisation.\n\nLes roles les plus critiques sont souvent ceux qui reduisent le risque d'execution : AI Scientist, QA, MSAT, CMC, Clinical Operations, Market Access, Business Unit, HR leadership et fonctions data/cyber quand le produit devient numerique. Sur le terrain, cela vaut pour la biotech, le diagnostic, la medtech, la cosmetique, la sante animale et le petfood.\n\nPour un dirigeant, la bonne question n'est pas seulement \"quel poste ouvrir ?\". C'est \"quel goulot ce poste debloque-t-il ?\". La reponse guide l'ordre de priorite, le package et le niveau de seniorite.\n\nSources : France Biotech (Panorama France HealthTech 2026) et Aon pour les repères de remuneration.",
+    author: "SKS TALENTS",
+    date: may2026EditorialBatchDate,
+    readTime: 10,
+    internalLinks: [
+      {
+        label: "Services",
+        href: "/services"
+      },
+      {
+        label: "Benchmarks salaires",
+        href: "/salary-benchmarks"
+      },
+      {
+        label: "Fiches metiers",
+        href: "/job-roles"
+      },
+      {
+        label: "References",
+        href: "/references"
+      },
+      {
+        label: "Fonds sante",
+        href: "/investment-funds"
+      },
+      {
+        label: "AI Scientist Biotech",
+        href: "/job-roles/biotech-ai-scientist"
+      },
+      {
+        label: "Upstream Process Development Scientist",
+        href: "/job-roles/biotech-upstream-process-development-scientist"
+      },
+      {
+        label: "Downstream Process Development Scientist",
+        href: "/job-roles/biotech-downstream-process-development-scientist"
+      },
+      {
+        label: "QC Microbiology Lead Biotech",
+        href: "/job-roles/biotech-qc-microbiology-lead"
+      },
+      {
+        label: "Single-Use Technology Engineer Biotech",
+        href: "/job-roles/biotech-single-use-technology-engineer"
+      }
+    ],
+    sources: [
+      {
+        name: "France Biotech - Panorama France HealthTech 2026",
+        url: "https://france-biotech.fr/communiques-de-presse/communiques-france-biotech/panorama-france-healthtech-2026-une-filiere-mature-innovante-et-resiliente-confrontee-a-un-environnement-plus-exigeant/"
+      },
+      {
+        name: "Aon - Benchmarks de remuneration",
+        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+      }
+    ]
+  },
+  {
+    id: "diagnostic-ai-cyber-application-roles",
+    title: "Diagnostic AI, Cyber and Application Roles",
+    slug: "diagnostic-ai-cyber-application-roles",
+    vertical: "diagnostic",
+    persona: ["CPO", "DRH"],
+    topic: "skills",
+    excerpt: "Les roles hybrides qui transforment un produit diagnostic en execution fiable.",
+    content:
+      "Reponse courte : dans le diagnostic moderne, l'IA ne remplace pas la chaine d'execution. Elle ajoute des contraintes de donnees, de securite et d'integration. C'est pour cela que les roles les plus tendus sont hybrides.\n\nLes postes a surveiller en priorite sont Data Science Manager, Cybersecurity Engineer, Field Application Manager, LIMS Product Owner et HL7 / Interoperability Specialist. Chacun couvre un point de friction different : modele, securite, adoption terrain, traçabilite et interopérabilité.\n\nPour le CPO, le sujet n'est pas seulement technique. Il est aussi commercial : un produit qui s'integre mal ou se supporte mal prend du retard en deployment et consomme plus d'energie dirigeante qu'il ne cree de valeur.\n\nSources : SIDIV et France Biotech.",
+    author: "SKS TALENTS",
+    date: may2026EditorialBatchDate,
+    readTime: 9,
+    internalLinks: [
+      {
+        label: "Diagnostic",
+        href: "/life-sciences/diagnostic"
+      },
+      {
+        label: "Benchmarks salaires",
+        href: "/salary-benchmarks"
+      },
+      {
+        label: "Data Science Manager Diagnostic",
+        href: "/job-roles/diagnostic-data-science-manager"
+      },
+      {
+        label: "Cybersecurity Engineer Diagnostic",
+        href: "/job-roles/diagnostic-cybersecurity-engineer"
+      },
+      {
+        label: "LIMS Product Owner Diagnostic",
+        href: "/job-roles/diagnostic-lims-product-owner"
+      },
+      {
+        label: "Software Quality Engineer IVD",
+        href: "/job-roles/diagnostic-software-quality-engineer"
+      },
+      {
+        label: "IVD Software Engineer",
+        href: "/job-roles/diagnostic-ivd-software-engineer"
+      },
+      {
+        label: "Biostatistician Diagnostics",
+        href: "/job-roles/diagnostic-biostatistician"
+      },
+      {
+        label: "Field Application Scientist NGS",
+        href: "/job-roles/diagnostic-field-application-scientist-ngs"
+      }
+    ],
+    sources: [
+      {
+        name: "SIDIV",
+        url: "https://sidiv.fr/"
+      },
+      {
+        name: "France Biotech - Panorama France HealthTech",
+        url: "https://france-biotech.fr/publications/le-panorama-france-healthtech/"
+      }
+    ]
+  },
+  {
+    id: "medtech-maintenance-field-service-roles",
+    title: "Medtech Maintenance and Field Service Roles",
+    slug: "medtech-maintenance-field-service-roles",
+    vertical: "diagnostic",
+    persona: ["COO", "DRH"],
+    topic: "recruitment",
+    excerpt: "Pourquoi les postes de maintenance et de support terrain sont devenus critiques.",
+    content:
+      "Reponse courte : un equipement medtech ou diagnostic ne se vend pas sur sa seule performance initiale. Il se defend dans le temps, sur la disponibilite, la maintenance et la qualite du support terrain.\n\nLes fonctions qui changent la donne sont souvent peu visibles en phase de vente, mais decisives en phase d'exploitation : Field Service Manager, Technical Support Lead, Field Application Manager, Customer Success et Service Operations Director. Elles reduisent les interruptions, protègent la satisfaction client et accelerent l'adoption.\n\nPour un COO, c'est une lecture simple : si le support est sous-dimensionne, la croissance commerciale cree de la dette operationnelle. Le bon recrutement est donc celui qui preserve la marge de service autant que la croissance du CA.\n\nSources : Aon et Glassdoor France pour le cadrage remuneration.",
+    author: "SKS TALENTS",
+    date: may2026EditorialBatchDate,
+    readTime: 8,
+    internalLinks: [
+      {
+        label: "Services",
+        href: "/services"
+      },
+      {
+        label: "Benchmarks salaires",
+        href: "/salary-benchmarks"
+      },
+      {
+        label: "Field Application Manager Diagnostic",
+        href: "/job-roles/diagnostic-field-application-manager"
+      },
+      {
+        label: "Service Operations Director Diagnostic",
+        href: "/job-roles/diagnostic-service-operations-director"
+      },
+      {
+        label: "Technical Support Lead Diagnostic",
+        href: "/job-roles/diagnostic-technical-support-lead"
+      }
+    ],
+    sources: [
+      {
+        name: "Aon - Benchmarks de remuneration",
+        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+      },
+      {
+        name: "Glassdoor",
+        url: "https://www.glassdoor.fr/"
+      }
+    ]
+  },
+  {
+    id: "cosmetique-formulation-safety-regulatory-roles",
+    title: "Cosmetic Science Hiring: Formulation, Safety, Regulatory",
+    slug: "cosmetique-formulation-safety-regulatory-roles",
+    vertical: "cosmetique",
+    persona: ["CEO", "DRH"],
+    topic: "skills",
+    excerpt: "Les profils qui securisent la formulation, la compliance et la mise sur le marche.",
+    content:
+      "Reponse courte : en cosmetique, le recrutement penurie ne se limite pas au formulateur. La valeur se cree quand formulation, safety, regulatory et go-to-market avancent au meme rythme.\n\nLes postes qui ressortent le plus dans les organisations qui grossissent sont Formulation Scientist, Cosmetic Safety Assessor, Regulatory Affairs Manager et Export Manager. Ils garantissent qu'un produit peut etre developpe, documente, vendu et maintenu sans detour inutile.\n\nPour un DRH, la bonne approche consiste a relier le poste a la categorie de risque qu'il reduit : delais, reformulation, blocage reglementaire ou retard commercial. C'est ce cadrage qui rend le besoin credible en entretien.\n\nSources : Aon, Glassdoor et les références metiers deja documentees dans le workspace.",
+    author: "SKS TALENTS",
+    date: may2026EditorialBatchDate,
+    readTime: 8,
+    internalLinks: [
+      {
+        label: "Life Sciences",
+        href: "/life-sciences"
+      },
+      {
+        label: "Schools",
+        href: "/schools"
+      },
+      {
+        label: "Benchmarks salaires",
+        href: "/salary-benchmarks"
+      },
+      {
+        label: "Formulation Scientist Cosmetique",
+        href: "/job-roles/cosmetique-formulation-scientist"
+      },
+      {
+        label: "Regulatory Affairs Manager Cosmetique",
+        href: "/job-roles/cosmetique-regulatory-affairs-manager"
+      }
+    ],
+    sources: [
+      {
+        name: "Aon - Benchmarks de remuneration",
+        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+      },
+      {
+        name: "Glassdoor",
+        url: "https://www.glassdoor.fr/"
+      }
+    ]
+  },
+  {
+    id: "animal-health-veterinary-leadership-roles",
+    title: "Animal Health Leadership Roles: What to Recruit Now",
+    slug: "animal-health-veterinary-leadership-roles",
+    vertical: "medical-vet",
+    persona: ["COO", "DRH"],
+    topic: "recruitment",
+    excerpt: "Les roles de leadership qui structurent la sante animale et les services veterinaires.",
+    content:
+      "Reponse courte : la sante animale recrute sur deux vitesses. D'un cote, les fonctions de terrain et de support clinique. De l'autre, les roles qui industrialisent la distribution, la formation et la performance commerciale.\n\nLes postes les plus utiles sont souvent Medical Science Liaison, Directeurs des operations learning, Sales Developer / Product Trainer, Clinic Operations Director et HR Business Partner. Ils transforment une offre technique en usage soutenable, puis en organisation reproductible.\n\nPour un COO, l'enjeu est tres concret : si le management de terrain n'est pas structure, la croissance finit par se payer en turnover, en erreurs d'exploitation ou en baisse de service.\n\nSources : Ordre national des veterinaires, Mars et Digitalis Ventures.",
+    author: "SKS TALENTS",
+    date: may2026EditorialBatchDate,
+    readTime: 9,
+    internalLinks: [
+      {
+        label: "Animal Health",
+        href: "/animal-health"
+      },
+      {
+        label: "Services",
+        href: "/services"
+      },
+      {
+        label: "Benchmarks salaires",
+        href: "/salary-benchmarks"
+      },
+      {
+        label: "Clinic Operations Director Veterinary",
+        href: "/job-roles/veterinary-clinic-operations-director"
+      },
+      {
+        label: "HR Business Partner Veterinary",
+        href: "/job-roles/veterinary-hr-business-partner"
+      },
+      {
+        label: "Veterinary Medical Advisor",
+        href: "/job-roles/medical-vet-veterinary-medical-advisor"
+      },
+      {
+        label: "Pharmacovigilance Specialist (Animal Health)",
+        href: "/job-roles/medical-vet-pharmacovigilance-specialist"
+      },
+      {
+        label: "Vaccine Manufacturing Manager",
+        href: "/job-roles/medical-vet-vaccine-manufacturing-manager"
+      },
+      {
+        label: "Clinical Pathologist Veterinary",
+        href: "/job-roles/veterinary-clinical-pathologist"
+      }
+    ],
+    sources: [
+      {
+        name: "Ordre national des veterinaires",
+        url: "https://www.veterinaire.fr/"
+      },
+      {
+        name: "Mars",
+        url: "https://www.mars.com/"
+      }
+    ]
+  },
+  {
+    id: "petfood-rd-quality-manufacturing-roles",
+    title: "Petfood R&D, Quality and Manufacturing Roles",
+    slug: "petfood-rd-quality-manufacturing-roles",
+    vertical: "petfood",
+    persona: ["CEO", "COO"],
+    topic: "market",
+    excerpt: "Les roles qui stabilisent une gamme petfood, du produit a l'usine.",
+    content:
+      "Reponse courte : en petfood, la differenciation produit ne tient pas sans maitrise industrielle. Les entreprises qui reussissent recrutent tres tot les profils qui securisent R&D, qualite et excellence de fabrication.\n\nLes fonctions les plus importantes sont R&D Director, Palatability Scientist, Quality & Food Safety Manager et Manufacturing Excellence Lead. Elles servent une meme promesse : garder la qualite de la recette, la constance du lot et la fiabilite de l'execution.\n\nPour les dirigeants, le bon signal est simple : si votre innovation avance plus vite que votre usine, le backlog finit toujours par revenir sous forme de cout ou de retours terrain.\n\nSources : Mars et EY pour la lecture marche et execution.",
+    author: "SKS TALENTS",
+    date: may2026EditorialBatchDate,
+    readTime: 8,
+    internalLinks: [
+      {
+        label: "Animal Health / Petfood",
+        href: "/animal-health/petfood"
+      },
+      {
+        label: "Fonds sante",
+        href: "/investment-funds"
+      },
+      {
+        label: "Benchmarks salaires",
+        href: "/salary-benchmarks"
+      },
+      {
+        label: "R&D Director Petfood",
+        href: "/job-roles/petfood-rd-director"
+      },
+      {
+        label: "Quality & Food Safety Manager Petfood",
+        href: "/job-roles/petfood-quality-food-safety-manager"
+      },
+      {
+        label: "Packaging Development Engineer Petfood",
+        href: "/job-roles/petfood-packaging-development-engineer"
+      },
+      {
+        label: "Supplier Quality Engineer Petfood",
+        href: "/job-roles/petfood-supplier-quality-engineer"
+      }
+    ],
+    sources: [
+      {
+        name: "Mars",
+        url: "https://www.mars.com/"
+      },
+      {
+        name: "EY",
+        url: "https://www.ey.com/"
+      }
+    ]
+  },
+  {
+    id: "export-manager-life-sciences-africa",
+    title: "Export Manager Life Sciences: Africa and MENA",
+    slug: "export-manager-life-sciences-africa",
+    vertical: "biotech",
+    persona: ["CEO", "COO", "DRH"],
+    topic: "recruitment",
+    excerpt: "Pourquoi l'export en life sciences demande un vrai role de direction et pas seulement un commercial.",
+    content:
+      "Reponse courte : l'export en life sciences ne se pilote pas comme une simple ouverture de pays. Il faut coordonner reglementaire, logistique, distribution, prix, partenaires et support technique dans un meme plan.\n\nLes roles les plus utiles sont Export Manager, Country Manager, Business Unit Director et fonctions support qui fiabilisent la zone : medical, application, operations et customer success. En Afrique francophone et en MENA, la distance amplifie vite les erreurs de cadrage.\n\nPour un CEO ou un COO, l'enjeu est d'ecrire une mission qui precise la profondeur de territoire, le niveau d'autonomie et les relais internes. Sans cela, le recrutement export produit souvent un effet trompeur : beaucoup de mouvement, peu de traction.\n\nSources : Business France et Bpifrance.",
+    author: "SKS TALENTS",
+    date: may2026EditorialBatchDate,
+    readTime: 9,
+    internalLinks: [
+      {
+        label: "Services",
+        href: "/services"
+      },
+      {
+        label: "Investment funds",
+        href: "/investment-funds"
+      },
+      {
+        label: "Benchmarks salaires",
+        href: "/salary-benchmarks"
+      },
+      {
+        label: "Medical Vet Country Manager Afrique Francophone",
+        href: "/job-roles/medical-vet-country-manager-afrique-francophone"
+      },
+      {
+        label: "Export Manager Afrique & MENA Cosmétique",
+        href: "/job-roles/cosmetique-export-manager-mena-afrique"
+      }
+    ],
+    sources: [
+      {
+        name: "Business France",
+        url: "https://www.businessfrance.fr/"
+      },
+      {
+        name: "Bpifrance",
+        url: "https://www.bpifrance.fr/"
+      }
+    ]
+  },
+  {
+    id: "drh-life-sciences-scaleup-playbook",
+    title: "DRH Life Sciences Scale-Up Playbook",
+    slug: "drh-life-sciences-scaleup-playbook",
+    vertical: "people-ops",
+    persona: ["DRH", "CEO"],
+    topic: "skills",
+    excerpt: "Le playbook RH qui aide une scale-up life sciences a passer de l'artisanal au pilote.",
+    content:
+      "Reponse courte : le DRH d'une scale-up life sciences ne gere pas seulement des recrutements. Il structure le systeme d'execution qui permet au reste de l'organisation d'avancer sans friction.\n\nLes priorites les plus frequentes sont la definition des roles, la coherence salariale, les parcours managers, la performance des entretiens et la stabilisation des recrutements penuriques. Quand le volume monte, le temps dirigeant devient le vrai cout cache.\n\nPour une entreprise qui passe du seed a la serie A puis a la serie B, la question utile est simple : quel bloc RH doit etre standardise maintenant pour eviter une dette organisationnelle dans six mois ?\n\nSources : France Biotech, Culture RH et Aon.",
+    author: "SKS TALENTS",
+    date: may2026EditorialBatchDate,
+    readTime: 10,
+    internalLinks: [
+      {
+        label: "Salary benchmarks",
+        href: "/salary-benchmarks"
+      },
+      {
+        label: "Services",
+        href: "/services"
+      },
+      {
+        label: "Schools",
+        href: "/schools"
+      },
+      {
+        label: "References",
+        href: "/references"
+      },
+      {
+        label: "Talent Acquisition Lead EMEA",
+        href: "/job-roles/cross-sector-talent-acquisition-lead-emea"
+      }
+    ],
+    sources: [
+      {
+        name: "France Biotech - Panorama France HealthTech",
+        url: "https://france-biotech.fr/publications/le-panorama-france-healthtech/"
+      },
+      {
+        name: "Aon - Benchmarks de remuneration",
+        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+      }
+    ]
+  },
+  {
+    id: "business-unit-director-medtech-healthtech",
+    title: "Business Unit Directors in Medtech and Healthtech",
+    slug: "business-unit-director-medtech-healthtech",
+    vertical: "diagnostic",
+    persona: ["CEO", "COO"],
+    topic: "recruitment",
+    excerpt: "Pourquoi la direction de business unit est la piece qui relie strategie et execution.",
+    content:
+      "Reponse courte : le Business Unit Director n'est pas un super commercial. C'est le point de convergence entre P&L, roadmap, ecosysteme client et discipline d'execution.\n\nDans les secteurs medtech et diagnostic, la fonction devient critique quand la croissance depend a la fois du compte hôpital, de l'adoption terrain, du support et de la capacite a arbitrer vite.\n\nPour un CEO, le bon indicateur n'est pas le nombre de visites, mais la vitesse a laquelle le poste transforme un portefeuille en priorites claires et en décisions de go-to-market.\n\nSources : France Biotech, Glassdoor et Aon.",
+    author: "SKS TALENTS",
+    date: may2026EditorialBatchDate,
+    readTime: 8,
+    internalLinks: [
+      {
+        label: "Investment funds",
+        href: "/investment-funds"
+      },
+      {
+        label: "Benchmarks salaires",
+        href: "/salary-benchmarks"
+      },
+      {
+        label: "Diagnostic BU Director",
+        href: "/job-roles/diagnostic-nuclear-medicine-business-unit-director"
+      },
+      {
+        label: "Diagnostic VP Sales",
+        href: "/job-roles/diagnostic-vp-sales"
+      },
+      {
+        label: "Market Access Director RIV",
+        href: "/job-roles/diagnostic-market-access-director-riv"
+      }
+    ],
+    sources: [
+      {
+        name: "France Biotech - Panorama France HealthTech",
+        url: "https://france-biotech.fr/publications/le-panorama-france-healthtech/"
+      },
+      {
+        name: "Aon - Benchmarks de remuneration",
+        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+      }
+    ]
+  },
+  {
+    id: "diagnostic-data-integrity-qa-playbook",
+    title: "Diagnostic Data Integrity and QA Playbook",
+    slug: "diagnostic-data-integrity-qa-playbook",
+    vertical: "diagnostic",
+    persona: ["DRH", "COO"],
+    topic: "skills",
+    excerpt: "QA, CSV, data integrity et cyber sont devenus le meme sujet d'execution.",
+    content:
+      "Reponse courte : dans les environnements reguliers, la qualite n'est plus un bloc isole. Elle est liee a la data integrity, a l'automatisation, a l'interoperabilité et a la cybersécurité.\n\nLes postes qui portent ce sujet sont CSV Validation Engineer, LIMS Administrator, HL7 / Integration Specialist, OT Cybersecurity Specialist, QA Manager et Sterility Assurance Lead selon le contexte. Tous servent la meme chose : une execution auditable et stable.\n\nPour les dirigeants, le sujet n'est pas de recruter plus de process. C'est de recruter des profils qui savent rendre le process utile, donc exploitable en production et en commercial.\n\nSources : SIDIV, LEEM et Aon.",
+    author: "SKS TALENTS",
+    date: may2026EditorialBatchDate,
+    readTime: 9,
+    internalLinks: [
+      {
+        label: "Salary benchmarks",
+        href: "/salary-benchmarks"
+      },
+      {
+        label: "Services",
+        href: "/services"
+      },
+      {
+        label: "Data Integrity Lead Biotech",
+        href: "/job-roles/biotech-data-integrity-lead"
+      },
+      {
+        label: "CSV / Validation Lead Biotech",
+        href: "/job-roles/biotech-csv-validation-lead"
+      },
+      {
+        label: "LIMS Product Owner Biotech",
+        href: "/job-roles/biotech-lims-product-owner"
+      },
+      {
+        label: "OT Cybersecurity Engineer Biotech",
+        href: "/job-roles/biotech-ot-cybersecurity-engineer"
+      },
+      {
+        label: "OT Cybersecurity Specialist",
+        href: "/job-roles/diagnostic-ot-cybersecurity-specialist"
+      },
+      {
+        label: "HL7 / Interoperability Specialist",
+        href: "/job-roles/diagnostic-hl7-integration-specialist"
+      }
+    ],
+    sources: [
+      {
+        name: "SIDIV",
+        url: "https://sidiv.fr/"
+      },
+      {
+        name: "LEEM",
+        url: "https://www.leem.org/"
+      }
+    ]
+  },
   {
     id: "arn-hiring-2025",
     title: "ARN Therapeutics Hiring Trends 2025",
@@ -2651,6 +3185,347 @@ export const articles: Article[] = [
       {
         name: "Le Hub Bpifrance",
         url: "https://lehub.bpifrance.fr/"
+      }
+    ]
+  },
+  {
+    id: "data-integrity-biotech-audit-ready",
+    title: "Data Integrity Biotech : rendre vos systèmes audit-ready sans ralentir l’exécution",
+    slug: "data-integrity-biotech-audit-ready",
+    vertical: "biotech",
+    persona: ["CEO", "COO", "DRH"],
+    topic: "compliance",
+    excerpt:
+      "Pourquoi la data integrity (ALCOA+) devient un sujet organisation, pas seulement qualité.",
+    content: composeArticleContent(
+      "Réponse courte : la data integrity n’est pas un sujet « QA ». C’est un sujet de confiance dans votre exécution. Si vos données (LIMS, MES, instruments) ne sont pas fiables, tout devient fragile : libération, investigations, audits, et même décisions business.\n\nLes entreprises qui s’en sortent ne font pas « plus de compliance ». Elles priorisent les systèmes critiques, clarifient qui décide, et mettent en place des routines simples (revues, logs, changes) que le terrain peut tenir.",
+      "La pénurie sur les profils Data Integrity / CSV vient de cette double exigence : comprendre les contraintes GxP et comprendre la réalité IT/ops. Ce rôle existe pour transformer une exigence d’audit en système utilisable.\n\nMicro-FAQ : par quoi commencer ? Par une cartographie des systèmes critiques et des risques, puis par un plan d’action piloté (ownership, CAPA, evidence) sur 90 jours.",
+      "Angle recrutement : cherchez des profils capables de parler au terrain (production/labo) et de garder une logique risk-based, pas seulement documentaire.",
+      "Sources : France Biotech (lecture écosystème) et LEEM (repères industrie du médicament)."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-05-04",
+    readTime: 7,
+    internalLinks: [
+      { label: "Fiche métier : Data Integrity Lead", href: "/job-roles/biotech-data-integrity-lead" },
+      { label: "Fiche métier : CSV / Validation Lead", href: "/job-roles/biotech-csv-validation-lead" },
+      { label: "Fiche métier : LIMS Product Owner", href: "/job-roles/biotech-lims-product-owner" },
+      { label: "Article : CSV validation & data integrity", href: "/blog/csv-validation-data-integrity-biotech" }
+    ],
+    sources: [
+      {
+        name: "France Biotech - Le Panorama France HealthTech",
+        url: "https://france-biotech.fr/publications/le-panorama-france-healthtech/"
+      },
+      {
+        name: "LEEM",
+        url: "https://www.leem.org/"
+      }
+    ]
+  },
+  {
+    id: "quality-systems-biotech-sop-change-control",
+    title: "Quality Systems Biotech : SOP, change control, deviations — le vrai levier d’exécution",
+    slug: "quality-systems-biotech-sop-change-control",
+    vertical: "biotech",
+    persona: ["COO", "DRH"],
+    topic: "quality",
+    excerpt:
+      "Un système qualité efficace n’est pas plus lourd : il réduit les écarts et protège la vitesse.",
+    content: composeArticleContent(
+      "Réponse courte : un bon système qualité n’est pas un empilement de SOP. C’est un système qui rend l’exécution plus stable, donc plus rapide. Dans les environnements biotech, les écarts coûtent cher : lots bloqués, rework, audits difficiles.\n\nLe Quality Systems Manager existe pour tenir trois choses ensemble : (1) une documentation vivante, (2) des rituels simples (change, deviations, CAPA), (3) une lecture risk-based qui évite la bureaucratie.",
+      "Le signal à suivre n’est pas « combien de documents » mais « combien de récurrences ». Si les mêmes écarts reviennent, le système est trop faible ou trop théorique.\n\nMicro-FAQ : comment éviter l’usine à gaz ? En standardisant peu, mais bien : templates, ownership clair, cycles courts, et preuve simple.",
+      "Sources : LEEM (repères industrie) et France Biotech (lecture écosystème)."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-05-04",
+    readTime: 6,
+    internalLinks: [
+      { label: "Fiche métier : Quality Systems Manager", href: "/job-roles/biotech-quality-systems-manager" },
+      { label: "Fiche métier : Deviation & CAPA Manager", href: "/job-roles/biotech-deviation-capa-manager" },
+      { label: "Fiche métier : Head of Quality", href: "/job-roles/biotech-head-of-quality" }
+    ],
+    sources: [
+      {
+        name: "LEEM",
+        url: "https://www.leem.org/"
+      },
+      {
+        name: "France Biotech - Le Panorama France HealthTech",
+        url: "https://france-biotech.fr/publications/le-panorama-france-healthtech/"
+      }
+    ]
+  },
+  {
+    id: "deviation-capa-biotech-reduire-recurrences",
+    title: "Deviations & CAPA en biotech : réduire les récurrences (pas juste « fermer des tickets »)",
+    slug: "deviation-capa-biotech-reduire-recurrences",
+    vertical: "biotech",
+    persona: ["COO", "DRH"],
+    topic: "operations",
+    excerpt:
+      "Pourquoi la gouvernance deviations/CAPA est un goulot d’exécution, surtout en croissance.",
+    content: composeArticleContent(
+      "Réponse courte : une deviation n’est pas un ticket. C’est un signal sur votre système. Les organisations qui scalent mal finissent avec (1) trop de deviations, (2) des CAPA « cosmétiques », (3) des audits qui pointent la même chose.\n\nLe Deviation & CAPA Manager est pénurique parce qu’il faut être à la fois rigoureux (preuve, clôture) et opérationnel (terrain, arbitrage). Son job : faire baisser la récidive.",
+      "Le bon indicateur n’est pas le nombre de CAPA clôturées, c’est la diminution des récurrences et la vitesse de retour à un état stable.\n\nMicro-FAQ : comment savoir si vos CAPA sont faibles ? Si elles n’ont pas de vérification d’efficacité, ou si elles ne changent rien sur le terrain.",
+      "Sources : France Biotech (lecture écosystème) et LEEM (repères industrie du médicament)."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-05-04",
+    readTime: 6,
+    internalLinks: [
+      { label: "Fiche métier : Deviation & CAPA Manager", href: "/job-roles/biotech-deviation-capa-manager" },
+      { label: "Fiche métier : Quality Systems Manager", href: "/job-roles/biotech-quality-systems-manager" },
+      { label: "Fiche métier : Sterility Assurance Lead", href: "/job-roles/biotech-sterility-assurance-lead" },
+      { label: "Fiche métier : Sterility Assurance Specialist", href: "/job-roles/biotech-sterility-assurance-specialist" }
+    ],
+    sources: [
+      {
+        name: "France Biotech - Le Panorama France HealthTech",
+        url: "https://france-biotech.fr/publications/le-panorama-france-healthtech/"
+      },
+      {
+        name: "LEEM",
+        url: "https://www.leem.org/"
+      }
+    ]
+  },
+  {
+    id: "product-manager-ivd-roadmap-ivdr",
+    title: "Product Manager IVD : tenir la roadmap sans casser l’IVDR",
+    slug: "product-manager-ivd-roadmap-ivdr",
+    vertical: "diagnostic",
+    persona: ["CEO", "COO", "DRH"],
+    topic: "product",
+    excerpt:
+      "Le PM IVD n’est pas un « marketing produit » : c’est une fonction d’alignement exécution + conformité.",
+    content: composeArticleContent(
+      "Réponse courte : en IVD, le Product Manager est un rôle d’exécution. Il doit transformer des besoins labo/hôpital en priorités produit, tout en gardant une trajectoire réglementaire crédible (IVDR) et une promesse terrain tenue (support, formation, service).\n\nLa pénurie vient de la combinaison rare : technicité (workflow labo), sens produit (priorisation), et capacité à travailler avec regulatory/quality sans friction.",
+      "Pour un CEO/COO, le signal clé est la vitesse d’arbitrage : un bon PM réduit le temps perdu entre « idée » et « décision » et évite les changements tardifs (claims, IFU, packaging) qui cassent la supply chain.\n\nMicro-FAQ : quel cadrage recrutement ? Livrables attendus (roadmap, launches, enablement), niveau d’exposition (France vs EMEA) et interfaces (R&D, RA/QA, service).",
+      "Sources : SIDIV (repères diagnostic/IVD) et Aon (lecture tension marché / rémunération)."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-05-04",
+    readTime: 7,
+    internalLinks: [
+      { label: "Fiche métier : Product Manager IVD", href: "/job-roles/diagnostic-product-manager-ivd" },
+      { label: "Fiche métier : Regulatory Affairs IVDR", href: "/job-roles/diagnostic-ivdr-regulatory-affairs-specialist" },
+      { label: "Fiche métier : PMS & Vigilance Manager IVD", href: "/job-roles/diagnostic-pms-vigilance-manager-ivd" },
+      { label: "Fiche métier : Software Quality Engineer IVD", href: "/job-roles/diagnostic-software-quality-engineer" },
+      { label: "Fiche métier : Technical Support Lead", href: "/job-roles/diagnostic-technical-support-lead" }
+    ],
+    sources: [
+      {
+        name: "SIDIV",
+        url: "https://sidiv.fr/"
+      },
+      {
+        name: "Aon - Benchmarks de remuneration",
+        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+      }
+    ]
+  },
+  {
+    id: "laboratory-informatics-lims-middleware-gouvernance",
+    title: "LIMS & middleware : la gouvernance qui évite les intégrations fragiles en diagnostic",
+    slug: "laboratory-informatics-lims-middleware-gouvernance",
+    vertical: "diagnostic",
+    persona: ["COO", "DRH"],
+    topic: "digital",
+    excerpt:
+      "Pourquoi le SI labo (LIMS/interop) devient un sujet performance, qualité et cyber en même temps.",
+    content: composeArticleContent(
+      "Réponse courte : un SI labo fragile crée des coûts invisibles : retards, erreurs, support surchargé, et risques cybersécurité. Le sujet n’est pas seulement « connecter » : c’est gouverner (changes, incidents, documentation, monitoring).\n\nLe Laboratory Informatics Manager existe pour rendre l’ensemble maintenable : LIMS, middleware, interfaces HL7/ASTM, et parfois la data clinique. Cette compétence est pénurique parce qu’elle se situe à l’interface IT + métier.",
+      "Micro-FAQ : comment éviter les interfaces cassantes ? En standardisant la documentation (mapping, logs), en versionnant les changements, et en pilotant les incidents comme un produit, pas comme du bricolage.",
+      "Sources : SIDIV (repères IVD) et Roche Diagnostics (lecture industrie/solutions)."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-05-04",
+    readTime: 6,
+    internalLinks: [
+      { label: "Fiche métier : Laboratory Informatics Manager", href: "/job-roles/diagnostic-laboratory-informatics-manager" },
+      { label: "Fiche métier : HL7 / Integration Specialist", href: "/job-roles/diagnostic-hl7-integration-specialist" },
+      { label: "Fiche métier : LIMS Product Owner Biotech", href: "/job-roles/biotech-lims-product-owner" },
+      { label: "Fiche métier : Data Integrity Lead", href: "/job-roles/biotech-data-integrity-lead" },
+      { label: "Article : HL7, LIMS & middleware", href: "/blog/hl7-lims-middleware-interfaces-diagnostic" }
+    ],
+    sources: [
+      {
+        name: "SIDIV",
+        url: "https://sidiv.fr/"
+      },
+      {
+        name: "Roche Diagnostics",
+        url: "https://diagnostics.roche.com/"
+      }
+    ]
+  },
+  {
+    id: "service-delivery-emea-diagnostic-sla",
+    title: "Service Delivery EMEA en diagnostic : tenir les SLA sans épuiser le terrain",
+    slug: "service-delivery-emea-diagnostic-sla",
+    vertical: "diagnostic",
+    persona: ["COO", "DRH"],
+    topic: "service",
+    excerpt:
+      "Ce rôle existe pour transformer un support réactif en système piloté (SLA, escalade, pièces, formation).",
+    content: composeArticleContent(
+      "Réponse courte : en diagnostic/medtech, la qualité de service est un levier commercial. Les clients ne renouvellent pas sur une brochure, ils renouvellent sur une expérience : installation, uptime, support, escalade.\n\nLe Service Delivery Manager EMEA est pénurique parce qu’il doit tenir ensemble opérations, partenaires (distributeurs), et attentes clients multi-pays. Son impact est direct : moins d’incidents répétés, plus de stabilité, et une meilleure crédibilité des équipes terrain.",
+      "Micro-FAQ : quel cadrage ? Définir le périmètre (pays, parc installé, partenaires), les KPIs (SLA, backlog, NPS) et les interfaces (supply pièces, formation, produit).",
+      "Sources : Mindray (lecture industrie/solutions) et Aon (repères rémunération)."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-05-04",
+    readTime: 6,
+    internalLinks: [
+      { label: "Fiche métier : Service Delivery Manager EMEA", href: "/job-roles/diagnostic-service-delivery-manager-emea" },
+      { label: "Fiche métier : Field Service Manager", href: "/job-roles/diagnostic-field-service-manager" },
+      { label: "Fiche métier : Customer Experience Director", href: "/job-roles/diagnostic-customer-experience-director" }
+    ],
+    sources: [
+      {
+        name: "Mindray",
+        url: "https://www.mindray.com/"
+      },
+      {
+        name: "Aon - Benchmarks de remuneration",
+        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+      }
+    ]
+  },
+  {
+    id: "veterinary-ecc-urgences-penurie",
+    title: "Vétérinaire urgences & soins intensifs : pourquoi la pénurie se renforce",
+    slug: "veterinary-ecc-urgences-penurie",
+    vertical: "vet-services",
+    persona: ["CEO", "COO", "DRH"],
+    topic: "talent",
+    excerpt:
+      "Les réseaux grandissent, l’exigence augmente, et les profils ECC restent rares : comment lire le sujet.",
+    content: composeArticleContent(
+      "Réponse courte : la pénurie ECC n’est pas seulement une question de volume de diplômés. C’est une question d’organisation : continuité 24/7, intensité émotionnelle, besoin de standardiser des protocoles, et exigences croissantes des propriétaires.\n\nLes centres qui tiennent leur qualité ECC structurent (1) un triage clair, (2) des routines d’hospitalisation, (3) une coordination multi-spécialités. Sans cela, la charge retombe sur quelques individus, et l’attrition explose.",
+      "Micro-FAQ : comment recruter sans sur-promettre ? Cadrer la réalité des gardes, la composition d’équipe, les ressources (ASV, imagerie, labo), et la capacité à former/standardiser.",
+      "Sources : Ordre national des vétérinaires (repères officiels) et VetAgro Sup (vivier formation)."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-05-04",
+    readTime: 6,
+    internalLinks: [
+      { label: "Fiche métier : Vétérinaire ECC", href: "/job-roles/veterinary-emergency-critical-care-veterinarian" },
+      { label: "Fiche métier : Directeur d’hôpital vétérinaire", href: "/job-roles/veterinary-hospital-director" },
+      { label: "Fiche métier : Vétérinaire imageur", href: "/job-roles/veterinary-imageur" },
+      { label: "Fiche métier : Clinical Pathologist Veterinary", href: "/job-roles/veterinary-clinical-pathologist" }
+    ],
+    sources: [
+      {
+        name: "Ordre national des vétérinaires",
+        url: "https://www.veterinaire.fr/"
+      },
+      {
+        name: "VetAgro Sup",
+        url: "https://www.vetagro-sup.fr/"
+      }
+    ]
+  },
+  {
+    id: "petfood-regulatory-compliance-export-claims",
+    title: "Petfood : compliance, claims et export — le rôle qui évite les blocages tardifs",
+    slug: "petfood-regulatory-compliance-export-claims",
+    vertical: "petfood",
+    persona: ["COO", "DRH"],
+    topic: "compliance",
+    excerpt:
+      "Pourquoi la conformité petfood est un sujet go-to-market et supply chain, pas un simple check.",
+    content: composeArticleContent(
+      "Réponse courte : en petfood, les blocages arrivent souvent tard : claim trop agressif, étiquetage incomplet, ingrédient non compatible marché, ou documentation fournisseur insuffisante. Résultat : retards, surcoûts, lots rework.\n\nLe Regulatory & Compliance Lead existe pour cadrer tôt : ingrédients, étiquetage, claims, export. Il rend la conformité compatible avec la vitesse de lancement.",
+      "Micro-FAQ : quoi prioriser ? Les marchés cibles, les ingrédients à risque, les claims nutrition/santé, et la gouvernance des changements (packaging, recettes, fournisseurs).",
+      "Sources : Business France (lecture export) et Mars (repères industrie petcare)."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-05-04",
+    readTime: 5,
+    internalLinks: [
+      { label: "Fiche métier : Regulatory & Compliance Lead Petfood", href: "/job-roles/petfood-regulatory-compliance-lead" },
+      { label: "Fiche métier : Quality & Food Safety Manager", href: "/job-roles/petfood-quality-food-safety-manager" },
+      { label: "Fiche métier : Supplier Quality Engineer Petfood", href: "/job-roles/petfood-supplier-quality-engineer" },
+      { label: "Article : Export Afrique francophone (V.I.E)", href: "/blog/export-afrique-francophone-vie-structurer-equipe" }
+    ],
+    sources: [
+      {
+        name: "Business France",
+        url: "https://www.businessfrance.fr/"
+      },
+      {
+        name: "Mars",
+        url: "https://www.mars.com/"
+      }
+    ]
+  },
+  {
+    id: "sensory-science-petfood-palatability",
+    title: "Sensory science & palatability en petfood : un levier R&D sous-estimé",
+    slug: "sensory-science-petfood-palatability",
+    vertical: "petfood",
+    persona: ["CEO", "COO", "DRH"],
+    topic: "rd",
+    excerpt:
+      "La palatabilité n’est pas seulement une question de goût : c’est un système test + décision + stabilité industrielle.",
+    content: composeArticleContent(
+      "Réponse courte : la palatabilité devient un avantage compétitif quand elle est traitée comme un système, pas comme un test ponctuel. Le sujet : définir des protocoles, comparer dans le temps, et relier les résultats à des décisions formulation/production.\n\nLa pénurie sur les profils sensory vient de cette triple compétence : méthode de test, lecture data, et capacité à travailler avec production/qualité. Sans cela, les organisations itèrent trop lentement et subissent la variabilité.",
+      "Micro-FAQ : le cadrage utile ? Quels protocoles (panels, preference), quel ownership, quel lien aux lots et à la variabilité process.",
+      "Sources : Mars (repères industrie) et Aon (lecture tension marché / rémunération)."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-05-04",
+    readTime: 5,
+    internalLinks: [
+      { label: "Fiche métier : Sensory Science Manager", href: "/job-roles/petfood-sensory-science-manager" },
+      { label: "Fiche métier : Palatability Scientist", href: "/job-roles/petfood-palatability-scientist" },
+      { label: "Fiche métier : R&D Director Petfood", href: "/job-roles/petfood-rd-director" }
+    ],
+    sources: [
+      {
+        name: "Mars",
+        url: "https://www.mars.com/"
+      },
+      {
+        name: "Aon - Benchmarks de remuneration",
+        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+      }
+    ]
+  },
+  {
+    id: "ciso-life-sciences-gxp-data-ot",
+    title: "CISO Life Sciences : rendre la cybersécurité compatible avec GxP, data santé et OT",
+    slug: "ciso-life-sciences-gxp-data-ot",
+    vertical: "diagnostic",
+    persona: ["CEO", "COO", "DRH"],
+    topic: "cybersecurity",
+    excerpt:
+      "Pourquoi le CISO devient un rôle d’exécution (pas seulement de contrôle) en life sciences.",
+    content: composeArticleContent(
+      "Réponse courte : en life sciences, la cybersécurité n’est pas un sujet « IT ». Elle touche l’exécution : disponibilité des instruments, continuité de production, intégrité des données, et confiance client. Le CISO doit donc arbitrer avec le terrain, pas imposer hors sol.\n\nLa pénurie vient de la complexité : cloud, data santé, OT, fournisseurs, et contraintes (GxP). Les organisations cherchent des profils capables de prioriser les risques majeurs et de faire adopter des standards simples.",
+      "Micro-FAQ : quel cadrage recrutement ? Périmètre (IT vs IT+OT), maturité (policies vs transformation), et attentes comité de direction (KPIs, exercices, incident response).",
+      "Sources : Aon (lecture rémunération/tension) et Culture RH (repères organisation/structuration)."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-05-04",
+    readTime: 6,
+    internalLinks: [
+      { label: "Fiche métier : Chief Information Security Officer (CISO)", href: "/job-roles/cross-sector-chief-information-security-officer" },
+      { label: "Fiche métier : OT Cybersecurity Specialist", href: "/job-roles/diagnostic-ot-cybersecurity-specialist" },
+      { label: "Fiche métier : OT Cybersecurity Engineer Biotech", href: "/job-roles/biotech-ot-cybersecurity-engineer" },
+      { label: "Fiche métier : Data Integrity Lead", href: "/job-roles/biotech-data-integrity-lead" },
+      { label: "Article : OT cybersecurity (lab & medtech)", href: "/blog/ot-cybersecurity-lab-medtech" }
+    ],
+    sources: [
+      {
+        name: "Aon - Benchmarks de remuneration",
+        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+      },
+      {
+        name: "Culture RH",
+        url: "https://culture-rh.com/"
       }
     ]
   }
