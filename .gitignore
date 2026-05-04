@@ -3,6 +3,12 @@ node_modules
 .next_stale_*
 .vercel
 
+# TS incremental build cache
+tsconfig.tsbuildinfo
+
+# Claude Code runtime artefacts
+.claude/scheduled_tasks.lock
+
 # Env files (never commit real values)
 .env
 .env.local
