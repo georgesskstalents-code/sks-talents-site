@@ -42,6 +42,9 @@ export default async function JobRoleDetailPage({
     notFound();
   }
 
+  const splitNotionList = (value: string | undefined) =>
+    value ? value.split("·").map((item) => item.trim()).filter(Boolean) : [];
+
   const effectiveRole = role
     ? {
         ...role,
@@ -50,21 +53,32 @@ export default async function JobRoleDetailPage({
         summary: notionRole?.excerpt || role.summary,
         sector: notionRole?.vertical || role.sector,
         category: notionRole?.category || role.category,
-        studies: notionRole?.studies
-          ? notionRole.studies.split("·").map((item) => item.trim()).filter(Boolean)
-          : role.studies,
-        schools: notionRole?.schools
-          ? notionRole.schools.split("·").map((item) => item.trim()).filter(Boolean)
-          : role.schools,
+        studies: notionRole?.studies ? splitNotionList(notionRole.studies) : role.studies,
+        schools: notionRole?.schools ? splitNotionList(notionRole.schools) : role.schools,
         relatedIndustries: notionRole?.industries
-          ? notionRole.industries.split("·").map((item) => item.trim()).filter(Boolean)
+          ? splitNotionList(notionRole.industries)
           : role.relatedIndustries
       }
-    : null;
-
-  if (!effectiveRole && notionRole) {
-    notFound();
-  }
+    : notionRole
+      ? // Notion-only fiche: synthesize a JobRole-shaped object with sensible defaults.
+        // Empty arrays mean the corresponding sections (skills, missions, etc.) won't render.
+        {
+          slug: notionRole.slug,
+          title: notionRole.title,
+          summary: notionRole.excerpt || "",
+          salary: notionRole.salaryRange || "Rémunération sur demande",
+          sector: notionRole.vertical || "Cross-sector",
+          category: notionRole.category || "Fiche métier",
+          shortageLevel: "Moderee" as const,
+          skills: [] as string[],
+          successFactors: [] as string[],
+          path: [] as string[],
+          missions: [] as string[],
+          studies: splitNotionList(notionRole.studies),
+          schools: splitNotionList(notionRole.schools),
+          relatedIndustries: splitNotionList(notionRole.industries)
+        }
+      : null;
 
   const resolvedRole = effectiveRole!;
   const relatedRoles = getRelatedJobRoles(resolvedRole.slug, resolvedRole.sector);
@@ -111,16 +125,18 @@ export default async function JobRoleDetailPage({
               </span>
             </div>
           </div>
-          <div className="card-surface p-8">
-            <h2 className="font-display text-3xl">Pourquoi les entreprises recrutent ce rôle</h2>
-            <ul className="mt-6 space-y-3 text-sm leading-7 text-brand-stone">
-              {resolvedRole.successFactors.slice(0, 4).map((item) => (
-                <li key={item} className="rounded-2xl bg-brand-mint/35 px-4 py-3">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          {resolvedRole.successFactors.length > 0 && (
+            <div className="card-surface p-8">
+              <h2 className="font-display text-3xl">Pourquoi les entreprises recrutent ce rôle</h2>
+              <ul className="mt-6 space-y-3 text-sm leading-7 text-brand-stone">
+                {resolvedRole.successFactors.slice(0, 4).map((item) => (
+                  <li key={item} className="rounded-2xl bg-brand-mint/35 px-4 py-3">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           <div className="card-surface p-8">
             <h2 className="font-display text-3xl">Repères de rémunération</h2>
             <p className="mt-4 text-base leading-8 text-brand-stone">{resolvedRole.salary}</p>
@@ -153,44 +169,52 @@ export default async function JobRoleDetailPage({
               Convertir un brut en net
             </Link>
           </div>
-          <div className="card-surface p-8">
-            <h2 className="font-display text-3xl">Missions frequentes</h2>
-            <ul className="mt-6 space-y-3 text-sm leading-7 text-brand-stone">
-              {resolvedRole.missions.map((mission) => (
-                <li key={mission} className="rounded-2xl bg-white px-4 py-3 shadow-soft">
-                  {mission}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="card-surface p-8">
-            <h2 className="font-display text-3xl">Compétences clés</h2>
-            <ul className="mt-6 space-y-3 text-sm leading-7 text-brand-stone">
-              {resolvedRole.skills.map((skill) => (
-                <li key={skill} className="rounded-2xl bg-brand-mint/80 px-4 py-3">
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="card-surface p-8">
-            <h2 className="font-display text-3xl">Ce qu'il faut pour exceller</h2>
-            <ul className="mt-6 space-y-3 text-sm leading-7 text-brand-stone">
-              {resolvedRole.successFactors.map((item) => (
-                <li key={item} className="rounded-2xl bg-white px-4 py-3 shadow-soft">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="card-surface p-8">
-            <h2 className="font-display text-3xl">Parcours fréquent</h2>
-            <ul className="mt-6 space-y-3 text-sm leading-7 text-brand-stone">
-              {resolvedRole.path.map((step) => (
-                <li key={step}>{step}</li>
-              ))}
-            </ul>
-          </div>
+          {resolvedRole.missions.length > 0 && (
+            <div className="card-surface p-8">
+              <h2 className="font-display text-3xl">Missions frequentes</h2>
+              <ul className="mt-6 space-y-3 text-sm leading-7 text-brand-stone">
+                {resolvedRole.missions.map((mission) => (
+                  <li key={mission} className="rounded-2xl bg-white px-4 py-3 shadow-soft">
+                    {mission}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {resolvedRole.skills.length > 0 && (
+            <div className="card-surface p-8">
+              <h2 className="font-display text-3xl">Compétences clés</h2>
+              <ul className="mt-6 space-y-3 text-sm leading-7 text-brand-stone">
+                {resolvedRole.skills.map((skill) => (
+                  <li key={skill} className="rounded-2xl bg-brand-mint/80 px-4 py-3">
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {resolvedRole.successFactors.length > 0 && (
+            <div className="card-surface p-8">
+              <h2 className="font-display text-3xl">Ce qu'il faut pour exceller</h2>
+              <ul className="mt-6 space-y-3 text-sm leading-7 text-brand-stone">
+                {resolvedRole.successFactors.map((item) => (
+                  <li key={item} className="rounded-2xl bg-white px-4 py-3 shadow-soft">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {resolvedRole.path.length > 0 && (
+            <div className="card-surface p-8">
+              <h2 className="font-display text-3xl">Parcours fréquent</h2>
+              <ul className="mt-6 space-y-3 text-sm leading-7 text-brand-stone">
+                {resolvedRole.path.map((step) => (
+                  <li key={step}>{step}</li>
+                ))}
+              </ul>
+            </div>
+          )}
           <div className="card-surface p-8">
             <h2 className="font-display text-3xl">Etudes recommandees</h2>
             <p className="mt-4 text-sm leading-7 text-brand-stone">
@@ -329,23 +353,25 @@ export default async function JobRoleDetailPage({
               ))}
             </div>
           </div>
-          <div className="card-surface p-8 lg:col-span-2">
-            <h2 className="font-display text-3xl">Industries connexes</h2>
-            <p className="mt-4 max-w-3xl text-sm leading-7 text-brand-stone">
-              Ce role peut aussi exister dans des secteurs voisins lorsque les enjeux techniques,
-              réglementaires, qualité, service ou industrialisation se ressemblent.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              {resolvedRole.relatedIndustries.map((industry) => (
-                <span
-                  key={industry}
-                  className="rounded-full border border-brand-teal/15 bg-white px-4 py-2 text-sm font-semibold text-brand-stone"
-                >
-                  {industry}
-                </span>
-              ))}
+          {resolvedRole.relatedIndustries.length > 0 && (
+            <div className="card-surface p-8 lg:col-span-2">
+              <h2 className="font-display text-3xl">Industries connexes</h2>
+              <p className="mt-4 max-w-3xl text-sm leading-7 text-brand-stone">
+                Ce role peut aussi exister dans des secteurs voisins lorsque les enjeux techniques,
+                réglementaires, qualité, service ou industrialisation se ressemblent.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {resolvedRole.relatedIndustries.map((industry) => (
+                  <span
+                    key={industry}
+                    className="rounded-full border border-brand-teal/15 bg-white px-4 py-2 text-sm font-semibold text-brand-stone"
+                  >
+                    {industry}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
           <div className="card-surface p-8 lg:col-span-2">
             <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
               <div>
