@@ -141,21 +141,21 @@ export default function InlineLeadForm({
   }
 
   return (
-    <div className={`card-surface ${compact ? "p-6" : "p-8"}`}>
+    <div className={`card-surface ${compact ? "p-6" : "p-6 sm:p-8"}`}>
       <p className="eyebrow">Parler à SKS TALENTS</p>
-      <h3 className="font-display text-4xl text-brand-ink">{title}</h3>
-      <p className="mt-4 text-base leading-8 text-brand-stone">{description}</p>
+      <h3 className="font-display text-2xl leading-[1.15] text-brand-ink sm:text-4xl">{title}</h3>
+      <p className="mt-2 text-sm leading-6 text-brand-stone sm:mt-4 sm:text-base sm:leading-8">{description}</p>
 
-      <p className="mt-2 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
+      <p className="mt-2 hidden items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal md:inline-flex">
         <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-teal animate-pulse" />
         Déjà 100+ dirigeants Life Sciences &amp; Santé animale accompagnés
       </p>
 
-      <div className="mt-4">
+      <div className="mt-4 hidden md:block">
         <GuaranteeBadge variant="compact" />
       </div>
 
-      <form className="mt-6 grid gap-4" onSubmit={handleSubmit} noValidate>
+      <form className="mt-4 grid gap-3 sm:mt-6 sm:gap-4" onSubmit={handleSubmit} noValidate>
         <input
           value={form.firstName}
           onChange={(event) => updateField("firstName", event.target.value)}

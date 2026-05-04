@@ -97,7 +97,7 @@ export default function ContactPage() {
           <div id="rappel" className="scroll-mt-28">
             <InlineLeadForm
               title="Recevoir un rappel qualifié"
-              description="Déposez vos coordonnées en moins d’une minute. Nous revenons avec une première lecture claire de la meilleure trajectoire : executive search, RPO, structuration RH ou échange de cadrage."
+              description="Vos coordonnées, on revient sous 24h avec une première lecture claire."
               role="CEO / COO / CPO / DRH"
               sector="Life Sciences, Biotech, Diagnostic, Animal Health & Petfood"
             />
