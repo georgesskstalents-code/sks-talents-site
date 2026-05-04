@@ -4,7 +4,7 @@ export const organizationSchema = {
   name: "SKS TALENTS",
   alternateName: "SKS Talents",
   url: "https://www.skstalents.fr",
-  email: "g.kengue@skstalents.com",
+  email: "g.kengue@skstalents.fr",
   areaServed: [
     { "@type": "Country", name: "France" },
     { "@type": "Country", name: "Sénégal" },
@@ -49,7 +49,7 @@ export const organizationSchema = {
       "@type": "ContactPoint",
       contactType: "sales",
       availableLanguage: ["French", "English"],
-      email: "g.kengue@skstalents.com",
+      email: "g.kengue@skstalents.fr",
       url: "https://calendly.com/g-kengue/talentconsulting"
     }
   ],

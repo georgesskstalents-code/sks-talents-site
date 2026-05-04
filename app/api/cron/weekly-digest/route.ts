@@ -9,7 +9,12 @@ import { noStoreJson } from "@/lib/requestSecurity";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const RECIPIENT = "g.kengue@skstalents.fr";
+// Primary recipient = the CEO's pro email on skstalents.fr.
+// Fallback recipient (Gmail tied to the Resend account) is used while
+// Resend hasn't verified the skstalents.fr domain yet — Resend rejects sends
+// to other recipients in test mode.
+const PRIMARY_RECIPIENT = "g.kengue@skstalents.fr";
+const FALLBACK_RECIPIENT = "georges.skstalents@gmail.com";
 const SITE_URL = "https://www.skstalents.fr";
 
 function dayMs(days: number) {
@@ -292,7 +297,13 @@ function buildHtmlEmail(opts: {
 </html>`;
 }
 
-async function postResend(apiKey: string, from: string, html: string, subject: string) {
+async function postResend(
+  apiKey: string,
+  from: string,
+  to: string,
+  html: string,
+  subject: string
+) {
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -301,8 +312,8 @@ async function postResend(apiKey: string, from: string, html: string, subject: s
     },
     body: JSON.stringify({
       from,
-      to: [RECIPIENT],
-      reply_to: RECIPIENT,
+      to: [to],
+      reply_to: to,
       subject,
       html
     }),
@@ -318,28 +329,44 @@ async function sendEmail(html: string, subject: string) {
     return { sent: false, reason: "RESEND_API_KEY missing" };
   }
 
-  // First try with the configured MAIL_FROM_EMAIL (must be a verified domain on Resend, ideally skstalents.fr)
-  const preferredFrom = `SKS Talents Suivi <${process.env.MAIL_FROM_EMAIL ?? "g.kengue@skstalents.fr"}>`;
-  let attempt = await postResend(apiKey, preferredFrom, html, subject);
+  const preferredFromBase = process.env.MAIL_FROM_EMAIL ?? "g.kengue@skstalents.fr";
+  const preferredFrom = `SKS Talents Suivi <${preferredFromBase}>`;
+  const onboardingFrom = "SKS Talents Suivi <onboarding@resend.dev>";
 
-  // If Resend rejects (domain not verified), fall back to Resend's verified onboarding domain
-  if (!attempt.ok && attempt.status === 403 && attempt.body.includes("not verified")) {
-    const fallbackFrom = "SKS Talents Suivi <onboarding@resend.dev>";
-    attempt = await postResend(apiKey, fallbackFrom, html, subject);
+  // 1. Try preferred from + primary recipient (.fr)
+  let attempt = await postResend(apiKey, preferredFrom, PRIMARY_RECIPIENT, html, subject);
+  if (attempt.ok) return { sent: true, from: preferredFrom, to: PRIMARY_RECIPIENT };
+
+  // 2. If domain not verified -> retry with onboarding@resend.dev (still to primary)
+  if (attempt.status === 403 && attempt.body.includes("not verified")) {
+    attempt = await postResend(apiKey, onboardingFrom, PRIMARY_RECIPIENT, html, subject);
     if (attempt.ok) {
       return {
         sent: true,
-        response: attempt.body.slice(0, 200),
-        from: fallbackFrom,
-        note: "Sent via Resend default domain. To send from skstalents.com, verify the domain at https://resend.com/domains."
+        from: onboardingFrom,
+        to: PRIMARY_RECIPIENT,
+        note: "Sent via Resend default domain. Verify skstalents.fr on https://resend.com/domains for proper branding."
       };
     }
   }
 
-  if (!attempt.ok) {
-    return { sent: false, reason: `Resend ${attempt.status}: ${attempt.body.slice(0, 200)}` };
+  // 3. If recipient rejected (Resend test mode), fall back to the Gmail account holder
+  if (
+    attempt.status === 403 &&
+    (attempt.body.includes("testing emails") || attempt.body.includes("own email"))
+  ) {
+    attempt = await postResend(apiKey, onboardingFrom, FALLBACK_RECIPIENT, html, subject);
+    if (attempt.ok) {
+      return {
+        sent: true,
+        from: onboardingFrom,
+        to: FALLBACK_RECIPIENT,
+        note: `Resend is in test mode — email sent to the account-holder address (${FALLBACK_RECIPIENT}) instead of ${PRIMARY_RECIPIENT}. Verify skstalents.fr on https://resend.com/domains to send to the pro address.`
+      };
+    }
   }
-  return { sent: true, response: attempt.body.slice(0, 200), from: preferredFrom };
+
+  return { sent: false, reason: `Resend ${attempt.status}: ${attempt.body.slice(0, 240)}` };
 }
 
 async function buildAndSendDigest() {

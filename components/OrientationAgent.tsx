@@ -319,7 +319,7 @@ export default function OrientationAgent() {
                 })
                 .join("")}
               <h2>Prochaine étape</h2>
-              <p>Pour un bilan plus approfondi, contactez SKS TALENTS via g.kengue@skstalents.com ou réservez directement un échange.</p>
+              <p>Pour un bilan plus approfondi, contactez SKS TALENTS via g.kengue@skstalents.fr ou réservez directement un échange.</p>
             </div>
           </body>
         </html>

@@ -70,10 +70,10 @@ export default function ContactPage() {
               <div className="mt-6 flex flex-wrap gap-3">
                 <CalendlyButton label="Réserver un call" />
                 <a
-                  href="mailto:g.kengue@skstalents.com"
+                  href="mailto:g.kengue@skstalents.fr"
                   className="inline-flex items-center justify-center rounded-full border border-brand-teal/25 px-6 py-4 text-sm font-semibold text-brand-teal transition hover:bg-brand-mint"
                 >
-                  g.kengue@skstalents.com
+                  g.kengue@skstalents.fr
                 </a>
               </div>
             </div>

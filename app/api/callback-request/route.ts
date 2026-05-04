@@ -119,7 +119,7 @@ export async function POST(request: Request) {
   }
 
   const webhookUrl = process.env.CALLBACK_WEBHOOK_URL;
-  const recipientEmail = process.env.CONTACT_NOTIFICATION_EMAIL ?? "g.kengue@skstalents.com";
+  const recipientEmail = process.env.CONTACT_NOTIFICATION_EMAIL ?? "g.kengue@skstalents.fr";
   const fromEmail = process.env.MAIL_FROM_EMAIL ?? recipientEmail;
   const pagePath = getPagePathFromReferer(originCheck.requestHeaders.get("referer"), "/contact");
 

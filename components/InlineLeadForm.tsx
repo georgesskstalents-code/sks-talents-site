@@ -126,7 +126,7 @@ export default function InlineLeadForm({
         setForm(initialState);
         setTurnstileToken("");
         setState("success");
-        setMessage("Merci, votre demande a bien été envoyée à g.kengue@skstalents.com.");
+        setMessage("Merci, votre demande a bien été envoyée à g.kengue@skstalents.fr.");
       } catch {
         trackSiteTelemetry({
           type: "form_error",
@@ -261,10 +261,10 @@ export default function InlineLeadForm({
 
       <div className="mt-4 flex flex-wrap gap-3 text-sm text-brand-stone">
         <a
-          href="mailto:g.kengue@skstalents.com"
+          href="mailto:g.kengue@skstalents.fr"
           className="font-semibold text-brand-teal transition hover:opacity-80"
         >
-          g.kengue@skstalents.com
+          g.kengue@skstalents.fr
         </a>
         <a
           href="https://fr.trustpilot.com/review/skstalents.fr"

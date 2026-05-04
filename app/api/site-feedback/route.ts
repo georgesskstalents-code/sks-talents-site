@@ -85,7 +85,7 @@ export async function POST(request: Request) {
   const recipientEmail =
     process.env.FEEDBACK_NOTIFICATION_EMAIL ??
     process.env.CONTACT_NOTIFICATION_EMAIL ??
-    "g.kengue@skstalents.com";
+    "g.kengue@skstalents.fr";
   const fromEmail = process.env.MAIL_FROM_EMAIL ?? recipientEmail;
 
   try {

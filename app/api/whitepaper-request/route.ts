@@ -99,7 +99,7 @@ export async function POST(request: Request) {
   const recipientEmail =
     process.env.SITE_INTELLIGENCE_EMAIL ??
     process.env.CONTACT_NOTIFICATION_EMAIL ??
-    "g.kengue@skstalents.com";
+    "g.kengue@skstalents.fr";
   const fromEmail = process.env.MAIL_FROM_EMAIL ?? recipientEmail;
   const pagePath = getPagePathFromReferer(
     originCheck.requestHeaders.get("referer"),

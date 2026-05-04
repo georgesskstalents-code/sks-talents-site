@@ -72,10 +72,10 @@ export default function Footer() {
               Contact direct
             </p>
             <a
-              href="mailto:g.kengue@skstalents.com"
+              href="mailto:g.kengue@skstalents.fr"
               className="mt-2 inline-flex text-base font-semibold text-white transition hover:text-teal-200"
             >
-              g.kengue@skstalents.com
+              g.kengue@skstalents.fr
             </a>
           </div>
           <div className="flex flex-wrap gap-3 pt-2">
