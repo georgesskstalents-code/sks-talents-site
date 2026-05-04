@@ -5,6 +5,7 @@ import {
   type SiteAnalyticsEvent
 } from "@/lib/siteIntelligence";
 import { noStoreJson } from "@/lib/requestSecurity";
+import { isAuthorizedCronRequest } from "@/lib/cronAuth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -488,26 +489,15 @@ async function buildAndSendDigest() {
 }
 
 function isAuthorized(request: Request): boolean {
-  // Vercel Cron sends Authorization: Bearer <CRON_SECRET>
-  const cronSecret = process.env.CRON_SECRET;
-  const auth = request.headers.get("authorization");
-  if (cronSecret && auth === `Bearer ${cronSecret}`) return true;
-
-  // Manual test mode: ?token=DASHBOARD_PRIVATE_TOKEN
-  const dashboardToken = process.env.DASHBOARD_PRIVATE_TOKEN;
-  if (dashboardToken) {
-    const url = new URL(request.url);
-    if (url.searchParams.get("token") === dashboardToken) return true;
-  }
-
-  // Spoofable UA fallback only kept when CRON_SECRET is not configured —
-  // once Vercel CRON_SECRET is set, only Bearer auth above is accepted.
-  if (!cronSecret) {
-    const ua = request.headers.get("user-agent") ?? "";
-    if (ua.includes("vercel-cron")) return true;
-  }
-
-  return false;
+  return isAuthorizedCronRequest({
+    authorization: request.headers.get("authorization"),
+    userAgent: request.headers.get("user-agent"),
+    url: request.url,
+    env: {
+      cronSecret: process.env.CRON_SECRET,
+      dashboardToken: process.env.DASHBOARD_PRIVATE_TOKEN
+    }
+  });
 }
 
 export async function GET(request: Request) {
