@@ -9,7 +9,7 @@ import { noStoreJson } from "@/lib/requestSecurity";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const RECIPIENT = "g.kengue@skstalents.com";
+const RECIPIENT = "g.kengue@skstalents.fr";
 const SITE_URL = "https://www.skstalents.fr";
 
 function dayMs(days: number) {
@@ -292,15 +292,7 @@ function buildHtmlEmail(opts: {
 </html>`;
 }
 
-async function sendEmail(html: string, subject: string) {
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    return { sent: false, reason: "RESEND_API_KEY missing" };
-  }
-
-  const fromAddress = process.env.MAIL_FROM_EMAIL ?? "g.kengue@skstalents.com";
-  const from = `SKS Talents Suivi <${fromAddress}>`;
-
+async function postResend(apiKey: string, from: string, html: string, subject: string) {
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -316,12 +308,38 @@ async function sendEmail(html: string, subject: string) {
     }),
     cache: "no-store"
   });
+  const body = await response.text().catch(() => "");
+  return { ok: response.ok, status: response.status, body };
+}
 
-  const responseBody = await response.text().catch(() => "");
-  if (!response.ok) {
-    return { sent: false, reason: `Resend ${response.status}: ${responseBody.slice(0, 200)}` };
+async function sendEmail(html: string, subject: string) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    return { sent: false, reason: "RESEND_API_KEY missing" };
   }
-  return { sent: true, response: responseBody.slice(0, 200) };
+
+  // First try with the configured MAIL_FROM_EMAIL (must be a verified domain on Resend, ideally skstalents.fr)
+  const preferredFrom = `SKS Talents Suivi <${process.env.MAIL_FROM_EMAIL ?? "g.kengue@skstalents.fr"}>`;
+  let attempt = await postResend(apiKey, preferredFrom, html, subject);
+
+  // If Resend rejects (domain not verified), fall back to Resend's verified onboarding domain
+  if (!attempt.ok && attempt.status === 403 && attempt.body.includes("not verified")) {
+    const fallbackFrom = "SKS Talents Suivi <onboarding@resend.dev>";
+    attempt = await postResend(apiKey, fallbackFrom, html, subject);
+    if (attempt.ok) {
+      return {
+        sent: true,
+        response: attempt.body.slice(0, 200),
+        from: fallbackFrom,
+        note: "Sent via Resend default domain. To send from skstalents.com, verify the domain at https://resend.com/domains."
+      };
+    }
+  }
+
+  if (!attempt.ok) {
+    return { sent: false, reason: `Resend ${attempt.status}: ${attempt.body.slice(0, 200)}` };
+  }
+  return { sent: true, response: attempt.body.slice(0, 200), from: preferredFrom };
 }
 
 async function buildAndSendDigest() {
