@@ -6,7 +6,7 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>SKS Talents · Marketing Dashboard</title>
+<title>SKS Talents · Dashboard performance</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -164,15 +164,15 @@ function App() {
   const noopSet = () => {};
 
   const PAGES = [
-    { id: "cover",       label: "Page de couverture",           sub: "SKS TALENTS · RAPPORT MARKETING" },
-    { id: "summary",     label: "Résumé exécutif",              sub: "01 · RÉSUMÉ" },
-    { id: "traffic",     label: "Trafic",                       sub: "02 · TRAFIC" },
-    { id: "seo",         label: "SEO",                          sub: "03 · SEO" },
-    { id: "paid",        label: "Publicité payante",            sub: "04 · PAID ADS" },
-    { id: "conversions", label: "Conversions",                  sub: "05 · CONVERSIONS" },
-    { id: "pages",       label: "Top pages",                    sub: "06 · PAGES" },
-    { id: "geo",         label: "Géographie",                   sub: "07 · GÉOGRAPHIE" },
-    { id: "actions",     label: "Plan d'action",                sub: "08 · ACTIONS" },
+    { id: "cover",       label: "Page de couverture",           sub: "SKS TALENTS · RAPPORT PERFORMANCE" },
+    { id: "summary",     label: "Synthèse",                     sub: "01 · SYNTHÈSE" },
+    { id: "actions",     label: "Plan d'action",                sub: "02 · ACTIONS" },
+    { id: "traffic",     label: "Trafic",                       sub: "03 · TRAFIC" },
+    { id: "seo",         label: "SEO",                          sub: "04 · SEO" },
+    { id: "paid",        label: "Publicité",                    sub: "05 · PUBLICITÉ" },
+    { id: "conversions", label: "Conversions",                  sub: "06 · CONVERSIONS" },
+    { id: "pages",       label: "Pages populaires",             sub: "07 · PAGES" },
+    { id: "geo",         label: "Géographie",                   sub: "08 · GÉOGRAPHIE" },
     { id: "notes",       label: "Notes",                        sub: "09 · NOTES" },
   ];
 
@@ -185,11 +185,11 @@ function App() {
           {p.id === "cover" ? (
             <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", height: "185mm", padding: "20mm 10mm" }}>
               <div>
-                <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--ink-soft)" }}>Rapport marketing · {today}</div>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--ink-soft)" }}>Rapport performance · {today}</div>
               </div>
               <div>
                 <div style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: 120, lineHeight: 0.95, letterSpacing: "-0.03em", color: "var(--ink)" }}>SKS Talents</div>
-                <div style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: 64, lineHeight: 1, letterSpacing: "-0.02em", color: "var(--accent)" }}>dashboard marketing</div>
+                <div style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: 64, lineHeight: 1, letterSpacing: "-0.02em", color: "var(--accent)" }}>dashboard performance</div>
               </div>
               <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.08em", color: "var(--ink-soft)", textTransform: "uppercase" }}>
                 Période · 30 derniers jours &nbsp;·&nbsp; Canaux · tous &nbsp;·&nbsp; Comparaison · activée

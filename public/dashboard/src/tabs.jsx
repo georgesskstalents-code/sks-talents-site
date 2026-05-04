@@ -222,7 +222,7 @@ function ConversionsTab() {
         </section>
 
         <section className="card">
-          <header className="card-header"><div><h3 className="card-title">Entonnoir</h3><p className="card-sub">Parcours de demande de booking</p></div></header>
+          <header className="card-header"><div><h3 className="card-title">Entonnoir</h3><p className="card-sub">Parcours lead → mandat signé</p></div></header>
           <ul className="funnel">
             {DATA.funnel.map((f, i) => {
               const pct = f.count / DATA.funnel[0].count;

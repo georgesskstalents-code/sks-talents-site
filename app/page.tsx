@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import HomeSearchSection from "@/components/HomeSearchSection";
 import LatestInsights from "@/components/LatestInsights";
 import MethodNarrative from "@/components/MethodNarrative";
+import MobileFichesMetiersSection from "@/components/MobileFichesMetiersSection";
 import MobileOrientationSection from "@/components/MobileOrientationSection";
 import OrientationTeaser from "@/components/OrientationTeaser";
 import ParallaxLayer from "@/components/ParallaxLayer";
@@ -248,6 +249,11 @@ export default function HomePage() {
       {/* Mobile-only: orientation + tools (Étudiant / Dirigeant / Calcul salaire / Écoles) */}
       <RevealOnScroll delayMs={175}>
         <MobileOrientationSection />
+      </RevealOnScroll>
+
+      {/* Mobile-only: fiches métiers (4 rôles + CTA toutes les fiches) */}
+      <RevealOnScroll delayMs={180}>
+        <MobileFichesMetiersSection />
       </RevealOnScroll>
 
       {false && (

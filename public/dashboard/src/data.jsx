@@ -4,7 +4,7 @@
 const DEMO_DATA = {
   client: {
     name: "SKS Talents",
-    subtitle: "Agence de management et de booking d'artistes",
+    subtitle: "Cabinet executive search Life Sciences & Santé animale",
     period: "20 mars — 20 avril 2026",
     comparedTo: "17 fév — 19 mars 2026",
   },
@@ -59,14 +59,14 @@ const DEMO_DATA = {
   ],
 
   seoKeywords: [
-    { term: "celebrity booking agency",       pos: 3,  prev: 6,  vol: 12100, clicks: 2840, trend: [6,6,5,5,4,4,3,3] },
-    { term: "hire musician for event",        pos: 5,  prev: 8,  vol: 8800,  clicks: 1920, trend: [9,8,8,7,7,6,5,5] },
-    { term: "talent agency new york",         pos: 2,  prev: 2,  vol: 6200,  clicks: 2140, trend: [2,2,2,3,2,2,2,2] },
-    { term: "book a speaker for conference",  pos: 8,  prev: 14, vol: 5400,  clicks: 640,  trend: [14,13,12,11,10,9,9,8] },
-    { term: "sks talents",                    pos: 1,  prev: 1,  vol: 4800,  clicks: 3820, trend: [1,1,1,1,1,1,1,1] },
-    { term: "dj booking agency",              pos: 4,  prev: 7,  vol: 4100,  clicks: 1120, trend: [8,7,7,6,5,5,4,4] },
-    { term: "corporate event entertainment",  pos: 11, prev: 18, vol: 3600,  clicks: 320,  trend: [18,17,16,15,14,13,12,11] },
-    { term: "keynote speaker agency",         pos: 6,  prev: 9,  vol: 2900,  clicks: 420,  trend: [10,9,9,8,7,7,6,6] },
+    { term: "executive search biotech",          pos: 3,  prev: 6,  vol: 12100, clicks: 2840, trend: [6,6,5,5,4,4,3,3] },
+    { term: "cabinet recrutement Life Sciences", pos: 5,  prev: 8,  vol: 8800,  clicks: 1920, trend: [9,8,8,7,7,6,5,5] },
+    { term: "executive search Paris",            pos: 2,  prev: 2,  vol: 6200,  clicks: 2140, trend: [2,2,2,3,2,2,2,2] },
+    { term: "recrutement diagnostic Série A",    pos: 8,  prev: 14, vol: 5400,  clicks: 640,  trend: [14,13,12,11,10,9,9,8] },
+    { term: "sks talents",                       pos: 1,  prev: 1,  vol: 4800,  clicks: 3820, trend: [1,1,1,1,1,1,1,1] },
+    { term: "recrutement vétérinaire dirigeant", pos: 4,  prev: 7,  vol: 4100,  clicks: 1120, trend: [8,7,7,6,5,5,4,4] },
+    { term: "recrutement biotech Série B",       pos: 11, prev: 18, vol: 3600,  clicks: 320,  trend: [18,17,16,15,14,13,12,11] },
+    { term: "RPO biotech scale-up",              pos: 6,  prev: 9,  vol: 2900,  clicks: 420,  trend: [10,9,9,8,7,7,6,6] },
   ],
 
   seoPositionBuckets: [
@@ -78,40 +78,40 @@ const DEMO_DATA = {
   ],
 
   conversions: [
-    { id: "booking",   name: "Demande de booking",     count: 1842, value: 184200, delta: +0.284 },
-    { id: "callback",  name: "Rappel demandé",  count: 984,  value: 0,       delta: +0.142 },
-    { id: "newsletter",name: "Inscription newsletter",   count: 624,  value: 0,       delta: +0.068 },
-    { id: "download",  name: "Téléchargement press-kit",  count: 292,  value: 0,       delta: +0.318 },
-    { id: "purchase",  name: "Acompte versé",        count: 100,  value: 100720,  delta: +0.214 },
+    { id: "rdv",       name: "Demande de RDV",            count: 1842, value: 184200, delta: +0.284 },
+    { id: "callback",  name: "Rappel demandé",            count: 984,  value: 0,       delta: +0.142 },
+    { id: "newsletter",name: "Inscription newsletter",    count: 624,  value: 0,       delta: +0.068 },
+    { id: "download",  name: "Téléchargement étude",      count: 292,  value: 0,       delta: +0.318 },
+    { id: "mandat",    name: "Mandat signé",              count: 100,  value: 100720,  delta: +0.214 },
   ],
 
   funnel: [
     { stage: "Site visité",                  count: 184230 },
-    { stage: "Roster consulté",              count: 82640  },
-    { stage: "Fiche artiste ouverte",        count: 38420  },
-    { stage: "Demande de booking soumise",   count: 7840   },
-    { stage: "Contrat signé",                count: 3842   },
+    { stage: "Services consultés",           count: 82640  },
+    { stage: "Page sectorielle ouverte",     count: 38420  },
+    { stage: "Lead qualifié soumis",         count: 7840   },
+    { stage: "Mandat signé",                 count: 3842   },
   ],
 
   topPages: [
     { path: "/",                             title: "Accueil",                       sessions: 42180, avgTime: 142, bounce: 0.34, convRate: 0.028 },
-    { path: "/roster",                       title: "Roster complet",                sessions: 28640, avgTime: 218, bounce: 0.22, convRate: 0.041 },
-    { path: "/talent/maya-rivera",           title: "Maya Rivera",                sessions: 18920, avgTime: 284, bounce: 0.18, convRate: 0.062 },
-    { path: "/talent/the-north-collective",  title: "The North Collective",       sessions: 14240, avgTime: 246, bounce: 0.21, convRate: 0.048 },
-    { path: "/services/corporate",           title: "Événements corporate",           sessions: 11820, avgTime: 194, bounce: 0.28, convRate: 0.038 },
-    { path: "/talent/jude-okafor",           title: "Jude Okafor",                sessions: 9640,  avgTime: 312, bounce: 0.16, convRate: 0.071 },
-    { path: "/book",                         title: "Formulaire de booking",               sessions: 7840,  avgTime: 198, bounce: 0.12, convRate: 0.142 },
-    { path: "/about",                        title: "À propos de SKS",                  sessions: 6420,  avgTime: 124, bounce: 0.42, convRate: 0.014 },
-    { path: "/press",                        title: "Presse & media kit",          sessions: 4820,  avgTime: 168, bounce: 0.38, convRate: 0.022 },
+    { path: "/services",                     title: "Nos services",                  sessions: 28640, avgTime: 218, bounce: 0.22, convRate: 0.041 },
+    { path: "/life-sciences",                title: "Life Sciences",                 sessions: 18920, avgTime: 284, bounce: 0.18, convRate: 0.062 },
+    { path: "/animal-health",                title: "Animal Health",                 sessions: 14240, avgTime: 246, bounce: 0.21, convRate: 0.048 },
+    { path: "/diagnostic",                   title: "Diagnostic recrutement",        sessions: 11820, avgTime: 194, bounce: 0.28, convRate: 0.038 },
+    { path: "/references",                   title: "Références",                    sessions: 9640,  avgTime: 312, bounce: 0.16, convRate: 0.071 },
+    { path: "/contact",                      title: "Formulaire de contact",         sessions: 7840,  avgTime: 198, bounce: 0.12, convRate: 0.142 },
+    { path: "/about",                        title: "À propos de SKS",               sessions: 6420,  avgTime: 124, bounce: 0.42, convRate: 0.014 },
+    { path: "/blog",                         title: "Articles & insights",           sessions: 4820,  avgTime: 168, bounce: 0.38, convRate: 0.022 },
   ],
 
   paidCampaigns: [
-    { name: "Marque — SKS Talents",        channel: "Google Ads", spend: 8420, clicks: 4820, conv: 184, roas: 6.8, delta: +0.124 },
-    { name: "Hors-marque — Booking célébrités", channel: "Google Ads", spend: 12840,clicks: 6420, conv: 142, roas: 3.2, delta: +0.082 },
-    { name: "Événements corporate — retargeting",channel: "Meta",       spend: 6840, clicks: 8240, conv: 98,  roas: 4.1, delta: +0.214 },
-    { name: "Notoriété roster — IG",      channel: "Meta",       spend: 5210, clicks: 12640,conv: 62,  roas: 2.8, delta: -0.042 },
-    { name: "LinkedIn — leads conférences",channel: "LinkedIn",   spend: 4180, clicks: 2120, conv: 42,  roas: 5.2, delta: +0.168 },
-    { name: "YouTube — reels artistes",     channel: "YouTube",    spend: 2840, clicks: 3820, conv: 24,  roas: 1.8, delta: +0.318 },
+    { name: "Marque — SKS Talents",                      channel: "Google Ads", spend: 8420, clicks: 4820, conv: 184, roas: 6.8, delta: +0.124 },
+    { name: "Hors-marque — recrutement biotech",         channel: "Google Ads", spend: 12840,clicks: 6420, conv: 142, roas: 3.2, delta: +0.082 },
+    { name: "Retargeting CEO biotech / vétérinaire",     channel: "Meta",       spend: 6840, clicks: 8240, conv: 98,  roas: 4.1, delta: +0.214 },
+    { name: "Notoriété cabinet — IG",                    channel: "Meta",       spend: 5210, clicks: 12640,conv: 62,  roas: 2.8, delta: -0.042 },
+    { name: "LinkedIn — leads dirigeants Life Sciences", channel: "LinkedIn",   spend: 4180, clicks: 2120, conv: 42,  roas: 5.2, delta: +0.168 },
+    { name: "YouTube — fiches métiers",                  channel: "YouTube",    spend: 2840, clicks: 3820, conv: 24,  roas: 1.8, delta: +0.318 },
   ],
 
   // country code -> relative intensity 0..1 + sessions
@@ -129,14 +129,14 @@ const DEMO_DATA = {
   ],
 
   notes: [
-    { date: "Apr 14", author: "Équipe Strategy", tag: "Lancement",   title: "Campagne roster printemps lancée",
-      body: "Lancement du roster printemps sur Meta + Google. Signal précoce : +24% de sessions en semaine-sur-semaine, demandes de booking en hausse significative. À surveiller : le CPA sur la campagne hors-marque — tendance à la baisse, excellent signe." },
-    { date: "Apr 08", author: "Équipe SEO",   tag: "Gain",      title: "Position 3 sur « celebrity booking agency »",
-      body: "Passage de la position 6 → 3 après la refonte du contenu de la page roster. Ce seul mot-clé génère maintenant ~2.8k clics/mois. Suite : créer du contenu de support pour « hire musician for event »." },
-    { date: "Apr 02", author: "Équipe Paid",   tag: "Risque",     title: "ROAS de la campagne notoriété IG en baisse",
-      body: "Le ROAS de la campagne Notoriété Roster IG est passé de 3.4 → 2.8. Fatigue créative suspectée. Nouvelles créas style reel livrées le 22 avril. Recommandation : baisse de budget de 30% d'ici là." },
-    { date: "Mar 26", author: "Équipe Strategy", tag: "Insight",  title: "Page corporate convertit 2× plus que l'accueil",
-      body: "La landing page événements corporate convertit à 3.8% contre 2.8% sur l'accueil. Intéressant d'y rediriger directement le trafic paid sur les requêtes B2B." },
+    { date: "Apr 14", author: "Équipe Strategy", tag: "Lancement",   title: "Campagne sectorielle Life Sciences lancée",
+      body: "Lancement de la campagne sectorielle Life Sciences sur Meta + Google. Signal précoce : +24% de sessions en semaine-sur-semaine, demandes de RDV en hausse significative. À surveiller : le CPA sur la campagne hors-marque — tendance à la baisse, excellent signe." },
+    { date: "Apr 08", author: "Équipe SEO",   tag: "Gain",      title: "Position 3 sur « executive search biotech »",
+      body: "Passage de la position 6 → 3 après la refonte du contenu des pages sectorielles. Ce seul mot-clé génère maintenant ~2.8k clics/mois. Suite : créer du contenu de support pour « cabinet recrutement Life Sciences »." },
+    { date: "Apr 02", author: "Équipe Paid",   tag: "Risque",     title: "ROAS de la campagne notoriété cabinet IG en baisse",
+      body: "Le ROAS de la campagne Notoriété cabinet IG est passé de 3.4 → 2.8. Fatigue créative suspectée. Nouvelles créas style reel livrées le 22 avril. Recommandation : baisse de budget de 30% d'ici là." },
+    { date: "Mar 26", author: "Équipe Strategy", tag: "Insight",  title: "Page diagnostic convertit 2× plus que l'accueil",
+      body: "La page Diagnostic recrutement convertit à 3.8% contre 2.8% sur l'accueil. Intéressant d'y rediriger directement le trafic paid sur les requêtes B2B dirigeants Life Sciences & Animal Health." },
   ],
 };
 

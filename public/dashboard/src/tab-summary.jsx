@@ -105,7 +105,7 @@ function FunnelCard({ onDrill }) {
       <header className="card-header">
         <div>
           <h3 className="card-title">Entonnoir de conversion</h3>
-          <p className="card-sub">Parcours de demande de booking</p>
+          <p className="card-sub">Parcours lead → mandat signé</p>
         </div>
         <button className="link-btn" onClick={() => onDrill("conversions")}>Explorer ↗</button>
       </header>
@@ -174,7 +174,7 @@ function SummaryTab({ state, setState }) {
             <span className="chip-dot" /> Revenus en hausse de {fmt.pctSigned(0.186)}
           </span>
           <span className="chip">
-            <span className="chip-dot chip-dot-ink" /> Demandes de booking {fmt.pctSigned(0.284)}
+            <span className="chip-dot chip-dot-ink" /> Demandes de RDV {fmt.pctSigned(0.284)}
           </span>
           <span className="chip chip-warn">
             <span className="chip-dot" /> 1 campagne à revoir
