@@ -425,7 +425,7 @@ export default function SiteLanguageSelector() {
         isApplyingTranslation = true;
         translateCurrentPage(activePath)
           .catch((error) => {
-            console.error("Site translation observer error", error);
+            if (process.env.NODE_ENV !== "production") console.error("Site translation observer error", error);
           })
           .finally(() => {
             isApplyingTranslation = false;
@@ -466,13 +466,13 @@ export default function SiteLanguageSelector() {
     const runInitialTranslation = async () => {
       if (readCachedTranslations(activePath)) {
         await translateCurrentPage(activePath, true).catch((error) => {
-          console.error("Site translation error", error);
+          if (process.env.NODE_ENV !== "production") console.error("Site translation error", error);
         });
       } else {
         setIsTranslating(true);
         await translateCurrentPage(activePath)
           .catch((error) => {
-            console.error("Site translation error", error);
+            if (process.env.NODE_ENV !== "production") console.error("Site translation error", error);
           })
           .finally(() => {
             setIsTranslating(false);
@@ -515,7 +515,7 @@ export default function SiteLanguageSelector() {
 
     if (readCachedTranslations(activePath)) {
       void translateCurrentPage(activePath, false).catch((error) => {
-        console.error("Site translation error", error);
+        if (process.env.NODE_ENV !== "production") console.error("Site translation error", error);
       });
       return;
     }
@@ -523,7 +523,7 @@ export default function SiteLanguageSelector() {
     setIsTranslating(true);
     translateCurrentPage(activePath)
       .catch((error) => {
-        console.error("Site translation error", error);
+        if (process.env.NODE_ENV !== "production") console.error("Site translation error", error);
       })
       .finally(() => {
         setIsTranslating(false);

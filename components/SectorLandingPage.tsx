@@ -542,11 +542,7 @@ export default function SectorLandingPage({ config }: Props) {
             <div className="mt-10 flex w-full justify-center">
               <div className="w-full max-w-md">
                 <HeroVideoCard
-                  vimeoId={
-                    process.env.NEXT_PUBLIC_VIMEO_VIDEO_ID ??
-                    process.env.VIMEO_VIDEO_ID ??
-                    "851364422"
-                  }
+                  vimeoId={process.env.NEXT_PUBLIC_VIMEO_VIDEO_ID ?? "851364422"}
                   compact
                 />
               </div>

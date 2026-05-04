@@ -1,13 +1,11 @@
+import type { Metadata } from "next";
 import CalendlyButton from "@/components/CalendlyButton";
 import EcosystemTrustBar from "@/components/EcosystemTrustBar";
 import FounderCard from "@/components/FounderCard";
 import Hero from "@/components/Hero";
-import HomeSearchSection from "@/components/HomeSearchSection";
-import LatestInsights from "@/components/LatestInsights";
 import MethodNarrative from "@/components/MethodNarrative";
 import MobileFichesMetiersSection from "@/components/MobileFichesMetiersSection";
 import MobileOrientationSection from "@/components/MobileOrientationSection";
-import OrientationTeaser from "@/components/OrientationTeaser";
 import ParallaxLayer from "@/components/ParallaxLayer";
 import RibbonCTA from "@/components/RibbonCTA";
 import RevealOnScroll from "@/components/RevealOnScroll";
@@ -18,6 +16,12 @@ import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import TestimonialMarquee from "@/components/TestimonialMarquee";
 import { references } from "@/data/references";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.skstalents.fr"
+  }
+};
 
 const youAreHerePoints: { title: string; html: string }[] = [
   {
@@ -256,37 +260,6 @@ export default function HomePage() {
         <MobileFichesMetiersSection />
       </RevealOnScroll>
 
-      {false && (
-        <RevealOnScroll delayMs={185}>
-          <LatestInsights />
-        </RevealOnScroll>
-      )}
-
-      {false && (
-        <RevealOnScroll delayMs={195}>
-          <HomeSearchSection />
-        </RevealOnScroll>
-      )}
-
-      {false && (
-        <RevealOnScroll delayMs={205}>
-          <OrientationTeaser />
-        </RevealOnScroll>
-      )}
-
-      {false && (
-        <RevealOnScroll delayMs={210}>
-          <RibbonCTA
-            variant="final"
-            eyebrow="Dernière étape"
-            title="Recrutez le bon dirigeant Life Sciences & Santé animale. Sans perdre 6 mois."
-            description="100+ profils placés en Série A, Série B et scale-up. 10 jours en moyenne pour la première shortlist. Une méthode qui transforme un recrutement sensible en mission lisible — et défendable au COMEX."
-            primaryLabel="Réserver 15 min d’analyse"
-            secondaryHref="/references"
-            secondaryLabel="Voir nos références"
-          />
-        </RevealOnScroll>
-      )}
     </>
   );
 }

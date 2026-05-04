@@ -13,9 +13,9 @@ export const dynamic = "force-dynamic";
 // Fallback recipient (Gmail tied to the Resend account) is used while
 // Resend hasn't verified the skstalents.fr domain yet — Resend rejects sends
 // to other recipients in test mode.
-const PRIMARY_RECIPIENT = "g.kengue@skstalents.fr";
-const FALLBACK_RECIPIENT = "georges.skstalents@gmail.com";
-const SITE_URL = "https://www.skstalents.fr";
+const PRIMARY_RECIPIENT = process.env.CONTACT_NOTIFICATION_EMAIL ?? "g.kengue@skstalents.fr";
+const FALLBACK_RECIPIENT = process.env.CRON_FALLBACK_RECIPIENT ?? "georges.skstalents@gmail.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.skstalents.fr";
 
 function dayMs(days: number) {
   return days * 24 * 60 * 60 * 1000;
@@ -500,9 +500,12 @@ function isAuthorized(request: Request): boolean {
     if (url.searchParams.get("token") === dashboardToken) return true;
   }
 
-  // Fallback: Vercel Cron user-agent check (less strict)
-  const ua = request.headers.get("user-agent") ?? "";
-  if (ua.includes("vercel-cron")) return true;
+  // Spoofable UA fallback only kept when CRON_SECRET is not configured —
+  // once Vercel CRON_SECRET is set, only Bearer auth above is accepted.
+  if (!cronSecret) {
+    const ua = request.headers.get("user-agent") ?? "";
+    if (ua.includes("vercel-cron")) return true;
+  }
 
   return false;
 }

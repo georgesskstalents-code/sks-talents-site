@@ -13,7 +13,7 @@ export default function MobileOrientationSection() {
     <section className="container-shell py-10 md:hidden">
       {/* Eyebrow + title + intro */}
       <div className="space-y-4">
-        <span className="inline-flex rounded-full border border-brand-teal/15 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-stone/70 shadow-sm">
+        <span className="inline-flex rounded-full border border-brand-teal/15 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-stone/80 shadow-sm">
           Orientez-vous
         </span>
         <h2 className="font-display text-[26px] leading-[1.15] text-brand-ink">
@@ -80,7 +80,7 @@ export default function MobileOrientationSection() {
             <Calculator size={18} />
           </span>
           <div className="flex-1">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-stone/70">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-stone/80">
               Outil
             </p>
             <p className="mt-1 font-display text-base leading-tight text-brand-ink">
@@ -103,7 +103,7 @@ export default function MobileOrientationSection() {
             <School size={18} />
           </span>
           <div className="flex-1">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-stone/70">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-stone/80">
               Ressource
             </p>
             <p className="mt-1 font-display text-base leading-tight text-brand-ink">
