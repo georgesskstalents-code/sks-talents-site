@@ -1,43 +1,59 @@
 import type { MetadataRoute } from "next";
 import { articles } from "@/data/articles";
-import { whitepaperGuides } from "@/data/lexiconHub";
 import { jobRoles } from "@/data/jobRoles";
 import { references } from "@/data/references";
 import { investmentFunds } from "@/data/investmentFunds";
 import { comparisons } from "@/data/comparisons";
 import { marketHubs } from "@/data/marketHubs";
-import { events, newsHubs, schools } from "@/data/resources";
-import { ecosystemDetailedPages, ecosystemStudy } from "@/data/ecosystemTargets";
-import { seoGrowthPages } from "@/data/seoGrowthPages";
 import {
   animalHealthCategories,
   animalHealthHub,
   lifeSciencesCategories,
   lifeSciencesHub
 } from "@/data/sectors";
-import { getNotionSiteContentList } from "@/lib/notion";
 
 const baseUrl = "https://www.skstalents.fr";
-const SITEMAP_NOTION_REVALIDATE_SECONDS = 3600;
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+/**
+ * Sitemap policy (revisé 2026-05-05 après audit Search Console) :
+ *
+ *   ✓ Inclus : routes statiques curées + dynamic routes adossées à du contenu
+ *     substantiel (jobRoles avec missions ET skills remplis, articles avec
+ *     content > 500 chars, references curées, comparisons, marketHubs,
+ *     investmentFunds).
+ *
+ *   ✗ Exclus : seoGrowthPages (SEO bait auto-généré), schools, events, news,
+ *     ecosystem dynamic, whitepaper guides, newsletter Notion. Ces pages
+ *     restent accessibles par lien direct mais ne sont pas annoncées à Google
+ *     pour préserver le crawl budget et concentrer le signal de qualité.
+ *
+ * Avant cette revision : 621 URLs (audit GSC : ~28 considérées « accessibles »).
+ * Après : ~250 URLs ciblées qualité-content.
+ */
+
+function hasSubstantialArticle(a: typeof articles[number]): boolean {
+  return Boolean(a.slug) && a.content.length > 500 && a.excerpt.length > 80;
+}
+
+function hasSubstantialJobRole(r: typeof jobRoles[number]): boolean {
+  return (
+    Boolean(r.slug) &&
+    r.missions.length >= 2 &&
+    r.skills.length >= 3 &&
+    r.successFactors.length >= 1
+  );
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
-    "/abonnement",
     "/about",
     "/animal-health",
-    "/benin",
+    "/animal-health/structuration-ia",
     "/blog",
     "/calcul-salaire-brut-net",
-    "/cas-d-usage",
     "/contact",
-    "/cote-divoire",
     "/diagnostic",
-    "/diagnostic/rapport",
-    "/ecosystem",
-    "/events",
-    "/france",
-    "/investment-funds",
     "/job-roles",
     "/legal/cgu",
     "/legal/cgv",
@@ -47,27 +63,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/legal/politique-cookies",
     "/lexique-life-sciences-rh",
     "/life-sciences",
-    "/market-hubs",
-    "/media-kit",
+    "/life-sciences/structuration-ia",
     "/mission",
-    "/news",
-    "/newsletter",
     "/orientation",
-    "/orientation/biotechnologies",
-    "/partenaires-media",
     "/pour-qui",
-    "/press",
     "/references",
     "/rejoignez-nous",
     "/services",
     "/resources",
     "/salary-benchmarks",
-    "/schools",
     "/scorecard-dirigeant",
-    "/senegal",
-    "/services/website",
-    "/studies",
-    "/comparatifs",
     "/team"
   ];
 
@@ -82,35 +87,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ])
   ];
 
-  const newsletterEntries = await getNotionSiteContentList("newsletter", 100, {
-    cache: "force-cache",
-    timeoutMs: 8000,
-    next: {
-      revalidate: SITEMAP_NOTION_REVALIDATE_SECONDS
-    }
-  }).catch(() => []);
+  const dynamicRoutes = [
+    ...articles.filter(hasSubstantialArticle).map((a) => `/blog/${a.slug}`),
+    ...jobRoles.filter(hasSubstantialJobRole).map((r) => `/job-roles/${r.slug}`),
+    ...references.map((r) => `/references/${r.slug}`),
+    ...investmentFunds.map((f) => `/investment-funds/${f.slug}`),
+    ...comparisons.map((c) => `/comparatifs/${c.slug}`),
+    ...marketHubs.map((m) => `/market-hubs/${m.slug}`)
+  ];
 
-  return [
-    ...staticRoutes,
-    ...sectorRoutes,
-    ...articles.map((article) => `/blog/${article.slug}`),
-    ...jobRoles.map((role) => `/job-roles/${role.slug}`),
-    ...references.map((reference) => `/references/${reference.slug}`),
-    ...investmentFunds.map((fund) => `/investment-funds/${fund.slug}`),
-    ...comparisons.map((comparison) => `/comparatifs/${comparison.slug}`),
-    ...marketHubs.map((hub) => `/market-hubs/${hub.slug}`),
-    ...ecosystemDetailedPages.map((item) => `/ecosystem/${item.slug}`),
-    ...seoGrowthPages.map((page) => `/${page.slug}`),
-    ...whitepaperGuides.map((guide) => `/guides/${guide.slug}`),
-    `/studies/${ecosystemStudy.slug}`,
-    ...newsletterEntries.map((item) => `/newsletter/${item.slug}`),
-    ...newsHubs.map((item) => `/news/${item.slug}`),
-    ...schools.map((item) => `/schools/${item.slug}`),
-    ...events.map((item) => `/events/${item.slug}`)
-  ].map((url) => ({
+  const allUrls = [...staticRoutes, ...sectorRoutes, ...dynamicRoutes];
+
+  // Defensive : strip duplicates AND any URL containing /404 (safety net).
+  const cleaned = Array.from(new Set(allUrls)).filter((url) => !url.includes("/404"));
+
+  return cleaned.map((url) => ({
     url: `${baseUrl}${url}`,
     changeFrequency: "weekly",
-    priority: url === "" ? 1 : 0.8,
+    priority: url === "" ? 1 : url.endsWith("/structuration-ia") ? 0.9 : 0.8,
     lastModified: new Date()
   }));
 }
