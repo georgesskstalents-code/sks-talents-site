@@ -19,6 +19,8 @@ SKS Talents accompagne les dirigeants Life Sciences et Santé animale qui doiven
 - [Notre équipe](https://www.skstalents.fr/team): fondateur Georges Kengue + collaborateurs
 - [Life Sciences](https://www.skstalents.fr/life-sciences): biotech, diagnostic, medtech, ingénierie
 - [Animal Health](https://www.skstalents.fr/animal-health): vétérinaire, petfood, santé animale
+- [Animal Health · Structuration RH + IA](https://www.skstalents.fr/animal-health/structuration-ia): 6 agents IA sectoriels pour groupements vétérinaires et petfood (reporting multi-sites, juridique RH, M&A pipeline, lead catcher, CFO copilot, sales closer). ROI mesuré sur 6 mois. Démo interactive 90 sec + diagnostic personnalisé 5 questions.
+- [Life Sciences · CEO Copilot IA](https://www.skstalents.fr/life-sciences/structuration-ia): Agent CEO Copilot stratégique pour CEO biotech, medtech, deeptech, e-santé Series A à C. Anticipation des hires 6 mois à l'avance, board pack en 5 minutes, talent intelligence en continu. Démo + diagnostic.
 - [Services](https://www.skstalents.fr/services): executive search, RPO, structuration RH
 - [Diagnostic recrutement](https://www.skstalents.fr/diagnostic): 5 questions pour cadrer
 - [Références](https://www.skstalents.fr/references): clients et cas concrets
@@ -50,4 +52,9 @@ SKS Talents accompagne les dirigeants Life Sciences et Santé animale qui doiven
 
 ## Mots-clés
 
-executive search Life Sciences, executive search Santé animale, recrutement biotech Série A, recrutement biotech Série B, recrutement scale-up biotech, recrutement COMEX, structuration RH digitalisation, automatisation RH faible valeur ajoutée, cabinet recrutement diagnostic, cabinet recrutement medtech, recrutement vétérinaire dirigeant, recrutement petfood direction, RPO Life Sciences, talent acquisition biotech.
+executive search Life Sciences, executive search Santé animale, recrutement biotech Série A, recrutement biotech Série B, recrutement scale-up biotech, recrutement COMEX, structuration RH digitalisation, automatisation RH faible valeur ajoutée, cabinet recrutement diagnostic, cabinet recrutement medtech, recrutement vétérinaire dirigeant, recrutement petfood direction, RPO Life Sciences, talent acquisition biotech, agents IA recrutement, CEO copilot biotech, structuration RH cliniques vétérinaires, M&A pipeline vétérinaire, talent intelligence biotech, anticipation hires Series B/C.
+
+## Adresse
+
+128, rue la Boétie · 75008 Paris · France
+Email : g.kengue@skstalents.fr
