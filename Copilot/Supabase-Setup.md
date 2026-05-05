@@ -56,10 +56,40 @@ create index if not exists lead_events_created_at_idx
 create index if not exists lead_events_email_idx
   on public.lead_events (email);
 
+-- Table 3 : soumissions des diagnostics IA sectoriels (Animal Health / Life Sciences)
+create table if not exists public.diagnostic_submissions (
+  id uuid primary key default gen_random_uuid(),
+  sector text not null check (sector in ('animal-health', 'life-sciences')),
+  email text not null,
+  first_name text not null,
+  last_name text,
+  company text not null,
+  role text,
+  q1 text not null,
+  q2 text,
+  q3 text not null,
+  q4 text,
+  q5 text,
+  q1_other text,
+  q3_other text,
+  primary_agent_id text,
+  primary_agent_label text,
+  roi_summary text,
+  submitted_at timestamptz not null default now()
+);
+
+create index if not exists diagnostic_submissions_submitted_at_idx
+  on public.diagnostic_submissions (submitted_at desc);
+create index if not exists diagnostic_submissions_sector_idx
+  on public.diagnostic_submissions (sector);
+create index if not exists diagnostic_submissions_email_idx
+  on public.diagnostic_submissions (email);
+
 -- RLS : on ne sert ces tables qu'en service_role (clé serveur),
 -- donc on bloque tout accès anonymous/authenticated.
 alter table public.site_analytics enable row level security;
 alter table public.lead_events enable row level security;
+alter table public.diagnostic_submissions enable row level security;
 ```
 
 ## 3. Remplis les env vars
