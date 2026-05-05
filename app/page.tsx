@@ -4,6 +4,7 @@ import EcosystemTrustBar from "@/components/EcosystemTrustBar";
 import FounderCard from "@/components/FounderCard";
 import Hero from "@/components/Hero";
 import MethodNarrative from "@/components/MethodNarrative";
+import MobileDiagnosticsSection from "@/components/MobileDiagnosticsSection";
 import MobileFichesMetiersSection from "@/components/MobileFichesMetiersSection";
 import MobileOrientationSection from "@/components/MobileOrientationSection";
 import ParallaxLayer from "@/components/ParallaxLayer";
@@ -174,6 +175,11 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+      </RevealOnScroll>
+
+      {/* Mobile-only: 3 sectoral AI diagnostics, right below the recruitment diagnostic */}
+      <RevealOnScroll delayMs={115}>
+        <MobileDiagnosticsSection />
       </RevealOnScroll>
 
       <div className="hidden md:block">

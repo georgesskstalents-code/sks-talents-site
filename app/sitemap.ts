@@ -29,6 +29,9 @@ const baseUrl = "https://www.skstalents.fr";
  *
  * Avant cette revision : 621 URLs (audit GSC : ~28 considérées « accessibles »).
  * Après : ~250 URLs ciblées qualité-content.
+ *
+ * Pour ajouter un nouveau type de contenu : (1) garantir un page renderer +
+ * data backing solide, (2) ajouter un filtre `hasSubstance` ici.
  */
 
 function hasSubstantialArticle(a: typeof articles[number]): boolean {
@@ -76,6 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/team"
   ];
 
+  // Sectoral sub-routes (re-exporting rich content components).
   const sectorRoutes = [
     ...lifeSciencesCategories.flatMap((category) => [
       `${lifeSciencesHub.path}/${category.slug}`,
