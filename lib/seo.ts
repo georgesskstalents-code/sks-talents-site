@@ -5,6 +5,13 @@ export const organizationSchema = {
   alternateName: "SKS Talents",
   url: "https://www.skstalents.fr",
   email: "g.kengue@skstalents.fr",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "128, rue la Boétie",
+    postalCode: "75008",
+    addressLocality: "Paris",
+    addressCountry: "FR"
+  },
   areaServed: [
     { "@type": "Country", name: "France" },
     { "@type": "Country", name: "Sénégal" },

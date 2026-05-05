@@ -15,7 +15,7 @@ export default function EcosystemTrustBar() {
   return (
     <section className="container-shell py-4">
       <div className="flex flex-col items-center justify-center gap-4 rounded-[28px] border border-brand-teal/10 bg-white/80 px-6 py-5 backdrop-blur sm:flex-row sm:gap-8">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-stone/70">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-stone/80">
           Membre de l’écosystème
         </p>
         <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">

@@ -1,10 +1,29 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
+import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
+
+// Web fonts: Inter (sans, 9 weights) for body + UI, Instrument Serif (regular + italic)
+// for editorial display headings. Loaded via next/font/google → preload, no FOIT,
+// identical rendering across all OS (replaces the Apple-only Avenir Next + Iowan Old Style).
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap"
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-display",
+  display: "swap"
+});
 
 // Lazy-load non-critical widgets (defer ~500KB of JS off the critical path)
 const Analytics = dynamic(() => import("@/components/Analytics"));
@@ -62,7 +81,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={`${inter.variable} ${instrumentSerif.variable}`}>
       <head>
         {/* Perf: pre-connect to third-parties used above the fold */}
         <link rel="preconnect" href="https://player.vimeo.com" crossOrigin="anonymous" />

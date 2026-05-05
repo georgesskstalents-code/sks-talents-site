@@ -103,7 +103,7 @@ export default function MobileTrustpilotPrompt() {
           <Star size={16} fill="currentColor" />
         </span>
         <span className="flex flex-col leading-tight">
-          <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-stone/70">
+          <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-stone/80">
             Avis SKS Talents
           </span>
           <span className="text-sm font-semibold text-brand-ink">4,5/5 sur Trustpilot</span>
@@ -112,7 +112,7 @@ export default function MobileTrustpilotPrompt() {
           type="button"
           onClick={handleDismiss}
           aria-label="Fermer"
-          className="absolute right-1.5 top-1.5 inline-flex h-6 w-6 items-center justify-center rounded-full border border-brand-teal/15 bg-white text-brand-stone/70 transition active:scale-90"
+          className="absolute right-1.5 top-1.5 inline-flex h-6 w-6 items-center justify-center rounded-full border border-brand-teal/15 bg-white text-brand-stone/80 transition active:scale-90"
         >
           <X size={12} />
         </button>

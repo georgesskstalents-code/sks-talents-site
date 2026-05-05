@@ -84,7 +84,7 @@ export default async function LatestInsights() {
             ) : null}
             <div className="mt-auto flex items-center justify-between pt-6">
               {insight.date ? (
-                <p className="text-xs text-brand-stone/70">
+                <p className="text-xs text-brand-stone/80">
                   {new Date(insight.date).toLocaleDateString("fr-FR", {
                     day: "2-digit",
                     month: "long",

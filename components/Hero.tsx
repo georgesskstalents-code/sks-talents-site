@@ -25,15 +25,15 @@ export default function Hero() {
       <div className="container-shell relative pb-6 pt-6 sm:pt-8 lg:pb-10 lg:pt-10">
         <div className="mx-auto max-w-4xl space-y-4 text-left">
           <p className="eyebrow">Executive search · Life Sciences &amp; Santé animale</p>
-          <h1 className="font-display text-[26px] leading-[1.1] text-brand-ink sm:text-4xl sm:leading-[1] lg:text-[44px]">
+          <h1 className="t-display-l">
             Recruter les bons talents n’est pas un enjeu RH.{" "}
-            <span className="text-brand-teal">C’est une décision stratégique pour votre COMEX.</span>
+            <span className="text-brand-teal italic">C’est une décision stratégique pour votre COMEX.</span>
           </h1>
-          <p className="max-w-2xl text-sm leading-7 text-brand-stone sm:text-base">
+          <p className="t-body-l max-w-2xl">
             Nous aidons les CEO, COO et DRH à recruter en{" "}
-            <strong>Life Sciences &amp; Santé animale</strong> — biotech, diagnostic, vétérinaire,
-            petfood — de la <strong>Série A</strong> à la <strong>Série B</strong>{" "}
-            et au <strong>scale-up</strong>. Vite, juste, sans dégrader la qualité.
+            <strong className="font-semibold">Life Sciences &amp; Santé animale</strong> — biotech, diagnostic, vétérinaire,
+            petfood — de la <strong className="font-semibold">Série A</strong> à la <strong className="font-semibold">Série B</strong>{" "}
+            et au <strong className="font-semibold">scale-up</strong>. Vite, juste, sans dégrader la qualité.
           </p>
 
           <div className="flex flex-wrap gap-3 pt-1">
@@ -47,8 +47,8 @@ export default function Hero() {
                 key={label}
                 className="rounded-[16px] border border-brand-teal/15 bg-white/85 p-3 backdrop-blur"
               >
-                <p className="font-display text-xl text-brand-ink">{value}</p>
-                <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-stone/80">
+                <p className="font-display text-[22px] leading-tight text-brand-ink">{value}</p>
+                <p className="mt-1 text-eyebrow font-semibold uppercase text-brand-stone/80">
                   {label}
                 </p>
               </div>

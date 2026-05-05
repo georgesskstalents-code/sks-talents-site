@@ -78,6 +78,24 @@ export default function Footer() {
               g.kengue@skstalents.fr
             </a>
           </div>
+          <address className="not-italic rounded-3xl border border-white/10 bg-white/5 px-5 py-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/50">
+              Adresse
+            </p>
+            <p className="mt-2 text-base font-semibold text-white">
+              128, rue la Boétie
+              <br />
+              75008 Paris &middot; France
+            </p>
+            <a
+              href="https://maps.google.com/?q=128+rue+la+Bo%C3%A9tie+75008+Paris"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="mt-2 inline-flex text-sm font-semibold text-white/70 transition hover:text-white"
+            >
+              Voir sur Google Maps →
+            </a>
+          </address>
           <div className="flex flex-wrap gap-3 pt-2">
             <a
               href={

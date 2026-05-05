@@ -30,15 +30,15 @@ export default function RibbonCTA({
           </div>
           <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
             <div className="space-y-4">
-              <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-mint">
+              <p className="inline-flex items-center gap-2 text-eyebrow font-semibold uppercase text-brand-mint">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-mint" />
                 {eyebrow}
               </p>
-              <h2 className="font-display text-4xl leading-[1.05] text-white sm:text-5xl xl:text-6xl">
+              <h2 className="font-display text-[36px] leading-[1.05] text-white sm:text-[56px] xl:text-[72px]">
                 {title}
               </h2>
               {description ? (
-                <p className="max-w-2xl text-base leading-8 text-white/85 sm:text-lg">
+                <p className="t-body-l max-w-2xl text-white/85">
                   {description}
                 </p>
               ) : null}
@@ -62,10 +62,10 @@ export default function RibbonCTA({
     <section className="container-shell py-6">
       <div className="card-luxe panel-lift flex flex-col items-start justify-between gap-5 p-6 sm:flex-row sm:items-center sm:gap-6 sm:p-7">
         <div className="flex-1 space-y-1.5">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
+          <p className="text-eyebrow font-semibold uppercase text-brand-teal">
             {eyebrow}
           </p>
-          <p className="font-display text-lg leading-[1.25] text-brand-ink sm:text-3xl sm:leading-[1.15]">
+          <p className="t-h2 font-display">
             {title}
           </p>
         </div>

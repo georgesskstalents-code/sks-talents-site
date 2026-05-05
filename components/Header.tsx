@@ -263,7 +263,7 @@ export default function Header() {
 
             {/* Language */}
             <div className="mt-5 px-2">
-              <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-stone/70">
+              <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-stone/80">
                 Langue
               </p>
               <Suspense fallback={<LanguageSelectorFallback />}>

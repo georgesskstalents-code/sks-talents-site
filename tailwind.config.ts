@@ -19,8 +19,41 @@ const config: Config = {
         }
       },
       fontFamily: {
-        sans: ["Avenir Next", "Segoe UI", "Helvetica Neue", "Arial", "sans-serif"],
-        display: ["Iowan Old Style", "Baskerville", "Times New Roman", "serif"]
+        // Resolved from next/font CSS variables (set in app/layout.tsx).
+        // Fallbacks kept for the brief flash before the web font is ready.
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "Segoe UI", "Helvetica Neue", "Arial", "sans-serif"],
+        display: ["var(--font-display)", "ui-serif", "Georgia", "Cambria", "Times New Roman", "serif"]
+      },
+      // Type scale — modular, mobile-first. Each token: [size, lineHeight, letterSpacing?]
+      // Mobile values; use sm: prefix for desktop overrides documented in Copilot/Typo-System.md.
+      fontSize: {
+        // Display (hero-grade serif italic-friendly)
+        "display-xl": ["40px", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
+        "display-l": ["32px", { lineHeight: "1.08", letterSpacing: "-0.02em" }],
+        // Headings
+        "h1": ["28px", { lineHeight: "1.15", letterSpacing: "-0.01em" }],
+        "h2": ["22px", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+        "h3": ["18px", { lineHeight: "1.25" }],
+        // Body
+        "body-l": ["16px", { lineHeight: "1.7" }],
+        "body": ["15px", { lineHeight: "1.7" }],
+        // Meta
+        "caption": ["13px", { lineHeight: "1.5" }],
+        "eyebrow": ["11px", { lineHeight: "1", letterSpacing: "0.18em" }]
+      },
+      lineHeight: {
+        tight: "1.1",
+        snug: "1.25",
+        normal: "1.5",
+        relaxed: "1.7",
+        loose: "1.85"
+      },
+      letterSpacing: {
+        tight: "-0.02em",
+        snug: "-0.01em",
+        normal: "0",
+        wide: "0.18em",
+        eyebrow: "0.22em"
       },
       boxShadow: {
         soft: "0 20px 60px rgba(25, 72, 74, 0.12)"

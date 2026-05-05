@@ -361,7 +361,7 @@ export default async function SuiviPage({
           <h2 className="mb-2 font-display text-xl text-brand-ink">
             ✉️ Derniers leads ({fmt(recentLeads.length)})
           </h2>
-          <p className="mb-4 text-xs text-brand-stone/70">
+          <p className="mb-4 text-xs text-brand-stone/80">
             Données issues des logs locaux (réinitialisées à chaque deploy Vercel).
             Pour persistance permanente → activer Supabase.
           </p>
@@ -378,7 +378,7 @@ export default async function SuiviPage({
                     <p className="font-mono text-sm font-semibold text-brand-ink">
                       {lead.email ?? "—"}
                     </p>
-                    <p className="text-xs text-brand-stone/70">
+                    <p className="text-xs text-brand-stone/80">
                       {lead.kind} · {lead.pagePath}
                     </p>
                   </div>
@@ -413,7 +413,7 @@ export default async function SuiviPage({
         ) : null}
 
         {/* Footer */}
-        <footer className="flex flex-wrap items-center justify-between gap-2 px-2 pt-4 text-xs text-brand-stone/70">
+        <footer className="flex flex-wrap items-center justify-between gap-2 px-2 pt-4 text-xs text-brand-stone/80">
           <p>
             Dernière mise à jour : {new Date().toLocaleString("fr-FR")} · Total events
             : {fmt(analytics.length)}
@@ -450,7 +450,7 @@ function KpiCard({
         : "text-brand-stone";
   return (
     <div className={`rounded-[20px] bg-white p-5 shadow-soft ring-1 ${ringClass}`}>
-      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-stone/70">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-stone/80">
         {label}
       </p>
       <p className="mt-2 font-display text-3xl text-brand-ink">{value}</p>
@@ -472,7 +472,7 @@ function Card({
     <div className="rounded-[24px] border border-brand-teal/15 bg-white p-5 shadow-soft sm:p-6">
       <h3 className="font-display text-lg text-brand-ink">{title}</h3>
       {subtitle ? (
-        <p className="mt-0.5 text-xs text-brand-stone/70">{subtitle}</p>
+        <p className="mt-0.5 text-xs text-brand-stone/80">{subtitle}</p>
       ) : null}
       <div className="mt-4">{children}</div>
     </div>
@@ -481,7 +481,7 @@ function Card({
 
 function Empty({ hint }: { hint?: string }) {
   return (
-    <p className="rounded-xl bg-brand-mint/15 px-4 py-3 text-xs text-brand-stone/70">
+    <p className="rounded-xl bg-brand-mint/15 px-4 py-3 text-xs text-brand-stone/80">
       {hint ?? "Pas encore de données — la vue se remplira dès que le trafic démarre."}
     </p>
   );

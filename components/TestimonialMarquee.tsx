@@ -82,7 +82,7 @@ export default function TestimonialMarquee() {
             >
               Voir l'avis public
             </a>
-            <p className="mt-6 text-[14px] text-brand-stone/70">{item.date}</p>
+            <p className="mt-6 text-[14px] text-brand-stone/80">{item.date}</p>
           </article>
         ))}
       </div>
