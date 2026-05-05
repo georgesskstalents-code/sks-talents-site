@@ -67,17 +67,6 @@ export default function Footer() {
             Cabinet spécialisé en executive search, talent acquisition et structuration RH pour
             les Life Sciences, le diagnostic, la santé animale et le petfood premium.
           </p>
-          <div className="rounded-3xl border border-white/10 bg-white/5 px-5 py-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/50">
-              Contact direct
-            </p>
-            <a
-              href="mailto:g.kengue@skstalents.fr"
-              className="mt-2 inline-flex text-base font-semibold text-white transition hover:text-teal-200"
-            >
-              g.kengue@skstalents.fr
-            </a>
-          </div>
           <address className="not-italic rounded-3xl border border-white/10 bg-white/5 px-5 py-4">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/50">
               Adresse
