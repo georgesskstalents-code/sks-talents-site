@@ -17,6 +17,10 @@ import LogosScrollCarousel from "@/components/landings/LogosScrollCarousel";
 import { animalHealthScenes } from "./animalHealthScenes";
 import { animalHealthQuestions } from "./animalHealthQuestions";
 
+// Hide 3 detail blocks (4 moments critiques, profils hybrides, vocabulaire) — page allégée.
+// Repasser à true pour les ré-afficher sans toucher au code des sections.
+const SHOW_DETAIL_BLOCKS = false;
+
 const enjeux: { num: string; title: string; quote: string; tone?: "amber" | "yellow" }[] = [
   { num: "01", title: "Documentation juridique RH dispersée", quote: "Tout est éclaté. Due diligence en 2 sem." },
   { num: "02", title: "Onboarding qui s'éternise", quote: "6-12 mois, 20-30 % turnover." },
@@ -219,85 +223,89 @@ export default function AnimalHealthLanding() {
         </div>
       </section>
 
-      {/* ===== Section 4 — 4 MOMENTS CRITIQUES ===== */}
-      <section className="bg-gradient-to-b from-brand-mint/15 to-white py-14 sm:py-20">
-        <div className="container-shell">
-          <p className="eyebrow">Les moments où nos clients nous appellent</p>
-          <h2 className="t-h1 max-w-3xl font-display">4 moments business critiques. Notre terrain de jeu.</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {moments.map((m) => {
-              const accent: Record<string, string> = {
-                emerald: "border-emerald-200 bg-emerald-50",
-                blue: "border-blue-200 bg-blue-50",
-                amber: "border-amber-200 bg-amber-50",
-                rose: "border-rose-200 bg-rose-50"
-              };
-              return (
-                <article key={m.title} className={`rounded-3xl border p-6 ${accent[m.tone]}`}>
-                  <p className="t-h3 font-semibold">{m.title}</p>
-                  <p className="mt-3 font-display italic t-body text-brand-ink">"{m.quote}"</p>
-                  <p className="mt-4 text-caption font-semibold text-brand-stone">{m.stats}</p>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== Section 5 — PROFILS HYBRIDES ===== */}
-      <section className="bg-white py-14 sm:py-20">
-        <div className="container-shell">
-          <p className="eyebrow">Notre vraie spécialité</p>
-          <h2 className="t-h1 max-w-3xl font-display">
-            Les profils hybrides que personne ne sait trouver.
-          </h2>
-          <p className="mt-3 max-w-3xl t-body">
-            Notre méthode : croiser 2 ou 3 compétences rares pour trouver le profil que vos
-            concurrents cherchent encore dans 6 mois.
-          </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {profils.map((p) => (
-              <article key={p.title} className="rounded-3xl border border-brand-teal/10 bg-white p-5 shadow-sm">
-                <p className="t-h3 font-semibold uppercase tracking-wide text-brand-ink">{p.title}</p>
-                <p className="mt-2 t-body">{p.desc}</p>
-                <p className="mt-3 rounded-2xl bg-brand-mint/30 px-3 py-2 text-caption text-brand-stone">
-                  {p.example}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== Section 6 — VOCABULAIRE ===== */}
-      <section className="bg-gradient-to-b from-white to-brand-mint/15 py-14 sm:py-20">
-        <div className="container-shell">
-          <p className="eyebrow">Le vocabulaire que nous maîtrisons</p>
-          <h2 className="t-h1 max-w-3xl font-display">
-            Pour vous, ces termes ne sont pas du jargon.{" "}
-            <span className="italic text-brand-teal">Pour la concurrence, oui.</span>
-          </h2>
-          <div className="mt-8 space-y-6">
-            {Object.entries(vocabulaire).map(([category, terms]) => (
-              <div key={category}>
-                <p className="text-eyebrow font-semibold uppercase tracking-wide text-brand-stone/80">
-                  {category}
-                </p>
-                <ul className="mt-3 flex flex-wrap gap-2">
-                  {terms.map((t) => (
-                    <li
-                      key={t}
-                      className="rounded-full border border-brand-teal/15 bg-white px-3 py-1.5 text-caption text-brand-stone"
-                    >
-                      {t}
-                    </li>
-                  ))}
-                </ul>
+      {SHOW_DETAIL_BLOCKS && (
+        <>
+          {/* ===== Section 4 — 4 MOMENTS CRITIQUES ===== */}
+          <section className="bg-gradient-to-b from-brand-mint/15 to-white py-14 sm:py-20">
+            <div className="container-shell">
+              <p className="eyebrow">Les moments où nos clients nous appellent</p>
+              <h2 className="t-h1 max-w-3xl font-display">4 moments business critiques. Notre terrain de jeu.</h2>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {moments.map((m) => {
+                  const accent: Record<string, string> = {
+                    emerald: "border-emerald-200 bg-emerald-50",
+                    blue: "border-blue-200 bg-blue-50",
+                    amber: "border-amber-200 bg-amber-50",
+                    rose: "border-rose-200 bg-rose-50"
+                  };
+                  return (
+                    <article key={m.title} className={`rounded-3xl border p-6 ${accent[m.tone]}`}>
+                      <p className="t-h3 font-semibold">{m.title}</p>
+                      <p className="mt-3 font-display italic t-body text-brand-ink">"{m.quote}"</p>
+                      <p className="mt-4 text-caption font-semibold text-brand-stone">{m.stats}</p>
+                    </article>
+                  );
+                })}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
+
+          {/* ===== Section 5 — PROFILS HYBRIDES ===== */}
+          <section className="bg-white py-14 sm:py-20">
+            <div className="container-shell">
+              <p className="eyebrow">Notre vraie spécialité</p>
+              <h2 className="t-h1 max-w-3xl font-display">
+                Les profils hybrides que personne ne sait trouver.
+              </h2>
+              <p className="mt-3 max-w-3xl t-body">
+                Notre méthode : croiser 2 ou 3 compétences rares pour trouver le profil que vos
+                concurrents cherchent encore dans 6 mois.
+              </p>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {profils.map((p) => (
+                  <article key={p.title} className="rounded-3xl border border-brand-teal/10 bg-white p-5 shadow-sm">
+                    <p className="t-h3 font-semibold uppercase tracking-wide text-brand-ink">{p.title}</p>
+                    <p className="mt-2 t-body">{p.desc}</p>
+                    <p className="mt-3 rounded-2xl bg-brand-mint/30 px-3 py-2 text-caption text-brand-stone">
+                      {p.example}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ===== Section 6 — VOCABULAIRE ===== */}
+          <section className="bg-gradient-to-b from-white to-brand-mint/15 py-14 sm:py-20">
+            <div className="container-shell">
+              <p className="eyebrow">Le vocabulaire que nous maîtrisons</p>
+              <h2 className="t-h1 max-w-3xl font-display">
+                Pour vous, ces termes ne sont pas du jargon.{" "}
+                <span className="italic text-brand-teal">Pour la concurrence, oui.</span>
+              </h2>
+              <div className="mt-8 space-y-6">
+                {Object.entries(vocabulaire).map(([category, terms]) => (
+                  <div key={category}>
+                    <p className="text-eyebrow font-semibold uppercase tracking-wide text-brand-stone/80">
+                      {category}
+                    </p>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                      {terms.map((t) => (
+                        <li
+                          key={t}
+                          className="rounded-full border border-brand-teal/15 bg-white px-3 py-1.5 text-caption text-brand-stone"
+                        >
+                          {t}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </>
+      )}
 
       {/* ===== Section 7 — 6 AGENTS IA ===== */}
       <section className="bg-white py-14 sm:py-20">
