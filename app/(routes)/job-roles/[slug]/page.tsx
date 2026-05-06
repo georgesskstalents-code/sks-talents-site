@@ -23,9 +23,74 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   }
 
+  const canonical = `https://www.skstalents.fr/job-roles/${slug}`;
+
   return {
     title: notionRole?.seoTitle || notionRole?.title || role?.title,
-    description: notionRole?.metaDescription || notionRole?.excerpt || role?.summary
+    description: notionRole?.metaDescription || notionRole?.excerpt || role?.summary,
+    alternates: {
+      canonical
+    }
+  };
+}
+
+/**
+ * Parse a salary range string like "85 - 120 k€" or "120 k€" into numeric
+ * percentile10/percentile90 values for the Occupation JSON-LD.
+ * Returns null when the string can't be parsed (we then skip estimatedSalary).
+ */
+function parseSalaryRange(s: string): { min: number; max: number; median: number } | null {
+  if (!s) return null;
+  const matches = s.match(/(\d+)\s*[-–]\s*(\d+)/);
+  if (matches) {
+    const min = Number(matches[1]) * 1000;
+    const max = Number(matches[2]) * 1000;
+    return { min, max, median: Math.round((min + max) / 2) };
+  }
+  const single = s.match(/(\d+)/);
+  if (single) {
+    const v = Number(single[1]) * 1000;
+    return { min: v, max: v, median: v };
+  }
+  return null;
+}
+
+function buildOccupationJsonLd(role: {
+  slug: string;
+  title: string;
+  category: string;
+  sector: string;
+  summary: string;
+  salary: string;
+}) {
+  const url = `https://www.skstalents.fr/job-roles/${role.slug}`;
+  const salaryParsed = parseSalaryRange(role.salary);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Occupation",
+    name: role.title,
+    description: role.summary,
+    occupationalCategory: role.category,
+    industry: role.sector,
+    inLanguage: "fr-FR",
+    url,
+    ...(salaryParsed && {
+      estimatedSalary: [
+        {
+          "@type": "MonetaryAmountDistribution",
+          name: "base",
+          currency: "EUR",
+          duration: "P1Y",
+          percentile10: salaryParsed.min,
+          percentile90: salaryParsed.max,
+          median: salaryParsed.median
+        }
+      ]
+    }),
+    educationRequirements: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "degree"
+    }
   };
 }
 
@@ -83,9 +148,21 @@ export default async function JobRoleDetailPage({
   const resolvedRole = effectiveRole!;
   const relatedRoles = getRelatedJobRoles(resolvedRole.slug, resolvedRole.sector);
   const educationBundle = getJobRoleEducationBundle(resolvedRole);
+  const occupationJsonLd = buildOccupationJsonLd({
+    slug: resolvedRole.slug,
+    title: resolvedRole.title,
+    category: resolvedRole.category,
+    sector: resolvedRole.sector,
+    summary: resolvedRole.summary,
+    salary: resolvedRole.salary
+  });
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(occupationJsonLd) }}
+      />
       <PageHero
         kicker={`${resolvedRole.sector} · ${resolvedRole.category} · ${resolvedRole.salary}`}
         title={resolvedRole.title}
