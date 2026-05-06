@@ -310,55 +310,53 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
       {
         number: "01",
         name: "Biotech",
-        tag: "Thérapeutique · R&D intensive",
+        tag: "Thérapeutique · R&D intensive · Series A→C",
         roles: [
-          "HR / CODIR roles (CEO, COO, CPO)",
-          "Production / Manufacturing",
-          "Commercial / Business / Marketing",
-          "Back office / Business support"
+          "Head of CMC / Bioprocess",
+          "VP Regulatory Affairs (ANSM/EMA/FDA)",
+          "Director Clinical Operations",
+          "BD Director · Pharma partnerships"
         ],
-        scopes: "4 scopes",
+        scopes: "4 rôles signature",
         href: "/life-sciences/biotech"
       },
       {
         number: "02",
         name: "Diagnostic",
-        tag: "IVD · NGS",
+        tag: "IVD · NGS · IVDR",
         roles: [
-          "HR / CODIR roles (CEO, COO, CPO)",
-          "Production / Manufacturing",
-          "Commercial / Business / Marketing",
-          "Back office / Business support"
+          "VP Sales IVD (centrales hospitalières)",
+          "Head of Manufacturing GMP",
+          "Medical Affairs Manager",
+          "Director Quality & Regulatory ISO 13485"
         ],
-        scopes: "4 scopes",
+        scopes: "4 rôles signature",
         href: "/life-sciences/diagnostic"
       },
       {
         number: "03",
         name: "Deeptech",
-        tag: "Appliqué Life Sciences",
+        tag: "Bioprocédés · Scale-up industriel",
         roles: [
-          "HR / CODIR roles (CEO, COO, CPO)",
-          "Production / Manufacturing",
-          "Commercial / Business / Marketing",
-          "Back office / Business support"
+          "Head of Engineering bioprocédés",
+          "Director Industrialisation / Scale-up",
+          "PhD Lead Scientist (cell therapy / biomatériaux)",
+          "Head of BD · Tech transfer"
         ],
-        scopes: "4 scopes",
+        scopes: "4 rôles signature",
         href: "/life-sciences/biotech/deeptech-startups"
       },
       {
         number: "04",
         name: "E-santé & Robotique",
-        tag: "E-santé · Robotique",
+        tag: "DTx · IA santé · Robotique chirurgicale",
         roles: [
-          "HR / CODIR roles (CEO, COO, CPO)",
-          "R&D Manager",
-          "Production",
-          "Sales",
-          "Marketing",
-          "Support functions"
+          "VP Product (UX santé)",
+          "CTO · HDS / RGPD compliance",
+          "Director Medical Affairs",
+          "VP Commercial B2B santé"
         ],
-        scopes: "4 scopes",
+        scopes: "4 rôles signature",
         href: "/cabinet-recrutement-e-sante-france"
       }
     ],
@@ -424,7 +422,7 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
         description: "Le niveau d’exigence reste maintenu jusqu’au closing et à la prise de poste."
       }
     ],
-    faqTitle: "FAQ — Recrutement Life Sciences & E-santé / Robotique",
+    faqTitle: "FAQ — Recrutement Life Sciences",
     faqs: [
       {
         question: "Comment recruter efficacement dans les Life Sciences aujourd’hui ?",
@@ -440,21 +438,6 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
         question: "Pourquoi les meilleurs candidats ne postulent-ils pas ?",
         answer:
           "Les profils les plus performants sont déjà en poste et recherchent avant tout des projets à fort impact.\n\n👉 Une approche par chasse directe est indispensable."
-      },
-      {
-        question: "Comment recruter efficacement dans l’e-santé et la robotique ?",
-        answer:
-          "Les secteurs de l’e-santé et de la robotique combinent innovation technologique, enjeux réglementaires et forte croissance.\n\nLes profils recherchés sont rares car ils doivent évoluer à l’intersection de la santé, du business et de l’innovation.\n\nLes entreprises les plus performantes adoptent une approche proactive basée sur la chasse de talents et une proposition de valeur claire.\n\n👉 Le recrutement devient un levier stratégique pour transformer l’innovation en croissance."
-      },
-      {
-        question: "Pourquoi ces profils sont-ils plus difficiles à attirer ?",
-        answer:
-          "Parce qu’ils doivent réunir en même temps une lecture produit, une compréhension du cadre santé, une capacité d’exécution business et un niveau de maturité suffisant pour suivre une croissance rapide.\n\n👉 Sans proposition de valeur claire, ils n’entrent même pas dans le process."
-      },
-      {
-        question: "Comment transformer l’innovation en croissance grâce au recrutement ?",
-        answer:
-        "En structurant d’abord les rôles qui relient la vision à l’exécution : opérations, people et développement commercial.\n\n👉 Vous recrutez en Life Sciences ? Parlons-en."
       }
     ],
     finalTitle: {
@@ -662,29 +645,9 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
           "Dans la santé animale, les fonctions prioritaires sont celles qui permettent de structurer la croissance et d’optimiser les opérations.\n\nChez SKS Talents, nous intervenons exclusivement sur :\n\n- Direction des opérations (COO)\n- Direction des ressources humaines (DRH / Head of People)\n- Direction commerciale / Business Development\n\n👉 Ces rôles sont essentiels pour transformer une innovation en performance durable."
       },
       {
-        question: "Pourquoi les meilleurs candidats en santé animale ne postulent-ils pas ?",
-        answer:
-          "Les talents les plus performants sont déjà en poste et ne répondent généralement pas aux annonces classiques.\n\nIls privilégient :\n- des projets à fort impact\n- des entreprises en croissance\n- une vision stratégique claire\n\n👉 Une approche directe et personnalisée est indispensable pour les engager."
-      },
-      {
-        question: "Pourquoi est-il difficile d’attirer des profils seniors en santé animale ?",
-        answer:
-          "Les profils expérimentés dans ce secteur recherchent aujourd’hui plus qu’un poste : ils veulent un projet.\n\nIls sont sensibles à :\n- l’impact de leur travail\n- la vision de l’entreprise\n- la qualité du management\n\n👉 Les entreprises doivent donc construire un discours de recrutement orienté valeur et ambition."
-      },
-      {
-        question: "Comment recruter rapidement sans compromettre la qualité ?",
-        answer:
-          "Recruter rapidement dans la santé animale nécessite une approche structurée :\n\n- définition précise du besoin\n- ciblage des profils pertinents\n- processus de sélection efficace\n\n👉 Les entreprises les plus performantes privilégient la qualité du recrutement plutôt que la vitesse à court terme."
-      },
-      {
         question: "Pourquoi faire appel à un cabinet spécialisé en santé animale ?",
         answer:
           "Un cabinet spécialisé permet d’accéder à un réseau de talents qualifiés et souvent invisibles sur le marché.\n\nIl apporte également :\n- une compréhension du secteur\n- un gain de temps\n- une sécurisation des recrutements\n\n👉 Dans un marché compétitif, c’est un levier stratégique pour attirer les meilleurs profils."
-      },
-      {
-        question: "Comment structurer ses recrutements en phase de croissance ?",
-        answer:
-          "En phase de développement, les entreprises doivent structurer leurs recrutements pour accompagner leur croissance.\n\nCela implique :\n- prioriser les fonctions clés\n- aligner recrutement et stratégie\n- automatiser les processus RH\n\n👉 Le recrutement devient un levier direct de performance et de structuration."
       }
     ],
     finalTitle: {

@@ -21,13 +21,37 @@ import { lifeSciencesQuestions } from "./lifeSciencesQuestions";
 // Repasser à true pour les ré-afficher sans toucher au code des sections.
 const SHOW_DETAIL_BLOCKS = false;
 
-const enjeux: { num: string; title: string; quote: string; tone?: "amber" }[] = [
-  { num: "02", title: "Reporting talent au board", quote: "Mon board me demande mes KPI talent en temps réel. Je leur sors un PowerPoint qui date d'il y a 3 mois." },
-  { num: "03", title: "Burn rate humain", quote: "180-250 k€/mois de masse salariale alignés sur la roadmap ?" },
-  { num: "04", title: "Time-to-fill profils rares", quote: "Head of Engineering, on en cherche un depuis des mois. Pas de shortlist crédible." },
-  { num: "05", title: "Commercial bloqué", quote: "On vise 5 M€ d'ARR. Sans VP Sales senior biotech, on plafonne à 1.5 M€." },
-  { num: "06", title: "Onboarding raté", quote: "VP à 130 k€ qui part à 6 mois. Je redémarre à zéro." },
-  { num: "07", title: "Scale Series B/C", quote: "50 → 200 employés en 24 mois. Process datant de 15 employés.", tone: "amber" }
+// Pairs each CEO enjeu with the IA agent that solves it. Replaces the
+// previously separated "6 enjeux" + "6 agents" sections by a single
+// side-by-side row layout (left: enjeu; right: agent IA + ROI).
+const enjeuxAvecAgents: {
+  enjeu: { num: string; title: string; quote: string; tone?: "amber" };
+  agent: { Icon: typeof Compass; title: string; desc: string; note: string; badge?: string };
+}[] = [
+  {
+    enjeu: { num: "02", title: "Reporting talent au board", quote: "Mon board me demande mes KPI talent en temps réel. Je leur sors un PowerPoint qui date d'il y a 3 mois." },
+    agent: { Icon: Compass, title: "Agent CEO Copilot stratégique", desc: "Connecte roadmap R&D + ATS + données financières. Anticipe besoins talent 6 mois à l'avance. Génère vos board packs auto.", note: "+6 mois d'anticipation · Board pack en 5 min", badge: "DÉMO ⭐" }
+  },
+  {
+    enjeu: { num: "03", title: "Burn rate humain", quote: "180-250 k€/mois de masse salariale alignés sur la roadmap ?" },
+    agent: { Icon: FileBarChart, title: "Agent Reporting Investisseurs", desc: "Génère vos rapports talent pour comex, board et data room investisseurs. Format adapté au stade Series A/B/C.", note: "Burn rate + ROI talent en temps réel" }
+  },
+  {
+    enjeu: { num: "04", title: "Time-to-fill profils rares", quote: "Head of Engineering, on en cherche un depuis des mois. Pas de shortlist crédible." },
+    agent: { Icon: Search, title: "Agent Talent Intelligence", desc: "Cartographie en continu les talents Life Sciences dans votre segment. Identifie les profils passifs.", note: "Time-to-fill -50 % · 10 j 1re shortlist" }
+  },
+  {
+    enjeu: { num: "05", title: "Commercial bloqué", quote: "On vise 5 M€ d'ARR. Sans VP Sales senior biotech, on plafonne à 1.5 M€." },
+    agent: { Icon: CheckCircle, title: "Agent Sales Talent (VP Sales biotech)", desc: "Sourcing profils rares senior commerciaux biotech. Maîtrise négociation gros comptes pharma.", note: "Sourcing profils rares senior · 12 sem closing" }
+  },
+  {
+    enjeu: { num: "06", title: "Onboarding raté", quote: "VP à 130 k€ qui part à 6 mois. Je redémarre à zéro." },
+    agent: { Icon: Heart, title: "Agent Onboarding & Rétention", desc: "Pilote l'onboarding 90 jours de chaque profil senior. Co-construit le plan d'évolution 24 mois. Détecte les signaux faibles à 60 jours.", note: "−60 % turnover 1ère année", badge: "NOUVEAU" }
+  },
+  {
+    enjeu: { num: "07", title: "Scale Series B/C", quote: "50 → 200 employés en 24 mois. Process datant de 15 employés.", tone: "amber" },
+    agent: { Icon: TrendingUp, title: "Agent Scale-up Playbook", desc: "Bibliothèque vivante de process RH, templates et benchmarks par phase de croissance.", note: "Process scaling Series A → C" }
+  }
 ];
 
 const moments = [
@@ -85,15 +109,6 @@ const vocabulaire = {
     "CMO", "ARS", "CNIL"
   ]
 };
-
-const agents = [
-  { Icon: Compass, title: "Agent CEO Copilot stratégique", desc: "Connecte roadmap R&D + ATS + données financières. Anticipe besoins talent 6 mois à l'avance. Génère vos board packs auto.", note: "Enjeu 02 · +6 mois d'anticipation", badge: "DÉMO ⭐" },
-  { Icon: Search, title: "Agent Talent Intelligence", desc: "Cartographie en continu les talents Life Sciences dans votre segment. Identifie les profils passifs.", note: "Enjeu 04 · Time-to-fill -50 % · 10 j 1re shortlist" },
-  { Icon: FileBarChart, title: "Agent Reporting Investisseurs", desc: "Génère vos rapports talent pour comex, board et data room investisseurs. Format adapté.", note: "Enjeux 02, 03 · Board pack en 5 min" },
-  { Icon: CheckCircle, title: "Agent Sales Talent (VP Sales biotech)", desc: "Sourcing profils rares senior commerciaux biotech. Maîtrise négociation gros comptes pharma.", note: "Enjeu 05 · Sourcing profils rares senior" },
-  { Icon: Heart, title: "Agent Onboarding & Rétention", desc: "Pilote l'onboarding 90 jours de chaque profil senior. Co-construit le plan d'évolution 24 mois. Détecte les signaux faibles à 60 jours.", note: "Enjeu 06 · −60 % turnover 1ère année", badge: "NOUVEAU" },
-  { Icon: TrendingUp, title: "Agent Scale-up Playbook", desc: "Bibliothèque vivante de process RH, templates et benchmarks par phase de croissance.", note: "Enjeu 07 · Process scaling Series A → C" }
-];
 
 const partnerLogos = [
   { name: "Faircraft.bio", src: "/images/partners/faircraft-bio.svg" },
@@ -188,30 +203,76 @@ export default function LifeSciencesLanding() {
         </div>
       </section>
 
-      {/* ===== Section 3 — 6 ENJEUX ===== */}
+      {/* ===== Section 3 — ENJEUX × AGENTS IA (fusion) ===== */}
       <section className="bg-white py-14 sm:py-20">
         <div className="container-shell">
-          <p className="eyebrow">Ce que vous reconnaissez</p>
-          <h2 className="t-h1 max-w-3xl font-display">6 enjeux. Vraies phrases de CEO Life Sciences.</h2>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
-            {enjeux.map((e) => (
-              <article
-                key={e.num}
-                className="flex gap-4 rounded-2xl border border-brand-teal/10 bg-brand-mint/15 p-4"
-              >
-                <span
-                  className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-caption font-bold ${
-                    e.tone === "amber" ? "bg-amber-100 text-amber-800" : "bg-brand-mint text-brand-teal"
-                  }`}
+          <p className="eyebrow">Vos enjeux → Notre réponse IA</p>
+          <h2 className="t-h1 max-w-3xl font-display">
+            6 enjeux dirigeants.{" "}
+            <span className="italic text-brand-teal">6 agents IA</span> qui y répondent.
+          </h2>
+          <p className="mt-3 max-w-3xl t-body">
+            À gauche : la phrase qu'on entend. À droite : l'agent IA qui transforme la situation, avec son ROI.
+          </p>
+          <div className="mt-10 space-y-5">
+            {enjeuxAvecAgents.map(({ enjeu, agent }) => {
+              const { Icon } = agent;
+              return (
+                <article
+                  key={enjeu.num}
+                  className="grid gap-4 rounded-3xl border border-brand-teal/10 bg-brand-mint/10 p-5 sm:grid-cols-[0.9fr_1.1fr] sm:gap-6 sm:p-6"
                 >
-                  {e.num}
-                </span>
-                <div>
-                  <p className="t-h3 font-semibold text-brand-ink">{e.title}</p>
-                  <p className="mt-1 font-display italic t-caption text-brand-stone">"{e.quote}"</p>
-                </div>
-              </article>
-            ))}
+                  {/* Enjeu */}
+                  <div className="flex gap-4">
+                    <span
+                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-caption font-bold ${
+                        enjeu.tone === "amber" ? "bg-amber-100 text-amber-800" : "bg-brand-mint text-brand-teal"
+                      }`}
+                    >
+                      {enjeu.num}
+                    </span>
+                    <div>
+                      <p className="t-h3 font-semibold text-brand-ink">{enjeu.title}</p>
+                      <p className="mt-2 font-display italic t-caption text-brand-stone">"{enjeu.quote}"</p>
+                    </div>
+                  </div>
+                  {/* Agent IA */}
+                  <div
+                    className={`rounded-2xl border p-5 ${
+                      agent.badge ? "border-brand-teal bg-white" : "border-brand-teal/15 bg-white"
+                    }`}
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-mint/45 text-brand-teal">
+                        <Icon size={20} />
+                      </span>
+                      {agent.badge && (
+                        <span className="rounded-full bg-brand-ink px-2 py-0.5 text-eyebrow font-semibold uppercase text-white">
+                          {agent.badge}
+                        </span>
+                      )}
+                    </div>
+                    <p className="mt-3 t-h3 font-semibold text-brand-ink">{agent.title}</p>
+                    <p className="mt-2 t-body">{agent.desc}</p>
+                    <p className="mt-3 text-caption font-semibold text-brand-teal">{agent.note}</p>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Section 4 — DIAGNOSTIC (remonté du #10) ===== */}
+      <section id="diagnostic" className="scroll-mt-24 bg-gradient-to-b from-brand-mint/15 to-white py-14 sm:py-20">
+        <div className="container-shell">
+          <p className="eyebrow">Diagnostic personnalisé · 5 min</p>
+          <h2 className="t-h1 max-w-3xl font-display">Quel agent IA déployer en premier ?</h2>
+          <p className="mt-3 max-w-3xl t-body">
+            5 questions ciblées. Résultat immédiat. 3 priorités personnalisées.
+          </p>
+          <div className="mt-8 max-w-2xl">
+            <DiagnosticForm sector="life-sciences" questions={lifeSciencesQuestions} />
           </div>
         </div>
       </section>
@@ -295,37 +356,7 @@ export default function LifeSciencesLanding() {
         </>
       )}
 
-      {/* ===== Section 7 — 6 AGENTS IA ===== */}
-      <section className="bg-white py-14 sm:py-20">
-        <div className="container-shell">
-          <p className="eyebrow">6 Agents IA sectoriels</p>
-          <h2 className="t-h1 max-w-3xl font-display">Pour chaque enjeu, une réponse IA mesurée.</h2>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
-            {agents.map(({ Icon, title, desc, note, badge }) => (
-              <article
-                key={title}
-                className={`rounded-3xl border p-5 ${badge ? "border-brand-teal bg-brand-mint/15" : "border-brand-teal/10 bg-white"}`}
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-mint/45 text-brand-teal">
-                    <Icon size={20} />
-                  </span>
-                  {badge && (
-                    <span className="rounded-full bg-brand-ink px-2 py-0.5 text-eyebrow font-semibold uppercase text-white">
-                      {badge}
-                    </span>
-                  )}
-                </div>
-                <p className="mt-3 t-h3 font-semibold text-brand-ink">{title}</p>
-                <p className="mt-2 t-body">{desc}</p>
-                <p className="mt-3 text-caption font-semibold text-brand-teal">{note}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== Section 8 — LOGOS DÉFILANTS ===== */}
+      {/* ===== Section 5 — LOGOS DÉFILANTS ===== */}
       <section className="bg-gradient-to-b from-white to-brand-mint/15 py-14 sm:py-20">
         <div className="container-shell">
           <p className="eyebrow">Références &amp; exécution</p>
@@ -338,7 +369,7 @@ export default function LifeSciencesLanding() {
         </div>
       </section>
 
-      {/* ===== Section 9 — CHIFFRES CLÉS ===== */}
+      {/* ===== Section 6 — CHIFFRES CLÉS ===== */}
       <section className="bg-white py-14 sm:py-20">
         <div className="container-shell">
           <p className="eyebrow">Chiffres clés</p>
@@ -356,21 +387,7 @@ export default function LifeSciencesLanding() {
         </div>
       </section>
 
-      {/* ===== Section 10 — DIAGNOSTIC ===== */}
-      <section id="diagnostic" className="scroll-mt-24 bg-gradient-to-b from-brand-mint/15 to-white py-14 sm:py-20">
-        <div className="container-shell">
-          <p className="eyebrow">Diagnostic personnalisé · 5 min</p>
-          <h2 className="t-h1 max-w-3xl font-display">Quel agent IA déployer en premier ?</h2>
-          <p className="mt-3 max-w-3xl t-body">
-            5 questions ciblées. Résultat immédiat. 3 priorités personnalisées.
-          </p>
-          <div className="mt-8 max-w-2xl">
-            <DiagnosticForm sector="life-sciences" questions={lifeSciencesQuestions} />
-          </div>
-        </div>
-      </section>
-
-      {/* ===== Section 11 — CTA FINAL ===== */}
+      {/* ===== Section 7 — CTA FINAL ===== */}
       <section className="bg-brand-ink py-14 text-white sm:py-20">
         <div className="container-shell">
           <p className="text-eyebrow font-semibold uppercase text-white/60">Dernière étape</p>

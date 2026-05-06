@@ -21,16 +21,46 @@ import { animalHealthQuestions } from "./animalHealthQuestions";
 // Repasser à true pour les ré-afficher sans toucher au code des sections.
 const SHOW_DETAIL_BLOCKS = false;
 
-const enjeux: { num: string; title: string; quote: string; tone?: "amber" | "yellow" }[] = [
-  { num: "01", title: "Documentation juridique RH dispersée", quote: "Tout est éclaté. Due diligence en 2 sem." },
-  { num: "02", title: "Onboarding qui s'éternise", quote: "6-12 mois, 20-30 % turnover." },
-  { num: "03", title: "Plannings sur Excel", quote: "30 plannings sur Excel. C'est l'enfer." },
-  { num: "04", title: "Modélisation financière sur Excel", quote: "Data sans préconisations." },
-  { num: "05", title: "Appels entrants ratés (perte de leads)", quote: "30 % appels ratés = leads perdus." },
-  { num: "06", title: "Pipeline M&A peu structuré", quote: "On rachète au feeling." },
-  { num: "07", title: "Sales enablement commercial", quote: "Closing < 20 %, leads chauds ratés.", tone: "amber" },
-  { num: "08", title: "ROI de l'IA invisible", quote: "Personne ne montre le ROI 6 mois.", tone: "yellow" }
+// Pairs each dirigeant enjeu with the IA agent that solves it (1-to-1 or 2-to-1).
+// Replaces the previously separated "8 enjeux" + "6 agents" sections by a single
+// side-by-side row layout (left: enjeu(x); right: agent IA + ROI).
+// Enjeu 08 (ROI invisible) is handled by the cross-cutting ROI dashboard surfaced
+// in the closing row, not by a dedicated agent.
+const enjeuxAvecAgents: {
+  enjeux: { num: string; title: string; quote: string; tone?: "amber" | "yellow" }[];
+  agent: { Icon: typeof FileText; title: string; desc: string; note: string; badge?: string };
+}[] = [
+  {
+    enjeux: [
+      { num: "01", title: "Documentation juridique RH dispersée", quote: "Tout est éclaté. Due diligence en 2 sem." },
+      { num: "02", title: "Onboarding qui s'éternise", quote: "6-12 mois, 20-30 % turnover." }
+    ],
+    agent: { Icon: FileText, title: "Agent Juridique RH multi-sites", desc: "Centralise contrats, génère avenants conformes à la convention vétérinaire, alerte échéances, prépare due diligences.", note: "Due diligence 48h vs 2 sem · Onboarding -50 %" }
+  },
+  {
+    enjeux: [{ num: "03", title: "Plannings sur Excel", quote: "30 plannings sur Excel. C'est l'enfer." }],
+    agent: { Icon: BarChart3, title: "Agent Reporting Dirigeant multi-sites", desc: "Compile auto les KPI de toutes vos cliniques. Dashboard CODIR prêt chaque lundi avec alertes contextuelles.", note: "3 jours → 4 minutes", badge: "DÉMO ⭐" }
+  },
+  {
+    enjeux: [{ num: "04", title: "Modélisation financière sur Excel", quote: "Data sans préconisations." }],
+    agent: { Icon: TrendingUp, title: "Agent CFO Copilot multi-sites", desc: "Modélise P&L par clinique, détecte écarts, émet préconisations stratégiques, simule scénarios d'acquisition.", note: "Cash 12 mois fiable à 95 %" }
+  },
+  {
+    enjeux: [{ num: "05", title: "Appels entrants ratés (perte de leads)", quote: "30 % appels ratés = leads perdus." }],
+    agent: { Icon: Phone, title: "Agent Lead Catcher 24/7", desc: "Réceptionne, qualifie et route les appels entrants. Détecte les leads chauds en 30 secondes.", note: "0 % leads perdus · 24/7" }
+  },
+  {
+    enjeux: [{ num: "06", title: "Pipeline M&A peu structuré", quote: "On rachète au feeling." }],
+    agent: { Icon: Activity, title: "Agent M&A Pipeline vétérinaire", desc: "Sourcing automatique des cliniques cibles (KBIS, comptes annuels, géolocalisation). Score chaque cible. Pilote pipeline prospection.", note: "Closing 15 % → 35 %", badge: "PREMIUM" }
+  },
+  {
+    enjeux: [{ num: "07", title: "Sales enablement commercial", quote: "Closing < 20 %, leads chauds ratés.", tone: "amber" }],
+    agent: { Icon: CheckCircle, title: "Agent Sales Closer vétérinaire", desc: "Analyse calls commerciaux, score leads, suggère next actions, prépare RDV, détecte deals à risque.", note: "+30 % closing · ramp-up 6 sem" }
+  }
 ];
+
+// Enjeu 08 reste affiché en clôture (ROI dashboard transversal — pas un agent dédié).
+const enjeuRoi = { num: "08", title: "ROI de l'IA invisible", quote: "Personne ne montre le ROI 6 mois." };
 
 const moments = [
   {
@@ -89,15 +119,6 @@ const vocabulaire = {
     "Cru/BARF", "Premium nutrition", "Distribution sélective", "Marketing direct"
   ]
 };
-
-const agents = [
-  { Icon: FileText, title: "Agent Juridique RH multi-sites", desc: "Centralise contrats, génère avenants conformes à la convention vétérinaire, alerte échéances, prépare due diligences.", note: "Enjeux 01, 02 · Due diligence 48h vs 2 sem." },
-  { Icon: BarChart3, title: "Agent Reporting Dirigeant multi-sites", desc: "Compile auto les KPI de toutes vos cliniques. Dashboard CODIR prêt chaque lundi avec alertes contextuelles.", note: "Enjeu 03 · 3 jours → 4 minutes", badge: "DÉMO ⭐" },
-  { Icon: TrendingUp, title: "Agent CFO Copilot multi-sites", desc: "Modélise P&L par clinique, détecte écarts, émet préconisations stratégiques, simule scénarios d'acquisition.", note: "Enjeu 04 · Cash 12 mois fiable à 95 %" },
-  { Icon: Phone, title: "Agent Lead Catcher 24/7", desc: "Réceptionne, qualifie et route les appels entrants. Détecte les leads chauds en 30 secondes.", note: "Enjeu 05 · 0 % leads perdus · 24/7" },
-  { Icon: Activity, title: "Agent M&A Pipeline vétérinaire", desc: "Sourcing automatique des cliniques cibles (KBIS, comptes annuels, géolocalisation). Score chaque cible. Pilote pipeline prospection.", note: "Enjeu 06 · Closing 15 % → 35 %", badge: "PREMIUM" },
-  { Icon: CheckCircle, title: "Agent Sales Closer vétérinaire", desc: "Analyse calls commerciaux, score leads, suggère next actions, prépare RDV, détecte deals à risque.", note: "Enjeu 07 · +30 % closing · ramp-up 6 sem" }
-];
 
 const partnerLogos = [
   { name: "Affinity Petcare", src: "/images/partners/affinity-petcare.svg" },
@@ -191,34 +212,110 @@ export default function AnimalHealthLanding() {
         </div>
       </section>
 
-      {/* ===== Section 3 — 8 ENJEUX ===== */}
+      {/* ===== Section 3 — ENJEUX × AGENTS IA (fusion) ===== */}
       <section className="bg-white py-14 sm:py-20">
         <div className="container-shell">
-          <p className="eyebrow">Ce que vous reconnaissez</p>
-          <h2 className="t-h1 max-w-3xl font-display">8 enjeux. Vraies phrases de dirigeants.</h2>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
-            {enjeux.map((e) => (
-              <article
-                key={e.num}
-                className="flex gap-4 rounded-2xl border border-brand-teal/10 bg-brand-mint/15 p-4"
-              >
-                <span
-                  className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-caption font-bold ${
-                    e.tone === "amber"
-                      ? "bg-amber-100 text-amber-800"
-                      : e.tone === "yellow"
-                        ? "bg-yellow-100 text-yellow-800"
-                        : "bg-brand-mint text-brand-teal"
-                  }`}
+          <p className="eyebrow">Vos enjeux → Notre réponse IA</p>
+          <h2 className="t-h1 max-w-3xl font-display">
+            8 enjeux dirigeants.{" "}
+            <span className="italic text-brand-teal">6 agents IA</span> qui y répondent.
+          </h2>
+          <p className="mt-3 max-w-3xl t-body">
+            À gauche : la phrase qu'on entend. À droite : l'agent IA qui transforme la situation, avec son ROI.
+          </p>
+          <div className="mt-10 space-y-5">
+            {enjeuxAvecAgents.map(({ enjeux, agent }) => {
+              const { Icon } = agent;
+              return (
+                <article
+                  key={agent.title}
+                  className="grid gap-4 rounded-3xl border border-brand-teal/10 bg-brand-mint/10 p-5 sm:grid-cols-[0.9fr_1.1fr] sm:gap-6 sm:p-6"
                 >
-                  {e.num}
-                </span>
-                <div>
-                  <p className="t-h3 font-semibold text-brand-ink">{e.title}</p>
-                  <p className="mt-1 font-display italic t-caption text-brand-stone">"{e.quote}"</p>
+                  {/* Enjeu(x) */}
+                  <div className="space-y-3">
+                    {enjeux.map((e) => (
+                      <div key={e.num} className="flex gap-4">
+                        <span
+                          className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-caption font-bold ${
+                            e.tone === "amber"
+                              ? "bg-amber-100 text-amber-800"
+                              : e.tone === "yellow"
+                                ? "bg-yellow-100 text-yellow-800"
+                                : "bg-brand-mint text-brand-teal"
+                          }`}
+                        >
+                          {e.num}
+                        </span>
+                        <div>
+                          <p className="t-h3 font-semibold text-brand-ink">{e.title}</p>
+                          <p className="mt-2 font-display italic t-caption text-brand-stone">"{e.quote}"</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  {/* Agent IA */}
+                  <div
+                    className={`rounded-2xl border p-5 ${
+                      agent.badge ? "border-brand-teal bg-white" : "border-brand-teal/15 bg-white"
+                    }`}
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-mint/45 text-brand-teal">
+                        <Icon size={20} />
+                      </span>
+                      {agent.badge && (
+                        <span className="rounded-full bg-brand-ink px-2 py-0.5 text-eyebrow font-semibold uppercase text-white">
+                          {agent.badge}
+                        </span>
+                      )}
+                    </div>
+                    <p className="mt-3 t-h3 font-semibold text-brand-ink">{agent.title}</p>
+                    <p className="mt-2 t-body">{agent.desc}</p>
+                    <p className="mt-3 text-caption font-semibold text-brand-teal">{agent.note}</p>
+                  </div>
+                </article>
+              );
+            })}
+            {/* Enjeu 08 transversal — pas d'agent dédié, c'est le dashboard SKS */}
+            <article className="rounded-3xl border border-brand-teal bg-brand-ink p-5 text-white sm:p-6">
+              <div className="grid gap-4 sm:grid-cols-[0.9fr_1.1fr] sm:gap-6">
+                <div className="flex gap-4">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-100 text-caption font-bold text-yellow-800">
+                    {enjeuRoi.num}
+                  </span>
+                  <div>
+                    <p className="t-h3 font-semibold text-white">{enjeuRoi.title}</p>
+                    <p className="mt-2 font-display italic t-caption text-white/70">"{enjeuRoi.quote}"</p>
+                  </div>
                 </div>
-              </article>
-            ))}
+                <div className="rounded-2xl border border-white/15 bg-white/5 p-5">
+                  <p className="text-eyebrow font-semibold uppercase text-brand-mint">Réponse transversale</p>
+                  <p className="mt-3 t-h3 font-semibold text-white">Dashboard ROI continu SKS Talents</p>
+                  <p className="mt-2 t-body text-white/80">
+                    Chaque agent reporte ses gains mesurés (heures économisées, leads captés, closing
+                    accéléré, marge récupérée) dans un dashboard unique. ROI 6 mois prouvé sur vos
+                    propres données, pas une promesse marketing.
+                  </p>
+                  <p className="mt-3 text-caption font-semibold text-brand-mint">
+                    Inclus avec chaque déploiement
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Section 4 — DIAGNOSTIC (remonté du #10) ===== */}
+      <section id="diagnostic" className="scroll-mt-24 bg-gradient-to-b from-brand-mint/15 to-white py-14 sm:py-20">
+        <div className="container-shell">
+          <p className="eyebrow">Diagnostic personnalisé · 5 min</p>
+          <h2 className="t-h1 max-w-3xl font-display">Quel agent IA déployer en premier ?</h2>
+          <p className="mt-3 max-w-3xl t-body">
+            5 questions ciblées. Résultat immédiat. 3 priorités personnalisées.
+          </p>
+          <div className="mt-8 max-w-2xl">
+            <DiagnosticForm sector="animal-health" questions={animalHealthQuestions} />
           </div>
         </div>
       </section>
@@ -307,37 +404,7 @@ export default function AnimalHealthLanding() {
         </>
       )}
 
-      {/* ===== Section 7 — 6 AGENTS IA ===== */}
-      <section className="bg-white py-14 sm:py-20">
-        <div className="container-shell">
-          <p className="eyebrow">6 Agents IA sectoriels</p>
-          <h2 className="t-h1 max-w-3xl font-display">Pour chaque enjeu, une réponse IA mesurée.</h2>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
-            {agents.map(({ Icon, title, desc, note, badge }) => (
-              <article
-                key={title}
-                className={`rounded-3xl border p-5 ${badge ? "border-brand-teal bg-brand-mint/15" : "border-brand-teal/10 bg-white"}`}
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-mint/45 text-brand-teal">
-                    <Icon size={20} />
-                  </span>
-                  {badge && (
-                    <span className="rounded-full bg-brand-ink px-2 py-0.5 text-eyebrow font-semibold uppercase text-white">
-                      {badge}
-                    </span>
-                  )}
-                </div>
-                <p className="mt-3 t-h3 font-semibold text-brand-ink">{title}</p>
-                <p className="mt-2 t-body">{desc}</p>
-                <p className="mt-3 text-caption font-semibold text-brand-teal">{note}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== Section 8 — LOGOS DÉFILANTS ===== */}
+      {/* ===== Section 5 — LOGOS DÉFILANTS ===== */}
       <section className="bg-gradient-to-b from-white to-brand-mint/15 py-14 sm:py-20">
         <div className="container-shell">
           <p className="eyebrow">Références &amp; exécution</p>
@@ -371,21 +438,7 @@ export default function AnimalHealthLanding() {
         </div>
       </section>
 
-      {/* ===== Section 10 — DIAGNOSTIC ===== */}
-      <section id="diagnostic" className="scroll-mt-24 bg-gradient-to-b from-brand-mint/15 to-white py-14 sm:py-20">
-        <div className="container-shell">
-          <p className="eyebrow">Diagnostic personnalisé · 5 min</p>
-          <h2 className="t-h1 max-w-3xl font-display">Quel agent IA déployer en premier ?</h2>
-          <p className="mt-3 max-w-3xl t-body">
-            5 questions ciblées. Résultat immédiat. 3 priorités personnalisées.
-          </p>
-          <div className="mt-8 max-w-2xl">
-            <DiagnosticForm sector="animal-health" questions={animalHealthQuestions} />
-          </div>
-        </div>
-      </section>
-
-      {/* ===== Section 11 — CTA FINAL ===== */}
+      {/* ===== Section 7 — CTA FINAL ===== */}
       <section className="bg-brand-ink py-14 text-white sm:py-20">
         <div className="container-shell">
           <p className="text-eyebrow font-semibold uppercase text-white/60">Dernière étape</p>
