@@ -26,6 +26,11 @@ SKS Talents accompagne les dirigeants Life Sciences et Santé animale qui doiven
 - [Références](https://www.skstalents.fr/references): clients et cas concrets
 - [Contact](https://www.skstalents.fr/contact): prise de rendez-vous
 
+## Flux de syndication
+
+- [RSS Feed](https://www.skstalents.fr/feed.xml): 50 derniers articles (insights Life Sciences & Animal Health, mis à jour à chaque publication Notion → site)
+- [Sitemap XML](https://www.skstalents.fr/sitemap.xml): index complet des pages indexables
+
 ## Contenus de référence
 
 - [Articles](https://www.skstalents.fr/blog): insights et signaux marché Life Sciences & Animal Health
