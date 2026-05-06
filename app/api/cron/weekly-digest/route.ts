@@ -6,6 +6,12 @@ import {
 } from "@/lib/siteIntelligence";
 import { noStoreJson } from "@/lib/requestSecurity";
 import { isAuthorizedCronRequest } from "@/lib/cronAuth";
+import {
+  buildGscSectionHtml,
+  buildKeywordsSectionHtml,
+  fetchSeoKeywordsSnapshot,
+  type SeoKeywordsSnapshot
+} from "@/lib/seoWeeklyReport";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -125,6 +131,7 @@ function buildHtmlEmail(opts: {
   actions: string[];
   dashboardUrl: string;
   suiviUrl: string;
+  seoKeywords: SeoKeywordsSnapshot;
 }) {
   const pv = pct(opts.pageviewsCur, opts.pageviewsPrev);
   const us = pct(opts.uniqueSessionsCur, opts.uniqueSessionsPrev);
@@ -261,6 +268,9 @@ function buildHtmlEmail(opts: {
         ${recentLeadsRows}
       </table>
     </td></tr>
+
+    ${buildGscSectionHtml()}
+    ${buildKeywordsSectionHtml(opts.seoKeywords)}
 
     <!-- Actions -->
     <tr><td style="padding:18px 28px 12px 28px;background:#fafbfa;">
@@ -444,6 +454,8 @@ async function buildAndSendDigest() {
   const dashboardUrl = `${SITE_URL}/dashboard${dashboardToken ? `?token=${dashboardToken}` : ""}`;
   const suiviUrl = `${SITE_URL}/dashboard/suivi${dashboardToken ? `?token=${dashboardToken}` : ""}`;
 
+  const seoKeywords = await fetchSeoKeywordsSnapshot();
+
   const html = buildHtmlEmail({
     startLabel,
     endLabel,
@@ -465,7 +477,8 @@ async function buildAndSendDigest() {
     recentLeads: currentLeads.slice(-5).reverse(),
     actions,
     dashboardUrl,
-    suiviUrl
+    suiviUrl,
+    seoKeywords
   });
 
   const subject = `Rapport hebdomadaire SKS Talents — semaine du ${startLabel}`;
