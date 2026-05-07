@@ -253,9 +253,9 @@ export default function DemoStage({ sector, scenes, totalSeconds, ariaLabel }: P
           onClick={goPrev}
           disabled={isFirst}
           aria-label="Scène précédente"
-          className="group absolute inset-y-0 left-0 z-10 flex w-1/3 items-center justify-start pl-2 transition disabled:cursor-default disabled:opacity-0 sm:pl-3"
+          className="group absolute inset-y-0 left-0 z-10 flex w-1/3 cursor-pointer items-center justify-start pl-2 transition disabled:cursor-default disabled:opacity-0 sm:pl-3"
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/0 text-brand-ink/0 transition group-hover:bg-white/80 group-hover:text-brand-ink group-focus-visible:bg-white/90 group-focus-visible:text-brand-ink sm:h-12 sm:w-12">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/70 text-brand-ink/60 shadow-sm backdrop-blur-sm transition group-hover:bg-white group-hover:text-brand-ink group-focus-visible:bg-white group-focus-visible:text-brand-ink sm:h-12 sm:w-12">
             <ChevronLeft className="h-5 w-5" aria-hidden />
           </span>
         </button>
@@ -264,9 +264,9 @@ export default function DemoStage({ sector, scenes, totalSeconds, ariaLabel }: P
           onClick={goNext}
           disabled={isLast}
           aria-label="Scène suivante"
-          className="group absolute inset-y-0 right-0 z-10 flex w-2/3 items-center justify-end pr-2 transition disabled:cursor-default disabled:opacity-0 sm:pr-3"
+          className="group absolute inset-y-0 right-0 z-10 flex w-2/3 cursor-pointer items-center justify-end pr-2 transition disabled:cursor-default disabled:opacity-0 sm:pr-3"
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/0 text-brand-ink/0 transition group-hover:bg-white/80 group-hover:text-brand-ink group-focus-visible:bg-white/90 group-focus-visible:text-brand-ink sm:h-12 sm:w-12">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/70 text-brand-ink/60 shadow-sm backdrop-blur-sm transition group-hover:bg-white group-hover:text-brand-ink group-focus-visible:bg-white group-focus-visible:text-brand-ink sm:h-12 sm:w-12">
             <ChevronRight className="h-5 w-5" aria-hidden />
           </span>
         </button>
