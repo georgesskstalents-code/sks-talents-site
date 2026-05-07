@@ -59,7 +59,7 @@ const videoJsonLd = {
   description:
     "Démo interactive de 90 secondes. Comment une CEO biotech Series B en oncologie passe de 2 jours à 5 minutes de préparation board, et anticipe ses recrutements 6 mois à l'avance.",
   thumbnailUrl: "https://www.skstalents.fr/opengraph-image",
-  uploadDate: "2026-05-05",
+  uploadDate: "2026-05-05T00:00:00Z",
   duration: "PT1M30S",
   contentUrl: CANONICAL + "#demo"
 };

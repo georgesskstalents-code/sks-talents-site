@@ -63,7 +63,7 @@ const videoJsonLd = {
   description:
     "Démo interactive de 90 secondes. Comment un cofondateur DG d'un groupement vétérinaire passe de 3 jours à 4 minutes de reporting mensuel.",
   thumbnailUrl: "https://www.skstalents.fr/opengraph-image",
-  uploadDate: "2026-05-05",
+  uploadDate: "2026-05-05T00:00:00Z",
   duration: "PT1M30S",
   contentUrl: CANONICAL + "#demo"
 };
