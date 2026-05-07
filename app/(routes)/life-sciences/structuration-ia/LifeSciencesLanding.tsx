@@ -203,8 +203,8 @@ export default function LifeSciencesLanding() {
         </div>
       </section>
 
-      {/* ===== Section 3 — ENJEUX × AGENTS IA (fusion) ===== */}
-      <section className="bg-white py-14 sm:py-20">
+      {/* ===== Section 3 — ENJEUX × AGENTS IA (fusion, redesign 2026-05-07) ===== */}
+      <section className="bg-gradient-to-b from-white via-brand-mint/8 to-white py-14 sm:py-20">
         <div className="container-shell">
           <p className="eyebrow">Vos enjeux → Notre réponse IA</p>
           <h2 className="t-h1 max-w-3xl font-display">
@@ -212,50 +212,87 @@ export default function LifeSciencesLanding() {
             <span className="italic text-brand-teal">6 agents IA</span> qui y répondent.
           </h2>
           <p className="mt-3 max-w-3xl t-body">
-            À gauche : la phrase qu'on entend. À droite : l'agent IA qui transforme la situation, avec son ROI.
+            À gauche, la phrase qu'on entend. À droite, l'agent IA qui transforme la situation, avec son ROI mesuré.
           </p>
-          <div className="mt-10 space-y-5">
-            {enjeuxAvecAgents.map(({ enjeu, agent }) => {
+          <div className="mt-12 space-y-8">
+            {enjeuxAvecAgents.map(({ enjeu, agent }, index) => {
               const { Icon } = agent;
               return (
                 <article
                   key={enjeu.num}
-                  className="grid gap-4 rounded-3xl border border-brand-teal/10 bg-brand-mint/10 p-5 sm:grid-cols-[0.9fr_1.1fr] sm:gap-6 sm:p-6"
+                  className="group relative grid gap-5 sm:grid-cols-[1fr_auto_1.15fr] sm:items-stretch sm:gap-0"
                 >
-                  {/* Enjeu */}
-                  <div className="flex gap-4">
-                    <span
-                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-caption font-bold ${
-                        enjeu.tone === "amber" ? "bg-amber-100 text-amber-800" : "bg-brand-mint text-brand-teal"
-                      }`}
-                    >
-                      {enjeu.num}
-                    </span>
-                    <div>
-                      <p className="t-h3 font-semibold text-brand-ink">{enjeu.title}</p>
-                      <p className="mt-2 font-display italic t-caption text-brand-stone">"{enjeu.quote}"</p>
-                    </div>
-                  </div>
-                  {/* Agent IA */}
-                  <div
-                    className={`rounded-2xl border p-5 ${
-                      agent.badge ? "border-brand-teal bg-white" : "border-brand-teal/15 bg-white"
-                    }`}
-                  >
-                    <div className="flex items-start justify-between gap-3">
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-mint/45 text-brand-teal">
-                        <Icon size={20} />
+                  {/* Problème — fond crème, citation prominente */}
+                  <div className="relative overflow-hidden rounded-3xl bg-[#faf7f1] p-6 sm:rounded-r-none sm:p-7">
+                    <div className="flex items-baseline gap-3">
+                      <span
+                        className={`font-display text-[44px] leading-none sm:text-[52px] ${
+                          enjeu.tone === "amber" ? "text-amber-700" : "text-brand-teal"
+                        }`}
+                      >
+                        {enjeu.num}
                       </span>
-                      {agent.badge && (
-                        <span className="rounded-full bg-brand-ink px-2 py-0.5 text-eyebrow font-semibold uppercase text-white">
-                          {agent.badge}
-                        </span>
-                      )}
+                      <span className="text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-stone/70">
+                        Enjeu
+                      </span>
                     </div>
-                    <p className="mt-3 t-h3 font-semibold text-brand-ink">{agent.title}</p>
-                    <p className="mt-2 t-body">{agent.desc}</p>
-                    <p className="mt-3 text-caption font-semibold text-brand-teal">{agent.note}</p>
+                    <p className="mt-4 t-h3 font-semibold text-brand-ink">{enjeu.title}</p>
+                    <blockquote className="mt-4 border-l-2 border-brand-teal/30 pl-4">
+                      <p className="font-display italic t-body text-brand-stone">"{enjeu.quote}"</p>
+                    </blockquote>
                   </div>
+
+                  {/* Connecteur — flèche + label transformation */}
+                  <div className="hidden flex-col items-center justify-center px-2 sm:flex">
+                    <div className="flex flex-col items-center gap-2">
+                      <span className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-teal/70">
+                        Transformation
+                      </span>
+                      <span aria-hidden="true" className="text-3xl text-brand-teal">→</span>
+                    </div>
+                  </div>
+                  {/* Connecteur mobile : ligne verticale + flèche bas */}
+                  <div aria-hidden="true" className="flex flex-col items-center sm:hidden">
+                    <span className="h-6 w-px bg-brand-teal/40" />
+                    <span className="text-2xl text-brand-teal">↓</span>
+                  </div>
+
+                  {/* Solution — agent IA, fond blanc, ROI en bande teal */}
+                  <div className="relative flex flex-col overflow-hidden rounded-3xl border border-brand-teal/15 bg-white shadow-[0_18px_44px_rgba(15,58,60,0.08)] transition duration-300 group-hover:-translate-y-0.5 group-hover:shadow-[0_24px_56px_rgba(15,58,60,0.12)] sm:rounded-l-none">
+                    <div className="flex flex-1 flex-col p-6 sm:p-7">
+                      <div className="flex items-start justify-between gap-3">
+                        <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-mint/60 to-brand-mint/30 text-brand-teal">
+                          <Icon size={22} />
+                        </span>
+                        {agent.badge && (
+                          <span className="rounded-full bg-brand-ink px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.18em] text-white">
+                            {agent.badge}
+                          </span>
+                        )}
+                      </div>
+                      <p className="mt-4 t-h3 font-semibold text-brand-ink">{agent.title}</p>
+                      <p className="mt-2 t-body">{agent.desc}</p>
+                    </div>
+                    {/* ROI strip — bande teal en bas, métrique mise en valeur */}
+                    <div className="border-t border-brand-teal/15 bg-gradient-to-r from-brand-teal to-brand-teal/85 px-6 py-3 sm:px-7">
+                      <div className="flex items-baseline gap-3">
+                        <span className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-white/70">
+                          ROI
+                        </span>
+                        <span className="font-display text-sm font-semibold text-white sm:text-base">
+                          {agent.note}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Step counter overlay (desktop only) */}
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -top-4 left-6 hidden rounded-full border border-brand-teal/15 bg-white px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-stone/60 shadow-sm sm:inline-block"
+                  >
+                    {String(index + 1).padStart(2, "0")} / {String(enjeuxAvecAgents.length).padStart(2, "0")}
+                  </span>
                 </article>
               );
             })}
