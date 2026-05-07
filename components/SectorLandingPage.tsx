@@ -540,7 +540,7 @@ export default function SectorLandingPage({ config }: Props) {
 
           <SectionReveal delay={420}>
             <div className="mt-10 flex w-full justify-center">
-              <div className="w-full max-w-md">
+              <div className="w-full max-w-2xl">
                 <HeroVideoCard
                   vimeoId={process.env.NEXT_PUBLIC_VIMEO_VIDEO_ID ?? "851364422"}
                   compact
