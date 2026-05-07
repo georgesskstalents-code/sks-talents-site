@@ -70,6 +70,12 @@ function looksTranslatable(value: string) {
   return /[\p{L}]/u.test(trimmed);
 }
 
+// Note (2026-05-07): the previous implementation skipped text inside parents
+// with display:none / visibility:hidden — but mobile drawers, accordions,
+// and modals are exactly that. So when a user opened a drawer in EN mode,
+// the text inside was never captured during the initial collect, leading to
+// untranslated zones until the MutationObserver kicked in (~250ms delay).
+// We now include hidden text upfront so it's part of the cache from request 1.
 function collectTranslatableTextNodes() {
   const entries: TextEntry[] = [];
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
@@ -105,13 +111,7 @@ function collectTranslatableTextNodes() {
       continue;
     }
 
-    const computedStyle = window.getComputedStyle(parent);
-    if (computedStyle.display === "none" || computedStyle.visibility === "hidden") {
-      continue;
-    }
-
     const rawValue = node.textContent ?? "";
-    const trimmed = rawValue.trim();
     if (!looksTranslatable(rawValue)) {
       continue;
     }
@@ -121,7 +121,7 @@ function collectTranslatableTextNodes() {
 
     entries.push({
       node,
-      original: trimmed,
+      original: rawValue.trim(),
       leading,
       trailing
     });
@@ -419,6 +419,10 @@ export default function SiteLanguageSelector() {
       if (observerTimeout !== null) {
         window.clearTimeout(observerTimeout);
       }
+      // Throttle reduced 250ms → 80ms so newly-revealed content (drawer opening,
+      // accordion expanding, modal appearing) gets translated almost instantly
+      // when the cache already has the strings. Larger network round-trips
+      // are still gated by `isApplyingTranslation` so we don't pile up requests.
       observerTimeout = window.setTimeout(() => {
         observerTimeout = null;
         if (isApplyingTranslation) return;
@@ -430,7 +434,7 @@ export default function SiteLanguageSelector() {
           .finally(() => {
             isApplyingTranslation = false;
           });
-      }, 250);
+      }, 80);
     };
 
     const startObserver = () => {
