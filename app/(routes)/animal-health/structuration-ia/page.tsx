@@ -4,7 +4,7 @@ import AnimalHealthLanding from "./AnimalHealthLanding";
 const CANONICAL = "https://www.skstalents.fr/animal-health/structuration-ia";
 const TITLE = "Structuration RH (Agent & automatisation) · Animal Health | SKS TALENTS";
 const DESCRIPTION =
-  "Démo 90 sec : passez de 3 jours à 4 minutes de reporting multi-sites. 6 agents IA pour groupements vétérinaires et petfood. ROI 6 mois. RGPD by design.";
+  "Démo 30 sec : passez de 3 jours à 4 minutes de reporting multi-sites. 6 agents IA pour groupements vétérinaires et petfood. ROI 6 mois. RGPD by design.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -61,10 +61,10 @@ const videoJsonLd = {
   "@type": "VideoObject",
   name: "Démo Agent Reporting Multi-Sites · SKS Talents",
   description:
-    "Démo interactive de 90 secondes. Comment un cofondateur DG d'un groupement vétérinaire passe de 3 jours à 4 minutes de reporting mensuel.",
+    "Démo interactive de 30 secondes. Comment un cofondateur DG d'un groupement vétérinaire passe de 3 jours à 4 minutes de reporting mensuel.",
   thumbnailUrl: "https://www.skstalents.fr/opengraph-image",
   uploadDate: "2026-05-05T00:00:00Z",
-  duration: "PT1M30S",
+  duration: "PT30S",
   contentUrl: CANONICAL + "#demo"
 };
 

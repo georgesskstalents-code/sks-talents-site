@@ -192,7 +192,7 @@ export default function AnimalHealthLanding() {
       {/* ===== Section 2 — DÉMO ===== */}
       <section id="demo" className="bg-white py-14 sm:py-20">
         <div className="container-shell">
-          <p className="eyebrow">Démo interactive · 90 secondes</p>
+          <p className="eyebrow">Démo interactive · 30 secondes</p>
           <h2 className="t-h1 max-w-3xl font-display">
             La démo qui a déjà convaincu{" "}
             <span className="italic text-brand-teal">12 cofondateurs</span>.
@@ -205,7 +205,7 @@ export default function AnimalHealthLanding() {
             <DemoStage
               sector="animal_health"
               scenes={animalHealthScenes}
-              totalSeconds={90}
+              totalSeconds={30}
               ariaLabel="Démo interactive Agent Reporting Multi-Sites"
             />
           </div>

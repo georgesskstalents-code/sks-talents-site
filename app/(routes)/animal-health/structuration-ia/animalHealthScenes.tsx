@@ -3,13 +3,13 @@ import type { DemoScene } from "@/components/landings/DemoStage";
 /**
  * 4 scènes pour la démo Animal Health "Agent Reporting Multi-Sites".
  * Témoignage anonymisé : "Cofondateur DG · Groupement vétérinaire 32 cliniques".
- * Total : 90 secondes (15 + 25 + 30 + 20).
+ * Total : 30 secondes (5 + 8 + 10 + 7). Tap droite/gauche pour naviguer.
  */
 export const animalHealthScenes: DemoScene[] = [
-  // -------------------------------------------------- Scène 1 — Hook (15s)
+  // -------------------------------------------------- Scène 1 — Hook (5s)
   {
     id: "ah-hook",
-    durationMs: 15000,
+    durationMs: 5000,
     render: () => (
       <div className="flex h-full flex-col items-start justify-center bg-brand-ink px-6 py-8 text-white sm:px-12 sm:py-12">
         <p className="text-eyebrow font-semibold uppercase text-brand-mint/70">
@@ -29,10 +29,10 @@ export const animalHealthScenes: DemoScene[] = [
     )
   },
 
-  // -------------------------------------------------- Scène 2 — Avant (25s)
+  // -------------------------------------------------- Scène 2 — Avant (8s)
   {
     id: "ah-before",
-    durationMs: 25000,
+    durationMs: 8000,
     render: () => (
       <div className="flex h-full flex-col bg-white px-6 py-6 sm:px-8 sm:py-8">
         <div className="mb-4 inline-flex items-center gap-2 self-start rounded-full bg-red-50 px-3 py-1">
@@ -74,10 +74,10 @@ export const animalHealthScenes: DemoScene[] = [
     )
   },
 
-  // -------------------------------------------------- Scène 3 — Après (30s)
+  // -------------------------------------------------- Scène 3 — Après (10s)
   {
     id: "ah-after",
-    durationMs: 30000,
+    durationMs: 10000,
     render: () => (
       <div className="flex h-full flex-col bg-white px-6 py-6 sm:px-8 sm:py-8">
         <div className="mb-3 inline-flex items-center gap-2 self-start rounded-full bg-emerald-50 px-3 py-1">
@@ -135,10 +135,10 @@ export const animalHealthScenes: DemoScene[] = [
     )
   },
 
-  // -------------------------------------------------- Scène 4 — Témoignage (20s)
+  // -------------------------------------------------- Scène 4 — Témoignage (7s)
   {
     id: "ah-testimonial",
-    durationMs: 20000,
+    durationMs: 7000,
     render: () => (
       <div className="flex h-full flex-col items-center justify-center bg-white px-6 py-6 text-center sm:px-12">
         <div className="flex h-20 w-20 items-center justify-center rounded-full bg-blue-100 text-2xl font-semibold text-blue-700">

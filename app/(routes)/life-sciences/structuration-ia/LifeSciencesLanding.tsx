@@ -183,7 +183,7 @@ export default function LifeSciencesLanding() {
       {/* ===== Section 2 — DÉMO ===== */}
       <section id="demo" className="bg-white py-14 sm:py-20">
         <div className="container-shell">
-          <p className="eyebrow">Démo interactive · 60 secondes</p>
+          <p className="eyebrow">Démo interactive · 30 secondes</p>
           <h2 className="t-h1 max-w-3xl font-display">
             Le copilot IA qui transforme{" "}
             <span className="italic text-brand-teal">vos board meetings</span>.
@@ -196,7 +196,7 @@ export default function LifeSciencesLanding() {
             <DemoStage
               sector="life_sciences"
               scenes={lifeSciencesScenes}
-              totalSeconds={60}
+              totalSeconds={30}
               ariaLabel="Démo interactive Agent CEO Copilot stratégique"
             />
           </div>
