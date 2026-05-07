@@ -439,6 +439,12 @@ export default function SectorLandingPage({ config }: Props) {
               <a href="#proof" className={styles.navLink}>
                 Résultats
               </a>
+              <Link
+                href={`${config.slug}/structuration-ia`}
+                className={styles.navLinkFeatured}
+              >
+                Structuration RH (Agent &amp; automatisation)
+              </Link>
               <button
                 type="button"
                 onClick={() => openBookCall("nav")}

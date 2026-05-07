@@ -145,6 +145,38 @@
   color: var(--ink);
 }
 
+/* Featured nav pill — promotes the structuration-ia landing as a high-value
+   destination from the sector hub. Stays visible on mobile (overridden in the
+   max-width: 819px block below) to drive conversions on the dominant device. */
+.navLinkFeatured {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(65, 160, 164, 0.35);
+  background: linear-gradient(135deg, #ddf2ee 0%, #c1e9e2 100%);
+  color: #0f3a3c;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.005em;
+  white-space: nowrap;
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 220ms ease,
+    border-color 220ms ease;
+}
+
+.navLinkFeatured:hover,
+.navLinkFeatured:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(15, 58, 60, 0.6);
+  background: linear-gradient(135deg, #c8ebe4 0%, #a3d8cd 100%);
+  box-shadow: 0 8px 22px rgba(65, 160, 164, 0.18);
+}
+
 .navButton,
 .ctaPrimary,
 .stickyButton {
@@ -1386,6 +1418,17 @@
 @media (max-width: 819px) {
   .navLink {
     display: none;
+  }
+
+  /* Keep the featured pill visible on mobile — it's the primary conversion
+     hook from the hub to the IA landing. Compact size to fit alongside the
+     "Réserver un call" CTA. */
+  .navLinkFeatured {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.78rem;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
   }
 
   .marketTabs {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import LifeSciencesLanding from "./LifeSciencesLanding";
 
 const CANONICAL = "https://www.skstalents.fr/life-sciences/structuration-ia";
-const TITLE = "CEO Copilot IA Life Sciences | Biotech, Medtech, Deeptech, E-santé | SKS TALENTS";
+const TITLE = "Structuration RH (Agent & automatisation) · Life Sciences | SKS TALENTS";
 const DESCRIPTION =
   "Démo 90 sec : anticipez vos recrutements 6 mois à l'avance. Pour CEO biotech, medtech, deeptech, e-santé Series A à C. 100 % rétention 12 mois.";
 
