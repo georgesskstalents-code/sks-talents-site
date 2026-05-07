@@ -4,7 +4,7 @@ import LifeSciencesLanding from "./LifeSciencesLanding";
 const CANONICAL = "https://www.skstalents.fr/life-sciences/structuration-ia";
 const TITLE = "Structuration RH (Agent & automatisation) · Life Sciences | SKS TALENTS";
 const DESCRIPTION =
-  "Démo 90 sec : anticipez vos recrutements 6 mois à l'avance. Pour CEO biotech, medtech, deeptech, e-santé Series A à C. 100 % rétention 12 mois.";
+  "Démo 60 sec : anticipez vos recrutements 6 mois à l'avance. Pour CEO biotech, medtech, deeptech, e-santé Series A à C. 100 % rétention 12 mois.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -57,10 +57,10 @@ const videoJsonLd = {
   "@type": "VideoObject",
   name: "Démo Agent CEO Copilot stratégique · SKS Talents",
   description:
-    "Démo interactive de 90 secondes. Comment une CEO biotech Series B en oncologie passe de 2 jours à 5 minutes de préparation board, et anticipe ses recrutements 6 mois à l'avance.",
+    "Démo interactive de 60 secondes. Comment une CEO biotech Series B en oncologie passe de 2 jours à 5 minutes de préparation board, et anticipe ses recrutements 6 mois à l'avance.",
   thumbnailUrl: "https://www.skstalents.fr/opengraph-image",
   uploadDate: "2026-05-05T00:00:00Z",
-  duration: "PT1M30S",
+  duration: "PT1M",
   contentUrl: CANONICAL + "#demo"
 };
 
