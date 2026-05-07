@@ -139,7 +139,7 @@ const sharedMetrics: SectorLandingMetric[] = [
 const sharedProcess: SectorLandingProcessStep[] = [
   {
     timing: "Jour 0",
-    title: "Intake — 45 minutes",
+    title: "Intake · 45 minutes",
     description:
       "Cadrage du rôle, contexte, profil-cible et critères éliminatoires. Pas de brief écrit exigé."
   },
@@ -248,7 +248,7 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
     switchLabel: "Life Sciences",
     heroChip: "Life Sciences",
     targetLine:
-      "Pour les CEO, COO, CPO et DRH — biotech, diagnostic, deeptech, e-santé et robotique",
+      "Pour les CEO, COO, CPO et DRH en biotech, diagnostic, deeptech, e-santé et robotique.",
     titleLineOne: "Recruter, cadrer, structurer.",
     titleLineTwo: "LifeSciences.",
     description:
@@ -364,7 +364,7 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
     coverage: {
       title: "Ce que nous faisons en Life Sciences",
       intro: "Notre angle n’est pas seulement de recruter.",
-      angleTitle: "Pas seulement un cabinet de recrutement — un partenaire de structuration.",
+      angleTitle: "Pas seulement un cabinet de recrutement, un partenaire de structuration.",
       actions: [
         "mieux cadrer les rôles",
         "prioriser les hires critiques",
@@ -401,7 +401,7 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
       quote:
         "Georges m'a accompagné pendant plusieurs années sur des recrutements sensibles en EMEA. Rigueur dans le cadrage, finesse dans la lecture des profils, tenue du calendrier : un partenaire rare sur un marché où la confidentialité compte autant que la vitesse.",
       name: "Baldo",
-      role: "Genomics — EMEA Commercial Director"
+      role: "Genomics · EMEA Commercial Director"
     },
     differentiationTitle: "Une lecture",
     differentiationAccent: "sectorielle",
@@ -422,22 +422,22 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
         description: "Le niveau d’exigence reste maintenu jusqu’au closing et à la prise de poste."
       }
     ],
-    faqTitle: "FAQ — Recrutement Life Sciences",
+    faqTitle: "FAQ · Recrutement Life Sciences",
     faqs: [
       {
         question: "Comment recruter efficacement dans les Life Sciences aujourd’hui ?",
         answer:
-          "Le recrutement dans les Life Sciences est particulièrement compétitif en raison de la rareté des profils expérimentés et de la forte croissance du secteur.\n\nLes entreprises performantes adoptent une approche proactive basée sur la chasse de talents, car les meilleurs profils ne sont pas en recherche active.\n\n👉 Le recrutement devient un levier stratégique de croissance."
+          "Le recrutement dans les Life Sciences est particulièrement compétitif en raison de la rareté des profils expérimentés et de la forte croissance du secteur.\n\nLes entreprises performantes adoptent une approche proactive basée sur la chasse de talents, car les meilleurs profils ne sont pas en recherche active.\n\nLe recrutement devient un levier stratégique de croissance."
       },
       {
         question: "Quels sont les postes clés à structurer en priorité ?",
         answer:
-          "Nous intervenons exclusivement sur les fonctions à fort impact :\n\n- Direction des opérations (COO)\n- Direction des ressources humaines (DRH / Head of People)\n- Direction commerciale / Business Development\n\n👉 Ces rôles permettent d’aligner stratégie et exécution."
+          "Nous intervenons exclusivement sur les fonctions à fort impact :\n\n- Direction des opérations (COO)\n- Direction des ressources humaines (DRH / Head of People)\n- Direction commerciale / Business Development\n\nCes rôles permettent d’aligner stratégie et exécution."
       },
       {
         question: "Pourquoi les meilleurs candidats ne postulent-ils pas ?",
         answer:
-          "Les profils les plus performants sont déjà en poste et recherchent avant tout des projets à fort impact.\n\n👉 Une approche par chasse directe est indispensable."
+          "Les profils les plus performants sont déjà en poste et recherchent avant tout des projets à fort impact.\n\nUne approche par chasse directe est indispensable."
       }
     ],
     finalTitle: {
@@ -460,7 +460,7 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
     switchLabel: "Animal Health",
     heroChip: "Animal Health",
     targetLine:
-      "Pour les CEO, COO, CPO et DRH — diagnostic animal health, cliniques vétérinaires et petfood premium",
+      "Pour les CEO, COO, CPO et DRH en diagnostic animal health, cliniques vétérinaires et petfood premium.",
     titleLineOne: "Recruter, cadrer, structurer.",
     titleLineTwo: "AnimalHealth.",
     description:
@@ -567,7 +567,7 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
     coverage: {
       title: "Ce que nous faisons en Animal Health",
       intro: "Là aussi, notre rôle n’est pas seulement de trouver des profils.",
-      angleTitle: "Pas seulement trouver des profils — soutenir la croissance sans casser le terrain.",
+      angleTitle: "Pas seulement trouver des profils, soutenir la croissance sans casser le terrain.",
       actions: [
         "recruter sur des marchés pénuriques",
         "structurer leurs équipes",
@@ -611,7 +611,7 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
       quote:
         "Georges m'a accompagné pendant plusieurs années sur des recrutements sensibles en EMEA. Rigueur dans le cadrage, finesse dans la lecture des profils, tenue du calendrier : un partenaire rare sur un marché où la confidentialité compte autant que la vitesse.",
       name: "Baldo",
-      role: "Genomics — EMEA Commercial Director"
+      role: "Genomics · EMEA Commercial Director"
     },
     differentiationTitle: "Une lecture",
     differentiationAccent: "terrain",
@@ -632,22 +632,22 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
         description: "Le pilotage reste propre même quand le marché est localement très tendu."
       }
     ],
-    faqTitle: "FAQ — Recrutement Santé Animale",
+    faqTitle: "FAQ · Recrutement Santé Animale",
     faqs: [
       {
         question: "Comment recruter efficacement dans le secteur de la santé animale ?",
         answer:
-          "Le secteur de la santé animale est en forte croissance, notamment avec l’augmentation des enjeux liés au bien-être animal, à la sécurité alimentaire et à l’innovation vétérinaire.\n\nCependant, les profils expérimentés sont rares et très sollicités. Les entreprises doivent adopter une approche proactive basée sur la chasse de talents plutôt que sur la simple diffusion d’offres.\n\n👉 Les entreprises les plus performantes combinent une stratégie de sourcing ciblée avec une proposition de valeur claire et différenciante."
+          "Le secteur de la santé animale est en forte croissance, notamment avec l’augmentation des enjeux liés au bien-être animal, à la sécurité alimentaire et à l’innovation vétérinaire.\n\nCependant, les profils expérimentés sont rares et très sollicités. Les entreprises doivent adopter une approche proactive basée sur la chasse de talents plutôt que sur la simple diffusion d’offres.\n\nLes entreprises les plus performantes combinent une stratégie de sourcing ciblée avec une proposition de valeur claire et différenciante."
       },
       {
         question: "Quels sont les postes clés à structurer en priorité ?",
         answer:
-          "Dans la santé animale, les fonctions prioritaires sont celles qui permettent de structurer la croissance et d’optimiser les opérations.\n\nChez SKS Talents, nous intervenons exclusivement sur :\n\n- Direction des opérations (COO)\n- Direction des ressources humaines (DRH / Head of People)\n- Direction commerciale / Business Development\n\n👉 Ces rôles sont essentiels pour transformer une innovation en performance durable."
+          "Dans la santé animale, les fonctions prioritaires sont celles qui permettent de structurer la croissance et d’optimiser les opérations.\n\nChez SKS Talents, nous intervenons exclusivement sur :\n\n- Direction des opérations (COO)\n- Direction des ressources humaines (DRH / Head of People)\n- Direction commerciale / Business Development\n\nCes rôles sont essentiels pour transformer une innovation en performance durable."
       },
       {
         question: "Pourquoi faire appel à un cabinet spécialisé en santé animale ?",
         answer:
-          "Un cabinet spécialisé permet d’accéder à un réseau de talents qualifiés et souvent invisibles sur le marché.\n\nIl apporte également :\n- une compréhension du secteur\n- un gain de temps\n- une sécurisation des recrutements\n\n👉 Dans un marché compétitif, c’est un levier stratégique pour attirer les meilleurs profils."
+          "Un cabinet spécialisé permet d’accéder à un réseau de talents qualifiés et souvent invisibles sur le marché.\n\nIl apporte également :\n- une compréhension du secteur\n- un gain de temps\n- une sécurisation des recrutements\n\nDans un marché compétitif, c’est un levier stratégique pour attirer les meilleurs profils."
       }
     ],
     finalTitle: {

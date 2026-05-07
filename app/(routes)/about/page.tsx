@@ -4,25 +4,21 @@ import CalendlyButton from "@/components/CalendlyButton";
 
 const values = [
   {
-    icon: "🎯",
     title: "Spécialisation totale",
     body:
       "Que du Life Sciences, du diagnostic, de la santé animale et du petfood premium. Pas de généralisme déguisé."
   },
   {
-    icon: "🤝",
     title: "Respect mutuel",
     body:
       "Le candidat n’est pas un produit. Le client n’est pas un chèque. Chacun mérite une transparence totale."
   },
   {
-    icon: "🔬",
     title: "Méthode lucide",
     body:
       "On préfère perdre un mandat que livrer un mauvais profil. La cohérence prime sur le chiffre d’affaires."
   },
   {
-    icon: "🛡️",
     title: "Tenue dans le temps",
     body:
       "75 % des recrutements 2019 sont toujours en poste 6 ans plus tard. La vraie réussite se mesure dans la durée."
@@ -79,9 +75,6 @@ export default function AboutPage() {
                 key={value.title}
                 className="card-luxe panel-lift flex h-full flex-col gap-4 p-6 sm:p-7"
               >
-                <span className="text-3xl" aria-hidden="true">
-                  {value.icon}
-                </span>
                 <h3 className="font-display text-xl uppercase tracking-[0.04em] text-brand-ink sm:text-2xl">
                   {value.title}
                 </h3>

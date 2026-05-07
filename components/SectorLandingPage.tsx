@@ -766,23 +766,6 @@ export default function SectorLandingPage({ config }: Props) {
             ))}
           </div>
 
-          {SHOW_FULL_LANDING_BLOCKS && (
-            <div className={styles.summaryGrid}>
-              <div className={styles.summaryCard}>
-                <p className={styles.sectionLabel}>{config.services.summaryTitle}</p>
-                <p className={styles.summaryCopy}>{config.services.summary}</p>
-              </div>
-
-              <div className={styles.summaryCard}>
-                <p className={styles.sectionLabel}>{config.services.businessTitle}</p>
-                <ul className={styles.serviceList}>
-                  {config.services.businessReadings.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 

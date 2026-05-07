@@ -155,7 +155,7 @@ type RoleTemplate = {
   studies: string[];
 };
 
-const AON_REWARDS_URL = "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp";
+const AON_REWARDS_URL = "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp";
 const FRANCE_BIOTECH_PANORAMA_URL = "https://france-biotech.fr/publications/le-panorama-france-healthtech/";
 const FRANCE_BIOTECH_PANORAMA_2026_URL =
   "https://france-biotech.fr/communiques-de-presse/communiques-france-biotech/panorama-france-healthtech-2026-une-filiere-mature-innovante-et-resiliente-confrontee-a-un-environnement-plus-exigeant/";

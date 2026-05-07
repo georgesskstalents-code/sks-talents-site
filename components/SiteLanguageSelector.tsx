@@ -537,17 +537,18 @@ export default function SiteLanguageSelector() {
   return (
     <div className="relative shrink-0">
       <div
-        className="inline-flex items-center gap-1 rounded-full border border-brand-teal/20 bg-white/90 p-1 shadow-soft backdrop-blur"
+        className="inline-flex items-center gap-0.5 rounded-full border border-brand-teal/20 bg-white/90 p-0.5 shadow-soft backdrop-blur sm:gap-1 sm:p-1"
         aria-label="Sélecteur de langue du site"
         data-site-language-selector="true"
       >
-        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand-mint text-brand-teal">
+        {/* Icon shown only on tablet+ (mobile keeps the bar compact so the hamburger never overflows). */}
+        <span className="hidden h-9 w-9 items-center justify-center rounded-full bg-brand-mint text-brand-teal sm:inline-flex">
           {isTranslating ? <Loader2 className="h-4 w-4 animate-spin" /> : <Languages className="h-4 w-4" />}
         </span>
         <button
           type="button"
           onClick={() => handleLanguageChange("fr")}
-          className={`rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition ${
+          className={`rounded-full px-2.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] transition sm:px-3 sm:py-2 sm:tracking-[0.18em] ${
             preferredLanguage === "fr"
               ? "bg-brand-teal text-white"
               : "text-brand-stone hover:bg-brand-mint"
@@ -560,7 +561,7 @@ export default function SiteLanguageSelector() {
         <button
           type="button"
           onClick={() => handleLanguageChange("en")}
-          className={`rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition ${
+          className={`rounded-full px-2.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] transition sm:px-3 sm:py-2 sm:tracking-[0.18em] ${
             preferredLanguage === "en"
               ? "bg-brand-teal text-white"
               : "text-brand-stone hover:bg-brand-mint"

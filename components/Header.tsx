@@ -58,11 +58,11 @@ const navGroups = [
 function LanguageSelectorFallback() {
   return (
     <div
-      className="inline-flex min-h-[44px] items-center gap-1 rounded-full border border-brand-teal/20 bg-white/90 p-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-stone shadow-soft"
+      className="inline-flex min-h-[36px] items-center gap-0.5 rounded-full border border-brand-teal/20 bg-white/90 p-0.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-stone shadow-soft sm:min-h-[44px] sm:gap-1 sm:p-1 sm:tracking-[0.18em]"
       aria-hidden="true"
     >
-      <span className="rounded-full bg-brand-mint px-3 py-2 text-brand-teal">FR</span>
-      <span className="px-3 py-2">EN</span>
+      <span className="rounded-full bg-brand-mint px-2.5 py-1.5 text-brand-teal sm:px-3 sm:py-2">FR</span>
+      <span className="px-2.5 py-1.5 sm:px-3 sm:py-2">EN</span>
     </div>
   );
 }
@@ -98,7 +98,7 @@ export default function Header() {
       }`}
     >
       <div
-        className={`container-shell flex items-center gap-4 transition-all duration-300 xl:gap-7 ${
+        className={`container-shell flex items-center gap-2 transition-all duration-300 sm:gap-4 xl:gap-7 ${
           scrolled ? "min-h-[64px]" : "min-h-[84px]"
         }`}
       >
@@ -151,14 +151,14 @@ export default function Header() {
           href="https://calendly.com/g-kengue/talentconsulting"
           target="_blank"
           rel="noreferrer noopener"
-          className="ml-2 inline-flex items-center justify-center rounded-full bg-brand-teal px-4 py-2.5 text-sm font-semibold text-white transition active:scale-95 lg:hidden"
+          className="ml-1 inline-flex shrink-0 items-center justify-center rounded-full bg-brand-teal px-3 py-2 text-xs font-semibold text-white transition active:scale-95 sm:px-4 sm:py-2.5 sm:text-sm lg:hidden"
         >
           Réserver
         </a>
 
         <button
           type="button"
-          className="ml-2 inline-flex rounded-full border border-brand-teal/20 p-3 text-brand-teal lg:hidden"
+          className="ml-1 inline-flex shrink-0 rounded-full border border-brand-teal/20 p-2.5 text-brand-teal sm:p-3 lg:hidden"
           onClick={() => setMenuOpen((current) => !current)}
           aria-label="Ouvrir le menu"
         >

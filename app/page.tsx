@@ -62,12 +62,12 @@ const insightSignals = [
   {
     title: "Pression marché",
     description:
-      "En biotech, diagnostic, vétérinaire et petfood, chaque retard de recrutement se répercute sur l’exécution commerciale, technique, médicale ou managériale — et fragilise la roadmap COMEX."
+      "En biotech, diagnostic, vétérinaire et petfood, chaque retard de recrutement se répercute sur l’exécution commerciale, technique, médicale ou managériale, et fragilise la roadmap COMEX."
   },
   {
     title: "Structuration RH digitalisée",
     description:
-      "Le vrai levier RH aujourd’hui : digitaliser le recrutement, automatiser les tâches à faible valeur ajoutée et libérer la direction RH pour la stratégie et l’humain — là où se joue le succès des projets."
+      "Le vrai levier RH aujourd’hui : digitaliser le recrutement, automatiser les tâches à faible valeur ajoutée et libérer la direction RH pour la stratégie et l’humain, là où se joue le succès des projets."
   }
 ];
 
@@ -155,7 +155,7 @@ export default function HomePage() {
                   >
                     Faire le diagnostic
                   </Link>
-                  <CalendlyButton label="Je réserve un call — 15 min" tone="outline" />
+                  <CalendlyButton label="Je réserve un call · 15 min" tone="outline" />
                 </div>
               </div>
 

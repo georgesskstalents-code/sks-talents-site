@@ -30,7 +30,7 @@ const enjeuxAvecAgents: {
 }[] = [
   {
     enjeu: { num: "02", title: "Reporting talent au board", quote: "Mon board me demande mes KPI talent en temps réel. Je leur sors un PowerPoint qui date d'il y a 3 mois." },
-    agent: { Icon: Compass, title: "Agent CEO Copilot stratégique", desc: "Connecte roadmap R&D + ATS + données financières. Anticipe besoins talent 6 mois à l'avance. Génère vos board packs auto.", note: "+6 mois d'anticipation · Board pack en 5 min", badge: "DÉMO ⭐" }
+    agent: { Icon: Compass, title: "Agent CEO Copilot stratégique", desc: "Connecte roadmap R&D + ATS + données financières. Anticipe besoins talent 6 mois à l'avance. Génère vos board packs auto.", note: "+6 mois d'anticipation · Board pack en 5 min", badge: "DÉMO" }
   },
   {
     enjeu: { num: "03", title: "Burn rate humain", quote: "180-250 k€/mois de masse salariale alignés sur la roadmap ?" },
@@ -88,22 +88,22 @@ const profils = [
 ];
 
 const vocabulaire = {
-  "🧬 Biotech": [
+  "Biotech": [
     "Head of CMC", "Director Clinical Operations", "VP Regulatory",
     "Phase I/II/III", "Bioprocédés", "GMP/GLP", "ANSM", "EMA", "FDA",
     "Marquage CE", "IND/NDA", "Therapeutics oncology", "Cell therapy",
     "Bpifrance", "French Tech"
   ],
-  "⚙️ Medtech": [
+  "Medtech": [
     "Dispositifs médicaux", "ISO 13485", "MDR / IVDR",
     "Conception électronique", "Industrialisation", "IEC 60601",
     "Notified Body", "Class IIa/IIb/III", "BSPCE", "Levée Series A/B"
   ],
-  "🔬 Deeptech biomatériaux": [
+  "Deeptech biomatériaux": [
     "PhD ingénierie", "Bioprocédés", "Scale-up production",
     "Lab biologie cellulaire", "Cellules souches", "Bioréacteurs", "Bpifrance"
   ],
-  "💻 E-santé": [
+  "E-santé": [
     "Telemedicine", "SaaS B2B santé", "IA santé", "DTx",
     "RGPD santé", "HDS hébergement", "CE marking software", "DMD",
     "CMO", "ARS", "CNIL"

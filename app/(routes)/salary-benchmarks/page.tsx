@@ -157,7 +157,7 @@ export default function SalaryBenchmarksPage() {
             <li>
               Benchmarks principaux:{" "}
               <a
-                href="https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+                href="https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="font-semibold text-brand-teal"

@@ -1,30 +1,17 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
-import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
 import { getApprovedKeywords } from "@/lib/seoKeywords";
 
-// Web fonts: Inter (sans, 9 weights) for body + UI, Instrument Serif (regular + italic)
-// for editorial display headings. Loaded via next/font/google → preload, no FOIT,
-// identical rendering across all OS (replaces the Apple-only Avenir Next + Iowan Old Style).
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-sans",
-  display: "swap"
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-display",
-  display: "swap"
-});
+// Fonts:
+// - Keep production-safe builds in network-restricted environments by avoiding `next/font/google`,
+//   which fetches fonts at build time.
+// - Load fonts at runtime via Google Fonts CSS, and bind Tailwind’s font tokens via CSS variables
+//   defined in app/globals.css (:root --font-sans / --font-display).
 
 // Lazy-load non-critical widgets (defer ~500KB of JS off the critical path)
 const Analytics = dynamic(() => import("@/components/Analytics"));
@@ -99,9 +86,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${inter.variable} ${instrumentSerif.variable}`}>
+    <html lang="fr">
       <head>
         {/* Perf: pre-connect to third-parties used above the fold */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap"
+        />
         <link rel="preconnect" href="https://player.vimeo.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://player.vimeo.com" />
         <link rel="preconnect" href="https://i.vimeocdn.com" crossOrigin="anonymous" />

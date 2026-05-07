@@ -136,7 +136,7 @@ export const articles: Article[] = [
       },
       {
         name: "Aon - Benchmarks de remuneration",
-        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
       }
     ]
   },
@@ -240,7 +240,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "Aon - Benchmarks de remuneration",
-        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
       },
       {
         name: "Glassdoor",
@@ -286,7 +286,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "Aon - Benchmarks de remuneration",
-        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
       },
       {
         name: "Glassdoor",
@@ -498,7 +498,7 @@ export const articles: Article[] = [
       },
       {
         name: "Aon - Benchmarks de remuneration",
-        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
       }
     ]
   },
@@ -544,7 +544,7 @@ export const articles: Article[] = [
       },
       {
         name: "Aon - Benchmarks de remuneration",
-        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
       }
     ]
   },
@@ -1813,7 +1813,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "Aon - Études, guides et benchmarks de rémunération",
-        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
       },
       {
         name: "France Biotech",
@@ -1838,7 +1838,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "Aon - Études, guides et benchmarks de rémunération",
-        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
       },
       {
         name: "France Biotech",
@@ -3321,7 +3321,7 @@ export const articles: Article[] = [
       },
       {
         name: "Aon - Benchmarks de remuneration",
-        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
       }
     ]
   },
@@ -3389,7 +3389,7 @@ export const articles: Article[] = [
       },
       {
         name: "Aon - Benchmarks de remuneration",
-        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
       }
     ]
   },
@@ -3490,7 +3490,7 @@ export const articles: Article[] = [
       },
       {
         name: "Aon - Benchmarks de remuneration",
-        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
       }
     ]
   },
@@ -3521,7 +3521,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "Aon - Benchmarks de remuneration",
-        url: "https://www.aon.com/france/produits-et-services/rh/benchmark_remuneration.jsp"
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
       },
       {
         name: "Culture RH",

@@ -39,7 +39,7 @@ const enjeuxAvecAgents: {
   },
   {
     enjeux: [{ num: "03", title: "Plannings sur Excel", quote: "30 plannings sur Excel. C'est l'enfer." }],
-    agent: { Icon: BarChart3, title: "Agent Reporting Dirigeant multi-sites", desc: "Compile auto les KPI de toutes vos cliniques. Dashboard CODIR prêt chaque lundi avec alertes contextuelles.", note: "3 jours → 4 minutes", badge: "DÉMO ⭐" }
+    agent: { Icon: BarChart3, title: "Agent Reporting Dirigeant multi-sites", desc: "Compile auto les KPI de toutes vos cliniques. Dashboard CODIR prêt chaque lundi avec alertes contextuelles.", note: "3 jours → 4 minutes", badge: "DÉMO" }
   },
   {
     enjeux: [{ num: "04", title: "Modélisation financière sur Excel", quote: "Data sans préconisations." }],
@@ -103,18 +103,18 @@ const profils = [
 ];
 
 const vocabulaire = {
-  "🏥 Groupements vétérinaires": [
+  "Groupements vétérinaires": [
     "Délégué Vétérinaire", "Coordinateur Régional", "ASV référent", "Vétérinaire associé",
     "Cliniques canin/équin/mixte", "Performance clinique", "Plan d'audit clinique",
     "Onboarding post-rachat", "Conventions vétérinaires", "Ordre vétérinaire",
     "Indépendant vs salarié", "Acquisition de cliniques", "Earn-out", "Réseau franchisé"
   ],
-  "🐕 Petfood multinationale": [
+  "Petfood multinationale": [
     "KAM Vets", "Salesforce Vets", "Vets Team Leads", "Field Strategy",
     "Vet Affairs", "KOL Relations", "GxP compliance", "DVM/Agronomy",
     "Affaires Réglementaires Animal Health"
   ],
-  "🏠 Petfood PME premium": [
+  "Petfood PME premium": [
     "GSS", "Animaleries", "Centrales d'achats", "D2C", "Cleanlabel",
     "Cru/BARF", "Premium nutrition", "Distribution sélective", "Marketing direct"
   ]

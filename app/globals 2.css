@@ -7,8 +7,6 @@
   --foreground: #1e2a2a;
   --card: rgba(255, 255, 255, 0.84);
   --border: rgba(65, 160, 164, 0.18);
-  --font-sans: "Inter";
-  --font-display: "Instrument Serif";
 }
 
 * {
@@ -17,8 +15,6 @@
 
 html {
   scroll-behavior: smooth;
-  /* Mobile: prevent any horizontal scroll caused by 3rd-party widgets / decorative absolute layers */
-  overflow-x: hidden;
 }
 
 body {
@@ -29,29 +25,6 @@ body {
     var(--background);
   color: var(--foreground);
   top: 0 !important;
-  overflow-x: hidden;
-  /* Mobile: bigger tap targets feel + smoother momentum scrolling on iOS */
-  -webkit-tap-highlight-color: transparent;
-  -webkit-overflow-scrolling: touch;
-  /* Ensure base font is at least 16px on small screens to prevent iOS zoom on input focus */
-  font-size: 16px;
-}
-
-/* Mobile-only refinements (≤ 640px) — desktop layout untouched */
-@media (max-width: 640px) {
-  /* Make all primary tap targets at least 44px (WCAG / Apple HIG) */
-  button,
-  a[role="button"],
-  [type="submit"],
-  [type="button"] {
-    min-height: 44px;
-  }
-  /* Form inputs: prevent iOS auto-zoom + comfortable touch */
-  input,
-  textarea,
-  select {
-    font-size: 16px;
-  }
 }
 
 a {
@@ -123,53 +96,16 @@ a {
     radial-gradient(circle at bottom right, rgba(186, 234, 238, 0.48), transparent 32%);
 }
 
-/* ===========================================================================
- * TYPOGRAPHY UTILITIES — see Copilot/Typo-System.md for the full system.
- *
- * Token rules:
- *  - Use these classes everywhere instead of inline text-[Npx]/leading-[N].
- *  - Display uses Instrument Serif (italic by default for editorial weight).
- *  - Body / UI uses Inter.
- *  - All sizes have mobile + desktop variants — never bake breakpoints inline.
- * ========================================================================= */
-
 .eyebrow {
-  /* Uppercase metadata label. /80 contrast (WCAG AA at 11px). */
-  @apply mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/20 bg-brand-mint px-4 py-2 font-sans text-eyebrow font-semibold uppercase text-brand-stone/80;
+  @apply mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/20 bg-brand-mint px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-stone;
 }
 
-/* Display — premium editorial heads, italic by design (signature Instrument Serif). */
-.t-display-xl {
-  @apply font-display text-display-xl font-normal italic text-brand-ink sm:text-[64px] sm:leading-[1.02];
-}
-.t-display-l {
-  @apply font-display text-display-l font-normal italic text-brand-ink sm:text-[48px] sm:leading-[1.05];
-}
-
-/* Section / page heads — non-italic display by default; add `italic` class for emphasis. */
-.t-h1,
 .section-title {
-  @apply font-display text-h1 font-normal text-brand-ink sm:text-[44px] sm:leading-[1.08];
-}
-.t-h2 {
-  @apply font-display text-h2 font-normal text-brand-ink sm:text-[28px] sm:leading-[1.2];
-}
-.t-h3 {
-  @apply font-sans text-h3 font-semibold text-brand-ink sm:text-[20px] sm:leading-[1.3];
+  @apply font-display text-4xl font-semibold leading-tight text-brand-ink sm:text-5xl;
 }
 
-/* Body / lead — Inter, calibrated for long-form reading on mobile. */
-.t-body-l,
 .section-copy {
-  @apply max-w-3xl font-sans text-body-l font-normal text-brand-stone sm:text-[18px] sm:leading-[1.65];
-}
-.t-body {
-  @apply font-sans text-body font-normal text-brand-stone sm:text-[16px] sm:leading-[1.65];
-}
-
-/* Meta — captions, dates, dense data. */
-.t-caption {
-  @apply font-sans text-caption font-medium text-brand-stone/80;
+  @apply max-w-3xl text-base leading-8 text-brand-stone sm:text-lg;
 }
 
 @keyframes fade-in-up {

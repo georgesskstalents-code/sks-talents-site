@@ -46,11 +46,11 @@ export const investmentFunds: InvestmentFund[] = [
     focusAreas: ["Healthcare and life sciences", "Consumer", "Digital", "Education"],
     stageFocus: ["Growth", "Long-term patient capital", "Minority investments"],
     ticketSize: "Not stated as a fixed public range on the corporate overview pages",
-    assetsOrCapital: "Total assets: EUR 10.536bn at 30 June 2025",
+    assetsOrCapital: "Total assets: EUR 12.167bn at 31 December 2025",
     keyFacts: [
       "Sofina is a family-controlled investment company listed on Euronext Brussels.",
       "It publishes healthcare and life sciences as one of its sectors of focus.",
-      "Official figures page lists EUR 10.536bn total assets and EUR 9.811bn NAV at 30 June 2025."
+      "Official figures page lists EUR 12.167bn total assets and EUR 10.843bn NAV at 31 December 2025."
     ],
     portfolioHighlights: [
       {
