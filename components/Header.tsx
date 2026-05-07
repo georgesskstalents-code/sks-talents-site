@@ -133,10 +133,10 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="ml-auto hidden items-center gap-3 md:flex">
+        <div className="ml-auto flex items-center gap-2 md:gap-3">
           <Link
             href="/search"
-            className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-brand-teal/20 px-5 py-3 text-sm font-semibold text-brand-stone transition hover:bg-brand-mint hover:text-brand-teal"
+            className="hidden shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-brand-teal/20 px-5 py-3 text-sm font-semibold text-brand-stone transition hover:bg-brand-mint hover:text-brand-teal md:inline-flex"
           >
             <Search size={16} />
             Chercher
@@ -151,7 +151,7 @@ export default function Header() {
           href="https://calendly.com/g-kengue/talentconsulting"
           target="_blank"
           rel="noreferrer noopener"
-          className="ml-auto inline-flex items-center justify-center rounded-full bg-brand-teal px-4 py-2.5 text-sm font-semibold text-white transition active:scale-95 lg:hidden"
+          className="ml-2 inline-flex items-center justify-center rounded-full bg-brand-teal px-4 py-2.5 text-sm font-semibold text-white transition active:scale-95 lg:hidden"
         >
           Réserver
         </a>
