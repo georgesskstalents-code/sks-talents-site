@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import LifeSciencesContent from "./components/content";
+import RevealOnScroll from "@/components/RevealOnScroll";
+import SectionShell from "@/components/SectionShell";
+import RibbonCTA from "@/components/RibbonCTA";
 import { getSectorLandingPage } from "@/data/sectorLandingPages";
 
 const page = getSectorLandingPage("life");
@@ -103,6 +106,32 @@ const collectionPageJsonLd = {
   }
 };
 
+const sectorTags = [
+  "Biotech",
+  "Medtech (MDR/IVDR)",
+  "Diagnostic & IVD",
+  "Deeptech / ARN",
+  "E-santé / digital health",
+  "Cosmétique scientifique",
+  "Industrielle BPF/GMP"
+];
+
+const signauxLs = [
+  "Constituer un COMEX biotech aligné",
+  "Passer de Series A à Series B",
+  "Recruter un VP Reg ou Head of CMC",
+  "Scaler 50 → 200 employés sans perdre le cap",
+  "Trouver un partenaire qui parle MDR/IVDR/GMP"
+];
+
+// 4 fiches métiers Life Sciences — placeholders, à enrichir avec les slugs réels de data/jobRoles.ts
+const postesLs = [
+  { title: "TODO_GEORGES_LS_POSTE_1", href: "/job-roles" },
+  { title: "TODO_GEORGES_LS_POSTE_2", href: "/job-roles" },
+  { title: "TODO_GEORGES_LS_POSTE_3", href: "/job-roles" },
+  { title: "TODO_GEORGES_LS_POSTE_4", href: "/job-roles" }
+];
+
 export default function LifeSciencesHubPage() {
   return (
     <>
@@ -126,25 +155,126 @@ export default function LifeSciencesHubPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+
       <LifeSciencesContent />
-      <section className="container-shell py-8">
-        <Link
-          href="/life-sciences/structuration-ia"
-          className="group flex items-start gap-4 rounded-3xl border border-brand-teal/20 bg-gradient-to-br from-brand-mint/40 to-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:items-center sm:p-8"
-        >
-          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-teal text-white">
-            <Sparkles className="h-5 w-5" />
-          </span>
-          <div className="flex-1">
-            <p className="text-eyebrow font-semibold uppercase text-brand-teal">🆕 Nouveau programme</p>
-            <p className="mt-1 t-h2 font-display">CEO Copilot IA Life Sciences</p>
-            <p className="mt-2 t-body">
-              Anticipez vos hires 6 mois avant le board · Démo interactive 90 sec.
-            </p>
+
+      {/* Tags secteurs */}
+      <RevealOnScroll>
+        <section className="container-shell py-8">
+          <p className="eyebrow">Nos verticaux</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {sectorTags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-brand-teal/20 bg-white px-4 py-2 text-caption font-semibold text-brand-ink"
+              >
+                {tag}
+              </span>
+            ))}
           </div>
-          <ArrowRight className="h-6 w-6 shrink-0 text-brand-teal transition group-hover:translate-x-0.5" />
-        </Link>
-      </section>
+        </section>
+      </RevealOnScroll>
+
+      {/* 5 signaux LS-adapted */}
+      <RevealOnScroll delayMs={50}>
+        <SectionShell
+          eyebrow="5 signaux qu’il est temps d’agir en Life Sciences"
+          title="Vous reconnaissez votre situation ?"
+        >
+          <div className="mx-auto max-w-4xl space-y-3">
+            {signauxLs.map((signal, idx) => (
+              <article
+                key={signal}
+                className="card-luxe panel-lift flex items-start gap-4 p-5 sm:p-6"
+              >
+                <span
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white"
+                  aria-hidden="true"
+                >
+                  {String(idx + 1).padStart(2, "0")}
+                </span>
+                <p className="t-h3 font-display text-brand-ink">{signal}</p>
+              </article>
+            ))}
+          </div>
+        </SectionShell>
+      </RevealOnScroll>
+
+      {/* Programme IA Life Sciences */}
+      <RevealOnScroll delayMs={90}>
+        <section className="bg-brand-mint py-14 sm:py-20">
+          <div className="container-shell grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+            <div>
+              <p className="eyebrow text-brand-teal">Programme IA</p>
+              <h2 className="t-h1 mt-2 font-display text-brand-ink">
+                {/* TODO_GEORGES_LS_PROG_IA_H2 — h2 d'accroche, max 80 car. */}
+                TODO_GEORGES_LS_PROG_IA_H2
+              </h2>
+              <p className="mt-4 t-body text-brand-stone">
+                {/* TODO_GEORGES_LS_PROG_IA_DESC — résumé du programme avec persona Marie Laurent (CEO biotech Series B oncologie) et bénéfices clés. 2-3 phrases. */}
+                TODO_GEORGES_LS_PROG_IA_DESC
+              </p>
+              <Link
+                href="/life-sciences/structuration-ia"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-ink px-6 py-3 text-caption font-semibold text-white transition hover:opacity-90"
+              >
+                Découvrir le programme
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+            <div className="rounded-3xl border border-brand-teal/15 bg-white p-6 shadow-sm">
+              <div className="flex items-center gap-3">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-mint text-brand-teal">
+                  <Sparkles className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="t-h3 font-display text-brand-ink">Agent CEO Copilot stratégique</p>
+                  <p className="text-caption text-brand-stone">Démo interactive 30 sec</p>
+                </div>
+              </div>
+              <p className="mt-4 text-caption text-brand-stone">
+                Anticipez vos recrutements 6 mois à l'avance. Pour CEO biotech, medtech, deeptech, e-santé Series A à C.
+              </p>
+            </div>
+          </div>
+        </section>
+      </RevealOnScroll>
+
+      {/* Postes recrutés */}
+      <RevealOnScroll delayMs={130}>
+        <SectionShell
+          eyebrow="Postes que nous recrutons"
+          title="4 fiches métiers Life Sciences."
+        >
+          <div className="grid gap-4 md:grid-cols-2">
+            {postesLs.map((poste) => (
+              <Link
+                key={poste.title}
+                href={poste.href}
+                className="rounded-2xl border border-brand-teal/15 bg-white p-5 transition hover:shadow-soft"
+              >
+                <p className="t-h3 font-display text-brand-ink">{poste.title}</p>
+                <span className="mt-3 inline-flex items-center gap-1 text-caption font-semibold text-brand-teal">
+                  Voir la fiche
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </SectionShell>
+      </RevealOnScroll>
+
+      {/* CTA final adapté */}
+      <RevealOnScroll delayMs={160}>
+        <RibbonCTA
+          variant="final"
+          eyebrow="Spécialiste Life Sciences"
+          title="Membre Commission RH France Biotech."
+          description="Cabinet ancré dans l'écosystème biotech, medtech, diagnostic et e-santé."
+          secondaryHref="/life-sciences/structuration-ia"
+          secondaryLabel="Voir le programme IA"
+        />
+      </RevealOnScroll>
     </>
   );
 }
