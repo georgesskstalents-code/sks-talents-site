@@ -1,36 +1,292 @@
-import PageHero from "@/components/PageHero";
-import ServicesSection from "@/components/ServicesSection";
+import type { Metadata } from "next";
 import Link from "next/link";
+import FAQSection from "@/components/FAQSection";
+import FounderCard from "@/components/FounderCard";
+import GuaranteeBadge from "@/components/GuaranteeBadge";
+import MethodNarrative from "@/components/MethodNarrative";
+import PageHero from "@/components/PageHero";
+import RibbonCTA from "@/components/RibbonCTA";
+import RevealOnScroll from "@/components/RevealOnScroll";
+import ReferenceMarquee from "@/components/ReferenceMarquee";
+import ReferenceGrid from "@/components/ReferenceGrid";
+import SectionShell from "@/components/SectionShell";
+import ServicesSection from "@/components/ServicesSection";
+import { references } from "@/data/references";
+
+const CANONICAL = "https://www.skstalents.fr/services";
+const TITLE = "Nos services · Executive search, Programme IA, Structuration RH | SKS TALENTS";
+// TODO_GEORGES_SERVICES_META — description page /services, 150-155 caractères max.
+// Doit résumer : executive search Life Sciences + Animal Health, programme IA RH, structuration RH.
+const DESCRIPTION = "TODO_GEORGES_SERVICES_META";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: CANONICAL },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    type: "website",
+    locale: "fr_FR",
+    url: CANONICAL,
+    siteName: "SKS TALENTS"
+  }
+};
+
+// 5 signaux — verbatim depuis l'ancienne home (avant refonte 2026-05).
+const youAreHerePoints: { title: string; html: string }[] = [
+  {
+    title: "Constituer un COMEX aligné",
+    html: "Vous devez constituer un <strong>COMEX aligné</strong> sur votre <strong>stratégie</strong> et vos <strong>valeurs</strong>, et chaque recrutement <strong>impacte directement votre exécution</strong>."
+  },
+  {
+    title: "Passer en phase scale-up",
+    html: "Vous passez en phase <strong>scale-up</strong> (Série A, B ou au-delà) : vos <strong>processus de recrutement</strong> et votre <strong>employer branding</strong> ne tiennent plus la charge."
+  },
+  {
+    title: "Structurer la fonction RH",
+    html: "Vous voulez <strong>structurer la fonction RH</strong> et industrialiser le <strong>talent acquisition</strong> pour soutenir la <strong>roadmap business</strong>, sans alourdir l’organisation."
+  },
+  {
+    title: "Automatiser les tâches à faible valeur",
+    html: "Vous voulez <strong>automatiser les tâches RH à faible valeur ajoutée</strong> pour libérer la direction sur ce qui compte : <strong>la stratégie, la culture, l’humain</strong>."
+  },
+  {
+    title: "Trouver un partenaire spécialisé",
+    html: "Vous cherchez un partenaire qui maîtrise les enjeux <strong>Life Sciences & Animal Health</strong> (biotech, diagnostic, vétérinaire, petfood), pas un cabinet généraliste qui fait « aussi » de la santé."
+  }
+];
+
+// Insight pénurie — verbatim depuis l'ancienne home.
+const insightSignals = [
+  {
+    title: "Pénurie ciblée",
+    description:
+      "Le marché Life Sciences & Santé animale ne manque pas de CV. Il manque les profils rares, convaincables et crédibles pour un contexte Série A, Série B ou scale-up précis."
+  },
+  {
+    title: "Pression marché",
+    description:
+      "En biotech, diagnostic, vétérinaire et petfood, chaque retard de recrutement se répercute sur l’exécution commerciale, technique, médicale ou managériale, et fragilise la roadmap COMEX."
+  },
+  {
+    title: "Structuration RH digitalisée",
+    description:
+      "Le vrai levier RH aujourd’hui : digitaliser le recrutement, automatiser les tâches à faible valeur ajoutée et libérer la direction RH pour la stratégie et l’humain, là où se joue le succès des projets."
+  }
+];
+
+const faqs = [
+  {
+    question: "Quels honoraires pour une mission executive search ?",
+    answer: "TODO_GEORGES_FAQ_HONORAIRES — fourchette d'honoraires (% du salaire annuel ou forfait), modalités (acompte/succès), positionnement vs cabinets concurrents."
+  },
+  {
+    question: "Combien de temps dure une mission de bout en bout ?",
+    answer: "TODO_GEORGES_FAQ_DUREE — délai moyen intake → signature (60 jours selon les chiffres clés), avec exemples par typologie de poste."
+  },
+  {
+    question: "Travaillez-vous avec des Series A ou seulement scale-up ?",
+    answer: "TODO_GEORGES_FAQ_STADES — phases d'entreprise prises en charge (pre-seed à scale-up), critères de sélection des missions, ticket minimum."
+  },
+  {
+    question: "Comment fonctionne la garantie de remplacement ?",
+    answer: "TODO_GEORGES_FAQ_GARANTIE — durée garantie (12 mois ?), conditions de déclenchement, modalités de remplacement gratuit."
+  },
+  {
+    question: "Vos agents IA sont-ils inclus dans les honoraires ?",
+    answer: "TODO_GEORGES_FAQ_AGENTS — modèle commercial des agents IA (inclus, en option, abonnement séparé), différence vs prestation executive search."
+  }
+];
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Executive search · Programme IA · Structuration RH",
+  serviceType: "Executive Search · Talent Acquisition · Structuration RH",
+  provider: { "@type": "Organization", name: "SKS TALENTS", url: "https://www.skstalents.fr" },
+  areaServed: ["France", "Europe"],
+  description: DESCRIPTION,
+  url: CANONICAL
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://www.skstalents.fr" },
+    { "@type": "ListItem", position: 2, name: "Nos services", item: CANONICAL }
+  ]
+};
 
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+
+      {/* 1. Hero */}
       <PageHero
         kicker="Nos services"
         title="Executive search, RPO, onboarding et structuration RH."
         description="Trois offres complémentaires pour sécuriser vos recrutements critiques, absorber un volume de hiring exigeant et bâtir un cadre people robuste."
+        variant="sand"
+        breadcrumbs={[{ label: "Accueil", href: "/" }, { label: "Nos services" }]}
       />
-      <ServicesSection />
-      {false && (
-        <section className="container-shell py-8 pb-16">
-          <div className="card-surface bg-grain p-8 sm:p-10">
-            <p className="eyebrow">Focus digital</p>
-            <h2 className="font-display text-4xl text-brand-ink sm:text-5xl">
-              Decouvrir la page service website
+
+      {/* 2. Nos 3 offres (composant existant ServicesSection) */}
+      <RevealOnScroll>
+        <ServicesSection />
+      </RevealOnScroll>
+
+      {/* 3. Programmes IA (highlighted, mint) */}
+      <RevealOnScroll delayMs={50}>
+        <section className="bg-brand-mint py-14 sm:py-20">
+          <div className="container-shell">
+            <p className="eyebrow">Programmes IA</p>
+            <h2 className="t-h1 mt-2 max-w-3xl font-display">
+              {/* TODO_GEORGES_SERVICES_AI_H2 — 1 phrase d'accroche pour la section programmes IA. Max 80 car. */}
+              TODO_GEORGES_SERVICES_AI_H2
             </h2>
-            <p className="mt-4 max-w-3xl text-base leading-8 text-brand-stone sm:text-lg">
-              Une page premium dediee a la presentation de l'offre website, avec 8 sections, design
-              conversion et narration orientee preuve, process et packages.
-            </p>
-            <Link
-              href="/services/website"
-              className="mt-8 inline-flex rounded-full bg-brand-teal px-6 py-4 text-sm font-semibold text-white transition hover:opacity-90"
-            >
-              Ouvrir la page /services/website
-            </Link>
+            <div className="mt-8 grid gap-4 lg:grid-cols-2">
+              <Link
+                href="/life-sciences/structuration-ia"
+                className="rounded-2xl border border-brand-teal/15 bg-white p-6 transition hover:shadow-soft"
+              >
+                <p className="eyebrow text-brand-teal">Programme Life Sciences</p>
+                <h3 className="mt-2 t-h3 font-display text-brand-ink">Agent CEO Copilot stratégique</h3>
+                <p className="mt-2 text-caption text-brand-stone">
+                  Anticipez vos recrutements 6 mois à l'avance. Pour CEO biotech Series A à C.
+                </p>
+                <span className="mt-4 inline-block text-caption font-semibold text-brand-teal">En savoir plus</span>
+              </Link>
+              <Link
+                href="/animal-health/structuration-ia"
+                className="rounded-2xl border border-brand-teal/15 bg-white p-6 transition hover:shadow-soft"
+              >
+                <p className="eyebrow text-brand-teal">Programme Animal Health</p>
+                <h3 className="mt-2 t-h3 font-display text-brand-ink">Agent Reporting Multi-Sites</h3>
+                <p className="mt-2 text-caption text-brand-stone">
+                  De 3 jours à 4 minutes de reporting. Pour groupements vétérinaires et petfood.
+                </p>
+                <span className="mt-4 inline-block text-caption font-semibold text-brand-teal">En savoir plus</span>
+              </Link>
+            </div>
           </div>
         </section>
-      )}
+      </RevealOnScroll>
+
+      {/* 4. 5 signaux (verbatim home) */}
+      <RevealOnScroll delayMs={90}>
+        <SectionShell
+          eyebrow="5 signaux qu’il est temps d’agir"
+          title="Vous vous reconnaissez si :"
+        >
+          <div className="mx-auto max-w-4xl space-y-4">
+            {youAreHerePoints.map((point, index) => (
+              <article key={index} className="card-luxe panel-lift flex gap-5 p-6 sm:p-8">
+                <span
+                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white shadow-[0_8px_24px_rgba(20,82,84,0.25)]"
+                  aria-hidden="true"
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div className="flex-1 space-y-3">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                    Signal {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="font-display text-lg leading-[1.2] text-brand-ink sm:text-[28px] sm:leading-[1.15]">
+                    {point.title}
+                  </h3>
+                  <p
+                    className="text-sm leading-7 text-brand-stone sm:text-[15px] sm:leading-8"
+                    dangerouslySetInnerHTML={{ __html: point.html }}
+                  />
+                </div>
+              </article>
+            ))}
+          </div>
+        </SectionShell>
+      </RevealOnScroll>
+
+      {/* 5. Insight pénurie (verbatim home) */}
+      <RevealOnScroll delayMs={120}>
+        <SectionShell
+          eyebrow="Insight"
+          title="Ce n’est pas la pénurie. C’est l’alignement."
+          description="Brief flou, message marché bancal ou onboarding mal préparé : trois angles morts qui bloquent même avec de bons candidats."
+        >
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {insightSignals.map((item) => (
+              <div key={item.title} className="card-luxe panel-lift p-8">
+                <p className="eyebrow">Insight</p>
+                <h3 className="font-display text-3xl text-brand-ink">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-brand-stone">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </SectionShell>
+      </RevealOnScroll>
+
+      {/* 6. Méthode (composant existant) */}
+      <RevealOnScroll delayMs={140}>
+        <MethodNarrative />
+      </RevealOnScroll>
+
+      {/* 7. Garanties (composant existant) */}
+      <RevealOnScroll delayMs={150}>
+        <GuaranteeBadge variant="banner" />
+      </RevealOnScroll>
+
+      {/* 8. RibbonCTA ribbon */}
+      <RevealOnScroll delayMs={160}>
+        <RibbonCTA
+          eyebrow="Prochaine étape"
+          title="Si l’un de ces blocages résonne, ou si vous en vivez d’autres, donnons-nous 15 minutes."
+          primaryLabel="Réserver 15 min d’analyse"
+          secondaryHref="/diagnostic"
+          secondaryLabel="Faire le diagnostic"
+        />
+      </RevealOnScroll>
+
+      {/* 9. Références (Marquee + 3 premiers) */}
+      <RevealOnScroll delayMs={170}>
+        <SectionShell
+          eyebrow="Preuves"
+          title="Des marques reconnues. Des scale-ups ambitieuses."
+        >
+          <div className="space-y-8">
+            <div className="card-luxe p-6 sm:p-8">
+              <ReferenceMarquee items={references} />
+            </div>
+            <ReferenceGrid items={references.slice(0, 3)} />
+          </div>
+        </SectionShell>
+      </RevealOnScroll>
+
+      {/* 10. FAQ */}
+      <RevealOnScroll delayMs={180}>
+        <FAQSection
+          eyebrow="FAQ"
+          title="Vos questions, nos réponses."
+          items={faqs}
+        />
+      </RevealOnScroll>
+
+      {/* 11. Votre interlocuteur direct + CTA final */}
+      <RevealOnScroll delayMs={190}>
+        <FounderCard />
+      </RevealOnScroll>
+      <RevealOnScroll delayMs={200}>
+        <RibbonCTA
+          variant="final"
+          eyebrow="On en parle ?"
+          title="15 minutes pour identifier votre vrai blocage recrutement."
+          secondaryHref="/diagnostic"
+          secondaryLabel="Faire le diagnostic"
+        />
+      </RevealOnScroll>
+
     </>
   );
 }
