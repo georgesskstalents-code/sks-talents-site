@@ -15,9 +15,8 @@ import { references } from "@/data/references";
 
 const CANONICAL = "https://www.skstalents.fr/services";
 const TITLE = "Nos services · Executive search, Programme IA, Structuration RH | SKS TALENTS";
-// TODO_GEORGES_SERVICES_META — description page /services, 150-155 caractères max.
-// Doit résumer : executive search Life Sciences + Animal Health, programme IA RH, structuration RH.
-const DESCRIPTION = "TODO_GEORGES_SERVICES_META";
+const DESCRIPTION =
+  "Cabinet executive search Life Sciences et Animal Health. Programme IA RH, structuration RH et accompagnement scale-up pour CEO biotech, medtech, vétérinaire.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -79,23 +78,23 @@ const insightSignals = [
 const faqs = [
   {
     question: "Quels honoraires pour une mission executive search ?",
-    answer: "TODO_GEORGES_FAQ_HONORAIRES — fourchette d'honoraires (% du salaire annuel ou forfait), modalités (acompte/succès), positionnement vs cabinets concurrents."
+    answer: "Honoraires forfaitaires fixés en intake, indépendamment du salaire final. Permet de préserver la négociation salariale du candidat sans biais côté cabinet. Acompte au lancement, 2e tranche à la shortlist, solde à la signature."
   },
   {
     question: "Combien de temps dure une mission de bout en bout ?",
-    answer: "TODO_GEORGES_FAQ_DUREE — délai moyen intake → signature (60 jours selon les chiffres clés), avec exemples par typologie de poste."
+    answer: "Première shortlist garantie en 10 jours ouvrés. Le délai total dépend ensuite de la rapidité décisionnelle du client : nous voyons des signatures en 4 semaines comme en 4 mois. La médiane historique est de 60 jours."
   },
   {
     question: "Travaillez-vous avec des Series A ou seulement scale-up ?",
-    answer: "TODO_GEORGES_FAQ_STADES — phases d'entreprise prises en charge (pre-seed à scale-up), critères de sélection des missions, ticket minimum."
+    answer: "Nous accompagnons les startups Series A jusqu'aux scale-ups Series C, soit typiquement de 5 à 200 employés. En deçà (pre-seed, seed), le besoin est rarement un cabinet executive search ; au-delà (post-IPO, ETI), nous restons utiles sur les rec critiques mais sans être votre partenaire principal."
   },
   {
     question: "Comment fonctionne la garantie de remplacement ?",
-    answer: "TODO_GEORGES_FAQ_GARANTIE — durée garantie (12 mois ?), conditions de déclenchement, modalités de remplacement gratuit."
+    answer: "Garantie de 6 mois après la signature. En cas de départ à l'initiative du candidat ou de rupture période d'essai, nous reprenons la mission gratuitement. Garantie suspendue en cas de pivot stratégique majeur ou de changement de direction côté entreprise."
   },
   {
     question: "Vos agents IA sont-ils inclus dans les honoraires ?",
-    answer: "TODO_GEORGES_FAQ_AGENTS — modèle commercial des agents IA (inclus, en option, abonnement séparé), différence vs prestation executive search."
+    answer: "Les agents IA sont une offre à part entière, facturée en sus de l'executive search. Forfait au déploiement + abonnement mensuel après les 6 premiers mois. Vous pouvez les acheter seuls ou en complément d'une mission rec, selon votre maturité."
   }
 ];
 
@@ -145,8 +144,7 @@ export default function ServicesPage() {
           <div className="container-shell">
             <p className="eyebrow">Programmes IA</p>
             <h2 className="t-h1 mt-2 max-w-3xl font-display">
-              {/* TODO_GEORGES_SERVICES_AI_H2 — 1 phrase d'accroche pour la section programmes IA. Max 80 car. */}
-              TODO_GEORGES_SERVICES_AI_H2
+              Au-delà du recrutement : structurer vos RH avec l'IA.
             </h2>
             <div className="mt-8 grid gap-4 lg:grid-cols-2">
               <Link

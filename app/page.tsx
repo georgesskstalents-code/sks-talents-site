@@ -86,10 +86,7 @@ export default function HomePage() {
           <div className="container-shell">
             <p className="eyebrow">Notre approche</p>
             <h2 className="t-h1 mt-2 max-w-3xl font-display">
-              {/* TODO_GEORGES_HOME_AI_H2 — phrase d'accroche pour la section "Notre approche IA".
-                  Contexte : positionner les 2 programmes IA (Life Sciences + Animal Health) sur la home.
-                  Longueur cible : 1 phrase courte (60-80 caractères max). */}
-              TODO_GEORGES_HOME_AI_H2
+              L'IA appliquée à vos RH, par verticale.
             </h2>
             <div className="mt-8 grid gap-4 lg:grid-cols-2">
               <Link

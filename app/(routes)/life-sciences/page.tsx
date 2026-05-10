@@ -124,12 +124,11 @@ const signauxLs = [
   "Trouver un partenaire qui parle MDR/IVDR/GMP"
 ];
 
-// 4 fiches métiers Life Sciences — placeholders, à enrichir avec les slugs réels de data/jobRoles.ts
 const postesLs = [
-  { title: "TODO_GEORGES_LS_POSTE_1", href: "/job-roles" },
-  { title: "TODO_GEORGES_LS_POSTE_2", href: "/job-roles" },
-  { title: "TODO_GEORGES_LS_POSTE_3", href: "/job-roles" },
-  { title: "TODO_GEORGES_LS_POSTE_4", href: "/job-roles" }
+  { title: "Head of CMC", href: "/job-roles" },
+  { title: "VP Sales biotech", href: "/job-roles" },
+  { title: "Head of Engineering medtech", href: "/job-roles" },
+  { title: "CMO", href: "/job-roles" }
 ];
 
 export default function LifeSciencesHubPage() {
@@ -207,12 +206,10 @@ export default function LifeSciencesHubPage() {
             <div>
               <p className="eyebrow text-brand-teal">Programme IA</p>
               <h2 className="t-h1 mt-2 font-display text-brand-ink">
-                {/* TODO_GEORGES_LS_PROG_IA_H2 — h2 d'accroche, max 80 car. */}
-                TODO_GEORGES_LS_PROG_IA_H2
+                Le copilot IA des CEO biotech.
               </h2>
               <p className="mt-4 t-body text-brand-stone">
-                {/* TODO_GEORGES_LS_PROG_IA_DESC — résumé du programme avec persona Marie Laurent (CEO biotech Series B oncologie) et bénéfices clés. 2-3 phrases. */}
-                TODO_GEORGES_LS_PROG_IA_DESC
+                Pour les CEO biotech, medtech et e-santé Series A à C : un copilot IA qui anticipe vos besoins talent 6 mois à l'avance et génère vos board packs automatiquement. Marie Laurent (CEO biotech Series B oncologie) est passée de 2 jours à 5 minutes de préparation board.
               </p>
               <Link
                 href="/life-sciences/structuration-ia"

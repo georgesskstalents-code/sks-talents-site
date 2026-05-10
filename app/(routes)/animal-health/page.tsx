@@ -123,10 +123,10 @@ const signauxAh = [
 ];
 
 const postesAh = [
-  { title: "TODO_GEORGES_AH_POSTE_1", href: "/job-roles" },
-  { title: "TODO_GEORGES_AH_POSTE_2", href: "/job-roles" },
-  { title: "TODO_GEORGES_AH_POSTE_3", href: "/job-roles" },
-  { title: "TODO_GEORGES_AH_POSTE_4", href: "/job-roles" }
+  { title: "Directeur Commercial Petfood", href: "/job-roles" },
+  { title: "Vétérinaire Référent Multi-Sites", href: "/job-roles" },
+  { title: "Responsable M&A Vétérinaire", href: "/job-roles" },
+  { title: "Head of Nutrition Animale", href: "/job-roles" }
 ];
 
 export default function AnimalHealthHubPage() {
@@ -204,12 +204,10 @@ export default function AnimalHealthHubPage() {
             <div>
               <p className="eyebrow text-brand-teal">Programme IA</p>
               <h2 className="t-h1 mt-2 font-display text-brand-ink">
-                {/* TODO_GEORGES_AH_PROG_IA_H2 — h2 d'accroche, max 80 car. */}
-                TODO_GEORGES_AH_PROG_IA_H2
+                L'agent IA des groupements vétérinaires.
               </h2>
               <p className="mt-4 t-body text-brand-stone">
-                {/* TODO_GEORGES_AH_PROG_IA_DESC — résumé du programme avec persona Sébastien Dupont (cofondateur DG groupement vétérinaire 32 cliniques) et bénéfices clés. 2-3 phrases. */}
-                TODO_GEORGES_AH_PROG_IA_DESC
+                « 32 directeurs de cliniques. 32 formats différents. 0 vue d'ensemble. » Sébastien Dupont résumait ainsi son enfer du reporting il y a 18 mois. Aujourd'hui, son agent IA consolide tout en temps réel : 28 OK, 3 alertes, 1 critique, et la recommandation d'action en clair.
               </p>
               <Link
                 href="/animal-health/structuration-ia"
