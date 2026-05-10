@@ -109,7 +109,7 @@ export const animalHealthScenes: DemoScene[] = [
           <p className="mt-2 text-caption text-brand-stone">● 28 OK | ● 3 alertes | ● 1 critique</p>
 
           <div className="mt-3 rounded-xl border border-red-200 bg-red-50 p-2.5">
-            <p className="text-caption font-semibold text-red-700">⚠ Action requise · Lille · il y a 14 min</p>
+            <p className="text-caption font-semibold text-red-700">Action requise · Lille · il y a 14 min</p>
             <p className="text-caption text-brand-stone">Turnover véto à 22 % (vs 8 % groupe). Recommandation : appeler la cofondatrice cette semaine.</p>
           </div>
 
@@ -153,7 +153,7 @@ export const animalHealthScenes: DemoScene[] = [
         </p>
 
         <span className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-mint/40 px-3 py-1.5 text-caption font-semibold text-brand-teal">
-          ✓ ROI atteint en 4 mois
+          ROI atteint en 4 mois
         </span>
       </div>
     )

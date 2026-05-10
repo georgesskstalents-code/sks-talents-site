@@ -74,7 +74,7 @@ export const lifeSciencesScenes: DemoScene[] = [
         </div>
 
         <p className="mt-3 rounded-2xl border border-red-200 bg-red-50 p-3 text-caption text-red-700">
-          ⚠ Décision Head of CMC prise 4 mois trop tard. Phase II retardée 6 mois. Coût opportunité : 8 M€.
+          Risque mesuré : décision Head of CMC prise 4 mois trop tard. Phase II retardée 6 mois. Coût opportunité 8 M€.
         </p>
       </div>
     )
@@ -111,7 +111,7 @@ export const lifeSciencesScenes: DemoScene[] = [
               Pipeline R&D × Talent
             </p>
             <ul className="mt-2 space-y-1 text-caption">
-              <li className="flex justify-between"><span>Phase II · Programme A</span><span className="font-semibold text-emerald-700">CMC ✓</span></li>
+              <li className="flex justify-between"><span>Phase II · Programme A</span><span className="font-semibold text-emerald-700">CMC OK</span></li>
               <li className="flex justify-between"><span>Phase I · Programme B</span><span className="font-semibold text-amber-700">VP Reg · 3 mois</span></li>
               <li className="flex justify-between"><span>Pre-clinical · Programme C</span><span className="font-semibold text-emerald-700">Lab manager OK</span></li>
               <li className="flex justify-between"><span>Pre-clinical · Programme D</span><span className="font-semibold text-red-700">Director Industrialisation · 6 mois</span></li>
@@ -168,7 +168,7 @@ export const lifeSciencesScenes: DemoScene[] = [
         </p>
 
         <span className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-mint/40 px-3 py-1.5 text-caption font-semibold text-brand-teal">
-          ✓ Series C levée +45 % en 8 mois
+          Series C levée +45 % en 8 mois
         </span>
       </div>
     )
