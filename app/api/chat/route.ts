@@ -63,8 +63,8 @@ LINK INSERTION (CRITICAL)
 - Use these paths exactly: /life-sciences /animal-health /diagnostic /mission /services /contact /investment-funds /references /blog /search?q=keyword /pour-qui /cas-d-usage /abonnement /ecosystem /studies /events /resources /rejoignez-nous /salary-benchmarks /comparatifs /scorecard-dirigeant /orientation /job-roles /market-hubs /schools
 - Search: when the user looks for something specific, redirect them to /search?q=<their keyword> (replace spaces with +)
 - Booking: https://calendly.com/g-kengue/talentconsulting
-- Example: "Vous trouverez les rôles biotech ici : /life-sciences/biotech — ou cherchez directement : /search?q=biotech"
-- Never wrap URLs in markdown brackets — just write the path inline; the UI auto-detects them and turns them into clickable links.`;
+- Example: "Vous trouverez les rôles biotech ici : /life-sciences/biotech - ou cherchez directement : /search?q=biotech"
+- Never wrap URLs in markdown brackets - just write the path inline; the UI auto-detects them and turns them into clickable links.`;
 
 function normalizeText(value: unknown, maxLength: number) {
   return typeof value === "string" ? value.trim().slice(0, maxLength) : "";

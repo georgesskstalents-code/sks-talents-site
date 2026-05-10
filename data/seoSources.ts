@@ -45,12 +45,12 @@ const ecosystemPartners: SeoSource[] = [
  * Weight élevé : ce sont des sources directes pour le vocabulaire métier.
  */
 const executiveSearchCompetitors: SeoSource[] = [
-  { name: "Korn Ferry — Healthcare", url: "https://www.kornferry.com/industries/life-sciences-healthcare", category: "competitor", weight: 3 },
-  { name: "Russell Reynolds — Healthcare", url: "https://www.russellreynolds.com/en/industries/healthcare", category: "competitor", weight: 3 },
-  { name: "Heidrick & Struggles — Healthcare", url: "https://www.heidrick.com/en/industries/healthcare-life-sciences", category: "competitor", weight: 3 },
-  { name: "Egon Zehnder — Healthcare", url: "https://www.egonzehnder.com/industries/healthcare", category: "competitor", weight: 3 },
-  { name: "Spencer Stuart — Healthcare", url: "https://www.spencerstuart.com/our-expertise/healthcare", category: "competitor", weight: 3 },
-  { name: "Odgers Berndtson — Healthcare", url: "https://www.odgersberndtson.com/en/industries/healthcare-life-sciences", category: "competitor", weight: 2 },
+  { name: "Korn Ferry - Healthcare", url: "https://www.kornferry.com/industries/life-sciences-healthcare", category: "competitor", weight: 3 },
+  { name: "Russell Reynolds - Healthcare", url: "https://www.russellreynolds.com/en/industries/healthcare", category: "competitor", weight: 3 },
+  { name: "Heidrick & Struggles - Healthcare", url: "https://www.heidrick.com/en/industries/healthcare-life-sciences", category: "competitor", weight: 3 },
+  { name: "Egon Zehnder - Healthcare", url: "https://www.egonzehnder.com/industries/healthcare", category: "competitor", weight: 3 },
+  { name: "Spencer Stuart - Healthcare", url: "https://www.spencerstuart.com/our-expertise/healthcare", category: "competitor", weight: 3 },
+  { name: "Odgers Berndtson - Healthcare", url: "https://www.odgersberndtson.com/en/industries/healthcare-life-sciences", category: "competitor", weight: 2 },
   { name: "Witt/Kieffer (Healthcare exec search)", url: "https://www.wittkieffer.com/", category: "competitor", weight: 2 },
   { name: "Caliopa", url: "https://www.caliopa.com/", category: "competitor", weight: 2 },
   { name: "MD Search (FR)", url: "https://www.mdsearch.fr/", category: "competitor", weight: 2 }

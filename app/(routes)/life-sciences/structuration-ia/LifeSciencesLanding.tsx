@@ -17,7 +17,7 @@ import LogosScrollCarousel from "@/components/landings/LogosScrollCarousel";
 import { lifeSciencesScenes } from "./lifeSciencesScenes";
 import { lifeSciencesQuestions } from "./lifeSciencesQuestions";
 
-// Hide 3 detail blocks (3 moments critiques, profils hybrides, vocabulaire) — page allégée.
+// Hide 3 detail blocks (3 moments critiques, profils hybrides, vocabulaire) - page allégée.
 // Repasser à true pour les ré-afficher sans toucher au code des sections.
 const SHOW_DETAIL_BLOCKS = false;
 
@@ -137,7 +137,7 @@ const trustSignals = ["★ 4,5/5 Trustpilot", "France Biotech", "Saclay", "100+ 
 export default function LifeSciencesLanding() {
   return (
     <main className="bg-white">
-      {/* ===== Section 1 — HERO ===== */}
+      {/* ===== Section 1 - HERO ===== */}
       <section className="relative bg-gradient-to-b from-brand-mint/30 to-white pb-12 pt-12 sm:pb-16 sm:pt-20">
         <div className="container-shell">
           <p className="eyebrow">Executive Search · Life Sciences</p>
@@ -180,7 +180,7 @@ export default function LifeSciencesLanding() {
         </div>
       </section>
 
-      {/* ===== Section 2 — DÉMO ===== */}
+      {/* ===== Section 2 - DÉMO ===== */}
       <section id="demo" className="bg-white py-14 sm:py-20">
         <div className="container-shell">
           <p className="eyebrow">Démo interactive · 30 secondes</p>
@@ -203,7 +203,7 @@ export default function LifeSciencesLanding() {
         </div>
       </section>
 
-      {/* ===== Section 3 — ENJEUX × AGENTS IA (fusion, redesign 2026-05-07) ===== */}
+      {/* ===== Section 3 - ENJEUX × AGENTS IA (fusion, redesign 2026-05-07) ===== */}
       <section className="bg-gradient-to-b from-white via-brand-mint/8 to-white py-14 sm:py-20">
         <div className="container-shell">
           <p className="eyebrow">Vos enjeux → Notre réponse IA</p>
@@ -222,7 +222,7 @@ export default function LifeSciencesLanding() {
                   key={enjeu.num}
                   className="group relative grid gap-5 sm:grid-cols-[1fr_auto_1.15fr] sm:items-stretch sm:gap-0"
                 >
-                  {/* Problème — fond crème, citation prominente */}
+                  {/* Problème - fond crème, citation prominente */}
                   <div className="relative overflow-hidden rounded-3xl bg-[#faf7f1] p-6 sm:rounded-r-none sm:p-7">
                     <div className="flex items-baseline gap-3">
                       <span
@@ -242,7 +242,7 @@ export default function LifeSciencesLanding() {
                     </blockquote>
                   </div>
 
-                  {/* Connecteur — flèche + label transformation */}
+                  {/* Connecteur - flèche + label transformation */}
                   <div className="hidden flex-col items-center justify-center px-2 sm:flex">
                     <div className="flex flex-col items-center gap-2">
                       <span className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-teal/70">
@@ -257,7 +257,7 @@ export default function LifeSciencesLanding() {
                     <span className="text-2xl text-brand-teal">↓</span>
                   </div>
 
-                  {/* Solution — agent IA, fond blanc, ROI en bande teal */}
+                  {/* Solution - agent IA, fond blanc, ROI en bande teal */}
                   <div className="relative flex flex-col overflow-hidden rounded-3xl border border-brand-teal/15 bg-white shadow-[0_18px_44px_rgba(15,58,60,0.08)] transition duration-300 group-hover:-translate-y-0.5 group-hover:shadow-[0_24px_56px_rgba(15,58,60,0.12)] sm:rounded-l-none">
                     <div className="flex flex-1 flex-col p-6 sm:p-7">
                       <div className="flex items-start justify-between gap-3">
@@ -273,7 +273,7 @@ export default function LifeSciencesLanding() {
                       <p className="mt-4 t-h3 font-semibold text-brand-ink">{agent.title}</p>
                       <p className="mt-2 t-body">{agent.desc}</p>
                     </div>
-                    {/* ROI strip — bande teal en bas, métrique mise en valeur */}
+                    {/* ROI strip - bande teal en bas, métrique mise en valeur */}
                     <div className="border-t border-brand-teal/15 bg-gradient-to-r from-brand-teal to-brand-teal/85 px-6 py-3 sm:px-7">
                       <div className="flex items-baseline gap-3">
                         <span className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-white/70">
@@ -300,7 +300,7 @@ export default function LifeSciencesLanding() {
         </div>
       </section>
 
-      {/* ===== Section 4 — DIAGNOSTIC (remonté du #10) ===== */}
+      {/* ===== Section 4 - DIAGNOSTIC (remonté du #10) ===== */}
       <section id="diagnostic" className="scroll-mt-24 bg-gradient-to-b from-brand-mint/15 to-white py-14 sm:py-20">
         <div className="container-shell">
           <p className="eyebrow">Diagnostic personnalisé · 5 min</p>
@@ -316,7 +316,7 @@ export default function LifeSciencesLanding() {
 
       {SHOW_DETAIL_BLOCKS && (
         <>
-          {/* ===== Section 4 — 3 MOMENTS CRITIQUES ===== */}
+          {/* ===== Section 4 - 3 MOMENTS CRITIQUES ===== */}
           <section className="bg-gradient-to-b from-brand-mint/15 to-white py-14 sm:py-20">
             <div className="container-shell">
               <p className="eyebrow">Les moments où nos clients nous appellent</p>
@@ -340,7 +340,7 @@ export default function LifeSciencesLanding() {
             </div>
           </section>
 
-          {/* ===== Section 5 — PROFILS HYBRIDES ===== */}
+          {/* ===== Section 5 - PROFILS HYBRIDES ===== */}
           <section className="bg-white py-14 sm:py-20">
             <div className="container-shell">
               <p className="eyebrow">Notre vraie spécialité</p>
@@ -361,7 +361,7 @@ export default function LifeSciencesLanding() {
             </div>
           </section>
 
-          {/* ===== Section 6 — VOCABULAIRE ===== */}
+          {/* ===== Section 6 - VOCABULAIRE ===== */}
           <section className="bg-gradient-to-b from-white to-brand-mint/15 py-14 sm:py-20">
             <div className="container-shell">
               <p className="eyebrow">Le vocabulaire que nous maîtrisons</p>
@@ -393,7 +393,7 @@ export default function LifeSciencesLanding() {
         </>
       )}
 
-      {/* ===== Section 5 — LOGOS DÉFILANTS ===== */}
+      {/* ===== Section 5 - LOGOS DÉFILANTS ===== */}
       <section className="bg-gradient-to-b from-white to-brand-mint/15 py-14 sm:py-20">
         <div className="container-shell">
           <p className="eyebrow">Références &amp; exécution</p>
@@ -406,7 +406,7 @@ export default function LifeSciencesLanding() {
         </div>
       </section>
 
-      {/* ===== Section 6 — CHIFFRES CLÉS ===== */}
+      {/* ===== Section 6 - CHIFFRES CLÉS ===== */}
       <section className="bg-white py-14 sm:py-20">
         <div className="container-shell">
           <p className="eyebrow">Chiffres clés</p>
@@ -424,7 +424,7 @@ export default function LifeSciencesLanding() {
         </div>
       </section>
 
-      {/* ===== Section 7 — CTA FINAL ===== */}
+      {/* ===== Section 7 - CTA FINAL ===== */}
       <section className="bg-brand-ink py-14 text-white sm:py-20">
         <div className="container-shell">
           <p className="text-eyebrow font-semibold uppercase text-white/60">Dernière étape</p>

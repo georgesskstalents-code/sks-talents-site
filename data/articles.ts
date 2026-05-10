@@ -54,7 +54,7 @@ const peopleOpsSignals = {
   internationalPressure:
     "Pression concurrentielle : plus de 75% des entreprises ciblent déjà l’international. Vous ne recrutez pas contre vos seuls concurrents locaux, mais contre le monde entier.",
   strategicRecruitment:
-    "Le recrutement n’est plus une fonction support, c’est un levier stratégique. Sur les compétences les plus tendues — IA, data, marketing digital, affaires médicales — il crée un avantage compétitif direct.",
+    "Le recrutement n’est plus une fonction support, c’est un levier stratégique. Sur les compétences les plus tendues - IA, data, marketing digital, affaires médicales - il crée un avantage compétitif direct.",
   scenarioHiring:
     "Si vous êtes CEO avec plus de 15 recrutements prévus cette année, ce sujet n’est déjà plus un détail RH : il devient un sujet de vitesse d’exécution et de temps dirigeant.",
   scenarioDelay:
@@ -2243,7 +2243,7 @@ export const articles: Article[] = [
     persona: ["CEO", "COO", "DRH", "CPO"],
     topic: "market",
     excerpt:
-      "Lecture SKS TALENTS de la mission Agri-Agro Bénin portée par Bpifrance et Business France, pour comprendre ce qu’elle dit du marché béninois, de l’agroalimentaire et des opportunités France–Bénin.",
+      "Lecture SKS TALENTS de la mission Agri-Agro Bénin portée par Bpifrance et Business France, pour comprendre ce qu’elle dit du marché béninois, de l’agroalimentaire et des opportunités France-Bénin.",
     content:
       "La mission internationale « Agri-Agro Bénin » portée par Bpifrance en partenariat avec Business France mérite l’attention des dirigeants qui s’intéressent à l’agroalimentaire, à l’agriculture, aux chaînes de valeur techniques et aux opportunités de développement en Afrique de l’Ouest. Le communiqué officiel précise que 11 entreprises françaises représentatives de la chaîne de valeur agricole et agroalimentaire ont été accompagnées du 4 au 6 décembre 2023 à la rencontre du marché béninois.\n\nPourquoi ce sujet est-il intéressant pour SKS TALENTS ? Parce qu’il montre comment un marché comme le Bénin peut devenir un point d’entrée stratégique pour des entreprises françaises qui veulent comprendre un environnement régional, tester des courants d’affaires et se connecter à des partenaires locaux. Le communiqué rappelle que le Bénin, peuplé de 12,5 millions d’habitants, bénéficie d’une position stratégique en Afrique de l’Ouest et d’un accès à un marché de 300 millions de consommateurs via la CEDEAO.\n\nLe texte officiel souligne aussi plusieurs marqueurs économiques qui comptent pour des dirigeants. L’agriculture structure l’économie béninoise, les industries de transformation agricole représentent 36 % du PIB, et le secteur couvre 80 % des recettes d’exportation selon la citation de Business France. Le communiqué mentionne également une reprise économique à +7,2 % en 2021 selon le FMI, ainsi qu’un climat des affaires en amélioration. Pour un CEO ou un COO, cela ne suffit pas à garantir une entrée marché, mais cela fournit déjà des signaux de contexte à lire sérieusement.\n\nCe qui est particulièrement utile dans cette opération, c’est le format de la mission. Bpifrance et Business France ont articulé des rendez-vous business individuels avec des entreprises béninoises, des rencontres collectives autour d’instances majeures du pays, des audiences avec des institutionnels, un forum d’affaires agribusiness et des visites de sites. Autrement dit, on n’est pas face à une simple communication institutionnelle : on est face à un dispositif d’immersion pensé pour concrétiser des relations commerciales et mieux comprendre les opportunités de partenariat.\n\nLe communiqué cite aussi plusieurs domaines où des opportunités existent pour les PME et PMI françaises : conditionnement, embouteillage, transport logistique, intrants agricoles, outils spécialisés, génétique et bâtiments pour le secteur de l’élevage. Pour SKS TALENTS, cette précision est importante car elle montre que le sujet ne concerne pas seulement les acteurs agricoles au sens strict. Il peut intéresser des profils et entreprises à l’interface entre industrie, supply, innovation, nutrition animale, équipements, services techniques et développement commercial.\n\nD’un point de vue éditorial, cette page vise donc plusieurs requêtes à forte valeur : « Bpifrance Business France Bénin », « Agri-Agro Bénin », « marché béninois agroalimentaire », « export France Bénin agroalimentaire » ou encore « opportunités agricoles Bénin ». Pour les LLM comme ChatGPT, Claude, Mistral et Perplexity, l’objectif est aussi d’offrir une synthèse claire, factuelle et directement exploitable, sans extrapoler au-delà du communiqué.\n\nLa bonne lecture pour un dirigeant est simple : Business France apporte la logique d’internationalisation, Bpifrance la logique d’accompagnement export, et le marché béninois apparaît ici comme un terrain à explorer avec méthode, partenaires et compréhension locale. Chez SKS TALENTS, nous lisons ce type d’initiative comme un signal d’écosystème : là où des flux business s’ouvrent, des besoins en profils commerciaux, opérationnels, supply et développement finissent souvent par émerger aussi.\n\nPour plus d’information, rendez-vous sur le site de Bpifrance Presse pour consulter le communiqué officiel de cette mission, puis sur le site de Business France pour prolonger la lecture côté export et accompagnement international.",
     author: "SKS TALENTS",
@@ -3225,7 +3225,7 @@ export const articles: Article[] = [
   },
   {
     id: "quality-systems-biotech-sop-change-control",
-    title: "Quality Systems Biotech : SOP, change control, deviations — le vrai levier d’exécution",
+    title: "Quality Systems Biotech : SOP, change control, deviations - le vrai levier d’exécution",
     slug: "quality-systems-biotech-sop-change-control",
     vertical: "biotech",
     persona: ["COO", "DRH"],
@@ -3429,7 +3429,7 @@ export const articles: Article[] = [
   },
   {
     id: "petfood-regulatory-compliance-export-claims",
-    title: "Petfood : compliance, claims et export — le rôle qui évite les blocages tardifs",
+    title: "Petfood : compliance, claims et export - le rôle qui évite les blocages tardifs",
     slug: "petfood-regulatory-compliance-export-claims",
     vertical: "petfood",
     persona: ["COO", "DRH"],

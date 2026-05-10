@@ -71,7 +71,7 @@ export async function sendDigestEmail(opts: {
         sent: true,
         from: onboardingFrom,
         to: FALLBACK_RECIPIENT,
-        note: `Resend is in test mode — email sent to the account-holder address (${FALLBACK_RECIPIENT}) instead of ${PRIMARY_RECIPIENT}.`
+        note: `Resend is in test mode - email sent to the account-holder address (${FALLBACK_RECIPIENT}) instead of ${PRIMARY_RECIPIENT}.`
       };
     }
   }

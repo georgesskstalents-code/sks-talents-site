@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useCookieConsent } from "@/lib/useCookieConsent";
 
-// Phrases an LLM uses when it doesn't have the info — used to detect content gaps
+// Phrases an LLM uses when it doesn't have the info - used to detect content gaps
 const CONTENT_GAP_PHRASES = [
   "je ne sais pas",
   "je n'ai pas",
@@ -33,7 +33,7 @@ function looksLikeContentGap(answer: string) {
 }
 
 function reportContentGap(query: string, answer: string, path: string, sessionId: string) {
-  // Fire-and-forget — log to /api/site-analytics for dashboard surfacing
+  // Fire-and-forget - log to /api/site-analytics for dashboard surfacing
   try {
     fetch("/api/site-analytics", {
       method: "POST",
@@ -49,7 +49,7 @@ function reportContentGap(query: string, answer: string, path: string, sessionId
       })
     }).catch(() => undefined);
   } catch {
-    // Ignore — best-effort only
+    // Ignore - best-effort only
   }
 }
 

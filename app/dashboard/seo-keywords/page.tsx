@@ -7,7 +7,7 @@ export const runtime = "nodejs";
 type Props = { searchParams: Promise<{ token?: string; status?: string }> };
 
 export const metadata = {
-  title: "Validation mots-clés SEO — SKS TALENTS",
+  title: "Validation mots-clés SEO - SKS TALENTS",
   robots: { index: false, follow: false }
 };
 

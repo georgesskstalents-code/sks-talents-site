@@ -30,8 +30,8 @@ function buildPeriodLabel(range: string) {
   compareStart.setDate(compareStart.getDate() - (days * 2 - 1));
 
   return {
-    period: `${formatFrDate(currentStart)} — ${formatFrDate(currentEnd)} ${currentEnd.getFullYear()}`,
-    comparedTo: `${formatFrDate(compareStart)} — ${formatFrDate(compareEnd)} ${compareEnd.getFullYear()}`
+    period: `${formatFrDate(currentStart)} - ${formatFrDate(currentEnd)} ${currentEnd.getFullYear()}`,
+    comparedTo: `${formatFrDate(compareStart)} - ${formatFrDate(compareEnd)} ${compareEnd.getFullYear()}`
   };
 }
 

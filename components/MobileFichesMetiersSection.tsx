@@ -14,28 +14,28 @@ const fiches: FicheMetier[] = [
     slug: "biotech-medical-director",
     title: "Medical Director Biotech",
     sector: "Biotech",
-    salary: "100k€ – 170k€ + variable",
+    salary: "100k€ - 170k€ + variable",
     Icon: Stethoscope
   },
   {
     slug: "biotech-market-access-manager",
     title: "Market Access Manager Biotech",
     sector: "Biotech",
-    salary: "68k€ – 105k€ + bonus",
+    salary: "68k€ - 105k€ + bonus",
     Icon: Beaker
   },
   {
     slug: "diagnostic-data-science-manager",
     title: "Data Science Manager Diagnostic & Medtech",
     sector: "Diagnostic",
-    salary: "72k€ – 115k€",
+    salary: "72k€ - 115k€",
     Icon: Microscope
   },
   {
     slug: "veterinary-clinic-operations-director",
     title: "Clinic Operations Director Veterinary",
     sector: "Veterinary",
-    salary: "70k€ – 115k€",
+    salary: "70k€ - 115k€",
     Icon: PawPrint
   }
 ];
@@ -51,7 +51,7 @@ export default function MobileFichesMetiersSection() {
           Comprendre les rôles clés en Life Sciences & Animal Health.
         </h2>
         <p className="text-[15px] leading-[1.7] text-brand-stone">
-          Missions, salaires, parcours et tension marché — chaque fiche pose le contexte d&apos;un
+          Missions, salaires, parcours et tension marché - chaque fiche pose le contexte d&apos;un
           rôle dirigeant ou expert que nous recrutons en biotech, diagnostic, vétérinaire et
           petfood.
         </p>

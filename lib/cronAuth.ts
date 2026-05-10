@@ -17,7 +17,7 @@ export type CronAuthInput = {
 export function isAuthorizedCronRequest(input: CronAuthInput): boolean {
   const { authorization, userAgent, url, env } = input;
 
-  // 1. Vercel Cron (Bearer CRON_SECRET) — always accepted when CRON_SECRET is set.
+  // 1. Vercel Cron (Bearer CRON_SECRET) - always accepted when CRON_SECRET is set.
   if (env.cronSecret && authorization === `Bearer ${env.cronSecret}`) {
     return true;
   }
@@ -30,7 +30,7 @@ export function isAuthorizedCronRequest(input: CronAuthInput): boolean {
         return true;
       }
     } catch {
-      // malformed URL — fall through
+      // malformed URL - fall through
     }
   }
 

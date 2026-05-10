@@ -193,7 +193,7 @@ export default function RecruitmentGrowthDiagnostic() {
                 </div>
 
                 <div className="flex flex-col gap-3 sm:flex-row">
-                  <CalendlyButton label="Je réserve un call — 15 min" tone="solid" />
+                  <CalendlyButton label="Je réserve un call - 15 min" tone="solid" />
                   <Link
                     href={result.topRecommendation.href}
                     className="inline-flex items-center justify-center rounded-full border border-brand-teal/20 bg-white px-6 py-4 text-sm font-semibold text-brand-teal transition hover:-translate-y-0.5 hover:bg-brand-mint"

@@ -47,7 +47,7 @@ export default function SeoGrowthLandingPage({ page }: Props) {
           </div>
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <CalendlyButton label="Je réserve un call — 15 min" tone="solid" />
+            <CalendlyButton label="Je réserve un call - 15 min" tone="solid" />
             <CalendlyButton label="Être rappelé" href="/contact#rappel" tone="outline" />
           </div>
         </div>
@@ -200,7 +200,7 @@ export default function SeoGrowthLandingPage({ page }: Props) {
                 >
                   Faire le diagnostic
                 </Link>
-                <CalendlyButton label="Je réserve un call — 15 min" tone="outline" />
+                <CalendlyButton label="Je réserve un call - 15 min" tone="outline" />
               </div>
             </div>
           </div>
@@ -221,7 +221,7 @@ export default function SeoGrowthLandingPage({ page }: Props) {
             structuration RH ou automatisation des process.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <CalendlyButton label="Je réserve un call — 15 min" tone="solid" />
+            <CalendlyButton label="Je réserve un call - 15 min" tone="solid" />
             <CalendlyButton label="Écrire à SKS" href="/contact#rappel" tone="outline" />
           </div>
         </div>

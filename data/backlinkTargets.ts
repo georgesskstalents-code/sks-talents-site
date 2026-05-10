@@ -9,7 +9,7 @@
  * Workflow :
  *   1. Trier par priority desc (3 = top, 1 = nice-to-have)
  *   2. Pour chaque cible, le `template` indique quel modèle utiliser
- *   3. Mettre à jour `status` au fur et à mesure (manuellement pour l'instant —
+ *   3. Mettre à jour `status` au fur et à mesure (manuellement pour l'instant -
  *      Supabase tracker à brancher plus tard si volume justifie)
  */
 
@@ -46,7 +46,7 @@ export type BacklinkTarget = {
 };
 
 export const backlinkTargets: BacklinkTarget[] = [
-  // ─────────── Tier 1 — Clusters santé France (priorité max) ───────────
+  // ─────────── Tier 1 - Clusters santé France (priorité max) ───────────
   {
     name: "France Biotech",
     url: "https://france-biotech.fr/",
@@ -69,7 +69,7 @@ export const backlinkTargets: BacklinkTarget[] = [
     template: "ecosystem",
     priority: 3,
     rationale:
-      "Pôle de compétitivité Île-de-France santé — base de membres ultra-pertinente (biotech, medtech, deeptech santé Île-de-France). Annuaire avec lien direct.",
+      "Pôle de compétitivité Île-de-France santé - base de membres ultra-pertinente (biotech, medtech, deeptech santé Île-de-France). Annuaire avec lien direct.",
     status: "pending",
     estimatedDa: 48
   },
@@ -127,7 +127,7 @@ export const backlinkTargets: BacklinkTarget[] = [
     category: "ecosystem",
     template: "ecosystem",
     priority: 1,
-    rationale: "Cluster cosmétique — adjacent Life Sciences mais pertinent pour les marques pharma-cosméto.",
+    rationale: "Cluster cosmétique - adjacent Life Sciences mais pertinent pour les marques pharma-cosméto.",
     status: "pending",
     estimatedDa: 44
   },
@@ -138,7 +138,7 @@ export const backlinkTargets: BacklinkTarget[] = [
     category: "ecosystem",
     template: "ecosystem",
     priority: 2,
-    rationale: "Association deeptech FR — couvre la frange biotech-deeptech (IA santé, robotique médicale).",
+    rationale: "Association deeptech FR - couvre la frange biotech-deeptech (IA santé, robotique médicale).",
     status: "pending",
     estimatedDa: 47
   },
@@ -154,7 +154,7 @@ export const backlinkTargets: BacklinkTarget[] = [
     status: "pending",
     estimatedDa: 78
   },
-  // ─────────── Tier 2 — Associations Animal Health / Vétérinaire ───────────
+  // ─────────── Tier 2 - Associations Animal Health / Vétérinaire ───────────
   {
     name: "SNVEL (Syndicat National Vétérinaires d'Exercice Libéral)",
     url: "https://www.snvel.fr/",
@@ -188,7 +188,7 @@ export const backlinkTargets: BacklinkTarget[] = [
     status: "pending",
     estimatedDa: 33
   },
-  // ─────────── Tier 3 — Médias spécialisés ───────────
+  // ─────────── Tier 3 - Médias spécialisés ───────────
   {
     name: "Labiotech.eu",
     url: "https://www.labiotech.eu/",
@@ -208,7 +208,7 @@ export const backlinkTargets: BacklinkTarget[] = [
     category: "media",
     template: "media",
     priority: 2,
-    rationale: "Média biotech US — anglophone mais lu par direction biotech FR (board members).",
+    rationale: "Média biotech US - anglophone mais lu par direction biotech FR (board members).",
     status: "pending",
     estimatedDa: 71
   },
@@ -224,7 +224,7 @@ export const backlinkTargets: BacklinkTarget[] = [
     estimatedDa: 36
   },
   {
-    name: "L'Usine Nouvelle — Santé",
+    name: "L'Usine Nouvelle - Santé",
     url: "https://www.usinenouvelle.com/sante/",
     contactPath: "/contact/",
     category: "media",
@@ -245,9 +245,9 @@ export const backlinkTargets: BacklinkTarget[] = [
     status: "pending",
     estimatedDa: 73
   },
-  // ─────────── Tier 4 — Académique ───────────
+  // ─────────── Tier 4 - Académique ───────────
   {
-    name: "Master Biology & Health — Paris-Saclay",
+    name: "Master Biology & Health - Paris-Saclay",
     url: "https://www.universite-paris-saclay.fr/formation/master/biologie-sante",
     contactPath: "/contact",
     category: "academic",
@@ -259,18 +259,18 @@ export const backlinkTargets: BacklinkTarget[] = [
     estimatedDa: 70
   },
   {
-    name: "ESSEC — Master Biotech & Pharma Management",
+    name: "ESSEC - Master Biotech & Pharma Management",
     url: "https://www.essec.edu/fr/program/masters-of-science-in-management/specialisation-biotech-pharma-management/",
     contactPath: "/contact/",
     category: "academic",
     template: "academic",
     priority: 2,
-    rationale: "Programme MBA santé — alumni = futurs dirigeants biotech.",
+    rationale: "Programme MBA santé - alumni = futurs dirigeants biotech.",
     status: "pending",
     estimatedDa: 78
   },
   {
-    name: "AgroParisTech — Filière Animal-Vétérinaire",
+    name: "AgroParisTech - Filière Animal-Vétérinaire",
     url: "https://www.agroparistech.fr/",
     contactPath: "/contact",
     category: "academic",
@@ -280,9 +280,9 @@ export const backlinkTargets: BacklinkTarget[] = [
     status: "pending",
     estimatedDa: 65
   },
-  // ─────────── Tier 5 — Annuaires sectoriels ───────────
+  // ─────────── Tier 5 - Annuaires sectoriels ───────────
   {
-    name: "Les Échos Solutions — Annuaire Cabinets RH",
+    name: "Les Échos Solutions - Annuaire Cabinets RH",
     url: "https://solutions.lesechos.fr/",
     contactPath: "/contact/",
     category: "directory",

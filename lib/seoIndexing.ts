@@ -1,10 +1,10 @@
 /**
- * SEO indexing helpers — IndexNow protocol (Bing, Yandex, Seznam, etc.)
+ * SEO indexing helpers - IndexNow protocol (Bing, Yandex, Seznam, etc.)
  *
  * IndexNow is the 2026-standard for instant URL submission.
  * Google deprecated the legacy /ping endpoint in 2023 ; we now rely on
  * (a) up-to-date `lastmod` in the sitemap (already automatic) and
- * (b) Search Console API (needs OAuth — handled separately).
+ * (b) Search Console API (needs OAuth - handled separately).
  *
  * Reference: https://www.indexnow.org/documentation
  */

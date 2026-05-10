@@ -7,7 +7,7 @@ type Props = {
 };
 
 /**
- * Hero background Vimeo iframe — mounted AFTER first paint to keep LCP fast.
+ * Hero background Vimeo iframe - mounted AFTER first paint to keep LCP fast.
  * Uses requestIdleCallback when available, falling back to setTimeout(800ms).
  * Skipped entirely when the user prefers reduced motion.
  */
@@ -17,7 +17,7 @@ export default function HeroBackgroundVideo({ vimeoId }: Props) {
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    // Skip background video on mobile/small screens — saves ~2-5 MB and several
+    // Skip background video on mobile/small screens - saves ~2-5 MB and several
     // 100 ms on first interaction. Static gradient remains as the visual treatment.
     if (window.matchMedia("(max-width: 768px)").matches) return;
     // Also skip if Save-Data header is set (slow connections)
@@ -52,7 +52,7 @@ export default function HeroBackgroundVideo({ vimeoId }: Props) {
   return (
     <iframe
       src={src}
-      title="SKS Talents — vidéo de présentation en arrière-plan"
+      title="SKS Talents - vidéo de présentation en arrière-plan"
       aria-hidden="true"
       tabIndex={-1}
       loading="lazy"

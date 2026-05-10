@@ -11,7 +11,7 @@ import {
 export const dynamic = "force-dynamic";
 
 export const metadata = {
-  title: "Suivi SKS Talents — routine matinale",
+  title: "Suivi SKS Talents - routine matinale",
   description: "Tableau de bord quotidien SKS Talents. Vue d'ensemble pour démarrer la journée.",
   robots: { index: false, follow: false }
 };
@@ -141,11 +141,11 @@ export default async function SuiviPage({
 
   const morningChecklist = [
     {
-      label: "Vérifier Search Console — nouvelles requêtes & erreurs d'indexation",
+      label: "Vérifier Search Console - nouvelles requêtes & erreurs d'indexation",
       href: "https://search.google.com/search-console?resource_id=sc-domain:skstalents.fr"
     },
     {
-      label: "Ouvrir Looker Studio — vues, sources, durée moyenne",
+      label: "Ouvrir Looker Studio - vues, sources, durée moyenne",
       href: "https://datastudio.google.com/u/0/reporting/419ebe34-5b48-47f1-8500-0879d5b9ddf2/page/yvZvF"
     },
     {
@@ -161,7 +161,7 @@ export default async function SuiviPage({
       href: "https://www.notion.so/Suivi-SKS-Talents-Site-internet-3450c86f96f48133b0b0ff57aa0586ff"
     },
     {
-      label: "Trustpilot — répondre aux nouveaux avis",
+      label: "Trustpilot - répondre aux nouveaux avis",
       href: "https://fr.trustpilot.com/review/skstalents.fr"
     }
   ];
@@ -237,7 +237,7 @@ export default async function SuiviPage({
             sub={
               todayFormErrors > 0
                 ? `⚠ ${todayFormErrors} erreurs à investiguer`
-                : "0 erreur — tout passe"
+                : "0 erreur - tout passe"
             }
             tone={todayFormErrors > 0 ? "negative" : "positive"}
           />
@@ -335,7 +335,7 @@ export default async function SuiviPage({
             question = un sujet d'article ou de page à créer pour capter l'audience.
           </p>
           {contentGaps30d.length === 0 ? (
-            <Empty hint="Bon signe — l'assistant répond à tout. Surveille demain." />
+            <Empty hint="Bon signe - l'assistant répond à tout. Surveille demain." />
           ) : (
             <ol className="space-y-2">
               {contentGaps30d.map((row, idx) => (
@@ -376,7 +376,7 @@ export default async function SuiviPage({
                 >
                   <div className="min-w-0">
                     <p className="font-mono text-sm font-semibold text-brand-ink">
-                      {lead.email ?? "—"}
+                      {lead.email ?? "-"}
                     </p>
                     <p className="text-xs text-brand-stone/80">
                       {lead.kind} · {lead.pagePath}
@@ -404,7 +404,7 @@ export default async function SuiviPage({
                   className="rounded-xl bg-white/85 px-3 py-2.5 font-mono text-xs text-red-900"
                 >
                   <span className="font-semibold">{e.type}</span> · {e.path}
-                  {e.message ? ` — ${e.message}` : ""}
+                  {e.message ? ` - ${e.message}` : ""}
                   <span className="ml-2 text-red-700/70">{relativeTime(e.createdAt)}</span>
                 </li>
               ))}
@@ -482,7 +482,7 @@ function Card({
 function Empty({ hint }: { hint?: string }) {
   return (
     <p className="rounded-xl bg-brand-mint/15 px-4 py-3 text-xs text-brand-stone/80">
-      {hint ?? "Pas encore de données — la vue se remplira dès que le trafic démarre."}
+      {hint ?? "Pas encore de données - la vue se remplira dès que le trafic démarre."}
     </p>
   );
 }

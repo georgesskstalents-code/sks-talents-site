@@ -5,7 +5,7 @@ export const dynamic = "force-static";
 export const revalidate = 3600;
 
 const SITE_URL = "https://www.skstalents.fr";
-const SITE_TITLE = "SKS TALENTS — Executive Search Life Sciences & Santé animale";
+const SITE_TITLE = "SKS TALENTS - Executive Search Life Sciences & Santé animale";
 const SITE_DESC =
   "Insights, signaux marché et fiches métiers pour CEO, COO, CPO et DRH en biotech, diagnostic, vétérinaire et petfood. Cabinet d'executive search SKS Talents.";
 

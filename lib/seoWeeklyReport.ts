@@ -2,18 +2,18 @@
  * SEO sections of the Monday weekly digest.
  *
  * Two blocs assembled here :
- *   1. GSC quality signal — static-ish reminder card with the 393-URL baseline
+ *   1. GSC quality signal - static-ish reminder card with the 393-URL baseline
  *      from the 2026-05-05 sitemap pruning. We don't yet have GSC OAuth wired,
  *      so this surfaces *what to check manually* on a 7→14 day horizon, plus
  *      the actionable warning if "Pages indexées" stays under 250.
  *
- *   2. Weekly keyword proposals — pulled from Supabase
+ *   2. Weekly keyword proposals - pulled from Supabase
  *      table `seo_keyword_proposals` (populated by /api/cron/seo-keywords every
  *      Monday 5h UTC). Shows the top 10 pending + the count breakdown so the
  *      CEO knows there's work to do in /dashboard/seo-keywords.
  *
  * Both helpers fail gracefully (empty state cards) when Supabase isn't
- * reachable — the weekly digest must always send.
+ * reachable - the weekly digest must always send.
  */
 
 export type SeoKeywordProposalRow = {
@@ -114,13 +114,13 @@ export async function fetchSeoKeywordsSnapshot(): Promise<SeoKeywordsSnapshot> {
 }
 
 /**
- * GSC monitoring card. Static content — no Search Console API yet.
+ * GSC monitoring card. Static content - no Search Console API yet.
  * Surfaces the 393-URL baseline + the J+14 quality threshold (250).
  */
 export function buildGscSectionHtml(): string {
   return `
     <tr><td style="padding:12px 28px;background:#fafbfa;">
-      <div style="font:600 12px/1 -apple-system,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#41a0a4;margin-bottom:10px;">Google Search Console — suivi 7-14 jours</div>
+      <div style="font:600 12px/1 -apple-system,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#41a0a4;margin-bottom:10px;">Google Search Console - suivi 7-14 jours</div>
       <table cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#fff;border-radius:12px;border:1px solid #e1ece9;">
         <tr>
           <td style="padding:12px 14px;border-bottom:1px solid #f1f3f5;font:500 13px/1.4 -apple-system,sans-serif;">Sitemap soumis</td>
@@ -139,7 +139,7 @@ export function buildGscSectionHtml(): string {
         </tr>
       </table>
       <div style="margin-top:12px;padding:12px 14px;background:#fff8ec;border:1px solid #fde8c8;border-radius:10px;font:13px/1.55 -apple-system,sans-serif;color:#7a4a14;">
-        <strong style="color:#a14a00;">⚠ Alerte qualité — si à J+14 vous voyez moins de 250 pages indexées :</strong> il reste un signal de qualité à corriger, probablement contenu trop court sur certaines fiches métiers. Action : ouvrir <code>/dashboard/contenu</code>, filtrer par <code>job-roles</code>, repérer les fiches sans missions/skills/successFactors et compléter dans Notion. Le filtre <code>hasSubstance</code> du sitemap les exclura jusqu'à ce qu'elles soient remplies.
+        <strong style="color:#a14a00;">⚠ Alerte qualité - si à J+14 vous voyez moins de 250 pages indexées :</strong> il reste un signal de qualité à corriger, probablement contenu trop court sur certaines fiches métiers. Action : ouvrir <code>/dashboard/contenu</code>, filtrer par <code>job-roles</code>, repérer les fiches sans missions/skills/successFactors et compléter dans Notion. Le filtre <code>hasSubstance</code> du sitemap les exclura jusqu'à ce qu'elles soient remplies.
       </div>
     </td></tr>`;
 }

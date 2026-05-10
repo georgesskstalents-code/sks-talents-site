@@ -12,10 +12,10 @@ export default function Hero() {
 
   return (
     <section className="relative isolate overflow-hidden">
-      {/* Full-bleed Vimeo background — mounted after first paint via HeroBackgroundVideo (LCP-safe) */}
+      {/* Full-bleed Vimeo background - mounted after first paint via HeroBackgroundVideo (LCP-safe) */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <HeroBackgroundVideo vimeoId={vimeoId} />
-        {/* Strong white overlay to mask the video's embedded text/branding — keeps motion subtle */}
+        {/* Strong white overlay to mask the video's embedded text/branding - keeps motion subtle */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/96 via-white/92 to-brand-mint/80" />
         <div className="absolute inset-0 bg-white/30" />
         <div className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-brand-mint/40 blur-3xl" />

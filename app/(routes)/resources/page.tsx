@@ -55,7 +55,7 @@ export default async function ResourcesPage() {
             { title: "Métiers", href: "/job-roles", copy: "Fiches de poste longues traînes, fonctions pénuriques et rôles ouverts après levée." },
             { title: "Fonds", href: "/investment-funds", copy: "Top biotech companies, VC santé et écosystèmes financés en Seed, Série A ou Série B." },
             { title: "Écoles", href: "/schools", copy: "Pipelines talents, orientation et bassins académiques." },
-            { title: "Articles", href: "/blog", copy: "Insights, fiches métiers et signaux marché — tous les articles publiés par SKS TALENTS sur les Life Sciences & Santé animale." }
+            { title: "Articles", href: "/blog", copy: "Insights, fiches métiers et signaux marché - tous les articles publiés par SKS TALENTS sur les Life Sciences & Santé animale." }
           ].map((item) => (
             <Link
               key={item.title}

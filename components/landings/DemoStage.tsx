@@ -8,13 +8,13 @@ export type DemoScene = {
   id: string;
   durationMs: number;
   /**
-   * Render the scene body. Scenes are pure visual — no fetches, no side effects.
+   * Render the scene body. Scenes are pure visual - no fetches, no side effects.
    */
   render: () => React.ReactNode;
 };
 
 type Props = {
-  /** Section identifier — used in GA event names: demo_<sector>_play_clicked, etc. */
+  /** Section identifier - used in GA event names: demo_<sector>_play_clicked, etc. */
   sector: "animal_health" | "life_sciences";
   scenes: DemoScene[];
   totalSeconds: number;
@@ -247,7 +247,7 @@ export default function DemoStage({ sector, scenes, totalSeconds, ariaLabel }: P
           </div>
         ))}
 
-        {/* Instagram-style tap zones — overlay on top of scenes */}
+        {/* Instagram-style tap zones - overlay on top of scenes */}
         <button
           type="button"
           onClick={goPrev}
@@ -275,7 +275,7 @@ export default function DemoStage({ sector, scenes, totalSeconds, ariaLabel }: P
       {/* Final state */}
       {progressMs >= totalMs && (
         <div className="border-t border-brand-teal/10 bg-brand-mint/30 px-4 py-3 text-center text-caption font-semibold text-brand-teal sm:px-6">
-          ✓ Démo terminée — clique sur ⟳ pour rejouer
+          ✓ Démo terminée - clique sur ⟳ pour rejouer
         </div>
       )}
     </div>

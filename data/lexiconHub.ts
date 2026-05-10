@@ -97,8 +97,8 @@ export const lexiconHubPage = {
     "Le recrutement ne dépend pas du CEO pour chaque validation."
   ],
   checklistScores: [
-    { label: "0–2", verdict: "Chaos", copy: "Vous avancez surtout en réaction et en urgence." },
-    { label: "3–4", verdict: "Fragile", copy: "Une partie de la mécanique tient, mais elle cassera en phase de scale." },
+    { label: "0-2", verdict: "Chaos", copy: "Vous avancez surtout en réaction et en urgence." },
+    { label: "3-4", verdict: "Fragile", copy: "Une partie de la mécanique tient, mais elle cassera en phase de scale." },
     { label: "5+", verdict: "Structuré", copy: "Votre organisation peut absorber davantage de croissance avec moins de friction." }
   ],
   topErrors: [

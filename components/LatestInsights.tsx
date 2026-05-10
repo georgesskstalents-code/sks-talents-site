@@ -24,7 +24,7 @@ async function fetchInsights(limit = 3): Promise<Insight[]> {
       }));
     }
   } catch {
-    // Silent fallback — Notion unreachable, use static articles
+    // Silent fallback - Notion unreachable, use static articles
   }
 
   return articles.slice(0, limit).map((article) => ({
@@ -46,7 +46,7 @@ export default async function LatestInsights() {
         <div className="space-y-3">
           <p className="eyebrow">Derniers insights</p>
           <h2 className="font-display text-4xl leading-[1.05] text-brand-ink sm:text-5xl">
-            Lecture marché — articles récents
+            Lecture marché - articles récents
           </h2>
           <p className="max-w-2xl text-base leading-8 text-brand-stone">
             Insights, fiches métiers et signaux marché pour comprendre, calibrer et décider avant de

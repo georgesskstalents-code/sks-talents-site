@@ -1,4 +1,4 @@
-// Per-article hero overrides. Empty by default — components/EditorialContentLayout.tsx falls back
+// Per-article hero overrides. Empty by default - components/EditorialContentLayout.tsx falls back
 // to the keyword-based Unsplash catalog when a slug is not listed here.
 //
 // Reason it was emptied: previous Wikipedia/commons URLs failed to load due to hotlinking

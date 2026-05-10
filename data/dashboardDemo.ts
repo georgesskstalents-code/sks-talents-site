@@ -2,8 +2,8 @@ export const dashboardDemoData = {
   client: {
     name: "SKS Talents",
     subtitle: "Executive search · Life Sciences & Animal Health",
-    period: "20 mars — 20 avril 2026",
-    comparedTo: "17 fév — 19 mars 2026"
+    period: "20 mars - 20 avril 2026",
+    comparedTo: "17 fév - 19 mars 2026"
   },
 
   kpis: [
@@ -109,10 +109,10 @@ export const dashboardDemoData = {
   ],
 
   seoPositionBuckets: [
-    { bucket: "1–3", count: 142, prev: 118 },
-    { bucket: "4–10", count: 284, prev: 246 },
-    { bucket: "11–20", count: 318, prev: 342 },
-    { bucket: "21–50", count: 612, prev: 684 },
+    { bucket: "1-3", count: 142, prev: 118 },
+    { bucket: "4-10", count: 284, prev: 246 },
+    { bucket: "11-20", count: 318, prev: 342 },
+    { bucket: "21-50", count: 612, prev: 684 },
     { bucket: "51+", count: 428, prev: 472 }
   ],
 
@@ -180,12 +180,12 @@ export const dashboardDemoData = {
   ],
 
   paidCampaigns: [
-    { name: "Marque — SKS Talents", channel: "Google Ads", spend: 8420, clicks: 4820, conv: 184, roas: 6.8, delta: +0.124 },
-    { name: "Non-brand — cabinet recrutement biotech", channel: "Google Ads", spend: 12840, clicks: 6420, conv: 142, roas: 3.2, delta: +0.082 },
+    { name: "Marque - SKS Talents", channel: "Google Ads", spend: 8420, clicks: 4820, conv: 184, roas: 6.8, delta: +0.124 },
+    { name: "Non-brand - cabinet recrutement biotech", channel: "Google Ads", spend: 12840, clicks: 6420, conv: 142, roas: 3.2, delta: +0.082 },
     { name: "Retargeting études & livres blancs", channel: "Meta", spend: 6840, clicks: 8240, conv: 98, roas: 4.1, delta: +0.214 },
-    { name: "Notoriété marque — dirigeant RH", channel: "Meta", spend: 5210, clicks: 12640, conv: 62, roas: 2.8, delta: -0.042 },
-    { name: "LinkedIn — dirigeants Life Sciences", channel: "LinkedIn", spend: 4180, clicks: 2120, conv: 42, roas: 5.2, delta: +0.168 },
-    { name: "YouTube — lecture marché", channel: "YouTube", spend: 2840, clicks: 3820, conv: 24, roas: 1.8, delta: +0.318 }
+    { name: "Notoriété marque - dirigeant RH", channel: "Meta", spend: 5210, clicks: 12640, conv: 62, roas: 2.8, delta: -0.042 },
+    { name: "LinkedIn - dirigeants Life Sciences", channel: "LinkedIn", spend: 4180, clicks: 2120, conv: 42, roas: 5.2, delta: +0.168 },
+    { name: "YouTube - lecture marché", channel: "YouTube", spend: 2840, clicks: 3820, conv: 24, roas: 1.8, delta: +0.318 }
   ],
 
   geo: [

@@ -38,7 +38,7 @@ export default function MobileTrustpilotPrompt() {
 
     const showsCount = Number(window.sessionStorage.getItem(SHOWS_KEY) ?? "0");
 
-    // Already shown twice — never again
+    // Already shown twice - never again
     if (showsCount >= 2) return;
 
     if (timerRef.current) clearTimeout(timerRef.current);
@@ -87,7 +87,7 @@ export default function MobileTrustpilotPrompt() {
         // First dismiss: schedule reappearance in 5 min
         window.sessionStorage.setItem(DISMISSED_AT_KEY, String(Date.now()));
       }
-      // showsCount === 2: nothing more to do — won't reappear
+      // showsCount === 2: nothing more to do - won't reappear
     }
   };
 

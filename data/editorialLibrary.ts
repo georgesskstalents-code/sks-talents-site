@@ -32,7 +32,7 @@ export const editorialTracks: EditorialTrack[] = [
       {
         title: "Hub Bénin",
         href: "/benin",
-        summary: "Marché béninois, orientation et contenus France–Bénin à forte valeur."
+        summary: "Marché béninois, orientation et contenus France-Bénin à forte valeur."
       }
     ]
   },

@@ -1,5 +1,5 @@
 /**
- * Diagnostic matching engine — pure functions, fully testable.
+ * Diagnostic matching engine - pure functions, fully testable.
  *
  * Two diagnostics share the same shape: 5 multi-choice questions
  * (Q1=profil, Q2=stade, Q3=douleur principale, Q4=mesure, Q5=objectif 6 mois)
@@ -220,13 +220,13 @@ function buildPriorities(
 ): [string, string, string] {
   if (sector === "animal-health") {
     return [
-      `Déployer ${primary.label} en pilote — ROI cible : ${primary.roiHeadline}`,
+      `Déployer ${primary.label} en pilote - ROI cible : ${primary.roiHeadline}`,
       "Cadrer la fiche métier hybride correspondante (vétérinaire + business, ou KAM + scientifique)",
       "Mesurer en J+90 : heures dirigeants récupérées, qualité des décisions, pipeline acquisitions"
     ];
   }
   return [
-    `Activer ${primary.label} avant votre prochain board — ROI : ${primary.roiHeadline}`,
+    `Activer ${primary.label} avant votre prochain board - ROI : ${primary.roiHeadline}`,
     "Cartographier les 3 hires critiques 6 mois à l'avance via l'agent Talent Intelligence",
     "Industrialiser l'onboarding 90 jours pour −60 % de turnover senior première année"
   ];

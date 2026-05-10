@@ -71,7 +71,7 @@ function looksTranslatable(value: string) {
 }
 
 // Note (2026-05-07): the previous implementation skipped text inside parents
-// with display:none / visibility:hidden — but mobile drawers, accordions,
+// with display:none / visibility:hidden - but mobile drawers, accordions,
 // and modals are exactly that. So when a user opened a drawer in EN mode,
 // the text inside was never captured during the initial collect, leading to
 // untranslated zones until the MutationObserver kicked in (~250ms delay).
@@ -263,7 +263,7 @@ function warmTranslationCache(pathname: string) {
   }
 
   // Fire fast (50ms after mount) so the EN switch feels instant on first click.
-  // Was previously requestIdleCallback with 1200ms timeout — caused 1-3s delays on /orientation.
+  // Was previously requestIdleCallback with 1200ms timeout - caused 1-3s delays on /orientation.
   window.setTimeout(() => {
     if (readCachedTranslations(pathname)) {
       return;

@@ -74,11 +74,11 @@ function buildGeorgesEmailHtml(
   <hr style="border:0;border-top:1px solid #e5e5e5;margin:16px 0;"/>
   <p style="margin:0 0 6px 0;font-weight:600;color:#0f3a3c;">Réponses</p>
   <ul style="margin:0;padding-left:18px;line-height:1.7;">
-    <li>Q1 (profil) : ${a.q1}${a.q1Other ? ` — "${a.q1Other}"` : ""}</li>
-    <li>Q2 (stade) : ${a.q2}${a.q2Other ? ` — "${a.q2Other}"` : ""}</li>
-    <li>Q3 (douleur) : ${a.q3}${a.q3Other ? ` — "${a.q3Other}"` : ""}</li>
-    <li>Q4 (mesure) : ${a.q4}${a.q4Other ? ` — "${a.q4Other}"` : ""}</li>
-    <li>Q5 (objectif 6 mois) : ${a.q5}${a.q5Other ? ` — "${a.q5Other}"` : ""}</li>
+    <li>Q1 (profil) : ${a.q1}${a.q1Other ? ` - "${a.q1Other}"` : ""}</li>
+    <li>Q2 (stade) : ${a.q2}${a.q2Other ? ` - "${a.q2Other}"` : ""}</li>
+    <li>Q3 (douleur) : ${a.q3}${a.q3Other ? ` - "${a.q3Other}"` : ""}</li>
+    <li>Q4 (mesure) : ${a.q4}${a.q4Other ? ` - "${a.q4Other}"` : ""}</li>
+    <li>Q5 (objectif 6 mois) : ${a.q5}${a.q5Other ? ` - "${a.q5Other}"` : ""}</li>
   </ul>
   <hr style="border:0;border-top:1px solid #e5e5e5;margin:16px 0;"/>
   <p style="margin:0 0 6px 0;font-weight:600;color:#0f3a3c;">Recommandation</p>
@@ -124,7 +124,7 @@ function buildLeadConfirmationHtml(
   <p style="text-align:center;margin:18px 0;">
     <a href="${calendlyUrl}" style="display:inline-block;background:#0f3a3c;color:#fff;padding:14px 28px;border-radius:999px;text-decoration:none;font-weight:600;">Réserver mes 15 min →</a>
   </p>
-  <p style="margin:24px 0 0 0;font-size:13px;color:#6a6a6a;">— Georges Kengue<br/>Fondateur SKS TALENTS<br/>Executive Search Life Sciences &amp; Santé animale</p>
+  <p style="margin:24px 0 0 0;font-size:13px;color:#6a6a6a;">- Georges Kengue<br/>Fondateur SKS TALENTS<br/>Executive Search Life Sciences &amp; Santé animale</p>
 </td></tr>
 </table></body></html>`;
 }
@@ -161,7 +161,7 @@ export async function POST(request: Request) {
     return noStoreJson({ ok: false, message: "Réponses incomplètes ou invalides." }, 422);
   }
 
-  // Turnstile (optional — only if configured)
+  // Turnstile (optional - only if configured)
   if (process.env.TURNSTILE_SECRET_KEY) {
     const turnstile = await verifyTurnstileToken({
       token: (body.turnstileToken ?? "").slice(0, 2048),
@@ -174,7 +174,7 @@ export async function POST(request: Request) {
 
   const result = matchDiagnostic(body.sector, body.answers);
 
-  // Persist (Supabase if configured — silent no-op otherwise)
+  // Persist (Supabase if configured - silent no-op otherwise)
   const submittedAt = new Date().toISOString();
   await persistToSupabase({
     sector: body.sector,

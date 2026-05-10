@@ -496,7 +496,7 @@ export default function SectorLandingPage({ config }: Props) {
                 className={styles.ctaPrimary}
                 aria-label="Je réserve un call de 15 minutes"
               >
-                Je réserve un call — 15 min
+                Je réserve un call - 15 min
                 <span className={styles.arrowShift}>→</span>
               </button>
               <button type="button" onClick={scrollToVerticals} className={styles.ctaSecondary}>
@@ -696,7 +696,7 @@ export default function SectorLandingPage({ config }: Props) {
                 }
               >
                 <p className={styles.focusIndex}>
-                  {vertical.number} — Marché focus
+                  {vertical.number} - Marché focus
                 </p>
 
                 {vertical.href ? (
@@ -844,7 +844,7 @@ export default function SectorLandingPage({ config }: Props) {
         <div className={styles.processSection}>
           <p className={styles.sectionLabel}>§ 03 · Comment ça marche</p>
           <h2 id={`${config.key}-how-title`} className={styles.processHeadline}>
-            De l’intake à la signature — <span className={styles.titleAccent}>60 jours.</span>
+            De l’intake à la signature - <span className={styles.titleAccent}>60 jours.</span>
           </h2>
 
           <div className={styles.timeline}>
@@ -971,7 +971,7 @@ export default function SectorLandingPage({ config }: Props) {
               onClick={() => openBookCall("final")}
               className={styles.ctaPrimary}
             >
-              Je réserve un call — 15 min
+              Je réserve un call - 15 min
               <span className={styles.arrowShift}>→</span>
             </button>
             <Link href="/contact" className={styles.ctaSecondary}>
@@ -991,7 +991,7 @@ export default function SectorLandingPage({ config }: Props) {
           onClick={() => openBookCall("sticky")}
           className={styles.stickyButton}
         >
-          Je réserve un call — 15 min
+          Je réserve un call - 15 min
         </button>
       </div>
     </div>

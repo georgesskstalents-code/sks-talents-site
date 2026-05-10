@@ -138,12 +138,12 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
       "Hub Sénégal SKS TALENTS : bioproduction, santé, diagnostic, carrières, contenus orientation et articles dédiés aux recherches Sénégal dans vos industries.",
     kicker: "Hub pays · Sénégal",
     description:
-      "Cette page regroupe les contenus SKS TALENTS pensés pour attirer et servir les recherches liées au Sénégal dans la santé, la bioproduction, les carrières scientifiques et les passerelles France–Afrique.",
+      "Cette page regroupe les contenus SKS TALENTS pensés pour attirer et servir les recherches liées au Sénégal dans la santé, la bioproduction, les carrières scientifiques et les passerelles France-Afrique.",
     answerTitle: "Comment SKS TALENTS traite le Sénégal sur le site ?",
     answer:
       "Le Sénégal n’est pas traité comme un simple mot-clé ajouté à des contenus France. Nous créons des contenus dédiés lorsque le sujet est local, coopératif ou franco-sénégalais, notamment autour de la bioproduction, des institutions de santé et des trajectoires de talents.",
     bullets: [
-      "Angle dédié Sénégal ou France–Sénégal selon le sujet",
+      "Angle dédié Sénégal ou France-Sénégal selon le sujet",
       "Ciblage des talents, décideurs et acteurs santé/industrie",
       "Passerelles vers orientation, bioproduction, healthtech et institutions",
       "Contenus lisibles pour Google, ChatGPT, Claude, Mistral et Perplexity"
@@ -221,7 +221,7 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
       {
         question: "Quels sujets Sénégal sont prioritaires pour SKS TALENTS ?",
         answer:
-          "La bioproduction, les institutions de santé, l’orientation vers les métiers scientifiques et les passerelles France–Afrique dans les secteurs de la santé et des Life Sciences."
+          "La bioproduction, les institutions de santé, l’orientation vers les métiers scientifiques et les passerelles France-Afrique dans les secteurs de la santé et des Life Sciences."
       },
       {
         question: "Ce hub Sénégal sert-il aussi au GEO pour les LLM ?",
@@ -340,7 +340,7 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
     title: "Bénin : biotech, santé, carrières scientifiques et écosystèmes à suivre",
     metaTitle: "Bénin | Santé, biotech, carrières & écosystèmes",
     metaDescription:
-      "Hub Bénin SKS TALENTS : santé, biotech, orientation, carrières, écosystèmes et passerelles France–Afrique pour attirer un trafic qualifié sur vos sujets.",
+      "Hub Bénin SKS TALENTS : santé, biotech, orientation, carrières, écosystèmes et passerelles France-Afrique pour attirer un trafic qualifié sur vos sujets.",
     kicker: "Hub pays · Bénin",
     description:
       "Cette page rassemble les contenus SKS TALENTS les plus utiles pour capter et servir des recherches liées au Bénin sur la santé, les Life Sciences, l’orientation, les trajectoires de talents et les passerelles avec la France.",
@@ -349,7 +349,7 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
       "Parce qu’un trafic qualifié sur le Bénin ne doit pas être noyé dans des contenus strictement France. Ce hub sert à clarifier les bons points d’entrée pour les professionnels, étudiants, dirigeants et profils scientifiques qui cherchent des repères crédibles sur vos industries.",
     bullets: [
       "Angle pays distinct pour éviter les contenus trop généralistes",
-      "Passerelles France–Afrique sur les métiers, la formation et les marchés",
+      "Passerelles France-Afrique sur les métiers, la formation et les marchés",
       "Contenus pensés pour Google, ChatGPT, Claude, Mistral et Perplexity",
       "Point d’entrée utile pour talents, dirigeants et partenaires"
     ],
@@ -358,7 +358,7 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
       "Le Bénin peut devenir un axe pertinent pour les recherches d’orientation, de carrières scientifiques, de coopération régionale et de lecture des marchés santé en Afrique francophone.",
     priorities: [
       "Orientation vers biotech, diagnostic et santé animale",
-      "Passerelles carrières France–Bénin",
+      "Passerelles carrières France-Bénin",
       "Ressources marché et écosystème Afrique francophone",
       "Contenus utiles pour professionnels santé et profils en transition"
     ],

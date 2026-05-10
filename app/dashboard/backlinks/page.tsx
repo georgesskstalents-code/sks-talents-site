@@ -13,7 +13,7 @@ export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
 export const metadata = {
-  title: "Backlinks outreach — SKS TALENTS",
+  title: "Backlinks outreach - SKS TALENTS",
   robots: { index: false, follow: false }
 };
 

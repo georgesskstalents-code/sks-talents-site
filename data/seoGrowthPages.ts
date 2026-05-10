@@ -276,7 +276,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Le bassin parisien concentre France Biotech, Angels Santé, Bpifrance, Paris-Saclay, Medicen et une forte densité d’entreprises financées. C’est un avantage pour l’écosystème, mais une difficulté supplémentaire pour recruter vite.",
-    faqTitle: "FAQ — Cabinet de recrutement Life Sciences à Paris",
+    faqTitle: "FAQ - Cabinet de recrutement Life Sciences à Paris",
     faqs: [
       {
         question: "Pourquoi passer par un cabinet spécialisé Life Sciences à Paris ?",
@@ -347,7 +347,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Le marché Animal Health combine cliniques, réseaux, laboratoires vétérinaires, pet care et nutrition animale. Les viviers sont plus étroits que sur d’autres secteurs, donc chaque erreur coûte vite en opérations.",
-    faqTitle: "FAQ — Recrutement Santé animale à Paris",
+    faqTitle: "FAQ - Recrutement Santé animale à Paris",
     faqs: [
       {
         question: "Quels postes recrutez-vous le plus souvent en santé animale ?",
@@ -418,7 +418,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "L’e-santé française se situe à l’intersection des signaux fonds, des contraintes réglementaires et d’un marché des talents déjà disputé. Ce contexte renforce la valeur d’un cadrage précis dès le départ.",
-    faqTitle: "FAQ — Recrutement E-santé en France",
+    faqTitle: "FAQ - Recrutement E-santé en France",
     faqs: [
       {
         question: "Quels postes sont prioritaires dans une entreprise e-santé ?",
@@ -487,7 +487,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "recrutement petcare",
       "recrutement industrie animale"
     ],
-    faqTitle: "FAQ — Recrutement Petfood en France",
+    faqTitle: "FAQ - Recrutement Petfood en France",
     faqs: [
       {
         question: "Quels profils sont les plus tendus dans le petfood ?",
@@ -556,7 +556,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "recrutement petfood",
       "recrutement animal biotech"
     ],
-    faqTitle: "FAQ — Recrutement nutrition animale en France",
+    faqTitle: "FAQ - Recrutement nutrition animale en France",
     faqs: [
       {
         question: "Quels rôles sont prioritaires en nutrition animale ?",
@@ -627,8 +627,8 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "structuration RH startup santé"
     ],
     marketContext:
-      "Le marché a levé 2,3 Md€ en France avec une baisse de 10% sur le total, tandis que le capital-risque a progressé à 1 Md€. L’argent est plus rare, mais l’exigence de performance n’a jamais été aussi élevée. Les fonds que vous référencez déjà — France Biotech, Bpifrance, Angels Santé, Seventure, Sofina, EIC Fund, Digitalis — créent une dynamique de croissance, mais pas une séquence de recrutement. C’est précisément là qu’un cabinet spécialisé devient utile.",
-    faqTitle: "FAQ — Recrutement après levée de fonds",
+      "Le marché a levé 2,3 Md€ en France avec une baisse de 10% sur le total, tandis que le capital-risque a progressé à 1 Md€. L’argent est plus rare, mais l’exigence de performance n’a jamais été aussi élevée. Les fonds que vous référencez déjà - France Biotech, Bpifrance, Angels Santé, Seventure, Sofina, EIC Fund, Digitalis - créent une dynamique de croissance, mais pas une séquence de recrutement. C’est précisément là qu’un cabinet spécialisé devient utile.",
+    faqTitle: "FAQ - Recrutement après levée de fonds",
     faqs: [
       {
         question: "Quels postes recruter en premier après une levée de fonds ?",
@@ -697,7 +697,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "recrutement VC biotech",
       "recrutement profils rares santé"
     ],
-    faqTitle: "FAQ — Recrutement Série A biotech",
+    faqTitle: "FAQ - Recrutement Série A biotech",
     faqs: [
       {
         question: "Quels rôles sont les plus urgents après une Série A biotech ?",
@@ -766,7 +766,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "structuration RH startup santé",
       "automatisation processus RH santé"
     ],
-    faqTitle: "FAQ — Recrutement Série B healthtech",
+    faqTitle: "FAQ - Recrutement Série B healthtech",
     faqs: [
       {
         question: "Pourquoi la Série B change-t-elle le niveau d’exigence RH ?",
@@ -835,7 +835,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "recrutement série A biotech",
       "recrutement scale-up santé"
     ],
-    faqTitle: "FAQ — Recrutement startup biotech financée",
+    faqTitle: "FAQ - Recrutement startup biotech financée",
     faqs: [
       {
         question: "Quels signaux montrent qu’une startup biotech doit professionnaliser son recrutement ?",
@@ -906,7 +906,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Le marché HealthTech français compte environ 2 800 entreprises, dont un tiers a moins de 5 ans. Il reste donc jeune, avec beaucoup d’improvisation organisationnelle. Dans le même temps, 75% des entreprises visent directement l’international : vous ne recrutez pas seulement contre vos concurrents locaux, mais contre le monde entier.",
-    faqTitle: "FAQ — Recrutement scale-up santé",
+    faqTitle: "FAQ - Recrutement scale-up santé",
     faqs: [
       {
         question: "Quand une startup santé devient-elle une vraie scale-up côté recrutement ?",
@@ -975,7 +975,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "recrutement série A biotech",
       "recrutement startup biotech financée"
     ],
-    faqTitle: "FAQ — Recrutement biotech à Paris",
+    faqTitle: "FAQ - Recrutement biotech à Paris",
     faqs: [
       {
         question: "Pourquoi Paris est-elle si concurrentielle en biotech ?",
@@ -1040,7 +1040,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "recrutement diagnostic ivd",
       "recrutement deeptech santé"
     ],
-    faqTitle: "FAQ — Recrutement healthtech à Lyon",
+    faqTitle: "FAQ - Recrutement healthtech à Lyon",
     faqs: [
       {
         question: "Pourquoi Lyon mérite-t-elle une page dédiée ?",
@@ -1105,7 +1105,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "recrutement diagnostic ivd",
       "recrutement startup biotech financée"
     ],
-    faqTitle: "FAQ — Recrutement biotech à Toulouse",
+    faqTitle: "FAQ - Recrutement biotech à Toulouse",
     faqs: [
       {
         question: "Pourquoi un bassin régional peut-il ralentir le recrutement biotech ?",
@@ -1166,7 +1166,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "executive search biotech",
       "recrutement profils rares santé"
     ],
-    faqTitle: "FAQ — Recrutement biotech à Bordeaux",
+    faqTitle: "FAQ - Recrutement biotech à Bordeaux",
     faqs: [
       {
         question: "Pourquoi une biotech bordelaise doit-elle penser le recrutement au-delà du local ?",
@@ -1227,12 +1227,12 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "recrutement robotique santé france",
       "cabinet recrutement e-santé france"
     ],
-    faqTitle: "FAQ — Recrutement e-santé à Montpellier",
+    faqTitle: "FAQ - Recrutement e-santé à Montpellier",
     faqs: [
       {
         question: "Quels rôles sont les plus difficiles à recruter en e-santé ?",
         answer:
-          "Les rôles croisant santé, produit, business et exécution — COO, people leadership, direction commerciale, product operations, terrain."
+          "Les rôles croisant santé, produit, business et exécution - COO, people leadership, direction commerciale, product operations, terrain."
       },
       {
         question: "Pourquoi relier e-santé et robotique santé ?",
@@ -1288,7 +1288,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "recrutement petcare",
       "recrutement nutrition animale france"
     ],
-    faqTitle: "FAQ — Recrutement santé animale à Marseille",
+    faqTitle: "FAQ - Recrutement santé animale à Marseille",
     faqs: [
       {
         question: "Pourquoi Marseille peut-elle être plus difficile que Paris pour certains recrutements ?",
@@ -1349,7 +1349,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "executive search santé",
       "leadership team biotech"
     ],
-    faqTitle: "FAQ — Recruter un COO biotech",
+    faqTitle: "FAQ - Recruter un COO biotech",
     faqs: [
       {
         question: "Qu’est-ce qui distingue un COO biotech d’un COO plus généraliste ?",
@@ -1410,7 +1410,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "structuration RH startup santé",
       "automatisation processus RH santé"
     ],
-    faqTitle: "FAQ — Recruter un DRH santé",
+    faqTitle: "FAQ - Recruter un DRH santé",
     faqs: [
       {
         question: "À partir de quand une entreprise santé a-t-elle besoin d’un vrai DRH ?",
@@ -1479,7 +1479,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "recrutement top management santé",
       "qui recrute des dirigeants biotech"
     ],
-    faqTitle: "FAQ — Chasse de tête dirigeants santé",
+    faqTitle: "FAQ - Chasse de tête dirigeants santé",
     faqs: [
       {
         question: "Quels dirigeants santé recrutez-vous ?",
@@ -1540,7 +1540,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "chasse de tête biotech",
       "dirigeants santé"
     ],
-    faqTitle: "FAQ — Executive search Life Sciences",
+    faqTitle: "FAQ - Executive search Life Sciences",
     faqs: [
       {
         question: "Quels postes relèvent vraiment de l’executive search ?",
@@ -1601,7 +1601,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "externalisation recrutement santé",
       "sourcing talents life sciences"
     ],
-    faqTitle: "FAQ — RPO recrutement Life Sciences",
+    faqTitle: "FAQ - RPO recrutement Life Sciences",
     faqs: [
       {
         question: "Quand faut-il activer du RPO ?",
@@ -1662,7 +1662,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "RPO recrutement life sciences",
       "recruitment process outsourcing santé"
     ],
-    faqTitle: "FAQ — Externalisation du recrutement santé",
+    faqTitle: "FAQ - Externalisation du recrutement santé",
     faqs: [
       {
         question: "Pourquoi externaliser plutôt qu’internaliser ?",
@@ -1723,7 +1723,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "pipeline candidats biotech",
       "recrutement profils rares santé"
     ],
-    faqTitle: "FAQ — Vivier de talents Life Sciences",
+    faqTitle: "FAQ - Vivier de talents Life Sciences",
     faqs: [
       {
         question: "Un vivier de talents suffit-il à recruter plus vite ?",
@@ -1784,7 +1784,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       "recrutement deeptech santé",
       "recrutement diagnostic ivd"
     ],
-    faqTitle: "FAQ — Recrutement de profils rares en santé",
+    faqTitle: "FAQ - Recrutement de profils rares en santé",
     faqs: [
       {
         question: "Pourquoi les profils rares ne postulent-ils pas ?",
@@ -1851,7 +1851,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Dans un marché composé d’environ 2 800 entreprises HealthTech en France, dont un tiers a moins de 5 ans, la croissance se construit souvent avec une organisation encore jeune. Quand 64% des dépenses et 39% des effectifs restent concentrés sur la R&D, le risque est clair : vous investissez dans votre produit, mais pas assez dans votre organisation.",
-    faqTitle: "FAQ — Structuration RH startup santé",
+    faqTitle: "FAQ - Structuration RH startup santé",
     faqs: [
       {
         question: "Quand faut-il structurer la fonction RH dans une startup santé ?",
@@ -1933,7 +1933,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "81% des entreprises externalisent déjà certaines activités, et 92% en biotech. Ce réflexe montre souvent moins un excès d’outils qu’un manque de process interne. L’automatisation devient utile quand elle remet de la fluidité dans le système, pas quand elle ajoute une couche technique de plus.",
-    faqTitle: "FAQ — Automatisation des processus RH en santé",
+    faqTitle: "FAQ - Automatisation des processus RH en santé",
     faqs: [
       {
         question: "Quels process RH automatiser en priorité ?",
@@ -2022,7 +2022,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Bpifrance est une source utile pour documenter les véhicules, leur mandat et le cadre de financement. Ce n’est pas une preuve directe de volume de recrutement. La bonne lecture consiste à relier financement, exécution et maturité organisationnelle.",
-    faqTitle: "FAQ — Bpifrance biotech medtech",
+    faqTitle: "FAQ - Bpifrance biotech medtech",
     faqs: [
       {
         question: "Pourquoi Bpifrance intéresse-t-il aussi les RH et les dirigeants ?",
@@ -2108,7 +2108,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "France Biotech est une très bonne base pour parler de marché, de financement, de HealthTech et de tensions sectorielles. La valeur SKS vient ensuite de l’interprétation : que faut-il en faire côté recrutement, structuration et performance organisationnelle ?",
-    faqTitle: "FAQ — France Biotech et Panorama France HealthTech",
+    faqTitle: "FAQ - France Biotech et Panorama France HealthTech",
     faqs: [
       {
         question: "Pourquoi France Biotech compte-t-il pour le SEO et les LLM ?",
@@ -2197,7 +2197,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Les fonds sont un signal de marché fort, mais ils n’expliquent pas tout. Ce qui intéresse SKS TALENTS, c’est ce qui vient après : structuration, priorisation des rôles, pression sur les dirigeants et qualité d’exécution du recrutement.",
-    faqTitle: "FAQ — Fonds santé France",
+    faqTitle: "FAQ - Fonds santé France",
     faqs: [
       {
         question: "Pourquoi suivre les fonds santé quand on recrute ?",
@@ -2283,7 +2283,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Angels Santé est particulièrement utile pour lire l’amorçage. À ce stade, le bon enjeu n’est pas seulement de lever, mais de savoir quand structurer, qui recruter en premier et comment éviter que le dirigeant absorbe tout.",
-    faqTitle: "FAQ — Angels Santé",
+    faqTitle: "FAQ - Angels Santé",
     faqs: [
       {
         question: "Pourquoi Angels Santé est-il utile au SEO et aux LLM ?",
@@ -2369,7 +2369,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Seventure est particulièrement utile pour relier investissement, segments biotech et signaux de marché. La valeur SKS consiste ensuite à faire le pont vers les sujets d’organisation, de leadership et de recrutement.",
-    faqTitle: "FAQ — Seventure Partners",
+    faqTitle: "FAQ - Seventure Partners",
     faqs: [
       {
         question: "Pourquoi Seventure Partners intéresse-t-il aussi les RH ?",
@@ -2455,7 +2455,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Kurma Partners apparaît déjà dans la cartographie France Biotech 2024 exploitée sur le site. La valeur SKS consiste à transformer cette présence en point d’entrée SEO et LLM à forte intention, puis à relier cette recherche aux enjeux d’équipes.",
-    faqTitle: "FAQ — Kurma Partners",
+    faqTitle: "FAQ - Kurma Partners",
     faqs: [
       {
         question: "Pourquoi une page Kurma Partners peut-elle être utile ?",
@@ -2541,7 +2541,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Jeito fait déjà partie des gestionnaires visibles dans la cartographie France Biotech 2024 référencée sur le site. La bonne stratégie consiste à convertir cette visibilité source-first en page d’entrée SEO et LLM, puis en maillage utile pour les sujets recrutement et structuration.",
-    faqTitle: "FAQ — Jeito Capital",
+    faqTitle: "FAQ - Jeito Capital",
     faqs: [
       {
         question: "Pourquoi créer une page dédiée à Jeito Capital ?",
@@ -2627,7 +2627,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "L’EIC Fund apporte une lecture macro forte sur l’innovation européenne. La valeur SKS consiste à traduire ce signal en questions concrètes : à quel moment faut-il renforcer l’équipe, professionnaliser les process et protéger le temps dirigeant ?",
-    faqTitle: "FAQ — EIC Fund",
+    faqTitle: "FAQ - EIC Fund",
     faqs: [
       {
         question: "Pourquoi l’EIC Fund est-il utile à suivre ?",
@@ -2713,7 +2713,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Sofinnova fait partie des noms qui donnent immédiatement de la crédibilité à une lecture Life Sciences. Pour SKS TALENTS, l’intérêt est de convertir cette requête en entrée sur les sujets de leadership, de structuration et de recrutement.",
-    faqTitle: "FAQ — Sofinnova Partners",
+    faqTitle: "FAQ - Sofinnova Partners",
     faqs: [
       {
         question: "Pourquoi une page Sofinnova Partners est-elle utile ?",
@@ -2787,7 +2787,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Les acteurs growth intéressent particulièrement SKS TALENTS parce qu’ils signalent des environnements où la performance attendue est forte. C’est souvent là que les sujets leadership, process et recrutement deviennent plus sensibles.",
-    faqTitle: "FAQ — Eurazeo Healthcare",
+    faqTitle: "FAQ - Eurazeo Healthcare",
     faqs: [
       {
         question: "Pourquoi Eurazeo Healthcare compte-t-il pour le référencement ?",
@@ -2861,7 +2861,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Un acteur comme Truffle aide à capter des requêtes très ciblées sur le financement biotech / medtech. L’intérêt SKS est de transformer cette visibilité en lecture business pour dirigeants et RH.",
-    faqTitle: "FAQ — Truffle Capital",
+    faqTitle: "FAQ - Truffle Capital",
     faqs: [
       {
         question: "Pourquoi créer une page sur Truffle Capital ?",
@@ -2935,7 +2935,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Dans un cluster fonds santé, les entités à forte crédibilité institutionnelle sont précieuses pour le référencement et pour les réponses LLM. La valeur SKS est de les relier ensuite à des usages concrets pour dirigeants et RH.",
-    faqTitle: "FAQ — Mérieux Equity Partners",
+    faqTitle: "FAQ - Mérieux Equity Partners",
     faqs: [
       {
         question: "Pourquoi une page Mérieux Equity Partners a-t-elle du sens ?",
@@ -3009,7 +3009,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Les acteurs healthcare visibles dans les cartographies fonds santé aident à enrichir la couverture SEO et LLM du site. L’intérêt SKS est de relier ces noms à une lecture plus opérationnelle de la croissance.",
-    faqTitle: "FAQ — Cathay Capital Healthcare",
+    faqTitle: "FAQ - Cathay Capital Healthcare",
     faqs: [
       {
         question: "Pourquoi créer une page sur Cathay Capital Healthcare ?",
@@ -3083,7 +3083,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     marketContext:
       "Le digital health appelle souvent des modèles d’organisation plus hybrides, entre produit, business, médical et opérations. C’est précisément le type d’environnement où SKS TALENTS peut transformer une lecture fonds en lecture organisationnelle.",
-    faqTitle: "FAQ — Extens",
+    faqTitle: "FAQ - Extens",
     faqs: [
       {
         question: "Pourquoi Extens est-il stratégique dans ce cluster ?",

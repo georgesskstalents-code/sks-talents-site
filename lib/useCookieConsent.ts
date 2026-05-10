@@ -10,7 +10,7 @@ import {
 /**
  * Returns the current consent state, syncing automatically when it changes
  * (banner accept, manual toggle from footer, multi-tab updates).
- * `null` means no choice has been made yet — floating widgets should hide
+ * `null` means no choice has been made yet - floating widgets should hide
  * to avoid overlapping the consent banner on mobile.
  */
 export function useCookieConsent(): CookieConsentState | null {

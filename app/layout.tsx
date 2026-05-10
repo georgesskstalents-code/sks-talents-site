@@ -44,7 +44,7 @@ const baseKeywords = [
 ];
 
 /**
- * Async metadata — merges the static base keywords with the operator-approved
+ * Async metadata - merges the static base keywords with the operator-approved
  * keywords coming from Supabase (table seo_keyword_proposals, status='approved').
  * No-op for the dynamic part if Supabase env is not configured.
  */
@@ -53,7 +53,7 @@ export async function generateMetadata(): Promise<Metadata> {
   try {
     approved = await getApprovedKeywords();
   } catch {
-    /* Supabase not reachable — fall back to base keywords only */
+    /* Supabase not reachable - fall back to base keywords only */
   }
   const keywords = Array.from(new Set([...baseKeywords, ...approved]));
 
@@ -64,10 +64,10 @@ export async function generateMetadata(): Promise<Metadata> {
       template: "%s | SKS TALENTS"
     },
     description:
-      "Cabinet d'executive search et structuration RH dédié aux Life Sciences & Santé animale (biotech, diagnostic, medtech, vétérinaire, petfood). Recrutement Série A, Série B, scale-up — décisions COMEX, digitalisation RH et automatisation des tâches à faible valeur ajoutée.",
+      "Cabinet d'executive search et structuration RH dédié aux Life Sciences & Santé animale (biotech, diagnostic, medtech, vétérinaire, petfood). Recrutement Série A, Série B, scale-up - décisions COMEX, digitalisation RH et automatisation des tâches à faible valeur ajoutée.",
     keywords,
     openGraph: {
-      title: "SKS TALENTS — Executive Search Life Sciences & Santé animale",
+      title: "SKS TALENTS - Executive Search Life Sciences & Santé animale",
       description:
         "Recrutement Série A, Série B et scale-up en biotech, diagnostic, medtech, vétérinaire, petfood. Structuration RH par la digitalisation. Décisions COMEX, stratégie et humain.",
       type: "website",
@@ -102,8 +102,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://i.vimeocdn.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://challenges.cloudflare.com" />
-        {/* RSS auto-discovery — picked up by Google News, LLM crawlers, feed readers */}
-        <link rel="alternate" type="application/rss+xml" title="SKS TALENTS — Articles" href="/feed.xml" />
+        {/* RSS auto-discovery - picked up by Google News, LLM crawlers, feed readers */}
+        <link rel="alternate" type="application/rss+xml" title="SKS TALENTS - Articles" href="/feed.xml" />
       </head>
       <body className="min-h-screen font-sans text-brand-ink antialiased">
         <Suspense fallback={null}>

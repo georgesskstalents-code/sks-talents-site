@@ -1,5 +1,5 @@
 /**
- * Content inventory & KPIs — gives the CEO a single source of truth
+ * Content inventory & KPIs - gives the CEO a single source of truth
  * on what's published, what's missing, and what was added recently.
  *
  * Reads:
@@ -215,7 +215,7 @@ export async function buildContentInventory(): Promise<ContentInventory> {
         }
       }
     } catch {
-      // Notion read failed for this type — skip
+      // Notion read failed for this type - skip
     }
   }
 

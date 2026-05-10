@@ -6,7 +6,7 @@ import type { DemoScene } from "@/components/landings/DemoStage";
  * Total : 30 secondes (5 + 8 + 10 + 7). Tap droite/gauche pour naviguer.
  */
 export const animalHealthScenes: DemoScene[] = [
-  // -------------------------------------------------- Scène 1 — Hook (5s)
+  // -------------------------------------------------- Scène 1 - Hook (5s)
   {
     id: "ah-hook",
     durationMs: 5000,
@@ -29,7 +29,7 @@ export const animalHealthScenes: DemoScene[] = [
     )
   },
 
-  // -------------------------------------------------- Scène 2 — Avant (8s)
+  // -------------------------------------------------- Scène 2 - Avant (8s)
   {
     id: "ah-before",
     durationMs: 8000,
@@ -74,7 +74,7 @@ export const animalHealthScenes: DemoScene[] = [
     )
   },
 
-  // -------------------------------------------------- Scène 3 — Après (10s)
+  // -------------------------------------------------- Scène 3 - Après (10s)
   {
     id: "ah-after",
     durationMs: 10000,
@@ -135,7 +135,7 @@ export const animalHealthScenes: DemoScene[] = [
     )
   },
 
-  // -------------------------------------------------- Scène 4 — Témoignage (7s)
+  // -------------------------------------------------- Scène 4 - Témoignage (7s)
   {
     id: "ah-testimonial",
     durationMs: 7000,

@@ -18,7 +18,7 @@ export const dynamic = "force-dynamic";
 
 // Primary recipient = the CEO's pro email on skstalents.fr.
 // Fallback recipient (Gmail tied to the Resend account) is used while
-// Resend hasn't verified the skstalents.fr domain yet — Resend rejects sends
+// Resend hasn't verified the skstalents.fr domain yet - Resend rejects sends
 // to other recipients in test mode.
 const PRIMARY_RECIPIENT = process.env.CONTACT_NOTIFICATION_EMAIL ?? "g.kengue@skstalents.fr";
 const FALLBACK_RECIPIENT = process.env.CRON_FALLBACK_RECIPIENT ?? "georges.skstalents@gmail.com";
@@ -175,7 +175,7 @@ function buildHtmlEmail(opts: {
 
   const topPagesRows = opts.topPages.length > 0
     ? opts.topPages.map((p, i) => `<tr><td style="padding:8px 0;border-bottom:1px solid #eef2f1;font:600 13px/1.4 -apple-system,monospace;color:#15333a;"><span style="color:#9aa9aa;font-family:monospace;">${String(i + 1).padStart(2, "0")}</span> &nbsp;<a href="${SITE_URL}${p.key}" style="color:#15333a;text-decoration:none;">${p.key}</a></td><td style="padding:8px 0;border-bottom:1px solid #eef2f1;text-align:right;font:600 13px/1.4 -apple-system,sans-serif;color:#41a0a4;">${fmt(p.count)} vues</td></tr>`).join("")
-    : `<tr><td colspan="2" style="padding:14px 0;font:13px/1.5 -apple-system,sans-serif;color:#9aa9aa;">Pas encore de données — le trafic se constitue.</td></tr>`;
+    : `<tr><td colspan="2" style="padding:14px 0;font:13px/1.5 -apple-system,sans-serif;color:#9aa9aa;">Pas encore de données - le trafic se constitue.</td></tr>`;
 
   const topQueriesRows = opts.topQueries.length > 0
     ? opts.topQueries.slice(0, 5).map((q) => `<tr><td style="padding:8px 0;border-bottom:1px solid #eef2f1;font:13px/1.5 -apple-system,sans-serif;color:#15333a;">${q.key}</td><td style="padding:8px 0;border-bottom:1px solid #eef2f1;text-align:right;font:600 13px/1.4 -apple-system,sans-serif;color:#41a0a4;">${q.count}×</td></tr>`).join("")
@@ -183,10 +183,10 @@ function buildHtmlEmail(opts: {
 
   const contentGapsRows = opts.contentGaps.length > 0
     ? opts.contentGaps.slice(0, 5).map((g) => `<tr><td style="padding:8px 0;border-bottom:1px solid #fde8c8;font:13px/1.5 -apple-system,sans-serif;color:#7a4a14;">${g.key}</td><td style="padding:8px 0;border-bottom:1px solid #fde8c8;text-align:right;font:600 12px/1.4 -apple-system,sans-serif;color:#a86620;">${g.count}× demandé</td></tr>`).join("")
-    : `<tr><td colspan="2" style="padding:14px 0;font:13px/1.5 -apple-system,sans-serif;color:#9aa9aa;">Bon signe — l'IA a répondu à tout cette semaine.</td></tr>`;
+    : `<tr><td colspan="2" style="padding:14px 0;font:13px/1.5 -apple-system,sans-serif;color:#9aa9aa;">Bon signe - l'IA a répondu à tout cette semaine.</td></tr>`;
 
   const recentLeadsRows = opts.recentLeads.length > 0
-    ? opts.recentLeads.slice(0, 5).map((l) => `<tr><td style="padding:8px 0;border-bottom:1px solid #eef2f1;font:600 12px/1.4 -apple-system,monospace;color:#15333a;">${l.email ?? "—"}</td><td style="padding:8px 0;border-bottom:1px solid #eef2f1;text-align:right;font:11px/1.4 -apple-system,sans-serif;color:#5b6f73;">${l.kind} · ${l.pagePath}</td></tr>`).join("")
+    ? opts.recentLeads.slice(0, 5).map((l) => `<tr><td style="padding:8px 0;border-bottom:1px solid #eef2f1;font:600 12px/1.4 -apple-system,monospace;color:#15333a;">${l.email ?? "-"}</td><td style="padding:8px 0;border-bottom:1px solid #eef2f1;text-align:right;font:11px/1.4 -apple-system,sans-serif;color:#5b6f73;">${l.kind} · ${l.pagePath}</td></tr>`).join("")
     : `<tr><td colspan="2" style="padding:14px 0;font:13px/1.5 -apple-system,sans-serif;color:#9aa9aa;">Aucun lead enregistré cette semaine. Action prioritaire : voir 'Actions' ci-dessous.</td></tr>`;
 
   const actionsList = opts.actions
@@ -208,7 +208,7 @@ function buildHtmlEmail(opts: {
     <!-- Header -->
     <tr><td style="padding:24px 28px 18px 28px;background:linear-gradient(135deg,#0f4d4f 0%,#1a5759 60%,#15333a 100%);color:#fff;">
       <div style="font:600 11px/1 -apple-system,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#9fd4d6;margin-bottom:8px;">Rapport hebdomadaire</div>
-      <div style="font:400 26px/1.15 'Source Serif 4',Georgia,serif;color:#fff;">SKS Talents — semaine du ${opts.startLabel}<br/>au ${opts.endLabel}</div>
+      <div style="font:400 26px/1.15 'Source Serif 4',Georgia,serif;color:#fff;">SKS Talents - semaine du ${opts.startLabel}<br/>au ${opts.endLabel}</div>
       <div style="font:14px/1.55 -apple-system,sans-serif;color:rgba(255,255,255,.8);margin-top:10px;">Bonjour Georges. Voici ce qui s'est passé sur le site cette semaine, et les actions à prendre cette semaine.</div>
     </td></tr>
 
@@ -274,7 +274,7 @@ function buildHtmlEmail(opts: {
 
     <!-- Actions -->
     <tr><td style="padding:18px 28px 12px 28px;background:#fafbfa;">
-      <div style="font:600 12px/1 -apple-system,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#41a0a4;margin-bottom:14px;">Plan d'action — cette semaine</div>
+      <div style="font:600 12px/1 -apple-system,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#41a0a4;margin-bottom:14px;">Plan d'action - cette semaine</div>
       <ul style="margin:0;padding:0;list-style:none;">
         ${actionsList}
       </ul>
@@ -372,7 +372,7 @@ async function sendEmail(html: string, subject: string) {
         sent: true,
         from: onboardingFrom,
         to: FALLBACK_RECIPIENT,
-        note: `Resend is in test mode — email sent to the account-holder address (${FALLBACK_RECIPIENT}) instead of ${PRIMARY_RECIPIENT}. Verify skstalents.fr on https://resend.com/domains to send to the pro address.`
+        note: `Resend is in test mode - email sent to the account-holder address (${FALLBACK_RECIPIENT}) instead of ${PRIMARY_RECIPIENT}. Verify skstalents.fr on https://resend.com/domains to send to the pro address.`
       };
     }
   }
@@ -481,7 +481,7 @@ async function buildAndSendDigest() {
     seoKeywords
   });
 
-  const subject = `Rapport hebdomadaire SKS Talents — semaine du ${startLabel}`;
+  const subject = `Rapport hebdomadaire SKS Talents - semaine du ${startLabel}`;
   const sendResult = await sendEmail(html, subject);
 
   return {

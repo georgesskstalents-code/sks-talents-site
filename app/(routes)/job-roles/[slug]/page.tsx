@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  */
 function parseSalaryRange(s: string): { min: number; max: number; median: number } | null {
   if (!s) return null;
-  const matches = s.match(/(\d+)\s*[-–]\s*(\d+)/);
+  const matches = s.match(/(\d+)\s*[--]\s*(\d+)/);
   if (matches) {
     const min = Number(matches[1]) * 1000;
     const max = Number(matches[2]) * 1000;

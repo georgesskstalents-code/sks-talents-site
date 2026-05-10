@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "SKS TALENTS — Executive Search Life Sciences & Santé animale";
+export const alt = "SKS TALENTS - Executive Search Life Sciences & Santé animale";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -48,7 +48,7 @@ export default async function OGImage() {
             Executive Search Life Sciences & Santé animale.
           </div>
           <div style={{ fontSize: 28, lineHeight: 1.35, opacity: 0.85, maxWidth: 1000, display: "flex" }}>
-            Recrutement Série A, Série B, scale-up — biotech, diagnostic, vétérinaire, petfood.
+            Recrutement Série A, Série B, scale-up - biotech, diagnostic, vétérinaire, petfood.
           </div>
         </div>
 

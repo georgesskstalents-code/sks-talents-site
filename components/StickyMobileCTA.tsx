@@ -25,7 +25,7 @@ export default function StickyMobileCTA() {
     return null;
   }
 
-  // Hide while cookie banner is still asking — avoids overlap on mobile
+  // Hide while cookie banner is still asking - avoids overlap on mobile
   if (consent === null) {
     return null;
   }
@@ -35,7 +35,7 @@ export default function StickyMobileCTA() {
       className="fixed inset-x-0 bottom-0 z-50 px-4 pt-3 md:hidden"
       style={{ paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 0.75rem)" }}
     >
-      {/* Floating segmented pill (per CEO mockup) — no full-width bar, lighter visual */}
+      {/* Floating segmented pill (per CEO mockup) - no full-width bar, lighter visual */}
       <div className="mx-auto inline-flex w-full max-w-md overflow-hidden rounded-full border border-brand-ink/10 bg-white shadow-[0_18px_40px_rgba(15,23,42,0.18)]">
         <a
           href="https://calendly.com/g-kengue/talentconsulting"

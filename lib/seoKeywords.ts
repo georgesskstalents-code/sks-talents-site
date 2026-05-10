@@ -6,7 +6,7 @@
  *   2. Tokenize + filter (FR/EN, stop words, length, sectoriel)
  *   3. Score TF-IDF (terme fréquent dans une source rare = signal)
  *   4. Optionnel : enrichissement Anthropic (synonymes, longue traîne, intent)
- *   5. Persist en Supabase (table seo_keyword_proposals) — status='pending'
+ *   5. Persist en Supabase (table seo_keyword_proposals) - status='pending'
  *
  * Usage : appelé chaque lundi 6h30 par /api/cron/seo-keywords (avant le digest).
  */

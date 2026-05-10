@@ -21,7 +21,7 @@ function isAuthorized(request: Request): boolean {
 }
 
 function fmtDate(iso: string): string {
-  if (!iso) return "—";
+  if (!iso) return "-";
   try {
     return new Date(iso).toLocaleDateString("fr-FR", { day: "2-digit", month: "short" });
   } catch {
@@ -41,7 +41,7 @@ function buildHtml(inv: ContentInventory, dashboardUrl: string): string {
           <td style="padding:10px 14px;border-bottom:1px solid #f1f3f5;font:600 14px/1.4 -apple-system,sans-serif;color:#0f3a3c;text-align:right;">${k.total}</td>
           <td style="padding:10px 14px;border-bottom:1px solid #f1f3f5;font:12px/1.4 -apple-system,sans-serif;color:#5e6e72;text-align:right;">${k.fromNotion} Notion · ${k.fromStatic} statique</td>
           <td style="padding:10px 14px;border-bottom:1px solid #f1f3f5;font:600 12px/1.4 -apple-system,sans-serif;color:${k.publishedLast7d > 0 ? "#1a7a3e" : "#94a3b8"};text-align:right;">+${k.publishedLast7d}/7j</td>
-          <td style="padding:10px 14px;border-bottom:1px solid #f1f3f5;font:600 12px/1.4 -apple-system,sans-serif;color:${k.gaps > 0 ? "#a14a00" : "#94a3b8"};text-align:right;">${k.gaps > 0 ? `${k.gaps} gap${k.gaps > 1 ? "s" : ""}` : "—"}</td>
+          <td style="padding:10px 14px;border-bottom:1px solid #f1f3f5;font:600 12px/1.4 -apple-system,sans-serif;color:${k.gaps > 0 ? "#a14a00" : "#94a3b8"};text-align:right;">${k.gaps > 0 ? `${k.gaps} gap${k.gaps > 1 ? "s" : ""}` : "-"}</td>
         </tr>`
     )
     .join("");
@@ -81,7 +81,7 @@ function buildHtml(inv: ContentInventory, dashboardUrl: string): string {
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Pilotage contenu — SKS Talents</title>
+<title>Pilotage contenu - SKS Talents</title>
 </head>
 <body style="margin:0;padding:0;background:#f5f3ee;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#f5f3ee;">
@@ -90,8 +90,8 @@ function buildHtml(inv: ContentInventory, dashboardUrl: string): string {
 
     <tr><td style="padding:24px 28px 18px 28px;background:linear-gradient(135deg,#0f4d4f 0%,#1a5759 60%,#15333a 100%);color:#fff;">
       <div style="font:600 11px/1 -apple-system,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#9fd4d6;margin-bottom:8px;">Pilotage contenu</div>
-      <div style="font:400 26px/1.15 'Source Serif 4',Georgia,serif;color:#fff;">SKS Talents — éditorial du ${today}</div>
-      <div style="font:14px/1.55 -apple-system,sans-serif;color:rgba(255,255,255,.8);margin-top:10px;">${inv.totalEntries} fiches au total — ${inv.totalNotion} via Notion, ${inv.totalStatic} via code.</div>
+      <div style="font:400 26px/1.15 'Source Serif 4',Georgia,serif;color:#fff;">SKS Talents - éditorial du ${today}</div>
+      <div style="font:14px/1.55 -apple-system,sans-serif;color:rgba(255,255,255,.8);margin-top:10px;">${inv.totalEntries} fiches au total - ${inv.totalNotion} via Notion, ${inv.totalStatic} via code.</div>
     </td></tr>
 
     <tr><td style="padding:24px 28px 12px 28px;background:#fafbfa;">
@@ -153,7 +153,7 @@ async function buildAndSend() {
   const token = process.env.DASHBOARD_PRIVATE_TOKEN;
   const dashboardUrl = `${SITE_URL}/dashboard/contenu${token ? `?token=${token}` : ""}`;
   const html = buildHtml(inv, dashboardUrl);
-  const subject = `Pilotage contenu — ${inv.totalEntries} fiches · ${inv.contentGaps.length} gap${inv.contentGaps.length === 1 ? "" : "s"}`;
+  const subject = `Pilotage contenu - ${inv.totalEntries} fiches · ${inv.contentGaps.length} gap${inv.contentGaps.length === 1 ? "" : "s"}`;
 
   const result = await sendDigestEmail({
     html,

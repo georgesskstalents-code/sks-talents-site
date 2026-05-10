@@ -9,12 +9,12 @@ type Props = {
 };
 
 export const metadata = {
-  title: "Pilotage contenu — SKS TALENTS",
+  title: "Pilotage contenu - SKS TALENTS",
   robots: { index: false, follow: false }
 };
 
 function fmtDate(iso: string): string {
-  if (!iso) return "—";
+  if (!iso) return "-";
   try {
     return new Date(iso).toLocaleDateString("fr-FR", {
       day: "2-digit",
