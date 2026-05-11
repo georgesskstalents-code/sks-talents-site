@@ -1,6 +1,5 @@
 import PageHero from "@/components/PageHero";
-import ReferenceMarquee from "@/components/ReferenceMarquee";
-import ReferenceGrid from "@/components/ReferenceGrid";
+import ReferenceCardMarquee from "@/components/ReferenceCardMarquee";
 import { Reference, references } from "@/data/references";
 import { getNotionSiteContentList, mapNotionEntryToReference } from "@/lib/notion";
 
@@ -56,7 +55,7 @@ export default async function ReferencesPage() {
         ]}
       />
       <section className="container-shell py-8">
-        <ReferenceMarquee items={mergedReferences} />
+        <ReferenceCardMarquee items={mergedReferences} />
       </section>
     </>
   );

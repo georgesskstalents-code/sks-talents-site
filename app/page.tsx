@@ -5,8 +5,7 @@ import Hero from "@/components/Hero";
 import MethodNarrative from "@/components/MethodNarrative";
 import PersonaPortalsGrid, { type PersonaPortal } from "@/components/PersonaPortalsGrid";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import ReferenceMarquee from "@/components/ReferenceMarquee";
-import ReferenceGrid from "@/components/ReferenceGrid";
+import ReferenceCardMarquee from "@/components/ReferenceCardMarquee";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import TestimonialMarquee from "@/components/TestimonialMarquee";
 import { references } from "@/data/references";
@@ -129,10 +128,7 @@ export default function HomePage() {
                 Ce que nous avons recruté, dans quel contexte, avec quel niveau d'exigence.
               </p>
             </div>
-            <div className="card-luxe p-6 sm:p-8">
-              <ReferenceMarquee items={references} />
-            </div>
-            <ReferenceGrid items={references.slice(0, 6)} />
+            <ReferenceCardMarquee items={references.slice(0, 6)} />
             <TestimonialMarquee />
           </div>
         </section>
