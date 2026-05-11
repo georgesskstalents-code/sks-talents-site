@@ -101,12 +101,18 @@
 @keyframes c-pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.4); } }
 .c-hero-tag-divider { width: 1px; height: 12px; background: var(--sks-green); opacity: 0.3; }
 .c-hero-h1 {
-  font-family: var(--f-serif); font-weight: 500;
-  font-size: clamp(40px, 5vw, 64px);
-  line-height: 1.02; letter-spacing: -0.022em;
+  font-family: var(--f-serif); font-weight: 400;
+  font-size: 28px;
+  line-height: 1.15; letter-spacing: -0.01em;
   color: var(--sks-forest);
   margin-bottom: 36px;
   max-width: 18ch;
+}
+@media (min-width: 640px) {
+  .c-hero-h1 {
+    font-size: 44px;
+    line-height: 1.08;
+  }
 }
 .c-hero-h1 .c-hl { position: relative; color: var(--sks-green); font-style: italic; }
 .c-hero-h1 .c-hl::after {

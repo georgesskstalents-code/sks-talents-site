@@ -105,7 +105,7 @@ export default function LexiconLifeSciencesRhPage() {
               <p className="inline-flex rounded-full border border-brand-teal/12 bg-brand-mint/45 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
                 Hub central Life Sciences & RH
               </p>
-              <h1 className="mt-6 max-w-5xl font-display text-[3.25rem] leading-[0.92] text-brand-ink sm:text-[4.75rem]">
+              <h1 className="t-h1 mt-6 max-w-5xl">
                 {lexiconHubPage.title}
               </h1>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-brand-stone">
