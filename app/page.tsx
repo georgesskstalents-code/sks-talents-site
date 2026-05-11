@@ -28,8 +28,8 @@ const personaPortals: PersonaPortal[] = [
   },
   {
     icon: "cpu",
-    title: "Vos enjeux de croissance évoluent plus vite que vos capacités internes.",
-    description: "Nous concevons et déployons des agents IA sur mesure, alignés avec vos priorités business, pour automatiser vos process clés et recentrer vos équipes dirigeantes sur l'essentiel.",
+    title: "Vos enjeux IA évoluent vite.",
+    description: "Agents IA sur mesure pour automatiser vos process clés.",
     cta1: { label: "Programme Life Sciences", href: "/life-sciences/structuration-ia" },
     cta2: { label: "Programme Animal Health", href: "/animal-health/structuration-ia" },
     cta3: { label: "Diagnostic agents", href: "/diagnostic" },
