@@ -42,15 +42,15 @@ const personaPortals: PersonaPortal[] = [
     description: "Cadres, experts, dirigeants en mobilité.",
     cta1: { label: "Missions ouvertes", href: "/rejoignez-nous" },
     cta2: { label: "Fiches métiers", href: "/job-roles" },
-    cta3: { label: "Salary benchmarks", href: "/salary-benchmarks" }
+    cta3: { label: "Mini-formation dirigeant", href: "https://www.purplesquirrel.fr/miniformation-dirigeant" }
   },
   {
     icon: "school",
     title: "Je m'oriente",
-    description: "Étudiants, jeunes diplômés français et franco-américains.",
+    description: "Étudiants, jeunes diplômés.",
     cta1: { label: "Parcours étudiant", href: "/orientation" },
     cta2: { label: "Écoles spécialisées", href: "/schools" },
-    cta3: { label: "Lexique RH/LS", href: "/lexique-life-sciences-rh" }
+    cta3: { label: "Mini-formation dirigeant", href: "https://www.purplesquirrel.fr/miniformation-dirigeant" }
   }
 ];
 
