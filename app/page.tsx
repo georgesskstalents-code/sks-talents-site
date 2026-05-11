@@ -47,7 +47,7 @@ const personaPortals: PersonaPortal[] = [
   {
     icon: "school",
     title: "Je m'oriente",
-    description: "Étudiants, jeunes diplômés.",
+    description: "Étudiants, jeunes diplômés français et franco-américains.",
     cta1: { label: "Parcours étudiant", href: "/orientation" },
     cta2: { label: "Écoles spécialisées", href: "/schools" },
     cta3: { label: "Lexique RH/LS", href: "/lexique-life-sciences-rh" }
