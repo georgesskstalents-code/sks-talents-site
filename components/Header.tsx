@@ -8,10 +8,13 @@ import SiteLanguageSelector from "@/components/SiteLanguageSelector";
 
 type NavChild = { href: string; label: string };
 
+type NavSubGroup = { title: string; items: NavChild[] };
+
 type NavGroup = {
   href: string;
   label: string;
   children?: NavChild[];
+  groups?: NavSubGroup[];
 };
 
 const navGroups: NavGroup[] = [
@@ -61,18 +64,28 @@ const navGroups: NavGroup[] = [
   {
     href: "/resources",
     label: "Les ressources",
-    children: [
-      { href: "/scorecard-dirigeant", label: "Scorecard dirigeant" },
-      { href: "/diagnostic", label: "Diagnostic" },
-      { href: "/salary-benchmarks", label: "Salary benchmarks" },
-      { href: "/comparatifs", label: "Comparatifs" },
-      { href: "/studies", label: "Études" },
-      { href: "/job-roles", label: "Fiches métiers" },
-      { href: "/newsletter", label: "Newsletter" },
-      { href: "/blog", label: "Articles" },
-      { href: "/orientation", label: "Orientation" },
-      { href: "/schools", label: "Écoles" },
-      { href: "/lexique-life-sciences-rh", label: "Lexique" }
+    groups: [
+      {
+        title: "Outils & benchmarks",
+        items: [
+          { href: "/scorecard-dirigeant", label: "Scorecard dirigeant" },
+          { href: "/diagnostic", label: "Diagnostic" },
+          { href: "/salary-benchmarks", label: "Salary benchmarks" },
+          { href: "/comparatifs", label: "Comparatifs" },
+          { href: "/studies", label: "Études" }
+        ]
+      },
+      {
+        title: "Apprendre",
+        items: [
+          { href: "/job-roles", label: "Fiches métiers" },
+          { href: "/blog", label: "Articles" },
+          { href: "/newsletter", label: "Newsletter" },
+          { href: "/orientation", label: "Orientation" },
+          { href: "/schools", label: "Écoles" },
+          { href: "/lexique-life-sciences-rh", label: "Lexique" }
+        ]
+      }
     ]
   },
   {
@@ -164,8 +177,15 @@ export default function Header() {
         </Link>
 
         <nav className="hidden flex-1 items-center gap-5 lg:flex xl:gap-7">
-          {navGroups.map((item) => (
-            item.children ? (
+          {navGroups.map((item) =>
+            item.groups ? (
+              <NavDropdown
+                key={item.href}
+                label={item.label}
+                groups={item.groups}
+                triggerClassName="inline-flex items-center gap-1 whitespace-nowrap text-[15px] font-semibold leading-none text-brand-stone transition hover:text-brand-teal"
+              />
+            ) : item.children ? (
               <NavDropdown
                 key={item.href}
                 label={item.label}
@@ -181,7 +201,7 @@ export default function Header() {
                 {item.label}
               </Link>
             )
-          ))}
+          )}
         </nav>
 
         <div className="ml-auto flex items-center gap-2 md:gap-3">
@@ -266,8 +286,10 @@ export default function Header() {
 
             <ul className="flex flex-col">
               {navGroups.map((item) => {
-                const isOpen = item.children?.length ? openGroup === item.href : false;
-                if (item.children?.length) {
+                const hasGroups = !!item.groups?.length;
+                const hasChildren = !!item.children?.length;
+                const isOpen = (hasGroups || hasChildren) ? openGroup === item.href : false;
+                if (hasGroups || hasChildren) {
                   return (
                     <li key={item.href} className="border-b border-brand-teal/8">
                       <button
@@ -287,19 +309,44 @@ export default function Header() {
                         />
                       </button>
                       {isOpen ? (
-                        <ul className="flex flex-col gap-0.5 pb-3 pl-2">
-                          {item.children.map((child) => (
-                            <li key={`${item.href}-${child.label}`}>
-                              <Link
-                                href={child.href}
-                                onClick={() => setMenuOpen(false)}
-                                className="flex items-center gap-3 rounded-2xl px-3 py-3 text-[15px] font-semibold text-brand-stone transition active:bg-brand-mint/45 active:text-brand-teal"
-                              >
-                                <span>{child.label}</span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
+                        hasGroups ? (
+                          <div className="flex flex-col gap-3 pb-3 pl-2">
+                            {item.groups!.map((group) => (
+                              <div key={group.title}>
+                                <p className="px-3 pb-1 pt-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-stone/70">
+                                  {group.title}
+                                </p>
+                                <ul className="flex flex-col gap-0.5">
+                                  {group.items.map((child) => (
+                                    <li key={`${item.href}-${group.title}-${child.label}`}>
+                                      <Link
+                                        href={child.href}
+                                        onClick={() => setMenuOpen(false)}
+                                        className="flex items-center gap-3 rounded-2xl px-3 py-2.5 text-[15px] font-semibold text-brand-stone transition active:bg-brand-mint/45 active:text-brand-teal"
+                                      >
+                                        <span>{child.label}</span>
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <ul className="flex flex-col gap-0.5 pb-3 pl-2">
+                            {item.children!.map((child) => (
+                              <li key={`${item.href}-${child.label}`}>
+                                <Link
+                                  href={child.href}
+                                  onClick={() => setMenuOpen(false)}
+                                  className="flex items-center gap-3 rounded-2xl px-3 py-3 text-[15px] font-semibold text-brand-stone transition active:bg-brand-mint/45 active:text-brand-teal"
+                                >
+                                  <span>{child.label}</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )
                       ) : null}
                     </li>
                   );

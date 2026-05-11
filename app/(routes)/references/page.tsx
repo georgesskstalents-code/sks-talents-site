@@ -48,8 +48,8 @@ export default async function ReferencesPage() {
     <>
       <PageHero
         kicker="Les références"
-        title="Des partenaires qui incarnent la profondeur sectorielle SKS TALENTS."
-        description="Références, environnements techniques et cas partenaires reliés à la preuve sociale Trustpilot, aux verticales du cabinet et aux futures pages SEO détaillées."
+        title="Ils nous ont fait confiance."
+        description="Biotech, diagnostic, vétérinaire, petfood premium : des cabinets de direction, des CODIR et des fondateurs qui nous ont confié leurs recrutements sensibles. Chaque mission est cadrée avec la même rigueur sectorielle et la même tenue du calendrier."
         breadcrumbs={[
           { label: "Accueil", href: "/" },
           { label: "Les références" }
