@@ -1,14 +1,15 @@
-/* SKS Talents - Fiche Metier (editorial design) - scoped under .fm-root */
+/* SKS Talents - Fiche Metier (editorial design) - scoped under .fm-root
+   Full SKS palette: white bg, sand paper, forest ink, teal accent. */
 .fm-root {
-  --fm-bg: #f4f1ea;
-  --fm-paper: #ebe6db;
-  --fm-ink: #15171a;
-  --fm-ink-2: #3a3d40;
-  --fm-ink-3: #6b6e72;
-  --fm-rule: rgba(21, 23, 24, 0.1);
-  --fm-rule-strong: rgba(21, 23, 24, 0.2);
+  --fm-bg: #FFFFFF;
+  --fm-paper: #F4F7F7;
+  --fm-ink: #0F1A1A;
+  --fm-ink-2: #5A6262;
+  --fm-ink-3: rgba(90, 98, 98, 0.75);
+  --fm-rule: rgba(15, 26, 26, 0.08);
+  --fm-rule-strong: rgba(15, 26, 26, 0.18);
   --fm-accent: #41A0A4;
-  --fm-accent-soft: #dff3f1;
+  --fm-accent-soft: #E8F2F2;
   --fm-warn: #C26A3A;
   --fm-ok: #2D7B7F;
   --fm-serif: "Instrument Serif", "Times New Roman", serif;

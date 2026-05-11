@@ -28,7 +28,6 @@ const candidatLinks = [
   { href: "/rejoignez-nous", label: "Missions ouvertes" },
   { href: "/job-roles", label: "Fiches métiers" },
   { href: "/calcul-salaire-brut-net", label: "Calcul salaire brut/net" },
-  { href: "/newsletter", label: "Newsletter" },
   { href: "/blog", label: "Articles" },
   { href: "/orientation", label: "Orientation" },
   { href: "/schools", label: "Écoles" },

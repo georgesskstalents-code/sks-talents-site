@@ -227,10 +227,10 @@ export default function NewsletterSignupCard({
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <Link
-              href="/newsletter"
+              href="/blog"
               className="inline-flex items-center justify-center rounded-full border border-brand-teal/15 px-5 py-3 text-sm font-semibold text-brand-teal transition hover:bg-brand-mint/40"
             >
-              Voir l'archive
+              Voir les articles
             </Link>
             <button
               type="submit"

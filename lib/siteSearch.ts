@@ -122,15 +122,6 @@ const staticResults: SearchResult[] = [
     keywords: ["etude", "analyse", "market intelligence", "insights", "salaire", "talent"]
   },
   {
-    title: "Newsletter",
-    href: "/newsletter",
-    summary:
-      "La note SKS TALENTS pour suivre les signaux marche, les metiers penuriques, les salaires, l'ecosysteme et les decisions dirigeants.",
-    category: "Newsletter",
-    meta: "Lecture courte",
-    keywords: ["newsletter", "signaux marche", "talents", "salaires", "ecosysteme", "decision"]
-  },
-  {
     title: "Orientation",
     href: "/orientation",
     summary: "Parcours pour aider un talent à se situer sur les métiers, secteurs et trajectoires utiles.",

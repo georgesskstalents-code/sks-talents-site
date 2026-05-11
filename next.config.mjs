@@ -26,6 +26,13 @@ const nextConfig = {
         source: "/blog/index-egalite-femmes-hommes-2026-obligations-employeurs",
         destination: "/blog/egalite-remuneration-femmes-hommes-obligations-employeurs-france-2026",
         permanent: true
+      },
+      {
+        // Newsletter index moved to internal process (Copilot/Process/Newsletter-Production.md)
+        // Individual editions /newsletter/[slug] remain public (not affected by this redirect).
+        source: "/newsletter",
+        destination: "/blog",
+        permanent: true
       }
     ];
   },
