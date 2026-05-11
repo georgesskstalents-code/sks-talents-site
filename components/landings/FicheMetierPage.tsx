@@ -36,7 +36,7 @@ const TENSION_LEVELS: Record<FicheMetierRole["shortageLevel"], { bars: number; l
 function parseSalaryToBand(salary: string): { min: number; max: number; minLabel: string; maxLabel: string; isSingle: boolean } | null {
   if (!salary) return null;
   // Match "45kEUR - 60kEUR" or "45 - 60 k€" or "45-60" (any non-digit chars allowed around the dash)
-  const m = salary.match(/(\d+)[^\d-]*[-–—][^\d]*(\d+)/);
+  const m = salary.match(/(\d+)[^\d-]*[-\u2013\u2014][^\d]*(\d+)/);
   if (m && m[1] !== m[2]) {
     const min = Number(m[1]);
     const max = Number(m[2]);
