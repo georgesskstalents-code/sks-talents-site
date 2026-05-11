@@ -15,11 +15,9 @@ function LinkedinIcon({ size = 14 }: { size?: number }) {
   );
 }
 
-export default function FounderCard() {
-  return (
-    <section className="container-shell py-6">
-      <div className="mx-auto max-w-3xl">
-        <div className="rounded-[28px] border border-brand-teal/15 bg-white p-5 shadow-soft sm:p-6">
+export default function FounderCard({ embedded = false }: { embedded?: boolean }) {
+  const card = (
+    <div className="rounded-[28px] border border-brand-teal/15 bg-white p-5 shadow-soft sm:p-6">
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
             Votre interlocuteur direct
           </p>
@@ -67,7 +65,15 @@ export default function FounderCard() {
             </div>
           </div>
         </div>
-      </div>
+  );
+
+  if (embedded) {
+    return <div className="mx-auto mt-8 max-w-3xl">{card}</div>;
+  }
+
+  return (
+    <section className="container-shell py-6">
+      <div className="mx-auto max-w-3xl">{card}</div>
     </section>
   );
 }

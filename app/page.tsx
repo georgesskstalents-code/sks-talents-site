@@ -107,13 +107,9 @@ export default function HomePage() {
                 </span>
               </Link>
             </div>
+            <FounderCard embedded />
           </div>
         </section>
-      </RevealOnScroll>
-
-      {/* 4. Founder card - interlocuteur direct, juste sous Notre approche */}
-      <RevealOnScroll delayMs={120}>
-        <FounderCard />
       </RevealOnScroll>
 
       {/* 5. Method narrative - now visible on mobile too (removed hidden md:block wrapper) */}
