@@ -55,24 +55,6 @@ export default function SalaryBenchmarksPage() {
       </section>
       <SectionShell
         eyebrow="Question fréquente"
-        title="Pourquoi consulter un benchmark salaire en 2026 ?"
-        description="Les requêtes liées aux salaires sont très récurrentes, très concrètes et souvent proches d’une décision candidat ou recruteur, surtout quand une entreprise passe en Seed, Série A ou Série B."
-      >
-        <div className="grid gap-6 md:grid-cols-3">
-          {[
-            ["Candidat", "Comparer un rôle, un secteur ou une trajectoire de carrière."],
-            ["Entreprise", "Positionner une offre et comprendre la tension du marché selon le stade Seed, Série A, Série B ou scale-up."],
-            ["SEO", "Créer des passerelles entre salaire, métier, école, marché, financement et conversion."]
-          ].map(([title, copy]) => (
-            <div key={title} className="card-surface p-8">
-              <h2 className="font-display text-3xl text-brand-ink">{title}</h2>
-              <p className="mt-4 text-sm leading-7 text-brand-stone">{copy}</p>
-            </div>
-          ))}
-        </div>
-      </SectionShell>
-      <SectionShell
-        eyebrow="Question fréquente"
         title="Comment lire un benchmark salaire sans surinterpréter les chiffres ?"
         description="Pour devenir une page de référence, ce hub relie chaque requête salaire à un rôle, une industrie, un contexte géographique et un stade de maturité d’entreprise."
       >

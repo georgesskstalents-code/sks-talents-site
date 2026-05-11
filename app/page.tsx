@@ -8,6 +8,7 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import ReferenceMarquee from "@/components/ReferenceMarquee";
 import ReferenceGrid from "@/components/ReferenceGrid";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+import TestimonialMarquee from "@/components/TestimonialMarquee";
 import { references } from "@/data/references";
 
 export const metadata: Metadata = {
@@ -51,15 +52,6 @@ const personaPortals: PersonaPortal[] = [
     cta3: { label: "Lexique RH/LS", href: "/lexique-life-sciences-rh" }
   }
 ];
-
-// One inline testimonial for the proofs section (replaces full TestimonialMarquee on home).
-// Source : same author/quote as in components/TestimonialMarquee.tsx - kept verbatim.
-const featuredTestimonial = {
-  name: "Baldo",
-  role: "Genomics EMEA Commercial Director",
-  quote:
-    "Georges m'a accompagné pendant plusieurs années dans le recrutement de profils spécialisés en Life Sciences / In Vitro Diagnostics. Il fait preuve d'une grande agilité et d'une rapide compréhension des challenges de l'entreprise et des besoins ciblés."
-};
 
 export default function HomePage() {
   return (
@@ -140,16 +132,7 @@ export default function HomePage() {
               <ReferenceMarquee items={references} />
             </div>
             <ReferenceGrid items={references.slice(0, 6)} />
-            <article className="card-luxe panel-lift mx-auto max-w-3xl p-6 sm:p-8">
-              <p className="text-[28px] leading-none text-amber-400">★★★★★</p>
-              <p className="mt-4 t-body italic text-brand-ink">
-                « {featuredTestimonial.quote} »
-              </p>
-              <p className="mt-4 text-caption font-semibold text-brand-ink">
-                {featuredTestimonial.name}
-              </p>
-              <p className="text-caption text-brand-stone">{featuredTestimonial.role}</p>
-            </article>
+            <TestimonialMarquee />
           </div>
         </section>
       </RevealOnScroll>

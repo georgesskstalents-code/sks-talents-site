@@ -44,8 +44,6 @@ const navGroups: NavGroup[] = [
     label: "Life Sciences",
     children: [
       { href: "/life-sciences", label: "Vue d'ensemble" },
-      { href: "/life-sciences/biotech", label: "Biotech" },
-      { href: "/life-sciences/biotech/deeptech-startups", label: "Deeptech" },
       { href: "/life-sciences/structuration-ia", label: "★ Programme IA Life Sciences" }
     ]
   },
@@ -67,7 +65,6 @@ const navGroups: NavGroup[] = [
           { href: "/scorecard-dirigeant", label: "Scorecard dirigeant" },
           { href: "/diagnostic", label: "Diagnostic" },
           { href: "/salary-benchmarks", label: "Salary benchmarks" },
-          { href: "/comparatifs", label: "Comparatifs" },
           { href: "/studies", label: "Études" }
         ]
       },

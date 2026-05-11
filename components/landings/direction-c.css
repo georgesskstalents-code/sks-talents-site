@@ -62,8 +62,8 @@
 }
 .c-btn-sm { padding: 10px 18px; font-size: 13px; }
 .c-btn-lg { padding: 18px 28px; font-size: 15px; }
-.c-btn-primary { background: var(--sks-forest); color: #FFFFFF; }
-.c-btn-primary:hover { background: var(--sks-green-deep); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(15,26,26,0.18); }
+.c-btn-primary { background: var(--sks-green-deep); color: #FFFFFF; }
+.c-btn-primary:hover { background: var(--sks-green); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(45,123,127,0.28); }
 .c-btn-sage { background: var(--sks-green); color: #FFFFFF; }
 .c-btn-sage:hover { background: var(--sks-green-deep); transform: translateY(-1px); }
 .c-btn-ghost { color: var(--sks-forest); border-color: var(--sks-border); background: #FFFFFF; }

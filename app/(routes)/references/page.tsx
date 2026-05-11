@@ -58,9 +58,6 @@ export default async function ReferencesPage() {
       <section className="container-shell py-8">
         <ReferenceMarquee items={mergedReferences} />
       </section>
-      <section className="container-shell py-4">
-        <ReferenceGrid items={mergedReferences} />
-      </section>
     </>
   );
 }

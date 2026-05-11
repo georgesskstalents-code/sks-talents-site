@@ -33,6 +33,12 @@ const nextConfig = {
         source: "/newsletter",
         destination: "/blog",
         permanent: true
+      },
+      {
+        // Media kit page is internal/owner-facing only - not for visitors.
+        source: "/media-kit",
+        destination: "/press",
+        permanent: true
       }
     ];
   },

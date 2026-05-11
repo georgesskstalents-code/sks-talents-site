@@ -33,20 +33,25 @@ const TENSION_LEVELS: Record<FicheMetierRole["shortageLevel"], { bars: number; l
   "Tres elevee": { bars: 5, label: "Très élevée" }
 };
 
-function parseSalaryToBand(salary: string): { min: number; max: number; minLabel: string; maxLabel: string } | null {
-  const m = salary.match(/(\d+)\s*[---]\s*(\d+)/);
-  if (m) {
+function parseSalaryToBand(salary: string): { min: number; max: number; minLabel: string; maxLabel: string; isSingle: boolean } | null {
+  if (!salary) return null;
+  // Match "45kEUR - 60kEUR" or "45 - 60 k€" or "45-60" (any non-digit chars allowed around the dash)
+  const m = salary.match(/(\d+)[^\d-]*[-–—][^\d]*(\d+)/);
+  if (m && m[1] !== m[2]) {
+    const min = Number(m[1]);
+    const max = Number(m[2]);
     return {
-      min: Number(m[1]),
-      max: Number(m[2]),
-      minLabel: `${m[1]} k€`,
-      maxLabel: `${m[2]} k€`
+      min,
+      max,
+      minLabel: `${min} k€`,
+      maxLabel: `${max} k€`,
+      isSingle: false
     };
   }
   const single = salary.match(/(\d+)/);
   if (single) {
     const v = Number(single[1]);
-    return { min: v, max: v, minLabel: `${v} k€`, maxLabel: `${v} k€` };
+    return { min: v, max: v, minLabel: `${v} k€`, maxLabel: `${v} k€`, isSingle: true };
   }
   return null;
 }
@@ -188,15 +193,24 @@ export default function FicheMetierPage({ role, relatedRoles }: Props) {
             <div />
             <div className="fm-salary-vis">
               <div className="fm-salary-headline">
-                <div>
-                  <span className="fm-salary-cap">p25 · entrée</span>
-                  <span className="fm-salary-num">{band.minLabel}</span>
-                </div>
-                <span className="fm-salary-headline-arrow" aria-hidden>→</span>
-                <div>
-                  <span className="fm-salary-cap">p75 · senior</span>
-                  <span className="fm-salary-num">{band.maxLabel}</span>
-                </div>
+                {band.isSingle ? (
+                  <div>
+                    <span className="fm-salary-cap">Repère médian</span>
+                    <span className="fm-salary-num">{band.minLabel}</span>
+                  </div>
+                ) : (
+                  <>
+                    <div>
+                      <span className="fm-salary-cap">p25 · entrée</span>
+                      <span className="fm-salary-num">{band.minLabel}</span>
+                    </div>
+                    <span className="fm-salary-headline-arrow" aria-hidden>→</span>
+                    <div>
+                      <span className="fm-salary-cap">p75 · senior</span>
+                      <span className="fm-salary-num">{band.maxLabel}</span>
+                    </div>
+                  </>
+                )}
               </div>
               <div className="fm-salary-track">
                 <div

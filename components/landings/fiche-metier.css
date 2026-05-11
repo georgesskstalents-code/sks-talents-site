@@ -263,7 +263,13 @@
   transition: 0.25s;
 }
 .fm-grid-3 .cell:hover { background: var(--fm-paper); border-color: var(--fm-accent); }
-.fm-grid-3 .cell .n { color: var(--fm-accent-deep); font-weight: 500; }
+.fm-grid-3 .cell .n {
+  color: var(--fm-accent);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
 .fm-grid-3 .cell .n {
   font-family: var(--fm-mono); font-size: 11px;
   letter-spacing: 0.16em; color: var(--fm-ink-3);
