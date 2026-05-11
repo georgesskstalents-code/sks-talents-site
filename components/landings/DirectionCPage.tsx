@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Link from "next/link";
-import { realTestimonials } from "@/data/testimonials";
+import TrustpilotCarousel from "@/components/TrustpilotCarousel";
 import { type DirectionCSector } from "./directionCContent";
 import "./direction-c.css";
 
@@ -314,7 +314,6 @@ function RHBoard({ d }: { d: DirectionCSector }) {
 }
 
 function Testimonial() {
-  const doubled = [...realTestimonials, ...realTestimonials];
   return (
     <section className="c-tp-section">
       <div className="c-container">
@@ -337,27 +336,8 @@ function Testimonial() {
             Voir tous les avis Trustpilot →
           </a>
         </div>
-      </div>
-      <div className="c-tp-marquee group">
-        <div className="c-tp-track group-hover:[animation-play-state:paused]">
-          {doubled.map((r, i) => (
-            <article key={i} className="c-tp-card">
-              <div className="c-tp-stars" aria-label={`${r.rating ?? 5} étoiles`}>
-                {Array.from({ length: r.rating ?? 5 }).map((_, j) => (
-                  <span key={j}>★</span>
-                ))}
-              </div>
-              <p className="c-tp-quote">{r.quote}</p>
-              <div className="c-tp-author">
-                <div className="c-tp-avatar">{r.name[0]}</div>
-                <div>
-                  <div className="c-tp-name">{r.name}</div>
-                  <div className="c-tp-role">{r.role}</div>
-                </div>
-                <div className="c-tp-date">{r.date}</div>
-              </div>
-            </article>
-          ))}
+        <div className="mt-8">
+          <TrustpilotCarousel />
         </div>
       </div>
     </section>
