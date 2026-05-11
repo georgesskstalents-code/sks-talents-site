@@ -8,8 +8,7 @@ const cabinetLinks = [
   { href: "/references", label: "Références" },
   { href: "/press", label: "Presse" },
   { href: "/media-kit", label: "Media kit" },
-  { href: "/partenaires-media", label: "Partenaires & sponsorings" },
-  { href: "/rejoignez-nous", label: "Rejoignez-nous" }
+  { href: "/partenaires-media", label: "Partenaires & sponsorings" }
 ];
 
 const dirigeantLinks = [
@@ -25,7 +24,6 @@ const dirigeantLinks = [
 ];
 
 const candidatLinks = [
-  { href: "/rejoignez-nous", label: "Missions ouvertes" },
   { href: "/job-roles", label: "Fiches métiers" },
   { href: "/calcul-salaire-brut-net", label: "Calcul salaire brut/net" },
   { href: "/blog", label: "Articles" },

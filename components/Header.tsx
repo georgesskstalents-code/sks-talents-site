@@ -101,7 +101,7 @@ const mobilePersonas = [
   {
     Icon: Briefcase,
     label: "Je cherche un poste",
-    href: "/rejoignez-nous"
+    href: "/job-roles"
   },
   {
     Icon: GraduationCap,

@@ -71,7 +71,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/orientation",
     "/pour-qui",
     "/references",
-    "/rejoignez-nous",
     "/services",
     "/resources",
     "/salary-benchmarks",

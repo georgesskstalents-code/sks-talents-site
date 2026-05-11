@@ -45,6 +45,12 @@ const nextConfig = {
         source: "/studies",
         destination: "/blog",
         permanent: true
+      },
+      {
+        // /rejoignez-nous masque: pas de missions affichees publiquement. Renvoie vers /job-roles (Fiches metiers).
+        source: "/rejoignez-nous",
+        destination: "/job-roles",
+        permanent: true
       }
     ];
   },
