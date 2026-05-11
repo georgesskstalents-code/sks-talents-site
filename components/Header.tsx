@@ -54,10 +54,7 @@ const navGroups: NavGroup[] = [
     label: "Animal Health",
     children: [
       { href: "/animal-health", label: "Vue d'ensemble" },
-      { href: "/animal-health/structuration-ia", label: "★ Programme IA Animal Health" },
-      { href: "/animal-health", label: "Veterinary" },
-      { href: "/animal-health", label: "Petfood" },
-      { href: "/animal-health", label: "Medical Vet" }
+      { href: "/animal-health/structuration-ia", label: "★ Programme IA Animal Health" }
     ]
   },
   {
