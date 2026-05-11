@@ -99,11 +99,22 @@ export default function FicheMetierPage({ role, relatedRoles }: Props) {
           <p className="fm-lede">{role.summary}</p>
           <div className="fm-meta-row">
             <span className="fm-chip fill">Tension marché · {tension.label}</span>
-            <span className="fm-chip">{role.sector}</span>
-            <span className="fm-chip">{role.category}</span>
-            {role.skills.slice(0, 2).map((s) => (
-              <span key={s} className="fm-chip">{s}</span>
-            ))}
+            {(() => {
+              const seen = new Set<string>();
+              const norm = (s: string) => s.trim().toLowerCase();
+              const allChips = [role.sector, role.category, ...role.skills];
+              return allChips
+                .filter((label) => {
+                  const k = norm(label);
+                  if (!k || seen.has(k)) return false;
+                  seen.add(k);
+                  return true;
+                })
+                .slice(0, 4)
+                .map((label) => (
+                  <span key={label} className="fm-chip">{label}</span>
+                ));
+            })()}
           </div>
         </div>
 
@@ -176,22 +187,22 @@ export default function FicheMetierPage({ role, relatedRoles }: Props) {
           <div className="fm-salary-wrap">
             <div />
             <div className="fm-salary-vis">
-              <div className="fm-salary-scale">
+              <div className="fm-salary-headline">
+                <div>
+                  <span className="fm-salary-cap">p25 · entrée</span>
+                  <span className="fm-salary-num">{band.minLabel}</span>
+                </div>
+                <span className="fm-salary-headline-arrow" aria-hidden>→</span>
+                <div>
+                  <span className="fm-salary-cap">p75 · senior</span>
+                  <span className="fm-salary-num">{band.maxLabel}</span>
+                </div>
+              </div>
+              <div className="fm-salary-track">
                 <div
                   className="fm-salary-band"
                   style={{ left: `${bandLeft}%`, right: `${bandRight}%` }}
-                >
-                  <div>
-                    <b>{band.minLabel}</b>
-                    <br />
-                    p25 · entrée
-                  </div>
-                  <div style={{ textAlign: "right" }}>
-                    <b>{band.maxLabel}</b>
-                    <br />
-                    p75 · senior
-                  </div>
-                </div>
+                />
               </div>
               {axis.length > 0 && (
                 <div className="fm-salary-axis">

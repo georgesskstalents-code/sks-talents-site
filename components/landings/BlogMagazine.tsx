@@ -56,7 +56,7 @@ export default function BlogMagazine({ articles }: Props) {
       {/* Masthead */}
       <section className="bmag-masthead">
         <div className="bmag-mast-left">
-          <div className="bmag-mast-eyebrow">Vol. XII — N°01</div>
+          <div className="bmag-mast-eyebrow">Vol. XII · N°01</div>
           <div className="bmag-mast-edition">Édition · 2026</div>
         </div>
         <h1 className="bmag-mast-title">

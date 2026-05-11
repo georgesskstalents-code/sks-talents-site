@@ -286,14 +286,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--bmag-petrol);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.bmag-card-cat::before {
-  content: "";
-  width: 16px; height: 1px;
-  background: var(--bmag-petrol);
+  font-weight: 500;
 }
 .bmag-card h3 {
   font-family: var(--bmag-serif);
