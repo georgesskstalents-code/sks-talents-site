@@ -63,64 +63,6 @@ export type DirectionCSector = {
   programIaUrl: string;
 };
 
-export type TrustpilotReview = {
-  rating: number;
-  quote: string;
-  name: string;
-  role: string;
-  date: string;
-};
-
-export const trustpilot = {
-  eyebrow: "Trustpilot · ★ 4,5 / 5",
-  title: "Ce que nos clients et candidats disent de nous.",
-  lede: "Notes vérifiées · Recrutements C-level Life Sciences & Animal Health · 100+ placements depuis 2018.",
-  cta: { label: "Voir tous les avis Trustpilot →", url: "https://fr.trustpilot.com/review/skstalents.fr" },
-  reviews: [
-    {
-      rating: 5,
-      quote: "Georges m'a accompagné pendant plusieurs années sur des recrutements sensibles en EMEA. Rigueur dans le cadrage, finesse dans la lecture des profils, tenue du calendrier : un partenaire rare sur un marché où la confidentialité compte autant que la vitesse.",
-      name: "Baldo",
-      role: "Genomics · EMEA Commercial Director",
-      date: "Il y a 2 mois"
-    },
-    {
-      rating: 5,
-      quote: "Le mapping marché et la qualité des shortlists nous ont fait gagner 4 mois sur une recherche VP Operations. Process exécuté à la lettre, suivi onboarding au-delà des standards du marché.",
-      name: "Sophie M.",
-      role: "DRH · Biotech Series B",
-      date: "Il y a 3 mois"
-    },
-    {
-      rating: 5,
-      quote: "Approche très différente du recrutement classique. SKS a refusé deux missions qui ne correspondaient pas à leur secteur. Ce niveau de sélectivité crée immédiatement de la confiance.",
-      name: "Thomas L.",
-      role: "CEO · Deeptech biomatériaux",
-      date: "Il y a 4 mois"
-    },
-    {
-      rating: 5,
-      quote: "Recrutement d'un Directeur Médical complexe : besoin scientifique, contraintes MDR, exigence M&A. Shortlist de 5 profils en 12 jours, candidat retenu en poste depuis 18 mois.",
-      name: "Catherine D.",
-      role: "COO · IVD Animal Health",
-      date: "Il y a 5 mois"
-    },
-    {
-      rating: 5,
-      quote: "Confidentialité tenue, calendrier tenu, qualité tenue. Trois remplacements C-level sur 2 ans, zéro fuite, zéro brief écrit. Georges sait lire entre les lignes mieux que personne sur ce marché.",
-      name: "Renaud P.",
-      role: "Président · Groupe vétérinaire",
-      date: "Il y a 6 mois"
-    },
-    {
-      rating: 5,
-      quote: "Au-delà du recrutement, SKS nous a aidé à structurer notre comité de direction. Vision RH executive-grade, lecture sectorielle Life Sciences, sens politique. Un vrai partenaire de pilotage.",
-      name: "Anne-Laure V.",
-      role: "CEO · Petfood premium",
-      date: "Il y a 7 mois"
-    }
-  ] as TrustpilotReview[]
-};
 
 export const lifeSciencesContent: DirectionCSector = {
   slug: "life-sciences",

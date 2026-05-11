@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Link from "next/link";
-import { trustpilot, type DirectionCSector } from "./directionCContent";
+import TestimonialMarquee from "@/components/TestimonialMarquee";
+import { type DirectionCSector } from "./directionCContent";
 import "./direction-c.css";
 
 type Props = { sector: DirectionCSector };
@@ -313,47 +314,30 @@ function RHBoard({ d }: { d: DirectionCSector }) {
 }
 
 function Testimonial() {
-  const t = trustpilot;
-  const doubled = [...t.reviews, ...t.reviews];
-  const titleWords = t.title.split(" ");
-  const lastTwo = titleWords.slice(-2).join(" ");
-  const prefix = titleWords.slice(0, -2).join(" ");
   return (
     <section className="c-tp-section">
       <div className="c-container">
         <div className="c-tp-head">
           <div>
-            <span className="c-eyebrow">{t.eyebrow}</span>
+            <span className="c-eyebrow">Avis vérifiés · Senja & Trustpilot</span>
             <h2 className="c-h2">
-              {prefix} <span className="c-italic">{lastTwo}</span>
+              Ce que nos clients et candidats <span className="c-italic">disent de nous.</span>
             </h2>
-            <p className="c-section-lede">{t.lede}</p>
+            <p className="c-section-lede">
+              Témoignages réels recueillis auprès de candidats placés et de dirigeants accompagnés depuis 2018.
+            </p>
           </div>
-          <a className="c-link" href={t.cta.url} target="_blank" rel="noopener noreferrer">
-            {t.cta.label}
+          <a
+            className="c-link"
+            href="https://fr.trustpilot.com/review/skstalents.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voir tous les avis Trustpilot →
           </a>
         </div>
-      </div>
-      <div className="c-tp-marquee">
-        <div className="c-tp-track">
-          {doubled.map((r, i) => (
-            <article key={i} className="c-tp-card">
-              <div className="c-tp-stars" aria-label={`${r.rating} étoiles`}>
-                {Array.from({ length: r.rating }).map((_, j) => (
-                  <span key={j}>★</span>
-                ))}
-              </div>
-              <p className="c-tp-quote">{r.quote}</p>
-              <div className="c-tp-author">
-                <div className="c-tp-avatar">{r.name[0]}</div>
-                <div>
-                  <div className="c-tp-name">{r.name}</div>
-                  <div className="c-tp-role">{r.role}</div>
-                </div>
-                <div className="c-tp-date">{r.date}</div>
-              </div>
-            </article>
-          ))}
+        <div className="mt-8">
+          <TestimonialMarquee />
         </div>
       </div>
     </section>
