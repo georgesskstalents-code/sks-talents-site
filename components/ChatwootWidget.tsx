@@ -52,24 +52,49 @@ export default function ChatwootWidget() {
     window.addEventListener("storage", handleStorage);
 
     const dismissed = window.sessionStorage.getItem("sks-chat-hint-dismissed");
-    if (dismissed) {
-      return () => {
-        window.clearInterval(interval);
-        window.removeEventListener("storage", handleStorage);
-      };
+    const timers: number[] = [];
+
+    if (!dismissed) {
+      // Initialise le debut de session pour pacer les apparitions sur 100% des pages.
+      let sessionStart = Number(window.sessionStorage.getItem("sks-session-start"));
+      if (!sessionStart || Number.isNaN(sessionStart)) {
+        sessionStart = Date.now();
+        window.sessionStorage.setItem("sks-session-start", String(sessionStart));
+      }
+      const elapsed = Date.now() - sessionStart;
+      const done1 = window.sessionStorage.getItem("sks-chat-hint-1-done");
+      const done2 = window.sessionStorage.getItem("sks-chat-hint-2-done");
+
+      // 1ere apparition : 800ms apres montage, retract apres 15s. Une seule fois par session.
+      if (!done1) {
+        timers.push(
+          window.setTimeout(() => {
+            setHintVisible(true);
+            window.sessionStorage.setItem("sks-chat-hint-1-done", "1");
+            timers.push(
+              window.setTimeout(() => setHintVisible(false), 15000)
+            );
+          }, 800)
+        );
+      }
+
+      // 2eme apparition : au seuil de 2min de session. Retract apres 15s. Une seule fois.
+      if (!done2) {
+        const delay = Math.max(0, 120000 - elapsed);
+        timers.push(
+          window.setTimeout(() => {
+            setHintVisible(true);
+            window.sessionStorage.setItem("sks-chat-hint-2-done", "1");
+            timers.push(
+              window.setTimeout(() => setHintVisible(false), 15000)
+            );
+          }, delay)
+        );
+      }
     }
 
-    const showTimer = window.setTimeout(() => {
-      setHintVisible(true);
-    }, 4500);
-
-    const hideTimer = window.setTimeout(() => {
-      setHintVisible(false);
-    }, 12000);
-
     return () => {
-      window.clearTimeout(showTimer);
-      window.clearTimeout(hideTimer);
+      timers.forEach((t) => window.clearTimeout(t));
       window.clearInterval(interval);
       window.removeEventListener("storage", handleStorage);
     };

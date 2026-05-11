@@ -7,17 +7,14 @@ import TurnstileWidget from "@/components/TurnstileWidget";
 import { trackSiteTelemetry } from "@/lib/siteTelemetryClient";
 
 const STORAGE_KEY = "sks-site-feedback-prompt-v3";
-const RELAUNCH_WINDOWS_MS: Array<[number, number]> = [
-  [0, 2 * 60 * 1000],
-  [5 * 60 * 1000, 7 * 60 * 1000],
-  [10 * 60 * 1000, 12 * 60 * 1000],
-  [15 * 60 * 1000, 17 * 60 * 1000],
-  [20 * 60 * 1000, 22 * 60 * 1000]
-];
+// Rule (CEO 2026-05-11): apparait une seule fois par session, au seuil de 3min, reste 7s, puis disparait.
+const APPEAR_AT_MS = 3 * 60 * 1000;
+const STAY_DURATION_MS = 7 * 1000;
 
 type SessionState = {
   startedAt: number;
   submitted: boolean;
+  dismissedOnce?: boolean;
 };
 
 function readState(): SessionState {
@@ -36,10 +33,11 @@ function readState(): SessionState {
     const parsed = JSON.parse(raw) as SessionState;
     return {
       startedAt: parsed.startedAt || Date.now(),
-      submitted: Boolean(parsed.submitted)
+      submitted: Boolean(parsed.submitted),
+      dismissedOnce: Boolean(parsed.dismissedOnce)
     };
   } catch {
-    return { startedAt: Date.now(), submitted: false };
+    return { startedAt: Date.now(), submitted: false, dismissedOnce: false };
   }
 }
 
@@ -74,28 +72,35 @@ export default function SiteFeedbackPrompt() {
   }, []);
 
   useEffect(() => {
-    if (!state.startedAt || state.submitted) {
+    if (!state.startedAt || state.submitted || state.dismissedOnce) {
       return;
     }
 
-    const updateVisibility = () => {
-      const latest = readState();
-      if (latest.submitted) {
-        setState(latest);
-        setShowLauncher(false);
-        return;
-      }
+    const elapsed = Date.now() - state.startedAt;
+    const remaining = APPEAR_AT_MS - elapsed;
 
-      const elapsed = Date.now() - latest.startedAt;
-      const visible = RELAUNCH_WINDOWS_MS.some(([start, end]) => elapsed >= start && elapsed < end);
-      setShowLauncher(visible);
+    let hideTimer: number | undefined;
+    let showTimer: number | undefined;
+
+    const triggerShow = () => {
+      setShowLauncher(true);
+      hideTimer = window.setTimeout(() => {
+        setShowLauncher(false);
+        const next: SessionState = { ...state, dismissedOnce: true };
+        writeState(next);
+        setState(next);
+      }, STAY_DURATION_MS);
     };
 
-    updateVisibility();
-    const interval = window.setInterval(updateVisibility, 15000);
+    if (remaining <= 0) {
+      triggerShow();
+    } else {
+      showTimer = window.setTimeout(triggerShow, remaining);
+    }
 
     return () => {
-      window.clearInterval(interval);
+      if (hideTimer) window.clearTimeout(hideTimer);
+      if (showTimer) window.clearTimeout(showTimer);
     };
   }, [state]);
 
@@ -194,7 +199,7 @@ export default function SiteFeedbackPrompt() {
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="animate-soft-pulse fixed bottom-5 left-5 z-[69] hidden rounded-full border border-brand-teal/20 bg-white/95 px-5 py-3 text-left shadow-xl backdrop-blur transition hover:-translate-y-0.5 md:inline-block"
+          className="animate-soft-pulse fixed bottom-5 left-5 z-[69] inline-block rounded-full border border-brand-teal/20 bg-white/95 px-5 py-3 text-left shadow-xl backdrop-blur transition hover:-translate-y-0.5"
         >
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-teal">
             Votre avis
