@@ -44,10 +44,9 @@ const navGroups: NavGroup[] = [
     label: "Life Sciences",
     children: [
       { href: "/life-sciences", label: "Vue d'ensemble" },
-      { href: "/life-sciences/structuration-ia", label: "★ Programme IA Life Sciences" },
-      { href: "/life-sciences", label: "Biotech" },
-      { href: "/life-sciences", label: "Diagnostic" },
-      { href: "/life-sciences", label: "Cosmétique" }
+      { href: "/life-sciences/biotech", label: "Biotech" },
+      { href: "/life-sciences/biotech/deeptech-startups", label: "Deeptech" },
+      { href: "/life-sciences/structuration-ia", label: "★ Programme IA Life Sciences" }
     ]
   },
   {

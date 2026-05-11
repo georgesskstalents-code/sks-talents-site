@@ -196,9 +196,10 @@
 .fm-salary-band {
   position: absolute;
   top: 0; bottom: 0;
-  background: linear-gradient(90deg, var(--fm-accent-deep), var(--fm-accent));
+  min-width: 30px;
+  background: var(--fm-accent);
   border-radius: 999px;
-  box-shadow: 0 4px 14px rgba(45, 123, 127, 0.28);
+  box-shadow: 0 4px 14px rgba(65, 160, 164, 0.30);
 }
 
 .fm-salary-axis {
