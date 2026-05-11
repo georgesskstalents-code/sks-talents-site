@@ -1,14 +1,16 @@
 /* SKS Talents - Fiche Metier (editorial design) - scoped under .fm-root
-   Full SKS palette: white bg, sand paper, forest ink, teal accent. */
+   Full SKS palette: white bg, sand paper, forest ink, teal accent.
+   Contrasts strengthened for readability (WCAG AA on all text). */
 .fm-root {
   --fm-bg: #FFFFFF;
   --fm-paper: #F4F7F7;
   --fm-ink: #0F1A1A;
-  --fm-ink-2: #5A6262;
-  --fm-ink-3: rgba(90, 98, 98, 0.75);
-  --fm-rule: rgba(15, 26, 26, 0.08);
-  --fm-rule-strong: rgba(15, 26, 26, 0.18);
+  --fm-ink-2: #3A4343;
+  --fm-ink-3: #5A6262;
+  --fm-rule: rgba(15, 26, 26, 0.12);
+  --fm-rule-strong: rgba(15, 26, 26, 0.28);
   --fm-accent: #41A0A4;
+  --fm-accent-deep: #2D7B7F;
   --fm-accent-soft: #E8F2F2;
   --fm-warn: #C26A3A;
   --fm-ok: #2D7B7F;
@@ -87,9 +89,10 @@
   border: 1px solid var(--fm-rule-strong);
   background: var(--fm-paper);
   padding: 28px;
-  border-radius: 4px;
+  border-radius: 8px;
   height: fit-content;
   position: relative;
+  box-shadow: 0 2px 12px rgba(15, 26, 26, 0.04);
 }
 .fm-summary::before {
   content: "01 / RÉPONSE DIRECTE";
@@ -117,6 +120,7 @@
   background: var(--fm-rule-strong);
   display: inline-block; border-radius: 1px;
 }
+.fm-tension-bars i { background: rgba(15, 26, 26, 0.15); }
 .fm-tension-bars i.on { background: var(--fm-warn); }
 .fm-salary-mini {
   font-family: var(--fm-serif); font-size: 28px;
@@ -166,13 +170,15 @@
 .fm-salary-band {
   position: absolute; left: 18%; right: 18%;
   top: 24px; bottom: 24px;
-  background: linear-gradient(90deg, var(--fm-accent-soft), var(--fm-accent));
-  border-radius: 6px;
+  background: linear-gradient(90deg, var(--fm-accent-deep), var(--fm-accent));
+  border-radius: 8px;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 18px;
+  padding: 0 22px;
   color: var(--fm-bg);
   font-family: var(--fm-mono); font-size: 12px;
+  font-weight: 500;
   letter-spacing: 0.06em;
+  box-shadow: 0 6px 20px rgba(45, 123, 127, 0.22);
 }
 .fm-salary-band b {
   font-family: var(--fm-serif); font-weight: 400;
@@ -234,12 +240,13 @@
   padding: 32px 24px;
   border-right: 1px solid var(--fm-rule);
   border-bottom: 1px solid var(--fm-rule);
-  background: transparent;
+  background: var(--fm-bg);
   position: relative; min-height: 220px;
   display: flex; flex-direction: column; justify-content: space-between;
   transition: 0.25s;
 }
-.fm-grid-3 .cell:hover { background: var(--fm-paper); }
+.fm-grid-3 .cell:hover { background: var(--fm-paper); border-color: var(--fm-accent); }
+.fm-grid-3 .cell .n { color: var(--fm-accent-deep); font-weight: 500; }
 .fm-grid-3 .cell .n {
   font-family: var(--fm-mono); font-size: 11px;
   letter-spacing: 0.16em; color: var(--fm-ink-3);
@@ -303,9 +310,9 @@
 }
 .fm-path-step + .fm-path-step { border-left: none; }
 .fm-path-step .lbl {
-  font-family: var(--fm-mono); font-size: 10px;
-  letter-spacing: 0.18em; color: var(--fm-ink-3);
-  text-transform: uppercase;
+  font-family: var(--fm-mono); font-size: 11px;
+  letter-spacing: 0.18em; color: var(--fm-accent-deep);
+  text-transform: uppercase; font-weight: 500;
 }
 .fm-path-step h4 {
   font-family: var(--fm-serif); font-weight: 400;
@@ -319,9 +326,11 @@
 .fm-path-step.current {
   background: var(--fm-ink); color: var(--fm-bg);
   border-color: var(--fm-ink);
+  box-shadow: 0 10px 30px rgba(15, 26, 26, 0.18);
 }
-.fm-path-step.current .lbl { color: rgba(244, 241, 234, 0.6); }
-.fm-path-step.current p { color: rgba(244, 241, 234, 0.7); }
+.fm-path-step.current .lbl { color: var(--fm-accent-soft); font-weight: 500; }
+.fm-path-step.current h4 { color: var(--fm-bg); }
+.fm-path-step.current p { color: rgba(255, 255, 255, 0.82); }
 .fm-path-step .arrow {
   position: absolute; right: -14px; top: 50%;
   width: 28px; height: 28px; border-radius: 50%;
@@ -345,8 +354,10 @@
   display: flex; flex-direction: column; justify-content: space-between;
   min-height: 200px;
   transition: 0.2s;
+  cursor: default;
 }
 .fm-school:hover { background: var(--fm-paper); }
+.fm-school .city { color: var(--fm-accent-deep); font-weight: 500; }
 .fm-school h5 {
   font-family: var(--fm-serif); font-size: 24px;
   font-weight: 400; line-height: 1.05;
