@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Link from "next/link";
-import TrustpilotCarousel from "@/components/TrustpilotCarousel";
+import TestimonialMarquee from "@/components/TestimonialMarquee";
 import { type DirectionCSector } from "./directionCContent";
 import "./direction-c.css";
 
@@ -337,7 +337,7 @@ function Testimonial() {
           </a>
         </div>
         <div className="mt-8">
-          <TrustpilotCarousel />
+          <TestimonialMarquee embedded />
         </div>
       </div>
     </section>

@@ -24,6 +24,7 @@ const CookiePreferencesLauncher = dynamic(() => import("@/components/CookiePrefe
 const ChatwootWidget = dynamic(() => import("@/components/ChatwootWidget"));
 const SiteIntelligenceAgent = dynamic(() => import("@/components/SiteIntelligenceAgent"));
 const MobileTrustpilotPrompt = dynamic(() => import("@/components/MobileTrustpilotPrompt"));
+const CalendlyStickyFab = dynamic(() => import("@/components/CalendlyStickyFab"));
 
 const baseKeywords = [
   "executive search Life Sciences",
@@ -134,6 +135,7 @@ export default function RootLayout({
           <ChatwootWidget />
           <SiteIntelligenceAgent externalOnly />
           <MobileTrustpilotPrompt />
+          <CalendlyStickyFab />
         </div>
       </body>
     </html>
