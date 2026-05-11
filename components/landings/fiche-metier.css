@@ -144,8 +144,9 @@
   align-items: start;
 }
 .fm-sec-num {
-  font-family: var(--fm-mono); font-size: 11px;
-  letter-spacing: 0.18em; color: var(--fm-ink-3);
+  font-family: var(--fm-mono); font-size: 12px;
+  letter-spacing: 0.18em; color: var(--fm-accent);
+  font-weight: 600; text-transform: uppercase;
 }
 .fm-sec-title {
   font-family: var(--fm-serif); font-weight: 400;
@@ -361,18 +362,24 @@
 
 /* ——— schools ——— */
 .fm-schools-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
-  background: var(--fm-rule-strong);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
 }
 .fm-school {
-  background: var(--fm-bg);
+  background: var(--fm-paper);
+  border: 1px solid var(--fm-rule);
+  border-radius: 6px;
   padding: 24px;
   display: flex; flex-direction: column; justify-content: space-between;
-  min-height: 200px;
+  min-height: 180px;
   transition: 0.2s;
   cursor: default;
 }
-.fm-school:hover { background: var(--fm-paper); }
+.fm-school:hover {
+  background: var(--fm-bg);
+  border-color: var(--fm-accent);
+}
 .fm-school .city { color: var(--fm-accent-deep); font-weight: 500; }
 .fm-school h5 {
   font-family: var(--fm-serif); font-size: 24px;
