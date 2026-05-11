@@ -111,6 +111,11 @@ export default function HomePage() {
         </section>
       </RevealOnScroll>
 
+      {/* 4. Founder card - interlocuteur direct, juste sous Notre approche */}
+      <RevealOnScroll delayMs={120}>
+        <FounderCard />
+      </RevealOnScroll>
+
       {/* 5. Method narrative - now visible on mobile too (removed hidden md:block wrapper) */}
       <RevealOnScroll delayMs={140}>
         <MethodNarrative />
@@ -133,11 +138,6 @@ export default function HomePage() {
             <TestimonialMarquee />
           </div>
         </section>
-      </RevealOnScroll>
-
-      {/* 7. Founder card - interlocuteur direct, position finale */}
-      <RevealOnScroll delayMs={195}>
-        <FounderCard />
       </RevealOnScroll>
     </>
   );
