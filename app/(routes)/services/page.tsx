@@ -271,20 +271,10 @@ export default function ServicesPage() {
         />
       </RevealOnScroll>
 
-      {/* 11. Votre interlocuteur direct + CTA final */}
+      {/* 11. Votre interlocuteur direct — bloc final */}
       <RevealOnScroll delayMs={190}>
         <FounderCard />
       </RevealOnScroll>
-      <RevealOnScroll delayMs={200}>
-        <RibbonCTA
-          variant="final"
-          eyebrow="On en parle ?"
-          title="15 minutes pour identifier votre vrai blocage recrutement."
-          secondaryHref="/diagnostic"
-          secondaryLabel="Faire le diagnostic"
-        />
-      </RevealOnScroll>
-
     </>
   );
 }

@@ -4,7 +4,6 @@ import FounderCard from "@/components/FounderCard";
 import Hero from "@/components/Hero";
 import MethodNarrative from "@/components/MethodNarrative";
 import PersonaPortalsGrid, { type PersonaPortal } from "@/components/PersonaPortalsGrid";
-import RibbonCTA from "@/components/RibbonCTA";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import ReferenceMarquee from "@/components/ReferenceMarquee";
 import ReferenceGrid from "@/components/ReferenceGrid";
@@ -20,17 +19,17 @@ export const metadata: Metadata = {
 const personaPortals: PersonaPortal[] = [
   {
     icon: "target-arrow",
-    title: "Je recrute un dirigeant",
-    description: "CEO, COO, DRH. Series A, B ou scale-up.",
-    cta1: { label: "Réserver Calendly", href: "https://calendly.com/g-kengue/talentconsulting" },
+    title: "Vous structurez votre équipe",
+    description: "CEO, COO, DRH — Series A à scale-up. Première shortlist en 10 jours.",
+    cta1: { label: "Réserver un échange", href: "https://calendly.com/g-kengue/talentconsulting" },
     cta2: { label: "Notre méthode", href: "/services" },
     cta3: { label: "Références", href: "/references" },
     highlighted: true
   },
   {
     icon: "cpu",
-    title: "Je découvre l'IA",
-    description: "Structurer mes RH avec des agents.",
+    title: "Vos process RH ne suivent plus votre croissance",
+    description: "Nos agents IA automatisent reporting, sourcing, M&A, onboarding.",
     cta1: { label: "Programme Life Sciences", href: "/life-sciences/structuration-ia" },
     cta2: { label: "Programme Animal Health", href: "/animal-health/structuration-ia" },
     cta3: { label: "Diagnostic agents", href: "/diagnostic" }
@@ -75,12 +74,7 @@ export default function HomePage() {
         <PersonaPortalsGrid portals={personaPortals} />
       </RevealOnScroll>
 
-      {/* 3. Founder card — preserved verbatim, position 3 */}
-      <RevealOnScroll delayMs={80}>
-        <FounderCard />
-      </RevealOnScroll>
-
-      {/* 4. Notre approche IA */}
+      {/* 3. Notre approche IA */}
       <RevealOnScroll delayMs={100}>
         <section className="bg-brand-mint py-14 sm:py-20">
           <div className="container-shell">
@@ -160,15 +154,9 @@ export default function HomePage() {
         </section>
       </RevealOnScroll>
 
-      {/* 7. Final CTA — fond ink */}
+      {/* 7. Founder card — interlocuteur direct, position finale */}
       <RevealOnScroll delayMs={195}>
-        <RibbonCTA
-          variant="final"
-          eyebrow="On en parle ?"
-          title="15 minutes pour identifier votre vrai blocage recrutement."
-          secondaryHref="/services"
-          secondaryLabel="Voir nos services"
-        />
+        <FounderCard />
       </RevealOnScroll>
     </>
   );

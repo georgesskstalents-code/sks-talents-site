@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import AnimalHealthContent from "./components/content";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import SectionShell from "@/components/SectionShell";
 import RibbonCTA from "@/components/RibbonCTA";
 import { getSectorLandingPage } from "@/data/sectorLandingPages";
 
@@ -155,15 +154,15 @@ export default function AnimalHealthHubPage() {
 
       <AnimalHealthContent />
 
-      {/* Tags secteurs */}
+      {/* Tags secteurs — inline, compact */}
       <RevealOnScroll>
-        <section className="container-shell py-8">
+        <section className="container-shell pt-4 pb-2">
           <p className="eyebrow">Nos verticaux</p>
-          <div className="mt-4 flex flex-wrap gap-2">
+          <div className="mt-3 flex flex-wrap gap-2">
             {sectorTags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full border border-brand-teal/20 bg-white px-4 py-2 text-caption font-semibold text-brand-ink"
+                className="rounded-full border border-brand-teal/20 bg-white px-3 py-1.5 text-caption font-semibold text-brand-ink"
               >
                 {tag}
               </span>
@@ -172,54 +171,53 @@ export default function AnimalHealthHubPage() {
         </section>
       </RevealOnScroll>
 
-      {/* 5 signaux AH-adapted */}
+      {/* 5 signaux AH — compact list */}
       <RevealOnScroll delayMs={50}>
-        <SectionShell
-          eyebrow="5 signaux qu’il est temps d’agir en Animal Health"
-          title="Vous reconnaissez votre situation ?"
-        >
-          <div className="mx-auto max-w-4xl space-y-3">
+        <section className="container-shell py-10 sm:py-14">
+          <p className="eyebrow">5 signaux qu’il est temps d’agir en Animal Health</p>
+          <h2 className="t-h2 mt-2 max-w-3xl font-display">Vous reconnaissez votre situation ?</h2>
+          <ul className="mt-6 grid gap-2 sm:grid-cols-2">
             {signauxAh.map((signal, idx) => (
-              <article
+              <li
                 key={signal}
-                className="card-luxe panel-lift flex items-start gap-4 p-5 sm:p-6"
+                className="flex items-center gap-3 rounded-2xl border border-brand-teal/15 bg-white px-4 py-3"
               >
                 <span
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white"
+                  className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-teal text-[11px] font-bold text-white"
                   aria-hidden="true"
                 >
                   {String(idx + 1).padStart(2, "0")}
                 </span>
-                <p className="t-h3 font-display text-brand-ink">{signal}</p>
-              </article>
+                <p className="t-body font-semibold text-brand-ink">{signal}</p>
+              </li>
             ))}
-          </div>
-        </SectionShell>
+          </ul>
+        </section>
       </RevealOnScroll>
 
       {/* Programme IA Animal Health */}
       <RevealOnScroll delayMs={90}>
-        <section className="bg-brand-mint py-14 sm:py-20">
+        <section className="bg-brand-mint py-12 sm:py-16">
           <div className="container-shell grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
             <div>
               <p className="eyebrow text-brand-teal">Programme IA</p>
-              <h2 className="t-h1 mt-2 font-display text-brand-ink">
+              <h2 className="t-h2 mt-2 font-display text-brand-ink">
                 L'agent IA des groupements vétérinaires.
               </h2>
-              <p className="mt-4 t-body text-brand-stone">
+              <p className="mt-3 t-body text-brand-stone">
                 « 32 directeurs de cliniques. 32 formats différents. 0 vue d'ensemble. » Sébastien Dupont résumait ainsi son enfer du reporting il y a 18 mois. Aujourd'hui, son agent IA consolide tout en temps réel : 28 OK, 3 alertes, 1 critique, et la recommandation d'action en clair.
               </p>
               <Link
                 href="/animal-health/structuration-ia"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-ink px-6 py-3 text-caption font-semibold text-white transition hover:opacity-90"
+                className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand-ink px-5 py-3 text-caption font-semibold text-white transition hover:opacity-90"
               >
                 Découvrir le programme
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-            <div className="rounded-3xl border border-brand-teal/15 bg-white p-6 shadow-sm">
+            <div className="rounded-3xl border border-brand-teal/15 bg-white p-5 shadow-sm">
               <div className="flex items-center gap-3">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-mint text-brand-teal">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-mint text-brand-teal">
                   <Sparkles className="h-5 w-5" />
                 </span>
                 <div>
@@ -227,7 +225,7 @@ export default function AnimalHealthHubPage() {
                   <p className="text-caption text-brand-stone">Démo interactive 30 sec</p>
                 </div>
               </div>
-              <p className="mt-4 text-caption text-brand-stone">
+              <p className="mt-3 text-caption text-brand-stone">
                 De 3 jours à 4 minutes de reporting mensuel. Pour groupements vétérinaires et petfood.
               </p>
             </div>
@@ -235,28 +233,27 @@ export default function AnimalHealthHubPage() {
         </section>
       </RevealOnScroll>
 
-      {/* Postes recrutés */}
+      {/* Postes recrutés — grille compacte */}
       <RevealOnScroll delayMs={130}>
-        <SectionShell
-          eyebrow="Postes que nous recrutons"
-          title="4 fiches métiers Animal Health."
-        >
-          <div className="grid gap-4 md:grid-cols-2">
+        <section className="container-shell py-10 sm:py-14">
+          <p className="eyebrow">Postes que nous recrutons</p>
+          <h2 className="t-h2 mt-2 max-w-3xl font-display">4 fiches métiers Animal Health.</h2>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {postesAh.map((poste) => (
               <Link
                 key={poste.title}
                 href={poste.href}
-                className="rounded-2xl border border-brand-teal/15 bg-white p-5 transition hover:shadow-soft"
+                className="flex flex-col gap-2 rounded-2xl border border-brand-teal/15 bg-white p-4 transition hover:shadow-soft"
               >
-                <p className="t-h3 font-display text-brand-ink">{poste.title}</p>
-                <span className="mt-3 inline-flex items-center gap-1 text-caption font-semibold text-brand-teal">
+                <p className="t-body font-semibold text-brand-ink">{poste.title}</p>
+                <span className="inline-flex items-center gap-1 text-caption font-semibold text-brand-teal">
                   Voir la fiche
                   <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </Link>
             ))}
           </div>
-        </SectionShell>
+        </section>
       </RevealOnScroll>
 
       {/* CTA final adapté */}
