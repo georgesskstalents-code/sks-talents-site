@@ -39,6 +39,12 @@ const nextConfig = {
         source: "/media-kit",
         destination: "/press",
         permanent: true
+      },
+      {
+        // Studies index page exposed CEO email + was SEO-bait. Individual study pages /studies/[slug] still work.
+        source: "/studies",
+        destination: "/blog",
+        permanent: true
       }
     ];
   },

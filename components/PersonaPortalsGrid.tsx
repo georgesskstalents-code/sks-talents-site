@@ -19,6 +19,7 @@ export type PersonaPortal = {
   cta2: { label: string; href: string };
   cta3: { label: string; href: string };
   highlighted?: boolean;
+  cta2Primary?: boolean;
 };
 
 type Props = {
@@ -76,7 +77,7 @@ export default function PersonaPortalsGrid({
                   <p className="mt-1 text-caption text-brand-stone">{p.description}</p>
                   <div className="mt-4 flex flex-col gap-2">
                     <PortalLink href={p.cta1.href} label={p.cta1.label} primary />
-                    <PortalLink href={p.cta2.href} label={p.cta2.label} />
+                    <PortalLink href={p.cta2.href} label={p.cta2.label} primary={p.cta2Primary} />
                     <PortalLink href={p.cta3.href} label={p.cta3.label} />
                   </div>
                 </article>
