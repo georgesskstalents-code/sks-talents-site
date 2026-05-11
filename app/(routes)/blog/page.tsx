@@ -1,4 +1,4 @@
-import BlogFilters from "@/components/BlogFilters";
+import BlogMagazine from "@/components/landings/BlogMagazine";
 import FAQSection from "@/components/FAQSection";
 import GEOAnswerCard from "@/components/GEOAnswerCard";
 import PageHero from "@/components/PageHero";
@@ -96,9 +96,7 @@ export default async function BlogPage() {
           ]}
         />
       </section>
-      <section className="container-shell py-8">
-        <BlogFilters articles={mergedArticles} />
-      </section>
+      <BlogMagazine articles={mergedArticles} />
       <FAQSection
         eyebrow="FAQ GEO"
         title="Questions fréquentes sur le blog SKS TALENTS"
