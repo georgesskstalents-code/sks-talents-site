@@ -156,14 +156,21 @@ export const lifeSciencesContent: DirectionCSector = {
       badge: "Series A → C",
       title: "Biotech",
       subtitle: "Series A → C",
-      roles: ["Thérapeutique, plateformes, R&D intensive.", "Recrutements critiques en phase de scale-up européen."],
+      roles: [
+        "CTO, VP Technologie, Plant Director, BD Manager, Account Manager EMEA, Technico-Commercial.",
+        "Thérapeutique, plateformes, R&D intensive.",
+        "Recrutements critiques en phase de scale-up européen."
+      ],
       url: "/life-sciences/biotech"
     },
     {
       badge: "Scale-up industriel",
       title: "Deeptech biomatériaux",
       subtitle: "Scale-up industriel",
-      roles: ["Bioprocédés, transferts d'échelle et industrialisation des biomatériaux."],
+      roles: [
+        "Head of Engineering, Lab Operations Manager.",
+        "Bioprocédés, transferts d'échelle et industrialisation des biomatériaux."
+      ],
       url: "/life-sciences/biotech/deeptech-startups"
     }
   ],

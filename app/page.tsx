@@ -33,7 +33,8 @@ const personaPortals: PersonaPortal[] = [
     cta1: { label: "Programme Life Sciences", href: "/life-sciences/structuration-ia" },
     cta2: { label: "Programme Animal Health", href: "/animal-health/structuration-ia" },
     cta3: { label: "Diagnostic agents", href: "/diagnostic" },
-    cta2Primary: true
+    cta2Primary: true,
+    cta3Primary: true
   },
   {
     icon: "briefcase",
