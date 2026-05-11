@@ -59,8 +59,8 @@
 .bmag-mast-title {
   font-family: var(--bmag-serif);
   font-weight: 400;
-  font-size: clamp(48px, 6vw, 96px);
-  line-height: 0.95;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.02;
   letter-spacing: -0.022em;
   color: var(--bmag-ink);
   text-align: center;
@@ -150,8 +150,8 @@
 .bmag-hero-h1 {
   font-family: var(--bmag-serif);
   font-weight: 400;
-  font-size: clamp(36px, 4.5vw, 64px);
-  line-height: 1.02;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--bmag-ink);
   margin: 0;

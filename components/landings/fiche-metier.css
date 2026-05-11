@@ -62,8 +62,8 @@
 .fm-hero-tag::before { content: ""; width: 24px; height: 1px; background: var(--fm-accent); }
 .fm-title {
   font-family: var(--fm-serif); font-weight: 400;
-  font-size: clamp(54px, 7vw, 104px);
-  line-height: 0.95; letter-spacing: -0.02em;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.02; letter-spacing: -0.02em;
   color: var(--fm-ink);
 }
 .fm-title em { font-style: italic; color: var(--fm-ink-2); }
@@ -150,8 +150,8 @@
 }
 .fm-sec-title {
   font-family: var(--fm-serif); font-weight: 400;
-  font-size: clamp(36px, 4vw, 56px);
-  line-height: 1; letter-spacing: -0.015em;
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height: 1.08; letter-spacing: -0.015em;
 }
 .fm-sec-title em { font-style: italic; color: var(--fm-ink-2); }
 .fm-sec-kicker {
@@ -181,7 +181,7 @@
 }
 .fm-salary-num {
   font-family: var(--fm-serif); font-weight: 400;
-  font-size: clamp(36px, 4.5vw, 56px);
+  font-size: clamp(32px, 4vw, 44px);
   line-height: 1; letter-spacing: -0.015em;
   color: var(--fm-ink);
 }
@@ -447,8 +447,8 @@
 }
 .fm-cta-wrap h2 {
   font-family: var(--fm-serif); font-weight: 400;
-  font-size: clamp(48px, 6vw, 88px);
-  line-height: 0.95; letter-spacing: -0.02em;
+  font-size: clamp(36px, 4.5vw, 56px);
+  line-height: 1.02; letter-spacing: -0.02em;
 }
 .fm-cta-wrap h2 em { font-style: italic; color: var(--fm-ink-2); }
 .fm-cta-buttons { display: flex; flex-direction: column; gap: 12px; }
