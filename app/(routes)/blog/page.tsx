@@ -1,6 +1,5 @@
 import BlogMagazine from "@/components/landings/BlogMagazine";
 import FAQSection from "@/components/FAQSection";
-import GEOAnswerCard from "@/components/GEOAnswerCard";
 import PageHero from "@/components/PageHero";
 import { articles, type Article } from "@/data/articles";
 import { getNotionSiteContentList } from "@/lib/notion";
@@ -70,57 +69,24 @@ export default async function BlogPage() {
   return (
     <>
       <PageHero
-        kicker="Blog"
-        title="Une base éditoriale filtrable par persona, secteur et topic."
-        description="Le listing ci-dessous démontre le comportement attendu pour vos 50+ articles."
+        kicker="Articles & analyses"
+        title="Lectures utiles pour décider plus juste sur vos marchés."
+        description="Signaux marché, métiers pénuriques, salaires, écosystème : des analyses courtes et sourcées pour CEO, DRH, candidats et dirigeants en mobilité — biotech, diagnostic, santé animale et petfood premium."
       />
-      <section className="container-shell grid gap-4 py-4 lg:grid-cols-2">
-        <GEOAnswerCard
-          title="À quoi sert le blog SKS TALENTS ?"
-          answer="Le blog SKS TALENTS sert à répondre aux questions concrètes des dirigeants, DRH et candidats sur les métiers, les marchés, les salaires, les écosystèmes et les signaux de croissance dans les Life Sciences et l’Animal Health."
-          bullets={[
-            "Réponses courtes et structurées en haut des contenus",
-            "Angles marché, recrutement, salaires et écosystème",
-            "Sources visibles quand elles existent",
-            "Passerelles vers services, fiches métiers et prise de rendez-vous"
-          ]}
-        />
-        <GEOAnswerCard
-          title="Quels sujets trouverez-vous ici ?"
-          answer="Vous trouverez des articles sur la biotech, le diagnostic, la médecine nucléaire, la santé animale, le petfood, les fonds, les écoles, les événements, la Côte d’Ivoire, le Sénégal et les problèmes de recrutement les plus fréquents."
-          bullets={[
-            "Questions de marché 2026",
-            "Articles SEO France + Afrique francophone",
-            "Lectures France Biotech, Business France, Bpifrance et autres sources reconnues",
-            "Contenus pensés pour Google, ChatGPT, Claude, Mistral et Perplexity"
-          ]}
-        />
-      </section>
       <BlogMagazine articles={mergedArticles} />
       <FAQSection
-        eyebrow="FAQ GEO"
-        title="Questions fréquentes sur le blog SKS TALENTS"
-        description="Des réponses structurées pour rendre la lecture plus claire, plus citable et plus utile aux décideurs comme aux moteurs conversationnels."
+        eyebrow="Questions fréquentes"
+        title="Ce qu'on trouve dans le blog SKS"
         items={[
           {
-            question: "Pourquoi lire le blog SKS TALENTS ?",
+            question: "Quels sujets sont traités ?",
             answer:
-              "Le blog SKS TALENTS permet de comprendre rapidement un marché, un métier, un signal de croissance, un sujet de rémunération ou un enjeu de recrutement dans les Life Sciences, l’Animal Health, le diagnostic, le petfood et les secteurs techniques adjacents."
+              "Métiers pénuriques, salaires, médecine nucléaire, événements et fonds, écoles, écosystème France Biotech, Business France, Bpifrance, et angles France, Sénégal et Côte d'Ivoire."
           },
           {
-            question: "Quels types d’articles publie SKS TALENTS ?",
-            answer:
-              "SKS TALENTS publie des articles SEO et GEO sur les métiers pénuriques, les salaires, la médecine nucléaire, les événements, les fonds, les écoles, l’écosystème France Biotech, Business France, Bpifrance, ainsi que des angles France, Sénégal et Côte d’Ivoire."
-          },
-          {
-            question: "Comment utiliser ce blog quand on recrute ou qu’on structure une équipe ?",
+            question: "Comment utiliser ce blog quand on recrute ou qu'on structure une équipe ?",
             answer:
               "Un dirigeant, un COO ou un DRH peut utiliser le blog pour cadrer un besoin, comprendre la tension marché, relier un sujet métier à une fourchette salariale ou à une école, puis prendre contact avec SKS TALENTS pour un recrutement, un RPO ou une structuration RH."
-          },
-          {
-            question: "Pourquoi ces articles sont-ils pensés pour Google, ChatGPT, Claude, Mistral et Perplexity ?",
-            answer:
-              "Parce qu’ils donnent une réponse directe dès le début, utilisent des titres proches des requêtes réelles, structurent les informations avec des sections courtes et s’appuient autant que possible sur des sources vérifiables et visibles."
           }
         ]}
       />
