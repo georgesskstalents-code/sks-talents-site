@@ -53,7 +53,7 @@ const personaPortals: PersonaPortal[] = [
 ];
 
 // One inline testimonial for the proofs section (replaces full TestimonialMarquee on home).
-// Source : same author/quote as in components/TestimonialMarquee.tsx — kept verbatim.
+// Source : same author/quote as in components/TestimonialMarquee.tsx - kept verbatim.
 const featuredTestimonial = {
   name: "Baldo",
   role: "Genomics EMEA Commercial Director",
@@ -118,7 +118,7 @@ export default function HomePage() {
         </section>
       </RevealOnScroll>
 
-      {/* 5. Method narrative — now visible on mobile too (removed hidden md:block wrapper) */}
+      {/* 5. Method narrative - now visible on mobile too (removed hidden md:block wrapper) */}
       <RevealOnScroll delayMs={140}>
         <MethodNarrative />
       </RevealOnScroll>
@@ -154,7 +154,7 @@ export default function HomePage() {
         </section>
       </RevealOnScroll>
 
-      {/* 7. Founder card — interlocuteur direct, position finale */}
+      {/* 7. Founder card - interlocuteur direct, position finale */}
       <RevealOnScroll delayMs={195}>
         <FounderCard />
       </RevealOnScroll>

@@ -162,14 +162,14 @@ function Verticals({ d }: { d: DirectionCSector }) {
 }
 
 function Method({ d }: { d: DirectionCSector }) {
-  const [titleHead, titleTail] = d.methodTitle.split("—").map((s) => s.trim());
+  const [titleHead, titleTail] = d.methodTitle.split("-").map((s) => s.trim());
   return (
     <section className="c-section c-section-soft">
       <div className="c-container">
         <div className="c-section-head c-section-head-center">
           <span className="c-eyebrow">{d.methodEyebrow}</span>
           <h2 className="c-h2" style={{ textAlign: "center" }}>
-            {titleHead} <span className="c-italic">— {titleTail}</span>
+            {titleHead} <span className="c-italic">- {titleTail}</span>
           </h2>
         </div>
         <div className="c-funnel c-funnel-4">

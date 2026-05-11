@@ -33,7 +33,7 @@
 .fm-root ul, .fm-root ol { list-style: none; }
 .fm-root ::selection { background: var(--fm-ink); color: var(--fm-bg); }
 
-/* ——— breadcrumb ——— */
+/* --- breadcrumb --- */
 .fm-crumbs {
   max-width: var(--fm-maxw); margin: 0 auto;
   padding: 18px 32px 0;
@@ -45,7 +45,7 @@
 .fm-crumbs span { opacity: 0.5; }
 .fm-crumbs b { font-weight: 500; color: var(--fm-ink-2); }
 
-/* ——— hero ——— */
+/* --- hero --- */
 .fm-hero {
   max-width: var(--fm-maxw); margin: 0 auto;
   padding: 24px 32px 56px;
@@ -132,7 +132,7 @@
   letter-spacing: 0; display: block; margin-top: 6px;
 }
 
-/* ——— section ——— */
+/* --- section --- */
 .fm-section {
   max-width: var(--fm-maxw); margin: 0 auto;
   padding: 80px 32px;
@@ -160,7 +160,7 @@
   max-width: 60ch;
 }
 
-/* ——— salary visual ——— */
+/* --- salary visual --- */
 .fm-salary-wrap { display: grid; grid-template-columns: 120px 1fr; gap: 32px; }
 .fm-salary-vis { position: relative; padding-top: 8px; }
 
@@ -247,7 +247,7 @@
 }
 .fm-sources a::after { content: "↗"; opacity: 0.5; }
 
-/* ——— missions grid ——— */
+/* --- missions grid --- */
 .fm-grid-3 {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
   border-top: 1px solid var(--fm-rule);
@@ -279,7 +279,7 @@
   margin-top: 12px; line-height: 1.5;
 }
 
-/* ——— competencies ——— */
+/* --- competencies --- */
 .fm-comp-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
 .fm-comp-h4 {
   font-family: var(--fm-mono); font-size: 11px;
@@ -314,7 +314,7 @@
   line-height: 1.45; font-weight: 300;
 }
 
-/* ——— career path ——— */
+/* --- career path --- */
 .fm-path {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
   align-items: stretch; position: relative;
@@ -360,7 +360,7 @@
 }
 .fm-path-step:last-child .arrow { display: none; }
 
-/* ——— schools ——— */
+/* --- schools --- */
 .fm-schools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -399,7 +399,7 @@
 }
 .fm-school .link::after { content: "→"; }
 
-/* ——— related ——— */
+/* --- related --- */
 .fm-related-list {
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 0;
 }
@@ -438,7 +438,7 @@
   font-size: 13.5px; color: var(--fm-ink-2);
 }
 
-/* ——— CTA ——— */
+/* --- CTA --- */
 .fm-cta-wrap {
   max-width: var(--fm-maxw); margin: 0 auto;
   padding: 120px 32px;

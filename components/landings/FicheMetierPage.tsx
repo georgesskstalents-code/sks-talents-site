@@ -34,7 +34,7 @@ const TENSION_LEVELS: Record<FicheMetierRole["shortageLevel"], { bars: number; l
 };
 
 function parseSalaryToBand(salary: string): { min: number; max: number; minLabel: string; maxLabel: string } | null {
-  const m = salary.match(/(\d+)\s*[-–—]\s*(\d+)/);
+  const m = salary.match(/(\d+)\s*[---]\s*(\d+)/);
   if (m) {
     return {
       min: Number(m[1]),
@@ -146,7 +146,7 @@ export default function FicheMetierPage({ role, relatedRoles }: Props) {
         </aside>
       </section>
 
-      {/* ABOUT — 3 cards from successFactors */}
+      {/* ABOUT - 3 cards from successFactors */}
       {role.successFactors.length > 0 && (
         <section className="fm-section" id="about">
           <div className="fm-sec-head">
@@ -315,7 +315,7 @@ export default function FicheMetierPage({ role, relatedRoles }: Props) {
                 Le chemin <em>fréquent</em><br />vers ce poste.
               </h2>
               <p className="fm-sec-kicker">
-                Trois jalons typiques observés dans la base SKS Talents — non normatifs, mais utiles pour cadrer un brief.
+                Trois jalons typiques observés dans la base SKS Talents - non normatifs, mais utiles pour cadrer un brief.
               </p>
             </div>
           </div>
@@ -325,7 +325,7 @@ export default function FicheMetierPage({ role, relatedRoles }: Props) {
               const isCurrent = idx === role.path.length - 1 || idx === 2;
               return (
                 <div key={idx} className={`fm-path-step ${isCurrent ? "current" : ""}`}>
-                  <div className="lbl">{isCurrent ? "— Vous êtes ici" : `Étape 0${idx + 1}`}</div>
+                  <div className="lbl">{isCurrent ? "- Vous êtes ici" : `Étape 0${idx + 1}`}</div>
                   <h4>{step}</h4>
                   {idx < role.path.length - 1 && idx < 2 && <div className="arrow">→</div>}
                 </div>
@@ -372,7 +372,7 @@ export default function FicheMetierPage({ role, relatedRoles }: Props) {
             <div>
               <h2 className="fm-sec-title">Rôles <em>voisins</em>.</h2>
               <p className="fm-sec-kicker">
-                Les enjeux techniques, réglementaires et d'exécution se ressemblent — utile pour comparer un brief ou élargir un sourcing.
+                Les enjeux techniques, réglementaires et d'exécution se ressemblent - utile pour comparer un brief ou élargir un sourcing.
               </p>
             </div>
           </div>

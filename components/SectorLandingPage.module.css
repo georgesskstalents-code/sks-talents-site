@@ -145,7 +145,7 @@
   color: var(--ink);
 }
 
-/* Featured nav pill — promotes the structuration-ia landing as a high-value
+/* Featured nav pill - promotes the structuration-ia landing as a high-value
    destination from the sector hub. Stays visible on mobile (overridden in the
    max-width: 819px block below) to drive conversions on the dominant device. */
 .navLinkFeatured {
@@ -1420,7 +1420,7 @@
     display: none;
   }
 
-  /* Keep the featured pill visible on mobile — it's the primary conversion
+  /* Keep the featured pill visible on mobile - it's the primary conversion
      hook from the hub to the IA landing. Compact size to fit alongside the
      "Réserver un call" CTA. */
   .navLinkFeatured {

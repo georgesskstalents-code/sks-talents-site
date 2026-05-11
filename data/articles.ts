@@ -255,7 +255,7 @@ export const articles: Article[] = [
     vertical: "cosmétique",
     persona: ["CEO", "DRH"],
     topic: "skills",
-    excerpt: "Cosmétique scientifique : formulation, compliance, mise sur le marché — les profils qui pèsent vraiment.",
+    excerpt: "Cosmétique scientifique : formulation, compliance, mise sur le marché - les profils qui pèsent vraiment.",
     content:
       "Réponse courte : en cosmétique, le recrutement penurie ne se limite pas au formulateur. La valeur se cree quand formulation, safety, regulatory et go-to-market avancent au même rythme.\n\nLes postes qui ressortent le plus dans les organisations qui grossissent sont Formulation Scientist, Cosmetic Safety Assessor, Regulatory Affairs Manager et Export Manager. Ils garantissent qu'un produit peut etre developpe, documente, vendu et maintenu sans detour inutile.\n\nPour un DRH, la bonne approche consiste a relier le poste a la categorie de risque qu'il reduit : delais, reformulation, blocage reglementaire ou retard commercial. C'est ce cadrage qui rend le besoin credible en entretien.\n\nSources : Aon, Glassdoor et les références metiers deja documentees dans le workspace.",
     author: "SKS TALENTS",
@@ -363,7 +363,7 @@ export const articles: Article[] = [
     vertical: "petfood",
     persona: ["CEO", "COO"],
     topic: "market",
-    excerpt: "Petfood : R&D, qualité, packaging, manufacturing excellence — entre la recette et l'usine.",
+    excerpt: "Petfood : R&D, qualité, packaging, manufacturing excellence - entre la recette et l'usine.",
     content:
       "Réponse courte : en petfood, la différenciation produit ne tient pas sans maîtrise industrielle. Les entreprises qui réussissent recrutent très tôt les profils qui sécurisent R&D, qualité et excellence de fabrication.\n\nLes fonctions les plus importantes sont R&D Director, Palatability Scientist, Quality & Food Safety Manager et Manufacturing Excellence Lead. Elles servent une même promesse : garder la qualité de la recette, la constance du lot et la fiabilité de l'exécution.\n\nPour les dirigeants, le bon signal est simple : si votre innovation avance plus vite que votre usine, le backlog finit toujours par revenir sous forme de coût ou de retours terrain.\n\nSources : Mars et EY pour la lecture marche et exécution.",
     author: "SKS TALENTS",

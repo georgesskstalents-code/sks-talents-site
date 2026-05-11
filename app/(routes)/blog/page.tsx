@@ -71,7 +71,7 @@ export default async function BlogPage() {
       <PageHero
         kicker="Articles & analyses"
         title="Lectures utiles pour décider plus juste sur vos marchés."
-        description="Signaux marché, métiers pénuriques, salaires, écosystème : des analyses courtes et sourcées pour CEO, DRH, candidats et dirigeants en mobilité — biotech, diagnostic, santé animale et petfood premium."
+        description="Signaux marché, métiers pénuriques, salaires, écosystème : des analyses courtes et sourcées pour CEO, DRH, candidats et dirigeants en mobilité - biotech, diagnostic, santé animale et petfood premium."
       />
       <BlogMagazine articles={mergedArticles} />
       <FAQSection

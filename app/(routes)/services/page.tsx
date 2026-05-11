@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   }
 };
 
-// 5 signaux — verbatim depuis l'ancienne home (avant refonte 2026-05).
+// 5 signaux - verbatim depuis l'ancienne home (avant refonte 2026-05).
 const youAreHerePoints: { title: string; html: string }[] = [
   {
     title: "Constituer un COMEX aligné",
@@ -56,7 +56,7 @@ const youAreHerePoints: { title: string; html: string }[] = [
   }
 ];
 
-// Insight pénurie — verbatim depuis l'ancienne home.
+// Insight pénurie - verbatim depuis l'ancienne home.
 const insightSignals = [
   {
     title: "Pénurie ciblée",
@@ -174,7 +174,7 @@ export default function ServicesPage() {
         </section>
       </RevealOnScroll>
 
-      {/* 4. 5 signaux — compact cards SKS-bordered */}
+      {/* 4. 5 signaux - compact cards SKS-bordered */}
       <RevealOnScroll delayMs={90}>
         <section className="container-shell py-10 sm:py-14">
           <p className="eyebrow">5 signaux qu’il est temps d’agir</p>
@@ -268,7 +268,7 @@ export default function ServicesPage() {
         />
       </RevealOnScroll>
 
-      {/* 11. Votre interlocuteur direct — bloc final */}
+      {/* 11. Votre interlocuteur direct - bloc final */}
       <RevealOnScroll delayMs={190}>
         <FounderCard />
       </RevealOnScroll>

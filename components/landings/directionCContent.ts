@@ -129,7 +129,7 @@ export const lifeSciencesContent: DirectionCSector = {
   titleTag: "Life Sciences.",
   subtitle: "Pour les CEO, COO, CPO et DRH en biotech, diagnostic, deeptech, e-santé et robotique.",
   description: "Nous intervenons au cœur des organisations des Life Sciences : rôles critiques clarifiés, décisions sécurisées, digitalisation des processus par l'automatisation, exécution fiabilisée. Chaque mois de retard coûte. Nous éliminons ce qui ralentit. Moins de délais. Moins d'erreurs. Plus d'impact.",
-  primaryCta: { label: "Je réserve un call — 15 min →", url: "https://calendly.com/g-kengue/talentconsulting" },
+  primaryCta: { label: "Je réserve un call - 15 min →", url: "https://calendly.com/g-kengue/talentconsulting" },
   secondaryCta: { label: "Voir notre Studio IA RH →", url: "/life-sciences/structuration-ia" },
   heroCaption: "Confidentiel par défaut · Réponse sous 24h · Sans brief écrit",
 
@@ -169,7 +169,7 @@ export const lifeSciencesContent: DirectionCSector = {
   ],
 
   methodEyebrow: "Notre méthode",
-  methodTitle: "De l'intake à la signature — 60 jours.",
+  methodTitle: "De l'intake à la signature - 60 jours.",
   method: [
     { n: 1, title: "Intake stratégique", body: "Cadrage du rôle, contexte, profil-cible et critères éliminatoires. Pas de brief écrit exigé.", time: "Jour 0 · 45 min" },
     { n: 2, title: "Mapping & shortlist", body: "Cartographie du marché, approche directe, qualification. Vous recevez 4 à 6 profils référencés.", time: "Jour 1 → 10" },
@@ -187,7 +187,7 @@ export const lifeSciencesContent: DirectionCSector = {
 
   rhBoardEyebrow: "Studio IA RH · Offre séparée",
   rhBoardTitle: "Exemples d'agents que nous concevons. Un agent, un résultat.",
-  rhBoardLede: "Le recrutement et le Studio IA RH sont deux offres distinctes. Voici, à titre d'exemple, des agents que nous pouvons concevoir pour les dirigeants Life Sciences — et le résultat business associé à chacun.",
+  rhBoardLede: "Le recrutement et le Studio IA RH sont deux offres distinctes. Voici, à titre d'exemple, des agents que nous pouvons concevoir pour les dirigeants Life Sciences - et le résultat business associé à chacun.",
   rhBoard: [
     { label: "Reporting investisseurs", kpi: "Board pack auto", body: "L'agent consolide pipeline, burn, hiring plan et risques réglementaires. Résultat : board deck prêt en 1 clic chaque mois." },
     { label: "CEO Copilot stratégique", kpi: "Décision hebdo", body: "L'agent croise données RH, finance et opérations pour produire une lecture hebdomadaire. Résultat : une décision data-driven par semaine." }
@@ -206,7 +206,7 @@ export const lifeSciencesContent: DirectionCSector = {
       body: "CEO, COO, VP, DRH pour Life Sciences. 92% missions satisfaites.",
       statValue: "92%",
       statLabel: "missions satisfaites",
-      cta: { label: "Je réserve un call — 15 min", url: "https://calendly.com/g-kengue/talentconsulting" },
+      cta: { label: "Je réserve un call - 15 min", url: "https://calendly.com/g-kengue/talentconsulting" },
       icon: "target"
     },
     {
@@ -222,7 +222,7 @@ export const lifeSciencesContent: DirectionCSector = {
   ],
 
   finalTitle: "On regarde votre poste ensemble ?",
-  finalPrimary: { label: "Je réserve un call — 15 min →", url: "https://calendly.com/g-kengue/talentconsulting" },
+  finalPrimary: { label: "Je réserve un call - 15 min →", url: "https://calendly.com/g-kengue/talentconsulting" },
   finalSecondary: { label: "Écrivez-nous", url: "/contact" },
   finalCaption: "Réponse sous 24h · Échange de cadrage 15 min · Même URL de booking sur toute la page",
 
@@ -236,7 +236,7 @@ export const animalHealthContent: DirectionCSector = {
   titleTag: "Animal Health.",
   subtitle: "Pour les CEO, COO, CPO et DRH en diagnostic animal health, cliniques vétérinaires et petfood premium.",
   description: "Nous intervenons au cœur des organisations de la Santé Animale : rôles critiques clarifiés, décisions sécurisées, digitalisation des processus par l'automatisation, exécution fiabilisée. Chaque mois de retard coûte. Nous éliminons ce qui ralentit. Moins de délais. Moins d'erreurs. Plus d'impact.",
-  primaryCta: { label: "Je réserve un call — 15 min →", url: "https://calendly.com/g-kengue/talentconsulting" },
+  primaryCta: { label: "Je réserve un call - 15 min →", url: "https://calendly.com/g-kengue/talentconsulting" },
   secondaryCta: { label: "Voir notre Studio IA RH →", url: "/animal-health/structuration-ia" },
   heroCaption: "Confidentiel par défaut · Réponse sous 24h · Sans brief écrit",
 
@@ -283,7 +283,7 @@ export const animalHealthContent: DirectionCSector = {
   ],
 
   methodEyebrow: "Notre méthode",
-  methodTitle: "De l'intake à la signature — 60 jours.",
+  methodTitle: "De l'intake à la signature - 60 jours.",
   method: [
     { n: 1, title: "Intake stratégique", body: "Cadrage du rôle, contexte, profil-cible et critères éliminatoires. Pas de brief écrit exigé.", time: "Jour 0 · 45 min" },
     { n: 2, title: "Mapping & shortlist", body: "Cartographie du marché, approche directe, qualification. Vous recevez 4 à 6 profils référencés.", time: "Jour 1 → 10" },
@@ -301,7 +301,7 @@ export const animalHealthContent: DirectionCSector = {
 
   rhBoardEyebrow: "Studio IA RH · Offre séparée",
   rhBoardTitle: "Exemples d'agents que nous concevons. Un agent, un résultat.",
-  rhBoardLede: "Le recrutement et le Studio IA RH sont deux offres distinctes. Voici, à titre d'exemple, des agents que nous pouvons concevoir pour les dirigeants Animal Health — et le résultat business associé à chacun.",
+  rhBoardLede: "Le recrutement et le Studio IA RH sont deux offres distinctes. Voici, à titre d'exemple, des agents que nous pouvons concevoir pour les dirigeants Animal Health - et le résultat business associé à chacun.",
   rhBoard: [
     { label: "Reporting multi-sites", kpi: "Vision consolidée", body: "L'agent agrège KPI cliniques, marges, occupation des plannings vétérinaires. Résultat : un cockpit unique pour piloter le groupe." },
     { label: "COO Copilot opérations", kpi: "Pilotage temps réel", body: "L'agent croise données terrain, finance et planning pour produire une lecture hebdomadaire. Résultat : une décision data-driven par semaine." }
@@ -320,7 +320,7 @@ export const animalHealthContent: DirectionCSector = {
       body: "CEO, COO, DG pour Animal Health. 92% missions satisfaites.",
       statValue: "92%",
       statLabel: "missions satisfaites",
-      cta: { label: "Je réserve un call — 15 min", url: "https://calendly.com/g-kengue/talentconsulting" },
+      cta: { label: "Je réserve un call - 15 min", url: "https://calendly.com/g-kengue/talentconsulting" },
       icon: "target"
     },
     {
@@ -336,7 +336,7 @@ export const animalHealthContent: DirectionCSector = {
   ],
 
   finalTitle: "On regarde votre poste ensemble ?",
-  finalPrimary: { label: "Je réserve un call — 15 min →", url: "https://calendly.com/g-kengue/talentconsulting" },
+  finalPrimary: { label: "Je réserve un call - 15 min →", url: "https://calendly.com/g-kengue/talentconsulting" },
   finalSecondary: { label: "Écrivez-nous", url: "/contact" },
   finalCaption: "Réponse sous 24h · Échange de cadrage 15 min · Même URL de booking sur toute la page",
 
