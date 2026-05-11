@@ -20,7 +20,7 @@ const personaPortals: PersonaPortal[] = [
   {
     icon: "target-arrow",
     title: "Vous structurez votre équipe",
-    description: "CEO, COO, DRH — Series A à scale-up. Première shortlist en 10 jours.",
+    description: "Series A à scale-up. Première shortlist en 10 jours.",
     cta1: { label: "Réserver un échange", href: "https://calendly.com/g-kengue/talentconsulting" },
     cta2: { label: "Notre méthode", href: "/services" },
     cta3: { label: "Références", href: "/references" },
@@ -28,8 +28,8 @@ const personaPortals: PersonaPortal[] = [
   },
   {
     icon: "cpu",
-    title: "Vos process RH ne suivent plus votre croissance",
-    description: "Nos agents IA automatisent reporting, sourcing, M&A, onboarding.",
+    title: "Vos enjeux de croissance évoluent plus vite que vos capacités internes.",
+    description: "Nous concevons et déployons des agents IA sur mesure, alignés avec vos priorités business, pour automatiser vos process clés et recentrer vos équipes dirigeantes sur l'essentiel.",
     cta1: { label: "Programme Life Sciences", href: "/life-sciences/structuration-ia" },
     cta2: { label: "Programme Animal Health", href: "/animal-health/structuration-ia" },
     cta3: { label: "Diagnostic agents", href: "/diagnostic" }

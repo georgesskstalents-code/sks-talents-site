@@ -174,37 +174,34 @@ export default function ServicesPage() {
         </section>
       </RevealOnScroll>
 
-      {/* 4. 5 signaux (verbatim home) */}
+      {/* 4. 5 signaux — compact cards SKS-bordered */}
       <RevealOnScroll delayMs={90}>
-        <SectionShell
-          eyebrow="5 signaux qu’il est temps d’agir"
-          title="Vous vous reconnaissez si :"
-        >
-          <div className="mx-auto max-w-4xl space-y-4">
+        <section className="container-shell py-10 sm:py-14">
+          <p className="eyebrow">5 signaux qu’il est temps d’agir</p>
+          <h2 className="t-h2 mt-2 max-w-3xl font-display">Vous vous reconnaissez si :</h2>
+          <ul className="mt-6 grid gap-3 sm:grid-cols-2">
             {youAreHerePoints.map((point, index) => (
-              <article key={index} className="card-luxe panel-lift flex gap-5 p-6 sm:p-8">
+              <li
+                key={point.title}
+                className="flex gap-3 rounded-2xl border border-brand-teal/15 bg-white p-4 sm:p-5"
+              >
                 <span
-                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white shadow-[0_8px_24px_rgba(20,82,84,0.25)]"
+                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-mint text-[11px] font-bold text-brand-teal"
                   aria-hidden="true"
                 >
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <div className="flex-1 space-y-3">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
-                    Signal {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="font-display text-lg leading-[1.2] text-brand-ink sm:text-[28px] sm:leading-[1.15]">
-                    {point.title}
-                  </h3>
+                <div className="flex-1">
+                  <h3 className="t-body font-semibold text-brand-ink">{point.title}</h3>
                   <p
-                    className="text-sm leading-7 text-brand-stone sm:text-[15px] sm:leading-8"
+                    className="mt-1 text-caption leading-6 text-brand-stone"
                     dangerouslySetInnerHTML={{ __html: point.html }}
                   />
                 </div>
-              </article>
+              </li>
             ))}
-          </div>
-        </SectionShell>
+          </ul>
+        </section>
       </RevealOnScroll>
 
       {/* 5. Insight pénurie (verbatim home) */}
