@@ -12,6 +12,7 @@ import {
   fetchSeoKeywordsSnapshot,
   type SeoKeywordsSnapshot
 } from "@/lib/seoWeeklyReport";
+import { buildStrategicObjectivesSectionHtml } from "@/lib/strategicObjectives";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -269,6 +270,7 @@ function buildHtmlEmail(opts: {
       </table>
     </td></tr>
 
+    ${buildStrategicObjectivesSectionHtml()}
     ${buildGscSectionHtml()}
     ${buildKeywordsSectionHtml(opts.seoKeywords)}
 
