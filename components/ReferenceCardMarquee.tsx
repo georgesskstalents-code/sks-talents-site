@@ -16,8 +16,8 @@ export default function ReferenceCardMarquee({ items }: Props) {
   const doubled = [...items, ...items];
 
   return (
-    <div className="overflow-hidden rounded-[28px] border border-brand-teal/10 bg-white/70 py-6 shadow-soft">
-      <div className="flex min-w-max animate-marquee gap-5 px-4">
+    <div className="group overflow-hidden rounded-[28px] border border-brand-teal/10 bg-white/70 py-6 shadow-soft">
+      <div className="flex min-w-max animate-marquee gap-5 px-4 group-hover:[animation-play-state:paused]">
         {doubled.map((item, index) => (
           <article
             key={`${item.slug}-${index}`}
