@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Link from "next/link";
-import TestimonialMarquee from "@/components/TestimonialMarquee";
+import { realTestimonials } from "@/data/testimonials";
 import { type DirectionCSector } from "./directionCContent";
 import "./direction-c.css";
 
@@ -314,17 +314,18 @@ function RHBoard({ d }: { d: DirectionCSector }) {
 }
 
 function Testimonial() {
+  const doubled = [...realTestimonials, ...realTestimonials];
   return (
     <section className="c-tp-section">
       <div className="c-container">
         <div className="c-tp-head">
           <div>
-            <span className="c-eyebrow">Avis vérifiés · Senja & Trustpilot</span>
+            <span className="c-eyebrow">Avis vérifiés · Trustpilot</span>
             <h2 className="c-h2">
               Ce que nos clients et candidats <span className="c-italic">disent de nous.</span>
             </h2>
             <p className="c-section-lede">
-              Témoignages réels recueillis auprès de candidats placés et de dirigeants accompagnés depuis 2018.
+              Témoignages réels de candidats placés et de dirigeants accompagnés depuis 2018.
             </p>
           </div>
           <a
@@ -336,8 +337,27 @@ function Testimonial() {
             Voir tous les avis Trustpilot →
           </a>
         </div>
-        <div className="mt-8">
-          <TestimonialMarquee />
+      </div>
+      <div className="c-tp-marquee group">
+        <div className="c-tp-track group-hover:[animation-play-state:paused]">
+          {doubled.map((r, i) => (
+            <article key={i} className="c-tp-card">
+              <div className="c-tp-stars" aria-label={`${r.rating ?? 5} étoiles`}>
+                {Array.from({ length: r.rating ?? 5 }).map((_, j) => (
+                  <span key={j}>★</span>
+                ))}
+              </div>
+              <p className="c-tp-quote">{r.quote}</p>
+              <div className="c-tp-author">
+                <div className="c-tp-avatar">{r.name[0]}</div>
+                <div>
+                  <div className="c-tp-name">{r.name}</div>
+                  <div className="c-tp-role">{r.role}</div>
+                </div>
+                <div className="c-tp-date">{r.date}</div>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
