@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import CalendlyButton from "@/components/CalendlyButton";
 import CommercialNextSteps from "@/components/CommercialNextSteps";
+import EmailGateDeliverables from "@/components/diagnostic/EmailGateDeliverables";
 import InlineLeadForm from "@/components/InlineLeadForm";
 import { trackSiteTelemetry } from "@/lib/siteTelemetryClient";
 import {
@@ -218,6 +219,8 @@ export default function RecruitmentGrowthDiagnostic() {
               </div>
             </div>
           </section>
+
+          <EmailGateDeliverables answers={answers} />
 
           <CommercialNextSteps
             title="Après le diagnostic"
