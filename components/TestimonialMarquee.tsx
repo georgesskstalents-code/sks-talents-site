@@ -39,11 +39,14 @@ export default function TestimonialMarquee() {
       <div className="overflow-hidden rounded-[36px] border border-brand-teal/10 bg-white/75 px-4 py-8 shadow-soft sm:px-6">
         <div className="pb-8 text-center">
           <p className="text-base font-black uppercase tracking-[0.18em] text-brand-teal sm:text-2xl">
-            Ce qu&apos;ils pensent de nos services ?
+            Ce que nos clients et candidats pensent de nous ?
           </p>
           <h3 className="mt-3 text-3xl font-medium text-brand-stone sm:text-5xl">
-            Découvrez leurs avis !
+            Ce qu&apos;ils pensent de nos services ?
           </h3>
+          <p className="mt-3 text-lg font-medium text-brand-stone sm:text-2xl">
+            Découvrez leurs avis !
+          </p>
         </div>
         <SenjaTestimonials widgetId={senjaWidgetId} className="min-h-[320px]" />
       </div>
@@ -56,11 +59,14 @@ export default function TestimonialMarquee() {
     <div className="overflow-hidden rounded-[36px] border border-brand-teal/10 bg-white/75 px-4 py-8 shadow-soft sm:px-6">
       <div className="pb-8 text-center">
         <p className="text-base font-black uppercase tracking-[0.18em] text-brand-teal sm:text-2xl">
-          Ce qu'ils pensent de nos services ?
+          Ce que nos clients et candidats pensent de nous ?
         </p>
         <h3 className="mt-3 text-3xl font-medium text-brand-stone sm:text-5xl">
-          Découvrez leurs avis !
+          Ce qu&apos;ils pensent de nos services ?
         </h3>
+        <p className="mt-3 text-lg font-medium text-brand-stone sm:text-2xl">
+          Découvrez leurs avis !
+        </p>
       </div>
       <div className="flex min-w-max animate-marquee-testimonials gap-6 px-2">
         {doubled.map((item, index) => (
