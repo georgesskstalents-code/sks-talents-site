@@ -95,7 +95,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap"
         />
         <link rel="preconnect" href="https://player.vimeo.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://player.vimeo.com" />
