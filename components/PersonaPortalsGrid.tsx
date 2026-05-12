@@ -57,7 +57,7 @@ export default function PersonaPortalsGrid({
   portals
 }: Props) {
   return (
-    <section className="py-8 sm:py-14 lg:py-20">
+    <section className="pt-3 pb-8 sm:pt-4 sm:pb-14 lg:pt-6 lg:pb-20">
       <div className="container-shell">
         <RevealOnScroll>
           <p className="eyebrow">{eyebrow}</p>
