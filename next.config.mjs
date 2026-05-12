@@ -51,7 +51,25 @@ const nextConfig = {
         source: "/rejoignez-nous",
         destination: "/job-roles",
         permanent: true
-      }
+      },
+      // Slugs accentes (causent 404 en prod) to ASCII. Genere 2026-05-12.
+      { source: "/blog/diagnostic-ai-cyber-application-r%C3%B4les", destination: "/blog/diagnostic-ai-cyber-application-roles", permanent: true },
+      { source: "/blog/medtech-maintenance-field-service-r%C3%B4les", destination: "/blog/medtech-maintenance-field-service-roles", permanent: true },
+      { source: "/blog/cosm%C3%A9tique-formulation-safety-regulatory-r%C3%B4les", destination: "/blog/cosmetique-formulation-safety-regulatory-roles", permanent: true },
+      { source: "/blog/animal-health-veterinary-leadership-r%C3%B4les", destination: "/blog/animal-health-veterinary-leadership-roles", permanent: true },
+      { source: "/blog/petfood-rd-quality-manufacturing-r%C3%B4les", destination: "/blog/petfood-rd-quality-manufacturing-roles", permanent: true },
+      { source: "/blog/crispr-gene-editing-r%C3%B4les", destination: "/blog/crispr-gene-editing-roles", permanent: true },
+      { source: "/blog/ivd-testing-laboratory-r%C3%B4les", destination: "/blog/ivd-testing-laboratory-roles", permanent: true },
+      { source: "/blog/devenir-v%C3%A9t%C3%A9rinaire-france", destination: "/blog/devenir-veterinaire-france", permanent: true },
+      { source: "/blog/conditions-exercice-v%C3%A9t%C3%A9rinaire-france", destination: "/blog/conditions-exercice-veterinaire-france", permanent: true },
+      { source: "/blog/aon-r%C3%A9mun%C3%A9ration-life-sciences-2025-2026", destination: "/blog/aon-remuneration-life-sciences-2025-2026", permanent: true },
+      { source: "/blog/assurance-qualit%C3%A9-business-dev-salaires-healthtech", destination: "/blog/assurance-qualite-business-dev-salaires-healthtech", permanent: true },
+      { source: "/blog/sterility-assurance-bioproduction-r%C3%B4les", destination: "/blog/sterility-assurance-bioproduction-roles", permanent: true },
+      { source: "/blog/pharmacovigilance-sante-animale-r%C3%B4le", destination: "/blog/pharmacovigilance-sante-animale-role", permanent: true },
+      { source: "/blog/talent-acquisition-emea-r%C3%B4les-penuriques", destination: "/blog/talent-acquisition-emea-roles-penuriques", permanent: true },
+      { source: "/blog/quel-est-le-vrai-co%C3%BBt-mauvais-recrutement", destination: "/blog/quel-est-le-vrai-cout-mauvais-recrutement", permanent: true },
+      { source: "/blog/aligner-recrutement-performance-strat%C3%A9gie-entreprise", destination: "/blog/aligner-recrutement-performance-strategie-entreprise", permanent: true },
+      { source: "/blog/comment-structurer-equipes-forte-croissance-sans-exploser-co%C3%BBts-rh", destination: "/blog/comment-structurer-equipes-forte-croissance-sans-exploser-couts-rh", permanent: true }
     ];
   },
   async headers() {

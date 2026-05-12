@@ -141,9 +141,9 @@ export const articles: Article[] = [
     ]
   },
   {
-    id: "diagnostic-ai-cyber-application-rôles",
+    id: "diagnostic-ai-cyber-application-roles",
     title: "Diagnostic AI, Cyber and Application Roles",
-    slug: "diagnostic-ai-cyber-application-rôles",
+    slug: "diagnostic-ai-cyber-application-roles",
     vertical: "diagnostic",
     persona: ["CPO", "DRH"],
     topic: "skills",
@@ -203,9 +203,9 @@ export const articles: Article[] = [
     ]
   },
   {
-    id: "medtech-maintenance-field-service-rôles",
+    id: "medtech-maintenance-field-service-roles",
     title: "Medtech Maintenance and Field Service Roles",
-    slug: "medtech-maintenance-field-service-rôles",
+    slug: "medtech-maintenance-field-service-roles",
     vertical: "diagnostic",
     persona: ["COO", "DRH"],
     topic: "recruitment",
@@ -249,9 +249,9 @@ export const articles: Article[] = [
     ]
   },
   {
-    id: "cosmétique-formulation-safety-regulatory-rôles",
+    id: "cosmetique-formulation-safety-regulatory-roles",
     title: "Cosmetic Science Hiring: Formulation, Safety, Regulatory",
-    slug: "cosmétique-formulation-safety-regulatory-rôles",
+    slug: "cosmetique-formulation-safety-regulatory-roles",
     vertical: "cosmétique",
     persona: ["CEO", "DRH"],
     topic: "skills",
@@ -295,9 +295,9 @@ export const articles: Article[] = [
     ]
   },
   {
-    id: "animal-health-veterinary-leadership-rôles",
+    id: "animal-health-veterinary-leadership-roles",
     title: "Animal Health Leadership Roles: What to Recruit Now",
-    slug: "animal-health-veterinary-leadership-rôles",
+    slug: "animal-health-veterinary-leadership-roles",
     vertical: "medical-vet",
     persona: ["COO", "DRH"],
     topic: "recruitment",
@@ -357,9 +357,9 @@ export const articles: Article[] = [
     ]
   },
   {
-    id: "petfood-rd-quality-manufacturing-rôles",
+    id: "petfood-rd-quality-manufacturing-roles",
     title: "Petfood R&D, Quality and Manufacturing Roles",
-    slug: "petfood-rd-quality-manufacturing-rôles",
+    slug: "petfood-rd-quality-manufacturing-roles",
     vertical: "petfood",
     persona: ["CEO", "COO"],
     topic: "market",
@@ -627,9 +627,9 @@ export const articles: Article[] = [
     ]
   },
   {
-    id: "crispr-gene-editing-rôles",
+    id: "crispr-gene-editing-roles",
     title: "CRISPR Gene Editing: Key Roles & Skills",
-    slug: "crispr-gene-editing-rôles",
+    slug: "crispr-gene-editing-roles",
     vertical: "biotech",
     persona: ["DRH", "CPO"],
     topic: "skills",
@@ -1149,9 +1149,9 @@ export const articles: Article[] = [
     ]
   },
   {
-    id: "ivd-testing-laboratory-rôles",
+    id: "ivd-testing-laboratory-roles",
     title: "IVD Testing: Laboratory Roles & Recruitment",
-    slug: "ivd-testing-laboratory-rôles",
+    slug: "ivd-testing-laboratory-roles",
     vertical: "diagnostic",
     persona: ["DRH", "CPO"],
     topic: "recruitment",
@@ -1709,9 +1709,9 @@ export const articles: Article[] = [
     ]
   },
   {
-    id: "devenir-vétérinaire-france",
+    id: "devenir-veterinaire-france",
     title: "Devenir vétérinaire en France : les 5 écoles à connaître",
-    slug: "devenir-vétérinaire-france",
+    slug: "devenir-veterinaire-france",
     vertical: "vet-services",
     persona: ["CEO", "DRH"],
     topic: "market",
@@ -1751,9 +1751,9 @@ export const articles: Article[] = [
     ]
   },
   {
-    id: "conditions-exercice-vétérinaire-france",
+    id: "conditions-exercice-veterinaire-france",
     title: "Conditions d'exercice vétérinaire en France : les repères à connaître",
-    slug: "conditions-exercice-vétérinaire-france",
+    slug: "conditions-exercice-veterinaire-france",
     vertical: "vet-services",
     persona: ["CEO", "DRH"],
     topic: "market",
@@ -1797,9 +1797,9 @@ export const articles: Article[] = [
     ]
   },
   {
-    id: "aon-rémunération-life-sciences-2025-2026",
+    id: "aon-remuneration-life-sciences-2025-2026",
     title: "Rémunération Life Sciences 2025-2026 : ce que dit Aon pour l'Europe et la France",
-    slug: "aon-rémunération-life-sciences-2025-2026",
+    slug: "aon-remuneration-life-sciences-2025-2026",
     vertical: "biotech",
     persona: ["CEO", "DRH", "CPO"],
     topic: "market",
@@ -2479,9 +2479,9 @@ export const articles: Article[] = [
     ]
   },
   {
-    id: "assurance-qualité-business-dev-salaires-healthtech",
+    id: "assurance-qualite-business-dev-salaires-healthtech",
     title: "Assurance qualité et business développement : quels métiers ont le plus progressé ?",
-    slug: "assurance-qualité-business-dev-salaires-healthtech",
+    slug: "assurance-qualite-business-dev-salaires-healthtech",
     vertical: "biotech",
     persona: ["CEO", "DRH", "CPO"],
     topic: "skills",
@@ -2692,9 +2692,9 @@ export const articles: Article[] = [
     ]
   },
   {
-    id: "sterility-assurance-bioproduction-rôles",
+    id: "sterility-assurance-bioproduction-roles",
     title: "Sterility assurance : le rôle qui protège vos lots (et vos audits) en bioproduction",
-    slug: "sterility-assurance-bioproduction-rôles",
+    slug: "sterility-assurance-bioproduction-roles",
     vertical: "biotech",
     persona: ["COO", "DRH"],
     topic: "recruitment",
@@ -2767,9 +2767,9 @@ export const articles: Article[] = [
     ]
   },
   {
-    id: "pharmacovigilance-sante-animale-rôle",
+    id: "pharmacovigilance-sante-animale-role",
     title: "Pharmacovigilance en santé animale : un rôle discret mais structurants pour la crédibilité marché",
-    slug: "pharmacovigilance-sante-animale-rôle",
+    slug: "pharmacovigilance-sante-animale-role",
     vertical: "medical-vet",
     persona: ["CEO", "COO", "DRH"],
     topic: "market",
@@ -2817,9 +2817,9 @@ export const articles: Article[] = [
     ]
   },
   {
-    id: "talent-acquisition-emea-rôles-penuriques",
+    id: "talent-acquisition-emea-roles-penuriques",
     title: "Talent Acquisition EMEA : le playbook minimal pour recruter des rôles pénuriques en Life Sciences",
-    slug: "talent-acquisition-emea-rôles-penuriques",
+    slug: "talent-acquisition-emea-roles-penuriques",
     vertical: "biotech",
     persona: ["COO", "DRH"],
     topic: "skills",
@@ -2942,7 +2942,7 @@ export const articles: Article[] = [
   {
     id: "coût-vrai-mauvais-recrutement",
     title: "Quel est le vrai coût d’un mauvais recrutement (et comment l’éviter dès aujourd’hui)",
-    slug: "quel-est-le-vrai-coût-mauvais-recrutement",
+    slug: "quel-est-le-vrai-cout-mauvais-recrutement",
     vertical: "people-ops",
     persona: ["CEO", "COO"],
     topic: "performance",
@@ -3066,7 +3066,7 @@ export const articles: Article[] = [
   {
     id: "aligner-recrutement-performance-stratégie",
     title: "Comment aligner recrutement, performance et stratégie d’entreprise pour accélérer votre croissance",
-    slug: "aligner-recrutement-performance-stratégie-entreprise",
+    slug: "aligner-recrutement-performance-strategie-entreprise",
     vertical: "people-ops",
     persona: ["CEO", "COO", "CPO"],
     topic: "strategy",
@@ -3158,7 +3158,7 @@ export const articles: Article[] = [
   {
     id: "structurer-equipes-forte-croissance-coûts-rh",
     title: "Comment structurer vos équipes en forte croissance sans exploser vos coûts RH",
-    slug: "comment-structurer-equipes-forte-croissance-sans-exploser-coûts-rh",
+    slug: "comment-structurer-equipes-forte-croissance-sans-exploser-couts-rh",
     vertical: "people-ops",
     persona: ["CEO", "COO", "DRH"],
     topic: "growth",
