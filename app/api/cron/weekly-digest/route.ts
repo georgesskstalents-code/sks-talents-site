@@ -12,7 +12,9 @@ import {
   fetchSeoKeywordsSnapshot,
   type SeoKeywordsSnapshot
 } from "@/lib/seoWeeklyReport";
-import { buildStrategicObjectivesSectionHtml } from "@/lib/strategicObjectives";
+import { buildStrategicObjectivesSectionHtml, seoTargets } from "@/lib/strategicObjectives";
+import { fetchGscQueryStats } from "@/lib/gscClient";
+import { fetchLatestChecks } from "@/lib/llmMonitorStore";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -133,6 +135,7 @@ function buildHtmlEmail(opts: {
   dashboardUrl: string;
   suiviUrl: string;
   seoKeywords: SeoKeywordsSnapshot;
+  strategicSnapshot: import("@/lib/strategicObjectives").StrategicSnapshot;
 }) {
   const pv = pct(opts.pageviewsCur, opts.pageviewsPrev);
   const us = pct(opts.uniqueSessionsCur, opts.uniqueSessionsPrev);
@@ -270,7 +273,7 @@ function buildHtmlEmail(opts: {
       </table>
     </td></tr>
 
-    ${buildStrategicObjectivesSectionHtml()}
+    ${buildStrategicObjectivesSectionHtml(opts.strategicSnapshot)}
     ${buildGscSectionHtml()}
     ${buildKeywordsSectionHtml(opts.seoKeywords)}
 
@@ -458,6 +461,19 @@ async function buildAndSendDigest() {
 
   const seoKeywords = await fetchSeoKeywordsSnapshot();
 
+  // Strategic objectives live data (best-effort, falls back to manual mode if not configured).
+  const [gscStats, llmChecks] = await Promise.all([
+    fetchGscQueryStats({ queries: seoTargets.map((t) => t.query) }).catch((err) => {
+      console.error("GSC fetch failed in weekly-digest", err);
+      return null;
+    }),
+    fetchLatestChecks().catch((err) => {
+      console.error("LLM checks fetch failed in weekly-digest", err);
+      return [];
+    })
+  ]);
+  const strategicSnapshot = { gscStats, llmChecks };
+
   const html = buildHtmlEmail({
     startLabel,
     endLabel,
@@ -480,7 +496,8 @@ async function buildAndSendDigest() {
     actions,
     dashboardUrl,
     suiviUrl,
-    seoKeywords
+    seoKeywords,
+    strategicSnapshot
   });
 
   const subject = `Rapport hebdomadaire SKS Talents - semaine du ${startLabel}`;
