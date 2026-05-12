@@ -3,6 +3,7 @@
 import { MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useCookieConsent } from "@/lib/useCookieConsent";
+import { useSwipeToDismiss } from "@/lib/useSwipeToDismiss";
 
 const COPY = {
   fr: {
@@ -25,6 +26,10 @@ export default function ChatwootWidget() {
   const [hintVisible, setHintVisible] = useState(false);
   const [lang, setLang] = useState<Lang>("fr");
   const consent = useCookieConsent();
+  const { visible: launcherVisible, swipeHandlers } = useSwipeToDismiss({
+    storageKey: "sks-chat-launcher-dismissed-at",
+    reshowAfterMs: 180000
+  });
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -138,12 +143,15 @@ export default function ChatwootWidget() {
         </button>
       ) : null}
 
+      {launcherVisible ? (
       <button
         type="button"
         onClick={() => {
           dismissHint();
           openLocalChat();
         }}
+        onTouchStart={swipeHandlers.onTouchStart}
+        onTouchEnd={swipeHandlers.onTouchEnd}
         className="pointer-events-auto inline-flex items-center gap-3 rounded-full border border-brand-teal/12 bg-brand-ink px-4 py-3 text-white shadow-[0_16px_40px_rgba(15,23,42,0.2)] transition duration-300 hover:-translate-y-0.5 hover:opacity-95"
         aria-label={t.aria}
       >
@@ -158,6 +166,7 @@ export default function ChatwootWidget() {
           <span className="block text-sm font-semibold">{t.cta}</span>
         </span>
       </button>
+      ) : null}
     </div>
   );
 }
