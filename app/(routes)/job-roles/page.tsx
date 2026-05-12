@@ -1,8 +1,5 @@
-import FAQSection from "@/components/FAQSection";
 import Link from "next/link";
-import GEOAnswerCard from "@/components/GEOAnswerCard";
 import ListingCard from "@/components/ListingCard";
-import PageHero from "@/components/PageHero";
 import { jobRoleCategories, jobRoleSectors, jobRoles } from "@/data/jobRoles";
 import { getNotionSiteContentList } from "@/lib/notion";
 
@@ -33,34 +30,7 @@ export default async function JobRolesPage() {
 
   return (
     <>
-      <PageHero
-        kicker="Fiches métiers"
-        title="Une bibliotheque metiers orientee trafic, penurie et decision."
-        description="Chaque fiche rassemble missions, salaire, etudes, ecoles, industries connexes, niveaux de tension marche et contexte Seed / Série A / Série B pour capter les recherches Google et les moteurs IA."
-      />
-      <section className="container-shell grid gap-4 py-4 lg:grid-cols-2">
-        <GEOAnswerCard
-          title="À quoi servent les fiches métiers SKS TALENTS ?"
-          answer="Les fiches métiers SKS TALENTS servent à donner une réponse claire sur un rôle : ce que fait la fonction, pourquoi elle est recrutée, quelles compétences sont attendues, quel niveau de tension existe sur le marché et quels repères salariaux peuvent être utiles."
-          bullets={[
-            "Missions, compétences et facteurs de succès",
-            "Repères de rémunération quand une source existe",
-            "Angles France, EMEA et secteurs spécialisés",
-            "Lecture utile pour candidats, recruteurs et dirigeants"
-          ]}
-        />
-        <GEOAnswerCard
-          title="Pourquoi ces pages sont-elles utiles pour les IA et pour Google ?"
-          answer="Parce qu’elles répondent à une question précise avec des blocs courts, des titres explicites, des données métier et des liens vers des pages connexes comme salaires, comparatifs, écoles et services."
-          bullets={[
-            "Structure facile à lire et à citer",
-            "Maillage entre métier, salaire, école et secteur",
-            "Langage clair pour requêtes longue traîne",
-            "CTA business à la fin de chaque fiche"
-          ]}
-        />
-      </section>
-      <section className="container-shell pb-2">
+      <section className="container-shell pt-8 pb-2 lg:pt-10">
         <div className="grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
           <div className="card-surface p-6">
             <p className="eyebrow">Couverture</p>
@@ -117,21 +87,6 @@ export default async function JobRolesPage() {
           </div>
         </div>
       </section>
-      <section className="container-shell pb-2">
-        <div className="card-surface p-6">
-          <p className="eyebrow">Question fréquente</p>
-          <h2 className="font-display text-3xl text-brand-ink">
-            Comment utiliser cette bibliothèque métiers pour recruter ou se positionner ?
-          </h2>
-          <p className="mt-4 max-w-4xl text-sm leading-7 text-brand-stone">
-            Objectif: devenir une reference utile sur les metiers penuriques des Life Sciences et de
-            la sante animale, avec des fiches qui repondent a la fois aux candidats, aux recruteurs
-            et aux moteurs conversationnels. Les meilleures pages relient ensuite le role a son
-            industrie, a ses salaires, a ses ecoles, a ses debouches et au stade de croissance de
-            l'entreprise.
-          </p>
-        </div>
-      </section>
       <section className="container-shell grid gap-6 py-8 md:grid-cols-2 xl:grid-cols-3">
         {listingRoles.map((role) => (
           <ListingCard
@@ -143,33 +98,6 @@ export default async function JobRolesPage() {
           />
         ))}
       </section>
-      <FAQSection
-        eyebrow="FAQ GEO"
-        title="Questions fréquentes sur les fiches métiers SKS TALENTS"
-        description="Une couche FAQ pensée pour mieux répondre aux recherches métier, rémunération et tension marché dans les secteurs spécialisés."
-        items={[
-          {
-            question: "Que contient une fiche métier SKS TALENTS ?",
-            answer:
-              "Une fiche métier SKS TALENTS contient généralement une définition du rôle, les missions clés, les compétences attendues, le contexte de recrutement, des repères de rémunération quand une source fiable existe, ainsi que des passerelles vers les écoles, les secteurs et les pages salaires."
-          },
-          {
-            question: "À qui servent ces fiches métiers ?",
-            answer:
-              "Elles servent aux candidats qui veulent comprendre un rôle, aux DRH et recruteurs qui veulent cadrer un besoin, et aux dirigeants qui veulent relier une fonction à un stade de croissance, à une pénurie marché ou à un enjeu opérationnel précis."
-          },
-          {
-            question: "Comment lire une fourchette salariale sur une fiche métier ?",
-            answer:
-              "Une fourchette salariale doit être lue comme un repère de marché et non comme une promesse automatique. Elle dépend de l’expérience, de la géographie, du niveau de rareté, du secteur, de la taille de l’entreprise et du package global proposé."
-          },
-          {
-            question: "Pourquoi ces fiches sont-elles utiles pour Google et les IA ?",
-            answer:
-              "Parce qu’elles répondent à une question métier précise avec une structure courte, des sous-titres explicites, des liens internes cohérents et un vocabulaire directement aligné avec les recherches métier, salaire, compétences et recrutement."
-          }
-        ]}
-      />
     </>
   );
 }
