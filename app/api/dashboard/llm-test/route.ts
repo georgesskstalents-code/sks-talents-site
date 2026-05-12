@@ -24,7 +24,7 @@ export async function GET(request: Request) {
   const expected = process.env.DASHBOARD_PRIVATE_TOKEN;
 
   if (!expected || token !== expected) {
-    return noStoreJson({ ok: false, message: "Unauthorized" }, { status: 401 });
+    return noStoreJson({ ok: false, message: "Unauthorized" }, 401);
   }
 
   const providers: LlmProvider[] = ["openai", "anthropic", "perplexity"];

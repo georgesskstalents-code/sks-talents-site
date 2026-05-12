@@ -191,3 +191,86 @@ PERPLEXITY_API_KEY=pplx-...
 
 Une fois tout en place, **le rapport hebdo lundi devient un cockpit autonome** pour
 suivre la progression sur les 2 objectifs 2030.
+
+---
+
+## 6. LinkedIn tracking (ajoute 2026-05-12)
+
+### Architecture
+
+Source : export manuel hebdo via DB Notion (CEO remplit lundi 8h Paris).
+Synchronisation : 3 crons Vercel orchestrent Notion <-> Supabase + generation contenu.
+
+### Tables Supabase requises
+
+Executer le SQL de `docs/SUPABASE-LINKEDIN-SCHEMA.sql` dans le Supabase SQL Editor.
+Cree 3 tables : `linkedin_kpis_weekly`, `linkedin_posts`, `linkedin_veille`.
+
+### Notion DBs requises (board "LinkedIn Agency")
+
+4 DBs sur le board parent `41bb9c354a9d4c7aa968e1ed2f4af1af` :
+- `KPIs LinkedIn Weekly`   = `f3fab9e8-ff7f-4b8f-8966-2c5f13ef5bb4`
+- `LinkedIn Queue Validation` = `0fd5d67a-99ef-40ae-9c7a-5f93bbfb381f`
+- `Veille Sectorielle`     = `4c76180e-2a1a-4ebf-bce3-e47f4abe4a1f`
+- `LinkedIn Calendar`      = `644cc7c5-1fc0-4f16-a08c-db814364a614`
+
+L'integration Notion `SKS - Content Sync` doit avoir acces a chaque DB (Share > Connections).
+
+### Env vars Vercel a ajouter
+
+```
+NOTION_TOKEN=ntn_xxx  # deja existant
+NOTION_DB_KPIS_WEEKLY=f3fab9e8-ff7f-4b8f-8966-2c5f13ef5bb4
+NOTION_DB_POSTS_QUEUE=0fd5d67a-99ef-40ae-9c7a-5f93bbfb381f
+NOTION_DB_VEILLE=4c76180e-2a1a-4ebf-bce3-e47f4abe4a1f
+NOTION_DB_CALENDAR=644cc7c5-1fc0-4f16-a08c-db814364a614
+```
+
+### 3 crons LinkedIn (vercel.json)
+
+| Cron | Schedule | Role |
+|------|----------|------|
+| `linkedin-veille` | `0 7 * * *` (quotidien 7h UTC) | Scan 6 RSS sources -> Notion + Supabase |
+| `linkedin-kpis-weekly` | `30 6 * * 1` (lundi 6h30 UTC) | Lit Notion KPIs -> Supabase |
+| `linkedin-content-gen` | `0 18 * * 0` (dimanche 18h UTC) | Genere 5 posts via Claude -> Notion Queue Validation |
+
+### Sources RSS scannees
+
+- france-biotech.fr (institutionnel)
+- afvac.com (Association Veterinaires)
+- lepointveterinaire.fr (presse pro)
+- veterinaire.fr (Ordre Veterinaire)
+- lehub.bpifrance.fr (BPI)
+- biotech-finances.com (presse biotech)
+
+### Process hebdomadaire CEO
+
+| Heure (Paris) | Action |
+|---|---|
+| Dim 19h | Le cron content-gen a tourne -> 5 posts dans Notion Queue Validation |
+| Lun 7h | Le cron veille a tourne (et tous les jours) -> nouvelles actus dans Notion Veille |
+| Lun 7h30 | Le cron kpis-weekly a tourne -> attend que tu remplisses |
+| Lun 8h | **Tu remplis** 12 champs dans DB Notion "KPIs LinkedIn Weekly" (Trustpilot LinkedIn Analytics perso + page) |
+| Lun 8h05 | **Tu valides** les 5 posts proposes dans Notion Queue Validation |
+| Lun 8h10 | **Tu reçois** l'email weekly-digest avec section LinkedIn enrichie |
+
+### Tests manuels
+
+```
+# Test veille (lance le scan une fois)
+https://www.skstalents.fr/api/cron/linkedin-veille?token=DASHBOARD_PRIVATE_TOKEN
+
+# Test KPIs (lit Notion -> Supabase)
+https://www.skstalents.fr/api/cron/linkedin-kpis-weekly?token=DASHBOARD_PRIVATE_TOKEN
+
+# Test content-gen (genere 5 posts)
+https://www.skstalents.fr/api/cron/linkedin-content-gen?token=DASHBOARD_PRIVATE_TOKEN
+```
+
+### Cout LinkedIn add-on
+
+- Supabase : gratuit (inclus dans Free tier)
+- Notion API : gratuit
+- Anthropic API (content-gen 1x/sem) : ~$0.10/sem = $5/an
+- RSS fetches : gratuit
+- **Total add-on LinkedIn : ~$5/an**

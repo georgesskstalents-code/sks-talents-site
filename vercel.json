@@ -20,6 +20,18 @@
     {
       "path": "/api/cron/llm-mention-monitor",
       "schedule": "0 6 * * 1"
+    },
+    {
+      "path": "/api/cron/linkedin-veille",
+      "schedule": "0 7 * * *"
+    },
+    {
+      "path": "/api/cron/linkedin-kpis-weekly",
+      "schedule": "30 6 * * 1"
+    },
+    {
+      "path": "/api/cron/linkedin-content-gen",
+      "schedule": "0 18 * * 0"
     }
   ]
 }

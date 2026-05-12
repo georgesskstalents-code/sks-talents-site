@@ -33,7 +33,7 @@ export async function GET(request: Request) {
     }
   });
   if (!authorized) {
-    return noStoreJson({ ok: false, message: "Unauthorized" }, { status: 401 });
+    return noStoreJson({ ok: false, message: "Unauthorized" }, 401);
   }
 
   const prompts = llmTargets.map((t) => t.prompt);
