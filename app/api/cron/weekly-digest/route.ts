@@ -15,6 +15,7 @@ import {
 import { buildStrategicObjectivesSectionHtml, seoTargets } from "@/lib/strategicObjectives";
 import { fetchGscQueryStats } from "@/lib/gscClient";
 import { fetchLatestChecks } from "@/lib/llmMonitorStore";
+import { buildLinkedInSectionHtml, fetchLinkedInSnapshot } from "@/lib/linkedinReport";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -136,6 +137,7 @@ function buildHtmlEmail(opts: {
   suiviUrl: string;
   seoKeywords: SeoKeywordsSnapshot;
   strategicSnapshot: import("@/lib/strategicObjectives").StrategicSnapshot;
+  linkedinSnapshot: import("@/lib/linkedinReport").LinkedInSnapshot;
 }) {
   const pv = pct(opts.pageviewsCur, opts.pageviewsPrev);
   const us = pct(opts.uniqueSessionsCur, opts.uniqueSessionsPrev);
@@ -274,6 +276,7 @@ function buildHtmlEmail(opts: {
     </td></tr>
 
     ${buildStrategicObjectivesSectionHtml(opts.strategicSnapshot)}
+    ${buildLinkedInSectionHtml(opts.linkedinSnapshot)}
     ${buildGscSectionHtml()}
     ${buildKeywordsSectionHtml(opts.seoKeywords)}
 
@@ -462,7 +465,7 @@ async function buildAndSendDigest() {
   const seoKeywords = await fetchSeoKeywordsSnapshot();
 
   // Strategic objectives live data (best-effort, falls back to manual mode if not configured).
-  const [gscStats, llmChecks] = await Promise.all([
+  const [gscStats, llmChecks, linkedinSnapshot] = await Promise.all([
     fetchGscQueryStats({ queries: seoTargets.map((t) => t.query) }).catch((err) => {
       console.error("GSC fetch failed in weekly-digest", err);
       return null;
@@ -470,6 +473,10 @@ async function buildAndSendDigest() {
     fetchLatestChecks().catch((err) => {
       console.error("LLM checks fetch failed in weekly-digest", err);
       return [];
+    }),
+    fetchLinkedInSnapshot().catch((err) => {
+      console.error("LinkedIn snapshot fetch failed in weekly-digest", err);
+      return { latestKpis: null, topPosts: [], veille: [], available: false };
     })
   ]);
   const strategicSnapshot = { gscStats, llmChecks };
@@ -497,7 +504,8 @@ async function buildAndSendDigest() {
     dashboardUrl,
     suiviUrl,
     seoKeywords,
-    strategicSnapshot
+    strategicSnapshot,
+    linkedinSnapshot
   });
 
   const subject = `Rapport hebdomadaire SKS Talents - semaine du ${startLabel}`;
