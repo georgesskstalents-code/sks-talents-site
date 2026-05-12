@@ -275,7 +275,7 @@ export default function DemoStage({ sector, scenes, totalSeconds, ariaLabel }: P
       {/* Final state */}
       {progressMs >= totalMs && (
         <div className="border-t border-brand-teal/10 bg-brand-mint/30 px-4 py-3 text-center text-caption font-semibold text-brand-teal sm:px-6">
-          ✓ Démo terminée - clique sur ⟳ pour rejouer
+          ✓ Démo terminée, clique sur ⟳ pour rejouer
         </div>
       )}
     </div>

@@ -15,8 +15,10 @@ const MAX_VERTICAL_PX = 40; // pour eviter les scroll verticaux qui declenchent 
 export function useSwipeToDismiss(opts: {
   storageKey: string;
   reshowAfterMs: number;
+  autoDismissAfterMs?: number;
+  autoDismissMobileOnly?: boolean;
 }) {
-  const { storageKey, reshowAfterMs } = opts;
+  const { storageKey, reshowAfterMs, autoDismissAfterMs, autoDismissMobileOnly } = opts;
   const [visible, setVisible] = useState(true);
   const startRef = useRef<{ x: number; y: number } | null>(null);
   const timerRef = useRef<number | null>(null);
@@ -46,6 +48,25 @@ export function useSwipeToDismiss(opts: {
       if (timerRef.current !== null) window.clearTimeout(timerRef.current);
     };
   }, [storageKey, reshowAfterMs]);
+
+  // Auto-dismiss apres autoDismissAfterMs si non interactif. Optionnellement mobile-only.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (!autoDismissAfterMs || !visible) return;
+    if (autoDismissMobileOnly && window.matchMedia("(min-width: 1024px)").matches) return;
+
+    const autoTimer = window.setTimeout(() => {
+      setVisible(false);
+      window.sessionStorage.setItem(storageKey, String(Date.now()));
+      if (timerRef.current !== null) window.clearTimeout(timerRef.current);
+      timerRef.current = window.setTimeout(() => {
+        setVisible(true);
+        window.sessionStorage.removeItem(storageKey);
+      }, reshowAfterMs);
+    }, autoDismissAfterMs);
+
+    return () => window.clearTimeout(autoTimer);
+  }, [autoDismissAfterMs, autoDismissMobileOnly, storageKey, reshowAfterMs, visible]);
 
   const onTouchStart = useCallback((e: React.TouchEvent) => {
     const t = e.touches[0];

@@ -6,15 +6,22 @@ import sectorHubs from "@/data/sectorHubs.json";
 
 const hub = sectorHubs["animal-health"];
 
+// Hub masqué (CEO 2026-05-12, trop d'info pour le lecteur). Passer à true pour réactiver.
+const HUB_VISIBLE = false;
+
 export default function AnimalHealthHeader() {
   const pathname = usePathname();
+
+  if (!HUB_VISIBLE) {
+    return null;
+  }
 
   if (pathname === "/animal-health") {
     return null;
   }
 
   return (
-    <section className="border-b border-brand-teal/10 bg-gradient-to-b from-white to-brand-mint/20 backdrop-blur">
+    <section className="hidden lg:block border-b border-brand-teal/10 bg-gradient-to-b from-white to-brand-mint/20 backdrop-blur">
       <div className="container-shell py-5">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>

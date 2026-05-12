@@ -28,7 +28,9 @@ export default function ChatwootWidget() {
   const consent = useCookieConsent();
   const { visible: launcherVisible, swipeHandlers } = useSwipeToDismiss({
     storageKey: "sks-chat-launcher-dismissed-at",
-    reshowAfterMs: 180000
+    reshowAfterMs: 180000,
+    autoDismissAfterMs: 8000,
+    autoDismissMobileOnly: true
   });
 
   useEffect(() => {

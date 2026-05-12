@@ -329,7 +329,7 @@ export default function FicheMetierPage({ role, relatedRoles }: Props) {
                 Le chemin <em>fréquent</em><br />vers ce poste.
               </h2>
               <p className="fm-sec-kicker">
-                Trois jalons typiques observés dans la base SKS Talents - non normatifs, mais utiles pour cadrer un brief.
+                Trois jalons typiques observés dans la base SKS Talents. Non normatifs, mais utiles pour cadrer un brief.
               </p>
             </div>
           </div>
@@ -386,7 +386,7 @@ export default function FicheMetierPage({ role, relatedRoles }: Props) {
             <div>
               <h2 className="fm-sec-title">Rôles <em>voisins</em>.</h2>
               <p className="fm-sec-kicker">
-                Les enjeux techniques, réglementaires et d'exécution se ressemblent - utile pour comparer un brief ou élargir un sourcing.
+                Les enjeux techniques, réglementaires et d'exécution se ressemblent. Utile pour comparer un brief ou élargir un sourcing.
               </p>
             </div>
           </div>

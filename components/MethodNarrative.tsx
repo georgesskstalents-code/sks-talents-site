@@ -11,7 +11,7 @@ const chapters = [
     chapter: "Chapitre 2",
     title: "On lit le marché à votre place",
     body:
-      "Pénurie réelle ou imaginaire ? Qui bouge dans votre vertical biotech, diagnostic, vétérinaire ou petfood ? Quels concurrents Série A/B recrutent les mêmes profils ? Nous activons notre réseau spécialisé Life Sciences & Santé animale pour vous apporter une lecture marché claire - pas une liste de CV."
+      "Pénurie réelle ou imaginaire ? Qui bouge dans votre vertical biotech, diagnostic, vétérinaire ou petfood ? Quels concurrents Série A/B recrutent les mêmes profils ? Nous activons notre réseau spécialisé Life Sciences & Santé animale pour vous apporter une lecture marché claire, pas une liste de CV."
   },
   {
     chapter: "Chapitre 3",
@@ -23,7 +23,7 @@ const chapters = [
     chapter: "Chapitre 4",
     title: "On structure pour libérer la stratégie et l’humain",
     body:
-      "Au-delà du recrutement, nous structurons la fonction RH par la digitalisation et l’automatisation des tâches à faible valeur ajoutée. La direction se concentre sur la stratégie et l’humain - là où se joue vraiment le succès des projets Life Sciences & Santé animale."
+      "Au-delà du recrutement, nous structurons la fonction RH par la digitalisation et l’automatisation des tâches à faible valeur ajoutée. La direction se concentre sur la stratégie et l’humain, là où se joue vraiment le succès des projets Life Sciences & Santé animale."
   }
 ];
 

@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { type Article, getArticleVerticalLabel } from "@/data/articles";
+import { getEditorialHeroImage } from "@/lib/editorialHeroImage";
 import "./blog-magazine.css";
 
 type Props = {
@@ -22,10 +24,23 @@ function authorInitial(author?: string) {
 }
 
 function ArticleCard({ article, index, variant }: { article: Article; index: number; variant: "featured-tall" | "col-4" | "col-3" }) {
+  const heroImage = getEditorialHeroImage({
+    slug: article.slug,
+    title: article.title,
+    topicLabel: article.topic,
+    verticalLabel: getArticleVerticalLabel(article.vertical)
+  });
   return (
-    <article className={`bmag-card ${variant}`}>
+    <article className={`bmag-card ${variant}`} data-vertical={article.vertical}>
       <Link href={`/blog/${article.slug}`}>
         <div className="bmag-card-thumb">
+          <Image
+            src={heroImage.src}
+            alt={heroImage.alt}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            className="bmag-card-thumb-img"
+          />
           <div className="bmag-card-thumb-num">N°{String(index + 1).padStart(2, "0")}</div>
           <div className="bmag-card-thumb-glyph">{getArticleVerticalLabel(article.vertical).charAt(0)}</div>
         </div>
@@ -50,20 +65,26 @@ export default function BlogMagazine({ articles }: Props) {
 
   const [featured, ...rest] = articles;
   const gridArticles = rest.slice(0, 5);
+  const featuredImage = getEditorialHeroImage({
+    slug: featured.slug,
+    title: featured.title,
+    topicLabel: featured.topic,
+    verticalLabel: getArticleVerticalLabel(featured.vertical)
+  });
 
   return (
     <div className="bmag-root">
       {/* Masthead */}
       <section className="bmag-masthead">
         <div className="bmag-mast-left">
-          <div className="bmag-mast-eyebrow">Vol. XII · N°01</div>
-          <div className="bmag-mast-edition">Édition · 2026</div>
+          <div className="bmag-mast-eyebrow">Le journal de SKS</div>
+          <div className="bmag-mast-edition">Articles & analyses</div>
         </div>
         <h1 className="bmag-mast-title">
           Res<em>sources</em>
         </h1>
         <div className="bmag-mast-right">
-          <div className="bmag-mast-eyebrow">Le journal de SKS</div>
+          <div className="bmag-mast-eyebrow">Mai 2026</div>
           <div className="bmag-mast-meta">
             Lectures, analyses et terrain pour Life Sciences, diagnostic, santé animale et petfood premium.
           </div>
@@ -71,8 +92,16 @@ export default function BlogMagazine({ articles }: Props) {
       </section>
 
       {/* Hero featured article */}
-      <section className="bmag-hero">
+      <section className="bmag-hero" data-vertical={featured.vertical}>
         <div className="bmag-hero-art">
+          <Image
+            src={featuredImage.src}
+            alt={featuredImage.alt}
+            fill
+            sizes="(max-width: 980px) 100vw, 50vw"
+            className="bmag-hero-art-img"
+            priority
+          />
           <div className="bmag-hero-art-bg" />
           <div className="bmag-hero-art-grain" />
           <div className="bmag-hero-art-cap">

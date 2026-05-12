@@ -24,7 +24,10 @@ export default function Hero() {
 
       <div className="container-shell relative pb-6 pt-6 sm:pt-8 lg:pb-10 lg:pt-10">
         <div className="mx-auto max-w-4xl space-y-4 text-left">
-          <p className="eyebrow">Executive search · Life Sciences &amp; Santé animale</p>
+          <p className="eyebrow">
+            Executive search ·{" "}
+            <span className="block lg:inline">Life Sciences &amp; Santé animale</span>
+          </p>
           <h1 className="t-h1">
             Recruter les bons talents n’est pas un enjeu RH.{" "}
             <span className="text-brand-teal italic">C’est une décision stratégique pour votre COMEX.</span>
