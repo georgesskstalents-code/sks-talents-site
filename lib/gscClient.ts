@@ -1,16 +1,19 @@
 /**
- * Google Search Console client - Service Account JWT auth (server-to-server).
+ * Google Search Console client - 2 methodes d'auth supportees :
  *
- * Setup requis :
- *  1. Console Google Cloud > IAM > creer Service Account
- *  2. Generer une cle JSON, copier le contenu et l'encoder en base64 :
- *     cat sa.json | base64 -w 0
- *  3. Vercel env : GSC_SERVICE_ACCOUNT_JSON_B64 = <base64>
- *  4. Search Console > Parametres > Utilisateurs > ajouter l'email du SA (xxx@xxx.iam.gserviceaccount.com)
- *     avec acces 'Restreint' minimum
- *  5. Vercel env : GSC_SITE_URL = sc-domain:skstalents.fr  (ou https://www.skstalents.fr/)
+ * 1. OAuth refresh token (PREFERE - pour contourner le bug "SA email blocked" sur GSC UI)
+ *    Vercel env :
+ *      GSC_OAUTH_CLIENT_ID
+ *      GSC_OAUTH_CLIENT_SECRET
+ *      GSC_OAUTH_REFRESH_TOKEN
+ *    + GSC_SITE_URL
  *
- * Aucune dependance externe : on signe le JWT en RS256 avec Node crypto et on POST a oauth2.googleapis.com.
+ * 2. Service Account JWT (fallback - bloque sur certains comptes Google)
+ *    Vercel env :
+ *      GSC_SERVICE_ACCOUNT_JSON_B64
+ *      GSC_SITE_URL
+ *
+ * Le code essaie OAuth d'abord, fallback sur SA si OAuth absent. Aucune dependance externe.
  */
 
 import crypto from "node:crypto";
@@ -33,10 +36,55 @@ export type GscQueryStat = {
   ctr: number;
 };
 
+export type AuthMethod = "oauth_refresh" | "service_account" | "none";
+
 function base64UrlEncode(buf: Buffer | string): string {
   const b64 = Buffer.isBuffer(buf) ? buf.toString("base64") : Buffer.from(buf).toString("base64");
   return b64.replace(/=+$/g, "").replace(/\+/g, "-").replace(/\//g, "_");
 }
+
+// ---------------- OAuth refresh token method (preferred) ----------------
+
+function hasOAuthCredentials(): boolean {
+  return Boolean(
+    process.env.GSC_OAUTH_CLIENT_ID &&
+      process.env.GSC_OAUTH_CLIENT_SECRET &&
+      process.env.GSC_OAUTH_REFRESH_TOKEN
+  );
+}
+
+async function getAccessTokenFromOAuth(): Promise<string | null> {
+  const clientId = process.env.GSC_OAUTH_CLIENT_ID;
+  const clientSecret = process.env.GSC_OAUTH_CLIENT_SECRET;
+  const refreshToken = process.env.GSC_OAUTH_REFRESH_TOKEN;
+  if (!clientId || !clientSecret || !refreshToken) return null;
+
+  try {
+    const response = await fetch(TOKEN_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        client_id: clientId,
+        client_secret: clientSecret,
+        refresh_token: refreshToken,
+        grant_type: "refresh_token"
+      }),
+      cache: "no-store"
+    });
+    if (!response.ok) {
+      const body = await response.text().catch(() => "");
+      console.error("GSC OAuth refresh failed", response.status, body.slice(0, 240));
+      return null;
+    }
+    const data = (await response.json()) as { access_token?: string };
+    return data.access_token ?? null;
+  } catch (err) {
+    console.error("GSC OAuth fetch error", err);
+    return null;
+  }
+}
+
+// ---------------- Service Account JWT method (fallback) ----------------
 
 function loadServiceAccount(): ServiceAccount | null {
   const raw = process.env.GSC_SERVICE_ACCOUNT_JSON_B64;
@@ -51,7 +99,7 @@ function loadServiceAccount(): ServiceAccount | null {
   }
 }
 
-async function getAccessToken(sa: ServiceAccount): Promise<string | null> {
+async function getAccessTokenFromSA(sa: ServiceAccount): Promise<string | null> {
   const iat = Math.floor(Date.now() / 1000);
   const claim = {
     iss: sa.client_email,
@@ -81,32 +129,45 @@ async function getAccessToken(sa: ServiceAccount): Promise<string | null> {
     });
     if (!response.ok) {
       const body = await response.text().catch(() => "");
-      console.error("GSC token exchange failed", response.status, body.slice(0, 240));
+      console.error("GSC SA JWT token exchange failed", response.status, body.slice(0, 240));
       return null;
     }
     const data = (await response.json()) as { access_token?: string };
     return data.access_token ?? null;
   } catch (err) {
-    console.error("GSC JWT sign failed", err);
+    console.error("GSC SA JWT sign failed", err);
     return null;
   }
 }
 
-/**
- * Fetch position moyenne + clics + impressions pour une liste de requetes ciblees
- * sur la periode (default = 28 derniers jours).
- */
+// ---------------- Unified access token ----------------
+
+export async function getGscAccessToken(): Promise<{ token: string | null; method: AuthMethod }> {
+  // Prefer OAuth refresh token (works even when SA is blocked)
+  if (hasOAuthCredentials()) {
+    const token = await getAccessTokenFromOAuth();
+    return { token, method: "oauth_refresh" };
+  }
+  // Fallback : Service Account JWT
+  const sa = loadServiceAccount();
+  if (sa) {
+    const token = await getAccessTokenFromSA(sa);
+    return { token, method: "service_account" };
+  }
+  return { token: null, method: "none" };
+}
+
+// ---------------- Search Analytics query (public API) ----------------
+
 export async function fetchGscQueryStats(opts: {
   queries: string[];
   startDate?: string; // YYYY-MM-DD
   endDate?: string;
 }): Promise<GscQueryStat[] | null> {
-  const sa = loadServiceAccount();
-  if (!sa) return null;
   const siteUrl = process.env.GSC_SITE_URL;
   if (!siteUrl) return null;
 
-  const token = await getAccessToken(sa);
+  const { token } = await getGscAccessToken();
   if (!token) return null;
 
   const today = new Date();
