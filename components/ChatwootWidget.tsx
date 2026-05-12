@@ -65,28 +65,28 @@ export default function ChatwootWidget() {
       const done1 = window.sessionStorage.getItem("sks-chat-hint-1-done");
       const done2 = window.sessionStorage.getItem("sks-chat-hint-2-done");
 
-      // 1ere apparition : 800ms apres montage, retract apres 15s. Une seule fois par session.
+      // 1ere apparition : 800ms apres montage, retract apres 5s. Une seule fois par session.
       if (!done1) {
         timers.push(
           window.setTimeout(() => {
             setHintVisible(true);
             window.sessionStorage.setItem("sks-chat-hint-1-done", "1");
             timers.push(
-              window.setTimeout(() => setHintVisible(false), 15000)
+              window.setTimeout(() => setHintVisible(false), 5000)
             );
           }, 800)
         );
       }
 
-      // 2eme apparition : au seuil de 2min de session. Retract apres 15s. Une seule fois.
+      // 2eme apparition : au seuil de 3min de session. Retract apres 5s. Une seule fois.
       if (!done2) {
-        const delay = Math.max(0, 120000 - elapsed);
+        const delay = Math.max(0, 180000 - elapsed);
         timers.push(
           window.setTimeout(() => {
             setHintVisible(true);
             window.sessionStorage.setItem("sks-chat-hint-2-done", "1");
             timers.push(
-              window.setTimeout(() => setHintVisible(false), 15000)
+              window.setTimeout(() => setHintVisible(false), 5000)
             );
           }, delay)
         );
