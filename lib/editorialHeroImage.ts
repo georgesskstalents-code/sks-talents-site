@@ -14,35 +14,35 @@ export type EditorialHeroImageInput = {
 
 export const heroImageCatalog: Record<string, EditorialHeroImage> = {
   strategy: {
-    src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80",
+    src: "/images/editorial/strategy.jpg",
     alt: "Réunion stratégique autour d'un sujet RH, marché ou organisationnel"
   },
   workshop: {
-    src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80",
+    src: "/images/editorial/workshop.jpg",
     alt: "Atelier collaboratif autour des compétences, du management et de l'exécution"
   },
   diagnostic: {
-    src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80",
+    src: "/images/editorial/diagnostic.jpg",
     alt: "Réunion de travail autour d'indicateurs, de diagnostic et de pilotage"
   },
   animal: {
-    src: "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1600&q=80",
+    src: "/images/editorial/animal.jpg",
     alt: "Sujet lié à la santé animale, aux services vétérinaires ou au petcare"
   },
   lab: {
-    src: "https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=1600&q=80",
+    src: "/images/editorial/lab.jpg",
     alt: "Environnement de recherche, biotech et laboratoire"
   },
   hiring: {
-    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
+    src: "/images/editorial/hiring.jpg",
     alt: "Équipe en échange autour d'un sujet de recrutement et de structuration"
   },
   salary: {
-    src: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80",
+    src: "/images/editorial/salary.jpg",
     alt: "Analyse de données RH, rémunération et arbitrages employeur"
   },
   student: {
-    src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80",
+    src: "/images/editorial/student.jpg",
     alt: "Parcours étudiants, orientation et montée en compétences"
   }
 };
