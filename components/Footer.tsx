@@ -110,7 +110,7 @@ function MobileColumn({ title, links }: { title: string; links: ColumnLink[] }) 
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-brand-teal/10 bg-[#163334] text-white">
+    <footer className="mt-4 border-t border-brand-teal/10 bg-[#163334] text-white">
       <div className="container-shell py-14">
         {/* Identity column (always visible) */}
         <div className="grid gap-10 lg:grid-cols-[1.2fr_2fr]">
