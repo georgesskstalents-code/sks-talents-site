@@ -112,29 +112,23 @@
   mix-blend-mode: multiply;
   z-index: 1;
 }
-.bmag-hero-art-grain {
-  position: absolute; inset: 0;
-  background: radial-gradient(circle at 30% 20%, rgba(232,242,242,0.15), transparent 50%),
-              radial-gradient(circle at 80% 70%, rgba(232,242,242,0.10), transparent 40%);
-  mix-blend-mode: screen;
-}
-.bmag-hero-art-glyph {
-  position: relative; z-index: 3;
-  font-family: var(--bmag-serif);
-  font-size: 56px;
-  line-height: 1;
-  font-style: italic;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+.bmag-hero-art-top-fade {
+  position: absolute; top: 0; left: 0; right: 0; height: 110px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 .bmag-hero-art-cap {
   position: absolute; top: 24px; left: 32px; right: 32px;
   display: flex; justify-content: space-between;
   font-family: var(--bmag-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.1em;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.9);
+  color: #FFFFFF;
   z-index: 3;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 .bmag-hero-meta {
   display: flex;

@@ -103,15 +103,10 @@ export default function BlogMagazine({ articles }: Props) {
             priority
           />
           <div className="bmag-hero-art-bg" />
-          <div className="bmag-hero-art-grain" />
+          <div className="bmag-hero-art-top-fade" />
           <div className="bmag-hero-art-cap">
             <span>VOL. XII · N°01</span>
             <span>{formatDate(featured.date).split(" ").slice(1).join(" · ")}</span>
-          </div>
-          <div className="bmag-hero-art-glyph">
-            {getArticleVerticalLabel(featured.vertical)}
-            <br />
-            <em>FILE 01 · LONG READ</em>
           </div>
         </div>
         <div>
