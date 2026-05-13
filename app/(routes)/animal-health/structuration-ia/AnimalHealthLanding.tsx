@@ -180,7 +180,7 @@ export default function AnimalHealthLanding() {
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <a
               href="#demo"
-              className="inline-flex items-center justify-center rounded-full bg-brand-ink px-6 py-4 t-body font-semibold text-white transition hover:opacity-90"
+              className="inline-flex items-center justify-center rounded-full bg-brand-teal px-6 py-4 t-body font-semibold text-white transition hover:opacity-90"
             >
               Voir la démo ↓
             </a>
