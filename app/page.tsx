@@ -19,20 +19,20 @@ export const metadata: Metadata = {
 const personaPortals: PersonaPortal[] = [
   {
     icon: "target-arrow",
-    title: "Vous structurez votre équipe",
-    description: "Series A à scale-up. Première shortlist en 10 jours.",
+    title: "Vous dirigez. Vous recrutez.",
+    description: "Life Sciences ou Animal Health, de la Series A au scale-up. Première shortlist en 10 jours.",
     cta1: { label: "Réserver un échange", href: "https://calendly.com/g-kengue/talentconsulting" },
     cta2: { label: "Notre méthode", href: "/services" },
-    cta3: { label: "Références", href: "/references" },
+    cta3: { label: "Références & cas clients", href: "/references" },
     highlighted: true
   },
   {
     icon: "cpu",
-    title: "Vos enjeux IA évoluent vite.",
-    description: "Agents IA sur mesure pour automatiser vos process clés.",
+    title: "Vos process freinent votre croissance.",
+    description: "6 agents IA validés par verticale, déployés en 4 semaines.",
     cta1: { label: "Programme Life Sciences", href: "/life-sciences/structuration-ia" },
     cta2: { label: "Programme Animal Health", href: "/animal-health/structuration-ia" },
-    cta3: { label: "Diagnostic agents", href: "/diagnostic" },
+    cta3: { label: "Diagnostic agents (5 min)", href: "/diagnostic" },
     cta2Primary: true,
     cta3Primary: true
   },
