@@ -42,7 +42,6 @@ function ArticleCard({ article, index, variant }: { article: Article; index: num
             className="bmag-card-thumb-img"
           />
           <div className="bmag-card-thumb-num">N°{String(index + 1).padStart(2, "0")}</div>
-          <div className="bmag-card-thumb-glyph">{getArticleVerticalLabel(article.vertical).charAt(0)}</div>
         </div>
       </Link>
       <div className="bmag-card-cat">{getArticleVerticalLabel(article.vertical)}</div>
@@ -65,6 +64,7 @@ export default function BlogMagazine({ articles }: Props) {
 
   const [featured, ...rest] = articles;
   const gridArticles = rest.slice(0, 5);
+  const allArticles = rest.slice(5);
   const featuredImage = getEditorialHeroImage({
     slug: featured.slug,
     title: featured.title,
@@ -139,7 +139,7 @@ export default function BlogMagazine({ articles }: Props) {
             <h2>
               Dernières <em>parutions</em>
             </h2>
-            <Link href="#all-articles">Voir toutes les publications →</Link>
+            <Link href="#all-publications">Voir toutes les publications →</Link>
           </div>
 
           {/* Article grid */}
@@ -156,6 +156,32 @@ export default function BlogMagazine({ articles }: Props) {
                 />
               );
             })}
+          </div>
+        </>
+      ) : null}
+
+      {/* Toutes les publications : grille compacte pour le reste des articles */}
+      {allArticles.length > 0 ? (
+        <>
+          <div className="bmag-section-title" id="all-publications">
+            <h2>
+              Toutes les <em>publications</em>
+            </h2>
+            <span className="bmag-section-count">{allArticles.length + gridArticles.length + 1} articles</span>
+          </div>
+          <div className="bmag-archive">
+            {allArticles.map((article) => (
+              <Link
+                key={article.slug}
+                href={`/blog/${article.slug}`}
+                className="bmag-archive-row"
+                data-vertical={article.vertical}
+              >
+                <span className="bmag-archive-cat">{getArticleVerticalLabel(article.vertical)}</span>
+                <span className="bmag-archive-title">{article.title}</span>
+                <span className="bmag-archive-meta">{formatDate(article.date)} · {article.readTime} min</span>
+              </Link>
+            ))}
           </div>
         </>
       ) : null}

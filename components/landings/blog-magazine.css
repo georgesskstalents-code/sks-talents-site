@@ -288,15 +288,7 @@
   text-shadow: 0 1px 6px rgba(0,0,0,0.25);
 }
 .bmag-card-thumb-glyph {
-  position: absolute;
-  bottom: 18px;
-  right: 24px;
-  z-index: 3;
-  font-family: var(--bmag-serif);
-  font-style: italic;
-  font-size: 64px;
-  color: rgba(255, 255, 255, 0.55);
-  line-height: 0.8;
+  display: none;
 }
 .bmag-card-cat {
   align-self: flex-start;
@@ -370,6 +362,80 @@
   .bmag-card.featured-tall { grid-column: span 6; grid-row: span 2; }
   .bmag-card.col-4 { grid-column: span 3; }
   .bmag-card.col-3 { grid-column: span 3; }
+}
+
+/* ─── Section count badge ─── */
+.bmag-section-count {
+  font-family: var(--bmag-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bmag-ink-2);
+  font-weight: 500;
+}
+
+/* ─── Archive (toutes les publications) ─── */
+.bmag-archive {
+  max-width: var(--bmag-maxw);
+  margin: 0 auto;
+  padding: 0 32px 80px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--bmag-rule);
+}
+.bmag-archive-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 200px;
+  gap: 24px;
+  align-items: center;
+  padding: 18px 4px;
+  border-bottom: 1px solid var(--bmag-rule);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+.bmag-archive-row:hover { background: var(--bmag-paper); }
+.bmag-archive-cat {
+  align-self: center;
+  justify-self: start;
+  font-family: var(--bmag-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-weight: 700;
+  background: var(--bmag-cat-bg, var(--bmag-petrol));
+  padding: 5px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.bmag-archive-row[data-vertical="biotech"]      { --bmag-cat-bg: #2D7B7F; }
+.bmag-archive-row[data-vertical="diagnostic"]   { --bmag-cat-bg: #C26B2E; }
+.bmag-archive-row[data-vertical="cosmétique"]   { --bmag-cat-bg: #A8467A; }
+.bmag-archive-row[data-vertical="medical-vet"]  { --bmag-cat-bg: #3F7B4A; }
+.bmag-archive-row[data-vertical="vet-services"] { --bmag-cat-bg: #3D6FAA; }
+.bmag-archive-row[data-vertical="petfood"]      { --bmag-cat-bg: #B85C3C; }
+.bmag-archive-row[data-vertical="people-ops"]   { --bmag-cat-bg: #4A5670; }
+.bmag-archive-title {
+  font-family: var(--bmag-serif);
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--bmag-ink);
+}
+.bmag-archive-row:hover .bmag-archive-title { color: var(--bmag-petrol); }
+.bmag-archive-meta {
+  font-family: var(--bmag-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bmag-ink-2);
+  text-align: right;
+}
+
+@media (max-width: 980px) {
+  .bmag-archive { padding: 0 24px 60px; }
+  .bmag-archive-row { grid-template-columns: 110px 1fr; row-gap: 6px; padding: 14px 4px; }
+  .bmag-archive-meta { grid-column: 1 / -1; text-align: left; }
 }
 
 /* ─── Responsive ─── */
