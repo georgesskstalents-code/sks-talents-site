@@ -52,6 +52,36 @@ export const editorialHeroImages: Record<
     alt: "Tests IVD : rôles de laboratoire et recrutement",
     source: "Unsplash"
   },
+  "pet-nutrition-science-trends": {
+    src: "/images/editorial/pet-nutrition-science-trends.jpg",
+    alt: "Pet nutrition science : tendances R&D",
+    source: "Unsplash"
+  },
+  "petfood-rd-quality-manufacturing-roles": {
+    src: "/images/editorial/petfood-rd-quality-manufacturing-roles.jpg",
+    alt: "Petfood R&D, qualité et production : rôles à staffer",
+    source: "Unsplash"
+  },
+  "companion-fund-animal-health-hiring": {
+    src: "/images/editorial/companion-fund-animal-health-hiring.jpg",
+    alt: "Companion Fund II et impact recrutement en santé animale",
+    source: "Unsplash"
+  },
+  "telemedicine-vet-practice": {
+    src: "/images/editorial/telemedicine-vet-practice.jpg",
+    alt: "Télémédecine vétérinaire : nouveaux rôles",
+    source: "Unsplash"
+  },
+  "vaccine-manufacturing-careers": {
+    src: "/images/editorial/vaccine-manufacturing-careers.jpg",
+    alt: "Vaccine manufacturing : carrières et compétences 2026",
+    source: "Unsplash"
+  },
+  "pourquoi-recruter-profil-rare-prend-6-mois": {
+    src: "/images/editorial/pourquoi-recruter-profil-rare-prend-6-mois.jpg",
+    alt: "Pourquoi recruter un profil rare prend 6 mois et comment réduire ce délai",
+    source: "Unsplash"
+  },
   "ai-medical-imaging-careers": {
     src: "/images/editorial/ai-medical-imaging-careers.jpg",
     alt: "IA en imagerie médicale : nouveaux métiers et profils hybrides",
