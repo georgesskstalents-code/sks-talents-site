@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import {
-  Activity,
   BarChart3,
   CheckCircle,
   FileText,
@@ -22,10 +21,8 @@ import { animalHealthQuestions } from "./animalHealthQuestions";
 const SHOW_DETAIL_BLOCKS = false;
 
 // Pairs each dirigeant enjeu with the IA agent that solves it (1-to-1 or 2-to-1).
-// Replaces the previously separated "8 enjeux" + "6 agents" sections by a single
-// side-by-side row layout (left: enjeu(x); right: agent IA + ROI).
-// Enjeu 08 (ROI invisible) is handled by the cross-cutting ROI dashboard surfaced
-// in the closing row, not by a dedicated agent.
+// 6 enjeux + 5 agents IA (les 2 premiers enjeux partagent un meme agent).
+// Mise a jour 2026-05-13 : retrait de l'agent M&A Pipeline et du dashboard ROI transversal.
 const enjeuxAvecAgents: {
   enjeux: { num: string; title: string; quote: string; tone?: "amber" | "yellow" }[];
   agent: { Icon: typeof FileText; title: string; desc: string; note: string; badge?: string };
@@ -50,17 +47,10 @@ const enjeuxAvecAgents: {
     agent: { Icon: Phone, title: "Agent Lead Catcher 24/7", desc: "Réceptionne, qualifie et route les appels entrants. Détecte les leads chauds en 30 secondes.", note: "0 % leads perdus · 24/7" }
   },
   {
-    enjeux: [{ num: "06", title: "Pipeline M&A peu structuré", quote: "On rachète au feeling." }],
-    agent: { Icon: Activity, title: "Agent M&A Pipeline vétérinaire", desc: "Sourcing automatique des cliniques cibles (KBIS, comptes annuels, géolocalisation). Score chaque cible. Pilote pipeline prospection.", note: "Closing 15 % → 35 %", badge: "PREMIUM" }
-  },
-  {
-    enjeux: [{ num: "07", title: "Sales enablement commercial", quote: "Closing < 20 %, leads chauds ratés.", tone: "amber" }],
+    enjeux: [{ num: "06", title: "Sales enablement commercial", quote: "Closing < 20 %, leads chauds ratés.", tone: "amber" }],
     agent: { Icon: CheckCircle, title: "Agent Sales Closer vétérinaire", desc: "Analyse calls commerciaux, score leads, suggère next actions, prépare RDV, détecte deals à risque.", note: "+30 % closing · ramp-up 6 sem" }
   }
 ];
-
-// Enjeu 08 reste affiché en clôture (ROI dashboard transversal - pas un agent dédié).
-const enjeuRoi = { num: "08", title: "ROI de l'IA invisible", quote: "Personne ne montre le ROI 6 mois." };
 
 const moments = [
   {
@@ -165,8 +155,8 @@ export default function AnimalHealthLanding() {
           </p>
           <p className="mt-3 max-w-2xl t-body">
             Pour les groupements de cliniques vétérinaires en consolidation et les marques petfood
-            (multinationales et PME premium) en hyper-croissance. 8 enjeux structurels.{" "}
-            6 agents IA sectoriels. ROI mesuré sur vos propres données.
+            (multinationales et PME premium) en hyper-croissance. 6 enjeux structurels.{" "}
+            5 agents IA sectoriels. ROI mesuré sur vos propres données.
           </p>
 
           <div className="mt-6 max-w-md rounded-3xl border border-brand-teal/15 bg-white px-5 py-4 shadow-sm">
@@ -215,8 +205,8 @@ export default function AnimalHealthLanding() {
         <div className="container-shell">
           <p className="eyebrow">Vos enjeux → Notre réponse IA</p>
           <h2 className="t-h1 max-w-3xl font-display">
-            8 enjeux dirigeants.{" "}
-            <span className="italic text-brand-teal">6 agents IA</span> qui y répondent.
+            6 enjeux dirigeants.{" "}
+            <span className="italic text-brand-teal">5 agents IA</span> qui y répondent.
           </h2>
           <p className="mt-3 max-w-3xl t-body">
             À gauche, la phrase qu'on entend. À droite, l'agent IA qui transforme la situation, avec son ROI mesuré.
@@ -312,78 +302,11 @@ export default function AnimalHealthLanding() {
                     aria-hidden="true"
                     className="pointer-events-none absolute -top-4 left-6 hidden rounded-full border border-brand-teal/15 bg-white px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-stone/60 shadow-sm sm:inline-block"
                   >
-                    {String(index + 1).padStart(2, "0")} / {String(enjeuxAvecAgents.length + 1).padStart(2, "0")}
+                    {String(index + 1).padStart(2, "0")} / {String(enjeuxAvecAgents.length).padStart(2, "0")}
                   </span>
                 </article>
               );
             })}
-
-            {/* Enjeu 08 transversal - design aligné, mais inversé : fond ink à droite pour signal "réponse plateforme globale" */}
-            <article className="group relative grid gap-5 sm:grid-cols-[1fr_auto_1.15fr] sm:items-stretch sm:gap-0">
-              <div className="relative overflow-hidden rounded-3xl bg-[#faf7f1] p-6 sm:rounded-r-none sm:p-7">
-                <div className="flex items-baseline gap-3">
-                  <span className="font-display text-[44px] leading-none text-yellow-700 sm:text-[52px]">
-                    {enjeuRoi.num}
-                  </span>
-                  <span className="text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-stone/70">
-                    Enjeu
-                  </span>
-                </div>
-                <p className="mt-4 t-h3 font-semibold text-brand-ink">{enjeuRoi.title}</p>
-                <blockquote className="mt-4 border-l-2 border-brand-teal/30 pl-4">
-                  <p className="font-display italic t-body text-brand-stone">"{enjeuRoi.quote}"</p>
-                </blockquote>
-              </div>
-
-              <div className="hidden flex-col items-center justify-center px-2 sm:flex">
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-teal/70">
-                    Plateforme
-                  </span>
-                  <span aria-hidden="true" className="text-3xl text-brand-teal">→</span>
-                </div>
-              </div>
-              <div aria-hidden="true" className="flex flex-col items-center sm:hidden">
-                <span className="h-6 w-px bg-brand-teal/40" />
-                <span className="text-2xl text-brand-teal">↓</span>
-              </div>
-
-              <div className="relative flex flex-col overflow-hidden rounded-3xl border border-brand-teal bg-brand-ink shadow-[0_18px_44px_rgba(15,58,60,0.18)] transition duration-300 group-hover:-translate-y-0.5 group-hover:shadow-[0_24px_56px_rgba(15,58,60,0.25)] sm:rounded-l-none">
-                <div className="flex flex-1 flex-col p-6 sm:p-7">
-                  <div className="flex items-start justify-between gap-3">
-                    <span className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-mint">
-                      Réponse transversale
-                    </span>
-                    <span className="rounded-full bg-brand-mint px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-ink">
-                      Inclus
-                    </span>
-                  </div>
-                  <p className="mt-4 t-h3 font-semibold text-white">Dashboard ROI continu SKS Talents</p>
-                  <p className="mt-2 t-body text-white/80">
-                    Chaque agent reporte ses gains mesurés (heures économisées, leads captés, closing
-                    accéléré, marge récupérée) dans un dashboard unique. ROI 6 mois prouvé sur vos
-                    propres données, pas une promesse marketing.
-                  </p>
-                </div>
-                <div className="border-t border-white/15 bg-gradient-to-r from-brand-mint to-brand-mint/85 px-6 py-3 sm:px-7">
-                  <div className="flex items-baseline gap-3">
-                    <span className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-ink/60">
-                      Garantie
-                    </span>
-                    <span className="font-display text-sm font-semibold text-brand-ink sm:text-base">
-                      ROI 6 mois ou audit gratuit
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute -top-4 left-6 hidden rounded-full border border-brand-teal/15 bg-white px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-stone/60 shadow-sm sm:inline-block"
-              >
-                {String(enjeuxAvecAgents.length + 1).padStart(2, "0")} / {String(enjeuxAvecAgents.length + 1).padStart(2, "0")}
-              </span>
-            </article>
           </div>
         </div>
       </section>
