@@ -52,6 +52,8 @@ const nextConfig = {
         destination: "/job-roles",
         permanent: true
       },
+      // Wildcard : tout chemin /job-r%C3%B4les/{slug} (ancien lien indexable) to /job-roles/{slug}
+      { source: "/job-r%C3%B4les/:slug*", destination: "/job-roles/:slug*", permanent: true },
       // Slugs accentes (causent 404 en prod) to ASCII. Genere 2026-05-12.
       { source: "/blog/diagnostic-ai-cyber-application-r%C3%B4les", destination: "/blog/diagnostic-ai-cyber-application-roles", permanent: true },
       { source: "/blog/medtech-maintenance-field-service-r%C3%B4les", destination: "/blog/medtech-maintenance-field-service-roles", permanent: true },

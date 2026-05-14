@@ -98,7 +98,7 @@ export const articles: Article[] = [
       },
       {
         label: "Fiches metiers",
-        href: "/job-rôles"
+        href: "/job-roles"
       },
       {
         label: "References",
@@ -110,23 +110,23 @@ export const articles: Article[] = [
       },
       {
         label: "AI Scientist Biotech",
-        href: "/job-rôles/biotech-ai-scientist"
+        href: "/job-roles/biotech-ai-scientist"
       },
       {
         label: "Upstream Process Development Scientist",
-        href: "/job-rôles/biotech-upstream-process-development-scientist"
+        href: "/job-roles/biotech-upstream-process-development-scientist"
       },
       {
         label: "Downstream Process Development Scientist",
-        href: "/job-rôles/biotech-downstream-process-development-scientist"
+        href: "/job-roles/biotech-downstream-process-development-scientist"
       },
       {
         label: "QC Microbiology Lead Biotech",
-        href: "/job-rôles/biotech-qc-microbiology-lead"
+        href: "/job-roles/biotech-qc-microbiology-lead"
       },
       {
         label: "Single-Use Technology Engineer Biotech",
-        href: "/job-rôles/biotech-single-use-technology-engineer"
+        href: "/job-roles/biotech-single-use-technology-engineer"
       }
     ],
     sources: [
@@ -164,31 +164,31 @@ export const articles: Article[] = [
       },
       {
         label: "Data Science Manager Diagnostic",
-        href: "/job-rôles/diagnostic-data-science-manager"
+        href: "/job-roles/diagnostic-data-science-manager"
       },
       {
         label: "Cybersecurity Engineer Diagnostic",
-        href: "/job-rôles/diagnostic-cybersecurity-engineer"
+        href: "/job-roles/diagnostic-cybersecurity-engineer"
       },
       {
         label: "LIMS Product Owner Diagnostic",
-        href: "/job-rôles/diagnostic-lims-product-owner"
+        href: "/job-roles/diagnostic-lims-product-owner"
       },
       {
         label: "Software Quality Engineer IVD",
-        href: "/job-rôles/diagnostic-software-quality-engineer"
+        href: "/job-roles/diagnostic-software-quality-engineer"
       },
       {
         label: "IVD Software Engineer",
-        href: "/job-rôles/diagnostic-ivd-software-engineer"
+        href: "/job-roles/diagnostic-ivd-software-engineer"
       },
       {
         label: "Biostatistician Diagnostics",
-        href: "/job-rôles/diagnostic-biostatistician"
+        href: "/job-roles/diagnostic-biostatistician"
       },
       {
         label: "Field Application Scientist NGS",
-        href: "/job-rôles/diagnostic-field-application-scientist-ngs"
+        href: "/job-roles/diagnostic-field-application-scientist-ngs"
       }
     ],
     sources: [
@@ -226,15 +226,15 @@ export const articles: Article[] = [
       },
       {
         label: "Field Application Manager Diagnostic",
-        href: "/job-rôles/diagnostic-field-application-manager"
+        href: "/job-roles/diagnostic-field-application-manager"
       },
       {
         label: "Service Operations Director Diagnostic",
-        href: "/job-rôles/diagnostic-service-operations-director"
+        href: "/job-roles/diagnostic-service-operations-director"
       },
       {
         label: "Technical Support Lead Diagnostic",
-        href: "/job-rôles/diagnostic-technical-support-lead"
+        href: "/job-roles/diagnostic-technical-support-lead"
       }
     ],
     sources: [
@@ -276,11 +276,11 @@ export const articles: Article[] = [
       },
       {
         label: "Formulation Scientist Cosmetique",
-        href: "/job-rôles/cosmétique-formulation-scientist"
+        href: "/job-roles/cosmetique-formulation-scientist"
       },
       {
         label: "Regulatory Affairs Manager Cosmetique",
-        href: "/job-rôles/cosmétique-regulatory-affairs-manager"
+        href: "/job-roles/cosmetique-regulatory-affairs-manager"
       }
     ],
     sources: [
@@ -322,27 +322,27 @@ export const articles: Article[] = [
       },
       {
         label: "Clinic Operations Director Veterinary",
-        href: "/job-rôles/veterinary-clinic-operations-director"
+        href: "/job-roles/veterinary-clinic-operations-director"
       },
       {
         label: "HR Business Partner Veterinary",
-        href: "/job-rôles/veterinary-hr-business-partner"
+        href: "/job-roles/veterinary-hr-business-partner"
       },
       {
         label: "Veterinary Medical Advisor",
-        href: "/job-rôles/medical-vet-veterinary-medical-advisor"
+        href: "/job-roles/medical-vet-veterinary-medical-advisor"
       },
       {
         label: "Pharmacovigilance Specialist (Animal Health)",
-        href: "/job-rôles/medical-vet-pharmacovigilance-specialist"
+        href: "/job-roles/medical-vet-pharmacovigilance-specialist"
       },
       {
         label: "Vaccine Manufacturing Manager",
-        href: "/job-rôles/medical-vet-vaccine-manufacturing-manager"
+        href: "/job-roles/medical-vet-vaccine-manufacturing-manager"
       },
       {
         label: "Clinical Pathologist Veterinary",
-        href: "/job-rôles/veterinary-clinical-pathologist"
+        href: "/job-roles/veterinary-clinical-pathologist"
       }
     ],
     sources: [
@@ -384,19 +384,19 @@ export const articles: Article[] = [
       },
       {
         label: "R&D Director Petfood",
-        href: "/job-rôles/petfood-rd-director"
+        href: "/job-roles/petfood-rd-director"
       },
       {
         label: "Quality & Food Safety Manager Petfood",
-        href: "/job-rôles/petfood-quality-food-safety-manager"
+        href: "/job-roles/petfood-quality-food-safety-manager"
       },
       {
         label: "Packaging Development Engineer Petfood",
-        href: "/job-rôles/petfood-packaging-development-engineer"
+        href: "/job-roles/petfood-packaging-development-engineer"
       },
       {
         label: "Supplier Quality Engineer Petfood",
-        href: "/job-rôles/petfood-supplier-quality-engineer"
+        href: "/job-roles/petfood-supplier-quality-engineer"
       }
     ],
     sources: [
@@ -438,11 +438,11 @@ export const articles: Article[] = [
       },
       {
         label: "Medical Vet Country Manager Afrique Francophone",
-        href: "/job-rôles/medical-vet-country-manager-afrique-francophone"
+        href: "/job-roles/medical-vet-country-manager-afrique-francophone"
       },
       {
         label: "Export Manager Afrique & MENA Cosmétique",
-        href: "/job-rôles/cosmétique-export-manager-mena-afrique"
+        href: "/job-roles/cosmetique-export-manager-mena-afrique"
       }
     ],
     sources: [
@@ -488,7 +488,7 @@ export const articles: Article[] = [
       },
       {
         label: "Talent Acquisition Lead EMEA",
-        href: "/job-rôles/cross-sector-talent-acquisition-lead-emea"
+        href: "/job-roles/cross-sector-talent-acquisition-lead-emea"
       }
     ],
     sources: [
@@ -526,15 +526,15 @@ export const articles: Article[] = [
       },
       {
         label: "Diagnostic BU Director",
-        href: "/job-rôles/diagnostic-nuclear-medicine-business-unit-director"
+        href: "/job-roles/diagnostic-nuclear-medicine-business-unit-director"
       },
       {
         label: "Diagnostic VP Sales",
-        href: "/job-rôles/diagnostic-vp-sales"
+        href: "/job-roles/diagnostic-vp-sales"
       },
       {
         label: "Market Access Director RIV",
-        href: "/job-rôles/diagnostic-market-access-director-riv"
+        href: "/job-roles/diagnostic-market-access-director-riv"
       }
     ],
     sources: [
@@ -572,27 +572,27 @@ export const articles: Article[] = [
       },
       {
         label: "Data Integrity Lead Biotech",
-        href: "/job-rôles/biotech-data-integrity-lead"
+        href: "/job-roles/biotech-data-integrity-lead"
       },
       {
         label: "CSV / Validation Lead Biotech",
-        href: "/job-rôles/biotech-csv-validation-lead"
+        href: "/job-roles/biotech-csv-validation-lead"
       },
       {
         label: "LIMS Product Owner Biotech",
-        href: "/job-rôles/biotech-lims-product-owner"
+        href: "/job-roles/biotech-lims-product-owner"
       },
       {
         label: "OT Cybersecurity Engineer Biotech",
-        href: "/job-rôles/biotech-ot-cybersecurity-engineer"
+        href: "/job-roles/biotech-ot-cybersecurity-engineer"
       },
       {
         label: "OT Cybersecurity Specialist",
-        href: "/job-rôles/diagnostic-ot-cybersecurity-specialist"
+        href: "/job-roles/diagnostic-ot-cybersecurity-specialist"
       },
       {
         label: "HL7 / Interoperability Specialist",
-        href: "/job-rôles/diagnostic-hl7-intégration-specialist"
+        href: "/job-roles/diagnostic-hl7-integration-specialist"
       }
     ],
     sources: [
@@ -690,15 +690,15 @@ export const articles: Article[] = [
     internalLinks: [
       {
         label: "Fiche métier : Bioinformaticien NGS",
-        href: "/job-rôles/diagnostic-bioinformaticien-ngs"
+        href: "/job-roles/diagnostic-bioinformaticien-ngs"
       },
       {
         label: "Fiche métier : Data Science Manager (diagnostic)",
-        href: "/job-rôles/diagnostic-data-science-manager"
+        href: "/job-roles/diagnostic-data-science-manager"
       },
       {
         label: "Fiche métier : Data Engineer clinique",
-        href: "/job-rôles/diagnostic-data-engineer-clinical"
+        href: "/job-roles/diagnostic-data-engineer-clinical"
       },
       {
         label: "Services recrutement",
@@ -732,15 +732,15 @@ export const articles: Article[] = [
     internalLinks: [
       {
         label: "Fiche métier : AI Scientist (health)",
-        href: "/job-rôles/biotech-ai-scientist"
+        href: "/job-roles/biotech-ai-scientist"
       },
       {
         label: "Fiche métier : Data Science Manager (diagnostic)",
-        href: "/job-rôles/diagnostic-data-science-manager"
+        href: "/job-roles/diagnostic-data-science-manager"
       },
       {
         label: "Fiche métier : Cybersecurity Engineer (medtech)",
-        href: "/job-rôles/diagnostic-cybersecurity-engineer"
+        href: "/job-roles/diagnostic-cybersecurity-engineer"
       },
       {
         label: "Contact (rappel)",
@@ -798,11 +798,11 @@ export const articles: Article[] = [
     internalLinks: [
       {
         label: "Fiche métier : Medical Science Liaison (Animal Health)",
-        href: "/job-rôles/medical-vet-medical-science-liaison"
+        href: "/job-roles/medical-vet-medical-science-liaison"
       },
       {
         label: "Fiche métier : Scientific Affairs Manager (Animal Health)",
-        href: "/job-rôles/medical-vet-scientific-affairs-manager"
+        href: "/job-roles/medical-vet-scientific-affairs-manager"
       },
       {
         label: "Animal Health",
@@ -840,11 +840,11 @@ export const articles: Article[] = [
     internalLinks: [
       {
         label: "Fiche métier : Pharmacovigilance Manager (Animal Health)",
-        href: "/job-rôles/medical-vet-pharmacovigilance-manager"
+        href: "/job-roles/medical-vet-pharmacovigilance-manager"
       },
       {
         label: "Fiche métier : Regulatory Affairs Vaccines (Animal Health)",
-        href: "/job-rôles/medical-vet-regulatory-affairs-vaccines"
+        href: "/job-roles/medical-vet-regulatory-affairs-vaccines"
       },
       {
         label: "Animal Health",
@@ -882,15 +882,15 @@ export const articles: Article[] = [
     internalLinks: [
       {
         label: "Fiche métier : MSAT Engineer (biotech)",
-        href: "/job-rôles/biotech-msat-engineer"
+        href: "/job-roles/biotech-msat-engineer"
       },
       {
         label: "Fiche métier : Tech Transfer Manager (biotech)",
-        href: "/job-rôles/biotech-tech-transfer-manager"
+        href: "/job-roles/biotech-tech-transfer-manager"
       },
       {
         label: "Fiche métier : Sterility Assurance Lead (biotech)",
-        href: "/job-rôles/biotech-sterility-assurance-lead"
+        href: "/job-roles/biotech-sterility-assurance-lead"
       },
       {
         label: "Services",
@@ -1544,11 +1544,11 @@ export const articles: Article[] = [
       },
       {
         label: "Fiche métier : Directeur des opérations (cliniques vétérinaires)",
-        href: "/job-rôles/veterinary-clinic-operations-director"
+        href: "/job-roles/veterinary-clinic-operations-director"
       },
       {
         label: "Fiche métier : R&D Director (petfood)",
-        href: "/job-rôles/petfood-rd-director"
+        href: "/job-roles/petfood-rd-director"
       },
       {
         label: "Animal Health",
@@ -1666,11 +1666,11 @@ export const articles: Article[] = [
     internalLinks: [
       {
         label: "Fiche métier : Cybersecurity Engineer (diagnostic/medtech)",
-        href: "/job-rôles/diagnostic-cybersecurity-engineer"
+        href: "/job-roles/diagnostic-cybersecurity-engineer"
       },
       {
         label: "Fiche métier : OT Cybersecurity Specialist (manufacturing)",
-        href: "/job-rôles/diagnostic-ot-cybersecurity-specialist"
+        href: "/job-roles/diagnostic-ot-cybersecurity-specialist"
       },
       {
         label: "Services",
@@ -2562,11 +2562,11 @@ export const articles: Article[] = [
     internalLinks: [
       {
         label: "Fiche métier : Regulatory Affairs Specialist IVDR (IVD)",
-        href: "/job-rôles/diagnostic-ivdr-regulatory-affairs-specialist"
+        href: "/job-roles/diagnostic-ivdr-regulatory-affairs-specialist"
       },
       {
         label: "Fiche métier : Clinical Affairs Manager (IVD)",
-        href: "/job-rôles/diagnostic-clinical-affairs-manager"
+        href: "/job-roles/diagnostic-clinical-affairs-manager"
       },
       {
         label: "Diagnostic recrutement",
@@ -2601,15 +2601,15 @@ export const articles: Article[] = [
     internalLinks: [
       {
         label: "Fiche métier : HL7 Integration Specialist",
-        href: "/job-rôles/diagnostic-hl7-intégration-specialist"
+        href: "/job-roles/diagnostic-hl7-integration-specialist"
       },
       {
         label: "Fiche métier : LIMS Administrator",
-        href: "/job-rôles/diagnostic-lims-administrator"
+        href: "/job-roles/diagnostic-lims-administrator"
       },
       {
         label: "Fiche métier : LIMS Product Owner",
-        href: "/job-rôles/diagnostic-lims-product-owner"
+        href: "/job-roles/diagnostic-lims-product-owner"
       },
       {
         label: "Diagnostic recrutement",
@@ -2644,11 +2644,11 @@ export const articles: Article[] = [
     internalLinks: [
       {
         label: "Fiche métier : OT Cybersecurity Specialist",
-        href: "/job-rôles/diagnostic-ot-cybersecurity-specialist"
+        href: "/job-roles/diagnostic-ot-cybersecurity-specialist"
       },
       {
         label: "Fiche métier : LIMS Product Owner",
-        href: "/job-rôles/diagnostic-lims-product-owner"
+        href: "/job-roles/diagnostic-lims-product-owner"
       },
       {
         label: "Services",
@@ -3207,9 +3207,9 @@ export const articles: Article[] = [
     date: "2026-05-04",
     readTime: 7,
     internalLinks: [
-      { label: "Fiche métier : Data Integrity Lead", href: "/job-rôles/biotech-data-integrity-lead" },
-      { label: "Fiche métier : CSV / Validation Lead", href: "/job-rôles/biotech-csv-validation-lead" },
-      { label: "Fiche métier : LIMS Product Owner", href: "/job-rôles/biotech-lims-product-owner" },
+      { label: "Fiche métier : Data Integrity Lead", href: "/job-roles/biotech-data-integrity-lead" },
+      { label: "Fiche métier : CSV / Validation Lead", href: "/job-roles/biotech-csv-validation-lead" },
+      { label: "Fiche métier : LIMS Product Owner", href: "/job-roles/biotech-lims-product-owner" },
       { label: "Article : CSV validation & data integrity", href: "/blog/csv-validation-data-integrity-biotech" }
     ],
     sources: [
@@ -3241,9 +3241,9 @@ export const articles: Article[] = [
     date: "2026-05-04",
     readTime: 6,
     internalLinks: [
-      { label: "Fiche métier : Quality Systems Manager", href: "/job-rôles/biotech-quality-systems-manager" },
-      { label: "Fiche métier : Deviation & CAPA Manager", href: "/job-rôles/biotech-deviation-capa-manager" },
-      { label: "Fiche métier : Head of Quality", href: "/job-rôles/biotech-head-of-quality" }
+      { label: "Fiche métier : Quality Systems Manager", href: "/job-roles/biotech-quality-systems-manager" },
+      { label: "Fiche métier : Deviation & CAPA Manager", href: "/job-roles/biotech-deviation-capa-manager" },
+      { label: "Fiche métier : Head of Quality", href: "/job-roles/biotech-head-of-quality" }
     ],
     sources: [
       {
@@ -3274,10 +3274,10 @@ export const articles: Article[] = [
     date: "2026-05-04",
     readTime: 6,
     internalLinks: [
-      { label: "Fiche métier : Deviation & CAPA Manager", href: "/job-rôles/biotech-deviation-capa-manager" },
-      { label: "Fiche métier : Quality Systems Manager", href: "/job-rôles/biotech-quality-systems-manager" },
-      { label: "Fiche métier : Sterility Assurance Lead", href: "/job-rôles/biotech-sterility-assurance-lead" },
-      { label: "Fiche métier : Sterility Assurance Specialist", href: "/job-rôles/biotech-sterility-assurance-specialist" }
+      { label: "Fiche métier : Deviation & CAPA Manager", href: "/job-roles/biotech-deviation-capa-manager" },
+      { label: "Fiche métier : Quality Systems Manager", href: "/job-roles/biotech-quality-systems-manager" },
+      { label: "Fiche métier : Sterility Assurance Lead", href: "/job-roles/biotech-sterility-assurance-lead" },
+      { label: "Fiche métier : Sterility Assurance Specialist", href: "/job-roles/biotech-sterility-assurance-specialist" }
     ],
     sources: [
       {
@@ -3308,11 +3308,11 @@ export const articles: Article[] = [
     date: "2026-05-04",
     readTime: 7,
     internalLinks: [
-      { label: "Fiche métier : Product Manager IVD", href: "/job-rôles/diagnostic-product-manager-ivd" },
-      { label: "Fiche métier : Regulatory Affairs IVDR", href: "/job-rôles/diagnostic-ivdr-regulatory-affairs-specialist" },
-      { label: "Fiche métier : PMS & Vigilance Manager IVD", href: "/job-rôles/diagnostic-pms-vigilance-manager-ivd" },
-      { label: "Fiche métier : Software Quality Engineer IVD", href: "/job-rôles/diagnostic-software-quality-engineer" },
-      { label: "Fiche métier : Technical Support Lead", href: "/job-rôles/diagnostic-technical-support-lead" }
+      { label: "Fiche métier : Product Manager IVD", href: "/job-roles/diagnostic-product-manager-ivd" },
+      { label: "Fiche métier : Regulatory Affairs IVDR", href: "/job-roles/diagnostic-ivdr-regulatory-affairs-specialist" },
+      { label: "Fiche métier : PMS & Vigilance Manager IVD", href: "/job-roles/diagnostic-pms-vigilance-manager-ivd" },
+      { label: "Fiche métier : Software Quality Engineer IVD", href: "/job-roles/diagnostic-software-quality-engineer" },
+      { label: "Fiche métier : Technical Support Lead", href: "/job-roles/diagnostic-technical-support-lead" }
     ],
     sources: [
       {
@@ -3343,10 +3343,10 @@ export const articles: Article[] = [
     date: "2026-05-04",
     readTime: 6,
     internalLinks: [
-      { label: "Fiche métier : Laboratory Informatics Manager", href: "/job-rôles/diagnostic-laboratory-informatics-manager" },
-      { label: "Fiche métier : HL7 / Integration Specialist", href: "/job-rôles/diagnostic-hl7-intégration-specialist" },
-      { label: "Fiche métier : LIMS Product Owner Biotech", href: "/job-rôles/biotech-lims-product-owner" },
-      { label: "Fiche métier : Data Integrity Lead", href: "/job-rôles/biotech-data-integrity-lead" },
+      { label: "Fiche métier : Laboratory Informatics Manager", href: "/job-roles/diagnostic-laboratory-informatics-manager" },
+      { label: "Fiche métier : HL7 / Integration Specialist", href: "/job-roles/diagnostic-hl7-integration-specialist" },
+      { label: "Fiche métier : LIMS Product Owner Biotech", href: "/job-roles/biotech-lims-product-owner" },
+      { label: "Fiche métier : Data Integrity Lead", href: "/job-roles/biotech-data-integrity-lead" },
       { label: "Article : HL7, LIMS & middleware", href: "/blog/hl7-lims-middleware-interfaces-diagnostic" }
     ],
     sources: [
@@ -3378,9 +3378,9 @@ export const articles: Article[] = [
     date: "2026-05-04",
     readTime: 6,
     internalLinks: [
-      { label: "Fiche métier : Service Delivery Manager EMEA", href: "/job-rôles/diagnostic-service-delivery-manager-emea" },
-      { label: "Fiche métier : Field Service Manager", href: "/job-rôles/diagnostic-field-service-manager" },
-      { label: "Fiche métier : Customer Experience Director", href: "/job-rôles/diagnostic-customer-experience-director" }
+      { label: "Fiche métier : Service Delivery Manager EMEA", href: "/job-roles/diagnostic-service-delivery-manager-emea" },
+      { label: "Fiche métier : Field Service Manager", href: "/job-roles/diagnostic-field-service-manager" },
+      { label: "Fiche métier : Customer Experience Director", href: "/job-roles/diagnostic-customer-experience-director" }
     ],
     sources: [
       {
@@ -3411,10 +3411,10 @@ export const articles: Article[] = [
     date: "2026-05-04",
     readTime: 6,
     internalLinks: [
-      { label: "Fiche métier : Vétérinaire ECC", href: "/job-rôles/veterinary-emergency-critical-care-veterinarian" },
-      { label: "Fiche métier : Directeur d’hôpital vétérinaire", href: "/job-rôles/veterinary-hospital-director" },
-      { label: "Fiche métier : Vétérinaire imageur", href: "/job-rôles/veterinary-imageur" },
-      { label: "Fiche métier : Clinical Pathologist Veterinary", href: "/job-rôles/veterinary-clinical-pathologist" }
+      { label: "Fiche métier : Vétérinaire ECC", href: "/job-roles/veterinary-emergency-critical-care-veterinarian" },
+      { label: "Fiche métier : Directeur d’hôpital vétérinaire", href: "/job-roles/veterinary-hospital-director" },
+      { label: "Fiche métier : Vétérinaire imageur", href: "/job-roles/veterinary-imageur" },
+      { label: "Fiche métier : Clinical Pathologist Veterinary", href: "/job-roles/veterinary-clinical-pathologist" }
     ],
     sources: [
       {
@@ -3445,9 +3445,9 @@ export const articles: Article[] = [
     date: "2026-05-04",
     readTime: 5,
     internalLinks: [
-      { label: "Fiche métier : Regulatory & Compliance Lead Petfood", href: "/job-rôles/petfood-regulatory-compliance-lead" },
-      { label: "Fiche métier : Quality & Food Safety Manager", href: "/job-rôles/petfood-quality-food-safety-manager" },
-      { label: "Fiche métier : Supplier Quality Engineer Petfood", href: "/job-rôles/petfood-supplier-quality-engineer" },
+      { label: "Fiche métier : Regulatory & Compliance Lead Petfood", href: "/job-roles/petfood-regulatory-compliance-lead" },
+      { label: "Fiche métier : Quality & Food Safety Manager", href: "/job-roles/petfood-quality-food-safety-manager" },
+      { label: "Fiche métier : Supplier Quality Engineer Petfood", href: "/job-roles/petfood-supplier-quality-engineer" },
       { label: "Article : Export Afrique francophone (V.I.E)", href: "/blog/export-afrique-francophone-vie-structurer-equipe" }
     ],
     sources: [
@@ -3479,9 +3479,9 @@ export const articles: Article[] = [
     date: "2026-05-04",
     readTime: 5,
     internalLinks: [
-      { label: "Fiche métier : Sensory Science Manager", href: "/job-rôles/petfood-sensory-science-manager" },
-      { label: "Fiche métier : Palatability Scientist", href: "/job-rôles/petfood-palatability-scientist" },
-      { label: "Fiche métier : R&D Director Petfood", href: "/job-rôles/petfood-rd-director" }
+      { label: "Fiche métier : Sensory Science Manager", href: "/job-roles/petfood-sensory-science-manager" },
+      { label: "Fiche métier : Palatability Scientist", href: "/job-roles/petfood-palatability-scientist" },
+      { label: "Fiche métier : R&D Director Petfood", href: "/job-roles/petfood-rd-director" }
     ],
     sources: [
       {
@@ -3512,10 +3512,10 @@ export const articles: Article[] = [
     date: "2026-05-04",
     readTime: 6,
     internalLinks: [
-      { label: "Fiche métier : Chief Information Security Officer (CISO)", href: "/job-rôles/cross-sector-chief-information-security-officer" },
-      { label: "Fiche métier : OT Cybersecurity Specialist", href: "/job-rôles/diagnostic-ot-cybersecurity-specialist" },
-      { label: "Fiche métier : OT Cybersecurity Engineer Biotech", href: "/job-rôles/biotech-ot-cybersecurity-engineer" },
-      { label: "Fiche métier : Data Integrity Lead", href: "/job-rôles/biotech-data-integrity-lead" },
+      { label: "Fiche métier : Chief Information Security Officer (CISO)", href: "/job-roles/cross-sector-chief-information-security-officer" },
+      { label: "Fiche métier : OT Cybersecurity Specialist", href: "/job-roles/diagnostic-ot-cybersecurity-specialist" },
+      { label: "Fiche métier : OT Cybersecurity Engineer Biotech", href: "/job-roles/biotech-ot-cybersecurity-engineer" },
+      { label: "Fiche métier : Data Integrity Lead", href: "/job-roles/biotech-data-integrity-lead" },
       { label: "Article : OT cybersecurity (lab & medtech)", href: "/blog/ot-cybersecurity-lab-medtech" }
     ],
     sources: [
