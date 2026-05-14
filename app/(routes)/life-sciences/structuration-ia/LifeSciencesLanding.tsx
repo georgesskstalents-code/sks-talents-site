@@ -2,11 +2,9 @@
 
 import Link from "next/link";
 import {
-  CheckCircle,
   Compass,
   FileBarChart,
   Heart,
-  Search,
   Sparkles,
   TrendingUp
 } from "lucide-react";
@@ -29,27 +27,19 @@ const enjeuxAvecAgents: {
   agent: { Icon: typeof Compass; title: string; desc: string; note: string; badge?: string };
 }[] = [
   {
-    enjeu: { num: "02", title: "Reporting talent au board", quote: "Mon board me demande mes KPI talent en temps réel. Je leur sors un PowerPoint qui date d'il y a 3 mois." },
+    enjeu: { num: "01", title: "Reporting talent au board", quote: "Mon board me demande mes KPI talent en temps réel. Je leur sors un PowerPoint qui date d'il y a 3 mois." },
     agent: { Icon: Compass, title: "Agent CEO Copilot stratégique", desc: "Connecte roadmap R&D + ATS + données financières. Anticipe besoins talent 6 mois à l'avance. Génère vos board packs auto.", note: "+6 mois d'anticipation · Board pack en 5 min", badge: "DÉMO" }
   },
   {
-    enjeu: { num: "03", title: "Burn rate humain", quote: "180-250 k€/mois de masse salariale alignés sur la roadmap ?" },
+    enjeu: { num: "02", title: "Burn rate humain", quote: "180-250 k€/mois de masse salariale alignés sur la roadmap ?" },
     agent: { Icon: FileBarChart, title: "Agent Reporting Investisseurs", desc: "Génère vos rapports talent pour comex, board et data room investisseurs. Format adapté au stade Series A/B/C.", note: "Burn rate + ROI talent en temps réel" }
   },
   {
-    enjeu: { num: "04", title: "Time-to-fill profils rares", quote: "Head of Engineering, on en cherche un depuis des mois. Pas de shortlist crédible." },
-    agent: { Icon: Search, title: "Agent Talent Intelligence", desc: "Cartographie en continu les talents Life Sciences dans votre segment. Identifie les profils passifs.", note: "Time-to-fill -50 % · 10 j 1re shortlist" }
-  },
-  {
-    enjeu: { num: "05", title: "Commercial bloqué", quote: "On vise 5 M€ d'ARR. Sans VP Sales senior biotech, on plafonne à 1.5 M€." },
-    agent: { Icon: CheckCircle, title: "Agent Sales Talent (VP Sales biotech)", desc: "Sourcing profils rares senior commerciaux biotech. Maîtrise négociation gros comptes pharma.", note: "Sourcing profils rares senior · 12 sem closing" }
-  },
-  {
-    enjeu: { num: "06", title: "Onboarding raté", quote: "VP à 130 k€ qui part à 6 mois. Je redémarre à zéro." },
+    enjeu: { num: "03", title: "Onboarding raté", quote: "VP à 130 k€ qui part à 6 mois. Je redémarre à zéro." },
     agent: { Icon: Heart, title: "Agent Onboarding & Rétention", desc: "Pilote l'onboarding 90 jours de chaque profil senior. Co-construit le plan d'évolution 24 mois. Détecte les signaux faibles à 60 jours.", note: "−60 % turnover 1ère année", badge: "NOUVEAU" }
   },
   {
-    enjeu: { num: "07", title: "Scale Series B/C", quote: "50 → 200 employés en 24 mois. Process datant de 15 employés.", tone: "amber" },
+    enjeu: { num: "04", title: "Scale Series B/C", quote: "50 → 200 employés en 24 mois. Process datant de 15 employés.", tone: "amber" },
     agent: { Icon: TrendingUp, title: "Agent Scale-up Playbook", desc: "Bibliothèque vivante de process RH, templates et benchmarks par phase de croissance.", note: "Process scaling Series A → C" }
   }
 ];
@@ -208,8 +198,8 @@ export default function LifeSciencesLanding() {
         <div className="container-shell">
           <p className="eyebrow">Vos enjeux → Notre réponse IA</p>
           <h2 className="t-h1 max-w-3xl font-display">
-            6 enjeux dirigeants.{" "}
-            <span className="italic text-brand-teal">6 agents IA</span> qui y répondent.
+            4 enjeux dirigeants.{" "}
+            <span className="italic text-brand-teal">4 agents IA</span> qui y répondent.
           </h2>
           <p className="mt-3 max-w-3xl t-body">
             À gauche, la phrase qu'on entend. À droite, l'agent IA qui transforme la situation, avec son ROI mesuré.
