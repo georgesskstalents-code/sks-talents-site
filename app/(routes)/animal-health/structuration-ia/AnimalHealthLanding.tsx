@@ -194,12 +194,10 @@ export default function AnimalHealthLanding() {
         <div className="container-shell">
           <p className="eyebrow">Démo interactive · 30 secondes</p>
           <h2 className="t-h1 max-w-3xl font-display">
-            La démo qui a déjà convaincu{" "}
-            <span className="italic text-brand-teal">12 cofondateurs</span>.
+            Passer de 3 jours à <span className="italic text-brand-teal">4 minutes</span> de reporting mensuel.
           </h2>
           <p className="mt-3 max-w-3xl t-body">
-            Un cofondateur DG d'un groupement vétérinaire de 32 cliniques est passé de 3 jours à 4
-            minutes de reporting mensuel. Voici comment.
+            C'est ce qu'on a mis en place chez un groupement vétérinaire.
           </p>
           <div className="mt-8">
             <DemoStage
