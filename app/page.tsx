@@ -118,10 +118,12 @@ export default function HomePage() {
         </section>
       </RevealOnScroll>
 
-      {/* 5. Method narrative - now visible on mobile too (removed hidden md:block wrapper) */}
-      <RevealOnScroll delayMs={140}>
-        <MethodNarrative />
-      </RevealOnScroll>
+      {/* 5. Method narrative - hidden on mobile (CEO request 2026-05-14), visible from md and up */}
+      <div className="hidden md:block">
+        <RevealOnScroll delayMs={140}>
+          <MethodNarrative />
+        </RevealOnScroll>
+      </div>
 
       {/* 6. Proofs (Marquee + 6 references + 1 inline testimonial) */}
       <RevealOnScroll delayMs={165}>
