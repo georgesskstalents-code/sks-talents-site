@@ -21,8 +21,8 @@ import { animalHealthQuestions } from "./animalHealthQuestions";
 const SHOW_DETAIL_BLOCKS = false;
 
 // Pairs each dirigeant enjeu with the IA agent that solves it (1-to-1 or 2-to-1).
-// 4 enjeux + 4 agents IA (1:1 strict).
-// Mise a jour 2026-05-13 : retrait de l'agent M&A Pipeline et du dashboard ROI transversal.
+// 3 enjeux + 3 agents IA (1:1 strict).
+// Mise a jour 2026-05-13 : retrait M&A Pipeline + dashboard ROI + fusion Lead Catcher/Sales Closer = Sales Pipeline.
 const enjeuxAvecAgents: {
   enjeux: { num: string; title: string; quote: string; tone?: "amber" | "yellow" }[];
   agent: { Icon: typeof FileText; title: string; desc: string; note: string; badge?: string };
@@ -36,12 +36,8 @@ const enjeuxAvecAgents: {
     agent: { Icon: BarChart3, title: "Agent Pilotage Dirigeant multi-sites", desc: "Compile auto les KPI opérationnels + P&L par clinique. Dashboard CODIR prêt chaque lundi avec alertes contextuelles, détection d'écarts et préconisations stratégiques.", note: "3 jours → 4 minutes · Cash 12 mois fiable à 95 %", badge: "DÉMO" }
   },
   {
-    enjeux: [{ num: "03", title: "Appels entrants ratés (perte de leads)", quote: "30 % appels ratés = leads perdus." }],
-    agent: { Icon: Phone, title: "Agent Lead Catcher 24/7", desc: "Réceptionne, qualifie et route les appels entrants. Détecte les leads chauds en 30 secondes.", note: "0 % leads perdus · 24/7" }
-  },
-  {
-    enjeux: [{ num: "04", title: "Sales enablement commercial", quote: "Closing < 20 %, leads chauds ratés.", tone: "amber" }],
-    agent: { Icon: CheckCircle, title: "Agent Sales Closer vétérinaire", desc: "Analyse calls commerciaux, score leads, suggère next actions, prépare RDV, détecte deals à risque.", note: "+30 % closing · ramp-up 6 sem" }
+    enjeux: [{ num: "03", title: "Pipeline commercial qui fuit (leads & closing)", quote: "30 % appels ratés et closing < 20 %. Pipeline qui fuit de partout.", tone: "amber" }],
+    agent: { Icon: CheckCircle, title: "Agent Sales Pipeline vétérinaire", desc: "Réceptionne et qualifie les appels entrants 24/7 (leads chauds en 30s). Analyse calls commerciaux, score leads, suggère next actions, prépare RDV, détecte deals à risque.", note: "0 % leads perdus · +30 % closing · 24/7" }
   }
 ];
 
@@ -148,8 +144,8 @@ export default function AnimalHealthLanding() {
           </p>
           <p className="mt-3 max-w-2xl t-body">
             Pour les groupements de cliniques vétérinaires en consolidation et les marques petfood
-            (multinationales et PME premium) en hyper-croissance. 4 enjeux structurels.{" "}
-            4 agents IA sectoriels. ROI mesuré sur vos propres données.
+            (multinationales et PME premium) en hyper-croissance. 3 enjeux structurels.{" "}
+            3 agents IA sectoriels. ROI mesuré sur vos propres données.
           </p>
 
           <div className="mt-6 max-w-md rounded-3xl border border-brand-teal/15 bg-white px-5 py-4 shadow-sm">
@@ -198,8 +194,8 @@ export default function AnimalHealthLanding() {
         <div className="container-shell">
           <p className="eyebrow">Vos enjeux → Notre réponse IA</p>
           <h2 className="t-h1 max-w-3xl font-display">
-            4 enjeux dirigeants.{" "}
-            <span className="italic text-brand-teal">4 agents IA</span> qui y répondent.
+            3 enjeux dirigeants.{" "}
+            <span className="italic text-brand-teal">3 agents IA</span> qui y répondent.
           </h2>
           <p className="mt-3 max-w-3xl t-body">
             À gauche, la phrase qu'on entend. À droite, l'agent IA qui transforme la situation, avec son ROI mesuré.

@@ -4,7 +4,7 @@ import AnimalHealthLanding from "./AnimalHealthLanding";
 const CANONICAL = "https://www.skstalents.fr/animal-health/structuration-ia";
 const TITLE = "Structuration RH (Agent & automatisation) · Animal Health | SKS TALENTS";
 const DESCRIPTION =
-  "Démo 30 sec : passez de 3 jours à 4 minutes de reporting multi-sites. 4 agents IA pour groupements vétérinaires et petfood. ROI 6 mois. RGPD by design.";
+  "Démo 30 sec : passez de 3 jours à 4 minutes de reporting multi-sites. 3 agents IA pour groupements vétérinaires et petfood. ROI 6 mois. RGPD by design.";
 
 export const metadata: Metadata = {
   title: TITLE,
