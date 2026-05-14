@@ -27,7 +27,7 @@ export default async function MedicalVetDetailPage({
       <section className="container-shell py-8">
         <div className="card-surface max-w-4xl p-8">
           <p className="text-base leading-8 text-brand-stone">
-            Cette page est prête pour accueillir promesse sectorielle, proof points, FAQ SEO et CTA.
+            Une lecture sectorielle pour clarifier les enjeux talent, les profils recherchés et le contexte marché en santé animale.
           </p>
         </div>
       </section>

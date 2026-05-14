@@ -121,28 +121,86 @@ export default function GlossaryExplorer({ groups }: Props) {
             </summary>
 
             <div className="border-t border-brand-teal/10 px-6 py-6 sm:px-8">
-              <div className="grid gap-4 lg:grid-cols-2">
-                {group.concepts.map((concept) => (
-                  <article
-                    key={concept.term}
-                    className="rounded-[24px] border border-brand-teal/10 bg-[linear-gradient(180deg,rgba(248,252,251,0.95),rgba(255,255,255,0.95))] p-5"
-                  >
-                    <h5 className="font-display text-2xl text-brand-ink">{concept.term}</h5>
-                    <div className="mt-4 space-y-4 text-sm leading-7 text-brand-stone">
-                      <p>
-                        <span className="font-semibold text-brand-ink">Définition :</span> {concept.definition}
-                      </p>
-                      <p>
-                        <span className="font-semibold text-brand-ink">Pourquoi c’est utile :</span>{" "}
-                        {concept.whyItMatters}
-                      </p>
-                      <p>
-                        <span className="font-semibold text-brand-ink">Lecture business :</span>{" "}
-                        {concept.businessInsight}
-                      </p>
-                    </div>
-                  </article>
-                ))}
+              <div className="grid gap-6">
+                {group.concepts.map((concept, conceptIndex) => {
+                  const words = concept.term.split(" ").filter(Boolean);
+                  const splitIndex = Math.ceil(words.length / 2);
+                  const firstPart = words.slice(0, splitIndex).join(" ");
+                  const secondPart = words.slice(splitIndex).join(" ");
+                  const number = String(conceptIndex + 1).padStart(2, "0");
+                  return (
+                    <article
+                      key={concept.term}
+                      className="relative overflow-hidden rounded-[28px] border border-brand-teal/10 bg-white p-8 sm:p-12"
+                    >
+                      <span
+                        aria-hidden
+                        className="pointer-events-none absolute -left-3 -top-6 select-none font-display font-bold leading-none text-brand-ink/[0.06] text-[160px] sm:text-[220px]"
+                      >
+                        {number}
+                      </span>
+
+                      <div className="relative">
+                        <div className="border-l-2 border-brand-teal pl-4">
+                          <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-ink/70">
+                            Catégorie
+                          </p>
+                          <p className="mt-1 font-display italic text-brand-teal">{group.title}</p>
+                        </div>
+
+                        <h5 className="mt-10 font-display text-[40px] leading-[1.05] text-brand-ink sm:text-[56px]">
+                          {firstPart}
+                          {secondPart ? (
+                            <>
+                              <br />
+                              <span className="italic text-brand-teal">{secondPart}</span>
+                            </>
+                          ) : null}
+                        </h5>
+
+                        <div className="mt-10 flex items-start gap-4">
+                          <span
+                            aria-hidden
+                            className="font-display text-4xl leading-none text-brand-teal/60"
+                          >
+                            «
+                          </span>
+                          <p className="max-w-2xl text-base leading-8 text-brand-ink sm:text-lg">
+                            {concept.definition}
+                          </p>
+                        </div>
+
+                        <div className="mt-10 grid gap-8 border-t border-brand-teal/10 pt-8 sm:grid-cols-2">
+                          <div>
+                            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                              Usage
+                            </p>
+                            <p className="mt-3 text-sm leading-7 text-brand-stone">
+                              {concept.whyItMatters}
+                            </p>
+                          </div>
+                          <div>
+                            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                              Bénéfice business
+                            </p>
+                            <p className="mt-3 text-sm leading-7 text-brand-stone">
+                              {concept.businessInsight}
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-brand-teal/10 pt-5 text-[11px]">
+                          <p className="font-semibold uppercase tracking-[0.22em] text-brand-ink">
+                            skstalents.fr/lexique
+                          </p>
+                          <p className="font-display italic text-brand-teal">
+                            Your Talents, Our Future
+                          </p>
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
             </div>
           </details>

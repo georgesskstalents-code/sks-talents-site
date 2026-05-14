@@ -8,7 +8,7 @@ export default function ComparisonsPage() {
       <PageHero
         kicker="Comparatifs"
         title="Des pages comparatives pour répondre aux requêtes à forte intention."
-        description="Comparer plutôt que lister: c’est un levier utile pour le SEO, pour la pédagogie et pour la conversion sur des sujets spécialisés."
+        description="Comparer plutôt que lister: une lecture plus rapide pour arbitrer entre deux acteurs, deux rôles ou deux trajectoires sur des sujets spécialisés."
         variant="teal"
       />
       <section className="container-shell grid gap-6 py-4 md:grid-cols-3">

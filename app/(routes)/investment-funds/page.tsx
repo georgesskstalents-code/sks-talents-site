@@ -9,7 +9,7 @@ export default function InvestmentFundsPage() {
       <PageHero
         kicker="Investment Funds"
         title="Profils de fonds et d’écosystèmes financés, version vérifiée"
-        description="Une première base production-safe sur les fonds et plateformes d’investissement à fort impact biotech, healthtech et deep tech, avec un angle clair sur les tours Seed, Série A et Série B, là où se déclenchent souvent les recrutements critiques en direction, production, opérations, sales et ingénierie."
+        description="Une base vérifiée sur les fonds et plateformes d’investissement à fort impact biotech, healthtech et deep tech, avec un angle clair sur les tours Seed, Série A et Série B, là où se déclenchent souvent les recrutements critiques en direction, production, opérations, sales et ingénierie."
         variant="sand"
         breadcrumbs={[
           { label: "Accueil", href: "/" },
@@ -19,7 +19,7 @@ export default function InvestmentFundsPage() {
       />
       <section className="container-shell grid gap-6 py-4 lg:grid-cols-2">
         <a
-          href="https://france-biotech.fr/wp-content/uploads/2025/01/Cartographie-des-fonds-dinvestissement-francais-en-sante-en-2024-Synthese-1.pdf"
+          href="https://france-biotech.fr/publications/etudes-france-biotech/cartographie-des-fonds-dinvestissement-francais-en-sante-en-2024/"
           target="_blank"
           rel="noreferrer noopener"
           className="card-surface block p-6 transition hover:-translate-y-1"
@@ -27,8 +27,8 @@ export default function InvestmentFundsPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-teal">Source sectorielle</p>
           <h2 className="mt-3 font-display text-3xl text-brand-ink">Cartographie France Biotech des fonds santé</h2>
           <p className="mt-4 text-sm leading-7 text-brand-stone">
-            Référence utile pour structurer les pages fonds, qualifier l’écosystème français en santé
-            et enrichir les contenus SEO sans inventer de signaux hiring non sourcés.
+            Référence utile pour situer l’écosystème français en santé, comprendre les acteurs
+            qui structurent le marché et enrichir votre lecture sectorielle.
           </p>
         </a>
         <a
@@ -46,9 +46,9 @@ export default function InvestmentFundsPage() {
         </a>
       </section>
       <SectionShell
-        eyebrow="Entrées SEO"
-        title="Trois portes d’entrée pour capter les recherches Bpifrance, France Biotech et fonds santé"
-        description="Ces pages ont été conçues pour transformer des recherches source-first en lecture utile, puis en maillage vers l’annuaire des fonds, les actualités et les contenus recrutement."
+        eyebrow="Portes d’entrée"
+        title="Trois lectures pour situer Bpifrance, France Biotech et les fonds santé"
+        description="Ces pages transforment une recherche rapide en lecture utile, puis ouvrent vers l’annuaire des fonds, les actualités et les besoins recrutement associés."
       >
         <div className="grid gap-6 md:grid-cols-3">
           <ListingCard
@@ -67,7 +67,7 @@ export default function InvestmentFundsPage() {
             href="/fonds-sante-france"
             title="Fonds santé France"
             description="Page dédiée pour relier fonds, levées, scale-up et signaux hiring."
-            meta="Intent SEO / LLM"
+            meta="Fonds santé France"
           />
         </div>
       </SectionShell>
@@ -155,7 +155,7 @@ export default function InvestmentFundsPage() {
       </SectionShell>
       <SectionShell
         eyebrow="Verified Data"
-        title="Une base exploitable pour générer du contenu SEO sans hallucination"
+        title="Une base exploitable, vérifiée et sans signal inventé"
         description="Chaque profil s’appuie sur des sources primaires officielles et une méthode stricte: pas de chiffre hiring inventé, pas de partenariat affirmé sans preuve, et distinction nette entre fait, estimation et inférence."
       >
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

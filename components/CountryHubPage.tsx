@@ -39,8 +39,8 @@ export default function CountryHubPage({ hub }: CountryHubPageProps) {
 
       <SectionShell
         eyebrow="Réponse directe"
-        title="Un hub pays pensé pour Google, les LLM et les lecteurs qui veulent aller vite."
-        description="L’objectif n’est pas de dupliquer des contenus. L’objectif est de clarifier le bon angle pays, le bon contexte marché et les bons liens internes."
+        title="Un hub pays pensé pour les lecteurs qui veulent aller vite."
+        description="L’objectif n’est pas de dupliquer des contenus. Il s’agit de clarifier le bon angle pays, le bon contexte marché et les bons repères pour décider."
       >
         <GEOAnswerCard
           title={hub.answerTitle}
@@ -114,9 +114,9 @@ export default function CountryHubPage({ hub }: CountryHubPageProps) {
       </SectionShell>
 
       <FAQSection
-        eyebrow="FAQ GEO"
+        eyebrow="Questions fréquentes"
         title={`Questions fréquentes sur ${hub.title}`}
-        description="Une couche FAQ structurée pour rendre la page encore plus lisible par Google, ChatGPT, Claude, Mistral et Perplexity."
+        description="Une FAQ structurée pour répondre directement aux questions les plus courantes sur ce marché pays."
         items={hub.faq}
       />
 

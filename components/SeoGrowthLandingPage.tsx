@@ -227,7 +227,7 @@ export default function SeoGrowthLandingPage({ page }: Props) {
         </div>
       </section>
 
-      <ContentPageSignature description="Page SEO éditée par SKS TALENTS pour relier intention de recherche, signaux marché, structuration RH, automatisation utile et décision de croissance." />
+      <ContentPageSignature description="Page éditée par SKS TALENTS pour aider dirigeants et équipes RH à relier signaux marché, structuration RH, automatisation utile et décisions de croissance." />
     </>
   );
 }

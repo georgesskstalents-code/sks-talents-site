@@ -30,7 +30,7 @@ export default async function InvestmentFundDetailPage({
       <SectionShell
         eyebrow="Fund Profile"
         title="Faits vérifiés et périmètre de confiance"
-        description="Ce profil a été pensé pour la production SEO sérieuse: seulement des éléments observables sur sources officielles, puis une note de méthode qui borne ce qu’on peut ou non extrapoler."
+        description="Ce profil ne retient que des éléments observables sur sources officielles, avec une note de méthode qui précise ce que l’on peut ou non extrapoler pour vos décisions."
       >
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="card-surface p-8">
@@ -164,7 +164,7 @@ export default async function InvestmentFundDetailPage({
           ))}
         </div>
       </SectionShell>
-      <ContentPageSignature description="Profil fonds édité par SKS TALENTS pour relier signaux d’investissement, sources officielles, portefeuille et implications talent de manière crédible." />
+      <ContentPageSignature description="Profil fonds édité par SKS TALENTS pour aider dirigeants et équipes RH à relier signaux d’investissement, sources officielles, portefeuille et besoins d’équipe associés." />
     </>
   );
 }

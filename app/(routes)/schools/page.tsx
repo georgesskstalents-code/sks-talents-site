@@ -94,7 +94,7 @@ export default async function SchoolsPage() {
       <PageHero
         kicker="Écoles spécialisées"
         title="Cartographier les viviers de talents des Life Sciences et de l’Animal Health."
-        description="Chaque page école devient un point d’entrée SEO pour capter les recherches liées aux parcours, formations, bassins de talents et débouchés sectoriels."
+        description="Chaque page école donne une lecture claire des parcours, formations, bassins de talents et débouchés sectoriels associés."
         variant="sand"
         breadcrumbs={[
           { label: "Accueil", href: "/" },

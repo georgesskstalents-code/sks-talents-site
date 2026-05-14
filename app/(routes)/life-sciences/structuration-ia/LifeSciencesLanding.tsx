@@ -6,7 +6,8 @@ import {
   FileBarChart,
   Heart,
   Sparkles,
-  TrendingUp
+  TrendingUp,
+  Users
 } from "lucide-react";
 import CalendlyButton from "@/components/CalendlyButton";
 import DemoStage from "@/components/landings/DemoStage";
@@ -22,21 +23,68 @@ const SHOW_DETAIL_BLOCKS = false;
 // Pairs each CEO enjeu with the IA agent that solves it. Replaces the
 // previously separated "6 enjeux" + "6 agents" sections by a single
 // side-by-side row layout (left: enjeu; right: agent IA + ROI).
-const enjeuxAvecAgents: {
+type StandardItem = {
+  variant?: "standard";
   enjeu: { num: string; title: string; quote: string; tone?: "amber" };
   agent: { Icon: typeof Compass; title: string; desc: string; note: string; badge?: string };
-}[] = [
+};
+
+type FeatureItem = {
+  variant: "feature";
+  enjeu: {
+    num: string;
+    eyebrow: string;
+    titleA: string;
+    titleB: string;
+    stats: { label: string; value: string; caption: string }[];
+    quote: string;
+  };
+  agent: {
+    Icon: typeof Compass;
+    chipLabel: string;
+    eyebrow: string;
+    title: string;
+    desc: string;
+    badge?: string;
+    roi: { label?: string; value: string }[];
+  };
+};
+
+const enjeuxAvecAgents: (StandardItem | FeatureItem)[] = [
   {
     enjeu: { num: "01", title: "Reporting talent au board", quote: "Mon board me demande mes KPI talent en temps réel. Je leur sors un PowerPoint qui date d'il y a 3 mois." },
     agent: { Icon: Compass, title: "Agent CEO Copilot stratégique", desc: "Connecte roadmap R&D + ATS + données financières. Anticipe besoins talent 6 mois à l'avance. Génère vos board packs auto.", note: "+6 mois d'anticipation · Board pack en 5 min", badge: "DÉMO" }
   },
   {
-    enjeu: { num: "02", title: "Burn rate humain", quote: "180-250 k€/mois de masse salariale alignés sur la roadmap ?" },
-    agent: { Icon: FileBarChart, title: "Agent Reporting Investisseurs", desc: "Génère vos rapports talent pour comex, board et data room investisseurs. Format adapté au stade Series A/B/C.", note: "Burn rate + ROI talent en temps réel" }
+    variant: "feature",
+    enjeu: {
+      num: "02",
+      eyebrow: "Enjeu terrain",
+      titleA: "Recruter coûte cher.",
+      titleB: "Recruter mal coûte plus.",
+      stats: [
+        { label: "Burn mensuel", value: "180-250 k€", caption: "masse salariale sur la roadmap" },
+        { label: "Échec recrutement", value: "~12 mois", caption: "perdus à chaque départ précoce" }
+      ],
+      quote: "Junior, manager ou C-level : si on rate l'onboarding, on redémarre."
+    },
+    agent: {
+      Icon: Users,
+      chipLabel: "Agents B + D",
+      eyebrow: "Duo agents IA SKS",
+      title: "Talent Intelligence & Rétention",
+      desc: "Optimise vos recrutements alignés roadmap. Pilote l'onboarding 90 jours sur toute l'équipe, du junior au C-level. Détecte les signaux faibles de désengagement avant qu'ils ne deviennent des départs.",
+      badge: "NOUVEAU",
+      roi: [
+        { label: "ROI mesuré", value: "-50 % time-to-fill" },
+        { value: "-60 % turnover" },
+        { label: "Déploiement", value: "4 semaines" }
+      ]
+    }
   },
   {
     enjeu: { num: "03", title: "Onboarding raté", quote: "VP à 130 k€ qui part à 6 mois. Je redémarre à zéro." },
-    agent: { Icon: Heart, title: "Agent Onboarding & Rétention", desc: "Pilote l'onboarding 90 jours de chaque profil senior. Co-construit le plan d'évolution 24 mois. Détecte les signaux faibles à 60 jours.", note: "−60 % turnover 1ère année", badge: "NOUVEAU" }
+    agent: { Icon: Heart, title: "Agent Onboarding & Rétention", desc: "Pilote l'onboarding 90 jours de chaque profil senior. Co-construit le plan d'évolution 24 mois. Détecte les signaux faibles à 60 jours.", note: "-60 % turnover 1ère année", badge: "NOUVEAU" }
   },
   {
     enjeu: { num: "04", title: "Scale Series B/C", quote: "50 → 200 employés en 24 mois. Process datant de 15 employés.", tone: "amber" },
@@ -205,7 +253,121 @@ export default function LifeSciencesLanding() {
             À gauche, la phrase qu'on entend. À droite, l'agent IA qui transforme la situation, avec son ROI mesuré.
           </p>
           <div className="mt-12 space-y-8">
-            {enjeuxAvecAgents.map(({ enjeu, agent }, index) => {
+            {enjeuxAvecAgents.map((item, index) => {
+              const counter = `${String(index + 1).padStart(2, "0")} / ${String(enjeuxAvecAgents.length).padStart(2, "0")}`;
+
+              if (item.variant === "feature") {
+                const { enjeu, agent } = item;
+                const { Icon } = agent;
+                return (
+                  <article
+                    key={enjeu.num}
+                    className="group relative grid gap-5 overflow-hidden rounded-3xl border border-brand-teal/15 bg-white shadow-[0_22px_56px_rgba(15,58,60,0.08)] sm:grid-cols-[1fr_auto_1.15fr] sm:items-stretch sm:gap-0"
+                  >
+                    {/* Counter chip top-left */}
+                    <span className="absolute left-5 top-5 rounded-full border border-brand-teal/15 bg-[#faf7f1] px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-stone/70 sm:left-7 sm:top-7">
+                      {counter}
+                    </span>
+
+                    {/* LEFT - enjeu */}
+                    <div className="relative overflow-hidden bg-[#faf7f1] p-6 pt-16 sm:p-10 sm:pt-20">
+                      <p className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-amber-700/80">
+                        {enjeu.eyebrow}
+                      </p>
+                      <h3 className="mt-4 font-display text-[34px] leading-[1.05] text-brand-ink sm:text-[44px]">
+                        {enjeu.titleA}
+                        <br />
+                        <span className="italic text-brand-teal">{enjeu.titleB}</span>
+                      </h3>
+
+                      <div className="mt-7 grid gap-5 sm:grid-cols-2">
+                        {enjeu.stats.map((s) => (
+                          <div key={s.label}>
+                            <p className="text-eyebrow font-semibold uppercase tracking-[0.2em] text-brand-stone/70">
+                              {s.label}
+                            </p>
+                            <p className="mt-2 font-display text-[32px] leading-none text-brand-ink sm:text-[38px]">
+                              {s.value}
+                            </p>
+                            <p className="mt-2 text-caption text-brand-stone">{s.caption}</p>
+                          </div>
+                        ))}
+                      </div>
+
+                      <blockquote className="mt-7 border-l-2 border-brand-teal/40 pl-4">
+                        <p className="font-display italic t-body text-brand-stone">
+                          « {enjeu.quote} »
+                        </p>
+                      </blockquote>
+                    </div>
+
+                    {/* CENTER - connector */}
+                    <div className="hidden flex-col items-center justify-center gap-3 px-2 sm:flex">
+                      <span className="h-full w-px border-l border-dashed border-brand-teal/30" aria-hidden />
+                      <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand-teal text-2xl text-white shadow-[0_10px_24px_rgba(15,58,60,0.18)]">
+                        ›
+                      </span>
+                      <p className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-teal/80">
+                        Transformation
+                      </p>
+                      <p className="font-display italic text-sm text-brand-stone">par SKS Talents</p>
+                      <span className="h-full w-px border-l border-dashed border-brand-teal/30" aria-hidden />
+                    </div>
+                    <div aria-hidden="true" className="flex flex-col items-center sm:hidden">
+                      <span className="h-6 w-px bg-brand-teal/40" />
+                      <span className="text-2xl text-brand-teal">↓</span>
+                    </div>
+
+                    {/* RIGHT - duo agents */}
+                    <div className="relative flex flex-col bg-white p-6 pt-16 sm:p-10 sm:pt-20">
+                      <span className="absolute left-5 top-5 rounded-full border border-brand-teal/30 bg-brand-mint/60 px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-teal sm:left-10 sm:top-7">
+                        {agent.chipLabel}
+                      </span>
+                      {agent.badge && (
+                        <span className="absolute right-5 top-5 rounded-full bg-brand-ink px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-white sm:right-10 sm:top-7">
+                          {agent.badge}
+                        </span>
+                      )}
+
+                      <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-mint/60 to-brand-mint/30 text-brand-teal">
+                        <Icon size={22} />
+                      </span>
+
+                      <p className="mt-5 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-teal/80">
+                        {agent.eyebrow}
+                      </p>
+                      <h4 className="mt-2 font-display text-[28px] leading-[1.1] text-brand-ink sm:text-[36px]">
+                        {agent.title}
+                      </h4>
+                      <p className="mt-4 t-body">{agent.desc}</p>
+
+                      <div className="mt-auto pt-6">
+                        <div className="grid grid-cols-3 gap-px overflow-hidden rounded-2xl bg-brand-teal/20">
+                          {agent.roi.map((r, i) => (
+                            <div
+                              key={`${r.value}-${i}`}
+                              className="bg-gradient-to-r from-brand-teal to-brand-teal/85 px-4 py-4 text-white"
+                            >
+                              {r.label ? (
+                                <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70">
+                                  {r.label}
+                                </p>
+                              ) : (
+                                <span className="block h-[14px]" aria-hidden />
+                              )}
+                              <p className="mt-1 font-display text-base font-semibold leading-tight text-white sm:text-lg">
+                                {r.value}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                );
+              }
+
+              const { enjeu, agent } = item;
               const { Icon } = agent;
               return (
                 <article
@@ -281,7 +443,7 @@ export default function LifeSciencesLanding() {
                     aria-hidden="true"
                     className="pointer-events-none absolute -top-4 left-6 hidden rounded-full border border-brand-teal/15 bg-white px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-stone/60 shadow-sm sm:inline-block"
                   >
-                    {String(index + 1).padStart(2, "0")} / {String(enjeuxAvecAgents.length).padStart(2, "0")}
+                    {counter}
                   </span>
                 </article>
               );

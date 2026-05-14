@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Briefcase, ChevronDown, GraduationCap } from "lucide-react";
 import CalendlyButton from "@/components/CalendlyButton";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import GlossaryExplorer from "@/components/GlossaryExplorer";
@@ -164,7 +165,7 @@ export default function LexiconLifeSciencesRhPage() {
 
       <section className="container-shell pb-8 sm:pb-10">
         <div className="card-surface p-8 sm:p-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">Intro LLM</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">Le contexte</p>
           <h2 className="mt-4 font-display text-5xl text-brand-ink sm:text-6xl">
             {lexiconHubPage.introQuestion}
           </h2>
@@ -185,74 +186,131 @@ export default function LexiconLifeSciencesRhPage() {
       </section>
 
       <section className="container-shell pb-8 sm:pb-10">
-        <div className="card-surface p-8 sm:p-10">
-          <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+        <details className="card-surface group overflow-hidden">
+          <summary className="flex cursor-pointer list-none items-start justify-between gap-6 p-8 sm:p-10">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">Checklist</p>
-              <h2 className="mt-4 font-display text-5xl text-brand-ink sm:text-6xl">Êtes-vous structuré ?</h2>
-              <p className="mt-4 max-w-3xl text-base leading-8 text-brand-stone">
-                Utilisez cette lecture simple pour repérer si votre structuration RH accompagne réellement la
-                croissance ou si elle dépend encore trop du dirigeant.
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                Checklist · Auto-évaluation
               </p>
-              <div className="mt-6 space-y-3">
-                {lexiconHubPage.checklistItems.map((item, index) => (
-                  <div
-                    key={item}
-                    className="flex gap-4 rounded-[22px] border border-brand-teal/10 bg-brand-mint/22 px-5 py-4"
-                  >
-                    <span className="text-sm font-semibold text-brand-teal">{index + 1}</span>
-                    <p className="text-sm leading-7 text-brand-stone">{item}</p>
-                  </div>
-                ))}
-              </div>
+              <h2 className="mt-3 font-display text-3xl text-brand-ink sm:text-4xl">
+                Êtes-vous structuré ?
+              </h2>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-brand-stone">
+                5 signaux, lecture du score en 60 secondes. Cliquez pour dérouler.
+              </p>
             </div>
+            <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand-teal/15 bg-brand-mint/40 text-brand-teal transition-transform duration-200 group-open:rotate-180">
+              <ChevronDown className="h-5 w-5" aria-hidden />
+            </span>
+          </summary>
 
-            <div className="rounded-[28px] border border-brand-teal/12 bg-[linear-gradient(180deg,rgba(251,254,254,0.98),rgba(255,255,255,0.98))] p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">Lecture du score</p>
-              <div className="mt-5 space-y-4">
-                {lexiconHubPage.checklistScores.map((score) => (
-                  <div key={score.label} className="rounded-[22px] border border-brand-teal/10 bg-white px-5 py-5">
-                    <div className="flex items-center justify-between gap-4">
-                      <p className="font-display text-3xl text-brand-ink">{score.label}</p>
-                      <span className="rounded-full border border-brand-teal/12 bg-brand-mint/35 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
-                        {score.verdict}
-                      </span>
-                    </div>
-                    <p className="mt-3 text-sm leading-7 text-brand-stone">{score.copy}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 rounded-[22px] border border-brand-teal/10 bg-brand-mint/28 p-5">
-                <p className="text-sm leading-7 text-brand-stone">
-                  Si votre score vous paraît incertain, cela signale souvent le même problème : votre structure RH
-                  repose encore sur l’implicite.
+          <div className="border-t border-brand-teal/10 px-8 pb-8 pt-6 sm:px-10 sm:pb-10">
+            <p className="max-w-3xl text-base leading-8 text-brand-stone">
+              Utilisez cette lecture simple pour repérer si votre structuration RH accompagne
+              réellement la croissance ou si elle dépend encore trop du dirigeant.
+            </p>
+
+            <div className="mt-8 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                  Les 5 signaux
                 </p>
+                <div className="mt-5 space-y-3">
+                  {lexiconHubPage.checklistItems.map((item, index) => (
+                    <div
+                      key={item}
+                      className="group/item flex items-start gap-4 rounded-2xl border border-brand-teal/12 bg-white px-5 py-4 transition hover:border-brand-teal/30 hover:shadow-soft"
+                    >
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-mint text-sm font-semibold text-brand-teal">
+                        {index + 1}
+                      </span>
+                      <p className="pt-1.5 text-sm leading-7 text-brand-stone">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-[28px] border border-brand-teal/12 bg-[linear-gradient(180deg,rgba(251,254,254,0.98),rgba(255,255,255,0.98))] p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                  Lecture du score
+                </p>
+                <div className="mt-5 space-y-4">
+                  {lexiconHubPage.checklistScores.map((score, index) => {
+                    const tones = [
+                      "border-amber-200/70 bg-amber-50/60",
+                      "border-orange-200/70 bg-orange-50/40",
+                      "border-emerald-200/70 bg-emerald-50/50"
+                    ];
+                    const badgeTones = [
+                      "border-amber-300/70 bg-amber-100 text-amber-800",
+                      "border-orange-300/70 bg-orange-100 text-orange-800",
+                      "border-emerald-300/70 bg-emerald-100 text-emerald-800"
+                    ];
+                    return (
+                      <div
+                        key={score.label}
+                        className={`rounded-[22px] border px-5 py-5 ${tones[index] ?? tones[0]}`}
+                      >
+                        <div className="flex items-center justify-between gap-4">
+                          <p className="font-display text-3xl text-brand-ink">{score.label}</p>
+                          <span
+                            className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] ${badgeTones[index] ?? badgeTones[0]}`}
+                          >
+                            {score.verdict}
+                          </span>
+                        </div>
+                        <p className="mt-3 text-sm leading-7 text-brand-stone">{score.copy}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="mt-6 rounded-[22px] border border-brand-teal/10 bg-brand-mint/28 p-5">
+                  <p className="text-sm leading-7 text-brand-stone">
+                    Si votre score vous paraît incertain, cela signale souvent le même problème :
+                    votre structure RH repose encore sur l’implicite.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </details>
       </section>
 
       <section className="container-shell pb-8 sm:pb-10">
-        <div className="card-surface p-8 sm:p-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">Top 10 errors</p>
-          <h2 className="mt-4 font-display text-5xl text-brand-ink sm:text-6xl">
-            Les erreurs qui freinent la croissance avant même de se voir dans le P&L.
-          </h2>
-          <div className="mt-8 grid gap-4 lg:grid-cols-2">
-            {lexiconHubPage.topErrors.map((error, index) => (
-              <article
-                key={error}
-                className="rounded-[24px] border border-brand-teal/10 bg-[linear-gradient(180deg,rgba(248,252,251,0.95),rgba(255,255,255,0.96))] px-5 py-5"
-              >
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
-                  Erreur {index + 1}
-                </p>
-                <p className="mt-3 text-sm leading-7 text-brand-stone">{error}</p>
-              </article>
-            ))}
+        <details className="card-surface group overflow-hidden">
+          <summary className="flex cursor-pointer list-none items-start justify-between gap-6 p-8 sm:p-10">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                Top 10 · Pièges les plus fréquents
+              </p>
+              <h2 className="mt-3 font-display text-3xl text-brand-ink sm:text-4xl">
+                Les erreurs qui freinent la croissance avant même de se voir dans le P&L.
+              </h2>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-brand-stone">
+                10 angles morts récurrents. Cliquez pour dérouler la liste.
+              </p>
+            </div>
+            <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand-teal/15 bg-brand-mint/40 text-brand-teal transition-transform duration-200 group-open:rotate-180">
+              <ChevronDown className="h-5 w-5" aria-hidden />
+            </span>
+          </summary>
+
+          <div className="border-t border-brand-teal/10 px-8 pb-8 pt-6 sm:px-10 sm:pb-10">
+            <div className="grid gap-3 sm:grid-cols-2">
+              {lexiconHubPage.topErrors.map((error, index) => (
+                <article
+                  key={error}
+                  className="flex items-start gap-4 rounded-2xl border border-brand-teal/10 bg-white px-5 py-4 transition hover:border-brand-teal/30 hover:shadow-soft"
+                >
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-mint text-sm font-semibold text-brand-teal">
+                    {index + 1}
+                  </span>
+                  <p className="pt-1.5 text-sm leading-7 text-brand-stone">{error}</p>
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
+        </details>
       </section>
 
       <section className="container-shell pb-8 sm:pb-10">
@@ -282,10 +340,100 @@ export default function LexiconLifeSciencesRhPage() {
       </section>
 
       <section className="container-shell pb-8 sm:pb-10">
+        <details className="card-surface group overflow-hidden">
+          <summary className="flex cursor-pointer list-none items-start justify-between gap-6 p-8 sm:p-10">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                Ressources talents
+              </p>
+              <div className="mt-4 flex items-center gap-3 text-brand-teal">
+                <Briefcase className="h-6 w-6" aria-hidden />
+                <GraduationCap className="h-6 w-6" aria-hidden />
+              </div>
+              <h2 className="mt-3 font-display text-3xl text-brand-ink sm:text-4xl">
+                Vous, les talents.
+              </h2>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-brand-stone">
+                Que vous soyez en mobilité ou en train de construire votre parcours, SKS Talents
+                vous accompagne dans les Life Sciences et l'Animal Health.
+              </p>
+            </div>
+            <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand-teal/15 bg-brand-mint/40 text-brand-teal transition-transform duration-200 group-open:rotate-180">
+              <ChevronDown className="h-5 w-5" aria-hidden />
+            </span>
+          </summary>
+
+          <div className="border-t border-brand-teal/10 px-8 pb-8 pt-6 sm:px-10 sm:pb-10">
+            <div className="grid gap-8 sm:grid-cols-2 sm:gap-10">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                  Je pilote ma prochaine étape
+                </p>
+                <p className="mt-3 text-sm leading-7 text-brand-stone">
+                  Cadres, experts, dirigeants en mobilité.
+                </p>
+                <a
+                  href="https://www.purplesquirrel.fr/miniformation-dirigeant"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-brand-ink px-5 py-3.5 text-caption font-semibold text-white transition hover:opacity-90 sm:w-auto sm:px-6"
+                >
+                  Mini-formation dirigeant
+                </a>
+                <div className="mt-4 flex flex-col gap-2">
+                  <Link
+                    href="/job-roles"
+                    className="text-caption font-semibold text-brand-teal underline-offset-4 hover:underline"
+                  >
+                    Fiches métiers
+                  </Link>
+                  <Link
+                    href="/blog"
+                    className="text-caption font-semibold text-brand-teal underline-offset-4 hover:underline"
+                  >
+                    Articles
+                  </Link>
+                </div>
+              </div>
+
+              <div className="sm:border-l sm:border-brand-teal/15 sm:pl-10">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                  Je construis ma trajectoire
+                </p>
+                <p className="mt-3 text-sm leading-7 text-brand-stone">
+                  Étudiants, jeunes diplômés.
+                </p>
+                <Link
+                  href="/orientation"
+                  className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-brand-ink px-5 py-3.5 text-caption font-semibold text-white transition hover:opacity-90 sm:w-auto sm:px-6"
+                >
+                  Parcours étudiant
+                </Link>
+                <div className="mt-4 flex flex-col gap-2">
+                  <Link
+                    href="/schools"
+                    className="text-caption font-semibold text-brand-teal underline-offset-4 hover:underline"
+                  >
+                    Écoles spécialisées
+                  </Link>
+                  <Link
+                    href="/lexique-life-sciences-rh"
+                    className="text-caption font-semibold text-brand-teal underline-offset-4 hover:underline"
+                  >
+                    Lexique
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <section className="container-shell pb-8 sm:pb-10">
         <div className="card-surface p-8 sm:p-10">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">FAQ</p>
           <h2 className="mt-4 font-display text-5xl text-brand-ink sm:text-6xl">
-            Réponses rapides pour Google et pour les LLM.
+            Les questions qu'on nous pose le plus.
           </h2>
           <div className="mt-8 grid gap-4 lg:grid-cols-2">
             {lexiconHubPage.faqs.map((faq, index) => (
@@ -306,28 +454,59 @@ export default function LexiconLifeSciencesRhPage() {
 
       <section id="whitepapers" className="container-shell pb-8 sm:pb-10">
         <div className="card-surface p-8 sm:p-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">Whitepaper hub</p>
-          <h2 className="mt-4 font-display text-5xl text-brand-ink sm:text-6xl">
-            3 guides conçus pour transformer un problème business en conversation qualifiée.
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
+            Guides à télécharger
+          </p>
+          <h2 className="mt-4 font-display text-4xl text-brand-ink sm:text-5xl">
+            3 guides pour passer d'un problème business à une décision claire.
           </h2>
           <p className="mt-5 max-w-4xl text-base leading-8 text-brand-stone">
-            Chaque livre blanc répond à un problème précis : structurer les RH, scaler sans perdre du temps et
-            corriger un recrutement qui ralentit la croissance. Le système de capture est volontairement léger :
-            email professionnel, bénéfice clair, puis accès au guide et proposition de diagnostic.
+            Chaque livre blanc répond à un problème précis : structurer les RH, scaler sans
+            perdre du temps, ou corriger un recrutement qui ralentit la croissance. Email
+            professionnel, accès au guide, et proposition de diagnostic.
           </p>
 
-          <div className="mt-8 grid gap-5 xl:grid-cols-3">
-            {whitepaperGuides.map((guide) => (
-              <WhitepaperLeadCard
+          <div className="mt-8 space-y-4">
+            {whitepaperGuides.map((guide, index) => (
+              <details
                 key={guide.id}
-                whitepaperId={guide.id}
-                title={guide.title}
-                description={guide.description}
-                benefit={guide.benefit}
-                problem={guide.problem}
-                ctaLabel={guide.ctaLabel}
-                guideHref={`/guides/${guide.slug}`}
-              />
+                className="group overflow-hidden rounded-[26px] border border-brand-teal/12 bg-white shadow-[0_14px_38px_rgba(21,39,41,0.05)]"
+              >
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-6 px-6 py-6 sm:px-8">
+                  <div className="flex items-start gap-5">
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-mint font-display text-xl font-semibold text-brand-teal">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                        Guide {index + 1} / {whitepaperGuides.length}
+                      </p>
+                      <h3 className="mt-2 font-display text-2xl leading-snug text-brand-ink sm:text-3xl">
+                        {guide.title}
+                      </h3>
+                      <p className="mt-2 max-w-2xl text-sm leading-7 text-brand-stone">
+                        <span className="font-semibold text-brand-ink">Bénéfice :</span>{" "}
+                        {guide.benefit}
+                      </p>
+                    </div>
+                  </div>
+                  <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand-teal/15 bg-brand-mint/40 text-brand-teal transition-transform duration-200 group-open:rotate-180">
+                    <ChevronDown className="h-5 w-5" aria-hidden />
+                  </span>
+                </summary>
+
+                <div className="border-t border-brand-teal/10 px-6 py-6 sm:px-8 sm:pb-8">
+                  <WhitepaperLeadCard
+                    whitepaperId={guide.id}
+                    title={guide.title}
+                    description={guide.description}
+                    benefit={guide.benefit}
+                    problem={guide.problem}
+                    ctaLabel={guide.ctaLabel}
+                    guideHref={`/guides/${guide.slug}`}
+                  />
+                </div>
+              </details>
             ))}
           </div>
         </div>
@@ -356,7 +535,7 @@ export default function LexiconLifeSciencesRhPage() {
         </div>
       </section>
 
-      <ContentPageSignature description="Page hub éditée par SKS TALENTS pour faire converger SEO, LLM, structuration RH, recrutement Life Sciences et génération de leads qualifiés." />
+      <ContentPageSignature description="Page hub éditée par SKS TALENTS pour aider dirigeants, RH et managers à structurer leurs équipes et accélérer leur croissance en Life Sciences et Animal Health." />
     </>
   );
 }

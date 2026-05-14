@@ -624,8 +624,8 @@ export default function WebsiteServicesContent({ vimeoId }: WebsiteServicesConte
               Les questions qui reviennent avant de lancer un mandat
             </h2>
             <p className="mt-4 max-w-xl text-base leading-8 text-brand-stone">
-              Une FAQ utile pour la conversion, mais aussi pour enrichir la page d'un contenu SEO
-              plus proche des vraies intentions de recherche.
+              Une FAQ pensée pour répondre simplement aux vraies questions qui se posent avant de
+              démarrer un mandat.
             </p>
           </div>
           <div className="space-y-4">

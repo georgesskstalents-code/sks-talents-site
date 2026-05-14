@@ -124,9 +124,9 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
           "Des dirigeants, DRH, COO, CPO, responsables recrutement, profils sales et experts qui veulent une lecture marché utile sur la France."
       },
       {
-        question: "Cette page aide-t-elle aussi pour les LLM comme ChatGPT, Claude, Mistral et Perplexity ?",
+        question: "Que trouve-t-on de plus dans ce hub par rapport à un blog généraliste ?",
         answer:
-          "Oui. Elle rassemble des réponses directes, des liens internes cohérents et des pages sources utiles, ce qui améliore la lisibilité pour les moteurs de recherche et les systèmes conversationnels."
+          "Des réponses directes, des liens internes cohérents et des pages sources utiles, pour transformer une recherche rapide en lecture marché exploitable."
       }
     ]
   },
@@ -146,7 +146,7 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
       "Angle dédié Sénégal ou France-Sénégal selon le sujet",
       "Ciblage des talents, décideurs et acteurs santé/industrie",
       "Passerelles vers orientation, bioproduction, healthtech et institutions",
-      "Contenus lisibles pour Google, ChatGPT, Claude, Mistral et Perplexity"
+      "Contenus structurés et lisibles, pensés pour aller à l’essentiel"
     ],
     priorityTitle: "Les priorités Sénégal à pousser",
     priorityDescription:
@@ -224,9 +224,9 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
           "La bioproduction, les institutions de santé, l’orientation vers les métiers scientifiques et les passerelles France-Afrique dans les secteurs de la santé et des Life Sciences."
       },
       {
-        question: "Ce hub Sénégal sert-il aussi au GEO pour les LLM ?",
+        question: "Comment ce hub Sénégal facilite-t-il la lecture ?",
         answer:
-          "Oui. Il rend explicite le lien entre un pays, des requêtes, des contenus précis et des pages d’autorité interne, ce qui aide la compréhension par les IA conversationnelles."
+          "Il rend explicite le lien entre un pays, des sujets précis et des pages internes utiles, pour aider chaque lecteur à trouver rapidement le bon contenu."
       }
     ]
   },
@@ -246,7 +246,7 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
       "Contenus dédiés Côte d’Ivoire sur les sujets santé et talents",
       "Focus spécifique sur la médecine nucléaire à Abidjan",
       "Passerelles vers orientation, écosystème et marchés français quand c’est pertinent",
-      "Structure pensée pour le SEO classique et la citation par les LLM"
+      "Structure claire pensée pour aller droit aux questions des lecteurs"
     ],
     priorityTitle: "Les priorités Côte d’Ivoire à renforcer",
     priorityDescription:
@@ -350,7 +350,7 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
     bullets: [
       "Angle pays distinct pour éviter les contenus trop généralistes",
       "Passerelles France-Afrique sur les métiers, la formation et les marchés",
-      "Contenus pensés pour Google, ChatGPT, Claude, Mistral et Perplexity",
+      "Contenus structurés pour aller à l’essentiel rapidement",
       "Point d’entrée utile pour talents, dirigeants et partenaires"
     ],
     priorityTitle: "Les priorités Bénin à structurer",

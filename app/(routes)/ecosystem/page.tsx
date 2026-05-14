@@ -48,7 +48,7 @@ export default function EcosystemPage() {
       <PageHero
         kicker="Écosystème"
         title="100 acteurs à suivre pour comprendre les réseaux qui comptent vraiment."
-        description="Cette page rassemble les écoles, clusters, fonds, médias, événements, plateformes et partenaires qui structurent les Life Sciences, l’Animal Health, la medtech, la cosmétique et l’agro-industrie. Elle sert à la fois de repère éditorial, de cartographie sectorielle et de point d’entrée SEO."
+        description="Cette page rassemble les écoles, clusters, fonds, médias, événements, plateformes et partenaires qui structurent les Life Sciences, l’Animal Health, la medtech, la cosmétique et l’agro-industrie. Un repère éditorial et une cartographie sectorielle pour situer rapidement les bons interlocuteurs."
         variant="teal"
       />
 
@@ -110,7 +110,7 @@ export default function EcosystemPage() {
       <SectionShell
         eyebrow="Focus éditoriaux"
         title="Les pages détaillées à renforcer en priorité."
-        description="Ces sous-pages servent à transformer la cartographie en contenus spécialisés, plus lisibles pour Google, Bing et les moteurs conversationnels."
+        description="Ces sous-pages transforment la cartographie en lectures spécialisées par thème, plus rapides à parcourir pour cibler vos sujets prioritaires."
       >
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {ecosystemDetailedPages.map((item) => (

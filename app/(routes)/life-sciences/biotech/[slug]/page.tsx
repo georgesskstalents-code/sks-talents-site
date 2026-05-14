@@ -27,8 +27,8 @@ export default async function BiotechDetailPage({
       <section className="container-shell py-8">
         <div className="card-surface max-w-4xl p-8">
           <p className="text-base leading-8 text-brand-stone">
-            Cette landing page sectorielle est prête à accueillir un contenu SEO riche, des
-            preuves clients, des blocs métier et un CTA Calendly ciblé.
+            Une lecture sectorielle biotech pour clarifier les enjeux talent, les fonctions clés
+            et les besoins de structuration après une levée ou un changement d’étape.
           </p>
         </div>
       </section>

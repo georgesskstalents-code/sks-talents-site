@@ -89,12 +89,12 @@ export default async function ResourcesPage() {
             href="/salary-benchmarks"
             title="Benchmarks salaires"
             description="Un hub pour relier salaire, fiches métiers, comparatifs et décisions de recrutement sur vos verticales."
-            meta="Salary SEO"
+            meta="Benchmarks salaires"
           />
           <ListingCard
             href="/investment-funds"
             title="Funds & portfolio"
-            description="Profils de fonds vérifiés, méthode anti-hallucination et premiers jeux de données exploitables pour du contenu SEO production-safe sur les environnements Seed, Série A et Série B."
+            description="Profils de fonds vérifiés, méthode source-first et premiers jeux de données exploitables pour décrypter les environnements Seed, Série A et Série B."
             meta="Investment"
           />
           <ListingCard
@@ -112,7 +112,7 @@ export default async function ResourcesPage() {
           <ListingCard
             href="/events"
             title="Événements & séminaires"
-            description={`${eventCount} pages événements pour travailler visibilité, maillage interne et preuves d’écosystème.`}
+            description={`${eventCount} pages événements pour suivre les rendez-vous qui structurent les Life Sciences et l'Animal Health.`}
             meta="Écosystème"
           />
           <ListingCard
@@ -419,9 +419,9 @@ export default async function ResourcesPage() {
         <ExternalLinkGrid items={mediaPartners} />
       </SectionShell>
       <FAQSection
-        eyebrow="FAQ GEO"
+        eyebrow="Questions fréquentes"
         title="Questions fréquentes sur les ressources SKS TALENTS"
-        description="Une FAQ structurée pour rendre cette page encore plus lisible par Google, ChatGPT, Claude, Mistral et Perplexity, ainsi que par vos visiteurs."
+        description="Les réponses courtes aux questions qu'on nous pose le plus souvent sur ces ressources."
         items={[
           {
             question: "Que trouve-t-on dans les ressources SKS TALENTS ?",
@@ -439,9 +439,9 @@ export default async function ResourcesPage() {
               "La logique la plus efficace consiste à partir d’une question métier, salaire, école, événement, levée ou écosystème, puis à suivre les passerelles internes entre hubs. Cette structure a été pensée pour accélérer la recherche d’information utile et transformer la lecture en action."
           },
           {
-            question: "Quel format choisir selon son objectif SEO ?",
+            question: "Quel type de contenu consulter selon mon objectif ?",
             answer:
-              "Pour du trafic qualifié, les articles de fond et fiches métiers restent les plus solides. Pour la position zéro, les guides pratiques et FAQ sont les plus efficaces. Pour la conversion, les études de cas, références, comparatifs et vidéos embarquées apportent plus de réassurance."
+              "Pour comprendre un marché, partez des articles de fond et fiches métiers. Pour décider vite, les guides pratiques et FAQ vont à l'essentiel. Pour évaluer notre savoir-faire, les études de cas, références, comparatifs et vidéos embarquées apportent le plus de matière."
           },
           {
             question: "Pourquoi combiner plusieurs formats sur un même site ?",
@@ -449,9 +449,9 @@ export default async function ResourcesPage() {
               "Parce qu’un site d’autorité ne repose pas sur un seul type de page. Les articles captent la longue traîne, les FAQ répondent vite, les études de cas rassurent, les visuels simplifient les sujets complexes et les vidéos augmentent le temps d’attention."
           },
           {
-            question: "Pourquoi cette page peut-elle être citée par les IA ?",
+            question: "Pourquoi cette page sert de point d'entrée à tout l'écosystème SKS ?",
             answer:
-              "Parce qu’elle concentre des réponses courtes, des catégories explicites, des liens clairs et des blocs thématiques fortement alignés avec les requêtes réelles sur les Life Sciences, l’Animal Health, le diagnostic, les fonds, les écoles et les contenus d’autorité."
+              "Parce qu'elle concentre, en quelques sections, les ressources les plus utiles sur les Life Sciences, l'Animal Health, le diagnostic, les fonds, les écoles et les sujets de structuration. Une seule page pour situer l'ensemble, puis aller directement vers la ressource utile."
           }
         ]}
       />

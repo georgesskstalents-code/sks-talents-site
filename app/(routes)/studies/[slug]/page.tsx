@@ -205,7 +205,7 @@ export default async function StudyDetailPage({ params }: Props) {
       <SectionShell
         eyebrow="Positionnement"
         title="Pourquoi cette étude existe."
-        description="Cette étude est conçue comme un contenu signature SKS TALENTS: utile pour Google, exploitable par vos prospects et suffisamment claire pour être relayée dans des environnements conversationnels."
+        description="Cette étude est conçue comme un contenu signature SKS TALENTS: une lecture sectorielle claire, exploitable en interne et facile à partager avec vos équipes ou vos partenaires."
       >
         <div className="grid gap-4 lg:grid-cols-2">
           <div className="card-surface p-6">
@@ -214,7 +214,7 @@ export default async function StudyDetailPage({ params }: Props) {
             </p>
             <ol className="mt-4 space-y-3 text-sm leading-7 text-brand-stone">
               <li>Les recrutements se débloquent là où écosystème, financement et spécialisation se rejoignent.</li>
-              <li>Les pages écoles et viviers deviennent des portes d’entrée SEO très qualifiées.</li>
+              <li>Les pages écoles et viviers deviennent des portes d’entrée très qualifiées vers les bons profils.</li>
               <li>Les entreprises attendent des partenaires capables de contextualiser le marché, pas seulement de sourcer.</li>
               <li>Les métiers hybrides data, réglementaire, produit et scientifique gagnent du poids.</li>
               <li>Les contenus les plus performants relient secteur, rôle, salaire, parcours et signaux business.</li>
@@ -236,7 +236,7 @@ export default async function StudyDetailPage({ params }: Props) {
       <SectionShell
         eyebrow="Applications"
         title="Comment utiliser cette étude concrètement."
-        description="L’enjeu n’est pas seulement d’informer. Il s’agit de transformer cette étude en actif commercial, SEO et relationnel."
+        description="L’enjeu n’est pas seulement d’informer. Il s’agit de transformer cette étude en levier d’aide à la décision, en outil de dialogue commercial et en repère relationnel."
       >
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {ecosystemDetailedPages.map((page) => (
@@ -307,9 +307,9 @@ export default async function StudyDetailPage({ params }: Props) {
       </SectionShell>
 
       <SectionShell
-        eyebrow="Activation"
-        title="Ce que SKS TALENTS peut en faire ensuite."
-        description="Une fois cette page publiée, elle peut alimenter vos relances, votre maillage interne et vos prises de parole externes."
+        eyebrow="Pour aller plus loin"
+        title="Comment utiliser cette étude au quotidien."
+        description="Quelques pistes pour transformer la lecture en décision opérationnelle, à partager avec vos équipes ou vos partenaires."
       >
         <div className="card-surface p-6">
           <ul className="space-y-3 text-sm leading-7 text-brand-stone">
@@ -334,7 +334,7 @@ export default async function StudyDetailPage({ params }: Props) {
           compact
         />
       </SectionShell>
-      <ContentPageSignature description="Étude signature éditée par SKS TALENTS pour transformer une lecture sectorielle en actif SEO, commercial et conversationnel durable." />
+      <ContentPageSignature description="Étude signature éditée par SKS TALENTS pour aider dirigeants et équipes RH à transformer une lecture sectorielle en décisions exploitables." />
     </>
   );
 }

@@ -990,13 +990,13 @@ export const ecosystemDetailedPages: EcosystemDetailedPage[] = [
     description:
       "Les plateformes qui renforcent vos signaux d’entité, vos avis, vos citations et votre lisibilité de marque.",
     seoDescription:
-      "Les plateformes marque employeur et entité à suivre pour renforcer sa visibilité, ses citations de marque et sa présence dans Google et les moteurs IA.",
+      "Les plateformes marque employeur et entité à suivre pour renforcer sa visibilité, ses citations de marque et sa présence en ligne.",
     categorySlugs: ["platforms"],
     sectorFilter: "Life Sciences",
     highlights: [
       "Uniformiser marque, email, domaine et présence publique.",
       "Créer des points d’entrée fiables autour de la marque SKS TALENTS.",
-      "Renforcer les signaux repris par Google, Bing et les moteurs conversationnels."
+      "Renforcer la cohérence des signaux qui structurent votre présence publique."
     ],
     whyItMatters: [
       "Les moteurs ont besoin de repères cohérents pour bien comprendre une entité.",

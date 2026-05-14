@@ -8,7 +8,7 @@ export default function MarketHubsPage() {
       <PageHero
         kicker="Hubs de référence"
         title="10 hubs éditoriaux pour devenir une référence sur vos marchés."
-        description="Chaque hub travaille une intention de recherche claire, relie les contenus existants et nourrit à la fois SEO, visibilité IA et conversion."
+        description="Chaque hub clarifie une question marché précise, relie les contenus existants et oriente vers des décisions concrètes côté visibilité, équipe et croissance."
       />
       <section className="container-shell grid gap-6 py-8 md:grid-cols-2 xl:grid-cols-3">
         {marketHubs.map((hub) => (

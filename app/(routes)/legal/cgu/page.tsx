@@ -6,7 +6,7 @@ export default function CguPage() {
       <PageHero
         kicker="Légal"
         title="Conditions générales d'utilisation"
-        description="Page prête à accueillir les modalités d’usage du site, responsabilités et restrictions d’accès."
+        description="Modalités d’usage du site, responsabilités et restrictions d’accès applicables aux visiteurs et utilisateurs."
       />
     </>
   );

@@ -222,9 +222,9 @@ export default function RejoignezNousPage() {
               cette adresse pour garder un traitement simple, réactif et cohérent.
             </p>
             <p className="mt-4 text-sm leading-7 text-brand-stone">
-              La page est aussi pensée pour servir de point d’entrée SEO sur des requêtes comme
-              cabinet de recrutement life sciences, recrutement biotech, recrutement diagnostic ou
-              chasse de tête santé animale.
+              Que vous cherchiez un cabinet de recrutement Life Sciences, un partenaire pour vos
+              recrutements biotech ou diagnostic, ou un chasseur de tête en santé animale, cette
+              page sert de point de contact unique.
             </p>
           </div>
         </div>

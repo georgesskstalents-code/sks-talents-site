@@ -69,7 +69,7 @@ export default async function MarketHubDetailPage({
           />
         ))}
       </section>
-      <ContentPageSignature description="Hub de référence édité par SKS TALENTS pour renforcer le maillage interne, la lisibilité du marché et les chemins de conversion vers nos services." />
+      <ContentPageSignature description="Hub de référence édité par SKS TALENTS pour aider dirigeants et équipes RH à lire rapidement un marché et identifier les bons interlocuteurs." />
     </>
   );
 }

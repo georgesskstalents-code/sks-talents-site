@@ -169,7 +169,7 @@ export const investmentFunds: InvestmentFund[] = [
     keyFacts: [
       "Bpifrance operates several venture funds dedicated to biotech and medtech companies.",
       "Official pages document Innobio, Innobio 2, Rare Diseases Fund, Medtech Innovation Fund and Patient Autonome.",
-      "The French-language biotech page documents FABS at EUR 340m and InnoBio 2 at EUR 143m invested / first closing ranges depending on source page and date."
+      "The official English overview notes Innobio 2 first closing at EUR 135m with a goal to reach EUR 200m+, investing up to EUR 14m in Series A and B rounds."
     ],
     portfolioHighlights: [
       {
@@ -204,7 +204,7 @@ export const investmentFunds: InvestmentFund[] = [
     seo: {
       title: "Bpifrance Biotech & Medtech | Fonds et véhicules vérifiés | SKS TALENTS",
       description:
-        "Vue production-safe des véhicules biotech et medtech de Bpifrance: tailles officielles, mandats d’investissement et méthode de qualification des signaux hiring.",
+        "Vue vérifiée des véhicules biotech et medtech de Bpifrance: tailles officielles, mandats d’investissement et méthode de qualification des signaux hiring.",
       keywords: ["Bpifrance biotech", "Innobio 2", "FABS Bpifrance", "fonds biotech France"]
     }
   },

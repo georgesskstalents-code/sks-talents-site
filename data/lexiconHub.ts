@@ -48,7 +48,7 @@ export const lexiconHubPage = {
   metaTitle:
     "Lexique Life Sciences & RH | Structuration RH, automatisation RH et recrutement Life Sciences",
   metaDescription:
-    "Hub SEO et LLM pour structuration RH, recrutement Life Sciences, automatisation RH, scale-up et performance organisationnelle : checklist, erreurs, diagnostic, FAQ et 3 guides à télécharger.",
+    "Hub Life Sciences & RH : structuration RH, recrutement, automatisation, scale-up et performance organisationnelle. Checklist, erreurs fréquentes, diagnostic, FAQ et 3 guides à télécharger.",
   introQuestion:
     "Pourquoi les entreprises Life Sciences ont des difficultés à recruter et structurer leurs équipes ?",
   introAnswer:
