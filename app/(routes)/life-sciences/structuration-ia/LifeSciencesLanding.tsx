@@ -145,8 +145,8 @@ export default function LifeSciencesLanding() {
           </p>
           <p className="mt-3 max-w-2xl t-body">
             Pour les CEO biotech, medtech, deeptech et e-santé en industrialisation Series A à C.
-            Anticipez vos recrutements stratégiques selon l'évolution de vos programmes. 6 enjeux
-            structurels. 6 agents IA sectoriels. ROI mesuré sur vos propres données.
+            Anticipez vos recrutements stratégiques selon l'évolution de vos programmes. 4 enjeux
+            structurels. 4 agents IA sectoriels. ROI mesuré sur vos propres données.
           </p>
 
           <div className="mt-6 max-w-md rounded-3xl border border-brand-teal/15 bg-white px-5 py-4 shadow-sm">

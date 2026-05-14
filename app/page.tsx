@@ -29,7 +29,7 @@ const personaPortals: PersonaPortal[] = [
   {
     icon: "cpu",
     title: "Vos process freinent votre croissance.",
-    description: "6 agents IA validés par verticale, déployés en 4 semaines.",
+    description: "4 agents IA validés par verticale, déployés en 4 semaines.",
     cta1: { label: "Programme Life Sciences", href: "/life-sciences/structuration-ia" },
     cta2: { label: "Programme Animal Health", href: "/animal-health/structuration-ia" },
     cta3: { label: "Diagnostic agents (5 min)", href: "/diagnostic" },

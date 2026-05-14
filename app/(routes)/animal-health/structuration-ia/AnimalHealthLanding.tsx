@@ -21,33 +21,26 @@ import { animalHealthQuestions } from "./animalHealthQuestions";
 const SHOW_DETAIL_BLOCKS = false;
 
 // Pairs each dirigeant enjeu with the IA agent that solves it (1-to-1 or 2-to-1).
-// 6 enjeux + 5 agents IA (les 2 premiers enjeux partagent un meme agent).
+// 4 enjeux + 4 agents IA (1:1 strict).
 // Mise a jour 2026-05-13 : retrait de l'agent M&A Pipeline et du dashboard ROI transversal.
 const enjeuxAvecAgents: {
   enjeux: { num: string; title: string; quote: string; tone?: "amber" | "yellow" }[];
   agent: { Icon: typeof FileText; title: string; desc: string; note: string; badge?: string };
 }[] = [
   {
-    enjeux: [
-      { num: "01", title: "Documentation juridique RH dispersée", quote: "Tout est éclaté. Due diligence en 2 sem." },
-      { num: "02", title: "Onboarding qui s'éternise", quote: "6-12 mois, 20-30 % turnover." }
-    ],
-    agent: { Icon: FileText, title: "Agent Juridique RH multi-sites", desc: "Centralise contrats, génère avenants conformes à la convention vétérinaire, alerte échéances, prépare due diligences.", note: "Due diligence 48h vs 2 sem · Onboarding -50 %" }
+    enjeux: [{ num: "01", title: "Documentation juridique RH dispersée", quote: "Tout est éclaté. Due diligence en 2 sem." }],
+    agent: { Icon: FileText, title: "Agent Juridique RH multi-sites", desc: "Centralise contrats, génère avenants conformes à la convention vétérinaire, alerte échéances, prépare due diligences.", note: "Due diligence 48h vs 2 sem" }
   },
   {
-    enjeux: [{ num: "03", title: "Plannings sur Excel", quote: "30 plannings sur Excel. C'est l'enfer." }],
-    agent: { Icon: BarChart3, title: "Agent Reporting Dirigeant multi-sites", desc: "Compile auto les KPI de toutes vos cliniques. Dashboard CODIR prêt chaque lundi avec alertes contextuelles.", note: "3 jours → 4 minutes", badge: "DÉMO" }
+    enjeux: [{ num: "02", title: "Plannings & finances sur Excel", quote: "30 plannings sur Excel et data sans préconisations. C'est l'enfer." }],
+    agent: { Icon: BarChart3, title: "Agent Pilotage Dirigeant multi-sites", desc: "Compile auto les KPI opérationnels + P&L par clinique. Dashboard CODIR prêt chaque lundi avec alertes contextuelles, détection d'écarts et préconisations stratégiques.", note: "3 jours → 4 minutes · Cash 12 mois fiable à 95 %", badge: "DÉMO" }
   },
   {
-    enjeux: [{ num: "04", title: "Modélisation financière sur Excel", quote: "Data sans préconisations." }],
-    agent: { Icon: TrendingUp, title: "Agent CFO Copilot multi-sites", desc: "Modélise P&L par clinique, détecte écarts, émet préconisations stratégiques, simule scénarios d'acquisition.", note: "Cash 12 mois fiable à 95 %" }
-  },
-  {
-    enjeux: [{ num: "05", title: "Appels entrants ratés (perte de leads)", quote: "30 % appels ratés = leads perdus." }],
+    enjeux: [{ num: "03", title: "Appels entrants ratés (perte de leads)", quote: "30 % appels ratés = leads perdus." }],
     agent: { Icon: Phone, title: "Agent Lead Catcher 24/7", desc: "Réceptionne, qualifie et route les appels entrants. Détecte les leads chauds en 30 secondes.", note: "0 % leads perdus · 24/7" }
   },
   {
-    enjeux: [{ num: "06", title: "Sales enablement commercial", quote: "Closing < 20 %, leads chauds ratés.", tone: "amber" }],
+    enjeux: [{ num: "04", title: "Sales enablement commercial", quote: "Closing < 20 %, leads chauds ratés.", tone: "amber" }],
     agent: { Icon: CheckCircle, title: "Agent Sales Closer vétérinaire", desc: "Analyse calls commerciaux, score leads, suggère next actions, prépare RDV, détecte deals à risque.", note: "+30 % closing · ramp-up 6 sem" }
   }
 ];
@@ -155,8 +148,8 @@ export default function AnimalHealthLanding() {
           </p>
           <p className="mt-3 max-w-2xl t-body">
             Pour les groupements de cliniques vétérinaires en consolidation et les marques petfood
-            (multinationales et PME premium) en hyper-croissance. 6 enjeux structurels.{" "}
-            5 agents IA sectoriels. ROI mesuré sur vos propres données.
+            (multinationales et PME premium) en hyper-croissance. 4 enjeux structurels.{" "}
+            4 agents IA sectoriels. ROI mesuré sur vos propres données.
           </p>
 
           <div className="mt-6 max-w-md rounded-3xl border border-brand-teal/15 bg-white px-5 py-4 shadow-sm">
@@ -205,8 +198,8 @@ export default function AnimalHealthLanding() {
         <div className="container-shell">
           <p className="eyebrow">Vos enjeux → Notre réponse IA</p>
           <h2 className="t-h1 max-w-3xl font-display">
-            6 enjeux dirigeants.{" "}
-            <span className="italic text-brand-teal">5 agents IA</span> qui y répondent.
+            4 enjeux dirigeants.{" "}
+            <span className="italic text-brand-teal">4 agents IA</span> qui y répondent.
           </h2>
           <p className="mt-3 max-w-3xl t-body">
             À gauche, la phrase qu'on entend. À droite, l'agent IA qui transforme la situation, avec son ROI mesuré.
