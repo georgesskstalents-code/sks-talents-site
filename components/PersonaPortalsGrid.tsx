@@ -91,12 +91,14 @@ export default function PersonaPortalsGrid({
                   i > 0 ? "border-l border-brand-teal/15 pl-3 sm:pl-5 md:pl-10" : ""
                 }`}
               >
-                <h3 className="whitespace-pre-line text-[13px] font-semibold leading-tight text-brand-ink sm:text-base md:t-h3 md:font-display">
-                  {p.title}
-                </h3>
-                <p className="mt-2 min-h-[8rem] text-[11px] leading-snug text-brand-stone sm:min-h-[5.5rem] sm:text-xs md:min-h-[5rem] md:text-caption md:leading-normal">
-                  {p.description}
-                </p>
+                <div className="min-h-[11rem] sm:min-h-[7.5rem] md:min-h-[8rem]">
+                  <h3 className="whitespace-pre-line text-[13px] font-semibold leading-tight text-brand-ink sm:text-base md:t-h3 md:font-display">
+                    {p.title}
+                  </h3>
+                  <p className="mt-2 text-[11px] leading-snug text-brand-stone sm:text-xs md:text-caption md:leading-normal">
+                    {p.description}
+                  </p>
+                </div>
                 <div className="pt-4">
                   <PrimaryCTA {...p.primary} />
                   {p.secondary.length > 0 ? (
