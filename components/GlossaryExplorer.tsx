@@ -63,11 +63,10 @@ export default function GlossaryExplorer({ groups }: Props) {
             Glossaire opérationnel
           </p>
           <h3 className="mt-3 font-display text-4xl text-brand-ink sm:text-5xl">
-            100 concepts à retrouver vite
+            Un référentiel de 100 concepts pour structurer vos décisions et aligner vos équipes.
           </h3>
           <p className="mt-3 max-w-3xl text-base leading-8 text-brand-stone">
-            Cherchez un terme, parcourez par catégorie et utilisez les définitions comme base commune entre
-            direction, RH et managers.
+            Parce qu&apos;un manque de définition claire ralentit l&apos;exécution.
           </p>
         </div>
         <div className="w-full max-w-xl">
