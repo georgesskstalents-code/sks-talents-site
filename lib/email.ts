@@ -579,3 +579,58 @@ export async function readSiteFeedbackDigestState() {
     return {};
   }
 }
+
+export type DiagnosticStructurationLeadPayload = {
+  name: string;
+  email: string;
+  company: string;
+  score: number;
+  zone: "chaos" | "fragile" | "structure";
+  zoneLabel: string;
+  signals: { label: string; checked: boolean }[];
+  pagePath: string;
+  submittedAt: string;
+};
+
+export async function sendDiagnosticStructurationLeadEmail({
+  recipient,
+  from,
+  payload
+}: {
+  recipient: string;
+  from: string;
+  payload: DiagnosticStructurationLeadPayload;
+}) {
+  const subject = `Nouveau diagnostic structuration RH - ${payload.zoneLabel} ${payload.score}/5 - ${payload.company || payload.email}`;
+
+  const signalsLines = payload.signals.map((s) => `  ${s.checked ? "[X]" : "[ ]"} ${escapeBody(s.label)}`);
+
+  const body = [
+    "",
+    "Nouvelle demande de diagnostic structuration RH depuis skstalents.fr",
+    "",
+    `Nom: ${escapeBody(payload.name)}`,
+    `Email: ${escapeBody(payload.email)}`,
+    `Entreprise: ${escapeBody(payload.company)}`,
+    "",
+    `Score: ${payload.score}/5`,
+    `Zone: ${payload.zoneLabel}`,
+    "",
+    "Signaux coches:",
+    ...signalsLines,
+    "",
+    `Page: ${escapeBody(payload.pagePath)}`,
+    `Envoye le: ${payload.submittedAt}`,
+    "",
+    "---",
+    `Repondre directement a cet email pour contacter ${escapeBody(payload.name)} (Reply-To configure sur son email).`
+  ].join("\n");
+
+  await sendPlainTextEmail({
+    recipient,
+    from,
+    replyTo: payload.email,
+    subject,
+    text: body
+  });
+}
