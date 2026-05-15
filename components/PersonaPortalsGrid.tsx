@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Briefcase, Cpu, GraduationCap, Target, type LucideIcon } from "lucide-react";
+import type { ReactNode } from "react";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
 type IconKey = "target-arrow" | "cpu" | "briefcase" | "school";
@@ -15,7 +16,7 @@ type CTA = { label: string; href: string };
 
 export type PersonaPortal = {
   icons: IconKey[];
-  title: string;
+  title: ReactNode;
   description: string;
   primary: CTA;
   secondary: CTA[];
@@ -82,20 +83,20 @@ export default function PersonaPortalsGrid({
           </div>
           <h2 className="t-h1 mt-5 max-w-3xl font-display">{title}</h2>
 
-          <div className="mt-6 grid grid-cols-3 gap-3 border-t border-brand-teal/15 pt-6 sm:gap-6 md:mt-8 md:gap-10 md:pt-8">
+          <div className="mt-6 grid grid-cols-1 gap-8 border-t border-brand-teal/15 pt-6 sm:grid-cols-3 sm:gap-6 md:mt-8 md:gap-10 md:pt-8">
             {portals.map((p, i) => (
               <div
-                key={p.title}
+                key={p.description}
                 className={
                   i > 0
-                    ? "border-l border-brand-teal/15 pl-3 sm:pl-5 md:pl-10"
+                    ? "border-t border-brand-teal/15 pt-8 sm:border-t-0 sm:border-l sm:pt-0 sm:pl-5 md:pl-10"
                     : ""
                 }
               >
-                <h3 className="whitespace-pre-line text-[14px] font-semibold leading-tight text-brand-ink sm:text-base md:t-h3 md:font-display">
+                <h3 className="whitespace-pre-line text-base font-semibold leading-tight text-brand-ink sm:text-base md:t-h3 md:font-display">
                   {p.title}
                 </h3>
-                <p className="mt-2 text-[11px] leading-snug text-brand-stone sm:text-xs md:text-caption md:leading-normal">
+                <p className="mt-2 text-sm leading-relaxed text-brand-stone sm:text-xs sm:leading-snug md:text-caption md:leading-normal">
                   {p.description}
                 </p>
                 <PrimaryCTA {...p.primary} />

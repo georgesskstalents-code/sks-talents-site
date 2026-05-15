@@ -9,7 +9,7 @@ const CHEVRON_TRANSITION = { duration: 0.25, ease: "easeOut" as const };
 function ChevronIcon({ open }: { open: boolean }) {
   return (
     <span
-      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-colors ${
+      className={`flex h-8 w-8 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full transition-colors ${
         open
           ? "bg-[#41a0a4] text-white"
           : "bg-white border border-[#E5E7EB] text-[#4a6e70]"
@@ -109,14 +109,14 @@ function QuestionAccordion({
             onToggle();
           }
         }}
-        className="flex w-full items-start gap-4 p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#41a0a4] focus-visible:ring-offset-2 rounded-2xl"
+        className="flex w-full items-start gap-3 sm:gap-4 p-5 sm:p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#41a0a4] focus-visible:ring-offset-2 rounded-2xl"
       >
-        <span className="font-display text-3xl text-[#41a0a4] leading-none pt-1 shrink-0">
+        <span className="font-display text-2xl sm:text-3xl text-[#41a0a4] leading-none pt-1 shrink-0">
           {number}
         </span>
-        <div className="flex-1 space-y-2">
+        <div className="flex-1 min-w-0 space-y-2">
           <CategoryPill label={question.category} active={open} />
-          <h3 className="font-display text-xl sm:text-[22px] text-[#0d2a2c] leading-snug">
+          <h3 className="font-display text-lg sm:text-[22px] text-[#0d2a2c] leading-snug">
             {question.question}
           </h3>
         </div>
@@ -136,7 +136,7 @@ function QuestionAccordion({
             transition={CHEVRON_TRANSITION}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-6 pl-[calc(1.5rem+2.25rem+1rem)] sm:pl-[calc(1.5rem+2.5rem+1rem)]">
+            <div className="px-5 pb-5 sm:px-6 sm:pb-6 sm:pl-[calc(1.5rem+2.5rem+1rem)]">
               {question.answerHtml ? (
                 <p
                   className="font-sans text-[15px] leading-7 text-[#4a6e70] [&_strong]:font-semibold [&_strong]:text-[#0d2a2c]"
@@ -245,9 +245,10 @@ export default function FAQHomeTabs() {
           href="https://calendly.com/g-kengue/talentconsulting"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 flex w-full items-center justify-center rounded-full bg-[#0d2a2c] px-6 py-4 font-sans text-sm font-medium text-white transition-colors hover:bg-[#41a0a4] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#41a0a4] focus-visible:ring-offset-2"
+          className="mt-8 flex w-full items-center justify-center rounded-full bg-[#0d2a2c] px-6 py-4 text-center font-sans text-sm font-medium leading-snug text-white transition-colors hover:bg-[#41a0a4] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#41a0a4] focus-visible:ring-offset-2"
         >
-          Une autre question ? Réserver 30 min avec SKS Talents  →
+          <span className="sm:hidden">Réserver 30 min avec SKS Talents →</span>
+          <span className="hidden sm:inline">Une autre question ? Réserver 30 min avec SKS Talents →</span>
         </a>
       </div>
     </section>
