@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Compass, Sparkles, TrendingUp, Users } from "lucide-react";
 import CalendlyButton from "@/components/CalendlyButton";
+import { StructurationHero } from "@/components/sections/StructurationHero";
 import DemoStage from "@/components/landings/DemoStage";
 import DiagnosticForm from "@/components/landings/DiagnosticForm";
 import LogosScrollCarousel from "@/components/landings/LogosScrollCarousel";
@@ -164,49 +165,43 @@ const trustSignals = ["★ 4,5/5 Trustpilot", "France Biotech", "Saclay", "100+ 
 export default function LifeSciencesLanding() {
   return (
     <main className="bg-white">
-      {/* ===== Section 1 - HERO ===== */}
-      <section className="relative bg-gradient-to-b from-brand-mint/30 to-white pb-12 pt-12 sm:pb-16 sm:pt-20">
-        <div className="container-shell">
-          <p className="eyebrow">Executive Search · Life Sciences</p>
-          <h1 className="t-display-l">
-            Combien de mois d'avance avez-vous sur votre prochain{" "}
-            <span className="italic text-brand-teal">hire stratégique</span> ?
-          </h1>
-          <div className="mt-4 max-w-2xl space-y-1.5 t-body">
-            <p>Combien de board meetings préparés en 2 jours au lieu de 5 minutes ?</p>
-            <p>Combien de profils seniors recrutés à grand prix qui partent avant 18 mois ?</p>
-          </div>
-          <p className="mt-5 max-w-2xl t-body-l font-medium text-brand-ink">
-            Vos process talent ne suivent plus votre R&D.{" "}
-            <span className="text-brand-teal">Chez SKS Talents, notre CEO Copilot, oui.</span>
-          </p>
-          <p className="mt-3 max-w-2xl t-body">
-            Pour les CEO biotech, medtech, deeptech et e-santé en industrialisation Series A à C.
-            Anticipez vos recrutements stratégiques selon l'évolution de vos programmes. 3 enjeux
-            structurels. 4 agents IA sectoriels (dont un duo Talent Intelligence + Rétention). ROI
-            mesuré sur vos propres données.
-          </p>
-
-          <div className="mt-6 max-w-md rounded-3xl border border-brand-teal/15 bg-white px-5 py-4 shadow-sm">
-            <p className="text-eyebrow font-semibold uppercase text-brand-teal">Pourquoi SKS Talents</p>
-            <p className="mt-2 text-caption text-brand-stone">
-              Expertise depuis plus de 8 ans en recrutement Life Sciences · Membre Commission RH
-              France Biotech · Intervenant Master Biology &amp; Health Paris-Saclay · 100+
-              placements · 4,5/5 sur Trustpilot.
-            </p>
-          </div>
-
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#demo"
-              className="inline-flex items-center justify-center rounded-full bg-brand-teal px-6 py-4 t-body font-semibold text-white transition hover:opacity-90"
-            >
-              Voir la démo ↓
-            </a>
-            <CalendlyButton label="Réserver 15 min →" tone="outline" />
-          </div>
-        </div>
-      </section>
+      {/* ===== Section 1 - HERO (StructurationHero) ===== */}
+      <StructurationHero
+        vertical="life-sciences"
+        eyebrow="Executive Search  ·  Life Sciences"
+        headlineLines={[
+          "Combien de mois d'avance",
+          "avez-vous sur votre prochain",
+          "hire stratégique ?"
+        ]}
+        question={{
+          thematicLabel: "Le copilot IA qui transforme vos board meetings",
+          questionText:
+            "Pourquoi vos décisions stratégiques talents reposent-elles encore sur des données fragmentées ?",
+          answer: "Peut-être parce que vos ",
+          answerHighlight: "KPIs talents sont éparpillés dans plusieurs outils",
+          italicPhrase:
+            " et que chaque board mobilise des heures de retraitement manuel. Quand l'information circule mal, le pilotage devient plus lent qu'il ne devrait.",
+          punchline: "Et si vos boards reposaient sur une lecture en temps réel ?"
+        }}
+        constat={{
+          line1Prefix: "Vos process talent ",
+          line1Bold: "ne suivent plus",
+          line1Suffix: " votre croissance.",
+          line2Italic: "Chez SKS Talents, notre CEO Copilot, oui."
+        }}
+        response={{
+          cibleBold: "Pour les CEO biotech, medtech, deeptech et e-santé",
+          cibleSuffix: " en industrialisation Series A à C.",
+          description:
+            "Anticipez vos recrutements stratégiques selon l'évolution de vos programmes.",
+          enjeux: "3 enjeux structurels",
+          agents: "4 agents IA sectoriels",
+          agentsDetail: "(Talent Intelligence + Rétention)",
+          roi: "ROI mesuré sur vos propres données."
+        }}
+        pourquoiSKS="8 ans d'expertise  ·  Commission RH France Biotech  ·  100+ placements  ·  4,5/5 Trustpilot"
+      />
 
       {/* ===== Section 2 - DÉMO ===== */}
       <section id="demo" className="bg-white py-14 sm:py-20">

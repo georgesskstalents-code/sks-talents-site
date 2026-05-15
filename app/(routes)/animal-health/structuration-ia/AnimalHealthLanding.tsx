@@ -10,6 +10,7 @@ import {
   TrendingUp
 } from "lucide-react";
 import CalendlyButton from "@/components/CalendlyButton";
+import { StructurationHero } from "@/components/sections/StructurationHero";
 import DemoStage from "@/components/landings/DemoStage";
 import DiagnosticForm from "@/components/landings/DiagnosticForm";
 import LogosScrollCarousel from "@/components/landings/LogosScrollCarousel";
@@ -126,47 +127,44 @@ const trustSignals = ["★ 4,5/5 Trustpilot", "France Biotech", "Saclay", "100+ 
 export default function AnimalHealthLanding() {
   return (
     <main className="bg-white">
-      {/* ===== Section 1 - HERO ===== */}
-      <section className="relative bg-gradient-to-b from-brand-mint/30 to-white pb-12 pt-12 sm:pb-16 sm:pt-20">
-        <div className="container-shell">
-          <p className="eyebrow">Executive Search · Animal Health</p>
-          <h1 className="t-display-l">
-            Combien de jours par mois passez-vous à comprendre ce qui se passe vraiment dans{" "}
-            <span className="italic text-brand-teal">vos cliniques</span> ?
-          </h1>
-          <div className="mt-4 max-w-2xl space-y-1.5 t-body">
-            <p>Combien d'opportunités d'acquisition manquées faute de pipeline structuré ?</p>
-            <p>Combien d'appels entrants ratés transformés en clients perdus ?</p>
-          </div>
-          <p className="mt-5 max-w-2xl t-body-l font-medium text-brand-ink">
-            Vos process RH ne suivent plus votre développement.{" "}
-            <span className="text-brand-teal">Chez SKS Talents, nos agents IA, oui.</span>
-          </p>
-          <p className="mt-3 max-w-2xl t-body">
-            Pour les groupements de cliniques vétérinaires en consolidation et les marques petfood
-            (multinationales et PME premium) en hyper-croissance. 3 enjeux structurels.{" "}
-            3 agents IA sectoriels. ROI mesuré sur vos propres données.
-          </p>
-
-          <div className="mt-6 max-w-md rounded-3xl border border-brand-teal/15 bg-white px-5 py-4 shadow-sm">
-            <p className="text-eyebrow font-semibold uppercase text-brand-teal">Pourquoi SKS Talents</p>
-            <p className="mt-2 text-caption text-brand-stone">
-              Expertise depuis plus de 8 ans en recrutement Animal Health · 100+ placements · 4,5/5
-              sur Trustpilot · Membre France Biotech · Présent dans 6 pays.
-            </p>
-          </div>
-
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#demo"
-              className="inline-flex items-center justify-center rounded-full bg-brand-teal px-6 py-4 t-body font-semibold text-white transition hover:opacity-90"
-            >
-              Voir la démo ↓
-            </a>
-            <CalendlyButton label="Réserver 15 min →" tone="outline" />
-          </div>
-        </div>
-      </section>
+      {/* ===== Section 1 - HERO (StructurationHero) ===== */}
+      <StructurationHero
+        vertical="animal-health"
+        eyebrow="Executive Search  ·  Animal Health"
+        headlineLines={[
+          "Combien de jours par mois",
+          "passez-vous à comprendre",
+          "vos cliniques au lieu de scaler ?"
+        ]}
+        question={{
+          thematicLabel: "Passer de 3 jours à 4 minutes de reporting mensuel",
+          questionText:
+            "Pourquoi consacrer encore plusieurs jours par mois à compiler ce que vos cliniques produisent déjà ?",
+          answer: "Parce que vos ",
+          answerHighlight: "données opérationnelles sont dispersées",
+          italicPhrase:
+            " entre cliniques, et qu'il faut tout reconstruire à la main pour obtenir une vue consolidée. Le pilotage ne devrait pas être un projet, mais un réflexe.",
+          punchline: "Et si votre reporting mensuel devenait l'affaire de quelques minutes ?"
+        }}
+        constat={{
+          line1Prefix: "Vos process RH ",
+          line1Bold: "ne suivent plus",
+          line1Suffix: " votre croissance.",
+          line2Italic: "Chez SKS Talents, nos agents IA, oui."
+        }}
+        response={{
+          cibleBold: "Pour les groupements vétérinaires en consolidation",
+          cibleSuffix:
+            " et les marques petfood (multinationales et PME premium) en hyper-croissance.",
+          description:
+            "Anticipez vos recrutements et structurez votre exécution opérationnelle.",
+          enjeux: "3 enjeux structurels",
+          agents: "3 agents IA sectoriels",
+          agentsDetail: "(Reporting Multi-Sites + Talent + M&A)",
+          roi: "ROI mesuré sur vos propres données."
+        }}
+        pourquoiSKS="8 ans d'expertise Animal Health  ·  Réseau vétérinaire & petfood national  ·  100+ placements  ·  4,5/5 Trustpilot"
+      />
 
       {/* ===== Section 2 - DÉMO ===== */}
       <section id="demo" className="bg-white py-14 sm:py-20">
