@@ -9,8 +9,8 @@ export default function TestimonialMarquee({ embedded = false }: { embedded?: bo
       return <SenjaTestimonials widgetId={senjaWidgetId} className="min-h-[320px]" />;
     }
     return (
-      <div className="overflow-hidden rounded-2xl border border-brand-teal/10 bg-white/75 px-4 py-5 shadow-soft sm:px-6 sm:py-6">
-        <div className="pb-4 text-center sm:pb-5">
+      <div className="overflow-hidden rounded-[28px] border border-brand-teal/10 bg-white/70 py-6 shadow-soft">
+        <div className="px-6 pb-5 text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-teal sm:text-xs">
             Ce que nos clients et candidats pensent de nous
           </p>
@@ -26,28 +26,30 @@ export default function TestimonialMarquee({ embedded = false }: { embedded?: bo
   const doubled = [...testimonials, ...testimonials];
 
   const marquee = (
-    <div className="overflow-hidden">
-      <div className="flex min-w-max animate-marquee-testimonials gap-6 px-2 hover:[animation-play-state:paused]">
+    <div className="group overflow-hidden">
+      <div className="flex min-w-max animate-marquee-testimonials gap-5 px-4 group-hover:[animation-play-state:paused]">
         {doubled.map((item, index) => (
           <article
             key={`${item.name}-${index}`}
-            className="min-h-[260px] min-w-[280px] max-w-[280px] rounded-2xl border border-brand-teal/10 bg-white p-4 shadow-soft sm:min-w-[300px] sm:max-w-[300px]"
+            className="flex w-[320px] shrink-0 flex-col gap-2 rounded-2xl border border-brand-teal/12 bg-white p-5"
           >
-            <p className="truncate text-[13px] font-semibold text-brand-ink sm:text-sm">{item.name}</p>
-            <p className="truncate text-[12px] text-brand-stone sm:text-[13px]">{item.role ?? ""}</p>
-            <p className="mt-2 text-[20px] leading-none text-amber-400">★★★★★</p>
-            <p className="mt-3 line-clamp-5 text-[12px] leading-6 text-brand-stone sm:text-[13px]">
-              {item.quote}
+            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-teal">
+              Avis vérifié · {item.date}
             </p>
+            <p className="text-[16px] leading-none text-amber-400">★★★★★</p>
+            <h3 className="font-display text-xl leading-tight text-brand-ink">{item.name}</h3>
+            {item.role ? (
+              <p className="-mt-1 text-xs text-brand-stone">{item.role}</p>
+            ) : null}
+            <p className="text-sm leading-6 text-brand-stone line-clamp-4">{item.quote}</p>
             <a
               href="https://fr.trustpilot.com/review/skstalents.fr"
               target="_blank"
               rel="noreferrer noopener"
-              className="mt-2 inline-block text-[12px] font-medium text-brand-stone transition hover:text-brand-teal"
+              className="mt-auto inline-flex text-sm font-semibold text-brand-teal transition hover:opacity-80"
             >
               Voir l'avis public
             </a>
-            <p className="mt-3 text-[11px] text-brand-stone/80">{item.date}</p>
           </article>
         ))}
       </div>
