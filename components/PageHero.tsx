@@ -32,7 +32,7 @@ export default function PageHero({
 
   if (template === "job-role") {
     return (
-      <section className="container-shell py-16 sm:py-20">
+      <section className="container-shell py-8 sm:py-12">
         <div className="card-surface overflow-hidden p-0">
           <div className="grid lg:grid-cols-[1.08fr_0.92fr]">
             <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(65,160,164,0.16),transparent_30%),linear-gradient(180deg,rgba(223,243,241,0.96),rgba(255,255,255,0.94))] px-8 py-10 sm:px-12 sm:py-14">
@@ -74,7 +74,7 @@ export default function PageHero({
 
   if (template === "editorial") {
     return (
-      <section className="container-shell py-16 sm:py-20">
+      <section className="container-shell py-8 sm:py-12">
         <div className="card-surface overflow-hidden p-0">
           <div className="grid lg:grid-cols-[1.02fr_0.98fr]">
             <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(65,160,164,0.12),transparent_24%),linear-gradient(180deg,rgba(250,252,252,0.98),rgba(255,255,255,0.95))] px-8 py-10 sm:px-12 sm:py-14">
@@ -180,7 +180,7 @@ export default function PageHero({
   }
 
   return (
-    <section className="container-shell py-16 sm:py-20">
+    <section className="container-shell py-8 sm:py-12">
       <div className={`card-surface p-8 sm:p-12 ${variantClassNames[variant]}`}>
         {breadcrumbs ? (
           <Breadcrumbs

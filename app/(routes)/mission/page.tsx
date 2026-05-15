@@ -90,8 +90,6 @@ export default function MissionPage() {
       <SectionShell
         compact
         eyebrow="Prochaine étape"
-        title="Si votre besoin est critique, le meilleur moment pour le cadrer est maintenant."
-        description="Vous pouvez prendre un rendez-vous, demander un rappel ou continuer à explorer nos services, références et contenus sectoriels."
       >
         <div className="card-surface grid gap-6 p-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>

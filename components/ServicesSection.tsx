@@ -3,7 +3,7 @@ import { services } from "@/data/site";
 
 export default function ServicesSection() {
   return (
-    <section className="py-14">
+    <section className="py-8 sm:py-10">
       <div className="container-shell">
         <div className="mb-8 space-y-4">
           <p className="eyebrow">Solution</p>
