@@ -17,10 +17,9 @@ export default function HeroBackgroundVideo({ vimeoId }: Props) {
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    // Skip background video on mobile/small screens - saves ~2-5 MB and several
-    // 100 ms on first interaction. Static gradient remains as the visual treatment.
-    if (window.matchMedia("(max-width: 768px)").matches) return;
-    // Also skip if Save-Data header is set (slow connections)
+    // Note: video activee sur mobile aussi (CEO direction 2026-05-15) - cout ~2-5 MB.
+    // Garde-fous conserves: Save-Data et reseaux 2G/slow-2g coupent toujours la video.
+    // Skip if Save-Data header is set (slow connections)
     const conn = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
     if (conn?.saveData) return;
     if (conn?.effectiveType && /(2g|slow-2g)/.test(conn.effectiveType)) return;
