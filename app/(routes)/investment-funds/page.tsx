@@ -119,36 +119,38 @@ export default function InvestmentFundsPage() {
           </div>
         </SectionShell>
       </div>
-      <SectionShell
-        eyebrow="Références du marché"
-        title="Des profils d'acteurs du secteur santé basés sur des informations fiables et vérifiées."
-        description="Chaque carte renvoie directement au site officiel du fonds pour que vous puissiez consulter sa communication source."
-      >
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {investmentFunds.map((fund) => {
-            const officialUrl = fund.sourceSet[0]?.url;
-            if (!officialUrl) return null;
-            return (
-              <a
-                key={fund.slug}
-                href={officialUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="card-surface block p-6 transition hover:-translate-y-1"
-              >
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-teal">
-                  {fund.organizationType}
-                </p>
-                <h3 className="mt-3 font-display text-3xl text-brand-ink">{fund.name}</h3>
-                <p className="mt-4 text-sm leading-7 text-brand-stone">{fund.seo.description}</p>
-                <p className="mt-4 text-sm font-semibold text-brand-teal">
-                  Ouvrir le site officiel →
-                </p>
-              </a>
-            );
-          })}
-        </div>
-      </SectionShell>
+      <div className="sr-only" aria-hidden="false">
+        <SectionShell
+          eyebrow="Références du marché"
+          title="Des profils d'acteurs du secteur santé basés sur des informations fiables et vérifiées."
+          description="Chaque carte renvoie directement au site officiel du fonds pour que vous puissiez consulter sa communication source."
+        >
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {investmentFunds.map((fund) => {
+              const officialUrl = fund.sourceSet[0]?.url;
+              if (!officialUrl) return null;
+              return (
+                <a
+                  key={fund.slug}
+                  href={officialUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="card-surface block p-6 transition hover:-translate-y-1"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-teal">
+                    {fund.organizationType}
+                  </p>
+                  <h3 className="mt-3 font-display text-3xl text-brand-ink">{fund.name}</h3>
+                  <p className="mt-4 text-sm leading-7 text-brand-stone">{fund.seo.description}</p>
+                  <p className="mt-4 text-sm font-semibold text-brand-teal">
+                    Ouvrir le site officiel →
+                  </p>
+                </a>
+              );
+            })}
+          </div>
+        </SectionShell>
+      </div>
       <SectionShell
         eyebrow="Annuaire de fonds"
         title="Fonds à suivre dans la santé, les life sciences et l’animal health"
