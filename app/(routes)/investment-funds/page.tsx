@@ -45,91 +45,108 @@ export default function InvestmentFundsPage() {
           </p>
         </a>
       </section>
-      <SectionShell
-        eyebrow="Portes d’entrée"
-        title="Trois lectures pour situer Bpifrance, France Biotech et les fonds santé"
-        description="Ces pages transforment une recherche rapide en lecture utile, puis ouvrent vers l’annuaire des fonds, les actualités et les besoins recrutement associés."
-      >
-        <div className="grid gap-6 md:grid-cols-3">
-          <ListingCard
-            href="/bpifrance-biotech-medtech"
-            title="Bpifrance biotech medtech"
-            description="Lecture claire des véhicules biotech et medtech et de leurs implications croissance et recrutement."
-            meta="Source institutionnelle"
-          />
-          <ListingCard
-            href="/france-biotech-panorama-healthtech"
-            title="France Biotech et Panorama"
-            description="Lecture business des publications France Biotech pour dirigeants, RH et candidats."
-            meta="Source sectorielle"
-          />
-          <ListingCard
-            href="/fonds-sante-france"
-            title="Fonds santé France"
-            description="Page dédiée pour relier fonds, levées, scale-up et signaux hiring."
-            meta="Fonds santé France"
-          />
-        </div>
-      </SectionShell>
-      <SectionShell
-        eyebrow="Clusters fonds"
-        title="Les fonds les plus visibles du marché santé."
-        description="Objectif : vous permettre d'accéder rapidement aux principaux acteurs et de mieux comprendre leur positionnement."
-      >
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          <ListingCard
-            href="/sofinnova-partners-life-sciences"
-            title="Sofinnova Partners"
-            description="Lecture Life Sciences, scale-up et implications recrutement."
-            meta="VC Life Sciences"
-          />
-          <ListingCard
-            href="/eurazeo-healthcare-growth"
-            title="Eurazeo Healthcare"
-            description="Lecture growth santé, exécution et structuration des équipes."
-            meta="Growth"
-          />
-          <ListingCard
-            href="/truffle-capital-biotech-medtech"
-            title="Truffle Capital"
-            description="Lecture biotech / medtech et signaux de structuration."
-            meta="Biotech / Medtech"
-          />
-          <ListingCard
-            href="/merieux-equity-partners-sante"
-            title="Mérieux Equity Partners"
-            description="Lecture fonds santé, crédibilité marché et exigences d’équipe."
-            meta="Santé"
-          />
-          <ListingCard
-            href="/cathay-capital-healthcare"
-            title="Cathay Capital Healthcare"
-            description="Lecture healthcare, growth et besoins d’exécution."
-            meta="Healthcare"
-          />
-          <ListingCard
-            href="/extens-digital-health-france"
-            title="Extens"
-            description="Lecture digital health, croissance et organisation."
-            meta="Digital Health"
-          />
-        </div>
-      </SectionShell>
+      <div className="sr-only" aria-hidden="false">
+        <SectionShell
+          eyebrow="Portes d’entrée"
+          title="Trois lectures pour situer Bpifrance, France Biotech et les fonds santé"
+          description="Ces pages transforment une recherche rapide en lecture utile, puis ouvrent vers l’annuaire des fonds, les actualités et les besoins recrutement associés."
+        >
+          <div className="grid gap-6 md:grid-cols-3">
+            <ListingCard
+              href="/bpifrance-biotech-medtech"
+              title="Bpifrance biotech medtech"
+              description="Lecture claire des véhicules biotech et medtech et de leurs implications croissance et recrutement."
+              meta="Source institutionnelle"
+            />
+            <ListingCard
+              href="/france-biotech-panorama-healthtech"
+              title="France Biotech et Panorama"
+              description="Lecture business des publications France Biotech pour dirigeants, RH et candidats."
+              meta="Source sectorielle"
+            />
+            <ListingCard
+              href="/fonds-sante-france"
+              title="Fonds santé France"
+              description="Page dédiée pour relier fonds, levées, scale-up et signaux hiring."
+              meta="Fonds santé France"
+            />
+          </div>
+        </SectionShell>
+      </div>
+      <div className="sr-only" aria-hidden="false">
+        <SectionShell
+          eyebrow="Clusters fonds"
+          title="Les fonds les plus visibles du marché santé."
+          description="Objectif : vous permettre d'accéder rapidement aux principaux acteurs et de mieux comprendre leur positionnement."
+        >
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <ListingCard
+              href="/sofinnova-partners-life-sciences"
+              title="Sofinnova Partners"
+              description="Lecture Life Sciences, scale-up et implications recrutement."
+              meta="VC Life Sciences"
+            />
+            <ListingCard
+              href="/eurazeo-healthcare-growth"
+              title="Eurazeo Healthcare"
+              description="Lecture growth santé, exécution et structuration des équipes."
+              meta="Growth"
+            />
+            <ListingCard
+              href="/truffle-capital-biotech-medtech"
+              title="Truffle Capital"
+              description="Lecture biotech / medtech et signaux de structuration."
+              meta="Biotech / Medtech"
+            />
+            <ListingCard
+              href="/merieux-equity-partners-sante"
+              title="Mérieux Equity Partners"
+              description="Lecture fonds santé, crédibilité marché et exigences d’équipe."
+              meta="Santé"
+            />
+            <ListingCard
+              href="/cathay-capital-healthcare"
+              title="Cathay Capital Healthcare"
+              description="Lecture healthcare, growth et besoins d’exécution."
+              meta="Healthcare"
+            />
+            <ListingCard
+              href="/extens-digital-health-france"
+              title="Extens"
+              description="Lecture digital health, croissance et organisation."
+              meta="Digital Health"
+            />
+          </div>
+        </SectionShell>
+      </div>
       <SectionShell
         eyebrow="Références du marché"
         title="Des profils d'acteurs du secteur santé basés sur des informations fiables et vérifiées."
-        description="Chaque fiche s'appuie sur des sources officielles, avec une distinction claire entre faits établis, estimations et analyses."
+        description="Chaque carte renvoie directement au site officiel du fonds pour que vous puissiez consulter sa communication source."
       >
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {investmentFunds.map((fund) => (
-            <ListingCard
-              key={fund.slug}
-              href={`/investment-funds/${fund.slug}`}
-              title={fund.name}
-              description={fund.seo.description}
-              meta={fund.organizationType}
-            />
-          ))}
+          {investmentFunds.map((fund) => {
+            const officialUrl = fund.sourceSet[0]?.url;
+            if (!officialUrl) return null;
+            return (
+              <a
+                key={fund.slug}
+                href={officialUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="card-surface block p-6 transition hover:-translate-y-1"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-teal">
+                  {fund.organizationType}
+                </p>
+                <h3 className="mt-3 font-display text-3xl text-brand-ink">{fund.name}</h3>
+                <p className="mt-4 text-sm leading-7 text-brand-stone">{fund.seo.description}</p>
+                <p className="mt-4 text-sm font-semibold text-brand-teal">
+                  Ouvrir le site officiel →
+                </p>
+              </a>
+            );
+          })}
         </div>
       </SectionShell>
       <SectionShell
