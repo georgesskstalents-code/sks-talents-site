@@ -92,7 +92,7 @@ export default function PersonaPortalsGrid({
                     : ""
                 }
               >
-                <h3 className="text-[14px] font-semibold leading-tight text-brand-ink sm:text-base md:t-h3 md:font-display">
+                <h3 className="whitespace-pre-line text-[14px] font-semibold leading-tight text-brand-ink sm:text-base md:t-h3 md:font-display">
                   {p.title}
                 </h3>
                 <p className="mt-2 text-[11px] leading-snug text-brand-stone sm:text-xs md:text-caption md:leading-normal">

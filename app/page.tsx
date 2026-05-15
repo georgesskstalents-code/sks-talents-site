@@ -34,7 +34,7 @@ const personaPortals: PersonaPortal[] = [
   },
   {
     icons: ["cpu"],
-    title: "Votre croissance est freinée par des process non structurés.",
+    title: "Éliminez le répétitif.\nConcentrez-vous sur ce qui crée de la croissance.",
     description:
       "Temps perdu, décisions ralenties, manque de visibilité. Nous déployons des agents IA sur mesure, activés selon vos priorités clés, en 4 semaines.",
     primary: { label: "Diagnostic rapide (5 min)", href: "/diagnostic" },
