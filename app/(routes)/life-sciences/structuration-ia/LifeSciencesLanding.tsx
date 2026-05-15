@@ -550,8 +550,11 @@ export default function LifeSciencesLanding() {
         <div className="container-shell">
           <p className="eyebrow">Références &amp; exécution</p>
           <h2 className="t-h1 max-w-3xl font-display">
-            Des marques reconnues. Des scale-ups ambitieuses.
+            Ils nous ont fait confiance.
           </h2>
+          <p className="mt-3 max-w-3xl t-body">
+            Dans des moments où structurer et sécuriser les bons talents devient un enjeu de croissance.
+          </p>
           <div className="mt-8">
             <LogosScrollCarousel logos={partnerLogos} ariaLabel="Logos partenaires Life Sciences" />
           </div>

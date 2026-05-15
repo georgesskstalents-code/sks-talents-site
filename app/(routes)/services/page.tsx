@@ -248,7 +248,8 @@ export default function ServicesPage() {
       <RevealOnScroll delayMs={170}>
         <SectionShell
           eyebrow="Preuves"
-          title="Des marques reconnues. Des scale-ups ambitieuses."
+          title="Ils nous ont fait confiance."
+          description="Dans des moments où structurer et sécuriser les bons talents devient un enjeu de croissance."
         >
           <div className="space-y-8">
             <div className="card-luxe p-6 sm:p-8">
