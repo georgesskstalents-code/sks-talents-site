@@ -36,10 +36,10 @@ const personaPortals: PersonaPortal[] = [
     title: "Votre croissance est freinée par des process non structurés.",
     description:
       "Temps perdu, décisions ralenties, manque de visibilité. Nous déployons des agents IA sur mesure, activés selon vos priorités clés, en 4 semaines.",
-    primary: { label: "Life Sciences", href: "/life-sciences/structuration-ia" },
+    primary: { label: "Diagnostic rapide (5 min)", href: "/diagnostic" },
     secondary: [
-      { label: "Animal Health", href: "/animal-health/structuration-ia" },
-      { label: "Diagnostic rapide (5 min)", href: "/diagnostic" }
+      { label: "Life Sciences", href: "/life-sciences/structuration-ia" },
+      { label: "Animal Health", href: "/animal-health/structuration-ia" }
     ]
   },
   {
