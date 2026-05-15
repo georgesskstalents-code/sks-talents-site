@@ -12,7 +12,7 @@ const ICONS: Record<IconKey, LucideIcon> = {
   school: GraduationCap
 };
 
-type CTA = { label: string; href: string };
+type CTA = { label: string; href: string; hideOnMobile?: boolean };
 
 export type PersonaPortal = {
   icons: IconKey[];
@@ -102,7 +102,12 @@ export default function PersonaPortalsGrid({
                   {p.secondary.length > 0 ? (
                     <div className="mt-3 flex flex-col gap-1.5 sm:mt-4 sm:gap-2">
                       {p.secondary.map((s) => (
-                        <SecondaryCTA key={s.href + s.label} {...s} />
+                        <div
+                          key={s.href + s.label}
+                          className={s.hideOnMobile ? "hidden sm:block" : ""}
+                        >
+                          <SecondaryCTA href={s.href} label={s.label} />
+                        </div>
                       ))}
                     </div>
                   ) : null}

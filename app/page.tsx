@@ -56,7 +56,7 @@ const personaPortals: PersonaPortal[] = [
       href: "https://calendly.com/g-kengue/talentconsulting"
     },
     secondary: [
-      { label: "Notre méthode", href: "/services" },
+      { label: "Notre méthode", href: "/services", hideOnMobile: true },
       { label: "Life Sciences", href: "/life-sciences" },
       { label: "Animal Health", href: "/animal-health" }
     ]
