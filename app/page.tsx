@@ -65,7 +65,7 @@ const personaPortals: PersonaPortal[] = [
     icons: ["cpu"],
     title: "Éliminez le répétitif.",
     description:
-      "Temps perdu, décisions ralenties, manque de visibilité. Nous déployons des agents IA sur mesure, activés selon vos priorités clés, en 4 semaines.",
+      "Redonnez du temps à vos équipes RH et à votre direction.",
     primary: { label: "Diagnostic rapide (5 min)", href: "/diagnostic" },
     secondary: [
       { label: "Life Sciences", href: "/life-sciences/structuration-ia" },
