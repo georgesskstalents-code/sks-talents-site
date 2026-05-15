@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { useState } from "react";
 import { FAQ_HOME_TABS, type FaqQuestion, type FaqVertical } from "@/data/faqHomeContent";
 
@@ -241,13 +242,13 @@ export default function FAQHomeTabs() {
           ))}
         </div>
 
-        <a
+        <Link
           href="/diagnostic"
           className="mt-8 flex w-full items-center justify-center rounded-full bg-[#0d2a2c] px-6 py-4 text-center font-sans text-sm font-medium leading-snug text-white transition-colors hover:bg-[#41a0a4] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#41a0a4] focus-visible:ring-offset-2"
         >
           <span className="sm:hidden">Faire le diagnostic en 2 minutes →</span>
           <span className="hidden sm:inline">Pas la bonne question ? Faire le diagnostic structuration en 2 minutes →</span>
-        </a>
+        </Link>
       </div>
     </section>
   );
