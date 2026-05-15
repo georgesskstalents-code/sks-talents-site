@@ -126,10 +126,10 @@ export default function HomePage() {
             <div className="space-y-5">
               <p className="eyebrow">Preuves</p>
               <h2 className="section-title max-w-5xl">
-                Des marques reconnues. Des scale-ups ambitieuses.
+                Ils nous ont fait confiance.
               </h2>
               <p className="section-copy">
-                Ce que nous avons recruté, dans quel contexte, avec quel niveau d'exigence.
+                Dans des moments où structurer et sécuriser les bons talents devient un enjeu de croissance.
               </p>
             </div>
             <ReferenceCardMarquee items={references.slice(0, 6)} />
