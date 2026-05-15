@@ -33,7 +33,7 @@ function isExternal(href: string) {
 
 function PrimaryCTA({ href, label }: CTA) {
   const className =
-    "mt-4 inline-flex w-full items-center justify-center rounded-full bg-brand-ink px-2 py-2 text-[11px] font-semibold text-white transition hover:opacity-90 sm:w-auto sm:px-5 sm:py-3.5 sm:text-caption md:px-6";
+    "inline-flex w-full items-center justify-center rounded-full bg-brand-ink px-2 py-2 text-[11px] font-semibold text-white transition hover:opacity-90 sm:w-auto sm:px-5 sm:py-3.5 sm:text-caption md:px-6";
   if (isExternal(href)) {
     return (
       <a href={href} className={className} target="_blank" rel="noopener noreferrer">
@@ -83,15 +83,13 @@ export default function PersonaPortalsGrid({
           </div>
           <h2 className="t-h1 mt-5 max-w-3xl font-display">{title}</h2>
 
-          <div className="mt-6 grid grid-cols-3 gap-3 border-t border-brand-teal/15 pt-6 sm:gap-6 md:mt-8 md:gap-10 md:pt-8">
+          <div className="mt-6 grid grid-cols-3 items-stretch gap-3 border-t border-brand-teal/15 pt-6 sm:gap-6 md:mt-8 md:gap-10 md:pt-8">
             {portals.map((p, i) => (
               <div
                 key={p.description}
-                className={
-                  i > 0
-                    ? "border-l border-brand-teal/15 pl-3 sm:pl-5 md:pl-10"
-                    : ""
-                }
+                className={`flex h-full flex-col ${
+                  i > 0 ? "border-l border-brand-teal/15 pl-3 sm:pl-5 md:pl-10" : ""
+                }`}
               >
                 <h3 className="whitespace-pre-line text-[13px] font-semibold leading-tight text-brand-ink sm:text-base md:t-h3 md:font-display">
                   {p.title}
@@ -99,14 +97,16 @@ export default function PersonaPortalsGrid({
                 <p className="mt-2 text-[11px] leading-snug text-brand-stone sm:text-xs md:text-caption md:leading-normal">
                   {p.description}
                 </p>
-                <PrimaryCTA {...p.primary} />
-                {p.secondary.length > 0 ? (
-                  <div className="mt-3 flex flex-col gap-1.5 sm:mt-4 sm:gap-2">
-                    {p.secondary.map((s) => (
-                      <SecondaryCTA key={s.href + s.label} {...s} />
-                    ))}
-                  </div>
-                ) : null}
+                <div className="mt-auto pt-4">
+                  <PrimaryCTA {...p.primary} />
+                  {p.secondary.length > 0 ? (
+                    <div className="mt-3 flex flex-col gap-1.5 sm:mt-4 sm:gap-2">
+                      {p.secondary.map((s) => (
+                        <SecondaryCTA key={s.href + s.label} {...s} />
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
               </div>
             ))}
           </div>
