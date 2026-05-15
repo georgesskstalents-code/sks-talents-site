@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CalendlyButton from "@/components/CalendlyButton";
 import EcosystemTrustBar from "@/components/EcosystemTrustBar";
+import FAQHomeTabs from "@/components/FAQHomeTabs";
 import FounderCard from "@/components/FounderCard";
 import Hero from "@/components/Hero";
 import MethodNarrative from "@/components/MethodNarrative";
@@ -15,6 +16,7 @@ import ReferenceGrid from "@/components/ReferenceGrid";
 import SectionShell from "@/components/SectionShell";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import TestimonialMarquee from "@/components/TestimonialMarquee";
+import { getFaqJsonLd } from "@/data/faqHomeContent";
 import { references } from "@/data/references";
 import Link from "next/link";
 
@@ -62,12 +64,12 @@ const insightSignals = [
   {
     title: "Pression marché",
     description:
-      "En biotech, diagnostic, vétérinaire et petfood, chaque retard de recrutement se répercute sur l’exécution commerciale, technique, médicale ou managériale — et fragilise la roadmap COMEX."
+      "En biotech, diagnostic, vétérinaire et petfood, chaque retard de recrutement se répercute sur l’exécution commerciale, technique, médicale ou managériale, et fragilise la roadmap COMEX."
   },
   {
     title: "Structuration RH digitalisée",
     description:
-      "Le vrai levier RH aujourd’hui : digitaliser le recrutement, automatiser les tâches à faible valeur ajoutée et libérer la direction RH pour la stratégie et l’humain — là où se joue le succès des projets."
+      "Le vrai levier RH aujourd’hui : digitaliser le recrutement, automatiser les tâches à faible valeur ajoutée et libérer la direction RH pour la stratégie et l’humain, là où se joue le succès des projets."
   }
 ];
 
@@ -155,7 +157,7 @@ export default function HomePage() {
                   >
                     Faire le diagnostic
                   </Link>
-                  <CalendlyButton label="Je réserve un call — 15 min" tone="outline" />
+                  <CalendlyButton label="Je réserve un call - 15 min" tone="outline" />
                 </div>
               </div>
 
@@ -255,6 +257,15 @@ export default function HomePage() {
           </div>
         </SectionShell>
       </RevealOnScroll>
+
+      <RevealOnScroll delayMs={170}>
+        <FAQHomeTabs />
+      </RevealOnScroll>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqJsonLd()) }}
+      />
 
       {/* Mobile-only: orientation + tools (Étudiant / Dirigeant / Calcul salaire / Écoles) */}
       <RevealOnScroll delayMs={175}>
