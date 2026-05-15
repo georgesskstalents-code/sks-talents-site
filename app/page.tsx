@@ -112,9 +112,9 @@ export default function HomePage() {
         <PersonaPortalsGrid portals={personaPortals} />
       </RevealOnScroll>
 
-      {/* 3. Notre approche IA */}
+      {/* 3. Notre approche IA - desktop only (cache sur mobile par CEO direction 2026-05-15) */}
       <RevealOnScroll delayMs={100}>
-        <section className="bg-brand-mint/50 pt-14 pb-6 sm:pt-20 sm:pb-8">
+        <section className="hidden bg-brand-mint/50 pt-14 pb-6 md:block sm:pt-20 sm:pb-8">
           <div className="container-shell">
             <div className="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-12">
               <div>
