@@ -247,8 +247,8 @@ export default function FAQHomeTabs() {
           rel="noopener noreferrer"
           className="mt-8 flex w-full items-center justify-center rounded-full bg-[#0d2a2c] px-6 py-4 text-center font-sans text-sm font-medium leading-snug text-white transition-colors hover:bg-[#41a0a4] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#41a0a4] focus-visible:ring-offset-2"
         >
-          <span className="sm:hidden">Réserver 30 min avec SKS Talents →</span>
-          <span className="hidden sm:inline">Une autre question ? Réserver 30 min avec SKS Talents →</span>
+          <span className="sm:hidden">Réserver 15 min avec SKS Talents →</span>
+          <span className="hidden sm:inline">Une autre question ? Réserver 15 min avec SKS Talents →</span>
         </a>
       </div>
     </section>
