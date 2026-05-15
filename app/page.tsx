@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import FounderCard from "@/components/FounderCard";
 import Hero from "@/components/Hero";
-import MethodNarrative from "@/components/MethodNarrative";
 import PersonaPortalsGrid, { type PersonaPortal } from "@/components/PersonaPortalsGrid";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import ReferenceCardMarquee from "@/components/ReferenceCardMarquee";
@@ -28,17 +27,19 @@ const personaPortals: PersonaPortal[] = [
     },
     secondary: [
       { label: "Notre méthode", href: "/services" },
-      { label: "Références & cas clients", href: "/references" }
+      { label: "Life Sciences", href: "/life-sciences" },
+      { label: "Animal Health", href: "/animal-health" }
     ]
   },
   {
     icons: ["cpu"],
-    title: "Vos process freinent votre croissance.",
-    description: "3 à 4 agents IA validés par verticale, déployés en 4 semaines.",
-    primary: { label: "Programme Life Sciences", href: "/life-sciences/structuration-ia" },
+    title: "Votre croissance est freinée par des process non structurés.",
+    description:
+      "Temps perdu, décisions ralenties, manque de visibilité. Nous déployons des agents IA sur mesure, activés selon vos priorités clés, en 4 semaines.",
+    primary: { label: "Life Sciences", href: "/life-sciences/structuration-ia" },
     secondary: [
-      { label: "Programme Animal Health", href: "/animal-health/structuration-ia" },
-      { label: "Diagnostic agents (5 min)", href: "/diagnostic" }
+      { label: "Animal Health", href: "/animal-health/structuration-ia" },
+      { label: "Diagnostic rapide (5 min)", href: "/diagnostic" }
     ]
   },
   {
@@ -117,13 +118,6 @@ export default function HomePage() {
           </div>
         </section>
       </RevealOnScroll>
-
-      {/* 5. Method narrative - hidden on mobile (CEO request 2026-05-14), visible from md and up */}
-      <div className="hidden md:block">
-        <RevealOnScroll delayMs={140}>
-          <MethodNarrative />
-        </RevealOnScroll>
-      </div>
 
       {/* 6. Proofs (Marquee + 6 references + 1 inline testimonial) */}
       <RevealOnScroll delayMs={165}>
