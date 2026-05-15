@@ -19,6 +19,7 @@ export default function MissionPage() {
       />
 
       <SectionShell
+        compact
         eyebrow="Positionnement"
         title="Nous ne recrutons pas seulement. Nous sécurisons des décisions critiques de croissance."
         description="Notre mission est simple : aider les entreprises Life Sciences, Animal Health, Diagnostic, MedTech et Petfood à prendre de meilleures décisions talent dans des contextes où le coût de l’erreur est trop élevé."
@@ -48,6 +49,7 @@ export default function MissionPage() {
       </SectionShell>
 
       <SectionShell
+        compact
         eyebrow="Différenciation"
         title="Ce qui rend SKS TALENTS différent tient moins à un discours qu’à une discipline d’exécution."
         description="Nous assumons un positionnement de niche, parce que la spécialisation crée de la confiance et une meilleure qualité de décision."
@@ -86,6 +88,7 @@ export default function MissionPage() {
       </SectionShell>
 
       <SectionShell
+        compact
         eyebrow="Prochaine étape"
         title="Si votre besoin est critique, le meilleur moment pour le cadrer est maintenant."
         description="Vous pouvez prendre un rendez-vous, demander un rappel ou continuer à explorer nos services, références et contenus sectoriels."

@@ -97,7 +97,7 @@ export default function PersonaPortalsGrid({
                 <p className="mt-2 text-[11px] leading-snug text-brand-stone sm:text-xs md:min-h-[7rem] md:text-caption md:leading-normal">
                   {p.description}
                 </p>
-                <div className="mt-auto pt-4">
+                <div className="pt-4">
                   <PrimaryCTA {...p.primary} />
                   {p.secondary.length > 0 ? (
                     <div className="mt-3 flex flex-col gap-1.5 sm:mt-4 sm:gap-2">
