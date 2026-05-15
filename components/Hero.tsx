@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="pointer-events-none absolute right-0 bottom-0 h-72 w-72 rounded-full bg-cyan-100/55 blur-3xl" />
       </div>
 
-      <div className="container-shell relative pb-2 pt-10 sm:pt-24 lg:pb-3 lg:pt-32">
+      <div className="container-shell relative pb-2 pt-6 sm:pt-8 lg:pb-3 lg:pt-10">
         <div className="mx-auto max-w-4xl space-y-4 text-left">
           <p className="eyebrow">
             Executive search ·{" "}
