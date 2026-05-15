@@ -168,7 +168,7 @@ export default function LifeSciencesLanding() {
           line2Italic: "Chez SKS Talents, notre CEO Copilot, oui."
         }}
         response={{
-          cibleBold: "Pour les CEO biotech, medtech, deeptech et e-santé",
+          cibleBold: "Pour les CEO biotech et deeptech",
           cibleSuffix: " en industrialisation Series A à C.",
           description:
             "Anticipez vos recrutements stratégiques selon l'évolution de vos programmes.",
