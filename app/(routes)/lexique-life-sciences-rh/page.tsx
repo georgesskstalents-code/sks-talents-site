@@ -304,17 +304,29 @@ export default function LexiconLifeSciencesRhPage() {
 
           <div className="border-t border-brand-teal/10 px-8 pb-8 pt-6 sm:px-10 sm:pb-10">
             <div className="grid gap-3 sm:grid-cols-2">
-              {lexiconHubPage.topErrors.map((error, index) => (
-                <article
-                  key={error}
-                  className="flex items-start gap-4 rounded-2xl border border-brand-teal/10 bg-white px-5 py-4 transition hover:border-brand-teal/30 hover:shadow-soft"
-                >
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-mint text-sm font-semibold text-brand-teal">
-                    {index + 1}
-                  </span>
-                  <p className="pt-1.5 text-sm leading-7 text-brand-stone">{error}</p>
-                </article>
-              ))}
+              {lexiconHubPage.topErrors.map((error, index) => {
+                const tones = [
+                  { card: "border-brand-teal/20 bg-brand-mint/30 hover:border-brand-teal/40", badge: "bg-brand-mint text-brand-teal" },
+                  { card: "border-amber-200/70 bg-amber-50/70 hover:border-amber-300", badge: "bg-amber-100 text-amber-800" },
+                  { card: "border-emerald-200/70 bg-emerald-50/60 hover:border-emerald-300", badge: "bg-emerald-100 text-emerald-800" },
+                  { card: "border-sky-200/70 bg-sky-50/70 hover:border-sky-300", badge: "bg-sky-100 text-sky-800" },
+                  { card: "border-rose-200/70 bg-rose-50/60 hover:border-rose-300", badge: "bg-rose-100 text-rose-800" }
+                ];
+                const tone = tones[index % tones.length];
+                return (
+                  <article
+                    key={error}
+                    className={`flex items-start gap-4 rounded-2xl border px-5 py-4 transition hover:shadow-soft ${tone.card}`}
+                  >
+                    <span
+                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold ${tone.badge}`}
+                    >
+                      {index + 1}
+                    </span>
+                    <p className="pt-1.5 text-sm leading-7 text-brand-stone">{error}</p>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </details>
