@@ -114,7 +114,7 @@ export default function HomePage() {
 
       {/* 3. Notre approche IA */}
       <RevealOnScroll delayMs={100}>
-        <section className="bg-brand-mint/50 py-14 sm:py-20">
+        <section className="bg-brand-mint/50 pt-14 pb-6 sm:pt-20 sm:pb-8">
           <div className="container-shell">
             <div className="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-12">
               <div>
@@ -273,7 +273,7 @@ export default function HomePage() {
 
       {/* 6. Proofs (Marquee + 6 references + 1 inline testimonial) */}
       <RevealOnScroll delayMs={165}>
-        <section className="pt-14 pb-6 sm:pt-20 sm:pb-8">
+        <section className="pt-6 pb-6 sm:pt-8 sm:pb-8">
           <div className="container-shell space-y-10">
             <div className="space-y-5">
               <p className="eyebrow">Preuves</p>
