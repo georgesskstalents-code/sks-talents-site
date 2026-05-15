@@ -215,6 +215,26 @@ export default function LexiconLifeSciencesRhPage() {
               réellement la croissance ou si elle dépend encore trop du dirigeant.
             </p>
 
+            <div className="mt-6 max-w-3xl rounded-2xl border border-brand-teal/15 bg-brand-mint/30 px-5 py-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                Comment vous évaluer en 60 secondes
+              </p>
+              <ol className="mt-3 space-y-1.5 text-sm leading-6 text-brand-stone">
+                <li>
+                  <span className="font-semibold text-brand-ink">1.</span> Lisez les 5 signaux
+                  ci-dessous.
+                </li>
+                <li>
+                  <span className="font-semibold text-brand-ink">2.</span> Comptez ceux qui
+                  s'appliquent vraiment à votre organisation aujourd'hui (1 point par signal validé).
+                </li>
+                <li>
+                  <span className="font-semibold text-brand-ink">3.</span> Reportez votre total sur
+                  la grille de lecture à droite : 0-2 = Chaos, 3-4 = Fragile, 5+ = Structuré.
+                </li>
+              </ol>
+            </div>
+
             <div className="mt-8 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
