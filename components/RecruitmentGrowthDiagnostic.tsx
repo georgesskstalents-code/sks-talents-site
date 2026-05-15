@@ -53,19 +53,14 @@ export default function RecruitmentGrowthDiagnostic() {
     <div className="space-y-8">
       <div className="grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
         <form className="card-surface p-6 sm:p-8" onSubmit={handleSubmit}>
-          <div className="space-y-3">
-            <p className="eyebrow">5 questions simples</p>
-            <h2 className="font-display text-4xl text-brand-ink sm:text-5xl">
-              Diagnostic : votre recrutement est-il un frein à votre croissance ?
+          <div className="space-y-2">
+            <p className="eyebrow">Vos 5 réponses</p>
+            <h2 className="font-display text-2xl text-brand-ink sm:text-3xl">
+              Répondez en 2 minutes.
             </h2>
-            <p className="text-base leading-8 text-brand-stone">
-              Le but n’est pas de vous vendre quelque chose. Le but est d’identifier si le vrai
-              problème vient du sourcing, de la décision, de la structuration RH ou de la surcharge
-              opérationnelle.
-            </p>
           </div>
 
-          <div className="mt-8 space-y-5">
+          <div className="mt-6 space-y-5">
             {questions.map((question, index) => (
               <fieldset
                 key={question.id}
