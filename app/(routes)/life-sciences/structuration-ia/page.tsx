@@ -4,7 +4,7 @@ import LifeSciencesLanding from "./LifeSciencesLanding";
 const CANONICAL = "https://www.skstalents.fr/life-sciences/structuration-ia";
 const TITLE = "Structuration RH (Agent & automatisation) · Life Sciences | SKS TALENTS";
 const DESCRIPTION =
-  "Démo 30 sec : anticipez vos recrutements 6 mois à l'avance. Pour CEO biotech, medtech, deeptech, e-santé Series A à C. 100 % rétention 12 mois.";
+  "Démo 30 sec : anticipez vos recrutements 6 mois à l'avance. Pour CEO biotech et deeptech Series A à C. 100 % rétention 12 mois.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -73,7 +73,7 @@ const faqJsonLd = {
       name: "À quelles startups Life Sciences le CEO Copilot s'adresse-t-il ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Aux CEO biotech, medtech, deeptech biomatériaux et e-santé en phase Series A à Series C+ (5 → 200 employés), avec un board structuré et une roadmap R&D explicite."
+        text: "Aux CEO biotech et deeptech en phase Series A à Series C+ (5 → 200 employés), avec un board structuré et une roadmap R&D explicite."
       }
     },
     {
