@@ -29,8 +29,8 @@ export default function Hero() {
             <span className="block lg:inline">Life Sciences &amp; Santé animale</span>
           </p>
           <h1 className="t-h1">
-            Recruter les bons talents n’est pas un enjeu RH.{" "}
-            <span className="text-brand-teal italic">C’est une décision stratégique pour votre COMEX.</span>
+            Nous sécurisons vos recrutements là où l’erreur n’est pas permise.{" "}
+            <span className="text-brand-teal italic">Life Sciences &amp; Santé animale, de la Série A au scale-up.</span>
           </h1>
           <p className="t-body-l max-w-2xl">
             Nous aidons les CEO, COO et DRH à recruter en{" "}
