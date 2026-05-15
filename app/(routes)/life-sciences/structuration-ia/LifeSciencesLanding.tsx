@@ -1,14 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {
-  Compass,
-  FileBarChart,
-  Heart,
-  Sparkles,
-  TrendingUp,
-  Users
-} from "lucide-react";
+import { Compass, Sparkles, TrendingUp, Users } from "lucide-react";
 import CalendlyButton from "@/components/CalendlyButton";
 import DemoStage from "@/components/landings/DemoStage";
 import DiagnosticForm from "@/components/landings/DiagnosticForm";
@@ -83,11 +76,7 @@ const enjeuxAvecAgents: (StandardItem | FeatureItem)[] = [
     }
   },
   {
-    enjeu: { num: "03", title: "Onboarding raté", quote: "VP à 130 k€ qui part à 6 mois. Je redémarre à zéro." },
-    agent: { Icon: Heart, title: "Agent Onboarding & Rétention", desc: "Pilote l'onboarding 90 jours de chaque profil senior. Co-construit le plan d'évolution 24 mois. Détecte les signaux faibles à 60 jours.", note: "-60 % turnover 1ère année", badge: "NOUVEAU" }
-  },
-  {
-    enjeu: { num: "04", title: "Scale Series B/C", quote: "50 → 200 employés en 24 mois. Process datant de 15 employés.", tone: "amber" },
+    enjeu: { num: "03", title: "Scale Series B/C", quote: "50 → 200 employés en 24 mois. Process datant de 15 employés.", tone: "amber" },
     agent: { Icon: TrendingUp, title: "Agent Scale-up Playbook", desc: "Bibliothèque vivante de process RH, templates et benchmarks par phase de croissance.", note: "Process scaling Series A → C" }
   }
 ];
@@ -193,8 +182,9 @@ export default function LifeSciencesLanding() {
           </p>
           <p className="mt-3 max-w-2xl t-body">
             Pour les CEO biotech, medtech, deeptech et e-santé en industrialisation Series A à C.
-            Anticipez vos recrutements stratégiques selon l'évolution de vos programmes. 4 enjeux
-            structurels. 4 agents IA sectoriels. ROI mesuré sur vos propres données.
+            Anticipez vos recrutements stratégiques selon l'évolution de vos programmes. 3 enjeux
+            structurels. 4 agents IA sectoriels (dont un duo Talent Intelligence + Rétention). ROI
+            mesuré sur vos propres données.
           </p>
 
           <div className="mt-6 max-w-md rounded-3xl border border-brand-teal/15 bg-white px-5 py-4 shadow-sm">
@@ -246,7 +236,7 @@ export default function LifeSciencesLanding() {
         <div className="container-shell">
           <p className="eyebrow">Vos enjeux → Notre réponse IA</p>
           <h2 className="t-h1 max-w-3xl font-display">
-            4 enjeux dirigeants.{" "}
+            3 enjeux dirigeants.{" "}
             <span className="italic text-brand-teal">4 agents IA</span> qui y répondent.
           </h2>
           <p className="mt-3 max-w-3xl t-body">
