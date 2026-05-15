@@ -170,6 +170,11 @@ export default function LexiconLifeSciencesRhPage() {
             {lexiconHubPage.introQuestion}
           </h2>
           <p className="mt-6 max-w-4xl text-lg leading-8 text-brand-stone">{lexiconHubPage.introAnswer}</p>
+          <p className="mt-5 max-w-4xl text-xs leading-6 text-brand-stone/70">
+            Sources : Panorama HealthTech France Biotech (édition la plus récente) et données
+            sectorielles publiques (INSEE, Bpifrance). SKS Talents est membre de la Commission RH
+            France Biotech.
+          </p>
         </div>
       </section>
 
@@ -177,7 +182,7 @@ export default function LexiconLifeSciencesRhPage() {
         <div className="grid gap-5 lg:grid-cols-4">
           {lexiconHubPage.problemBlocks.map((block) => (
             <article key={block.title} className="card-surface h-full p-6 sm:p-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-teal">Problème</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-teal">Constat</p>
               <h2 className="mt-3 font-display text-3xl text-brand-ink">{block.title}</h2>
               <p className="mt-4 text-sm leading-7 text-brand-stone">{block.copy}</p>
             </article>
