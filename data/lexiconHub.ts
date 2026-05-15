@@ -120,7 +120,7 @@ export const lexiconHubPage = {
     "Vous manquez d’outils ou vos outils n’améliorent pas réellement l’exécution."
   ],
   autoDiagnosticConclusion:
-    "If you hesitate, you are likely under-structured.",
+    "Si vous hésitez sur l'un de ces 4 signaux, c'est qu'il est probablement temps de structurer.",
   faqs: [
     {
       question: "Comment recruter plus vite dans les Life Sciences ?",

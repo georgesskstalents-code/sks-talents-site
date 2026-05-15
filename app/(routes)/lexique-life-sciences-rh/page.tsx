@@ -345,14 +345,33 @@ export default function LexiconLifeSciencesRhPage() {
             Comment savoir si vos RH sont mal structurées ?
           </h2>
           <div className="mt-8 grid gap-4 lg:grid-cols-2">
-            {lexiconHubPage.autoDiagnosticQuestions.map((question, index) => (
-              <article key={question} className="rounded-[24px] border border-brand-teal/10 bg-brand-mint/20 px-5 py-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">
-                  Signal {index + 1}
-                </p>
-                <p className="mt-3 text-sm leading-7 text-brand-stone">{question}</p>
-              </article>
-            ))}
+            {lexiconHubPage.autoDiagnosticQuestions.map((question, index) => {
+              const tones = [
+                "border-brand-teal/15 bg-brand-mint/30",
+                "border-amber-200/70 bg-amber-50/60",
+                "border-emerald-200/70 bg-emerald-50/50",
+                "border-sky-200/70 bg-sky-50/60"
+              ];
+              const eyebrowTones = [
+                "text-brand-teal",
+                "text-amber-700",
+                "text-emerald-700",
+                "text-sky-700"
+              ];
+              return (
+                <article
+                  key={question}
+                  className={`rounded-[24px] border px-5 py-5 ${tones[index] ?? tones[0]}`}
+                >
+                  <p
+                    className={`text-xs font-semibold uppercase tracking-[0.22em] ${eyebrowTones[index] ?? eyebrowTones[0]}`}
+                  >
+                    Signal {index + 1}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-brand-stone">{question}</p>
+                </article>
+              );
+            })}
           </div>
           <div className="mt-6 rounded-[26px] border border-brand-teal/12 bg-white px-6 py-6">
             <p className="text-lg font-semibold leading-8 text-brand-ink">{lexiconHubPage.autoDiagnosticConclusion}</p>

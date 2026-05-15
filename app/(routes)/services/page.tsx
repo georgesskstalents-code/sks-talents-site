@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ChevronDown } from "lucide-react";
 import FAQSection from "@/components/FAQSection";
 import FounderCard from "@/components/FounderCard";
 import GuaranteeBadge from "@/components/GuaranteeBadge";
@@ -174,33 +175,64 @@ export default function ServicesPage() {
         </section>
       </RevealOnScroll>
 
-      {/* 4. 5 signaux - compact cards SKS-bordered */}
+      {/* 4. 5 signaux - dropdown avec couleurs distinctes par card */}
       <RevealOnScroll delayMs={90}>
         <section className="container-shell py-10 sm:py-14">
-          <p className="eyebrow">5 signaux qu’il est temps d’agir</p>
-          <h2 className="t-h2 mt-2 max-w-3xl font-display">Vous vous reconnaissez si :</h2>
-          <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-            {youAreHerePoints.map((point, index) => (
-              <li
-                key={point.title}
-                className="flex gap-3 rounded-2xl border border-brand-teal/15 bg-white p-4 sm:p-5"
-              >
-                <span
-                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-mint text-[11px] font-bold text-brand-teal"
-                  aria-hidden="true"
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div className="flex-1">
-                  <h3 className="t-body font-semibold text-brand-ink">{point.title}</h3>
-                  <p
-                    className="mt-1 text-caption leading-6 text-brand-stone"
-                    dangerouslySetInnerHTML={{ __html: point.html }}
-                  />
-                </div>
-              </li>
-            ))}
-          </ul>
+          <details className="group rounded-3xl border border-brand-teal/15 bg-white">
+            <summary className="flex cursor-pointer list-none items-start justify-between gap-6 p-6 sm:p-8">
+              <div>
+                <p className="eyebrow">5 signaux qu’il est temps d’agir</p>
+                <h2 className="t-h2 mt-2 max-w-3xl font-display">Vous vous reconnaissez si :</h2>
+                <p className="mt-3 max-w-2xl text-sm leading-7 text-brand-stone">
+                  Cliquez pour dérouler les 5 cas qui déclenchent une mission SKS Talents.
+                </p>
+              </div>
+              <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand-teal/15 bg-brand-mint/40 text-brand-teal transition-transform duration-200 group-open:rotate-180">
+                <ChevronDown className="h-5 w-5" aria-hidden />
+              </span>
+            </summary>
+
+            <div className="border-t border-brand-teal/10 px-6 pb-6 pt-5 sm:px-8 sm:pb-8">
+              <ul className="grid gap-3 sm:grid-cols-2">
+                {youAreHerePoints.map((point, index) => {
+                  const tones = [
+                    "border-brand-teal/20 bg-brand-mint/40",
+                    "border-amber-200/70 bg-amber-50/70",
+                    "border-emerald-200/70 bg-emerald-50/60",
+                    "border-sky-200/70 bg-sky-50/70",
+                    "border-rose-200/70 bg-rose-50/60"
+                  ];
+                  const badgeTones = [
+                    "bg-brand-mint text-brand-teal",
+                    "bg-amber-100 text-amber-800",
+                    "bg-emerald-100 text-emerald-800",
+                    "bg-sky-100 text-sky-800",
+                    "bg-rose-100 text-rose-800"
+                  ];
+                  return (
+                    <li
+                      key={point.title}
+                      className={`flex gap-3 rounded-2xl border p-4 sm:p-5 ${tones[index] ?? tones[0]}`}
+                    >
+                      <span
+                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[11px] font-bold ${badgeTones[index] ?? badgeTones[0]}`}
+                        aria-hidden="true"
+                      >
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <div className="flex-1">
+                        <h3 className="t-body font-semibold text-brand-ink">{point.title}</h3>
+                        <p
+                          className="mt-1 text-caption leading-6 text-brand-stone"
+                          dangerouslySetInnerHTML={{ __html: point.html }}
+                        />
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </details>
         </section>
       </RevealOnScroll>
 
