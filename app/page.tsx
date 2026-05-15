@@ -84,9 +84,9 @@ const personaPortals: PersonaPortal[] = [
     secondary: [
       { label: "Parcours étudiant", href: "/orientation" },
       { label: "Fiches métiers", href: "/job-roles" },
-      { label: "Écoles spécialisées", href: "/schools" },
-      { label: "Articles", href: "/blog" },
-      { label: "Lexique", href: "/lexique-life-sciences-rh" },
+      { label: "Écoles spécialisées", href: "/schools", hideOnMobile: true },
+      { label: "Articles", href: "/blog", hideOnMobile: true },
+      { label: "Lexique", href: "/lexique-life-sciences-rh", hideOnMobile: true },
       { label: "Fonds d'investissement", href: "/investment-funds" }
     ]
   }
