@@ -91,7 +91,7 @@ export default function PersonaPortalsGrid({
                   i > 0 ? "border-l border-brand-teal/15 pl-3 sm:pl-5 md:pl-10" : ""
                 }`}
               >
-                <div className="min-h-[11rem] sm:min-h-[7.5rem] md:min-h-[8rem]">
+                <div className="min-h-[9rem] sm:min-h-[7.5rem] md:min-h-[8rem]">
                   <h3 className="whitespace-pre-line text-[13px] font-semibold leading-tight text-brand-ink sm:text-base md:t-h3 md:font-display">
                     {p.title}
                   </h3>
