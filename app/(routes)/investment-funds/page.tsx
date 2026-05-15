@@ -154,7 +154,6 @@ export default function InvestmentFundsPage() {
       <SectionShell
         eyebrow="Annuaire de fonds"
         title="Fonds à suivre dans la santé, les life sciences et l’animal health"
-        description="Liste de travail bâtie à partir des noms visibles dans la synthèse publique France Biotech 2024, enrichie avec Angels Santé et Companion Fund II. Chaque entrée renvoie vers le site officiel du gestionnaire ou de l’initiative, avec un intérêt particulier pour les tours Seed, Série A et Série B qui structurent la croissance."
       >
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {trackedInvestmentFundsDirectory.map((fund) => (
