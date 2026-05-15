@@ -72,47 +72,9 @@ export default function InvestmentFundsPage() {
         </div>
       </SectionShell>
       <SectionShell
-        eyebrow="Focus sources"
-        title="Pages dédiées sur les gestionnaires et réseaux déjà visibles dans votre cluster fonds"
-        description="Ces entrées servent à capter des requêtes nominatives plus précises, souvent très qualifiées, puis à les relier à l’annuaire des fonds, aux pages growth et aux contenus de recrutement."
-      >
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
-          <ListingCard
-            href="/angels-sante-business-angels-sante"
-            title="Angels Santé"
-            description="Lecture early-stage santé, business angels et premiers signaux de structuration."
-            meta="Amorçage santé"
-          />
-          <ListingCard
-            href="/seventure-partners-life-sciences"
-            title="Seventure Partners"
-            description="Lecture VC Life Sciences, segments financés et implications recrutement."
-            meta="VC santé"
-          />
-          <ListingCard
-            href="/kurma-partners-biotech-healthtech"
-            title="Kurma Partners"
-            description="Page dédiée pour relier Kurma au paysage biotech / healthtech et aux enjeux d’équipe."
-            meta="Fonds santé"
-          />
-          <ListingCard
-            href="/jeito-capital-biotech-healthtech"
-            title="Jeito Capital"
-            description="Lecture growth biotech / healthtech et signaux de structuration après financement."
-            meta="Growth"
-          />
-          <ListingCard
-            href="/eic-fund-deeptech-biotech"
-            title="EIC Fund"
-            description="Signal deeptech / biotech européen et implications scale-up."
-            meta="Europe"
-          />
-        </div>
-      </SectionShell>
-      <SectionShell
-        eyebrow="Cluster fonds"
-        title="Autres entrées nominatives à capter avant le déploiement"
-        description="Ces pages complètent le cluster pour que les recherches sur les gestionnaires les plus visibles du panorama santé retombent vers SKS TALENTS plutôt que de rester dispersées entre annuaires, classements et sites corporate."
+        eyebrow="Clusters fonds"
+        title="Les fonds les plus visibles du marché santé."
+        description="Objectif : vous permettre d'accéder rapidement aux principaux acteurs et de mieux comprendre leur positionnement."
       >
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           <ListingCard
@@ -154,9 +116,9 @@ export default function InvestmentFundsPage() {
         </div>
       </SectionShell>
       <SectionShell
-        eyebrow="Verified Data"
-        title="Une base exploitable, vérifiée et sans signal inventé"
-        description="Chaque profil s’appuie sur des sources primaires officielles et une méthode stricte: pas de chiffre hiring inventé, pas de partenariat affirmé sans preuve, et distinction nette entre fait, estimation et inférence."
+        eyebrow="Références du marché"
+        title="Des profils d'acteurs du secteur santé basés sur des informations fiables et vérifiées."
+        description="Chaque fiche s'appuie sur des sources officielles, avec une distinction claire entre faits établis, estimations et analyses."
       >
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {investmentFunds.map((fund) => (
@@ -167,24 +129,6 @@ export default function InvestmentFundsPage() {
               description={fund.seo.description}
               meta={fund.organizationType}
             />
-          ))}
-        </div>
-      </SectionShell>
-      <SectionShell
-        eyebrow="Intentions de recherche"
-        title="Ce hub doit capter les requêtes fonds, entreprises financées, Seed, Série A, Série B et signaux hiring."
-        description="L’objectif n’est pas seulement de lister des fonds, mais de devenir une ressource utile pour les dirigeants, RH et candidats qui cherchent à comprendre où se créent les besoins après un tour de table."
-      >
-        <div className="grid gap-6 md:grid-cols-3">
-          {[
-            ["Top fonds santé", "Fonds biotech, medtech, animal health et initiatives corporate venture à suivre sur les phases Seed, Série A et Série B."],
-            ["Entreprises financées", "Pages liées aux sociétés en croissance, à leurs segments et à leurs fonctions stratégiques en direction, production, opérations, sales et ingénierie."],
-            ["Actualisation régulière", "France Biotech, Leaders League, Bpifrance, Angels Santé et autres sources officielles servent de base de refresh mensuel."]
-          ].map(([title, copy]) => (
-            <div key={title} className="card-surface p-8">
-              <h2 className="font-display text-3xl text-brand-ink">{title}</h2>
-              <p className="mt-4 text-sm leading-7 text-brand-stone">{copy}</p>
-            </div>
           ))}
         </div>
       </SectionShell>

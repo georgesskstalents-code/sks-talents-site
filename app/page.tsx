@@ -57,7 +57,8 @@ const personaPortals: PersonaPortal[] = [
       { label: "Fiches métiers", href: "/job-roles" },
       { label: "Écoles spécialisées", href: "/schools" },
       { label: "Articles", href: "/blog" },
-      { label: "Lexique", href: "/lexique-life-sciences-rh" }
+      { label: "Lexique", href: "/lexique-life-sciences-rh" },
+      { label: "Fonds d'investissement", href: "/investment-funds" }
     ]
   }
 ];
