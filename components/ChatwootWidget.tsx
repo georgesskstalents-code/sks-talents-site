@@ -58,54 +58,56 @@ export default function ChatwootWidget() {
 
     window.addEventListener("storage", handleStorage);
 
-    const dismissed = window.sessionStorage.getItem("sks-chat-hint-dismissed");
-    const timers: number[] = [];
-
-    if (!dismissed) {
-      // Initialise le debut de session pour pacer les apparitions sur 100% des pages.
-      let sessionStart = Number(window.sessionStorage.getItem("sks-session-start"));
-      if (!sessionStart || Number.isNaN(sessionStart)) {
-        sessionStart = Date.now();
-        window.sessionStorage.setItem("sks-session-start", String(sessionStart));
-      }
-      const elapsed = Date.now() - sessionStart;
-      const done1 = window.sessionStorage.getItem("sks-chat-hint-1-done");
-      const done2 = window.sessionStorage.getItem("sks-chat-hint-2-done");
-
-      // 1ere apparition : 800ms apres montage, retract apres 5s. Une seule fois par session.
-      if (!done1) {
-        timers.push(
-          window.setTimeout(() => {
-            setHintVisible(true);
-            window.sessionStorage.setItem("sks-chat-hint-1-done", "1");
-            timers.push(
-              window.setTimeout(() => setHintVisible(false), 5000)
-            );
-          }, 800)
-        );
-      }
-
-      // 2eme apparition : au seuil de 3min de session. Retract apres 5s. Une seule fois.
-      if (!done2) {
-        const delay = Math.max(0, 180000 - elapsed);
-        timers.push(
-          window.setTimeout(() => {
-            setHintVisible(true);
-            window.sessionStorage.setItem("sks-chat-hint-2-done", "1");
-            timers.push(
-              window.setTimeout(() => setHintVisible(false), 5000)
-            );
-          }, delay)
-        );
-      }
-    }
-
     return () => {
-      timers.forEach((t) => window.clearTimeout(t));
       window.clearInterval(interval);
       window.removeEventListener("storage", handleStorage);
     };
   }, []);
+
+  // Choreographie hint chat: attend que le cookie banner soit ferme (consent !== null),
+  // puis 1ere apparition apres 600ms, retract apres 5s. Une seule fois par session.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (consent === null) return;
+
+    const dismissed = window.sessionStorage.getItem("sks-chat-hint-dismissed");
+    if (dismissed) return;
+
+    let sessionStart = Number(window.sessionStorage.getItem("sks-session-start"));
+    if (!sessionStart || Number.isNaN(sessionStart)) {
+      sessionStart = Date.now();
+      window.sessionStorage.setItem("sks-session-start", String(sessionStart));
+    }
+    const elapsed = Date.now() - sessionStart;
+    const done1 = window.sessionStorage.getItem("sks-chat-hint-1-done");
+    const done2 = window.sessionStorage.getItem("sks-chat-hint-2-done");
+    const timers: number[] = [];
+
+    if (!done1) {
+      timers.push(
+        window.setTimeout(() => {
+          setHintVisible(true);
+          window.sessionStorage.setItem("sks-chat-hint-1-done", "1");
+          timers.push(window.setTimeout(() => setHintVisible(false), 5000));
+        }, 600)
+      );
+    }
+
+    if (!done2) {
+      const delay = Math.max(0, 180000 - elapsed);
+      timers.push(
+        window.setTimeout(() => {
+          setHintVisible(true);
+          window.sessionStorage.setItem("sks-chat-hint-2-done", "1");
+          timers.push(window.setTimeout(() => setHintVisible(false), 5000));
+        }, delay)
+      );
+    }
+
+    return () => {
+      timers.forEach((t) => window.clearTimeout(t));
+    };
+  }, [consent]);
 
   const t = COPY[lang];
 

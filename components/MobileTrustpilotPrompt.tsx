@@ -6,8 +6,9 @@ import { useCookieConsent } from "@/lib/useCookieConsent";
 
 const SHOWS_KEY = "sks-trustpilot-shows-count";
 const DISMISSED_AT_KEY = "sks-trustpilot-dismissed-at";
-const FIRST_APPEAR_AFTER_MS = 6 * 60 * 1000; // 6 min after page load
+const FIRST_APPEAR_AFTER_MS = 4 * 60 * 1000; // 4 min after page load (CEO direction 2026-05-15)
 const REAPPEAR_AFTER_MS = 5 * 60 * 1000; // 5 min after first dismiss
+const AUTO_HIDE_AFTER_MS = 5 * 1000; // auto-disparait apres 5s d'affichage
 const TRUSTPILOT_URL = "https://fr.trustpilot.com/review/skstalents.fr";
 
 /**
@@ -61,16 +62,24 @@ export default function MobileTrustpilotPrompt() {
     }
   }, [consent]);
 
-  // Mark as shown when it actually becomes visible (so refresh doesn't double-count)
+  // Mark as shown when it actually becomes visible (so refresh doesn't double-count).
+  // Auto-hide apres 5s d'affichage (CEO direction).
   useEffect(() => {
     if (!visible || typeof window === "undefined") return;
     const showsCount = Number(window.sessionStorage.getItem(SHOWS_KEY) ?? "0");
     if (showsCount === 0) {
       window.sessionStorage.setItem(SHOWS_KEY, "1");
     } else if (showsCount === 1) {
-      // Mark second appearance
       window.sessionStorage.setItem(SHOWS_KEY, "2");
+      window.sessionStorage.setItem(DISMISSED_AT_KEY, String(Date.now()));
+    } else {
+      window.sessionStorage.setItem(DISMISSED_AT_KEY, String(Date.now()));
     }
+
+    const hideTimer = window.setTimeout(() => {
+      setVisible(false);
+    }, AUTO_HIDE_AFTER_MS);
+    return () => window.clearTimeout(hideTimer);
   }, [visible]);
 
   if (!mounted) return null;

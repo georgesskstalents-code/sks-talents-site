@@ -35,14 +35,7 @@ const personaPortals: PersonaPortal[] = [
   },
   {
     icons: ["cpu"],
-    title: (
-      <>
-        Éliminez le répétitif.
-        <span className="hidden sm:inline">
-          {"\n"}Concentrez-vous sur ce qui crée de la croissance.
-        </span>
-      </>
-    ),
+    title: "Éliminez le répétitif.",
     description:
       "Temps perdu, décisions ralenties, manque de visibilité. Nous déployons des agents IA sur mesure, activés selon vos priorités clés, en 4 semaines.",
     primary: { label: "Diagnostic rapide (5 min)", href: "/diagnostic" },

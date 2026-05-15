@@ -36,6 +36,18 @@ export default function CookieConsentBanner() {
     };
   }, []);
 
+  // Auto-dismiss apres 5s si l'utilisateur n'a pas cliqu (CEO direction):
+  // bascule en consent "essential" pour laisser les autres widgets (chat, etc.) apparaitre.
+  // L'utilisateur peut revenir via "Preferences cookies" dans le footer.
+  useEffect(() => {
+    if (!open) return;
+    if (detailOpen) return;
+    const timer = window.setTimeout(() => {
+      setStoredCookieConsent("essential");
+    }, 5000);
+    return () => window.clearTimeout(timer);
+  }, [open, detailOpen]);
+
   if (!mounted || !open) {
     return null;
   }
