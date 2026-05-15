@@ -174,7 +174,7 @@ export default function FAQHomeTabs() {
   }
 
   return (
-    <section className="bg-[#F5F8F6] py-16 sm:py-20">
+    <section className="bg-[#F5F8F6] pt-6 pb-16 sm:pt-8 sm:pb-20">
       <div className="mx-auto max-w-[1100px] px-5 sm:px-10 lg:px-[60px]">
         <header className="text-center">
           <p className="font-sans text-xs font-bold uppercase tracking-[0.22em] text-[#41a0a4]">

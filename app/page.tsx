@@ -131,7 +131,7 @@ export default function HomePage() {
 
       {/* 6. Proofs (Marquee + 6 references + 1 inline testimonial) */}
       <RevealOnScroll delayMs={165}>
-        <section className="py-14 sm:py-20">
+        <section className="pt-14 pb-6 sm:pt-20 sm:pb-8">
           <div className="container-shell space-y-10">
             <div className="space-y-5">
               <p className="eyebrow">Preuves</p>
