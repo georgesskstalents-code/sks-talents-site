@@ -41,19 +41,6 @@ export const metadata: Metadata = {
 };
 
 export default function LexiconLifeSciencesRhPage() {
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: lexiconHubPage.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer
-      }
-    }))
-  };
-
   const definedTermSetJsonLd = {
     "@context": "https://schema.org",
     "@type": "DefinedTermSet",
@@ -83,11 +70,6 @@ export default function LexiconLifeSciencesRhPage() {
 
   return (
     <>
-      <script
-        id="lexicon-life-sciences-rh-faq-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
       <script
         id="lexicon-life-sciences-rh-definedtermset-jsonld"
         type="application/ld+json"
@@ -473,28 +455,6 @@ export default function LexiconLifeSciencesRhPage() {
         </details>
       </section>
 
-      <section className="container-shell pb-8 sm:pb-10">
-        <div className="card-surface p-8 sm:p-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">FAQ</p>
-          <h2 className="mt-4 font-display text-5xl text-brand-ink sm:text-6xl">
-            Les questions qu'on nous pose le plus.
-          </h2>
-          <div className="mt-8 grid gap-4 lg:grid-cols-2">
-            {lexiconHubPage.faqs.map((faq, index) => (
-              <details
-                key={faq.question}
-                open={index === 0}
-                className="rounded-[24px] border border-brand-teal/10 bg-[linear-gradient(180deg,rgba(250,252,252,0.98),rgba(255,255,255,0.98))] px-5 py-5"
-              >
-                <summary className="cursor-pointer list-none text-lg font-semibold leading-7 text-brand-ink">
-                  {faq.question}
-                </summary>
-                <p className="mt-4 text-sm leading-7 text-brand-stone">{faq.answer}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section id="whitepapers" className="container-shell pb-8 sm:pb-10">
         <div className="card-surface p-8 sm:p-10">

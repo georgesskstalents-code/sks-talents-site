@@ -7,6 +7,7 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import ReferenceCardMarquee from "@/components/ReferenceCardMarquee";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import TestimonialMarquee from "@/components/TestimonialMarquee";
+import { lexiconHubPage } from "@/data/lexiconHub";
 import { references } from "@/data/references";
 
 export const metadata: Metadata = {
@@ -62,8 +63,26 @@ const personaPortals: PersonaPortal[] = [
 ];
 
 export default function HomePage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: lexiconHubPage.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer
+      }
+    }))
+  };
+
   return (
     <>
+      <script
+        id="home-faq-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <SmoothScrollProvider />
 
       {/* 1. Hero */}
@@ -134,6 +153,34 @@ export default function HomePage() {
             </div>
             <ReferenceCardMarquee items={references.slice(0, 6)} />
             <TestimonialMarquee />
+          </div>
+        </section>
+      </RevealOnScroll>
+
+      {/* 7. FAQ - rapatriee depuis /lexique-life-sciences-rh */}
+      <RevealOnScroll delayMs={190}>
+        <section className="py-14 sm:py-20">
+          <div className="container-shell">
+            <div className="card-surface p-8 sm:p-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal">FAQ</p>
+              <h2 className="mt-4 font-display text-4xl text-brand-ink sm:text-5xl">
+                Les questions qu&apos;on nous pose le plus.
+              </h2>
+              <div className="mt-8 grid gap-4 lg:grid-cols-2">
+                {lexiconHubPage.faqs.map((faq, index) => (
+                  <details
+                    key={faq.question}
+                    open={index === 0}
+                    className="rounded-[24px] border border-brand-teal/10 bg-[linear-gradient(180deg,rgba(250,252,252,0.98),rgba(255,255,255,0.98))] px-5 py-5"
+                  >
+                    <summary className="cursor-pointer list-none text-lg font-semibold leading-7 text-brand-ink">
+                      {faq.question}
+                    </summary>
+                    <p className="mt-4 text-sm leading-7 text-brand-stone">{faq.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       </RevealOnScroll>
