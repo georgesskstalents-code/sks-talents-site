@@ -83,13 +83,20 @@ export default function ChatwootWidget() {
     const done2 = window.sessionStorage.getItem("sks-chat-hint-2-done");
     const timers: number[] = [];
 
+    // CEO direction 2026-05-15: sur mobile l'assistant ne doit apparaitre qu'apres 1 min,
+    // sinon il distrait trop tot. Desktop garde 600ms (apres dismiss cookie banner).
+    const isMobile =
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(max-width: 767px)").matches;
+    const firstHintDelay = isMobile ? 60000 : 600;
+
     if (!done1) {
       timers.push(
         window.setTimeout(() => {
           setHintVisible(true);
           window.sessionStorage.setItem("sks-chat-hint-1-done", "1");
           timers.push(window.setTimeout(() => setHintVisible(false), 5000));
-        }, 600)
+        }, firstHintDelay)
       );
     }
 

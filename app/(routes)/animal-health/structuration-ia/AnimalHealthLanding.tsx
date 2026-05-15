@@ -13,7 +13,6 @@ import CalendlyButton from "@/components/CalendlyButton";
 import { StructurationHero } from "@/components/sections/StructurationHero";
 import DemoStage from "@/components/landings/DemoStage";
 import DiagnosticForm from "@/components/landings/DiagnosticForm";
-import LogosScrollCarousel from "@/components/landings/LogosScrollCarousel";
 import { animalHealthScenes } from "./animalHealthScenes";
 import { animalHealthQuestions } from "./animalHealthQuestions";
 
@@ -99,28 +98,6 @@ const vocabulaire = {
     "Cru/BARF", "Premium nutrition", "Distribution sélective", "Marketing direct"
   ]
 };
-
-const partnerLogos = [
-  { name: "Affinity Petcare", src: "/images/partners/affinity-petcare.svg" },
-  { name: "Saga Nutrition", src: "/images/partners/saga-nutrition.svg" },
-  { name: "Qovetia", src: "/images/partners/qovetia.svg" },
-  { name: "Wolf Learning", src: "/images/partners/wolf-learning.svg" },
-  { name: "Faircraft.bio", src: "/images/partners/faircraft-bio.svg" },
-  { name: "ConexSante", src: "/images/partners/conexsante.svg" },
-  { name: "Roche Diagnostics", src: "/images/partners/roche-diagnostics.svg" },
-  { name: "Beckman Coulter", src: "/images/partners/beckman-coulter.svg" },
-  { name: "Miltenyi Biotec", src: "/images/partners/miltenyi-biotec.svg" },
-  { name: "Biokar Diagnostics", src: "/images/partners/biokar-diagnostics.svg" },
-  { name: "Mindray", src: "/images/partners/mindray.svg" },
-  { name: "Visionix", src: "/images/partners/visionix.svg" }
-];
-
-const chiffresCles = [
-  { value: "100+", label: "Placements" },
-  { value: "10 j", label: "1re shortlist" },
-  { value: "60 j", label: "Intake → Signature" },
-  { value: "92 %", label: "Missions OK" }
-];
 
 const trustSignals = ["★ 4,5/5 Trustpilot", "France Biotech", "Saclay", "100+ placements"];
 
@@ -395,40 +372,6 @@ export default function AnimalHealthLanding() {
           </section>
         </>
       )}
-
-      {/* ===== Section 5 - LOGOS DÉFILANTS ===== */}
-      <section className="bg-gradient-to-b from-white to-brand-mint/15 py-14 sm:py-20">
-        <div className="container-shell">
-          <p className="eyebrow">Références &amp; exécution</p>
-          <h2 className="t-h1 max-w-3xl font-display">
-            Ils nous ont fait confiance.
-          </h2>
-          <p className="mt-3 max-w-3xl t-body">
-            Dans des moments où structurer et sécuriser les bons talents devient un enjeu de croissance.
-          </p>
-          <div className="mt-8">
-            <LogosScrollCarousel logos={partnerLogos} ariaLabel="Logos partenaires Animal Health" />
-          </div>
-        </div>
-      </section>
-
-      {/* ===== Section 9 - CHIFFRES CLÉS ===== */}
-      <section className="bg-white py-14 sm:py-20">
-        <div className="container-shell">
-          <p className="eyebrow">Chiffres clés</p>
-          <h2 className="t-h1 max-w-3xl font-display">Notre activité en transparence.</h2>
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {chiffresCles.map((c) => (
-              <div key={c.label} className="rounded-3xl border border-brand-teal/10 bg-brand-mint/15 p-5 text-center">
-                <p className="font-display text-[28px] leading-none text-brand-teal sm:text-[36px]">
-                  {c.value}
-                </p>
-                <p className="mt-2 text-caption text-brand-stone">{c.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ===== Section 7 - CTA FINAL ===== */}
       <section className="bg-brand-ink py-14 text-white sm:py-20">
