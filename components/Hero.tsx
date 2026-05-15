@@ -29,8 +29,8 @@ export default function Hero() {
             <span className="block lg:inline">Life Sciences &amp; Santé animale</span>
           </p>
           <h1 className="t-h1">
-            Nous sécurisons vos recrutements là où l’erreur n’est pas permise.{" "}
-            <span className="text-brand-teal italic">Life Sciences &amp; Santé animale, de la Série A au scale-up.</span>
+            Nous <span className="text-brand-teal">sécurisons</span> vos recrutements et{" "}
+            <span className="text-brand-teal italic">structurons vos process.</span>
           </h1>
           <p className="t-body-l max-w-2xl">
             Nous aidons les CEO, COO et DRH à recruter en{" "}

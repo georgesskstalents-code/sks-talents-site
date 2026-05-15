@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 const personaPortals: PersonaPortal[] = [
   {
     icons: ["target-arrow"],
-    title: "Vous dirigez. Vous recrutez.",
+    title: "Vous recrutez.",
     description:
       "Life Sciences ou Animal Health, de la Series A au scale-up. Première shortlist en 10 jours.",
     primary: {

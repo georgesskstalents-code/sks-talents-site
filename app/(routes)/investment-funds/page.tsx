@@ -1,4 +1,3 @@
-import PageHero from "@/components/PageHero";
 import ListingCard from "@/components/ListingCard";
 import SectionShell from "@/components/SectionShell";
 import { investmentFunds, trackedInvestmentFundsDirectory } from "@/data/investmentFunds";
@@ -6,18 +5,7 @@ import { investmentFunds, trackedInvestmentFundsDirectory } from "@/data/investm
 export default function InvestmentFundsPage() {
   return (
     <>
-      <PageHero
-        kicker="Investment Funds"
-        title="Profils de fonds et d’écosystèmes financés, version vérifiée"
-        description="Une base vérifiée sur les fonds et plateformes d’investissement à fort impact biotech, healthtech et deep tech, avec un angle clair sur les tours Seed, Série A et Série B, là où se déclenchent souvent les recrutements critiques en direction, production, opérations, sales et ingénierie."
-        variant="sand"
-        breadcrumbs={[
-          { label: "Accueil", href: "/" },
-          { label: "Ressources", href: "/resources" },
-          { label: "Investment funds" }
-        ]}
-      />
-      <section className="container-shell grid gap-6 py-4 lg:grid-cols-2">
+      <section className="container-shell grid gap-6 pt-10 pb-4 lg:grid-cols-2">
         <a
           href="https://france-biotech.fr/publications/etudes-france-biotech/cartographie-des-fonds-dinvestissement-francais-en-sante-en-2024/"
           target="_blank"
