@@ -8,7 +8,7 @@ type Props = {
 
 export default function SectionShell({ eyebrow, title, description, children, compact }: Props) {
   return (
-    <section className={compact ? "py-8 sm:py-12" : "py-16 sm:py-20"}>
+    <section className={compact ? "py-8 sm:py-12" : "py-10 sm:py-14"}>
       <div className="container-shell space-y-10">
         <div className="space-y-5">
           {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}

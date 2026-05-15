@@ -181,7 +181,7 @@ export default function LifeSciencesLanding() {
       />
 
       {/* ===== Section 2 - DÉMO ===== */}
-      <section id="demo" className="bg-white py-14 sm:py-20">
+      <section id="demo" className="bg-white py-10 sm:py-14">
         <div className="container-shell">
           <p className="eyebrow">Démo interactive · 30 secondes</p>
           <h2 className="t-h1 max-w-3xl font-display">
@@ -204,7 +204,7 @@ export default function LifeSciencesLanding() {
       </section>
 
       {/* ===== Section 3 - ENJEUX × AGENTS IA (fusion, redesign 2026-05-07) ===== */}
-      <section className="bg-gradient-to-b from-white via-brand-mint/8 to-white py-14 sm:py-20">
+      <section className="bg-gradient-to-b from-white via-brand-mint/8 to-white py-10 sm:py-14">
         <div className="container-shell">
           <p className="eyebrow">Vos enjeux → Notre réponse IA</p>
           <h2 className="t-h1 max-w-3xl font-display">
@@ -415,7 +415,7 @@ export default function LifeSciencesLanding() {
       </section>
 
       {/* ===== Section 4 - DIAGNOSTIC (remonté du #10) ===== */}
-      <section id="diagnostic" className="scroll-mt-24 bg-gradient-to-b from-brand-mint/15 to-white py-14 sm:py-20">
+      <section id="diagnostic" className="scroll-mt-24 bg-gradient-to-b from-brand-mint/15 to-white py-10 sm:py-14">
         <div className="container-shell">
           <p className="eyebrow">Diagnostic personnalisé · 5 min</p>
           <h2 className="t-h1 max-w-3xl font-display">Quel agent IA déployer en premier ?</h2>
@@ -431,7 +431,7 @@ export default function LifeSciencesLanding() {
       {SHOW_DETAIL_BLOCKS && (
         <>
           {/* ===== Section 4 - 3 MOMENTS CRITIQUES ===== */}
-          <section className="bg-gradient-to-b from-brand-mint/15 to-white py-14 sm:py-20">
+          <section className="bg-gradient-to-b from-brand-mint/15 to-white py-10 sm:py-14">
             <div className="container-shell">
               <p className="eyebrow">Les moments où nos clients nous appellent</p>
               <h2 className="t-h1 max-w-3xl font-display">3 moments business critiques. Notre terrain de jeu Life Sciences.</h2>
@@ -455,7 +455,7 @@ export default function LifeSciencesLanding() {
           </section>
 
           {/* ===== Section 5 - PROFILS HYBRIDES ===== */}
-          <section className="bg-white py-14 sm:py-20">
+          <section className="bg-white py-10 sm:py-14">
             <div className="container-shell">
               <p className="eyebrow">Notre vraie spécialité</p>
               <h2 className="t-h1 max-w-3xl font-display">
@@ -476,7 +476,7 @@ export default function LifeSciencesLanding() {
           </section>
 
           {/* ===== Section 6 - VOCABULAIRE ===== */}
-          <section className="bg-gradient-to-b from-white to-brand-mint/15 py-14 sm:py-20">
+          <section className="bg-gradient-to-b from-white to-brand-mint/15 py-10 sm:py-14">
             <div className="container-shell">
               <p className="eyebrow">Le vocabulaire que nous maîtrisons</p>
               <h2 className="t-h1 max-w-3xl font-display">
