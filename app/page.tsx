@@ -214,64 +214,52 @@ export default function HomePage() {
         <section className="pt-6 pb-6 sm:pt-8 sm:pb-8">
           <div className="container-shell">
             <div className="rounded-[28px] border border-brand-teal/15 bg-white p-6 shadow-soft sm:p-8">
-              <div className="grid gap-6 lg:grid-cols-[1.3fr_auto_1fr] lg:items-center lg:gap-8">
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
-                  <img
-                    src="/images/georges-kengue.jpeg"
-                    alt="Georges Kengue, fondateur de SKS Talents"
-                    className="h-20 w-20 shrink-0 rounded-full object-cover shadow-soft ring-2 ring-brand-mint sm:h-24 sm:w-24"
-                    loading="lazy"
-                  />
-                  <div className="min-w-0 flex-1">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
-                      Votre interlocuteur direct
-                    </p>
-                    <p className="mt-2 font-display text-xl leading-tight text-brand-ink sm:text-2xl">
-                      Georges Kengue
-                    </p>
-                    <p className="mt-1 text-sm leading-6 text-brand-stone">
-                      Fondateur SKS TALENTS · Executive Search Life Sciences &amp; Santé animale
-                    </p>
-                    <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-                      <a
-                        href="https://calendly.com/g-kengue/talentconsulting"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="inline-flex items-center gap-1.5 font-semibold text-brand-teal transition hover:opacity-80"
-                      >
-                        <CalendarClock size={14} />
-                        Réserver 15 min
-                      </a>
-                      <a
-                        href="https://www.linkedin.com/in/georges-kengue-81988b36/"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="inline-flex items-center gap-1.5 font-semibold text-brand-teal transition hover:opacity-80"
-                      >
-                        <LinkedinIcon size={14} />
-                        LinkedIn
-                      </a>
-                      <a
-                        href="https://fr.trustpilot.com/review/skstalents.fr"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="inline-flex items-center gap-1.5 font-semibold text-brand-teal transition hover:opacity-80"
-                      >
-                        <Star size={14} />
-                        Avis Trustpilot
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div aria-hidden className="hidden h-24 w-px bg-brand-teal/15 lg:block" />
-
-                <div>
-                  <QuoteIcon size={28} />
-                  <p className="mt-3 font-display text-lg leading-snug text-brand-ink sm:text-xl">
-                    L&apos;IA ne remplace pas l&apos;humain. Elle libère du temps là où le talent
-                    fait la différence.
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
+                <img
+                  src="/images/georges-kengue.jpeg"
+                  alt="Georges Kengue, fondateur de SKS Talents"
+                  className="h-20 w-20 shrink-0 rounded-full object-cover shadow-soft ring-2 ring-brand-mint sm:h-24 sm:w-24"
+                  loading="lazy"
+                />
+                <div className="min-w-0 flex-1">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
+                    Votre interlocuteur direct
                   </p>
+                  <p className="mt-2 font-display text-xl leading-tight text-brand-ink sm:text-2xl">
+                    Georges Kengue
+                  </p>
+                  <p className="mt-1 text-sm leading-6 text-brand-stone">
+                    Fondateur SKS TALENTS · Executive Search Life Sciences &amp; Santé animale
+                  </p>
+                  <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+                    <a
+                      href="https://calendly.com/g-kengue/talentconsulting"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="inline-flex items-center gap-1.5 font-semibold text-brand-teal transition hover:opacity-80"
+                    >
+                      <CalendarClock size={14} />
+                      Réserver 15 min
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/georges-kengue-81988b36/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="inline-flex items-center gap-1.5 font-semibold text-brand-teal transition hover:opacity-80"
+                    >
+                      <LinkedinIcon size={14} />
+                      LinkedIn
+                    </a>
+                    <a
+                      href="https://fr.trustpilot.com/review/skstalents.fr"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="inline-flex items-center gap-1.5 font-semibold text-brand-teal transition hover:opacity-80"
+                    >
+                      <Star size={14} />
+                      Avis Trustpilot
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
