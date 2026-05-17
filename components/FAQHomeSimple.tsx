@@ -73,7 +73,7 @@ export default function FAQHomeSimple() {
                   {open ? (
                     <p
                       id={panelId}
-                      className="mt-3 font-sans text-sm leading-relaxed text-brand-stone"
+                      className="mt-3 whitespace-pre-line font-sans text-sm leading-relaxed text-brand-stone"
                     >
                       {item.answer}
                     </p>
