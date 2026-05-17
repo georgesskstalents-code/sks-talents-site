@@ -147,30 +147,5 @@ export const lifeSciencesScenes: DemoScene[] = [
         </p>
       </div>
     )
-  },
-
-  // -------------------------------------------------- Scène 4 - Témoignage (7s)
-  {
-    id: "ls-testimonial",
-    durationMs: 7000,
-    render: () => (
-      <div className="flex h-full flex-col items-center justify-center bg-white px-6 py-6 text-center sm:px-12">
-        <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-mint text-2xl font-semibold text-brand-teal">
-          ML
-        </div>
-        <p className="mt-3 t-h3 font-semibold">CEO · Co-fondatrice</p>
-        <p className="text-caption text-brand-stone">Biotech oncologie · Series B 32 M€ · 110 employés</p>
-
-        <p className="mt-5 max-w-md font-display italic t-body text-brand-ink">
-          "Le copilot CEO a changé ma façon de présenter au board. Je ne subis plus mes
-          recrutements, je les anticipe. Mes investisseurs voient enfin la talent strategy
-          comme un asset, pas comme un risque."
-        </p>
-
-        <span className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-mint/40 px-3 py-1.5 text-caption font-semibold text-brand-teal">
-          Series C levée +45 % en 8 mois
-        </span>
-      </div>
-    )
   }
 ];

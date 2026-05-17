@@ -271,8 +271,13 @@ export default function HomePage() {
         </section>
       </RevealOnScroll>
 
-      {/* 6. Proofs (Marquee + 6 references + 1 inline testimonial) */}
+      {/* 6. FAQ simple 4 questions */}
       <RevealOnScroll delayMs={165}>
+        <FAQHomeSimple />
+      </RevealOnScroll>
+
+      {/* 7. Preuves - logos references */}
+      <RevealOnScroll delayMs={190}>
         <section className="pt-6 pb-6 sm:pt-8 sm:pb-8">
           <div className="container-shell space-y-10">
             <div className="space-y-5">
@@ -285,14 +290,24 @@ export default function HomePage() {
               </p>
             </div>
             <ReferenceCardMarquee items={references.slice(0, 6)} />
-            <TestimonialMarquee />
           </div>
         </section>
       </RevealOnScroll>
 
-      {/* 7. FAQ simple 4 questions (Secteurs / Services / Garanties / Programme IA) */}
-      <RevealOnScroll delayMs={190}>
-        <FAQHomeSimple />
+      {/* 8. Temoignages - section finale du site (CEO direction 2026-05-17) */}
+      <RevealOnScroll delayMs={210}>
+        <section className="pt-6 pb-10 sm:pt-8 sm:pb-14">
+          <div className="container-shell space-y-8">
+            <div className="space-y-5">
+              <p className="eyebrow">Témoignages</p>
+              <h2 className="section-title max-w-5xl">
+                Ce que nos clients et candidats pensent de nous.
+              </h2>
+              <p className="section-copy">Ce qu&apos;ils pensent de nos services.</p>
+            </div>
+            <TestimonialMarquee />
+          </div>
+        </section>
       </RevealOnScroll>
     </>
   );

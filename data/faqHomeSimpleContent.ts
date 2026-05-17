@@ -32,7 +32,7 @@ export const FAQ_HOME_SIMPLE_ITEMS: ReadonlyArray<FaqHomeSimpleItem> = [
     category: "Programme IA",
     question: "Comment implémenter l'IA sans bousculer la culture ?",
     answer:
-      "Nous automatisons ce qui ralentit vos équipes : reporting, onboarding, coordination, anticipation des recrutements.\n\nEt nous accompagnons les équipes dans cette transition, pour que l'outil serve réellement l'exécution.\n\nLes décisions et la relation candidat restent humaines."
+      "Nous automatisons ce qui ralentit vos équipes : reporting, onboarding, coordination, anticipation des recrutements.\nEt nous accompagnons les équipes dans cette transition, pour que l'outil serve réellement l'exécution.\nLes décisions et la relation candidat restent humaines."
   }
 ];
 

@@ -133,29 +133,5 @@ export const animalHealthScenes: DemoScene[] = [
         </p>
       </div>
     )
-  },
-
-  // -------------------------------------------------- Scène 4 - Témoignage (7s)
-  {
-    id: "ah-testimonial",
-    durationMs: 7000,
-    render: () => (
-      <div className="flex h-full flex-col items-center justify-center bg-white px-6 py-6 text-center sm:px-12">
-        <div className="flex h-20 w-20 items-center justify-center rounded-full bg-blue-100 text-2xl font-semibold text-blue-700">
-          SD
-        </div>
-        <p className="mt-3 t-h3 font-semibold">Cofondateur DG</p>
-        <p className="text-caption text-brand-stone">Groupement vétérinaire · 32 cliniques · 280 collaborateurs</p>
-
-        <p className="mt-5 max-w-md font-display italic t-body text-brand-ink">
-          "Si vous êtes cofondateur d'un groupement qui grandit plus vite que ses process, je
-          recommande SKS Talents. L'agent reporting a payé son ROI en 4 mois."
-        </p>
-
-        <span className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-mint/40 px-3 py-1.5 text-caption font-semibold text-brand-teal">
-          ROI atteint en 4 mois
-        </span>
-      </div>
-    )
   }
 ];
