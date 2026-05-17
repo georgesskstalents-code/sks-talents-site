@@ -205,7 +205,15 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="mt-10 rounded-[28px] border border-brand-teal/15 bg-white p-6 shadow-soft sm:p-8">
+          </div>
+        </section>
+      </RevealOnScroll>
+
+      {/* 5b. Interlocuteur direct - visible mobile + desktop (CEO direction 2026-05-17) */}
+      <RevealOnScroll delayMs={155}>
+        <section className="pt-6 pb-6 sm:pt-8 sm:pb-8">
+          <div className="container-shell">
+            <div className="rounded-[28px] border border-brand-teal/15 bg-white p-6 shadow-soft sm:p-8">
               <div className="grid gap-6 lg:grid-cols-[1.3fr_auto_1fr] lg:items-center lg:gap-8">
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
                   <img
