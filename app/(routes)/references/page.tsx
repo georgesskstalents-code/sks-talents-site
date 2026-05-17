@@ -47,8 +47,8 @@ export default async function ReferencesPage() {
     <>
       <PageHero
         kicker="Les références"
-        title="Ils nous ont fait confiance."
-        description="Des fondateurs biotech, des cofondateurs vétérinaires, des CODIR petfood et des labos de diagnostic. Tous partagent une exigence : recruter vite, sans renoncer à la qualité."
+        title="Ils nous font confiance."
+        description="Fondateurs et équipes dirigeantes en biotech, deeptech et santé animale. Même exigence : recruter juste, sans compromis sur la croissance."
         breadcrumbs={[
           { label: "Accueil", href: "/" },
           { label: "Les références" }
