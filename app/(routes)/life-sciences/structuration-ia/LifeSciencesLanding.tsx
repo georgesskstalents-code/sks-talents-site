@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Compass, Sparkles, TrendingUp, Users } from "lucide-react";
 import CalendlyButton from "@/components/CalendlyButton";
+import FAQHomeTabs from "@/components/FAQHomeTabs";
 import { StructurationHero } from "@/components/sections/StructurationHero";
 import DemoStage from "@/components/landings/DemoStage";
 import DiagnosticForm from "@/components/landings/DiagnosticForm";
@@ -506,6 +507,9 @@ export default function LifeSciencesLanding() {
           </section>
         </>
       )}
+
+      {/* ===== FAQ tabs (rapatriee depuis la home 2026-05-17) ===== */}
+      <FAQHomeTabs />
 
       {/* ===== Section 7 - CTA FINAL ===== */}
       <section className="bg-brand-ink py-14 text-white sm:py-20">

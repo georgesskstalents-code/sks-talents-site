@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CalendarClock, FlaskConical, PawPrint, Star, Target, TrendingUp } from "lucide-react";
-import FAQHomeTabs from "@/components/FAQHomeTabs";
+import FAQHomeSimple from "@/components/FAQHomeSimple";
+import { getFaqHomeSimpleJsonLd } from "@/data/faqHomeSimpleContent";
 import Hero from "@/components/Hero";
 import PersonaPortalsGrid, { type PersonaPortal } from "@/components/PersonaPortalsGrid";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import ReferenceCardMarquee from "@/components/ReferenceCardMarquee";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import TestimonialMarquee from "@/components/TestimonialMarquee";
-import { getFaqJsonLd } from "@/data/faqHomeContent";
 import { references } from "@/data/references";
 
 function LinkedinIcon({ size = 14 }: { size?: number }) {
@@ -93,7 +93,7 @@ const personaPortals: PersonaPortal[] = [
 ];
 
 export default function HomePage() {
-  const faqJsonLd = getFaqJsonLd();
+  const faqJsonLd = getFaqHomeSimpleJsonLd();
 
   return (
     <>
@@ -290,9 +290,9 @@ export default function HomePage() {
         </section>
       </RevealOnScroll>
 
-      {/* 7. FAQ tabs Life Sciences / Animal Health */}
+      {/* 7. FAQ simple 4 questions (Secteurs / Services / Garanties / Programme IA) */}
       <RevealOnScroll delayMs={190}>
-        <FAQHomeTabs />
+        <FAQHomeSimple />
       </RevealOnScroll>
     </>
   );
