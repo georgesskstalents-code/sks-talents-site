@@ -40,7 +40,7 @@ export default function FAQHomeSimple() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.22em] text-[#41a0a4]">
             Questions fréquentes
           </p>
-          <h2 className="mt-3 font-display text-3xl text-brand-ink sm:text-4xl">
+          <h2 className="section-title mt-3">
             Vos questions les plus fréquentes
           </h2>
           <p className="mt-3 font-sans text-sm leading-relaxed text-brand-stone sm:text-base">

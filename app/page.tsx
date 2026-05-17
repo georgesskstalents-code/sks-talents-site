@@ -121,7 +121,7 @@ export default function HomePage() {
                 <span className="inline-flex items-center rounded-full border border-brand-teal/15 bg-white/70 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-teal">
                   Notre approche
                 </span>
-                <h2 className="mt-6 font-display text-4xl leading-[1.05] text-brand-ink sm:text-5xl lg:text-[56px]">
+                <h2 className="section-title mt-6">
                   L&apos;IA appliquée à vos RH, selon{" "}
                   <span className="italic text-brand-teal">vos enjeux.</span>
                 </h2>
