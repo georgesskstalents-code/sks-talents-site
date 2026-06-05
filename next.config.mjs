@@ -18,6 +18,12 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [{ type: "host", value: "skstalents.fr" }],
+        destination: "https://www.skstalents.fr/:path*",
+        permanent: true
+      },
+      {
         source: "/job-roles/directeur-des-operations-learning-sante-animale",
         destination: "/job-roles/medical-vet-directeur-operations-learning",
         permanent: true
