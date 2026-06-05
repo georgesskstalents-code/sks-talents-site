@@ -71,7 +71,27 @@ const nextConfig = {
       { source: "/blog/talent-acquisition-emea-r%C3%B4les-penuriques", destination: "/blog/talent-acquisition-emea-roles-penuriques", permanent: true },
       { source: "/blog/quel-est-le-vrai-co%C3%BBt-mauvais-recrutement", destination: "/blog/quel-est-le-vrai-cout-mauvais-recrutement", permanent: true },
       { source: "/blog/aligner-recrutement-performance-strat%C3%A9gie-entreprise", destination: "/blog/aligner-recrutement-performance-strategie-entreprise", permanent: true },
-      { source: "/blog/comment-structurer-equipes-forte-croissance-sans-exploser-co%C3%BBts-rh", destination: "/blog/comment-structurer-equipes-forte-croissance-sans-exploser-couts-rh", permanent: true }
+      { source: "/blog/comment-structurer-equipes-forte-croissance-sans-exploser-co%C3%BBts-rh", destination: "/blog/comment-structurer-equipes-forte-croissance-sans-exploser-couts-rh", permanent: true },
+
+      // Legacy WordPress URLs (causent 404 dans GSC). Ajout 2026-06-05.
+      { source: "/qui_sommes-nous", destination: "/about", permanent: true },
+      { source: "/contactez-nous", destination: "/contact", permanent: true },
+      { source: "/legal/cgv-CGV", destination: "/legal/cgv", permanent: true },
+      { source: "/orientation-Orientation", destination: "/orientation", permanent: true },
+      { source: "/comparatifs-Comparatifs-m", destination: "/comparatifs", permanent: true },
+      { source: "/blog-Articles-m", destination: "/blog", permanent: true },
+      { source: "/offres_emploi", destination: "/job-roles", permanent: true },
+      { source: "/afrique", destination: "/", permanent: true },
+      { source: "/seminaires", destination: "/events", permanent: true },
+      { source: "/article", destination: "/blog", permanent: true },
+      { source: "/faq_entreprises", destination: "/contact", permanent: true },
+      { source: "/faq_candidats", destination: "/contact", permanent: true },
+      { source: "/diagnostic-Diagnostic-m", destination: "/diagnostic", permanent: true },
+      { source: "/politique_de_gestion_de_cookies", destination: "/legal/politique-cookies", permanent: true },
+      { source: "/job_details/:slug", destination: "/job-roles", permanent: true },
+      { source: "/fiche_metier/:slug", destination: "/job-roles", permanent: true },
+      { source: "/fiche_salon_seminaire/:slug", destination: "/events", permanent: true },
+      { source: "/flUW7AcgBiicCMqb4JgItuKPidWEQMIY0B9v9jLFYk=", destination: "/", permanent: true }
     ];
   },
   async headers() {
