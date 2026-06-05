@@ -41,7 +41,7 @@ function QuoteIcon({ size = 32 }: { size?: number }) {
 
 const HOME_TITLE = "SKS TALENTS · Cabinet recrutement Life Sciences & Animal Health";
 const HOME_DESCRIPTION =
-  "Cabinet executive search Life Sciences, Animal Health et HealthTech. Structuration RH, Programme IA et accompagnement scale-up biotech, medtech, vétérinaire. 75% de rétention à 5 ans.";
+  "Cabinet executive search Life Sciences & Animal Health. RPO, structuration RH et scale-up biotech, medtech, vétérinaire. 75% de rétention à 5 ans.";
 const HOME_URL = "https://www.skstalents.fr";
 
 export const metadata: Metadata = {
