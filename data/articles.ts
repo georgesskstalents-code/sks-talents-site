@@ -76,14 +76,14 @@ const peopleOpsSignals = {
 export const articles: Article[] = [
   {
     id: "life-sciences-hiring-priorities-2026",
-    title: "Life Sciences Hiring Priorities: May 2026 Batch",
+    title: "Life Sciences Hiring Priorities: June 2026 Batch",
     slug: "life-sciences-hiring-priorities-2026",
     vertical: "biotech",
     persona: ["CEO", "DRH"],
     topic: "recruitment",
     excerpt: "R&D, industrialisation, commercialisation : 10 rôles tendus que les biotech recrutent en priorité ce mois-ci.",
     content:
-      "Réponse courte : si votre organisation life sciences reste concentrée sur la R&D, le frein n'est plus seulement le recrutement scientifique. Le vrai point de rupture, en mai 2026, se trouve dans les fonctions qui relient preuve, qualité, industrialisation et commercialisation.\n\nLes rôles les plus critiques sont souvent ceux qui reduisent le risque d'exécution : AI Scientist, QA, MSAT, CMC, Clinical Operations, Market Access, Business Unit, HR leadership et fonctions data/cyber quand le produit devient numérique. Sur le terrain, cela vaut pour la biotech, le diagnostic, la medtech, la cosmétique, la santé animale et le petfood.\n\nPour un dirigeant, la bonne question n'est pas seulement \"quel poste ouvrir ?\". C'est \"quel goulot ce poste débloque-t-il ?\". La reponse guide l'ordre de priorite, le package et le niveau de seniorite.\n\nSources : France Biotech (Panorama France HealthTech 2026) et Aon pour les repères de rémunération.",
+      "Réponse courte : si votre organisation life sciences reste concentrée sur la R&D, le frein n'est plus seulement le recrutement scientifique. Le vrai point de rupture, en juin 2026, se trouve dans les fonctions qui relient preuve, qualité, industrialisation et commercialisation.\n\nLes rôles les plus critiques sont souvent ceux qui reduisent le risque d'exécution : AI Scientist, QA, MSAT, CMC, Clinical Operations, Market Access, Business Unit, HR leadership et fonctions data/cyber quand le produit devient numérique. Sur le terrain, cela vaut pour la biotech, le diagnostic, la medtech, la cosmétique, la santé animale et le petfood.\n\nPour un dirigeant, la bonne question n'est pas seulement \"quel poste ouvrir ?\". C'est \"quel goulot ce poste débloque-t-il ?\". La reponse guide l'ordre de priorite, le package et le niveau de seniorite.\n\nSources : France Biotech (Panorama France HealthTech 2026) et Aon pour les repères de rémunération.",
     author: "SKS TALENTS",
     date: may2026EditorialBatchDate,
     readTime: 10,
@@ -209,7 +209,8 @@ export const articles: Article[] = [
     vertical: "diagnostic",
     persona: ["COO", "DRH"],
     topic: "recruitment",
-    excerpt: "Pourquoi les postes de maintenance et de support terrain sont devenus critiques.",
+    excerpt:
+      "Pourquoi les postes de maintenance, de field service et de support terrain sont devenus critiques pour la performance medtech.",
     content:
       "Réponse courte : un equipement medtech ou diagnostic ne se vend pas sur sa seule performance initiale. Il se defend dans le temps, sur la disponibilite, la maintenance et la qualité du support terrain.\n\nLes fonctions qui changent la donne sont souvent peu visibles en phase de vente, mais decisives en phase d'exploitation : Field Service Manager, Technical Support Lead, Field Application Manager, Customer Success et Service Operations Director. Elles reduisent les interruptions, protègent la satisfaction client et accelerent l'adoption.\n\nPour un.e COO, c'est une lecture simple : si le support est sous-dimensionne, la croissance commerciale cree de la dette operationnelle. Le bon recrutement est donc celui qui preserve la marge de service autant que la croissance du CA.\n\nSources : Aon et Glassdoor France pour le cadrage rémunération.",
     author: "SKS TALENTS",
@@ -348,7 +349,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "Ordre national des vétérinaires",
-        url: "https://www.vétérinaire.fr/"
+        url: "https://www.veterinaire.fr/"
       },
       {
         name: "Mars",
@@ -555,7 +556,8 @@ export const articles: Article[] = [
     vertical: "diagnostic",
     persona: ["DRH", "COO"],
     topic: "skills",
-    excerpt: "QA, CSV, data integrity et cyber sont devenus le même sujet d'exécution.",
+    excerpt:
+      "QA, CSV, data integrity et cyber sont devenus le même sujet d'exécution pour tenir l'audit, la production et la performance.",
     content:
       "Réponse courte : dans les environnements reguliers, la qualité n'est plus un bloc isole. Elle est liee a la data integrity, a l'automatisation, a l'interoperabilité et a la cybersécurité.\n\nLes postes qui portent ce sujet sont CSV Validation Engineer, LIMS Administrator, HL7 / Integration Specialist, OT Cybersecurity Specialist, QA Manager et Sterility Assurance Lead selon le contexte. Tous servent la même chose : une exécution auditable et stable.\n\nPour les dirigeants, le sujet n'est pas de recruter plus de process. C'est de recruter des profils qui savent rendre le process utile, donc exploitable en production et en commercial.\n\nSources : SIDIV, LEEM et Aon.",
     author: "SKS TALENTS",
@@ -820,7 +822,7 @@ export const articles: Article[] = [
       },
       {
         name: "Ordre national des vétérinaires",
-        url: "https://www.vétérinaire.fr/"
+        url: "https://www.veterinaire.fr/"
       }
     ]
   },
@@ -924,7 +926,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "Ordre national des vétérinaires",
-        url: "https://www.vétérinaire.fr/"
+        url: "https://www.veterinaire.fr/"
       },
       {
         name: "Oniris",
@@ -952,7 +954,7 @@ export const articles: Article[] = [
       },
       {
         name: "Ordre national des vétérinaires",
-        url: "https://www.vétérinaire.fr/"
+        url: "https://www.veterinaire.fr/"
       }
     ]
   },
@@ -972,7 +974,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "Ordre national des vétérinaires",
-        url: "https://www.vétérinaire.fr/"
+        url: "https://www.veterinaire.fr/"
       },
       {
         name: "Connex Sante",
@@ -1264,7 +1266,7 @@ export const articles: Article[] = [
       },
       {
         name: "Ordre national des vétérinaires",
-        url: "https://www.vétérinaire.fr/"
+        url: "https://www.veterinaire.fr/"
       }
     ]
   },
@@ -1308,7 +1310,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "Ordre national des vétérinaires",
-        url: "https://www.vétérinaire.fr/"
+        url: "https://www.veterinaire.fr/"
       },
       {
         name: "Culture RH",
@@ -1332,7 +1334,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "Ordre national des vétérinaires",
-        url: "https://www.vétérinaire.fr/"
+        url: "https://www.veterinaire.fr/"
       },
       {
         name: "VetAgro Sup",
@@ -1476,7 +1478,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "France Biotech - Cartographie des fonds d'investissement français en santé en 2024",
-        url: "https://france-biotech.fr/wp-content/uploads/2025/01/Cartographie-des-fonds-dinvestissement-francais-en-sante-en-2024-Synthese-1.pdf"
+        url: "https://france-biotech.fr/publications/etudes-france-biotech/cartographie-des-fonds-dinvestissement-francais-en-sante-en-2024/"
       }
     ]
   },
@@ -1725,7 +1727,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "Ordre national des vétérinaires - Les écoles",
-        url: "https://www.vétérinaire.fr/la-profession-vétérinaire/devenir-vétérinaire/les-ecoles"
+        url: "https://www.veterinaire.fr/la-profession-veterinaire/devenir-veterinaire/les-ecoles"
       }
     ]
   },
@@ -1746,7 +1748,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "Ordre national des vétérinaires - Les écoles",
-        url: "https://www.vétérinaire.fr/la-profession-vétérinaire/devenir-vétérinaire/les-ecoles"
+        url: "https://www.veterinaire.fr/la-profession-veterinaire/devenir-veterinaire/les-ecoles"
       }
     ]
   },
@@ -1767,11 +1769,11 @@ export const articles: Article[] = [
     sources: [
       {
         name: "Ordre national des vétérinaires - Les conditions d'exercice en France",
-        url: "https://www.vétérinaire.fr/je-suis-vétérinaire/mon-exercice-professionnel/les-conditions-dexercice-en-france"
+        url: "https://www.veterinaire.fr/je-suis-veterinaire/les-conditions-dexercice-en-france"
       },
       {
         name: "Ordre national des vétérinaires - L'exercice en société des associés vétérinaires",
-        url: "https://www.vétérinaire.fr/je-suis-vétérinaire/mon-exercice-professionnel/lexercice-en-societe-des-associes-vétérinaires"
+        url: "https://www.veterinaire.fr/je-suis-veterinaire/lexercice-en-societe-des-associes-veterinaires"
       }
     ]
   },
@@ -1792,7 +1794,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "France Biotech - Cartographie des fonds d'investissement français en santé en 2024 (synthèse)",
-        url: "https://france-biotech.fr/wp-content/uploads/2025/01/Cartographie-des-fonds-dinvestissement-francais-en-sante-en-2024-Synthese-1.pdf"
+        url: "https://france-biotech.fr/publications/etudes-france-biotech/cartographie-des-fonds-dinvestissement-francais-en-sante-en-2024/"
       }
     ]
   },
@@ -2787,7 +2789,7 @@ export const articles: Article[] = [
       },
       {
         name: "Ordre national des vétérinaires",
-        url: "https://www.vétérinaire.fr/"
+        url: "https://www.veterinaire.fr/"
       }
     ]
   },
@@ -3419,7 +3421,7 @@ export const articles: Article[] = [
     sources: [
       {
         name: "Ordre national des vétérinaires",
-        url: "https://www.vétérinaire.fr/"
+        url: "https://www.veterinaire.fr/"
       },
       {
         name: "VetAgro Sup",
@@ -3526,6 +3528,431 @@ export const articles: Article[] = [
       {
         name: "Culture RH",
         url: "https://culture-rh.com/"
+      }
+    ]
+  },
+  {
+    id: "life-sciences-hiring-priorities-june-2026",
+    title: "Life Sciences Hiring Priorities: June 2026 Batch",
+    slug: "life-sciences-hiring-priorities-june-2026",
+    vertical: "biotech",
+    persona: ["CEO", "COO", "DRH"],
+    topic: "recruitment",
+    excerpt:
+      "Le batch de juin 2026 vise les rôles qui débloquent preuve, support, gouvernance data/IA et exécution multi-sites.",
+    content: composeArticleContent(
+      "Réponse courte : la pénurie de juin 2026 ne frappe pas un seul métier. Elle touche surtout les rôles de jonction entre science, opérations, support, export, qualité et direction. Ce sont eux qui réduisent les retards invisibles et améliorent la vitesse d'exécution.",
+      "Les profils les plus critiques du batch sont Assay Development Scientist, HL7 Interoperability Architect, Regulatory Affairs Manager Animal Health, Hospital Operations Manager, Demand Planner Petfood, Health Data Governance Lead et AI Quality Manager Health. Tous rendent l'organisation plus exécutable.",
+      "Pour un dirigeant, la bonne lecture n'est pas 'quel métier est à la mode ?' mais 'quel rôle réduit le plus vite notre dette d'exécution ?'. Ce cadrage aide à décider le niveau de seniorité, le package et l'ordre réel d'ouverture.",
+      "Sources : France Biotech (Panorama 2026), Aon et Business France."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-06-03",
+    readTime: 9,
+    internalLinks: [
+      { label: "Fiches métiers", href: "/job-roles" },
+      { label: "Benchmarks salaires", href: "/salary-benchmarks" },
+      { label: "Assay Development Scientist Biotech", href: "/job-roles/biotech-assay-development-scientist" },
+      { label: "HL7 Interoperability Architect Diagnostic", href: "/job-roles/diagnostic-hl7-interoperability-architect" },
+      { label: "Health Data Governance Lead", href: "/job-roles/cross-sector-health-data-governance-lead" },
+      { label: "AI Quality Manager Health", href: "/job-roles/cross-sector-ai-quality-manager-health" }
+    ],
+    sources: [
+      {
+        name: "France Biotech - Panorama France HealthTech 2026",
+        url: "https://france-biotech.fr/communiques-de-presse/communiques-france-biotech/panorama-france-healthtech-2026-une-filiere-mature-innovante-et-resiliente-confrontee-a-un-environnement-plus-exigeant/"
+      },
+      {
+        name: "Aon - Benchmarks de rémunération",
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
+      },
+      {
+        name: "Business France",
+        url: "https://www.businessfrance.fr/"
+      }
+    ]
+  },
+  {
+    id: "biotech-computational-biology-cmc-roles",
+    title: "Biotech Assay Development, MSAT and QA Release Roles",
+    slug: "biotech-computational-biology-cmc-roles",
+    vertical: "biotech",
+    persona: ["CEO", "CPO", "DRH"],
+    topic: "skills",
+    excerpt:
+      "Pourquoi la pénurie biotech se joue aussi dans les rôles qui relient analytique, industrialisation et libération qualité.",
+    content: composeArticleContent(
+      "Réponse courte : il ne suffit plus de recruter plus de scientifiques. Il faut recruter les profils qui rendent les essais plus décisionnels et le passage vers l'usine plus fluide. Sans eux, l'organisation accumule des résultats intéressants mais peu transférables.",
+      "Le trio qui ressort le plus est Assay Development Scientist, MSAT Engineer Single-Use et QA Release Manager. Le premier rend la preuve analytique exploitable, le deuxième stabilise le procédé, le troisième évite que la libération lot devienne un goulot chronique.",
+      "Pour un.e DRH ou un.e CEO, l'erreur classique est de séparer trop tôt les besoins analytiques, industriels et qualité. Les meilleures embauches viennent d'un cadrage où l'on explicite le goulot débloqué : temps d'analyse, variabilité process, discipline documentaire ou vitesse de release.",
+      "Sources : France Biotech (Panorama 2026) et Aon."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-06-03",
+    readTime: 8,
+    internalLinks: [
+      { label: "Assay Development Scientist Biotech", href: "/job-roles/biotech-assay-development-scientist" },
+      { label: "MSAT Engineer Single-Use Biotech", href: "/job-roles/biotech-msat-engineer-single-use" },
+      { label: "QA Release Manager Biotech", href: "/job-roles/biotech-qa-release-manager" },
+      { label: "Procurement Manager Critical Materials Biotech", href: "/job-roles/biotech-procurement-manager-critical-materials" }
+    ],
+    sources: [
+      {
+        name: "France Biotech - Panorama France HealthTech 2026",
+        url: "https://france-biotech.fr/communiques-de-presse/communiques-france-biotech/panorama-france-healthtech-2026-une-filiere-mature-innovante-et-resiliente-confrontee-a-un-environnement-plus-exigeant/"
+      },
+      {
+        name: "Aon - Benchmarks de rémunération",
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
+      }
+    ]
+  },
+  {
+    id: "diagnostic-applications-middleware-emea",
+    title: "Diagnostic Clinical, Interoperability and Qualification Roles",
+    slug: "diagnostic-applications-middleware-emea",
+    vertical: "diagnostic",
+    persona: ["COO", "CPO", "DRH"],
+    topic: "digital",
+    excerpt:
+      "Clinique, interopérabilité et qualification terrain : les rôles qui évitent les déploiements fragiles en diagnostic.",
+    content: composeArticleContent(
+      "Réponse courte : dans le diagnostic moderne, le vrai retard n'est pas toujours dans l'instrument. Il se situe souvent entre l'instrument, le middleware, le laboratoire client et la façon dont l'usage est déployé sur le terrain.",
+      "Les rôles les plus critiques sont Clinical Affairs Project Manager, HL7 Interoperability Architect et Installation Qualification & Validation Engineer. Le premier tient la preuve clinique, le deuxième protège la cohérence des flux, le troisième sécurise la mise en service réelle chez le client.",
+      "Pour un.e COO, le sujet n'est donc pas 'supporter plus' mais 'supporter mieux'. Cela suppose des standards de données, une documentation plus propre et une meilleure coordination entre clinique, intégration et terrain.",
+      "Sources : SIDIV et Roche Diagnostics."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-06-03",
+    readTime: 7,
+    internalLinks: [
+      { label: "Clinical Affairs Project Manager Diagnostic", href: "/job-roles/diagnostic-clinical-affairs-project-manager" },
+      { label: "HL7 Interoperability Architect Diagnostic", href: "/job-roles/diagnostic-hl7-interoperability-architect" },
+      { label: "Installation Qualification & Validation Engineer Diagnostic", href: "/job-roles/diagnostic-installation-qualification-validation-engineer" },
+      { label: "HL7 / Interoperability Integration Specialist", href: "/job-roles/diagnostic-hl7-integration-specialist" },
+      { label: "LIMS & middleware : la gouvernance", href: "/blog/laboratory-informatics-lims-middleware-gouvernance" }
+    ],
+    sources: [
+      {
+        name: "SIDIV",
+        url: "https://sidiv.fr/"
+      },
+      {
+        name: "Roche Diagnostics",
+        url: "https://diagnostics.roche.com/"
+      }
+    ]
+  },
+  {
+    id: "diagnostic-field-service-africa-support",
+    title: "Diagnostic Support, Qualification and Africa Deployments",
+    slug: "diagnostic-field-service-africa-support",
+    vertical: "diagnostic",
+    persona: ["COO", "DRH"],
+    topic: "service",
+    excerpt:
+      "Pourquoi le support diagnostic en Afrique devient un sujet de déploiement, de qualification et d'escalade, pas seulement un poste technique.",
+    content: composeArticleContent(
+      "Réponse courte : sur plusieurs marchés africains, le sujet n'est pas seulement la vente de l'équipement. C'est la capacité à tenir le support, les pièces, la formation et les délais de remise en service malgré la distance.",
+      "Deux rôles protègent directement cette exécution : Installation Qualification & Validation Engineer et Technical Support Scientist Molecular Diagnostics. Le premier réduit le risque de mise en service fragile. Le second évite que les incidents complexes dérivent en insatisfaction durable ou en désorganisation interne.",
+      "Pour un dirigeant export, la bonne question est simple : votre modèle de support est-il réellement compatible avec la promesse commerciale que vous faites sur la zone ? Si la réponse est floue, le recrutement devient un sujet de crédibilité marché.",
+      "Sources : Business France, Mindray et Aon."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-06-03",
+    readTime: 7,
+    internalLinks: [
+      { label: "Installation Qualification & Validation Engineer Diagnostic", href: "/job-roles/diagnostic-installation-qualification-validation-engineer" },
+      { label: "Technical Support Scientist Molecular Diagnostics", href: "/job-roles/diagnostic-technical-support-scientist-molecular" },
+      { label: "Service Delivery Manager EMEA", href: "/job-roles/diagnostic-service-delivery-manager-emea" },
+      { label: "Export Manager Afrique Diagnostic", href: "/job-roles/diagnostic-export-manager-afrique" }
+    ],
+    sources: [
+      {
+        name: "Business France",
+        url: "https://www.businessfrance.fr/"
+      },
+      {
+        name: "Mindray",
+        url: "https://www.mindray.com/"
+      },
+      {
+        name: "Aon - Benchmarks de rémunération",
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
+      }
+    ]
+  },
+  {
+    id: "diagnostic-cybersecurity-ivd-program",
+    title: "Health Data Governance and AI Quality in Life Sciences",
+    slug: "diagnostic-cybersecurity-ivd-program",
+    vertical: "diagnostic",
+    persona: ["CEO", "COO", "DRH"],
+    topic: "cybersecurity",
+    excerpt:
+      "Les rôles gouvernance qui relient donnée, qualité, IA et comité de direction.",
+    content: composeArticleContent(
+      "Réponse courte : en life sciences, la donnée et l'IA ne peuvent plus être traitées comme des sujets diffus. Elles touchent les audits, les produits, les usages internes et la confiance client. Le besoin n'est donc pas seulement technique, mais aussi organisationnel.",
+      "Les rôles de Health Data Governance Lead et AI Quality Manager Health existent pour tenir ensemble qualité de la donnée, documentation, priorités de remédiation et cadre d'usage des cas IA sensibles. C'est ce qui évite que chaque équipe traite le sujet comme le problème de quelqu'un d'autre.",
+      "Pour un.e CEO ou un.e DRH, l'intérêt est simple : donner un propriétaire clair aux sujets qui traversent IT, qualité, produit, cyber et métiers. Sans cette ownership, l'effort reste diffus et cher.",
+      "Sources : France Biotech, Culture RH et Aon."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-06-03",
+    readTime: 6,
+    internalLinks: [
+      { label: "Health Data Governance Lead", href: "/job-roles/cross-sector-health-data-governance-lead" },
+      { label: "AI Quality Manager Health", href: "/job-roles/cross-sector-ai-quality-manager-health" },
+      { label: "Chief Information Security Officer (CISO)", href: "/job-roles/cross-sector-chief-information-security-officer" },
+      { label: "OT Cybersecurity Specialist", href: "/job-roles/diagnostic-ot-cybersecurity-specialist" }
+    ],
+    sources: [
+      {
+        name: "France Biotech - Panorama France HealthTech 2026",
+        url: "https://france-biotech.fr/communiques-de-presse/communiques-france-biotech/panorama-france-healthtech-2026-une-filiere-mature-innovante-et-resiliente-confrontee-a-un-environnement-plus-exigeant/"
+      },
+      {
+        name: "Culture RH",
+        url: "https://culture-rh.com/"
+      },
+      {
+        name: "Aon - Benchmarks de rémunération",
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
+      }
+    ]
+  },
+  {
+    id: "animal-health-technical-services-emea-export-africa",
+    title: "Animal Health Technical Services, EMEA and Africa",
+    slug: "animal-health-technical-services-emea-export-africa",
+    vertical: "medical-vet",
+    persona: ["CEO", "COO", "DRH"],
+    topic: "recruitment",
+    excerpt:
+      "Support technique, export Afrique et coordination EMEA : les rôles qui évitent la croissance fragile en santé animale.",
+    content: composeArticleContent(
+      "Réponse courte : en santé animale, la croissance ne tient pas seulement sur le produit ni sur le commercial. Elle tient sur la capacité à transmettre le savoir terrain, à soutenir les distributeurs et à maintenir une discipline d'exécution sur plusieurs zones.",
+      "C'est pour cela que les postes de Regulatory Affairs Manager Animal Health, Demand Planning Manager et Customer Education Manager deviennent critiques. Ils réduisent les frictions entre marché, support, regulatory, supply et équipes locales.",
+      "Pour un.e COO, le signal simple est le suivant : si le terrain remonte toujours les mêmes questions, les mêmes incidents ou les mêmes blocages pays, le problème n'est pas ponctuel. Il appelle un rôle de structuration, pas seulement plus d'effort commercial.",
+      "Sources : Business France, Mars et Ordre national des vétérinaires."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-06-03",
+    readTime: 7,
+    internalLinks: [
+      { label: "Regulatory Affairs Manager Animal Health", href: "/job-roles/medical-vet-regulatory-affairs-manager" },
+      { label: "Veterinary R&D Scientist Animal Health", href: "/job-roles/medical-vet-veterinary-rd-scientist" },
+      { label: "Demand Planning Manager Animal Health", href: "/job-roles/medical-vet-demand-planning-manager" },
+      { label: "Customer Education Manager Animal Health", href: "/job-roles/medical-vet-customer-education-manager" },
+      { label: "Country Manager Afrique Francophone", href: "/job-roles/medical-vet-country-manager-afrique-francophone" },
+      { label: "Sales Developer & Product Trainer EMEA", href: "/job-roles/medical-vet-sales-developer-product-trainer-emea" }
+    ],
+    sources: [
+      {
+        name: "Business France",
+        url: "https://www.businessfrance.fr/"
+      },
+      {
+        name: "Mars",
+        url: "https://www.mars.com/"
+      },
+      {
+        name: "Ordre national des vétérinaires",
+        url: "https://www.veterinaire.fr/"
+      }
+    ]
+  },
+  {
+    id: "veterinary-referral-operations-ecc-teleradiology",
+    title: "Veterinary Referral Operations, ECC and Teleradiology",
+    slug: "veterinary-referral-operations-ecc-teleradiology",
+    vertical: "vet-services",
+    persona: ["COO", "DRH"],
+    topic: "operations",
+    excerpt:
+      "Quand la pénurie vétérinaire se déplace vers la coordination de flux, les centres référés ont besoin de nouveaux rôles d'exécution.",
+    content: composeArticleContent(
+      "Réponse courte : les centres référés et ECC ne se fragilisent pas uniquement par manque de vétérinaires. Ils se fragilisent aussi quand la coordination des flux devient trop artisanale : plannings, imagerie, triage, communication et suivi des cas.",
+      "Le trio Hospital Operations Manager, Referral Coordinator et Practice Integration Manager devient alors très utile. Le premier stabilise l'exploitation du centre. Le second réduit les ruptures entre cliniques, spécialistes et clients. Le troisième protège les phases d'intégration et de croissance.",
+      "Pour un groupe vétérinaire, l'intérêt est concret : moins de temps perdu, une meilleure expérience pour les équipes et une qualité de service plus homogène malgré la tension marché.",
+      "Sources : Ordre national des vétérinaires et VetAgro Sup."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-06-03",
+    readTime: 6,
+    internalLinks: [
+      { label: "Veterinary Hospital Operations Manager", href: "/job-roles/veterinary-hospital-operations-manager" },
+      { label: "Veterinary Referral Coordinator", href: "/job-roles/veterinary-referral-coordinator" },
+      { label: "Veterinary Practice Integration Manager", href: "/job-roles/veterinary-practice-integration-manager" },
+      { label: "Vétérinaire Urgences & Soins Intensifs (ECC)", href: "/job-roles/veterinary-emergency-critical-care-veterinarian" },
+      { label: "Vétérinaire Imageur", href: "/job-roles/veterinary-imageur" }
+    ],
+    sources: [
+      {
+        name: "Ordre national des vétérinaires",
+        url: "https://www.veterinaire.fr/"
+      },
+      {
+        name: "VetAgro Sup",
+        url: "https://www.vetagro-sup.fr/"
+      }
+    ]
+  },
+  {
+    id: "petfood-emea-quality-formulation-support",
+    title: "Petfood EMEA Quality, Formulation and Technical Support",
+    slug: "petfood-emea-quality-formulation-support",
+    vertical: "petfood",
+    persona: ["CEO", "COO", "DRH"],
+    topic: "quality",
+    excerpt:
+      "Formulation, qualité système et support technique : le trio qui évite les blocages petfood en EMEA.",
+    content: composeArticleContent(
+      "Réponse courte : en petfood, la vraie complexité apparaît quand une bonne recette doit survivre à l'industrialisation, aux variations fournisseurs, aux marchés export et aux attentes clients. C'est là que les profils de structuration deviennent critiques.",
+      "Les rôles qui ressortent le plus dans ce contexte sont Formulation Scientist, Demand Planner et Regulatory Affairs Manager Petfood. Ils protègent la même promesse : une exécution stable entre science, usine, clients et marque.",
+      "Pour un.e COO, le piège est de traiter ces sujets en silos. En pratique, les incidents qualité, les questions clients et les choix de formulation se répondent en permanence. Le recrutement doit donc refléter cette réalité d'interface.",
+      "Sources : Mars et Aon."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-06-03",
+    readTime: 7,
+    internalLinks: [
+      { label: "Formulation Scientist Petfood", href: "/job-roles/petfood-formulation-scientist" },
+      { label: "Demand Planner Petfood", href: "/job-roles/petfood-demand-planner" },
+      { label: "Regulatory Affairs Manager Petfood", href: "/job-roles/petfood-regulatory-affairs-manager" },
+      { label: "R&D Director Petfood", href: "/job-roles/petfood-rd-director" }
+    ],
+    sources: [
+      {
+        name: "Mars",
+        url: "https://www.mars.com/"
+      },
+      {
+        name: "Aon - Benchmarks de rémunération",
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
+      }
+    ]
+  },
+  {
+    id: "cosmetique-export-regulatory-emea-afrique",
+    title: "Cosmetics Export and Regulatory Roles for EMEA and Africa",
+    slug: "cosmetique-export-regulatory-emea-afrique",
+    vertical: "cosmétique",
+    persona: ["CEO", "COO", "DRH"],
+    topic: "compliance",
+    excerpt:
+      "Pourquoi les lancements cosmétique EMEA/Afrique demandent des rôles qui mélangent export, claims et exécution réglementaire.",
+    content: composeArticleContent(
+      "Réponse courte : sur la cosmétique export, le risque n'est pas seulement réglementaire. Il est aussi commercial et opérationnel : un claim mal calibré, un dossier incomplet ou un partenaire mal formé peuvent retarder un lancement entier.",
+      "Les rôles qui protègent le mieux ce sujet sont Export Manager Afrique & MENA, Regulatory Affairs Manager et QA Compliance Manager Cosmétique. Ils donnent des propriétaires clairs à la zone de friction entre conformité, lancement et exécution site.",
+      "Pour une direction générale, ces métiers comptent surtout parce qu'ils évitent les blocages tardifs. Ils transforment une ambition export en système plus fiable, pas seulement en intention commerciale.",
+      "Sources : Business France et Aon."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-06-03",
+    readTime: 6,
+    internalLinks: [
+      { label: "Export Manager Afrique & MENA Cosmétique", href: "/job-roles/cosmetique-export-manager-mena-afrique" },
+      { label: "QHSE Manager Cosmétique", href: "/job-roles/cosmetique-qhse-manager" },
+      { label: "Regulatory Affairs Manager Cosmétique", href: "/job-roles/cosmetique-regulatory-affairs-manager" },
+      { label: "QA Compliance Manager Cosmétique", href: "/job-roles/cosmetique-qa-compliance-manager" }
+    ],
+    sources: [
+      {
+        name: "Business France",
+        url: "https://www.businessfrance.fr/"
+      },
+      {
+        name: "Aon - Benchmarks de rémunération",
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
+      }
+    ]
+  },
+  {
+    id: "ai-governance-chief-of-staff-life-sciences",
+    title: "AI Governance and Chief of Staff Roles in Life Sciences",
+    slug: "ai-governance-chief-of-staff-life-sciences",
+    vertical: "people-ops",
+    persona: ["CEO", "COO", "DRH"],
+    topic: "strategy",
+    excerpt:
+      "Deux rôles qui apparaissent quand l'IA avance plus vite que l'organisation et que le temps dirigeant devient un goulot.",
+    content: composeArticleContent(
+      "Réponse courte : beaucoup d'entreprises life sciences voient monter deux tensions en même temps. D'un côté, les usages IA se multiplient sans cadre clair. De l'autre, la direction passe de plus en plus de temps à orchestrer des sujets transverses qu'aucune fonction ne possède vraiment.",
+      "C'est ce qui explique la montée de deux rôles encore peu formalisés mais très utiles : Health Data Governance Lead et AI Quality Manager Health. Le premier clarifie les données critiques, les contrôles et les responsabilités. Le second transforme les usages IA sensibles en standards qualité réellement tenables.",
+      "Pour un.e CEO ou un.e COO, le bon signal n'est pas la taille de l'équipe. C'est le niveau de dispersion. Si vos sujets critiques se perdent entre produit, RH, qualité, ventes et opérations, ces rôles cessent d'être du luxe et deviennent des accélérateurs.",
+      "Sources : France Biotech (Panorama 2026), Culture RH et Aon."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-06-03",
+    readTime: 7,
+    internalLinks: [
+      { label: "Health Data Governance Lead", href: "/job-roles/cross-sector-health-data-governance-lead" },
+      { label: "AI Quality Manager Health", href: "/job-roles/cross-sector-ai-quality-manager-health" },
+      { label: "Talent Acquisition Lead EMEA", href: "/job-roles/cross-sector-talent-acquisition-lead-emea" },
+      { label: "DRH Life Sciences Scale-Up Playbook", href: "/blog/drh-life-sciences-scaleup-playbook" }
+    ],
+    sources: [
+      {
+        name: "France Biotech - Panorama France HealthTech 2026",
+        url: "https://france-biotech.fr/communiques-de-presse/communiques-france-biotech/panorama-france-healthtech-2026-une-filiere-mature-innovante-et-resiliente-confrontee-a-un-environnement-plus-exigeant/"
+      },
+      {
+        name: "Culture RH",
+        url: "https://culture-rh.com/"
+      },
+      {
+        name: "Aon - Benchmarks de rémunération",
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
+      }
+    ]
+  },
+  {
+    id: "ia-act-rh-recrutement",
+    title: "IA Act et RH : impact sur le recrutement, calendrier 2026 et plan de gouvernance",
+    slug: "ia-act-rh-recrutement",
+    vertical: "people-ops",
+    persona: ["DRH", "CEO"],
+    topic: "market",
+    excerpt:
+      "IA Act RH et recrutement : ce que change le règlement européen sur l'IA pour vos process RH, le calendrier 2026, les sanctions et un plan de gouvernance IA RH opérationnel.",
+    content: composeArticleContent(
+      "Réponse courte : l'IA Act n'est pas qu'un sujet juridique pour la direction. Pour la fonction RH, c'est un sujet d'exécution. Si vous utilisez déjà des outils IA pour le recrutement, le tri de CV, le scoring de candidatures, l'évaluation ou la mobilité interne, l'IA Act vous concerne directement. La question utile est simple : qui dans votre organisation tient aujourd'hui la conformité IA en RH ?",
+      "Le cadre, en clair. L'AI Act, ou IA Act, c'est le règlement européen sur l'IA, formellement le règlement UE 2024/1689. Son calendrier est progressif. Les pratiques interdites s'appliquent depuis 2025. Les obligations sur les modèles GPAI sont entrées en vigueur. L'échéance critique pour les entreprises, et surtout pour les fonctions RH, est le 2 août 2026 : c'est la date à laquelle la majorité des obligations sur les systèmes à haut risque deviennent applicables. L'IA Act 2026 n'est donc pas un horizon lointain ; c'est un calendrier court pour les entreprises, y compris les PME.",
+      "Les sanctions IA Act entreprise sont volontairement dissuasives. L'article 99 fixe les amendes administratives à trois niveaux. Le plus élevé, visé par l'article 5 sur les pratiques interdites, peut aller jusqu'à 35 millions d'euros ou 7 % du chiffre d'affaires mondial annuel, le montant le plus élevé étant retenu. Les amendes IA Act sur les autres manquements (haut risque, transparence, documentation) plafonnent à 15 millions d'euros ou 3 % du CA mondial. La non-conformité n'est pas une ligne budgétaire raisonnable, c'est un risque dirigeant.",
+      "L'IA Act haut risque suit une approche par les risques. Un système est classé haut risque selon son usage, pas selon sa technologie. Et le recrutement, la sélection, l'évaluation et la mobilité interne sont explicitement listés comme systèmes à haut risque dans l'annexe III du règlement. Que vous soyez fournisseur de l'outil ou déployeur (l'entreprise qui l'utilise), vos obligations existent. Pour la majorité des entreprises, le statut est celui de déployeur, et il déclenche un socle minimum : information des candidat.e.s, supervision humaine, documentation des décisions, registre des incidents.",
+      "Concrètement, l'IA Act RH et l'IA Act recrutement touchent un périmètre plus large que ce que la plupart des DRH imaginent. Sont concernés : le tri de CV automatisé, le scoring de candidatures, les chatbots de présourcing, les ATS avec scoring intégré, les outils d'analyse vidéo d'entretien, les recommandations de mobilité interne, l'analyse de performance assistée par IA, les outils de plan de succession. Si l'un de ces outils tourne dans votre organisation, vous êtes déjà dans le périmètre IA Act et ressources humaines.",
+      "Le vrai risque opérationnel n'est pas la liste des outils que vous avez achetés. C'est le shadow AI : l'ensemble des usages IA non encadrés qui se sont installés spontanément. Une recruteuse qui utilise une IA générative pour résumer des CV, un.e manager qui demande à un assistant IA d'évaluer des réponses libres, un.e DRH qui fait rédiger une évaluation de fin d'année par un outil d'IA générative en entreprise. Aucun de ces usages n'apparaît dans un audit de licences. Tous tombent dans le périmètre de l'IA Act, tous comportent des risques de biais, de fuite de données personnelles et de décisions non documentées.",
+      "La première brique de mise en conformité IA, c'est donc la cartographie des usages IA. Pas un inventaire de logiciels, mais une cartographie réelle : quel outil, pour quelle décision, sur quelles données, par qui, avec quelle supervision humaine. Tant que cette cartographie n'existe pas, votre IA reste non cartographiée, et aucune politique écrite ne suffira à vous protéger en cas de contrôle ou de plainte d'un.e candidat.e. C'est la couche que la plupart des organisations sautent, et celle qui décide tout le reste.",
+      "La gouvernance IA RH se construit ensuite par couches. Une politique d'usage claire pour les outils IA RH. Une grille de classification des usages selon l'approche par les risques. Une supervision humaine réelle sur toute décision à impact sur la personne. Une documentation et un audit IA des choix de modèle, des données d'entraînement quand elles existent et des contrôles. Et un mécanisme d'alerte pour les incidents. La gouvernance des outils IA RH n'est pas une cellule isolée : elle se loge dans le flux RH existant, sinon elle est ignorée.",
+      "Anticiper l'IA Act, c'est aussi accepter que le cadre va bouger. La Commission européenne a ouvert le Digital Omnibus on AI pour ajuster certaines obligations, et la CNIL publie régulièrement des repères pratiques sur l'IA, y compris en contexte RH. Une structuration IA conforme aujourd'hui doit donc être vivante : assez documentée pour résister à un contrôle, assez modulaire pour absorber les amendements sans tout refaire.",
+      "Reste la question qui dérange : qui, dans l'organisation, possède le sujet IA Act fonctions RH ? Dans la plupart des entreprises life sciences, le sujet rebondit entre DPO, direction juridique, IT, RH et qualité. Tant qu'il n'a pas de propriétaire désigné, l'impact RH de l'IA Act reste flou. Deux fonctions émergent comme propriétaires naturels : un.e Health Data Governance Lead pour la couche data et contrôles, un.e AI Quality Manager Health pour la couche qualité et documentation des usages. Ces deux fonctions ne sont pas encore standardisées, mais elles se structurent vite chez les acteurs qui prennent le sujet au sérieux.",
+      "C'est précisément le périmètre sur lequel SKS Talents aide directions RH et CEO life sciences : cartographier les usages IA en RH, identifier les décisions à impact qui doivent être supervisées, désigner le ou la propriétaire interne du sujet, et recruter les profils qui rendent la gouvernance réellement tenable. IA Act et recrutement, IA Act et ressources humaines : ce ne sont pas deux sujets parallèles, c'est un seul chantier de structuration RH conforme.",
+      "Sources : Règlement (UE) 2024/1689 sur EUR-Lex, Commission européenne sur le cadre IA, CNIL sur l'intelligence artificielle."
+    ),
+    author: "SKS TALENTS",
+    date: "2026-06-05",
+    readTime: 12,
+    internalLinks: [
+      { label: "Diagnostic structuration RH + IA", href: "/diagnostic" },
+      { label: "Services", href: "/services" },
+      { label: "AI Governance and Chief of Staff Roles", href: "/blog/ai-governance-chief-of-staff-life-sciences" },
+      { label: "DRH Life Sciences Scale-Up Playbook", href: "/blog/drh-life-sciences-scaleup-playbook" },
+      { label: "Health Data Governance Lead", href: "/job-roles/cross-sector-health-data-governance-lead" },
+      { label: "AI Quality Manager Health", href: "/job-roles/cross-sector-ai-quality-manager-health" }
+    ],
+    sources: [
+      {
+        name: "Règlement (UE) 2024/1689 - EUR-Lex",
+        url: "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+      },
+      {
+        name: "Commission européenne - Cadre réglementaire sur l'IA",
+        url: "https://digital-strategy.ec.europa.eu/fr/policies/regulatory-framework-ai"
+      },
+      {
+        name: "CNIL - Intelligence artificielle",
+        url: "https://www.cnil.fr/fr/intelligence-artificielle"
       }
     ]
   }
