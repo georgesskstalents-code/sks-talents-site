@@ -39,9 +39,29 @@ function QuoteIcon({ size = 32 }: { size?: number }) {
   );
 }
 
+const HOME_TITLE = "SKS TALENTS · Cabinet recrutement Life Sciences & Animal Health";
+const HOME_DESCRIPTION =
+  "Cabinet executive search Life Sciences, Animal Health et HealthTech. Structuration RH, Programme IA et accompagnement scale-up biotech, medtech, vétérinaire. 75% de rétention à 5 ans.";
+const HOME_URL = "https://www.skstalents.fr";
+
 export const metadata: Metadata = {
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
   alternates: {
-    canonical: "https://www.skstalents.fr"
+    canonical: HOME_URL
+  },
+  openGraph: {
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    type: "website",
+    locale: "fr_FR",
+    url: HOME_URL,
+    siteName: "SKS TALENTS"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION
   }
 };
 

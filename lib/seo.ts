@@ -3,6 +3,7 @@ export const organizationSchema = {
   "@type": "Organization",
   name: "SKS TALENTS",
   alternateName: "SKS Talents",
+  slogan: "Your Talent · Our Future",
   url: "https://www.skstalents.fr",
   email: "g.kengue@skstalents.fr",
   address: {
