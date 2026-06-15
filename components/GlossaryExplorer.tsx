@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { GlossaryGroup } from "@/data/lexiconHub";
 
 type Props = {
@@ -17,8 +17,35 @@ function normalizeSearchValue(value: string) {
     .trim();
 }
 
+function slugifyTerm(term: string): string {
+  return term
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 export default function GlossaryExplorer({ groups }: Props) {
   const [query, setQuery] = useState("");
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.location.hash) return;
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    const target = document.getElementById(hash);
+    if (!target) return;
+    let parent: HTMLElement | null = target.parentElement;
+    while (parent) {
+      if (parent.tagName === "DETAILS") {
+        (parent as HTMLDetailsElement).open = true;
+      }
+      parent = parent.parentElement;
+    }
+    requestAnimationFrame(() => {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }, []);
 
   const filteredGroups = useMemo(() => {
     const normalized = normalizeSearchValue(query);
@@ -130,7 +157,8 @@ export default function GlossaryExplorer({ groups }: Props) {
                   return (
                     <article
                       key={concept.term}
-                      className="relative overflow-hidden rounded-[28px] border border-brand-teal/10 bg-white p-8 sm:p-12"
+                      id={slugifyTerm(concept.term)}
+                      className="relative overflow-hidden rounded-[28px] border border-brand-teal/10 bg-white p-8 sm:p-12 scroll-mt-24"
                     >
                       <span
                         aria-hidden

@@ -12,6 +12,49 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+function renderInlineMarkdown(text: string, keyPrefix: string) {
+  const parts: Array<string | { href: string; label: string }> = [];
+  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  while ((match = pattern.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+    parts.push({ label: match[1], href: match[2] });
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+  if (parts.length === 1 && typeof parts[0] === "string") {
+    return text;
+  }
+  return parts.map((part, idx) =>
+    typeof part === "string" ? (
+      <span key={`${keyPrefix}-t-${idx}`}>{part}</span>
+    ) : part.href.startsWith("/") ? (
+      <Link
+        key={`${keyPrefix}-l-${idx}`}
+        href={part.href}
+        className="font-semibold text-brand-teal underline decoration-brand-teal/30 underline-offset-2 hover:decoration-brand-teal"
+      >
+        {part.label}
+      </Link>
+    ) : (
+      <a
+        key={`${keyPrefix}-l-${idx}`}
+        href={part.href}
+        target="_blank"
+        rel="noreferrer noopener"
+        className="font-semibold text-brand-teal underline decoration-brand-teal/30 underline-offset-2 hover:decoration-brand-teal"
+      >
+        {part.label}
+      </a>
+    )
+  );
+}
+
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || "https://www.skstalents.fr";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -144,7 +187,7 @@ export default async function BlogDetailPage({
               key={`${slug}-${index}`}
               className={index === 0 ? "text-lg leading-9 text-brand-ink" : undefined}
             >
-              {paragraph}
+              {renderInlineMarkdown(paragraph, `${slug}-${index}`)}
             </p>
           ))}
           {internalLinks.length ? (
