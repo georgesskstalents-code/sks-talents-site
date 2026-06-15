@@ -6,6 +6,14 @@ export const organizationSchema = {
   slogan: "Your Talent · Our Future",
   url: "https://www.skstalents.fr",
   email: "g.kengue@skstalents.fr",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://www.skstalents.fr/brand/logo-sks-talents.svg",
+    width: 512,
+    height: 512
+  },
+  image: "https://www.skstalents.fr/brand/logo-sks-talents.svg",
+  foundingDate: "2018",
   address: {
     "@type": "PostalAddress",
     streetAddress: "128, rue la Boétie",
