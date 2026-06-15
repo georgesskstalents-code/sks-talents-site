@@ -70,7 +70,14 @@ export const organizationSchema = {
     }
   ],
   description:
-    "Cabinet de recrutement spécialisé en Life Sciences, biotech, diagnostic, healthtech, e-santé, robotique santé, médecine vétérinaire, petfood premium, RPO et structuration RH."
+    "Cabinet de recrutement spécialisé en Life Sciences, biotech, diagnostic, healthtech, e-santé, robotique santé, médecine vétérinaire, petfood premium, RPO et structuration RH.",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.5",
+    bestRating: "5",
+    worstRating: "1",
+    reviewCount: 15
+  }
 };
 
 export const websiteSchema = {
