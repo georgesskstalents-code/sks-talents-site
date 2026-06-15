@@ -12,6 +12,35 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+function buildHowToSchema(slug: string, title: string, paragraphs: string[], articleUrl: string) {
+  if (!slug.startsWith("comment-") && !slug.includes("playbook")) return null;
+  const steps: Array<{ name: string; text: string }> = [];
+  for (let i = 0; i < paragraphs.length; i++) {
+    const p = paragraphs[i];
+    if (p.startsWith("## ")) {
+      const name = p.slice(3).trim();
+      const next = paragraphs[i + 1];
+      const text = next && !next.startsWith("##") ? next.slice(0, 280) : name;
+      steps.push({ name, text });
+    }
+  }
+  if (steps.length < 3) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: title,
+    description: paragraphs[0]?.slice(0, 280) || title,
+    inLanguage: "fr-FR",
+    url: articleUrl,
+    step: steps.map((s, idx) => ({
+      "@type": "HowToStep",
+      position: idx + 1,
+      name: s.name,
+      text: s.text
+    }))
+  };
+}
+
 function renderInlineMarkdown(text: string, keyPrefix: string) {
   const parts: Array<string | { href: string; label: string }> = [];
   const pattern = /\[([^\]]+)\]\(([^)\s]+)\)/g;
@@ -156,12 +185,49 @@ export default async function BlogDetailPage({
     url: articleUrl
   };
 
+  const howToSchema = buildHowToSchema(slug, title, paragraphs, articleUrl);
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${siteUrl}/blog`
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: title,
+        item: articleUrl
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {howToSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
+      ) : null}
       <EditorialContentLayout
         badge={verticalLabel}
         title={title}

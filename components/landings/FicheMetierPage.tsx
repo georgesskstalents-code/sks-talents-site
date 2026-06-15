@@ -22,9 +22,12 @@ export type FicheMetierRole = {
 
 type RelatedRole = { slug: string; title: string };
 
+type RelatedArticle = { slug: string; title: string; excerpt: string; vertical: string };
+
 type Props = {
   role: FicheMetierRole;
   relatedRoles: RelatedRole[];
+  relatedArticles?: RelatedArticle[];
 };
 
 const TENSION_LEVELS: Record<FicheMetierRole["shortageLevel"], { bars: number; label: string }> = {
@@ -65,7 +68,7 @@ function getAxisRange(min: number, max: number): number[] {
   return steps.slice(0, 6);
 }
 
-export default function FicheMetierPage({ role, relatedRoles }: Props) {
+export default function FicheMetierPage({ role, relatedRoles, relatedArticles = [] }: Props) {
   const tension = TENSION_LEVELS[role.shortageLevel];
   const band = parseSalaryToBand(role.salary);
   const axis = band ? getAxisRange(band.min, band.max) : [];
@@ -402,6 +405,23 @@ export default function FicheMetierPage({ role, relatedRoles }: Props) {
               </Link>
             ))}
           </div>
+
+          {relatedArticles.length > 0 && (
+            <>
+              <h4 className="fm-comp-h4" style={{ marginTop: 48 }}>Articles liés</h4>
+              <div className="fm-related-list">
+                {relatedArticles.map((a, idx) => (
+                  <Link key={a.slug} href={`/blog/${a.slug}`} className="fm-related">
+                    <div className="left">
+                      <span className="num">A·{String(idx + 1).padStart(2, "0")}</span>
+                      <h5>{a.title}</h5>
+                    </div>
+                    <span className="go">Lire →</span>
+                  </Link>
+                ))}
+              </div>
+            </>
+          )}
 
           {role.relatedIndustries.length > 0 && (
             <>

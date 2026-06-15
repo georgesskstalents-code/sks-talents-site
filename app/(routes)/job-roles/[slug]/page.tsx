@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import FicheMetierPage from "@/components/landings/FicheMetierPage";
+import { getRelatedArticlesBySector } from "@/data/articles";
 import { findJobRoleBySlug, getRelatedJobRoles } from "@/data/jobRoles";
 import { getNotionSiteContentBySlug } from "@/lib/notion";
 
@@ -141,6 +142,7 @@ export default async function JobRoleDetailPage({
 
   const resolvedRole = effectiveRole!;
   const relatedRoles = getRelatedJobRoles(resolvedRole.slug, resolvedRole.sector);
+  const relatedArticles = getRelatedArticlesBySector(resolvedRole.sector, 3);
   const occupationJsonLd = buildOccupationJsonLd({
     slug: resolvedRole.slug,
     title: resolvedRole.title,
@@ -156,7 +158,7 @@ export default async function JobRoleDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(occupationJsonLd) }}
       />
-      <FicheMetierPage role={resolvedRole} relatedRoles={relatedRoles} />
+      <FicheMetierPage role={resolvedRole} relatedRoles={relatedRoles} relatedArticles={relatedArticles} />
     </>
   );
 }

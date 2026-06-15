@@ -4565,3 +4565,28 @@ export function getArticlePersonaOptions() {
 export function getArticleVerticalLabel(vertical: string) {
   return verticalLabels[vertical] ?? vertical;
 }
+
+const sectorToVerticalMap: Record<string, string[]> = {
+  Biotech: ["biotech", "people-ops"],
+  Diagnostic: ["diagnostic", "biotech"],
+  "Medical & Vet": ["medical-vet", "vet-services"],
+  "Medical Vet": ["medical-vet", "vet-services"],
+  Cosmetique: ["cosmétique", "cosmetique"],
+  Cosmétique: ["cosmétique", "cosmetique"],
+  Petfood: ["petfood", "vet-services"],
+  "Vet Services": ["vet-services", "medical-vet"],
+  Veterinaire: ["medical-vet", "vet-services"],
+  "Cross-sector": ["people-ops", "biotech"]
+};
+
+export function getRelatedArticlesBySector(sector: string, limit = 3) {
+  const verticals = sectorToVerticalMap[sector] || ["people-ops"];
+  const matched = articles.filter((a) => verticals.includes(a.vertical));
+  matched.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  return matched.slice(0, limit).map((a) => ({
+    slug: a.slug,
+    title: a.title,
+    excerpt: a.excerpt,
+    vertical: a.vertical
+  }));
+}
