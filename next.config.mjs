@@ -97,7 +97,11 @@ const nextConfig = {
       { source: "/job_details/:slug", destination: "/job-roles", permanent: true },
       { source: "/fiche_metier/:slug", destination: "/job-roles", permanent: true },
       { source: "/fiche_salon_seminaire/:slug", destination: "/events", permanent: true },
-      { source: "/flUW7AcgBiicCMqb4JgItuKPidWEQMIY0B9v9jLFYk=", destination: "/", permanent: true }
+      { source: "/flUW7AcgBiicCMqb4JgItuKPidWEQMIY0B9v9jLFYk=", destination: "/", permanent: true },
+      { source: "/blogArticles", destination: "/blog", permanent: true },
+      { source: "/lexique-life-sciences-rhLexique", destination: "/lexique-life-sciences-rh", permanent: true },
+      { source: "/orientation-Orientation-m", destination: "/orientation", permanent: true },
+      { source: "/article/:slug*", destination: "/blog/:slug*", permanent: true }
     ];
   },
   async headers() {
