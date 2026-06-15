@@ -69,6 +69,7 @@ export default async function BlogDetailPage({
   const articleUrl = `${siteUrl}/blog/${slug}`;
   const paragraphs = body.split("\n\n").filter(Boolean);
   const internalLinks = article?.internalLinks ?? [];
+  const answerFirst = article?.answerFirst;
   const heroVisual = notionArticle?.heroImageUrl
     ? {
         src: notionArticle.heroImageUrl,
@@ -133,6 +134,11 @@ export default async function BlogDetailPage({
             <p className="mt-3 text-sm leading-7 text-brand-stone">{audienceLabel}</p>
             <p className="mt-2 text-sm leading-7 text-brand-stone">{kicker}</p>
           </div>
+          {answerFirst ? (
+            <div className="rounded-[22px] border border-brand-teal/20 bg-brand-mint/30 p-6">
+              <p className="text-base leading-8 text-brand-ink">{answerFirst}</p>
+            </div>
+          ) : null}
           {paragraphs.map((paragraph, index) => (
             <p
               key={`${slug}-${index}`}

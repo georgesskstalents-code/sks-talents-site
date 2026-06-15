@@ -11,8 +11,85 @@ export const metadata: Metadata = {
     "Benchmarks salaires SKS TALENTS par métier et secteur pour Life Sciences, diagnostic, medtech, santé animale, veterinary et petfood, avec un angle Seed, Série A et Série B."
 };
 
+function parseSalaryRange(salary: string): { min: number; max: number } | null {
+  const match = salary.match(/(\d+)\s*k\s*EUR\s*-\s*(\d+)\s*k\s*EUR/i);
+  if (!match) return null;
+  const min = parseInt(match[1], 10) * 1000;
+  const max = parseInt(match[2], 10) * 1000;
+  if (!Number.isFinite(min) || !Number.isFinite(max) || min <= 0 || max <= 0) return null;
+  return { min, max };
+}
+
+function buildSalaryDatasetSchema(roles: typeof jobRoles) {
+  const items = roles
+    .map((role, index) => {
+      const range = parseSalaryRange(role.salary);
+      if (!range) return null;
+      return {
+        "@type": "ListItem" as const,
+        position: index + 1,
+        item: {
+          "@type": "Occupation",
+          name: role.title,
+          occupationalCategory: `${role.sector} - ${role.category}`,
+          occupationLocation: { "@type": "Country", name: "France" },
+          estimatedSalary: {
+            "@type": "MonetaryAmountDistribution",
+            name: "Base annuelle brute",
+            currency: "EUR",
+            duration: "P1Y",
+            minValue: range.min,
+            maxValue: range.max
+          },
+          url: `https://www.skstalents.fr/job-roles/${role.slug}`
+        }
+      };
+    })
+    .filter((entry): entry is NonNullable<typeof entry> => entry !== null);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: "Benchmarks salaires Life Sciences et Animal Health - France",
+    description:
+      "Fourchettes de rémunération annuelles brutes pour fonctions cadres et expertes en biotech, diagnostic, medtech, santé animale, vétérinaire et petfood. Base France, périmètre Seed, Série A, Série B et scale-up. Sources : Aon, Panorama France HealthTech 2026, Glassdoor (proxy), observations terrain SKS Talents.",
+    url: "https://www.skstalents.fr/salary-benchmarks",
+    keywords: [
+      "salaire CEO biotech France",
+      "rémunération CTO deeptech",
+      "package CMO medtech",
+      "salaire DRH HealthTech",
+      "benchmark Regulatory Affairs diagnostics",
+      "salaire vétérinaire dirigeant",
+      "rémunération scale-up Life Sciences"
+    ],
+    license: "https://www.skstalents.fr/legal/mentions-legales",
+    isAccessibleForFree: true,
+    inLanguage: "fr-FR",
+    creator: {
+      "@type": "Organization",
+      name: "SKS TALENTS",
+      url: "https://www.skstalents.fr"
+    },
+    spatialCoverage: { "@type": "Country", name: "France" },
+    variableMeasured: [
+      "Salaire annuel brut minimum (EUR)",
+      "Salaire annuel brut maximum (EUR)",
+      "Variable et bonus indicatifs",
+      "Secteur",
+      "Catégorie de fonction"
+    ],
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: items.length,
+      itemListElement: items
+    }
+  };
+}
+
 export default function SalaryBenchmarksPage() {
   const highlightedRoles = jobRoles.slice(0, 18);
+  const salaryDatasetSchema = buildSalaryDatasetSchema(jobRoles);
   const glassdoorBatchSlugs = [
     "diagnostic-tender-excellence-director",
     "medical-vet-channel-marketing-manager",
@@ -31,6 +108,10 @@ export default function SalaryBenchmarksPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(salaryDatasetSchema) }}
+      />
       <PageHero
         kicker="Benchmarks salaires"
         title="Des repères salariaux pensés pour la longue traîne métier."
@@ -148,12 +229,12 @@ export default function SalaryBenchmarksPage() {
               </a>{" "}
               et{" "}
               <a
-                href="https://france-biotech.fr/publications/le-panorama-france-healthtech/"
+                href="https://france-biotech.fr/communiques-de-presse/communiques-france-biotech/panorama-france-healthtech-2026-une-filiere-mature-innovante-et-resiliente-confrontee-a-un-environnement-plus-exigeant/"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="font-semibold text-brand-teal"
               >
-                France Biotech
+                Panorama France HealthTech 2026
               </a>
               .
             </li>
