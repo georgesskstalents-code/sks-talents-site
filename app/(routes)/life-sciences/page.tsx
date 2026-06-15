@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import DirectionCPage from "@/components/landings/DirectionCPage";
 import { lifeSciencesContent } from "@/components/landings/directionCContent";
 import { getSectorLandingPage } from "@/data/sectorLandingPages";
+import FAQSection from "@/components/FAQSection";
+import { faqsByPage } from "@/data/faqsByPage";
 
 const page = getSectorLandingPage("life");
 
@@ -126,6 +128,7 @@ export default function LifeSciencesHubPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <DirectionCPage sector={lifeSciencesContent} />
+          <FAQSection eyebrow="FAQ" title={faqsByPage["life-sciences"].title} description={faqsByPage["life-sciences"].description} items={faqsByPage["life-sciences"].items} />
     </>
   );
 }

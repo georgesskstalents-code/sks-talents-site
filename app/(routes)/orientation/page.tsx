@@ -4,6 +4,8 @@ import OrientationAgent from "@/components/OrientationAgent";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
 import { schools } from "@/data/resources";
+import FAQSection from "@/components/FAQSection";
+import { faqsByPage } from "@/data/faqsByPage";
 
 export const metadata: Metadata = {
   title: "Orientation carrière Life Sciences & Animal Health",
@@ -116,6 +118,7 @@ export default function OrientationPage() {
           ))}
         </div>
       </SectionShell>
+          <FAQSection eyebrow="FAQ" title={faqsByPage["orientation"].title} description={faqsByPage["orientation"].description} items={faqsByPage["orientation"].items} />
     </>
   );
 }

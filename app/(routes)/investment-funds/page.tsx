@@ -1,6 +1,8 @@
 import ListingCard from "@/components/ListingCard";
 import SectionShell from "@/components/SectionShell";
 import { investmentFunds, trackedInvestmentFundsDirectory } from "@/data/investmentFunds";
+import FAQSection from "@/components/FAQSection";
+import { faqsByPage } from "@/data/faqsByPage";
 
 export default function InvestmentFundsPage() {
   return (
@@ -162,6 +164,7 @@ export default function InvestmentFundsPage() {
           ))}
         </div>
       </SectionShell>
+          <FAQSection eyebrow="FAQ" title={faqsByPage["investment-funds"].title} description={faqsByPage["investment-funds"].description} items={faqsByPage["investment-funds"].items} />
     </>
   );
 }

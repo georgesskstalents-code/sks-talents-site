@@ -4215,6 +4215,100 @@ export const articles: Article[] = [
       }
     ]
   }
+,
+  {
+    id: "hub-cout-rate-ceo-biotech-series-b",
+    title: "Cout reel d'un.e CEO biotech Series B mal recrute.e : au-dela du salaire",
+    slug: "cout-rate-ceo-biotech-series-b",
+    vertical: "people-ops",
+    persona: ["CEO", "DRH"],
+    topic: "hub-cout-cache",
+    excerpt: "Pour un.e fondateur.rice scientifique qui delegue le role CEO pour la premiere fois, un mauvais recrutement Series B detruit du runway, du capital narratif et de la confiance board bien avant le cout salarial.",
+    answerFirst:
+      "Rater le recrutement du/de la CEO d'une biotech Series B coute beaucoup plus que le package annuel. Le vrai cout se mesure en mois de runway brules, en degradation du narratif investisseurs avant la Series C, et en perte de confiance du board, qui ralentit chaque decision strategique pendant 12 a 18 mois.",
+    content: "Lever une Series B en biotech, c'est passer d'une organisation centree sur la science a une structure operationnelle qui doit tenir un plan clinique, un budget multi-annuel et un dialogue continu avec un board internationalise. Pour un.e fondateur.rice scientifique, deleguer le role CEO pour la premiere fois est un moment fragile. Si le/la CEO recrute.e ne tient pas, l'impact depasse largement la ligne \"salaire executif\" du P&L. Il touche le runway, le narratif d'equity story et la confiance du board, trois actifs critiques avant la Series C.\n\n## Combien coute reellement ce ratage ?\n\nSur le marche francais, le Panorama France HealthTech 2026 et les travaux conjoints AON x France Biotech 2025 confirment que la majorite des biotech Series B opere avec un runway de 18 a 24 mois et une intensite capitalistique elevee. Un.e CEO mal positionne.e ne se contente pas de couter son package : iel decale les milestones cliniques, retarde les recrutements VP, et fragilise la prochaine levee. En pratique, le cout cache cumule (decalages, turnover top management, perte de credibilite investisseurs) represente plusieurs multiples du salaire annuel, sur des societes dont chaque mois de runway vaut souvent plus que le package complet du/de la dirigeant.e.\n\n## Les 3 erreurs typiques qui creent ce cout cache\n\n- Recruter un.e CEO \"pharma corporate\" sur une structure de 50 a 200 personnes, ou la velocite et la proximite avec la science priment sur la gouvernance matricielle.\n- Confondre experience de levee et experience d'execution post-levee : lever une Series B et tenir le plan d'execution sur 24 mois sont deux metiers distincts.\n- Sous-traiter la decision finale au board sans alignement prealable fondateur.rice / lead investor sur le profil de risque acceptable (CSO-friendly, dealmaker, ou operateur.rice clinique).\n\n## Comment securiser ce type de recrutement\n\nSur nos missions Series B en biotech, trois leviers reduisent ce cout cache. D'abord, formaliser le scorecard CEO avec le board AVANT d'ouvrir la recherche, en distinguant ce qui releve de la phase 24 mois et ce qui releve de la Series C. Ensuite, structurer un process de references croisees serieuses, incluant des ex-membres de board et pas seulement des ex-N+1. Enfin, prevoir des le contrat d'embauche un rituel de revue a 90 et 180 jours avec le/la lead investor, pour rendre l'eventuelle correction de trajectoire possible avant que le runway ne se tende. C'est ce travail amont, plus que la chasse elle-meme, qui protege la valeur de l'actif construit depuis la Series A.",
+    author: "SKS TALENTS",
+    date: "2026-06-15",
+    readTime: 5,
+    internalLinks: [
+      { label: "Quel est le vrai cout d'un mauvais recrutement", href: "/blog/quel-est-le-vrai-cout-mauvais-recrutement" },
+      { label: "Comment structurer vos RH 10 a 50", href: "/blog/comment-structurer-equipes-forte-croissance-sans-exploser-couts-rh" },
+      { label: "Scorecard dirigeant", href: "/scorecard-dirigeant" },
+      { label: "Calculateur salaire brut net", href: "/calcul-salaire-brut-net" }
+    ],
+    sources: [
+      {
+        name: "Panorama France HealthTech 2026 (France Biotech x EY)",
+        url: "https://france-biotech.fr/communiques-de-presse/communiques-france-biotech/panorama-france-healthtech-2026-une-filiere-mature-innovante-et-resiliente-confrontee-a-un-environnement-plus-exigeant/"
+      },
+      {
+        name: "Benchmark AON x France Biotech 2025",
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
+      }
+    ]
+  },
+  {
+    id: "hub-cout-rate-cto-deeptech-series-a",
+    title: "Cout cache d'un.e CTO deeptech mal calibre.e en Serie A sante",
+    slug: "cout-rate-cto-deeptech-series-a",
+    vertical: "people-ops",
+    persona: ["CEO", "DRH"],
+    topic: "hub-cout-cache",
+    excerpt: "Recruter un.e CTO deeptech sante trop industriel.le ou trop academique en Serie A bloque la transition R&D vers produit. Voici ce que ce ratage coute et comment le securiser.",
+    answerFirst:
+      "Un.e CTO deeptech sante mal calibre.e en Serie A coute entre 12 et 18 mois de roadmap produit et fragilise la prochaine levee. Le profil doit combiner culture R&D scientifique et capacite d'industrialisation. Trop academique, il/elle freine la mise sur marche. Trop industriel.le, il/elle perd la finesse technique du socle deeptech.",
+    content: "En deeptech sante, la Serie A marque le passage de la preuve de concept scientifique a un produit testable en conditions cliniques ou industrielles. C'est aussi le moment ou le/la CTO devient un poste pivot. Beaucoup de fondateurs scientifiques recrutent ce profil sur des criteres binaires - soit un.e chercheur.se senior issu.e du meme labo, soit un.e ingenieur.e industriel.le venu.e du medical device classique. Les deux extremes produisent le meme effet - une perte de traction entre 12 et 18 mois apres le closing.\n\n## Combien coute reellement ce ratage ?\n\nSelon le Panorama France HealthTech 2026, les startups deeptech sante mettent en moyenne 24 a 36 mois entre la Serie A et la Serie B. Un mauvais casting CTO consomme la moitie de cette fenetre en arbitrages techniques contradictoires, refonte d'architecture, ou perte d'ingenieur.e.s cles. AON x France Biotech 2025 confirme que la remuneration totale d'un.e CTO Series A se situe entre 110 et 150 K euros fixe plus equity, ce qui rend un remplacement particulierement penalisant sur la runway. A cela s'ajoute le cout indirect - retard sur la roadmap reglementaire et perte de credibilite aupres des investisseurs Serie B.\n\n## Les 3 erreurs typiques qui creent ce cout cache\n\n- Recruter un.e profil 100 % academique parce qu'il/elle maitrise la science fondatrice, sans verifier sa capacite a arbitrer entre dette technique, contraintes reglementaires et delais produit.\n- Choisir un.e CTO issu.e d'un grand groupe medtech ou pharma qui applique des process matures a une equipe de 15 personnes - resultat, lourdeur process, demotivation des early hires et perte du noyau R&D.\n- Sous-estimer la dimension manageriale - un.e CTO Serie A doit recruter et structurer 3 a 8 ingenieur.e.s en 12 mois, pas seulement coder ou publier.\n\n## Comment securiser ce type de recrutement\n\nLa sequence qui fonctionne sur nos missions deeptech sante Series A consiste a cadrer le profil sur trois axes verifiables avant meme de lancer le sourcing - profondeur scientifique reelle sur le socle techno, experience de mise en production dans un environnement contraint (clinique, reglementaire ou industriel), et trajectoire manageriale documentee sur 5 a 15 personnes. Les references croisees avec un.e VP R&D et un.e investisseur.se Serie B precedent.e du candidat ferment la boucle. C'est ce travail de calibration en amont qui evite le replacement a 18 mois et protege la fenetre vers la Serie B.",
+    author: "SKS TALENTS",
+    date: "2026-06-15",
+    readTime: 5,
+    internalLinks: [
+      { label: "Quel est le vrai cout d'un mauvais recrutement", href: "/blog/quel-est-le-vrai-cout-mauvais-recrutement" },
+      { label: "Comment structurer vos RH 10 a 50", href: "/blog/comment-structurer-equipes-forte-croissance-sans-exploser-couts-rh" },
+      { label: "Scorecard dirigeant", href: "/scorecard-dirigeant" },
+      { label: "Calculateur salaire brut net", href: "/calcul-salaire-brut-net" }
+    ],
+    sources: [
+      {
+        name: "Panorama France HealthTech 2026 (France Biotech x EY)",
+        url: "https://france-biotech.fr/communiques-de-presse/communiques-france-biotech/panorama-france-healthtech-2026-une-filiere-mature-innovante-et-resiliente-confrontee-a-un-environnement-plus-exigeant/"
+      },
+      {
+        name: "Benchmark AON x France Biotech 2025",
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
+      }
+    ]
+  },
+  {
+    id: "hub-cout-rate-cmo-medtech-scale-up",
+    title: "Cout d'un.e CMO medtech rate en scale-up post-commercialisation",
+    slug: "cout-rate-cmo-medtech-scale-up",
+    vertical: "people-ops",
+    persona: ["CEO", "DRH"],
+    topic: "hub-cout-cache",
+    excerpt: "En medtech scale-up, rater le/la CMO bloque l'acces marche sur trois axes critiques : reglementaire, reseau KOL, dossier remboursement. Le go-to-market decale de 12 a 18 mois.",
+    answerFirst:
+      "Un.e CMO medtech rate en scale-up post-commercialisation cree un blocage triple : retard reglementaire CE/FDA, absence d'ancrage KOL credible, dossier remboursement mal calibre. Resultat operationnel : le go-to-market decale de 12 a 18 mois, le cash burn s'amplifie, et le prochain tour de financement se negocie sur une traction commerciale degradee.",
+    content: "En medtech scale-up post-commercialisation, le/la CMO (Chief Medical Officer ou Chief Marketing Officer selon la structuration de la direction) tient un poste pivot. Il/elle conditionne trois leviers simultanes : la solidite du dossier reglementaire (CE marking, FDA), la credibilite scientifique aupres des KOL, et la qualite du dossier de remboursement face aux payeurs. Quand le recrutement rate, ces trois leviers se grippent en cascade et l'acces marche se bloque alors meme que le produit est techniquement pret.\n\n## Combien coute reellement ce ratage ?\n\nSur les scale-ups medtech que nous observons en Series B et Series C, un.e CMO mal calibre.e entraine typiquement un decalage de go-to-market de 12 a 18 mois. Le Panorama France HealthTech 2026 rappelle que le cycle moyen acces marche dispositif medical en Europe se situe deja entre 24 et 36 mois ; chaque trimestre perdu se traduit en cash burn additionnel et en dilution sur le tour suivant. AON x France Biotech 2025 documente egalement que la remuneration totale d'un.e CMO experimente.e en scale-up se situe sur une fourchette haute, ce qui rend le cout d'opportunite d'une erreur de casting particulierement lourd a absorber.\n\n## Les 3 erreurs typiques qui creent ce cout cache\n\n- Recruter un.e CMO avec un parcours pharma pur sur un produit dispositif medical : la logique d'essais cliniques, de dossier reglementaire et d'interaction payeurs differe structurellement, et le/la candidat.e met 9 a 12 mois a reconstruire un reseau utile.\n- Confondre CMO clinique (medical affairs, evidence generation, KOL) et CMO commercial (marketing, acces marche, pricing). En scale-up post-commercialisation, les deux missions coexistent souvent sous un meme titre mais demandent des profils opposes.\n- Sous-estimer la dimension reglementaire europeenne. Un.e CMO sans experience operationnelle du MDR ou du dossier de remboursement HAS / CNEDiMTS arrive en poste sans capacite a debloquer les jalons critiques des 6 premiers mois.\n\n## Comment securiser ce type de recrutement\n\nAvant de lancer la recherche, il faut clarifier en interne quel CMO est reellement attendu : profil clinique evidence-driven, ou profil acces marche orchestrant reglementaire, KOL et payeurs. Cette decision structure la short-list, le scorecard et les references a verifier. Sur nos missions Series B en medtech, nous croisons systematiquement parcours reglementaire concret, qualite du reseau KOL active sur les 24 derniers mois, et capacite documentee a piloter un dossier de remboursement jusqu'a l'inscription. C'est cette triangulation, plus que la seniorite affichee, qui evite le ratage couteux que la majorite des scale-ups encaissent en silence.",
+    author: "SKS TALENTS",
+    date: "2026-06-15",
+    readTime: 5,
+    internalLinks: [
+      { label: "Quel est le vrai cout d'un mauvais recrutement", href: "/blog/quel-est-le-vrai-cout-mauvais-recrutement" },
+      { label: "Comment structurer vos RH 10 a 50", href: "/blog/comment-structurer-equipes-forte-croissance-sans-exploser-couts-rh" },
+      { label: "Scorecard dirigeant", href: "/scorecard-dirigeant" },
+      { label: "Calculateur salaire brut net", href: "/calcul-salaire-brut-net" }
+    ],
+    sources: [
+      {
+        name: "Panorama France HealthTech 2026 (France Biotech x EY)",
+        url: "https://france-biotech.fr/communiques-de-presse/communiques-france-biotech/panorama-france-healthtech-2026-une-filiere-mature-innovante-et-resiliente-confrontee-a-un-environnement-plus-exigeant/"
+      },
+      {
+        name: "Benchmark AON x France Biotech 2025",
+        url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
+      }
+    ]
+  }
 ];
 
 export function getArticlePersonaOptions() {

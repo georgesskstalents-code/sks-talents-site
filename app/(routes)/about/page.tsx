@@ -1,6 +1,8 @@
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
 import CalendlyButton from "@/components/CalendlyButton";
+import FAQSection from "@/components/FAQSection";
+import { faqsByPage } from "@/data/faqsByPage";
 
 const values = [
   {
@@ -84,6 +86,7 @@ export default function AboutPage() {
           </div>
         </SectionShell>
       </div>
+          <FAQSection eyebrow="FAQ" title={faqsByPage["about"].title} description={faqsByPage["about"].description} items={faqsByPage["about"].items} />
     </>
   );
 }

@@ -309,61 +309,61 @@ export const glossaryGroups: GlossaryGroup[] = [
     concepts: [
       concept(
         "Recrutement Life Sciences",
-        "Ensemble des méthodes utilisées pour attirer, qualifier et intégrer des talents dans les environnements biotech, diagnostic, healthtech ou animal health.",
+        "Le recrutement Life Sciences regroupe les methodes d'attraction, de qualification et d'integration de talents specialises dans les environnements biotech, diagnostic, healthtech ou animal health. Il s'appuie sur une cartographie fine d'un marche penurique et rapide, ou un.e candidat.e cle peut basculer en quelques semaines, et exige un process structure que tout schema generique fragilise immediatement.",
         "Le marché est spécialisé, pénurique et rapide ; un process générique y perd beaucoup de temps.",
         "Structurer le recrutement Life Sciences permet de réduire la friction dirigeant et d’augmenter la qualité de décision."
       ),
       concept(
         "Approche directe",
-        "Méthode de chasse qui consiste à contacter des profils ciblés, souvent déjà en poste et peu visibles sur le marché.",
+        "L'approche directe est une methode de chasse qui consiste a contacter des profils cibles, souvent deja en poste et peu visibles sur le marche. En Life Sciences, HealthTech et Animal Health, elle devient incontournable pour les fonctions critiques (CSO, CMO, VP Clinical, Head of Regulatory) que le ou la candidat.e ne cherche jamais activement via les canaux entrants classiques.",
         "Quand les meilleurs profils ne postulent pas, l’approche directe devient une capacité d’exécution, pas un luxe.",
         "Une structuration RH solide sait quand sortir du recrutement entrant pour aller chercher les talents critiques."
       ),
       concept(
         "Talent mapping",
-        "Cartographie des entreprises, fonctions, profils et mouvements de marché avant l’ouverture ou pendant la conduite d’un poste.",
+        "Le talent mapping designe la cartographie structuree des entreprises cibles, fonctions cles, profils disponibles et mouvements de marche, realisee avant l'ouverture d'un poste ou pendant sa conduite. En Life Sciences, HealthTech et Animal Health, il couvre les viviers R&D, affaires reglementaires, medical et commercial, et permet a un.e DRH ou CEO d'anticiper les recrutements critiques sur un marche etroit.",
         "Elle évite de recruter à l’aveugle et raccourcit la phase de ciblage.",
         "Le talent mapping améliore la performance du recrutement et nourrit ensuite vos scénarios d’automatisation du sourcing."
       ),
       concept(
         "Job intake",
-        "Session de cadrage initial entre dirigeant, hiring manager et RH pour définir le besoin, les critères et les signaux d’exclusion.",
+        "Le job intake designe la session de cadrage initial reunissant le/la dirigeant.e, le/la hiring manager et la RH pour aligner le besoin reel, les criteres mesurables, les signaux d'exclusion et le profil cible. En Life Sciences et HealthTech, ou les profils combinent science, reglementaire et scale-up, cet alignement amont conditionne la qualite du shortlist et la vitesse du process.",
         "Sans intake robuste, la fiche de poste reste floue et le process s’allonge.",
         "Un bon job intake réduit les allers-retours et protège le temps du CEO dès le départ."
       ),
       concept(
         "Scorecard candidat",
-        "Grille d’évaluation commune qui permet de juger les candidats sur des critères décidés avant les entretiens.",
+        "La scorecard candidat designe une grille d'evaluation commune, definie avant les entretiens, qui note chaque profil sur des criteres precis (competences scientifiques, posture managériale, fit culturel). En Life Sciences et HealthTech, elle structure les debriefs entre le/la DRH, le/la CEO et les experts metier, reduit les biais et accelere la decision sur des postes cadres rares.",
         "Elle limite les biais, améliore la qualité des débriefs et accélère la décision.",
         "La scorecard est un point de rencontre entre structuration RH, performance et automatisation utile."
       ),
       concept(
         "Pipeline candidat",
-        "Vue structurée des candidats par étape, du sourcing jusqu’à l’offre.",
+        "Le pipeline candidat designe la vue structuree des profils par etape, du sourcing initial jusqu'a la signature de l'offre. En Life Sciences et HealthTech, ou un.e VP Clinical ou un.e Head of Regulatory se recrute sur viviers etroits, ce pipeline rend chaque etape mesurable, pilotable et facilite le reporting dirigeant attendu en comite executif.",
         "Sans pipeline, le recrutement devient une suite d’actions dispersées et non pilotées.",
         "Un pipeline clair rend le recrutement mesurable et facilite ensuite le reporting dirigeant."
       ),
       concept(
         "Time-to-hire",
-        "Durée nécessaire entre l’ouverture d’un poste et l’acceptation d’une offre par un candidat.",
+        "Le time-to-hire designe la duree entre l'ouverture d'un poste et l'acceptation d'une offre par un.e candidat.e. En Life Sciences, HealthTech et Animal Health, il reflete le niveau de friction du processus : nombre d'etapes, delais de validation board, alignement CEO/DRH. Un time-to-hire qui s'allonge signale souvent un defaut de structure interne, pas seulement une penurie marche.",
         "C’est un indicateur simple du niveau de friction de votre processus.",
         "Quand le time-to-hire explose, le problème vient souvent de la structure et des validations, pas seulement du marché."
       ),
       concept(
         "Sourcing passif",
-        "Recherche ciblée de profils qui ne sont pas activement en recherche, mais ouverts à une proposition crédible.",
+        "Le sourcing passif designe la recherche ciblee de profils cadres qui ne sont pas activement en recherche d'emploi, mais restent ouverts a une proposition credible. En Life Sciences, HealthTech et Animal Health, ou les expertises (affaires reglementaires, CMC, medical affairs) sont rares, il/elle constitue souvent la vraie source de talents strategiques pour un.e dirigeant.e.",
         "Dans les marchés de niche, le sourcing passif est souvent la vraie source de talents stratégiques.",
         "Plus votre organisation est claire, plus votre message devient convaincant auprès de talents rares."
       ),
       concept(
         "Entretien structuré",
-        "Format d’entretien où les questions, les critères et l’ordre de passage sont définis à l’avance.",
+        "L'entretien structuré désigne un format de recrutement où les questions, les critères d'évaluation et l'ordre de passage sont définis avant la rencontre, identiques pour chaque candidat.e. En Life Sciences et HealthTech, il sécurise les recrutements cadres (DRH, CMO, VP Clinical) en rendant les profils comparables et en réduisant le poids de l'impression subjective lors des décisions de comité.",
         "Il améliore la comparabilité des profils et réduit le poids de l’impression subjective.",
         "L’entretien structuré transforme le recrutement en système de décision, pas en intuition isolée."
       ),
       concept(
         "EVP",
-        "Employer Value Proposition : la promesse employeur perçue par le candidat sur le rôle, la mission et l’environnement.",
+        "L'EVP (Employer Value Proposition) designe la promesse employeur percue par le/la candidat.e sur le role, la mission, la remuneration et l'environnement de travail. En Life Sciences et HealthTech, ou la concurrence sur les profils scientifiques et reglementaires est forte, une EVP claire raccourcit le time-to-hire et fiabilise la projection de croissance.",
         "Une EVP floue rallonge le recrutement même avec une bonne marque.",
         "Structurer votre EVP revient à relier recrutement, performance organisationnelle et projection business."
       )
@@ -376,61 +376,61 @@ export const glossaryGroups: GlossaryGroup[] = [
     concepts: [
       concept(
         "Structuration RH",
-        "Organisation des rôles, des décisions, des process et des outils RH de manière lisible et scalable.",
+        "La structuration RH designe la mise en lisibilite des roles, decisions, process et outils RH d'une organisation, de maniere scalable. En Life Sciences et HealthTech, elle conditionne le passage de 10 a 50 collaborateurs sans casse operationnelle, protege le temps du ou de la dirigeant.e et rend toute automatisation ulterieure reellement exploitable.",
         "Sans structuration RH, ce qui fonctionne à 10 casse vite à 30.",
         "La structuration RH protège le temps dirigeant et rend l’automatisation réellement utile."
       ),
       concept(
         "Fiche de poste",
-        "Document qui clarifie finalité du rôle, responsabilités, périmètre, critères de réussite et interfaces clés.",
+        "La fiche de poste est le document qui cadre un.e cadre avant recrutement : finalite du role, responsabilites, perimetre, criteres de reussite a 12 mois et interfaces cles (R&D, Affaires reglementaires, Medical, Commercial). En Life Sciences et Animal Health, elle aligne le/la dirigeant.e, le board et les investisseurs sur ce que la personne doit livrer concretement.",
         "Une fiche floue crée des attentes contradictoires et ralentit le recrutement.",
         "Mieux cadrer un poste améliore la qualité d’exécution avant même le premier entretien."
       ),
       concept(
         "Référentiel de compétences",
-        "Cadre partagé qui décrit les compétences attendues par fonction, niveau et contexte.",
+        "Le référentiel de compétences désigne un cadre partagé qui décrit les compétences attendues par fonction, niveau et contexte. En Life Sciences et HealthTech, il structure les arbitrages de recrutement, d'onboarding et de progression pour un.e VP Clinical, un.e CMO ou un.e Head of CMC, et soutient la performance d'équipe sans rejouer les mêmes débats à chaque cycle.",
         "Il aide à recruter, onboarder et faire progresser avec une logique cohérente.",
         "Un référentiel évite de refaire à chaque fois les mêmes arbitrages et soutient la performance d’équipe."
       ),
       concept(
         "Headcount planning",
-        "Planification des recrutements par rôle, timing, priorité et contrainte business.",
+        "Le headcount planning designe la planification structuree des recrutements par role, timing, priorite et contrainte business. En Life Sciences et HealthTech, il aligne les ouvertures de postes sur les jalons cliniques, reglementaires et de financement, et relie la croissance, le cash et l'organisation reelle pour eviter les recrutements opportunistes ou les urgences couteuses.",
         "Elle limite les ouvertures de postes opportunistes et les urgences coûteuses.",
         "Le headcount planning relie la croissance, le cash et l’organisation réelle."
       ),
       concept(
         "Workforce planning",
-        "Vision plus large qui aligne besoins d’effectifs, compétences critiques et trajectoire de croissance.",
+        "Le workforce planning designe la demarche strategique qui aligne besoins d'effectifs, competences critiques et trajectoire de croissance d'une organisation. En Life Sciences et HealthTech, ou les cycles de developpement clinique et reglementaire imposent des jalons longs, il permet a la direction d'anticiper les recrutements R&D, affaires reglementaires ou commerciales sans subir le tempo du marche.",
         "Elle évite de recruter trop tard, trop tôt ou sur les mauvais périmètres.",
         "Le workforce planning transforme le recrutement en levier de performance organisationnelle."
       ),
       concept(
         "RACI",
-        "Matrice qui clarifie qui décide, qui contribue, qui valide et qui est informé.",
+        "Le RACI est une matrice de responsabilites qui clarifie, pour chaque decision ou livrable, qui est Responsable de l'execution, qui en Assume la decision finale (Accountable), qui est Consulte en amont et qui est Informe en aval. Dans une biotech ou medtech en scale-up, il evite que le/la CEO ou le/la COO restent goulots sur des arbitrages deja distribuables.",
         "Elle évite que le CEO ou le COO restent bloqués sur des sujets qui devraient déjà être distribués.",
         "Un RACI simple diminue les frictions de coordination et accélère les cycles de décision."
       ),
       concept(
         "Onboarding",
-        "Process d’intégration qui rend le nouveau collaborateur rapidement opérationnel et aligné.",
+        "L'onboarding designe le process d'integration structure qui rend un.e nouveau ou nouvelle collaboratrice rapidement operationnel.le et aligne.e sur la culture, les objectifs et les rituels de l'entreprise. En Life Sciences, biotech et HealthTech, il conditionne la montee en competence sur des sujets reglementaires complexes (AMM, GxP, pharmacovigilance) et securise la retention des profils cadres rares.",
         "Sans onboarding structuré, le coût d’un bon recrutement continue après la signature.",
         "L’onboarding est un chantier de structuration RH à fort impact sur la performance."
       ),
       concept(
         "Offboarding",
-        "Process de sortie d’un collaborateur, incluant transfert d’informations, conformité et continuité.",
+        "L'offboarding designe le processus structure de sortie d'un.e collaborateur.rice, incluant transfert documente des dossiers, restitution des acces, conformite reglementaire et continuite operationnelle. En Life Sciences et HealthTech, ou la tracabilite GxP et la propriete intellectuelle sont critiques, un offboarding rigoureux protege les essais cliniques en cours, securise le savoir scientifique et limite la perte de competences rares.",
         "Un offboarding mal géré fragilise l’organisation et alimente les erreurs récurrentes.",
         "Une structure mature traite l’entrée et la sortie avec le même niveau de rigueur."
       ),
       concept(
         "Matrice de décision",
-        "Cadre qui définit les critères et le niveau d’urgence des décisions à prendre.",
+        "La matrice de decision est un cadre qui formalise les criteres d'arbitrage et le niveau d'urgence associe a chaque type de decision, notamment sur les postes critiques. En Life Sciences et HealthTech, elle clarifie qui tranche entre CEO, COO, DRH et board, reduit les arbitrages emotionnels et accelere l'execution sur les recrutements strategiques.",
         "Elle évite les arbitrages émotionnels ou improvisés sur les postes critiques.",
         "La matrice de décision réduit la dépendance au CEO et améliore la vitesse d’exécution."
       ),
       concept(
         "Operating model RH",
-        "Façon dont les responsabilités RH sont réparties entre direction, managers, RH et outils.",
+        "L'operating model RH designe la repartition formalisee des responsabilites RH entre direction generale, managers de proximite, equipe RH et outils (SIRH, ATS, paie). Dans une scale-up Life Sciences ou HealthTech qui passe de 30 a 150 collaborateurs, ce modele clarifie qui decide, qui execute, qui automatise, pour eviter la dilution operationnelle et fiabiliser le pilotage social.",
         "Sans operating model, chacun fait un peu de tout et rien n’est vraiment piloté.",
         "Clarifier ce modèle permet d’automatiser proprement et de rendre l’organisation plus légère."
       )
@@ -443,61 +443,61 @@ export const glossaryGroups: GlossaryGroup[] = [
     concepts: [
       concept(
         "Automatisation RH",
-        "Automatisation des tâches répétitives liées au recrutement, au suivi et à l’administration RH.",
+        "L'automatisation RH designe l'usage d'outils logiciels et d'IA pour executer les taches repetitives du recrutement, du suivi candidat et de l'administration du personnel (relances, scoring, onboarding, reporting). Dans une biotech ou medtech en scale-up, elle libere du temps au/a la DRH seulement si les process sous-jacents sont deja clarifies et documentes.",
         "Elle libère du temps, mais seulement si les étapes automatisées sont déjà claires.",
         "Automatiser sans structurer ne sert à rien ; automatiser un bon process augmente la performance."
       ),
       concept(
         "Automatisation recrutement",
-        "Mise en place de séquences ou de règles qui accélèrent sourcing, tri, relances et coordination d’entretiens.",
+        "L'automatisation recrutement designe la mise en place de sequences, regles ou workflows qui accelerent le sourcing, le tri des candidatures, les relances et la coordination des entretiens. En Life Sciences et HealthTech, ou les profils CMC, affaires reglementaires ou medical affairs sont rares, elle libere le temps du cabinet pour la qualification scientifique et l'evaluation culturelle, sans appauvrir l'experience candidat.",
         "Elle réduit la charge manuelle quand le volume ou la complexité augmentent.",
         "Une automatisation bien pensée raccourcit le time-to-hire sans appauvrir l’expérience candidat."
       ),
       concept(
         "Workflow RH",
-        "Suite d’étapes définies et déclenchées automatiquement ou semi-automatiquement pour faire avancer un processus RH.",
+        "Le workflow RH designe une suite d'etapes definies, declenchees automatiquement ou semi-automatiquement, pour faire avancer un processus RH (recrutement, onboarding, revue de performance, offboarding). En Life Sciences et HealthTech, il rend les operations repetables, tracables et auditables, condition indispensable pour passer un audit investisseur, ATMP ou ISO sans reconstruire l'historique a la main.",
         "Le workflow rend les opérations répétables et auditables.",
         "C’est la base pour relier outils, structuration RH et gain de temps dirigeant."
       ),
       concept(
         "No-code",
-        "Approche qui permet de créer des automatisations ou des interfaces sans développement complexe.",
+        "Le no-code designe une approche logicielle permettant de construire des automatisations, workflows ou interfaces metier sans ecrire de code, via des outils visuels type Make, n8n ou Airtable. En Life Sciences et HealthTech, il accelere le deploiement de gains operationnels RH, regulatoires ou commerciaux, quand le perimetre fonctionnel et les donnees manipulees sont deja clairement structures en amont.",
         "Très utile pour tester et déployer vite des gains opérationnels.",
         "Le no-code devient un accélérateur quand les responsabilités et les données à manipuler sont déjà claires."
       ),
       concept(
         "ATS",
-        "Applicant Tracking System : outil de pilotage du recrutement, des candidatures et des étapes du pipeline.",
+        "L'ATS (Applicant Tracking System) designe l'outil logiciel de pilotage du recrutement qui centralise candidatures, etapes du pipeline et interactions avec les candidat.e.s. Dans une biotech ou HealthTech en scale-up, il remplace les mails, tableurs et messages disperses, et conditionne la tracabilite reglementaire ainsi que la qualite du reporting RH transmis au.a la CEO ou DRH.",
         "Il centralise l’information au lieu de la laisser dispersée entre mails, tableurs et messages.",
         "Un ATS améliore la performance seulement s’il sert un process décidé, pas un désordre numérisé."
       ),
       concept(
         "CRM candidats",
-        "Base structurée pour conserver, segmenter et réactiver des profils déjà identifiés.",
+        "Le CRM candidats designe une base structuree pour conserver, segmenter et reactiver des profils deja identifies sur un secteur (biotech, medtech, animal health, diagnostic). Il evite de repartir de zero a chaque ouverture de poste, reduit le cout par recrutement et alimente une logique de pipeline long terme sur fonctions cadres rares (un.e VP R&D, un.e CMO, un.e Head of Quality).",
         "Il évite de repartir de zéro à chaque poste ouvert.",
         "Le CRM candidats réduit le coût du recrutement et soutient la logique de pipeline long terme."
       ),
       concept(
         "Parsing CV",
-        "Lecture automatique et extraction de données contenues dans un CV.",
+        "Le parsing CV designe la lecture automatique d'un CV par un logiciel qui extrait les donnees structurees (coordonnees, experiences, diplomes, competences) pour alimenter un ATS ou un vivier. En Life Sciences et Animal Health, il accelere le tri initial sur des volumes eleves, mais sa valeur depend entierement de la qualite des criteres definis en amont par le/la recruteur.",
         "Le parsing fait gagner du temps sur le tri initial, surtout en volume.",
         "Ce type d’automatisation n’a de valeur que si les critères de tri ont été définis en amont."
       ),
       concept(
         "Relance automatisée",
-        "Envoi programmé de messages ou de rappels à des candidats, managers ou recruteurs.",
+        "La relance automatisée désigne l'envoi programmé de messages ou rappels à des candidat.e.s, managers ou recruteurs via un ATS ou un outil de séquençage. En recrutement Life Sciences et HealthTech, où le/la CSO ou DRH jongle avec des cycles longs, elle fluidifie le suivi, réduit la friction opérationnelle et limite les pertes de candidat.e.s entre deux étapes du process.",
         "Elle réduit la friction opérationnelle et améliore le suivi.",
         "Une simple relance automatisée peut déjà rendre un process plus fluide sans alourdir l’organisation."
       ),
       concept(
         "SIRH",
-        "Système d’information RH qui centralise données, processus et documents liés aux collaborateurs.",
+        "Le SIRH (Systeme d'Information Ressources Humaines) designe la plateforme logicielle qui centralise donnees, processus et documents lies aux collaborateurs : paie, contrats, temps, formation, entretiens, recrutement. Dans une biotech ou medtech en scale-up, il evite la fragmentation entre tableurs et outils isoles, et donne au.a la DRH une base fiable pour piloter effectifs, masse salariale et conformite.",
         "Le SIRH évite la fragmentation des données RH entre plusieurs sources peu fiables.",
         "Bien utilisé, il soutient la performance organisationnelle et simplifie le pilotage."
       ),
       concept(
         "Dashboard RH",
-        "Interface de suivi des indicateurs clés de recrutement, de rétention et d’efficacité opérationnelle.",
+        "Le Dashboard RH designe une interface de pilotage qui consolide les indicateurs cles de recrutement, retention et efficacite operationnelle d'une organisation. Dans une biotech, medtech ou scale-up Animal Health, il permet au/a la CEO, DRH ou COO de lire en continu le time-to-hire, le turnover cadre et la couverture des fonctions critiques sans dependre d'extractions manuelles.",
         "Sans tableau de bord, les décisions se prennent sur ressenti plutôt que sur signal.",
         "Le dashboard RH donne aux dirigeants une lecture plus rapide des priorités à traiter."
       )
@@ -510,61 +510,61 @@ export const glossaryGroups: GlossaryGroup[] = [
     concepts: [
       concept(
         "CEO dependency",
-        "Situation où trop de décisions critiques restent bloquées ou arbitrées par le CEO.",
+        "La CEO dependency designe la situation ou trop de decisions critiques (recrutement cadre, arbitrages R&D, signature commerciale) restent bloquees ou arbitrees par le/la CEO. Frequente dans les biotech et HealthTech en phase de scale-up post-Serie A, elle ralentit la croissance, sature le comite executif et fragilise la continuite operationnelle en cas d'absence.",
         "Elle ralentit la croissance et augmente la fatigue dirigeant.",
         "Réduire la dépendance au CEO est une étape centrale de la structuration RH."
       ),
       concept(
         "COO alignment",
-        "Alignement entre opérations, recrutement et priorités de croissance.",
+        "Le COO alignment designe la coherence entre les operations, le plan de recrutement et les priorites de croissance d'une entreprise Life Sciences ou HealthTech. Il garantit que chaque embauche (production GMP, affaires reglementaires, commercial) reduit un goulot reel identifie par le/la COO, et non un besoin theorique porte par un budget annuel fige.",
         "Sans cet alignement, les recrutements ne servent pas toujours les goulots réels de l’entreprise.",
         "Un bon alignement COO améliore la qualité des arbitrages et de la mise en œuvre."
       ),
       concept(
         "CPO / DRH",
-        "Fonction chargée d’aligner organisation, recrutement, management et développement des équipes.",
+        "Le ou la CPO (Chief People Officer) ou DRH designe la fonction cadre chargee d'aligner organisation, recrutement, management et developpement des equipes. En Life Sciences, HealthTech et Animal Health, il/elle structure la montee en charge d'une biotech ou medtech apres une serie A, en arbitrant entre culture scientifique, conformite reglementaire et velocite commerciale exigees par les investisseurs.",
         "Elle devient critique dès que l’entreprise doit structurer plutôt qu’improviser.",
         "Le bon rôle RH agit comme accélérateur de croissance, pas comme centre administratif."
       ),
       concept(
         "Hiring manager",
-        "Manager directement impliqué dans le recrutement d’un poste pour son équipe.",
+        "Le hiring manager designe le ou la responsable operationnel.le qui pilote directement un recrutement pour son equipe (R&D, Affaires reglementaires, Medical, Commercial). En Life Sciences et HealthTech, il/elle cadre le brief, valide les competences scientifiques, arbitre les short-lists et porte la decision finale, en lien etroit avec la DRH et le cabinet partenaire.",
         "S’il n’est pas cadré, il peut ralentir ou désaligner tout le process.",
         "Former les hiring managers est un levier direct de performance recrutement."
       ),
       concept(
         "Cadence de décision",
-        "Rythme auquel les décisions de recrutement ou d’organisation sont prises et clôturées.",
+        "La cadence de decision designe le rythme auquel un comite executif Life Sciences ou Animal Health prend et clot ses arbitrages de recrutement ou d'organisation. Une cadence faible allonge chaque mission, meme quand le marche repond vite, et alourdit les couts caches portes par le/la CEO, le/la COO et le/la DRH.",
         "Une cadence faible allonge tout, même lorsque le marché répond bien.",
         "Structurer la cadence réduit les coûts cachés de l’attente et protège le temps dirigeant."
       ),
       concept(
         "Ownership",
-        "Responsabilité explicite sur un périmètre, une décision ou un résultat.",
+        "L'ownership designe la responsabilite explicite et nominative d'un.e collaborateur.rice sur un perimetre, une decision ou un resultat mesurable. Dans une biotech ou medtech en scale-up, ou les equipes croisent R&D, affaires reglementaires et commercial, nommer un.e owner unique par sujet evite les trous de coordination, les doublons d'effort et accelere l'execution operationnelle au quotidien.",
         "L’absence d’ownership crée des trous de coordination et des doublons.",
         "Nommer un owner clair est souvent plus puissant qu’ajouter un outil supplémentaire."
       ),
       concept(
         "Span of control",
-        "Nombre de personnes ou de sujets qu’un manager peut piloter efficacement.",
+        "Le span of control designe le nombre de collaborateurs ou de sujets qu'un.e manager peut piloter efficacement sans degrader la qualite d'execution. Dans les scale-ups Life Sciences, HealthTech et Animal Health, ce ratio devient critique en phase de croissance rapide : un span trop large fragilise le coaching, la retention et la fiabilite operationnelle des equipes R&D et commerciales.",
         "Un span trop large fragilise le management, surtout en phase de croissance rapide.",
         "Adapter le span de control améliore la rétention et la qualité d’exécution."
       ),
       concept(
         "Management layer",
-        "Niveau intermédiaire de management qui relie la stratégie à l’exécution.",
+        "Le management layer designe la couche intermediaire de cadres (Heads, Directors, VPs) qui relie la strategie executive a l'execution terrain. En biotech ou medtech en scale-up, le/la CEO l'installe souvent entre 30 et 80 collaborateurs, pour absorber la croissance sans saturer le comex ni perdre la traction operationnelle sur les programmes R&D.",
         "Le créer trop tard ou trop tôt peut coûter cher.",
         "La bonne couche managériale soutient la structuration RH sans créer d’usine à gaz."
       ),
       concept(
         "Operating rhythm",
-        "Ensemble des rituels et séquences qui font avancer l’organisation de manière prévisible.",
+        "L'operating rhythm designe l'ensemble structure des rituels, instances et sequences (revues hebdo, comites mensuels, points trimestriels) qui font avancer une organisation de maniere previsible. Dans une biotech ou medtech en scale-up, il synchronise R&D, affaires reglementaires, commercial et finance, reduit les arbitrages de derniere minute et libere du temps cadre pour le/la CEO et son comite executif.",
         "Un rythme clair diminue le bruit et les arbitrages de dernière minute.",
         "L’operating rhythm fait gagner du temps aux dirigeants tout en renforçant la qualité de coordination."
       ),
       concept(
         "Change management",
-        "Méthode pour faire accepter et tenir une évolution d’outils, d’organisation ou de process.",
+        "Le change management designe la methode structuree pour faire accepter, ancrer et tenir dans la duree une evolution d'outils, d'organisation ou de process. En biotech, medtech ou Animal Health, il conditionne l'adoption reelle d'un ERP qualite, d'un CRM commercial ou d'une reorganisation R&D, et evite qu'une bonne automatisation echoue faute d'accompagnement terrain.",
         "Même une bonne automatisation échoue si elle n’est pas accompagnée.",
         "Le change management relie technologie, structure et adoption réelle sur le terrain."
       )
@@ -577,61 +577,61 @@ export const glossaryGroups: GlossaryGroup[] = [
     concepts: [
       concept(
         "Performance organisationnelle",
-        "Capacité d’une entreprise à transformer sa stratégie en exécution fluide, lisible et reproductible.",
+        "La performance organisationnelle designe la capacite d'une entreprise Life Sciences, HealthTech ou Animal Health a transformer sa strategie en execution fluide, lisible et reproductible. Elle repose sur la clarte des roles cadres, la robustesse des process RH et scientifiques, et la qualite des recrutements qui soutiennent la croissance reglementee du secteur.",
         "Elle dépend autant des process et des rôles que des personnes recrutées.",
         "Recrutement, structuration RH et automatisation sont trois leviers concrets de performance organisationnelle."
       ),
       concept(
         "Quality of hire",
-        "Mesure de la qualité d’un recrutement à travers intégration, performance et tenue dans le temps.",
+        "Le quality of hire mesure la reussite d'un recrutement au-dela de la signature : qualite d'integration, performance dans la fonction, tenue dans la duree et impact sur l'equipe. En Life Sciences et HealthTech, ou un.e Head of Clinical ou un.e CMO engage la roadmap produit, ce KPI prime sur le simple time-to-hire.",
         "Recruter vite ne suffit pas si la qualité chute ensuite.",
         "Une bonne structuration RH permet d’améliorer la quality of hire sans allonger inutilement les délais."
       ),
       concept(
         "Offer acceptance rate",
-        "Taux d’acceptation des offres émises par l’entreprise.",
+        "L'offer acceptance rate designe le pourcentage d'offres signees parmi celles emises par l'entreprise. En Life Sciences et HealthTech, ou un.e candidat.e cadre arbitre souvent entre plusieurs scale-ups concurrentes, cet indicateur mesure la qualite de la proposition (remuneration, projet, equity), la fluidite du process et la pertinence du timing de closing.",
         "Il révèle la qualité de votre proposition, de votre process et de votre timing.",
         "Un taux faible peut signaler un problème d’alignement plus qu’un problème de marché."
       ),
       concept(
         "Rétention 12 mois",
-        "Part des recrutements encore présents un an après leur arrivée.",
+        "La rétention 12 mois désigne la part des recrutements encore en poste un an après leur arrivée. Cet indicateur croise la qualité du sourcing, la solidité de l'onboarding et la maturité managériale. En Life Sciences et HealthTech, où chaque cadre porte un.e projet critique (clinique, réglementaire, industriel), un départ avant 12 mois pèse directement sur la roadmap.",
         "Elle révèle si le recrutement, l’onboarding et le management tiennent ensemble.",
         "La rétention est un indicateur business, pas seulement RH."
       ),
       concept(
         "Time to productivity",
-        "Temps nécessaire pour qu’un nouveau collaborateur devienne réellement opérationnel.",
+        "Le time to productivity designe le delai entre l'arrivee d'un.e collaborateur.rice et le moment ou il/elle delivre pleinement sur son perimetre. En Life Sciences, HealthTech et Animal Health, ce delai depend de la complexite reglementaire, scientifique et terrain. Un onboarding structure et des attentes clarifiees le reduisent plus surement qu'une intensification du suivi.",
         "Ce délai impacte directement l’exécution et le ROI d’un recrutement.",
         "Structurer l’onboarding et clarifier les attentes réduit ce délai plus sûrement qu’une simple intensification du suivi."
       ),
       concept(
         "Source effectiveness",
-        "Capacité d’une source de candidats à produire des profils qualifiés et convertis.",
+        "La source effectiveness mesure la capacite d'un canal de sourcing (LinkedIn, cooptation, vivier cabinet, jobboards specialises Life Sciences) a produire des profils qualifies, presentes et recrutes. En biotech ou medtech, ou un.e Head of CMC ou un.e VP Clinical se trouve sur 3 a 5 canaux maximum, ce pilotage evite de disperser le budget sourcing.",
         "Toutes les sources ne se valent pas selon le poste, le marché et le niveau d’urgence.",
         "Suivre l’efficacité des sources permet de concentrer l’effort là où il produit vraiment."
       ),
       concept(
         "Funnel conversion",
-        "Taux de passage des candidats d’une étape à la suivante dans le pipeline.",
+        "Le funnel de conversion designe le taux de passage des candidat.e.s d'une etape a la suivante dans le pipeline de recrutement (sourcing, screening, entretiens, offre, signature). En Life Sciences et HealthTech, il revele ou le process se bloque reellement, qu'il s'agisse de pertes au screening scientifique, de delais d'entretien trop longs ou d'offres refusees sur package.",
         "Le funnel montre où le process se bloque réellement.",
         "Un funnel lisible guide les priorités d’automatisation et de simplification."
       ),
       concept(
         "SLA recrutement",
-        "Engagement de délai ou de niveau de service entre RH, managers et direction.",
+        "Le SLA recrutement designe un engagement formel de delai et de niveau de service entre RH, managers operationnels et direction generale. En Life Sciences et HealthTech, il cadre le time-to-hire sur les fonctions critiques (un.e VP Clinical, un.e Head of Regulatory, un.e CFO scaleup) et rend visibles les retards qui, sans lui, restent silencieux.",
         "Sans SLA, chacun projette son propre rythme et les retards deviennent invisibles.",
         "Le SLA aide à professionnaliser la relation entre structuration RH et business."
       ),
       concept(
         "Forecast recrutement",
-        "Projection des besoins, délais et charges de recrutement à horizon donné.",
+        "Le forecast recrutement designe la projection des besoins, des delais et des charges de recrutement sur un horizon donne (6, 12 ou 24 mois). En Life Sciences, biotech et HealthTech, il relie la roadmap clinique, R&D et commerciale au plan de hiring, anticipe les fonctions critiques et arbitre entre interne, externe et executive search.",
         "Elle réduit l’effet de surprise et le pilotage à court terme.",
         "Le forecast permet de relier le recrutement à la réalité opérationnelle et financière."
       ),
       concept(
         "Vacancy cost",
-        "Coût lié à un poste critique resté vacant trop longtemps.",
+        "Le vacancy cost designe le cout reel d'un poste critique reste vacant trop longtemps : revenus differes, projets ralentis, surcharge des equipes en place et perte d'opportunites commerciales. En Life Sciences et HealthTech, un.e Head of Clinical ou un.e VP Regulatory non pourvu.e peut decaler un dossier AMM de plusieurs mois, bien au-dela du budget RH visible.",
         "Ce coût est souvent supérieur à ce qui apparaît dans le budget RH.",
         "Parler de vacancy cost aide à repositionner le recrutement comme sujet de performance et non simple support."
       )
@@ -644,61 +644,61 @@ export const glossaryGroups: GlossaryGroup[] = [
     concepts: [
       concept(
         "Scale-up",
-        "Entreprise qui ne cherche plus seulement à valider son marché mais à absorber de la croissance.",
+        "Le scale-up designe une entreprise sortie de la phase de validation marche et entree en absorption de croissance rapide. En Life Sciences, HealthTech et Animal Health, ce stade impose de structurer finance, operations et RH avant que le volume ne fragilise l'execution. Les intuitions initiales du fondateur ne suffisent plus a tenir l'organisation.",
         "À ce stade, les intuitions initiales ne suffisent plus à faire tenir l’organisation.",
         "La scale-up réussie structure ses RH juste assez tôt pour ne pas ralentir sa croissance."
       ),
       concept(
         "Hypercroissance",
-        "Phase de croissance rapide où les besoins de recrutement, de coordination et de priorisation s’intensifient fortement.",
+        "L'hypercroissance designe une phase d'expansion rapide d'une biotech, medtech ou scaleup HealthTech, ou les besoins de recrutement, de coordination et de priorisation s'intensifient simultanement. Elle amplifie les defauts de structure deja presents (process flous, roles ambigus, dette managériale) et transforme la clarification des perimetres et l'automatisation RH en enjeu de survie operationnelle pour le/la CEO.",
         "L’hypercroissance amplifie tous les défauts de structure déjà présents.",
         "Automatiser et clarifier les rôles devient alors un sujet de survie opérationnelle."
       ),
       concept(
         "10-to-30 gap",
-        "Moment où une organisation fonctionne encore par proximité, mais commence à perdre en lisibilité.",
+        "Le 10-to-30 gap designe le palier de croissance ou une biotech, medtech ou scaleup HealthTech fonctionne encore par proximite directe entre fondateurs et equipes, mais commence a perdre en lisibilite operationnelle. Les rituels informels saturent, les decisions ralentissent, et le/la CEO voit apparaitre les premiers couts caches RH avant d'avoir structure ses fonctions cadres.",
         "C’est souvent là que les premiers coûts cachés RH apparaissent.",
         "Ce qui marche à 10 casse à 30 : le 10-to-30 gap doit être anticipé, pas subi."
       ),
       concept(
         "30-to-50 transition",
-        "Passage à une taille où les rituels, les décisions et les process doivent être plus explicites.",
+        "La 30-to-50 transition designe le passage d'une biotech ou HealthTech de 30 a 50 collaborateur.rice.s, seuil ou les rituels informels, les decisions implicites et les process orales atteignent leur limite. La dependance au CEO devient couteuse, l'organisation doit expliciter ses rituels, formaliser ses arbitrages et installer un middle management capable de relayer.",
         "À ce stade, la dépendance au CEO devient souvent trop coûteuse.",
         "La transition 30-to-50 demande moins d’héroïsme et plus de système."
       ),
       concept(
         "Founders trap",
-        "Situation où les fondateurs continuent à absorber trop de décisions au lieu de structurer la délégation.",
+        "Le founders trap designe la situation ou les fondateurs et fondatrices d'une biotech ou medtech continuent d'absorber l'essentiel des decisions operationnelles au lieu de structurer la delegation vers un comite executif. En phase de scale-up Life Sciences, ce goulot ralentit le time-to-hire, fragilise la levee Serie B et empeche le ou la CEO de tenir son role d'arbitre strategique.",
         "Elle peut freiner la vitesse de croissance plus que le marché lui-même.",
         "Sortir du founders trap demande une meilleure structuration RH et opérationnelle."
       ),
       concept(
         "Hiring burst",
-        "Période de recrutements accélérés sur plusieurs rôles en même temps.",
+        "Le hiring burst designe une periode de recrutements acceleres ou une scaleup Life Sciences, HealthTech ou Animal Health ouvre plusieurs roles cles en parallele, souvent apres une levee de fonds ou un closing serie B. Sans pipeline qualifie ni priorisation des fonctions critiques, il sature la bande passante du ou de la DRH et du comite executif.",
         "Sans pipeline ni priorisation, elle consomme énormément de bande passante.",
         "Préparer un hiring burst oblige à clarifier vos priorités business et vos capacités internes."
       ),
       concept(
         "Mission critical role",
-        "Poste dont l’absence ralentit directement la performance ou le déploiement d’une stratégie.",
+        "Le mission critical role designe un poste dont l'absence ou la vacance ralentit directement la performance ou le deploiement d'une strategie. En Life Sciences, HealthTech et Animal Health, il s'agit typiquement du ou de la VP Clinical, CSO, Head of Regulatory ou CFO scale-up : leur recrutement conditionne le cash, le calendrier reglementaire et l'attention du board.",
         "Tous les recrutements ne se valent pas ; les rôles critiques doivent être traités différemment.",
         "Identifier ces rôles permet de mieux arbitrer cash, délai et attention dirigeant."
       ),
       concept(
         "Organisation debt",
-        "Dette créée par des choix de structure, de rôle ou de process repoussés trop longtemps.",
+        "L'organisation debt designe la dette structurelle accumulee par une biotech, medtech ou scaleup Animal Health quand les choix de structure, de role ou de process sont repousses. Comme la dette technique, elle finit par freiner le scaling, alourdir les recrutements cadres et obliger le/la CEO a des corrections couteuses bien plus tard.",
         "Comme une dette technique, elle finit par freiner tout le système.",
         "Traiter l’organisation debt tôt réduit le besoin de corrections lourdes plus tard."
       ),
       concept(
         "Process debt",
-        "Accumulation de bricolages et d’exceptions qui rendent les process de moins en moins fiables.",
+        "Le process debt designe l'accumulation de bricolages, exceptions et contournements qui erodent progressivement la fiabilite des process internes. Dans une biotech ou medtech en scale-up, cette dette invisible ralentit le time-to-hire, fragilise la conformite reglementaire et complique l'onboarding d'un.e DRH ou COO sans apparaitre dans les indicateurs financiers classiques.",
         "La process debt fait perdre du temps à tous sans être toujours visible dans les chiffres.",
         "L’automatisation intelligente commence par réduire cette dette avant de la reproduire."
       ),
       concept(
         "Delegation maturity",
-        "Niveau de capacité d’une entreprise à distribuer les responsabilités sans perdre la qualité d’exécution.",
+        "La delegation maturity designe le niveau de capacite d'une entreprise a distribuer les responsabilites operationnelles sans degrader la qualite d'execution. Dans une biotech ou medtech en scale-up, elle conditionne la vitesse de decision entre le/la CEO, le COMEX et les middle managers, et determine quand structurer, former ou automatiser pour absorber la croissance sans bruit organisationnel.",
         "La délégation mal préparée crée du bruit ; la délégation mûre crée de la vitesse.",
         "Mesurer la maturité de délégation aide à savoir quand structurer, former ou automatiser."
       )
@@ -711,61 +711,61 @@ export const glossaryGroups: GlossaryGroup[] = [
     concepts: [
       concept(
         "Runway",
-        "Nombre de mois pendant lesquels l’entreprise peut continuer à opérer avec sa trésorerie disponible.",
+        "Le runway designe le nombre de mois pendant lesquels une biotech, medtech ou structure HealthTech peut continuer a operer avec sa tresorerie disponible, au rythme de burn actuel. Il conditionne la fenetre de recrutement d'un.e CSO, CMO ou VP Clinical, et la capacite a tenir jusqu'au prochain jalon clinique ou tour de table.",
         "Un runway sous tension réduit votre marge d’erreur sur les recrutements.",
         "Quand le cash est compté, structurer vos priorités RH devient indispensable."
       ),
       concept(
         "Burn rate",
-        "Vitesse à laquelle l’entreprise consomme sa trésorerie.",
+        "Le burn rate designe la vitesse mensuelle a laquelle une biotech, medtech ou scale-up HealthTech consomme sa tresorerie nette avant rentabilite. Indicateur cle pour le/la CEO et le/la CFO, il conditionne le runway disponible, la fenetre de levee de fonds, et la marge de manoeuvre sur les recrutements cadres critiques en phase clinique ou pre-commerciale.",
         "Elle conditionne votre capacité à recruter sereinement ou à corriger une erreur.",
         "Le burn rate rappelle que le temps perdu en RH coûte aussi du cash."
       ),
       concept(
         "Tension de trésorerie",
-        "Situation où les ressources financières disponibles limitent les choix opérationnels à court terme.",
+        "La tension de tresorerie designe une situation ou les ressources financieres disponibles limitent les choix operationnels a court terme. En Life Sciences et HealthTech, elle touche 41% des biotechs francaises (Source : France Biotech x EY 2025), imposant au/a la CEO et CFO des process de recrutement plus lisibles, disciplines, et des arbitrages cash rigoureux.",
         "Avec 41% de tensions de trésorerie, les erreurs de recrutement deviennent encore plus coûteuses.",
         "La tension cash impose des process plus lisibles et des décisions plus disciplinées."
       ),
       concept(
         "Cycle de levée",
-        "Durée nécessaire pour préparer, mener et clôturer une levée de fonds.",
+        "Le cycle de levée désigne la durée totale nécessaire pour préparer, mener et clôturer un tour de financement (Seed, Série A, B, C) dans une biotech, medtech ou HealthTech. Il couvre la structuration du deck, les roadshows investisseurs, la due diligence et le closing juridique, mobilisant le/la CEO et le/la CFO sur plusieurs mois consécutifs.",
         "Avec une durée moyenne de 10 mois, il faut tenir l’organisation avant, pendant et après la levée.",
         "Le recrutement et la structuration RH ne peuvent pas attendre la fin du cycle pour s’améliorer."
       ),
       concept(
         "Series A readiness",
-        "Niveau de préparation de l’entreprise à absorber une première phase forte de croissance financée.",
+        "La Series A readiness designe le niveau de preparation d'une biotech, medtech ou HealthTech a absorber un premier tour de croissance institutionnel (souvent 10 a 30 millions d'euros). Elle combine maturite clinique ou produit, traction commerciale, gouvernance, et surtout solidite de l'equipe dirigeante (CEO, CSO, CMO, CFO) capable de scaler sans casser la culture fondatrice.",
         "Elle dépend autant de la structure d’équipe que du produit ou du marché.",
         "La readiness Series A commence souvent par une meilleure discipline organisationnelle."
       ),
       concept(
         "Series B pressure",
-        "Pression de performance et d’exécution ressentie après une phase d’accélération financée.",
+        "La Series B pressure designe la tension de performance et d'execution qui pese sur une biotech, medtech ou healthtech apres une levee de Series B. Le board attend une acceleration commerciale, clinique ou industrielle rapide, et chaque recrutement cadre rate ou retarde pese directement sur le runway et la trajectoire vers la Series C.",
         "À ce stade, les recrutements ratés ou trop lents ont un impact encore plus visible.",
         "La structure RH doit alors servir la vitesse, pas l’encombrer."
       ),
       concept(
         "Capital efficiency",
-        "Capacité à transformer les ressources financières en résultats tangibles avec peu de gaspillage.",
+        "Le capital efficiency designe la capacite d'une entreprise a convertir chaque euro leve en jalons tangibles (essais cliniques, AMM, revenus recurrents) avec un minimum de gaspillage. En Life Sciences et HealthTech, ou les cycles R&D sont longs et capitalistiques, ce ratio depend autant de la rigueur scientifique que de la structuration RH et operationnelle de l'organisation.",
         "Elle ne dépend pas seulement du produit, mais aussi de l’organisation.",
         "Des RH plus structurées améliorent directement l’efficacité du capital investi."
       ),
       concept(
         "ROI RH",
-        "Retour observable des investissements réalisés dans le recrutement, les outils ou l’organisation RH.",
+        "Le ROI RH designe le retour observable des investissements realises dans le recrutement, les outils et l'organisation RH. En Life Sciences et HealthTech, il rend visibles les gains souvent caches (time-to-hire, fiabilite des recrutements cadres, retention, qualite d'execution sur les jalons cliniques ou reglementaires) et traduit la fonction RH en langage dirigeant, finance et operations.",
         "Le ROI RH rend visibles des gains souvent cachés : temps, fiabilité, rétention, exécution.",
         "Mesurer ce ROI aide à parler RH avec un langage dirigeant et non administratif."
       ),
       concept(
         "Externalisation",
-        "Choix de confier à un partenaire externe certaines activités de recrutement ou d’exécution.",
+        "L'externalisation est le choix de confier a un partenaire externe certaines activites de recrutement ou d'execution RH (sourcing, pre-qualification, onboarding). En Life Sciences et HealthTech, elle soulage vite les equipes scaleup sous tension, mais ne remplace pas la structuration interne des processus, qui reste prerequis a une croissance saine du capital humain.",
         "Elle peut soulager vite, mais elle ne remplace pas la structuration interne.",
         "Vous externalisez souvent parce que vos processus internes ne sont pas encore optimisés."
       ),
       concept(
         "RPO",
-        "Recruitment Process Outsourcing : externalisation structurée de tout ou partie du processus de recrutement.",
+        "Le RPO (Recruitment Process Outsourcing) designe l'externalisation structuree de tout ou partie du processus de recrutement vers un partenaire dedie. En Life Sciences et HealthTech, il devient pertinent quand le volume de postes ouverts (R&D, affaires reglementaires, commercial) ou la complexite des profils depasse les capacites internes du ou de la DRH, sans justifier un renfort permanent.",
         "Le RPO devient utile quand le volume ou la complexité dépassent vos capacités actuelles.",
         "Bien cadré, le RPO agit comme un levier de structuration et de gain de temps dirigeant."
       )
@@ -778,61 +778,61 @@ export const glossaryGroups: GlossaryGroup[] = [
     concepts: [
       concept(
         "HealthTech",
-        "Ensemble des entreprises qui développent des solutions technologiques pour la santé.",
+        "La HealthTech designe l'ensemble des entreprises qui developpent des solutions technologiques appliquees a la sante : dispositifs medicaux connectes, logiciels cliniques, diagnostic numerique, e-sante, intelligence artificielle medicale. Ecosysteme jeune et tres concurrentiel, il combine exigences reglementaires fortes et croissance rapide, ce qui tend fortement le marche des talents critiques (Source : Panorama France HealthTech 2026).",
         "Le marché est jeune, exigeant et concurrentiel, ce qui augmente la tension sur les talents critiques.",
         "Comprendre la HealthTech aide à positionner le recrutement comme levier de croissance et non simple support."
       ),
       concept(
         "Deeptech santé",
-        "Société dont l’innovation repose sur une base scientifique ou technologique complexe appliquée à la santé.",
+        "La deeptech santé désigne une société dont l'innovation repose sur une base scientifique ou technologique complexe (biologie computationnelle, IA médicale, nouveaux vecteurs thérapeutiques, dispositifs implantables) appliquée à la santé humaine ou animale. Les cycles de développement y dépassent souvent dix ans et mobilisent des profils rares, ce qui impose une structuration RH précoce et rigoureuse.",
         "Les cycles y sont plus longs et les profils plus rares.",
         "La deeptech santé exige une structuration RH plus exigeante car les erreurs coûtent longtemps."
       ),
       concept(
         "E-santé",
-        "Solutions numériques destinées aux usages, services ou parcours de santé.",
+        "L'e-santé regroupe les solutions numériques appliquées aux usages, services et parcours de santé : telemedecine, dispositifs medicaux logiciels (SaMD), plateformes patients, IA diagnostique, objets connectes. Ce segment, a la croisee de la HealthTech et du soin, combine vitesse produit, contraintes reglementaires (MDR, RGPD, HDS) et penurie de profils hybrides medical, tech et acces marche.",
         "L’e-santé mélange vitesse produit, enjeux réglementaires et pénurie de profils hybrides.",
         "Recruter en e-santé demande de mieux articuler business, tech et organisation."
       ),
       concept(
         "Robotique santé",
-        "Technologies robotiques appliquées aux usages médicaux, cliniques ou de soins.",
+        "La robotique santé designe l'ensemble des technologies robotiques appliquees aux usages medicaux, cliniques, chirurgicaux ou de soins, incluant assistance operatoire, reeducation, logistique hospitaliere et dispositifs autonomes. Le secteur mobilise des profils rares a l'intersection MedTech, mecatronique, IA embarquee et affaires reglementaires, ce qui rend la priorisation du recrutement et le sourcing cible particulierement strategiques pour un.e dirigeant.e.",
         "Les profils y sont à l’intersection de plusieurs marchés déjà pénuriques.",
         "La robotique santé renforce l’intérêt d’un recrutement ciblé et d’une priorisation stricte."
       ),
       concept(
         "IVD",
-        "Diagnostic in vitro : activité de diagnostic réalisée hors du corps humain via prélèvements ou analyses.",
+        "L'IVD (In Vitro Diagnostic) designe l'activite de diagnostic medical realisee hors du corps humain, via prelevements sanguins, tissulaires ou analyses biologiques. Le secteur, regule par l'IVDR europeen, mobilise des profils tres specifiques (affaires reglementaires, R&D assay, qualite, commercial hospitalier) sur un marche concurrentiel ou la rarete des competences impose de structurer finement les criteres d'evaluation.",
         "Les compétences y sont spécifiques et le marché concurrentiel.",
         "Structurer les critères d’évaluation est indispensable pour éviter de longues recherches floues."
       ),
       concept(
         "NGS",
-        "Next-Generation Sequencing : technologies de séquençage à haut débit utilisées en génomique et diagnostic.",
+        "Le NGS (Next-Generation Sequencing) designe l'ensemble des technologies de sequencage a haut debit qui lisent en parallele des millions de fragments d'ADN ou d'ARN. Pilier des biotechs, du diagnostic moleculaire et de la genomique animale, il structure les pipelines de R&D, les essais cliniques et les plateformes de medecine de precision en Life Sciences.",
         "Le niveau de spécialisation renforce la nécessité d’un sourcing précis.",
         "Dans un marché de niche, le pipeline candidat doit être piloté avec davantage de rigueur."
       ),
       concept(
         "Affaires médicales",
-        "Fonction qui relie données, usage clinique, contenu scientifique et alignement stratégique.",
+        "Les Affaires médicales designent la fonction qui relie donnees cliniques, usage terrain, contenu scientifique et alignement strategique d'un laboratoire ou biotech. Elles articulent MSL, medical advisors et direction medicale autour du cycle de vie produit. En Life Sciences et HealthTech, le/la directeur.trice medical.e arbitre publications, evidence generation et dialogue KOL, devenant un pivot competitif rare.",
         "Elle fait partie des compétences critiques les plus sensibles.",
         "Les rôles d’affaires médicales montrent pourquoi le recrutement devient un avantage compétitif."
       ),
       concept(
         "Marketing digital santé",
-        "Compétence marketing appliquée à des environnements santé, souvent plus réglementés et plus techniques.",
+        "Le marketing digital santé designe l'ensemble des competences marketing appliquees a des environnements Life Sciences, MedTech et HealthTech, structurellement plus reglementes (HAS, EMA, FDA, codes de deontologie) et plus techniques que le BtoC classique. Il couvre acquisition, contenu medical, SEO scientifique, marketing automation et pilotage omnicanal aupres de professionnels de sante, payeurs et patients.",
         "La tension sur ces profils augmente avec l’internationalisation du marché.",
         "Bien cadrer ces postes évite des recrutements hybrides trop flous et donc trop lents."
       ),
       concept(
         "IA de tri",
-        "Usage de l’intelligence artificielle pour aider à organiser, lire ou hiérarchiser des candidatures.",
+        "L'IA de tri designe l'usage de l'intelligence artificielle pour lire, organiser et hierarchiser des candidatures sur un poste cadre Life Sciences ou HealthTech. Elle accelere le screening initial (CV, lettres, profils LinkedIn) mais ne remplace ni la qualification metier, ni l'evaluation culturelle, ni la decision finale d'un.e recruteur.se ou DRH.",
         "2/3 des entreprises utilisent déjà l’IA, mais peu l’exploitent réellement pour gagner du temps.",
         "L’IA apporte de la valeur quand elle s’insère dans un process clair et supervisé."
       ),
       concept(
         "Human in the loop",
-        "Principe qui maintient une validation humaine sur les moments critiques d’un process automatisé.",
+        "Le Human in the loop designe un principe d'architecture ou un.e operateur.rice humain.e valide les moments critiques d'un process automatise (scoring de candidat.e, shortlist, decision d'embauche). En recrutement Life Sciences et Animal Health, il garantit que l'IA accelere le tri et la structuration, mais que le jugement final reste porte par le/la recruteur.se ou le/la DRH.",
         "Indispensable pour ne pas déshumaniser la décision et limiter les erreurs.",
         "Le meilleur système RH automatise l’exécution répétitive et garde l’humain sur le jugement."
       )
@@ -845,61 +845,61 @@ export const glossaryGroups: GlossaryGroup[] = [
     concepts: [
       concept(
         "International hiring",
-        "Capacité à recruter au-delà du marché local, sur plusieurs pays ou zones de talents.",
+        "L'international hiring designe la capacite d'un.e employeur a sourcer, attirer et integrer des talents au-dela du marche local, sur plusieurs pays ou bassins de competences. En Life Sciences et HealthTech, ou les profils rares (CMC, affaires reglementaires, biostatistique) se concentrent dans quelques hubs europeens et nord-americains, cette ouverture geographique conditionne directement la vitesse de scale-up.",
         "Avec 75% d’entreprises qui ciblent l’international, la compétition dépasse largement la ville ou le pays.",
         "Vous ne recrutez pas seulement contre vos concurrents locaux, mais contre le monde entier."
       ),
       concept(
         "Geo expansion",
-        "Déploiement d’une activité sur de nouveaux marchés ou territoires.",
+        "La geo expansion designe le deploiement d'une activite sur de nouveaux marches ou territoires, frequent en Life Sciences et HealthTech lors d'un passage Europe, US ou APAC. Chaque ouverture cree des besoins en roles cles (Country Manager, Medical Affairs, QA/RA locale), en coordination siege-filiale et en conformite reglementaire propre a chaque juridiction.",
         "Chaque expansion crée de nouveaux besoins en rôles, coordination et conformité.",
         "Une structure RH légère mais claire aide à absorber cette complexité sans alourdir l’organisation."
       ),
       concept(
         "Employer competitiveness",
-        "Capacité d’une entreprise à rester attractive face à d’autres employeurs plus visibles ou mieux dotés.",
+        "L'employer competitiveness designe la capacite d'une entreprise a rester attractive face a d'autres employeurs plus visibles ou mieux dotes. En Life Sciences et HealthTech, ou les biotechs et scale-ups rivalisent avec big pharma et MedTech etablis, elle repose autant sur la clarte du projet scientifique, la vitesse de decision et la structuration RH que sur le package salarial.",
         "La concurrence ne se joue plus uniquement sur le salaire.",
         "Clarté du projet, vitesse de décision et structuration font partie de la compétitivité employeur."
       ),
       concept(
         "Talent mobility",
-        "Capacité des talents à changer de pays, de secteur ou de projet pour de meilleures opportunités.",
+        "La talent mobility designe la capacite des profils cadres et experts a changer de pays, de secteur ou de projet pour saisir de meilleures opportunites. En Life Sciences, HealthTech et Animal Health, elle intensifie la concurrence sur les fonctions rares (R&D, affaires reglementaires, bioproduction) et accelere les cycles de recrutement entre scale-ups europeennes et groupes etablis.",
         "Elle accroît la pression sur les marchés spécialisés.",
         "Une entreprise mieux structurée réagit plus vite à ces mouvements et sécurise ses recrutements."
       ),
       concept(
         "Compliance RH",
-        "Respect des règles sociales, contractuelles et opérationnelles dans la gestion des talents.",
+        "La Compliance RH designe le respect des regles sociales, contractuelles et operationnelles encadrant la gestion des talents : droit du travail, conventions collectives, RGPD, mobilite internationale, equite salariale. En Life Sciences et HealthTech, elle couvre aussi les clauses de propriete intellectuelle, de non-concurrence et les obligations specifiques aux postes reglementes (Pharmacien.ne responsable, QA, affaires reglementaires).",
         "La conformité mal traitée ralentit vite les recrutements et l’internationalisation.",
         "Un process structuré réduit le risque de blocages tardifs sur des sujets évitables."
       ),
       concept(
         "Data privacy recrutement",
-        "Gestion des données candidat de manière conforme et sécurisée.",
+        "La data privacy recrutement designe la gestion conforme et securisee des donnees candidat (CV, evaluations, scoring IA) tout au long du process. En Life Sciences et HealthTech, secteurs sensibles aux audits investisseurs et partenaires pharma, elle impose RGPD, minimisation, base legale claire et tracabilite des outils ATS, sourcing et automatisations RH des leur design.",
         "La confiance et la conformité deviennent vite critiques avec plus d’outils et d’automatisation.",
         "Une automatisation RH sérieuse doit intégrer la protection des données dès le design."
       ),
       concept(
         "Cross-border offer",
-        "Proposition de rôle faite à un candidat dans un contexte multi-pays ou multi-entités.",
+        "Le cross-border offer designe une proposition de role formulee a un.e candidat.e dans un contexte multi-pays ou multi-entites, frequente en Life Sciences ou HealthTech quand un siege europeen recrute pour une filiale. Elle implique d'aligner package, droit du travail local, mobilite et rattachement hierarchique avant emission, sous peine d'allonger le cycle et de provoquer des renoncements tardifs.",
         "Ce type d’offre demande plus de préparation et d’alignement interne.",
         "Mieux cadrer ces offres évite des cycles plus longs et des renoncements tardifs."
       ),
       concept(
         "English-first process",
-        "Process de recrutement ou de coordination pensé d’emblée pour des parties prenantes internationales.",
+        "Le English-first process designe un process de recrutement, de gouvernance ou de coordination pense d'emblee en anglais, pour des parties prenantes internationales. En Life Sciences et HealthTech, ou investisseurs US, board members europeens et candidats cadres operent en anglais, structurer ce reflexe en amont evite de refondre le systeme RH au moment ou la scaleup s'internationalise.",
         "Utile dès que le marché, les candidats ou les investisseurs dépassent le cadre francophone.",
         "Structurer un process english-first évite de réinventer le système au moment où l’entreprise s’internationalise."
       ),
       concept(
         "Market benchmarking",
-        "Comparaison régulière de vos pratiques, délais, packages ou structures avec le marché.",
+        "Le market benchmarking designe la comparaison reguliere des pratiques RH d'une entreprise (delais de recrutement, packages, structures d'equipe, organigrammes) avec les references du marche Life Sciences, HealthTech ou Animal Health. Il permet a un.e CEO ou DRH d'ajuster ses decisions sur des reperes sectoriels verifiables, plutot que sur l'intuition ou les retours informels du reseau.",
         "Le benchmark évite de piloter uniquement à l’intuition.",
         "Un bon benchmark rend les décisions RH plus rapides, plus réalistes et plus crédibles."
       ),
       concept(
         "Concurrence mondiale des talents",
-        "Pression concurrentielle exercée par des entreprises internationales sur les mêmes profils.",
+        "La concurrence mondiale des talents designe la pression exercee par des entreprises internationales (biotech US, pharma europeenne, scale-ups HealthTech asiatiques) sur un meme vivier restreint de profils cadres et scientifiques. En Life Sciences et Animal Health, elle touche surtout les fonctions R&D, affaires reglementaires, medical et data, ou le/la candidat.e compare offres, remuneration et projet a l'echelle continentale.",
         "Elle explique pourquoi certains postes ne peuvent plus être traités comme des recrutements locaux classiques.",
         "La réponse la plus robuste reste une structure claire, un message lisible et un process rapide."
       )
@@ -912,61 +912,61 @@ export const glossaryGroups: GlossaryGroup[] = [
     concepts: [
       concept(
         "Expérience collaborateur",
-        "Perception vécue par un collaborateur de son arrivée, de son quotidien et de ses interactions internes.",
+        "L'expérience collaborateur désigne la perception vécue par un.e salarié.e de son parcours dans l'entreprise, depuis l'onboarding jusqu'aux interactions quotidiennes avec son équipe, son manager et les processus internes. Dans les biotech, medtech et HealthTech en forte croissance, elle conditionne directement la rétention des profils scientifiques rares et la capacité à scaler sans turnover destructeur.",
         "Elle influence fortement la rétention, surtout dans les contextes de pénurie.",
         "La structuration RH améliore cette expérience en rendant l’organisation plus lisible et moins chaotique."
       ),
       concept(
         "Manager enablement",
-        "Soutien concret donné aux managers pour recruter, intégrer, piloter et développer leur équipe.",
+        "Le manager enablement designe l'ensemble des outils, formations et rituels qui equipent un.e manager pour recruter, integrer, piloter et faire grandir son equipe. En Life Sciences et HealthTech, ou la croissance impose des promotions rapides de scientifiques vers des roles d'encadrement, il conditionne la qualite d'execution collective et reduit les erreurs de casting.",
         "Des managers mal équipés deviennent un frein silencieux à la croissance.",
         "Le manager enablement réduit les erreurs de recrutement et améliore l’exécution collective."
       ),
       concept(
         "Feedback loop",
-        "Boucle de retour d’information régulière entre équipes, managers et direction.",
+        "Le feedback loop designe une boucle de retour d'information reguliere entre equipes, managers et direction, permettant de detecter tot les frictions RH ou operationnelles. Dans une biotech ou medtech en scale-up, ou la pression sur le time-to-market est forte, ces boucles courtes evitent que des problemes d'organisation ne restent invisibles plusieurs trimestres.",
         "Sans feedback, les problèmes d’organisation restent longtemps invisibles.",
         "Créer des feedback loops simples aide à corriger plus tôt les frictions RH ou opérationnelles."
       ),
       concept(
         "Talent density",
-        "Concentration de profils à fort impact dans une équipe donnée.",
+        "La talent density designe la concentration de profils a fort impact dans une equipe donnee, rapportee a l'effectif total. En biotech, medtech ou Animal Health, ou chaque recrutement cadre pese sur la vitesse de developpement clinique ou reglementaire, elle conditionne la qualite des decisions strategiques et la capacite du COO ou de la DRH a tenir les jalons de financement.",
         "Une forte densité de talent soutient la vitesse d’exécution et la qualité des décisions.",
         "Le recrutement de profils rares doit être pensé comme levier stratégique, pas simple remplissage."
       ),
       concept(
         "Mobilité interne",
-        "Capacité à faire évoluer un collaborateur vers un autre périmètre ou niveau de responsabilité.",
+        "La mobilité interne désigne la capacité d'une organisation à faire évoluer un.e collaborateur.rice vers un autre périmètre, métier ou niveau de responsabilité sans recrutement externe. En Life Sciences et HealthTech, où les profils réglementaires, cliniques ou industriels sont rares, elle sécurise la rétention, accélère le time-to-fill et capitalise sur la connaissance scientifique déjà acquise en interne.",
         "Elle réduit certains besoins de recrutement externe et améliore la rétention.",
         "Structurer la mobilité interne augmente la performance sans nécessairement augmenter les coûts RH."
       ),
       concept(
         "Learning path",
-        "Chemin de montée en compétences prévu pour un rôle ou un collaborateur.",
+        "Le learning path designe le parcours structure de montee en competences prevu pour un.e collaborateur.trice ou un role donne, jalonne d'etapes, de ressources et de validations. En Life Sciences et HealthTech, il securise la maitrise des protocoles qualite, reglementaires et scientifiques, et reduit la dependance a l'apprentissage informel qui ralentit l'autonomie des nouveaux entrants.",
         "Sans learning path, les équipes dépendent trop de l’apprentissage informel.",
         "Documenter la progression limite la perte de temps et accélère l’autonomie."
       ),
       concept(
         "Succession planning",
-        "Préparation des relais possibles sur des rôles critiques en cas de départ ou de croissance.",
+        "Le succession planning designe l'identification et la preparation anticipee des relais internes sur les roles critiques (CEO, CSO, VP Clinical, Head of Quality) en cas de depart, de levee de fonds ou de scale-up. En Life Sciences et Animal Health, il securise la continuite reglementaire, projets cliniques et relations investisseurs, evitant qu'un.e dirigeant.e unique concentre le risque organisationnel.",
         "Elle sécurise l’organisation au lieu de la laisser dépendre d’un seul individu.",
         "Le succession planning est un outil de résilience et de performance à long terme."
       ),
       concept(
         "Clarté culturelle",
-        "Niveau de compréhension partagé des comportements et arbitrages valorisés dans l’entreprise.",
+        "La clarté culturelle désigne le niveau de compréhension partagée, au sein d'une entreprise Life Sciences ou HealthTech, des comportements, valeurs et arbitrages réellement valorisés au quotidien. Dans une biotech ou medtech en scale-up, elle conditionne la qualité du matching à l'embauche, la rétention des cadres et la cohésion entre équipes R&D, clinique et commerciales.",
         "Une culture floue complexifie autant le recrutement que la rétention.",
         "Clarifier la culture améliore la qualité du matching et réduit les erreurs d’intégration."
       ),
       concept(
         "Team operating model",
-        "Mode de fonctionnement concret d’une équipe : rituels, responsabilités, coordination et priorités.",
+        "Le team operating model designe le mode de fonctionnement concret d'une equipe : rituels, responsabilites, circuits de decision, coordination et priorites. Dans une biotech ou medtech en scale-up, ou le/la CEO arbitre R&D, clinique et commercial en parallele, formaliser ce modele reduit les frictions internes et limite le besoin de supervision dirigeante au quotidien.",
         "Sans modèle explicite, les tensions viennent vite du fonctionnement et non des personnes.",
         "Mieux définir ce modèle réduit le besoin de supervision dirigeant."
       ),
       concept(
         "Performance review",
-        "Moment structuré d’évaluation et d’alignement sur la contribution, les attentes et la progression.",
+        "La performance review designe un moment structure d'evaluation et d'alignement entre un.e manager et son collaborateur sur la contribution, les attentes et la progression. En Life Sciences et HealthTech, ou les cycles produit sont longs et les talents rares, elle securise la retention, clarifie les trajectoires et connecte structuration RH, developpement individuel et execution durable.",
         "Une revue claire améliore la rétention et la qualité de management.",
         "La performance review connecte structuration RH, développement et exécution durable."
       )
@@ -979,61 +979,61 @@ export const glossaryGroups: GlossaryGroup[] = [
     concepts: [
       concept(
         "Temps dirigeant",
-        "Temps passé par les dirigeants sur des sujets RH, de coordination ou d’arbitrage qui pourraient être mieux structurés.",
+        "Le temps dirigeant designe les heures que le/la CEO, COO ou DRH consacre a des sujets RH, de coordination ou d'arbitrage qui pourraient etre mieux structures. En biotech, medtech ou Animal Health, ce temps capte sur la strategie scientifique ou commerciale represente un cout cache souvent superieur au cout salarial des recrutements differes.",
         "Le vrai coût RH n’est pas seulement l’argent : c’est souvent le temps dirigeant perdu.",
         "Mesurer ce temps aide à justifier un diagnostic, une structuration RH ou une automatisation."
       ),
       concept(
         "Priorisation des rôles clés",
-        "Capacité à distinguer les postes critiques des postes simplement utiles.",
+        "La priorisation des rôles clés désigne la capacité à distinguer, dans une organisation Life Sciences ou HealthTech, les postes réellement critiques pour la trajectoire (CSO, VP Clinical, Head of Quality) des postes simplement utiles. Elle évite d'ouvrir trop de chantiers en parallèle, protège le cash de la scaleup et concentre l'énergie du CODIR sur les recrutements à fort levier.",
         "Elle évite d’ouvrir trop de chantiers en même temps.",
         "Une bonne priorisation protège le cash et améliore la performance organisationnelle."
       ),
       concept(
         "Charge administrative",
-        "Part de l’énergie d’une équipe absorbée par des tâches répétitives ou peu structurées.",
+        "La charge administrative designe la part d'energie d'une equipe absorbee par des taches repetitives, peu structurees ou a faible valeur ajoutee (reporting, saisie, relances, mise en forme de dossiers). Dans une biotech ou medtech en scale-up, elle pese surtout sur le/la DRH, le/la CFO et les fonctions support, et grignote le temps de decision strategique.",
         "Quand elle est trop élevée, la qualité de décision baisse.",
         "Automatiser ou simplifier cette charge est un levier direct de productivité."
       ),
       concept(
         "Standard operating procedure",
-        "Instruction ou séquence formalisée qui rend une opération reproductible.",
+        "Le Standard Operating Procedure (SOP) designe une instruction ou sequence formalisee qui rend une operation reproductible, independamment de la personne qui l'execute. En Life Sciences, Animal Health et HealthTech, les SOP encadrent production, qualite, pharmacovigilance et essais cliniques, garantissent la conformite reglementaire (GMP, GLP, ISO) et permettent a un.e dirigeant.e de scaler sans dependre de la memoire individuelle.",
         "Les SOP évitent que tout repose sur la mémoire ou l’habitude.",
         "Documenter les opérations critiques aide à scaler sans recruter massivement."
       ),
       concept(
         "Single source of truth",
-        "Source principale et fiable pour une information donnée : candidats, rôles, indicateurs ou documents.",
+        "Le single source of truth designe le referentiel unique et fiable d'une information donnee (candidats, roles cadres, indicateurs RH, documents reglementaires). En Life Sciences et HealthTech, ou les donnees circulent entre ATS, CRM, dossiers cliniques et reporting investisseurs, il evite que le/la DRH, le/la COO et le/la CFO travaillent sur des chiffres divergents.",
         "Sans source de vérité, les équipes perdent du temps à vérifier et recroiser.",
         "Créer une single source of truth est l’un des gains les plus rapides de l’automatisation bien cadrée."
       ),
       concept(
         "Hand-off",
-        "Moment où un sujet ou un candidat passe d’une personne ou d’une étape à une autre.",
+        "Le hand-off designe le moment ou un sujet, un dossier ou un.e candidat.e passe d'une personne ou d'une etape a une autre dans un process RH ou operationnel. En Life Sciences et HealthTech, ou les cycles de recrutement cadre impliquent souvent CEO, DRH, hiring manager et board, un hand-off mal prepare genere retards, perte d'information et friction sur la decision finale.",
         "Les hand-offs mal préparés créent retards, erreurs et perte d’information.",
         "Structurer les hand-offs fluidifie le process et réduit la surcharge coordination."
       ),
       concept(
         "Bottleneck",
-        "Point de blocage qui ralentit l’ensemble du système.",
+        "Le bottleneck designe le point de blocage qui ralentit l'ensemble d'un systeme et plafonne la vitesse d'execution. En contexte RH biotech ou medtech, il prend souvent la forme d'un manque de clarte sur la fiche de poste, d'une capacite de sourcing insuffisante ou d'une decision finale qui stagne chez le/la CEO ou la DRH.",
         "En RH, le bottleneck est souvent un manque de clarté, de capacité ou de décision.",
         "Identifier le vrai bottleneck évite d’automatiser au mauvais endroit."
       ),
       concept(
         "Throughput recrutement",
-        "Volume de recrutements que l’organisation peut réellement absorber avec qualité sur une période donnée.",
+        "Le throughput recrutement designe le volume de recrutements qu'une organisation peut reellement absorber avec qualite sur une periode donnee, en tenant compte de la bande passante des managers, de l'onboarding et du time-to-productivity. En Life Sciences et HealthTech, ou chaque profil senior R&D ou affaires reglementaires mobilise plusieurs semaines d'integration, il borne la vitesse de scale-up soutenable.",
         "Le throughput protège contre les ambitions irréalistes ou les ouvertures de postes mal séquencées.",
         "Mieux connaître votre throughput vous aide à scaler sans casser vos équipes."
       ),
       concept(
         "Design organisationnel",
-        "Architecture des rôles, des niveaux de décision et des interfaces au sein de l’entreprise.",
+        "Le design organisationnel designe l'architecture des roles, des niveaux de decision et des interfaces entre equipes au sein de l'entreprise. Dans une biotech ou une HealthTech en croissance, il conditionne la vitesse d'execution scientifique et commerciale. Un.e CEO ou DRH le revisite quand le scaling cree des doublons, des angles morts ou ralentit les arbitrages cles.",
         "Un mauvais design organisationnel rend les meilleurs talents moins efficaces.",
         "Le design organisationnel est un chantier central quand la croissance crée des doublons ou des angles morts."
       ),
       concept(
         "Levier stratégique RH",
-        "Vision des RH comme moteur de performance, de vitesse et de croissance plutôt que comme fonction support.",
+        "Le levier stratégique RH désigne la bascule par laquelle la fonction Ressources Humaines cesse d'être un support administratif pour devenir un moteur direct de performance, de vitesse d'exécution et de croissance. En Life Sciences, HealthTech et Animal Health, cette posture conditionne la capacité d'un.e CEO ou DRH à sécuriser les expertises rares dans un marché sous tension.",
         "Dans un marché pénurique et sous pression, cette bascule devient décisive.",
         "Le recrutement n’est plus une fonction support : c’est un levier stratégique."
       )

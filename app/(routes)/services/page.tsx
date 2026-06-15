@@ -4,6 +4,8 @@ import MethodNarrative from "@/components/MethodNarrative";
 import PageHero from "@/components/PageHero";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import ServicesSection from "@/components/ServicesSection";
+import FAQSection from "@/components/FAQSection";
+import { faqsByPage } from "@/data/faqsByPage";
 
 const CANONICAL = "https://www.skstalents.fr/services";
 const TITLE = "Nos services · Executive search, Programme IA, Structuration RH | SKS TALENTS";
@@ -73,6 +75,7 @@ export default function ServicesPage() {
       <RevealOnScroll delayMs={100}>
         <FounderCard />
       </RevealOnScroll>
+          <FAQSection eyebrow="FAQ" title={faqsByPage["services"].title} description={faqsByPage["services"].description} items={faqsByPage["services"].items} />
     </>
   );
 }

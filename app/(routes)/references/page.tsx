@@ -2,6 +2,8 @@ import PageHero from "@/components/PageHero";
 import ReferenceCardMarquee from "@/components/ReferenceCardMarquee";
 import { Reference, references } from "@/data/references";
 import { getNotionSiteContentList, mapNotionEntryToReference } from "@/lib/notion";
+import FAQSection from "@/components/FAQSection";
+import { faqsByPage } from "@/data/faqsByPage";
 
 export const dynamic = "force-dynamic";
 
@@ -57,6 +59,7 @@ export default async function ReferencesPage() {
       <section className="container-shell py-8">
         <ReferenceCardMarquee items={mergedReferences} />
       </section>
+          <FAQSection eyebrow="FAQ" title={faqsByPage["references"].title} description={faqsByPage["references"].description} items={faqsByPage["references"].items} />
     </>
   );
 }

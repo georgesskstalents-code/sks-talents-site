@@ -1,4 +1,6 @@
 import DiagnosticStructurationRH from "@/components/DiagnosticStructurationRH";
+import FAQSection from "@/components/FAQSection";
+import { faqsByPage } from "@/data/faqsByPage";
 
 export const metadata = {
   title: "Diagnostic Structuration RH | SKS TALENTS",
@@ -10,5 +12,10 @@ export const metadata = {
 };
 
 export default function DiagnosticPage() {
-  return <DiagnosticStructurationRH />;
+  return (
+    <>
+      <DiagnosticStructurationRH />
+      <FAQSection eyebrow="FAQ" title={faqsByPage["diagnostic"].title} description={faqsByPage["diagnostic"].description} items={faqsByPage["diagnostic"].items} />
+    </>
+  );
 }

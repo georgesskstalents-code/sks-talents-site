@@ -3,6 +3,8 @@ import CalendlyButton from "@/components/CalendlyButton";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import InlineLeadForm from "@/components/InlineLeadForm";
 import PageHero from "@/components/PageHero";
+import FAQSection from "@/components/FAQSection";
+import { faqsByPage } from "@/data/faqsByPage";
 
 const scorecardItems = [
   "Le CEO n’est pas le point de passage obligé de chaque recrutement.",
@@ -124,6 +126,7 @@ export default function ScorecardDirigeantPage() {
       </section>
 
       <ContentPageSignature description="Scorecard éditée par SKS TALENTS pour aider les dirigeants à évaluer rapidement si leur organisation est encore lisible, scalable et soutenable." />
+          <FAQSection eyebrow="FAQ" title={faqsByPage["scorecard-dirigeant"].title} description={faqsByPage["scorecard-dirigeant"].description} items={faqsByPage["scorecard-dirigeant"].items} />
     </>
   );
 }

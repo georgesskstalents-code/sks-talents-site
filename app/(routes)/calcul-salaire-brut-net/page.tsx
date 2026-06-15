@@ -3,6 +3,8 @@ import PageHero from "@/components/PageHero";
 import PackageComparator from "@/components/PackageComparator";
 import SalaryCalculator from "@/components/SalaryCalculator";
 import SectionShell from "@/components/SectionShell";
+import FAQSection from "@/components/FAQSection";
+import { faqsByPage } from "@/data/faqsByPage";
 
 export const metadata: Metadata = {
   title: "Calcul salaire brut en net et coût employeur | SKS TALENTS",
@@ -178,6 +180,7 @@ export default function SalaryCalculatorPage() {
           </article>
         </div>
       </SectionShell>
+          <FAQSection eyebrow="FAQ" title={faqsByPage["calcul-salaire-brut-net"].title} description={faqsByPage["calcul-salaire-brut-net"].description} items={faqsByPage["calcul-salaire-brut-net"].items} />
     </>
   );
 }
