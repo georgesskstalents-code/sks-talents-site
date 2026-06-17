@@ -519,14 +519,14 @@ export default function LifeSciencesLanding() {
             Prêt à transformer votre talent strategy{" "}
             <span className="italic text-brand-mint">en avantage stratégique</span> ?
           </h2>
-          <p className="mt-3 max-w-2xl text-white/70 t-body">
+          <p className="mt-3 max-w-2xl !text-white/70 t-body">
             15 min avec Georges Kengue. ROI projeté chiffré sur 6 mois. Pas de pitch commercial.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <CalendlyButton label="Réserver mes 15 min →" tone="solid" />
             <Link
               href="#diagnostic"
-              className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-4 t-body font-semibold text-white transition hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-4 t-body font-semibold !text-white transition hover:bg-white/10"
             >
               Diagnostic
             </Link>

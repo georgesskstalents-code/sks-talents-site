@@ -253,9 +253,18 @@ export async function POST(request: Request) {
       model,
       stream: true,
       instructions: `${SYSTEM_PROMPT}\n\n${transformLanguage(language)}\nCurrent page: ${path || "/"}\nCurrent title: ${title || "SKS TALENTS"}`,
+      // OpenAI Responses API requires the content type to match the role:
+      // assistant turns must use "output_text", user turns "input_text".
+      // Sending "input_text" for an assistant message (the welcome bubble is
+      // always in the history) triggers a 400 on the very first question.
       input: messages.map((message) => ({
         role: message.role,
-        content: [{ type: "input_text", text: message.content }]
+        content: [
+          {
+            type: message.role === "assistant" ? "output_text" : "input_text",
+            text: message.content
+          }
+        ]
       }))
     }),
     cache: "no-store"
