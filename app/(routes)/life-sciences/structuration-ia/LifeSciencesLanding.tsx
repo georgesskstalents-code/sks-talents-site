@@ -228,7 +228,7 @@ export default function LifeSciencesLanding() {
                     className="group relative grid gap-5 overflow-hidden rounded-3xl border border-brand-teal/15 bg-white shadow-[0_22px_56px_rgba(15,58,60,0.08)] sm:grid-cols-[1fr_auto_1.15fr] sm:items-stretch sm:gap-0"
                   >
                     {/* Counter chip top-left */}
-                    <span className="absolute left-5 top-5 rounded-full border border-brand-teal/15 bg-[#faf7f1] px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-stone/70 sm:left-7 sm:top-7">
+                    <span className="absolute left-5 top-5 rounded-full border border-brand-teal/15 bg-[#faf7f1] px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-stone sm:left-7 sm:top-7">
                       {counter}
                     </span>
 
@@ -246,7 +246,7 @@ export default function LifeSciencesLanding() {
                       <div className="mt-7 grid gap-5 sm:grid-cols-2">
                         {enjeu.stats.map((s) => (
                           <div key={s.label}>
-                            <p className="text-eyebrow font-semibold uppercase tracking-[0.2em] text-brand-stone/70">
+                            <p className="text-eyebrow font-semibold uppercase tracking-[0.2em] text-brand-stone">
                               {s.label}
                             </p>
                             <p className="mt-2 font-display text-[32px] leading-none text-brand-ink sm:text-[38px]">
@@ -347,7 +347,7 @@ export default function LifeSciencesLanding() {
                       >
                         {enjeu.num}
                       </span>
-                      <span className="text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-stone/70">
+                      <span className="text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-stone">
                         Enjeu
                       </span>
                     </div>
@@ -404,7 +404,7 @@ export default function LifeSciencesLanding() {
                   {/* Step counter overlay (desktop only) */}
                   <span
                     aria-hidden="true"
-                    className="pointer-events-none absolute -top-4 left-6 hidden rounded-full border border-brand-teal/15 bg-white px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-stone/60 shadow-sm sm:inline-block"
+                    className="pointer-events-none absolute -top-4 left-6 hidden rounded-full border border-brand-teal/15 bg-white px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-stone shadow-sm sm:inline-block"
                   >
                     {counter}
                   </span>

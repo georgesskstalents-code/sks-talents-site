@@ -115,7 +115,7 @@ export default function NavDropdown({ label, items, groups, triggerClassName }: 
             <div className="grid grid-cols-2 gap-2 px-2">
               {groups.map((group) => (
                 <div key={group.title} className="flex flex-col gap-0.5">
-                  <p className="px-2 pb-1 pt-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-stone/70">
+                  <p className="px-2 pb-1 pt-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-stone">
                     {group.title}
                   </p>
                   {group.items.map((item) => (

@@ -113,9 +113,20 @@ type ChatMessage = {
   content: string;
 };
 
-function detectLanguage(): ChatLanguage {
+// Single source of truth for language = the site toggle (localStorage "sks-site-language",
+// written by SiteLanguageSelector). The chat MUST follow it so the answer language always
+// matches what the visitor selected on the site. We only fall back to the browser language
+// on a first visit where no preference has been stored yet.
+const SITE_LANGUAGE_KEY = "sks-site-language";
+
+function readSiteLanguage(): ChatLanguage {
   if (typeof window === "undefined") {
     return "fr";
+  }
+
+  const stored = window.localStorage.getItem(SITE_LANGUAGE_KEY);
+  if (stored === "en" || stored === "fr") {
+    return stored;
   }
 
   return window.navigator.language.toLowerCase().startsWith("fr") ? "fr" : "en";
@@ -188,6 +199,7 @@ export default function SiteIntelligenceAgent({
   const [voiceSupported, setVoiceSupported] = useState(false);
   const recognitionRef = useRef<SpeechRecognition | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
+  const languageRef = useRef<ChatLanguage>("fr");
   const currentPath = useMemo(() => pathname ?? "/", [pathname]);
   const ui = copy[language];
   const consent = useCookieConsent();
@@ -268,10 +280,50 @@ export default function SiteIntelligenceAgent({
   }
 
   useEffect(() => {
+    languageRef.current = language;
+  }, [language]);
+
+  useEffect(() => {
     setMounted(true);
-    const nextLanguage = detectLanguage();
+    const nextLanguage = readSiteLanguage();
+    languageRef.current = nextLanguage;
     setLanguage(nextLanguage);
     setMessages([createWelcomeMessage(nextLanguage)]);
+  }, []);
+
+  // Keep the chat language in sync with the site FR/EN toggle. When the visitor
+  // flips the site language, the chat follows it (UI copy + next answer language).
+  // An ongoing conversation is preserved; only the standalone welcome bubble is swapped.
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const sync = () => {
+      const next = readSiteLanguage();
+      if (next === languageRef.current) {
+        return;
+      }
+      languageRef.current = next;
+      setLanguage(next);
+      setMessages((current) =>
+        current.length <= 1 ? [createWelcomeMessage(next)] : current
+      );
+    };
+
+    const handleStorage = (event: StorageEvent) => {
+      if (event.key === SITE_LANGUAGE_KEY) {
+        sync();
+      }
+    };
+
+    window.addEventListener("storage", handleStorage);
+    const interval = window.setInterval(sync, 1000);
+
+    return () => {
+      window.removeEventListener("storage", handleStorage);
+      window.clearInterval(interval);
+    };
   }, []);
 
   useEffect(() => {
@@ -459,7 +511,7 @@ export default function SiteIntelligenceAgent({
   }
 
   return (
-    <div className="fixed bottom-5 right-5 z-[2147483000]">
+    <div className="fixed bottom-5 right-5 z-[2147483000]" data-no-translate>
       {open ? (
         <div className="pointer-events-auto flex h-[min(78vh,720px)] w-[min(94vw,390px)] flex-col overflow-hidden rounded-[28px] border border-brand-line bg-white shadow-[0_24px_70px_rgba(15,23,42,0.22)]">
           <div className="bg-gradient-to-r from-brand-ink via-brand-teal to-cyan-600 px-5 py-4 text-white">
@@ -483,7 +535,7 @@ export default function SiteIntelligenceAgent({
             </div>
           </div>
 
-          <div ref={scrollRef} className="flex-1 space-y-4 overflow-y-auto bg-slate-50 px-4 py-4">
+          <div ref={scrollRef} className="min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain bg-slate-50 px-4 py-4">
             {messages.map((message) => (
               <div
                 key={message.id}
@@ -519,6 +571,8 @@ export default function SiteIntelligenceAgent({
                 <button
                   type="button"
                   onClick={() => {
+                    window.localStorage.setItem(SITE_LANGUAGE_KEY, "fr");
+                    languageRef.current = "fr";
                     setLanguage("fr");
                     setMessages([createWelcomeMessage("fr")]);
                     setInput("");
@@ -533,6 +587,8 @@ export default function SiteIntelligenceAgent({
                 <button
                   type="button"
                   onClick={() => {
+                    window.localStorage.setItem(SITE_LANGUAGE_KEY, "en");
+                    languageRef.current = "en";
                     setLanguage("en");
                     setMessages([createWelcomeMessage("en")]);
                     setInput("");
@@ -547,7 +603,8 @@ export default function SiteIntelligenceAgent({
                 <button
                   type="button"
                   onClick={() => {
-                    const nextLanguage = detectLanguage();
+                    const nextLanguage = readSiteLanguage();
+                    languageRef.current = nextLanguage;
                     setLanguage(nextLanguage);
                     setMessages([createWelcomeMessage(nextLanguage)]);
                     setInput("");

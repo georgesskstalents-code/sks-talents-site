@@ -12,7 +12,7 @@ const config: Config = {
       colors: {
         brand: {
           teal: "#41a0a4",
-          stone: "#5F5E5A",
+          stone: "#4F4E4A",
           sand: "#f8f8f8",
           ink: "#1e2a2a",
           mint: "#dff3f1"

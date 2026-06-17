@@ -203,7 +203,7 @@ export default function AnimalHealthLanding() {
                           </span>
                         ))}
                       </div>
-                      <span className="text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-stone/70">
+                      <span className="text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-stone">
                         {enjeux.length > 1 ? "Enjeux" : "Enjeu"}
                       </span>
                     </div>
@@ -265,7 +265,7 @@ export default function AnimalHealthLanding() {
                   {/* Step counter */}
                   <span
                     aria-hidden="true"
-                    className="pointer-events-none absolute -top-4 left-6 hidden rounded-full border border-brand-teal/15 bg-white px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-stone/60 shadow-sm sm:inline-block"
+                    className="pointer-events-none absolute -top-4 left-6 hidden rounded-full border border-brand-teal/15 bg-white px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-stone shadow-sm sm:inline-block"
                   >
                     {String(index + 1).padStart(2, "0")} / {String(enjeuxAvecAgents.length).padStart(2, "0")}
                   </span>

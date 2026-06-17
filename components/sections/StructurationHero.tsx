@@ -1,9 +1,20 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { useState } from "react";
 
 type Vertical = "life-sciences" | "animal-health";
+
+// Visitors often land here straight from an email link and expect a homepage.
+// This one-liner tells them who (SKS Talents), what (executive search vertical)
+// and that this specific page is the IA programme, before the abstract headline.
+const ORIENTATION: Record<Vertical, string> = {
+  "life-sciences":
+    "Cabinet executive search Life Sciences. Cette page présente notre programme IA de structuration RH pour biotech, medtech et pharma en croissance.",
+  "animal-health":
+    "Cabinet executive search Animal Health. Cette page présente notre programme IA de structuration RH pour groupements vétérinaires et marques petfood."
+};
 
 type StructurationHeroProps = {
   vertical: Vertical;
@@ -55,7 +66,7 @@ function Chevron({ open }: { open: boolean }) {
 }
 
 export function StructurationHero(props: StructurationHeroProps) {
-  const { eyebrow, headlineLines, question, constat, response, pourquoiSKS } = props;
+  const { vertical, eyebrow, headlineLines, question, constat, response, pourquoiSKS } = props;
   const [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -67,10 +78,21 @@ export function StructurationHero(props: StructurationHeroProps) {
         />
 
         <div className="space-y-14 md:ml-[100px] md:space-y-16 md:pl-8">
-          <div>
-            <span className="inline-flex items-center rounded-full bg-[#e6f0f0] px-5 py-1.5 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#41a0a4]">
-              {eyebrow}
-            </span>
+          <div className="space-y-5">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-1.5 font-sans text-[13px] font-semibold text-[#4a6e70] transition-colors hover:text-[#0d2a2c]"
+            >
+              <span aria-hidden>&larr;</span> Accueil SKS Talents
+            </Link>
+            <div>
+              <span className="inline-flex items-center rounded-full bg-[#e6f0f0] px-5 py-1.5 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#2f7c80]">
+                {eyebrow}
+              </span>
+            </div>
+            <p className="max-w-2xl font-sans text-[15px] leading-relaxed text-[#3d5c5e]">
+              {ORIENTATION[vertical]}
+            </p>
           </div>
 
           <h1 className="font-display text-[32px] font-medium leading-[1.05] sm:text-[44px] lg:text-[58px]">
@@ -185,7 +207,7 @@ export function StructurationHero(props: StructurationHeroProps) {
               <span className="font-semibold text-[#0d2a2c]">{response.enjeux}</span>
               {"  ·  "}
               <span className="font-semibold text-[#0d2a2c]">{response.agents}</span>{" "}
-              <span className="text-[#9CA3AF]">{response.agentsDetail}</span>
+              <span className="text-[#5b7274]">{response.agentsDetail}</span>
             </p>
             <p className="mt-2 font-sans text-[15px] font-semibold text-[#0d2a2c]">
               {response.roi}

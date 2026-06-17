@@ -280,7 +280,7 @@ export default async function SuiviPage({
                     className="flex items-center justify-between gap-3 rounded-xl px-2 py-2 hover:bg-brand-mint/15"
                   >
                     <div className="flex min-w-0 items-center gap-3">
-                      <span className="text-xs font-mono text-brand-stone/60">
+                      <span className="text-xs font-mono text-brand-stone">
                         {String(idx + 1).padStart(2, "0")}
                       </span>
                       <a
@@ -382,7 +382,7 @@ export default async function SuiviPage({
                       {lead.kind} · {lead.pagePath}
                     </p>
                   </div>
-                  <p className="shrink-0 text-xs text-brand-stone/60">
+                  <p className="shrink-0 text-xs text-brand-stone">
                     {relativeTime(lead.createdAt)}
                   </p>
                 </li>

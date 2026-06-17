@@ -304,7 +304,7 @@ export default function Header() {
                           <div className="flex flex-col gap-3 pb-3 pl-2">
                             {item.groups!.map((group) => (
                               <div key={group.title}>
-                                <p className="px-3 pb-1 pt-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-stone/70">
+                                <p className="px-3 pb-1 pt-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-stone">
                                   {group.title}
                                 </p>
                                 <ul className="flex flex-col gap-0.5">
