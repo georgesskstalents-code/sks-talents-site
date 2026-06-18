@@ -238,7 +238,7 @@ export default function Footer() {
             />
           </div>
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/80">
-            Scaling teams without losing soul
+            Your Talents, Our Future
           </p>
           <p className="text-xs text-white/60">© 2026 SKS TALENTS</p>
         </div>

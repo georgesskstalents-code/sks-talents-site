@@ -81,24 +81,24 @@ export const faqsByPage: Record<string, FaqPageData> = {
   },
   "diagnostic": {
     pageKey: "diagnostic",
-    title: "Diagnostic IVD, NGS et point of care : les questions cles",
-    description: "Pour les dirigeant.e.s du secteur diagnostic qui structurent leur equipe face a l'IVDR, au NGS et a l'integration laboratoire.",
+    title: "Diagnostic Structuration RH : les questions fréquentes",
+    description: "Pour les dirigeant.e.s qui veulent structurer leur organisation avant de recruter : utilité, durée, stade et différence avec un mandat de recrutement.",
     items: [
       {
-        question: "L'IVDR change quoi concretement pour mon equipe regulatory affairs diagnostic ?",
-        answer: "L'IVDR reclasse environ 80% des dispositifs IVD en classes B, C ou D, contre 7% sous l'ancienne directive (Source : France Biotech x EY 2025). Concretement, il faut un.e Person Responsible for Regulatory Compliance dedie.e, des dossiers techniques renforces et un suivi post-market actif. Le recrutement RA diagnostic devient critique des le seed."
+        question: "Pourquoi faire un diagnostic RH avant de recruter ?",
+        answer: "Recruter sans avoir posé la structure, c'est souvent recruter deux fois. Le diagnostic identifie les frictions réelles : process manquants, rôles flous, dépendance CEO, tâches non automatisées. On sécurise chaque recrutement avant qu'il parte en erreur."
       },
       {
-        question: "Quels profils recruter en priorite pour lancer une plateforme NGS clinique ?",
-        answer: "Trois profils sont structurants. Un.e bioinformaticien.ne senior pour le pipeline variant calling, un.e responsable assurance qualite ISO 15189, et un.e medical affairs avec experience anapath moleculaire. L'integration LIMS et la validation analytique des panels conditionnent le time-to-market. SKS Talents recrute ces trois fonctions en parallele."
+        question: "Combien de temps prend le diagnostic ?",
+        answer: "Entre 5 et 10 jours ouvrés selon la taille de l'équipe et la complexité de l'organisation. Le livrable est un rapport structuré avec recommandations priorisées et plan d'action à 90 jours."
       },
       {
-        question: "Pourquoi l'integration HL7 et LIMS bloque autant les deploiements diagnostic ?",
-        answer: "L'integration HL7 FHIR et LIMS est rarement portee par un.e seul.e profil. Elle exige un.e architecte logiciel cote IVD, un.e specialiste interoperabilite hopital, et un.e clinical application specialist. Sans ce trio, le go-live derape de 6 a 12 mois. C'est un point de douleur recurrent observe en mission."
+        question: "À quel stade est-ce utile ?",
+        answer: "Dès la Série A ou quand l'équipe dépasse 15 personnes. C'est le seuil où les routines informelles cassent et où l'absence de structure coûte du temps réel aux managers."
       },
       {
-        question: "La cybersecurite OT en laboratoire, c'est un sujet recrutement ou DSI ?",
-        answer: "Les deux. L'analyseur IVD connecte est un endpoint OT regule, pas un PC de bureau. Il faut un.e responsable cybersecurite avec double culture IEC 81001-5-1 et IT hospitaliere. Ce profil hybride est rare sur le marche francais. SKS Talents l'identifie via sourcing croise medtech, pharma industrielle et editeurs LIMS."
+        question: "Quelle est la différence avec une mission de recrutement ?",
+        answer: "Le diagnostic RH précède ou accompagne le recrutement, il n'en est pas une condition. Certains clients commandent un diagnostic seul, d'autres en font le kick-off d'un mandat executive search."
       },
     ]
   },

@@ -40,7 +40,7 @@ const enjeuxAvecAgents: {
     }
   },
   {
-    enjeux: [{ num: "02", title: "Plannings et pilotage financier ingérables sur Excel", quote: "Entre la pénurie de vétés, le turnover des ASV et 30 plannings sur Excel par site, je passe mon temps à boucher les trous au lieu de piloter." }],
+    enjeux: [{ num: "02", title: "Plannings et pilotage financier ingérables sur Excel", quote: "Entre la pénurie de vétos, le turnover des équipes et 30 plannings sur Excel par site, je passe mon temps à boucher les trous au lieu de piloter." }],
     agent: {
       Icon: BarChart3,
       title: "Agent Pilotage & Planning multi-sites",
@@ -418,7 +418,7 @@ export default function AnimalHealthLanding() {
             <span className="italic text-brand-mint">votre premier agent IA</span> ?
           </h2>
           <p className="mt-3 max-w-2xl !text-white/70 t-body">
-            15 min avec Georges Kengue. ROI projeté chiffré sur 6 mois. Pas de pitch commercial.
+            15 min avec Georges. ROI projeté chiffré sur 6 mois. Pas de pitch commercial.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <CalendlyButton label="Réserver mes 15 min →" tone="solid" />

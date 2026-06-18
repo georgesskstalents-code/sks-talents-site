@@ -33,41 +33,40 @@ export const FAQ_HOME_TABS: ReadonlyArray<FaqTab> = [
         id: "ls-anticipation",
         category: "Anticipation",
         question:
-          "Comment aligner votre plan de recrutement sur votre roadmap R&D et clinique (préclinique → clinique → industrialisation) ?",
+          "Comment planifier vos recrutements Plant Director et Head of Engineering sur votre roadmap préclinique → industrialisation BPF/GMP ?",
         answerHtml:
-          'En séquençant vos recrutements sur vos jalons scientifiques : sécuriser les rôles clés <strong>plusieurs mois avant</strong> chaque transition de phase, pas au moment où le besoin devient critique.',
-        punchline: "Attendre le besoin réel, c'est déjà ralentir l'exécution."
+          'La règle : un profil industrialisation senior se recrute <strong>4 à 6 mois avant le jalon</strong>, pas au moment où le besoin devient visible. Plant Director, Head of Engineering, VP Manufacturing : ces rôles structurent la phase suivante. On les cartographie avec vous sur votre roadmap et on ouvre le sourcing au bon moment.',
+        punchline: "Au bon moment, pas en urgence."
       },
       {
         id: "ls-decision",
         category: "Décision",
         question:
-          "Pourquoi vos recrutements de profils clés (CMC, Affaires réglementaires, VP R&D, Manufacturing) prennent-ils autant de temps ?",
+          "Qu'est-ce qui rallonge réellement le time-to-hire sur vos profils techniques senior : le marché ou votre process interne ?",
         answerHtml:
-          'Parce que ces profils sont rares et que le besoin évolue plus vite que sa définition : <strong>attentes floues, priorités mouvantes, manque d\'alignement interne</strong>.',
-        punchline:
-          "Le blocage n'est pas l'accès aux profils, mais la capacité à décider vite et clairement."
+          'Dans la majorité des cas : <strong>le process interne</strong>. Brief trop vague au départ, validation multi-niveaux non synchronisée, contre-offre acceptée faute de décision rapide. On audite votre process de décision dès le lancement de la mission et on co-construit un circuit court.',
+        punchline: "Le délai se réduit structurellement, pas par chance."
       },
       {
         id: "ls-cost",
         category: "Coût caché",
         question:
-          "Quel est le coût d'un onboarding mal structuré sur ces rôles critiques en phase de levée ?",
+          "Combien coûte réellement un Plant Director ou VP Sales qui repart avant 18 mois en phase de levée ?",
         answerHtml: "",
         costBox: {
-          figure: "1,5 à 2x",
+          figure: "1 à 1,5x",
           label: "Du salaire annuel",
-          caption: "le coût d'un onboarding raté.",
-          bulletsIntro: "Mais surtout, il crée :",
+          caption: "en coût direct, hors impact roadmap.",
+          bulletsIntro: "Mais le coût réel dépasse le chiffre :",
           bullets: [
-            "Un décalage d'exécution",
-            "Une perte de traction produit ou commerciale",
-            "Un effet domino sur les équipes"
+            "Jalon décalé",
+            "Équipe déstabilisée",
+            "Signal négatif au board au pire moment"
           ],
-          source: "Source : Loocatme (2026)"
+          source: "Sur un profil à 120-150 k€ : 150 à 220 k€ perdus."
         },
         punchline:
-          "Sur ces postes, un mauvais onboarding ralentit directement votre croissance."
+          "La prévention coûte moins cher que le remplacement : chaque mission SKS Talents inclut un cadrage onboarding 30/60/90 jours."
       }
     ]
   },
@@ -80,7 +79,7 @@ export const FAQ_HOME_TABS: ReadonlyArray<FaqTab> = [
         id: "ah-penuriques",
         category: "Anticipation",
         question:
-          "Comment anticiper vos recrutements de vétérinaires et ASV en phase de regroupement ?",
+          "Comment anticiper vos recrutements de profils clés (direction des opérations, M&A, coordination régionale) en phase de regroupement ?",
         answerHtml:
           'En anticipant les besoins de chaque site avant l\'intégration : ces profils pénuriques se sécurisent par <strong>approche directe et projection dans votre projet de groupe</strong>, pas par annonce.',
         punchline: "Sans vision claire, les meilleurs profils ne bougent pas."

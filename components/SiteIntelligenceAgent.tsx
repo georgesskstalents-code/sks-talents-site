@@ -200,6 +200,9 @@ export default function SiteIntelligenceAgent({
   const recognitionRef = useRef<SpeechRecognition | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const languageRef = useRef<ChatLanguage>("fr");
+  // Tracks whether the user is reading at the bottom. If they scrolled up to
+  // re-read, we must NOT yank them back down on every streamed token.
+  const atBottomRef = useRef(true);
   const currentPath = useMemo(() => pathname ?? "/", [pathname]);
   const ui = copy[language];
   const consent = useCookieConsent();
@@ -345,13 +348,24 @@ export default function SiteIntelligenceAgent({
     };
   }, []);
 
+  // Follow the conversation only while the user is already at the bottom.
+  // If they scrolled up, leave their position untouched so they can read freely.
   useEffect(() => {
-    if (!scrollRef.current) {
+    const el = scrollRef.current;
+    if (!el || !atBottomRef.current) {
       return;
     }
 
-    scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-  }, [messages, loading, open]);
+    el.scrollTop = el.scrollHeight;
+  }, [messages, loading]);
+
+  // Opening the chat always lands at the latest message.
+  useEffect(() => {
+    if (open && scrollRef.current) {
+      atBottomRef.current = true;
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    }
+  }, [open]);
 
   async function submitMessage(messageText: string) {
     const trimmed = messageText.trim();
@@ -535,7 +549,14 @@ export default function SiteIntelligenceAgent({
             </div>
           </div>
 
-          <div ref={scrollRef} className="min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain bg-slate-50 px-4 py-4">
+          <div
+            ref={scrollRef}
+            onScroll={(event) => {
+              const el = event.currentTarget;
+              atBottomRef.current = el.scrollHeight - el.scrollTop - el.clientHeight < 80;
+            }}
+            className="min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain bg-slate-50 px-4 py-4"
+          >
             {messages.map((message) => (
               <div
                 key={message.id}

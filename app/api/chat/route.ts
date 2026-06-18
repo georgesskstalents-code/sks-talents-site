@@ -214,18 +214,18 @@ export async function POST(request: Request) {
     );
   }
 
-  try {
-    await appendSiteAnalyticsLog({
-      type: "agent_query",
-      path,
-      title,
-      query: latestUserMessage.content,
-      sessionId,
-      createdAt: new Date().toISOString()
-    });
-  } catch (error) {
+  // Fire-and-forget: never block the OpenAI call (and the first streamed token)
+  // on the analytics write. This shaves the perceived latency of the chat.
+  void appendSiteAnalyticsLog({
+    type: "agent_query",
+    path,
+    title,
+    query: latestUserMessage.content,
+    sessionId,
+    createdAt: new Date().toISOString()
+  }).catch((error) => {
     console.error("Chat analytics log error", error);
-  }
+  });
 
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {

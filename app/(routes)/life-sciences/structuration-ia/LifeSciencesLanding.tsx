@@ -556,7 +556,7 @@ export default function LifeSciencesLanding() {
             <span className="italic text-brand-mint">en avantage stratégique</span> ?
           </h2>
           <p className="mt-3 max-w-2xl !text-white/70 t-body">
-            15 min avec Georges Kengue. ROI projeté chiffré sur 6 mois. Pas de pitch commercial.
+            15 min avec Georges. ROI projeté chiffré sur 6 mois. Pas de pitch commercial.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <CalendlyButton label="Réserver mes 15 min →" tone="solid" />

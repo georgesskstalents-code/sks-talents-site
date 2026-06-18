@@ -269,7 +269,7 @@ export default function DiagnosticForm({ sector, questions }: Props) {
             type="button"
             disabled={isPending}
             onClick={submit}
-            className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-brand-ink px-6 py-4 t-body font-semibold !text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+            className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-brand-teal px-6 py-4 t-body font-semibold !text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {isPending ? "Envoi en cours…" : "Recevoir mon diagnostic"}
             <ArrowRight className="h-4 w-4" />
@@ -358,7 +358,7 @@ export default function DiagnosticForm({ sector, questions }: Props) {
         <button
           type="button"
           onClick={next}
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-ink px-6 py-3.5 t-body font-semibold !text-white transition hover:opacity-90"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-teal px-6 py-3.5 t-body font-semibold !text-white transition hover:opacity-90"
         >
           {step < 4 ? "Question suivante" : "Voir mon diagnostic"}
           <ArrowRight className="h-4 w-4" />
