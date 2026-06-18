@@ -32,25 +32,27 @@ export const FAQ_HOME_TABS: ReadonlyArray<FaqTab> = [
       {
         id: "ls-anticipation",
         category: "Anticipation",
-        question: "Comment anticiper vos recrutements en phase de croissance ?",
+        question:
+          "Comment aligner votre plan de recrutement sur votre roadmap R&D et clinique (préclinique → clinique → industrialisation) ?",
         answerHtml:
-          'En alignant votre plan de recrutement sur votre roadmap (produit → industrialisation → commercialisation) et en sécurisant en amont les rôles clés : <strong>Head of Engineering, CTO, Direction commerciale</strong>.',
+          'En séquençant vos recrutements sur vos jalons scientifiques : sécuriser les rôles clés <strong>plusieurs mois avant</strong> chaque transition de phase, pas au moment où le besoin devient critique.',
         punchline: "Attendre le besoin réel, c'est déjà ralentir l'exécution."
       },
       {
         id: "ls-decision",
         category: "Décision",
         question:
-          "Pourquoi vos recrutements de leadership (Engineering, Sales, Direction) prennent-ils du temps ?",
+          "Pourquoi vos recrutements de profils clés (CMC, Affaires réglementaires, VP R&D, Manufacturing) prennent-ils autant de temps ?",
         answerHtml:
-          'Parce que le besoin évolue plus vite que sa définition : <strong>attentes floues, priorités mouvantes, manque d\'alignement interne</strong>.',
+          'Parce que ces profils sont rares et que le besoin évolue plus vite que sa définition : <strong>attentes floues, priorités mouvantes, manque d\'alignement interne</strong>.',
         punchline:
           "Le blocage n'est pas l'accès aux profils, mais la capacité à décider vite et clairement."
       },
       {
         id: "ls-cost",
         category: "Coût caché",
-        question: "Quel est le coût d'un onboarding mal structuré sur ces rôles clés ?",
+        question:
+          "Quel est le coût d'un onboarding mal structuré sur ces rôles critiques en phase de levée ?",
         answerHtml: "",
         costBox: {
           figure: "1,5 à 2x",
@@ -76,28 +78,29 @@ export const FAQ_HOME_TABS: ReadonlyArray<FaqTab> = [
     questions: [
       {
         id: "ah-penuriques",
-        category: "Profils pénuriques",
+        category: "Anticipation",
         question:
-          "Comment recruter des profils pénuriques en Animal Health ? (vétérinaire développement, réseau, commercial, growth…)",
+          "Comment anticiper vos recrutements de vétérinaires et ASV en phase de regroupement ?",
         answerHtml:
-          'Ces profils ne répondent pas aux offres. Ils se recrutent par <strong>approche directe et projection dans votre projet</strong>.',
+          'En anticipant les besoins de chaque site avant l\'intégration : ces profils pénuriques se sécurisent par <strong>approche directe et projection dans votre projet de groupe</strong>, pas par annonce.',
         punchline: "Sans vision claire, les meilleurs profils ne bougent pas."
       },
       {
         id: "ah-hybrides",
-        category: "Rôles hybrides",
-        question: "Pourquoi vos recrutements terrain et réseau sont-ils difficiles ?",
+        category: "Décision",
+        question:
+          "Pourquoi vos recrutements de profils clés (vétérinaires associés, direction de site) prennent-ils autant de temps ?",
         answerHtml:
-          'Parce que ces rôles sont hybrides : <strong>business, terrain, relationnel</strong>. L\'enjeu n\'est pas seulement le poste, mais <strong>l\'adhésion au modèle</strong> (groupe, réseau, croissance).',
+          'Parce que ces rôles sont hybrides : <strong>clinique, management, business</strong>. L\'enjeu n\'est pas seulement le poste, mais <strong>l\'adhésion au modèle de groupe</strong>.',
         punchline: "Ces postes ne se vendent pas, ils se font choisir."
       },
       {
         id: "ah-securisation",
-        category: "Sécurisation",
+        category: "Coût caché",
         question:
-          "Comment sécuriser vos rôles clés (Direction commerciale, développement, growth) ?",
+          "Quel est le coût d'un onboarding mal structuré lors de l'intégration d'une nouvelle clinique ?",
         answerHtml:
-          'En clarifiant les attentes dès le départ : <strong>exécution court terme vs structuration long terme</strong>.',
+          'Un départ précoce, une équipe déstabilisée et une intégration qui prend du retard : <strong>la valeur du rachat se dégrade dès les premiers mois</strong>.',
         punchline:
           "Un mauvais recrutement ou un onboarding mal cadré ralentit immédiatement votre croissance."
       }

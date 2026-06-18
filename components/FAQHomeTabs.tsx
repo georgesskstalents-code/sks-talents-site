@@ -158,8 +158,12 @@ function QuestionAccordion({
   );
 }
 
-export default function FAQHomeTabs() {
-  const [activeVertical, setActiveVertical] = useState<FaqVertical>("life-sciences");
+export default function FAQHomeTabs({
+  defaultVertical = "life-sciences"
+}: {
+  defaultVertical?: FaqVertical;
+}) {
+  const [activeVertical, setActiveVertical] = useState<FaqVertical>(defaultVertical);
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const activeTab = FAQ_HOME_TABS.find((t) => t.vertical === activeVertical) ?? FAQ_HOME_TABS[0];

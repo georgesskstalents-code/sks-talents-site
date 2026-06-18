@@ -12,8 +12,8 @@ export const animalHealthQuestions: [
     title: "Quelle est la nature de votre organisation ?",
     options: [
       { value: "A", label: "Groupement de cliniques vétérinaires en consolidation" },
-      { value: "B", label: "Marque petfood multinationale (Mars, Royal Canin, Hill's…)" },
-      { value: "C", label: "Marque petfood PME premium en hyper-croissance" },
+      { value: "B", label: "Clinique vétérinaire multi-sites / en cours de regroupement" },
+      { value: "C", label: "Clinique vétérinaire indépendante en croissance" },
       { value: "D", label: "Diagnostic vétérinaire / HealthTech vétérinaire" },
       { value: "E", label: "Autre" }
     ],

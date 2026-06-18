@@ -10,6 +10,7 @@ import {
   TrendingUp
 } from "lucide-react";
 import CalendlyButton from "@/components/CalendlyButton";
+import ComplianceSection from "@/components/landings/ComplianceSection";
 import FAQHomeTabs from "@/components/FAQHomeTabs";
 import { StructurationHero } from "@/components/sections/StructurationHero";
 import DemoStage from "@/components/landings/DemoStage";
@@ -26,19 +27,38 @@ const SHOW_DETAIL_BLOCKS = false;
 // Mise a jour 2026-05-13 : retrait M&A Pipeline + dashboard ROI + fusion Lead Catcher/Sales Closer = Sales Pipeline.
 const enjeuxAvecAgents: {
   enjeux: { num: string; title: string; quote: string; tone?: "amber" | "yellow" }[];
-  agent: { Icon: typeof FileText; title: string; desc: string; note: string; badge?: string };
+  agent: { Icon: typeof FileText; title: string; desc: string; gain: string; note: string; badge?: string };
 }[] = [
   {
-    enjeux: [{ num: "01", title: "Documentation juridique RH dispersée", quote: "Tout est éclaté. Due diligence en 2 sem." }],
-    agent: { Icon: FileText, title: "Agent Juridique RH multi-sites", desc: "Centralise contrats, génère avenants conformes à la convention vétérinaire, alerte échéances, prépare due diligences.", note: "Due diligence 48h vs 2 sem" }
+    enjeux: [{ num: "01", title: "Documentation juridique RH dispersée", quote: "Tout est éclaté. Une due diligence me prend deux semaines." }],
+    agent: {
+      Icon: FileText,
+      title: "Agent Juridique RH multi-sites",
+      desc: "Centralise les contrats, génère des avenants conformes à la convention vétérinaire, alerte sur les échéances et prépare vos due diligences. Toujours avec supervision humaine et traçabilité conforme à l'IA Act.",
+      gain: "Vos documents RH centralisés et toujours à jour. Une due diligence prête en quelques jours plutôt qu'en quelques semaines.",
+      note: "~48 h vs 2 semaines (groupement accompagné)"
+    }
   },
   {
-    enjeux: [{ num: "02", title: "Plannings & finances sur Excel", quote: "30 plannings sur Excel et data sans préconisations. C'est l'enfer." }],
-    agent: { Icon: BarChart3, title: "Agent Pilotage Dirigeant multi-sites", desc: "Compile auto les KPI opérationnels + P&L par clinique. Dashboard CODIR prêt chaque lundi avec alertes contextuelles, détection d'écarts et préconisations stratégiques.", note: "3 jours → 4 minutes · Cash 12 mois fiable à 95 %", badge: "DÉMO" }
+    enjeux: [{ num: "02", title: "Plannings et pilotage financier ingérables sur Excel", quote: "Entre la pénurie de vétés, le turnover des ASV et 30 plannings sur Excel par site, je passe mon temps à boucher les trous au lieu de piloter." }],
+    agent: {
+      Icon: BarChart3,
+      title: "Agent Pilotage & Planning multi-sites",
+      desc: "Construit et ajuste les plannings de chaque clinique selon les effectifs réels, les gardes et les urgences, puis les relie aux KPI opérationnels et au P&L par site. Dashboard CODIR prêt chaque lundi.",
+      gain: "Vos sous-effectifs visibles avant qu'ils ne coûtent de l'activité, et un reporting consolidé sans ressaisie.",
+      note: "Reporting ~3 jours → quelques minutes",
+      badge: "DÉMO"
+    }
   },
   {
-    enjeux: [{ num: "03", title: "Pipeline commercial qui fuit (leads & closing)", quote: "30 % appels ratés et closing < 20 %. Pipeline qui fuit de partout.", tone: "amber" }],
-    agent: { Icon: CheckCircle, title: "Agent Sales Pipeline vétérinaire", desc: "Réceptionne et qualifie les appels entrants 24/7 (leads chauds en 30s). Analyse calls commerciaux, score leads, suggère next actions, prépare RDV, détecte deals à risque.", note: "0 % leads perdus · +30 % closing · 24/7" }
+    enjeux: [{ num: "03", title: "Pipeline commercial qui fuit", quote: "Des appels manqués, des leads qui refroidissent, un closing qu'on ne maîtrise pas.", tone: "amber" }],
+    agent: {
+      Icon: CheckCircle,
+      title: "Agent Sales Pipeline vétérinaire",
+      desc: "Réceptionne et qualifie les appels entrants 24/7, score les leads, suggère les prochaines actions, prépare les RDV et signale les deals à risque.",
+      gain: "Plus aucun appel entrant perdu, et des équipes concentrées sur les leads à fort potentiel plutôt que sur le tri.",
+      note: "Forte baisse des appels manqués, closing en hausse"
+    }
   }
 ];
 
@@ -108,12 +128,13 @@ export default function AnimalHealthLanding() {
       {/* ===== Section 1 - HERO (StructurationHero) ===== */}
       <StructurationHero
         vertical="animal-health"
-        eyebrow="Executive Search  ·  Animal Health"
+        eyebrow="Executive Search  ·  Cliniques vétérinaires"
         headlineLines={[
-          "Combien de jours par mois",
-          "passez-vous à comprendre",
-          "vos cliniques au lieu de scaler ?"
+          "Vos process RH ne suivent plus",
+          "la croissance de votre groupement.",
+          "Nos agents IA, oui."
         ]}
+        subtitle="Combien de jours par mois passez-vous à comprendre vos cliniques au lieu de les faire grandir ? Nous transformons votre reporting, votre juridique RH et votre pipeline commercial en agents IA qui travaillent pour vous."
         question={{
           thematicLabel: "Passer de 3 jours à 4 minutes de reporting mensuel",
           questionText:
@@ -131,17 +152,16 @@ export default function AnimalHealthLanding() {
           line2Italic: "Chez SKS Talents, nos agents IA, oui."
         }}
         response={{
-          cibleBold: "Pour les groupements vétérinaires en consolidation",
-          cibleSuffix:
-            " et les marques petfood (multinationales et PME premium) en hyper-croissance.",
+          cibleBold: "Pour les groupements de cliniques vétérinaires en consolidation",
+          cibleSuffix: " et les cliniques vétérinaires en croissance.",
           description:
             "Anticipez vos recrutements et structurez votre exécution opérationnelle.",
           enjeux: "3 enjeux structurels",
           agents: "3 agents IA sectoriels",
-          agentsDetail: "(Reporting Multi-Sites + Talent + M&A)",
+          agentsDetail: "",
           roi: "ROI mesuré sur vos propres données."
         }}
-        pourquoiSKS="8 ans d'expertise Animal Health  ·  Réseau vétérinaire & petfood national  ·  100+ placements  ·  4,5/5 Trustpilot"
+        pourquoiSKS="8 ans d'expertise vétérinaire  ·  Réseau vétérinaire national  ·  100+ placements  ·  4,5/5 Trustpilot"
       />
 
       {/* ===== Section 2 - DÉMO ===== */}
@@ -174,7 +194,7 @@ export default function AnimalHealthLanding() {
             <span className="italic text-brand-teal">3 agents IA</span> qui y répondent.
           </h2>
           <p className="mt-3 max-w-3xl t-body">
-            À gauche, la phrase qu'on entend. À droite, l'agent IA qui transforme la situation, avec son ROI mesuré.
+            À gauche, la phrase qu'on entend. À droite, l'agent IA qui transforme la situation, avec ce que vous y gagnez.
           </p>
           <div className="mt-12 space-y-8">
             {enjeuxAvecAgents.map(({ enjeux, agent }, index) => {
@@ -249,11 +269,17 @@ export default function AnimalHealthLanding() {
                       </div>
                       <p className="mt-4 t-h3 font-semibold text-brand-ink">{agent.title}</p>
                       <p className="mt-2 t-body">{agent.desc}</p>
+                      <div className="mt-4 rounded-2xl bg-brand-mint/25 p-4">
+                        <p className="text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-teal">
+                          Ce que vous y gagnez
+                        </p>
+                        <p className="mt-1.5 t-body">{agent.gain}</p>
+                      </div>
                     </div>
                     <div className="border-t border-brand-teal/15 bg-gradient-to-r from-brand-teal to-brand-teal/85 px-6 py-3 sm:px-7">
                       <div className="flex items-baseline gap-3">
                         <span className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-white/70">
-                          ROI
+                          Constaté
                         </span>
                         <span className="font-display text-sm font-semibold text-white sm:text-base">
                           {agent.note}
@@ -374,16 +400,22 @@ export default function AnimalHealthLanding() {
         </>
       )}
 
+      {/* ===== Souveraineté & conformité (avant le CTA) ===== */}
+      <ComplianceSection
+        ownershipBody="Vos données RH, juridiques et financières sont parmi les plus sensibles de votre groupement. Nos agents IA sont conçus pour les protéger : hébergement en Europe, conformité RGPD, et aucune donnée de votre groupement utilisée pour entraîner des modèles tiers."
+        iaActBody="Le règlement européen sur l'IA encadre désormais les usages RH algorithmiques. Nos agents sont pensés pour la conformité dès la conception : traçabilité des décisions, supervision humaine, transparence des traitements. Vous adoptez l'IA aujourd'hui sans dette réglementaire demain."
+      />
+
       {/* ===== FAQ tabs (rapatriee depuis la home 2026-05-17) ===== */}
-      <FAQHomeTabs />
+      <FAQHomeTabs defaultVertical="animal-health" />
 
       {/* ===== Section 7 - CTA FINAL ===== */}
       <section className="bg-brand-ink py-14 text-white sm:py-20">
         <div className="container-shell">
           <p className="text-eyebrow font-semibold uppercase text-white/60">Dernière étape</p>
           <h2 className="t-h1 mt-2 max-w-3xl font-display text-white">
-            Quel agent IA{" "}
-            <span className="italic text-brand-mint">déployer en premier</span> ?
+            Prêt à déployer{" "}
+            <span className="italic text-brand-mint">votre premier agent IA</span> ?
           </h2>
           <p className="mt-3 max-w-2xl !text-white/70 t-body">
             15 min avec Georges Kengue. ROI projeté chiffré sur 6 mois. Pas de pitch commercial.

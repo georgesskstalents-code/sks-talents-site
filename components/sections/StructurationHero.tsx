@@ -11,15 +11,16 @@ type Vertical = "life-sciences" | "animal-health";
 // and that this specific page is the IA programme, before the abstract headline.
 const ORIENTATION: Record<Vertical, string> = {
   "life-sciences":
-    "Cabinet executive search Life Sciences. Cette page présente notre programme IA de structuration RH pour biotech, medtech et pharma en croissance.",
+    "Cabinet executive search Life Sciences. Notre programme d'agents IA pour structurer les RH et le pilotage des talents des biotech, medtech et deeptech en croissance (Series A à C).",
   "animal-health":
-    "Cabinet executive search Animal Health. Cette page présente notre programme IA de structuration RH pour groupements vétérinaires et marques petfood."
+    "Cabinet executive search vétérinaire. Notre programme d'agents IA pour structurer les RH et le pilotage des groupements de cliniques et cliniques vétérinaires en croissance."
 };
 
 type StructurationHeroProps = {
   vertical: Vertical;
   eyebrow: string;
   headlineLines: [string, string, string];
+  subtitle?: string;
   question: {
     thematicLabel: string;
     questionText: string;
@@ -66,7 +67,8 @@ function Chevron({ open }: { open: boolean }) {
 }
 
 export function StructurationHero(props: StructurationHeroProps) {
-  const { vertical, eyebrow, headlineLines, question, constat, response, pourquoiSKS } = props;
+  const { vertical, eyebrow, headlineLines, subtitle, question, constat, response, pourquoiSKS } =
+    props;
   const [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -100,6 +102,12 @@ export function StructurationHero(props: StructurationHeroProps) {
             <span className="block text-[#0d2a2c]">{headlineLines[1]}</span>
             <span className="block italic text-[#41a0a4]">{headlineLines[2]}</span>
           </h1>
+
+          {subtitle ? (
+            <p className="-mt-6 max-w-2xl font-sans text-[16px] leading-relaxed text-[#3d5c5e] md:-mt-8 md:text-[17px]">
+              {subtitle}
+            </p>
+          ) : null}
 
           <div className="relative">
             <span aria-hidden className="absolute -left-[50px] top-[35px] hidden md:block">

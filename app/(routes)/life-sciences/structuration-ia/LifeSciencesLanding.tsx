@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Compass, Sparkles, TrendingUp, Users } from "lucide-react";
 import CalendlyButton from "@/components/CalendlyButton";
+import ComplianceSection from "@/components/landings/ComplianceSection";
 import FAQHomeTabs from "@/components/FAQHomeTabs";
 import { StructurationHero } from "@/components/sections/StructurationHero";
 import DemoStage from "@/components/landings/DemoStage";
@@ -20,7 +21,7 @@ const SHOW_DETAIL_BLOCKS = false;
 type StandardItem = {
   variant?: "standard";
   enjeu: { num: string; title: string; quote: string; tone?: "amber" };
-  agent: { Icon: typeof Compass; title: string; desc: string; note: string; badge?: string };
+  agent: { Icon: typeof Compass; title: string; desc: string; gain: string; note: string; badge?: string };
 };
 
 type FeatureItem = {
@@ -39,6 +40,7 @@ type FeatureItem = {
     eyebrow: string;
     title: string;
     desc: string;
+    gain: string;
     badge?: string;
     roi: { label?: string; value: string }[];
   };
@@ -47,7 +49,14 @@ type FeatureItem = {
 const enjeuxAvecAgents: (StandardItem | FeatureItem)[] = [
   {
     enjeu: { num: "01", title: "Reporting talent au board", quote: "Mon board me demande mes KPI talent en temps réel. Je leur sors un PowerPoint qui date d'il y a 3 mois." },
-    agent: { Icon: Compass, title: "Agent CEO Copilot stratégique", desc: "Connecte roadmap R&D + ATS + données financières. Anticipe besoins talent 6 mois à l'avance. Génère vos board packs auto.", note: "+6 mois d'anticipation · Board pack en 5 min", badge: "DÉMO" }
+    agent: {
+      Icon: Compass,
+      title: "Agent CEO Copilot stratégique",
+      desc: "Connecte roadmap R&D, ATS et données financières, anticipe les besoins talent à l'avance et génère votre board pack. Avec supervision humaine et traçabilité conforme à l'IA Act.",
+      gain: "Un board pack prêt en quelques minutes au lieu de plusieurs heures, et des besoins talent anticipés plusieurs mois à l'avance.",
+      note: "~6 mois d'anticipation, board pack en ~5 min (biotech Series B)",
+      badge: "DÉMO"
+    }
   },
   {
     variant: "feature",
@@ -67,18 +76,25 @@ const enjeuxAvecAgents: (StandardItem | FeatureItem)[] = [
       chipLabel: "Agents B + D",
       eyebrow: "Duo agents IA SKS",
       title: "Talent Intelligence & Rétention",
-      desc: "Optimise vos recrutements alignés roadmap. Pilote l'onboarding 90 jours sur toute l'équipe, du junior au C-level. Détecte les signaux faibles de désengagement avant qu'ils ne deviennent des départs.",
+      desc: "Optimise vos recrutements alignés sur la roadmap, pilote l'onboarding 90 jours sur toute l'équipe, et détecte les signaux faibles de désengagement avant qu'ils ne deviennent des départs.",
+      gain: "Des recrutements plus rapides et mieux ciblés, et un turnover réduit grâce à une rétention pilotée.",
       badge: "NOUVEAU",
       roi: [
-        { label: "ROI mesuré", value: "-50 % time-to-fill" },
+        { label: "Constaté", value: "jusqu'à -50 % time-to-fill" },
         { value: "-60 % turnover" },
-        { label: "Déploiement", value: "4 semaines" }
+        { label: "Déploiement", value: "~4 semaines" }
       ]
     }
   },
   {
-    enjeu: { num: "03", title: "Scale Series B/C", quote: "50 → 200 employés en 24 mois. Process datant de 15 employés.", tone: "amber" },
-    agent: { Icon: TrendingUp, title: "Agent Scale-up Playbook", desc: "Bibliothèque vivante de process RH, templates et benchmarks par phase de croissance.", note: "Process scaling Series A → C" }
+    enjeu: { num: "03", title: "Scaler de la Series B à la Series C", quote: "50 → 200 employés en 24 mois, avec des process datant de l'époque où on était 15.", tone: "amber" },
+    agent: {
+      Icon: TrendingUp,
+      title: "Agent Scale-up Playbook",
+      desc: "Bibliothèque vivante de process RH, templates et benchmarks adaptés à chaque phase de croissance.",
+      gain: "Des process RH qui évoluent au rythme de vos levées, sans tout réinventer à chaque palier.",
+      note: "Process structurés pour le passage Series A → C"
+    }
   }
 ];
 
@@ -148,10 +164,11 @@ export default function LifeSciencesLanding() {
         vertical="life-sciences"
         eyebrow="Executive Search  ·  Life Sciences"
         headlineLines={[
-          "Combien de mois d'avance",
-          "avez-vous sur votre prochain",
-          "hire stratégique ?"
+          "Vos process talent ne suivent plus",
+          "votre croissance.",
+          "Notre CEO Copilot IA, oui."
         ]}
+        subtitle="Combien de mois d'avance avez-vous sur votre prochain recrutement stratégique ? Nous transformons votre pilotage des talents, votre reporting board et votre rétention en agents IA qui travaillent pour vous."
         question={{
           thematicLabel: "Le copilot IA qui transforme vos board meetings",
           questionText:
@@ -159,7 +176,7 @@ export default function LifeSciencesLanding() {
           answer: "Peut-être parce que vos ",
           answerHighlight: "KPIs talents sont éparpillés dans plusieurs outils",
           italicPhrase:
-            " et que chaque board mobilise des heures de retraitement manuel. Quand l'information circule mal, le pilotage devient plus lent qu'il ne devrait.",
+            " et que chaque board mobilise des heures de retraitement manuel. Quand l'information arrive, elle est déjà dépassée.",
           punchline: "Et si vos boards reposaient sur une lecture en temps réel ?"
         }}
         constat={{
@@ -169,13 +186,13 @@ export default function LifeSciencesLanding() {
           line2Italic: "Chez SKS Talents, notre CEO Copilot, oui."
         }}
         response={{
-          cibleBold: "Pour les CEO biotech et deeptech",
-          cibleSuffix: " en industrialisation Series A à C.",
+          cibleBold: "Pour les CEO biotech, medtech et deeptech en industrialisation",
+          cibleSuffix: ", de la Series A à la Series C.",
           description:
             "Anticipez vos recrutements stratégiques selon l'évolution de vos programmes.",
           enjeux: "3 enjeux structurels",
           agents: "4 agents IA sectoriels",
-          agentsDetail: "(Talent Intelligence + Rétention)",
+          agentsDetail: "(dont le duo Talent Intelligence & Rétention)",
           roi: "ROI mesuré sur vos propres données."
         }}
         pourquoiSKS="8 ans d'expertise  ·  Commission RH France Biotech  ·  100+ placements  ·  4,5/5 Trustpilot"
@@ -213,7 +230,7 @@ export default function LifeSciencesLanding() {
             <span className="italic text-brand-teal">4 agents IA</span> qui y répondent.
           </h2>
           <p className="mt-3 max-w-3xl t-body">
-            À gauche, la phrase qu'on entend. À droite, l'agent IA qui transforme la situation, avec son ROI mesuré.
+            À gauche, la phrase qu'on entend. À droite, l'agent IA qui transforme la situation, avec ce que vous y gagnez. Un enjeu peut mobiliser plusieurs agents : d'où 4 agents pour 3 enjeux.
           </p>
           <div className="mt-12 space-y-8">
             {enjeuxAvecAgents.map((item, index) => {
@@ -304,6 +321,13 @@ export default function LifeSciencesLanding() {
                       </h4>
                       <p className="mt-4 t-body">{agent.desc}</p>
 
+                      <div className="mt-4 rounded-2xl bg-brand-mint/25 p-4">
+                        <p className="text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-teal">
+                          Ce que vous y gagnez
+                        </p>
+                        <p className="mt-1.5 t-body">{agent.gain}</p>
+                      </div>
+
                       <div className="mt-auto pt-6">
                         <div className="grid grid-cols-3 gap-px overflow-hidden rounded-2xl bg-brand-teal/20">
                           {agent.roi.map((r, i) => (
@@ -387,12 +411,18 @@ export default function LifeSciencesLanding() {
                       </div>
                       <p className="mt-4 t-h3 font-semibold text-brand-ink">{agent.title}</p>
                       <p className="mt-2 t-body">{agent.desc}</p>
+                      <div className="mt-4 rounded-2xl bg-brand-mint/25 p-4">
+                        <p className="text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-teal">
+                          Ce que vous y gagnez
+                        </p>
+                        <p className="mt-1.5 t-body">{agent.gain}</p>
+                      </div>
                     </div>
-                    {/* ROI strip - bande teal en bas, métrique mise en valeur */}
+                    {/* Constaté strip - bande teal en bas, métrique observée */}
                     <div className="border-t border-brand-teal/15 bg-gradient-to-r from-brand-teal to-brand-teal/85 px-6 py-3 sm:px-7">
                       <div className="flex items-baseline gap-3">
                         <span className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-white/70">
-                          ROI
+                          Constaté
                         </span>
                         <span className="font-display text-sm font-semibold text-white sm:text-base">
                           {agent.note}
@@ -508,8 +538,14 @@ export default function LifeSciencesLanding() {
         </>
       )}
 
+      {/* ===== Souveraineté & conformité (avant le CTA) ===== */}
+      <ComplianceSection
+        ownershipBody="Vos données talents, R&D et financières sont parmi les plus sensibles de votre entreprise. Nos agents IA sont conçus pour les protéger : hébergement en Europe, conformité RGPD, et aucune donnée de votre société utilisée pour entraîner des modèles tiers."
+        iaActBody="Le règlement européen sur l'IA encadre désormais les usages RH algorithmiques (tri, scoring, aide à la décision). Nos agents sont pensés pour la conformité dès la conception : traçabilité des décisions, supervision humaine, transparence des traitements. Vous adoptez l'IA aujourd'hui sans dette réglementaire demain."
+      />
+
       {/* ===== FAQ tabs (rapatriee depuis la home 2026-05-17) ===== */}
-      <FAQHomeTabs />
+      <FAQHomeTabs defaultVertical="life-sciences" />
 
       {/* ===== Section 7 - CTA FINAL ===== */}
       <section className="bg-brand-ink py-14 text-white sm:py-20">
