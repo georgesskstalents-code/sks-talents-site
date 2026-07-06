@@ -83,10 +83,14 @@ const nextConfig = {
       { source: "/qui_sommes-nous", destination: "/about", permanent: true },
       { source: "/contactez-nous", destination: "/contact", permanent: true },
       { source: "/legal/cgv-CGV", destination: "/legal/cgv", permanent: true },
+      { source: "/legal/cgu-CGU", destination: "/legal/cgu", permanent: true },
       { source: "/orientation-Orientation", destination: "/orientation", permanent: true },
       { source: "/comparatifs-Comparatifs-m", destination: "/comparatifs", permanent: true },
       { source: "/blog-Articles-m", destination: "/blog", permanent: true },
       { source: "/offres_emploi", destination: "/job-roles", permanent: true },
+      // Slugs job-roles obsoletes (GSC 404, jamais publies). Ajout 2026-07-06.
+      { source: "/job-roles/veterinary-referral-coordinator", destination: "/job-roles", permanent: true },
+      { source: "/job-roles/veterinary-hospital-operations-manager", destination: "/job-roles", permanent: true },
       { source: "/afrique", destination: "/", permanent: true },
       { source: "/seminaires", destination: "/events", permanent: true },
       { source: "/article", destination: "/blog", permanent: true },
@@ -101,7 +105,11 @@ const nextConfig = {
       { source: "/blogArticles", destination: "/blog", permanent: true },
       { source: "/lexique-life-sciences-rhLexique", destination: "/lexique-life-sciences-rh", permanent: true },
       { source: "/orientation-Orientation-m", destination: "/orientation", permanent: true },
-      { source: "/article/:slug*", destination: "/blog/:slug*", permanent: true }
+      // Contenu /article/* legacy (WordPress) = supprime, hors positionnement.
+      // On consolide vers l'index /blog : les anciens slugs (accents/apostrophes,
+      // ex. agroindustrie-cote-d'ivoire) n'ont pas d'equivalent /blog/{slug} => re-404.
+      // Ajuste 2026-07-06 (avant: -> /blog/:slug* qui renvoyait vers des slugs inexistants).
+      { source: "/article/:slug*", destination: "/blog", permanent: true }
     ];
   },
   async headers() {
