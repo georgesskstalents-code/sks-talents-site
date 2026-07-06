@@ -114,7 +114,7 @@ export default function ArticleFlyerCard({
               <div className={`mx-auto flex items-center justify-center rounded-[26px] border border-[#dce7e1] bg-white px-4 shadow-[0_14px_30px_rgba(17,24,39,0.06)] ${isCompact ? "h-[4.5rem] w-[8.5rem]" : "h-[5rem] w-[9.75rem]"}`}>
                 <Image
                   src="/brand/logo-sks-talents-signature.svg"
-                  alt="SKS TALENTS"
+                  alt="Logo SKS Talents - Executive search Life Sciences"
                   width={isCompact ? 108 : 128}
                   height={isCompact ? 48 : 56}
                   className={`h-auto object-contain ${isCompact ? "w-[108px]" : "w-[128px]"}`}

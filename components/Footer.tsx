@@ -118,7 +118,7 @@ export default function Footer() {
             <div className="inline-flex items-center justify-center rounded-[26px] border border-white/10 bg-white px-5 py-4 shadow-[0_18px_40px_rgba(5,14,16,0.18)]">
               <img
                 src="/brand/logo-sks-talents-signature.svg"
-                alt="SKS TALENTS"
+                alt="SKS Talents - Cabinet d'executive search Life Sciences et Animal Health"
                 className="h-16 w-[230px] object-contain object-center"
               />
             </div>
@@ -183,7 +183,7 @@ export default function Footer() {
                     <div className="flex h-16 items-center justify-center">
                       <img
                         src={partner.logoPath}
-                        alt={partner.name}
+                        alt={`Logo ${partner.name} - Partenaire SKS Talents`}
                         className="max-h-12 w-auto object-contain"
                       />
                     </div>
@@ -233,12 +233,12 @@ export default function Footer() {
           <div className="rounded-[30px] border border-white/15 bg-white px-6 py-5 shadow-[0_22px_50px_rgba(8,22,24,0.18)]">
             <img
               src="/brand/logo-sks-talents-signature.svg"
-              alt="SKS TALENTS"
+              alt="SKS Talents - Your Talent, Our Future"
               className="h-24 w-auto object-contain sm:h-28"
             />
           </div>
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/80">
-            Your Talents, Our Future
+            Your Talent · Our Future
           </p>
           <p className="text-xs text-white/60">© 2026 SKS TALENTS</p>
         </div>

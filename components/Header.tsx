@@ -160,7 +160,7 @@ export default function Header() {
         <Link href="/" className="mr-1 flex shrink-0 items-center xl:mr-3">
           <img
             src="/brand/logo-sks-talents-signature.svg"
-            alt="SKS TALENTS"
+            alt="SKS Talents - Cabinet d'executive search Life Sciences et Animal Health"
             className={`w-auto max-w-none object-contain object-left transition-all duration-300 ${
               scrolled ? "h-9 sm:h-11" : "h-12 sm:h-14"
             }`}

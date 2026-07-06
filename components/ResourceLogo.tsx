@@ -47,7 +47,7 @@ export default function ResourceLogo({
       {shouldShowImage ? (
         <img
           src={logoUrl}
-          alt={name}
+          alt={`Logo ${name}`}
           className={imageClassName}
           onError={() => setBroken(true)}
         />

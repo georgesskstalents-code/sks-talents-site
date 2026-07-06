@@ -11,6 +11,8 @@ export default function robots(): MetadataRoute.Robots {
     ],
     sitemap: [
       "https://www.skstalents.fr/sitemap.xml",
+      "https://www.skstalents.fr/sitemap-images.xml",
+      "https://www.skstalents.fr/sitemap-videos.xml",
       "https://www.skstalents.fr/feed.xml"
     ],
     host: "https://www.skstalents.fr"

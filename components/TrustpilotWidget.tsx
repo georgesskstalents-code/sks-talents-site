@@ -30,7 +30,7 @@ export default function TrustpilotWidget() {
         </div>
         <img
           src="/images/partners/trustpilot.svg"
-          alt="Trustpilot"
+          alt="Logo Trustpilot - Note 4,5/5 SKS Talents"
           className="h-8 w-auto object-contain sm:mt-2"
         />
       </div>

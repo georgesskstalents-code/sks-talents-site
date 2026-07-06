@@ -30,7 +30,7 @@ export default function EcosystemTrustBar() {
             >
               <img
                 src={partner.logoPath}
-                alt={partner.name}
+                alt={`Logo ${partner.name} - Ecosysteme partenaire SKS Talents`}
                 className="h-9 w-auto object-contain sm:h-11"
                 loading="lazy"
               />
