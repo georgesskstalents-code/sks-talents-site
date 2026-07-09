@@ -101,8 +101,12 @@ function Marquee({ d }: { d: DirectionCSector }) {
     <section className="c-marquee-section">
       <div className="c-marquee-head">
         <span>{d.logosEyebrow}</span>
-        <span className="c-dot" />
-        <span>{d.logosCounter}</span>
+        {d.logosCounter ? (
+          <>
+            <span className="c-dot" />
+            <span>{d.logosCounter}</span>
+          </>
+        ) : null}
       </div>
       <div className="c-marquee">
         <div className="c-marquee-track">

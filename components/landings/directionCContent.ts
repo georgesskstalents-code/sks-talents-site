@@ -78,13 +78,13 @@ export const lifeSciencesContent: DirectionCSector = {
   metricsEyebrow: "Résultats observés",
   metrics: [
     { value: "10 j", label: "1re shortlist qualifiée" },
-    { value: "60 j", label: "De l'intake à la signature" },
+    { value: "15j → 1M", label: "De l'intake à la signature (selon projet)" },
     { value: "92%", label: "Missions satisfaites" },
     { value: "100+", label: "Placements / mandats" }
   ],
 
-  logosEyebrow: "Environnements déjà visibles sur le site",
-  logosCounter: "6 marques accompagnées",
+  logosEyebrow: "Ils nous ont fait confiance",
+  logosCounter: "",
   trustedBy: [
     "Faircraft.bio", "Roche Diagnostics", "Beckman Coulter",
     "Miltenyi Biotec", "Solabia", "ELITechGroup"
@@ -118,12 +118,12 @@ export const lifeSciencesContent: DirectionCSector = {
   ],
 
   methodEyebrow: "Notre méthode",
-  methodTitle: "De l'intake à la signature, en 60 jours.",
+  methodTitle: "De l'intake à la signature, en 15 jours à 1 mois selon le projet.",
   method: [
     { n: 1, title: "Intake stratégique", body: "Cadrage du rôle, contexte, profil-cible et critères éliminatoires. Pas de brief écrit exigé.", time: "Jour 0 · 45 min" },
     { n: 2, title: "Mapping & shortlist", body: "Cartographie du marché, approche directe, qualification. Vous recevez 4 à 6 profils référencés.", time: "Jour 1 → 10" },
-    { n: 3, title: "Entretiens & closing", body: "Coordination d'agenda, débriefs structurés, négociation, références approfondies.", time: "Jour 10 → 45" },
-    { n: 4, title: "Onboarding & garantie", body: "Accompagnement à la prise de poste, suivi des signaux faibles et garantie si besoin.", time: "Jour 45 → 60" }
+    { n: 3, title: "Entretiens & closing", body: "Coordination d'agenda, débriefs structurés, négociation, références approfondies.", time: "Jour 7 → 21" },
+    { n: 4, title: "Onboarding & garantie", body: "Accompagnement à la prise de poste, suivi des signaux faibles et garantie si besoin.", time: "Jour 21 → 30" }
   ],
 
   differentiationEyebrow: "Différenciation",
@@ -162,7 +162,7 @@ export const lifeSciencesContent: DirectionCSector = {
       eyebrow: "Voie B · 02",
       title: "Vos process RH ne suivent plus votre croissance",
       body: "Nos agents IA Life Sciences automatisent reporting investisseurs, CEO Copilot stratégique, talent intelligence, onboarding & rétention.",
-      statValue: "60 jours",
+      statValue: "15 jours à 1 mois selon le projet",
       statLabel: "intake → signature, en moyenne",
       cta: { label: "Programme Life Sciences", url: "/life-sciences/structuration-ia" },
       secondary: { label: "Diagnostic agents →", url: "/diagnostic" },
@@ -192,13 +192,13 @@ export const animalHealthContent: DirectionCSector = {
   metricsEyebrow: "Résultats observés",
   metrics: [
     { value: "10 j", label: "1re shortlist qualifiée" },
-    { value: "60 j", label: "De l'intake à la signature" },
+    { value: "15j → 1M", label: "De l'intake à la signature (selon projet)" },
     { value: "92%", label: "Missions satisfaites" },
     { value: "100+", label: "Placements / mandats" }
   ],
 
-  logosEyebrow: "Environnements déjà visibles sur le site",
-  logosCounter: "6 marques accompagnées",
+  logosEyebrow: "Ils nous ont fait confiance",
+  logosCounter: "",
   trustedBy: [
     "Affinity Petcare", "Saga Nutrition", "Qovetia",
     "Wolf Learning", "Connex Sante", "France Biotech"
@@ -232,12 +232,12 @@ export const animalHealthContent: DirectionCSector = {
   ],
 
   methodEyebrow: "Notre méthode",
-  methodTitle: "De l'intake à la signature, en 60 jours.",
+  methodTitle: "De l'intake à la signature, en 15 jours à 1 mois selon le projet.",
   method: [
     { n: 1, title: "Intake stratégique", body: "Cadrage du rôle, contexte, profil-cible et critères éliminatoires. Pas de brief écrit exigé.", time: "Jour 0 · 45 min" },
     { n: 2, title: "Mapping & shortlist", body: "Cartographie du marché, approche directe, qualification. Vous recevez 4 à 6 profils référencés.", time: "Jour 1 → 10" },
-    { n: 3, title: "Entretiens & closing", body: "Coordination d'agenda, débriefs structurés, négociation, références approfondies.", time: "Jour 10 → 45" },
-    { n: 4, title: "Onboarding & garantie", body: "Accompagnement à la prise de poste, suivi des signaux faibles et garantie si besoin.", time: "Jour 45 → 60" }
+    { n: 3, title: "Entretiens & closing", body: "Coordination d'agenda, débriefs structurés, négociation, références approfondies.", time: "Jour 7 → 21" },
+    { n: 4, title: "Onboarding & garantie", body: "Accompagnement à la prise de poste, suivi des signaux faibles et garantie si besoin.", time: "Jour 21 → 30" }
   ],
 
   differentiationEyebrow: "Différenciation",
@@ -276,7 +276,7 @@ export const animalHealthContent: DirectionCSector = {
       eyebrow: "Voie B · 02",
       title: "Vos process RH ne suivent plus votre croissance",
       body: "Nos agents IA Animal Health automatisent reporting dirigeant, CFO Copilot, M&A pipeline vétérinaire, lead catcher 24/7, sales closer vétérinaire.",
-      statValue: "60 jours",
+      statValue: "15 jours à 1 mois selon le projet",
       statLabel: "intake → signature, en moyenne",
       cta: { label: "Programme Animal Health", url: "/animal-health/structuration-ia" },
       secondary: { label: "Diagnostic agents →", url: "/diagnostic" },

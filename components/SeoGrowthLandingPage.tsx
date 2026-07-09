@@ -10,7 +10,7 @@ type Props = {
 
 const proofItems = [
   { value: "10 j", label: "1re shortlist qualifiée" },
-  { value: "60 j", label: "De l’intake à la signature" },
+  { value: "15j → 1M", label: "De l’intake à la signature (selon projet)" },
   { value: "92%", label: "Missions satisfaites" },
   { value: "100+", label: "Placements / mandats" }
 ];

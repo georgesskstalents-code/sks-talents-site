@@ -131,7 +131,7 @@ export type SectorLandingPage = {
 
 const sharedMetrics: SectorLandingMetric[] = [
   { value: "10 j", label: "1re shortlist qualifiée" },
-  { value: "60 j", label: "De l’intake à la signature" },
+  { value: "15j → 1M", label: "De l’intake à la signature (selon projet)" },
   { value: "92%", label: "Missions satisfaites" },
   { value: "100+", label: "Placements / mandats" }
 ];
@@ -150,13 +150,13 @@ const sharedProcess: SectorLandingProcessStep[] = [
       "Cartographie du marché, approche directe, qualification. Vous recevez 4 à 6 profils référencés."
   },
   {
-    timing: "10-45",
+    timing: "7-21",
     title: "Entretiens & closing",
     description:
       "Coordination d’agenda, débriefs structurés, négociation, références approfondies."
   },
   {
-    timing: "45-60",
+    timing: "21-30",
     title: "Onboarding & garantie",
     description:
       "Accompagnement à la prise de poste, suivi des signaux faibles et garantie si besoin."

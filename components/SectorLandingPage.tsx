@@ -522,7 +522,7 @@ export default function SectorLandingPage({ config }: Props) {
           {config.logos.length > 0 ? (
             <SectionReveal delay={360}>
               <div className={styles.logoBlock}>
-                <p className={styles.logoNote}>Environnements déjà visibles sur le site</p>
+                <p className={styles.logoNote}>Ils nous ont fait confiance</p>
                 <div className={styles.logoGrid}>
                   {config.logos.map((logo) => (
                     <a
@@ -844,7 +844,7 @@ export default function SectorLandingPage({ config }: Props) {
         <div className={styles.processSection}>
           <p className={styles.sectionLabel}>§ 03 · Comment ça marche</p>
           <h2 id={`${config.key}-how-title`} className={styles.processHeadline}>
-            De l’intake à la signature - <span className={styles.titleAccent}>60 jours.</span>
+            De l’intake à la signature - <span className={styles.titleAccent}>15 jours à 1 mois selon le projet.</span>
           </h2>
 
           <div className={styles.timeline}>
