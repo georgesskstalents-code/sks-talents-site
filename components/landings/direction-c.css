@@ -230,6 +230,26 @@
   transition: opacity 0.25s, color 0.25s;
 }
 .c-marquee-item:hover { opacity: 1; color: var(--sks-green); }
+.c-marquee-item-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 8px;
+}
+.c-marquee-logo-img {
+  max-height: 44px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: opacity 0.25s, filter 0.25s;
+}
+.c-marquee-item-logo:hover .c-marquee-logo-img {
+  opacity: 1;
+  filter: grayscale(0%);
+}
 .c-marquee-sep {
   width: 8px; height: 8px;
   border-radius: 2px; transform: rotate(45deg);

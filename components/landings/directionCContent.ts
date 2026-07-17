@@ -39,7 +39,7 @@ export type DirectionCSector = {
   metrics: Metric[];
   logosEyebrow: string;
   logosCounter: string;
-  trustedBy: string[];
+  trustedBy: Array<{ name: string; domain?: string }>;
   verticalsEyebrow: string;
   verticalsTitle: string;
   verticalsIntro: string;
@@ -86,8 +86,12 @@ export const lifeSciencesContent: DirectionCSector = {
   logosEyebrow: "Ils nous ont fait confiance",
   logosCounter: "",
   trustedBy: [
-    "Faircraft.bio", "Roche Diagnostics", "Beckman Coulter",
-    "Miltenyi Biotec", "Solabia", "ELITechGroup"
+    { name: "Faircraft.bio", domain: "faircraft.bio" },
+    { name: "Roche Diagnostics", domain: "roche.com" },
+    { name: "Beckman Coulter", domain: "beckmancoulter.com" },
+    { name: "Miltenyi Biotec", domain: "miltenyibiotec.com" },
+    { name: "Solabia", domain: "solabia.com" },
+    { name: "ELITechGroup", domain: "elitechgroup.com" }
   ],
 
   verticalsEyebrow: "Marchés focus",
@@ -200,8 +204,12 @@ export const animalHealthContent: DirectionCSector = {
   logosEyebrow: "Ils nous ont fait confiance",
   logosCounter: "",
   trustedBy: [
-    "Affinity Petcare", "Saga Nutrition", "Qovetia",
-    "Wolf Learning", "Connex Sante", "France Biotech"
+    { name: "Affinity Petcare", domain: "affinity-petcare.com" },
+    { name: "Saga Nutrition", domain: "sagavet.com" },
+    { name: "Qovetia", domain: "qovetia.com" },
+    { name: "Wolf Learning", domain: "wolflearning.com" },
+    { name: "Connex Sante", domain: "connexsante.com" },
+    { name: "France Biotech", domain: "france-biotech.fr" }
   ],
 
   verticalsEyebrow: "Marchés focus",

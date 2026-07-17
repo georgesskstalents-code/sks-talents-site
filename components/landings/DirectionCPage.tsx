@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import TestimonialMarquee from "@/components/TestimonialMarquee";
+import MarqueeLogoItem from "./MarqueeLogoItem";
 import { type DirectionCSector } from "./directionCContent";
 import "./direction-c.css";
 
@@ -110,9 +111,9 @@ function Marquee({ d }: { d: DirectionCSector }) {
       </div>
       <div className="c-marquee">
         <div className="c-marquee-track">
-          {doubled.map((name, i) => (
+          {doubled.map((brand, i) => (
             <Fragment key={i}>
-              <span className="c-marquee-item">{name}</span>
+              <MarqueeLogoItem name={brand.name} domain={brand.domain} />
               <span className="c-marquee-sep" />
             </Fragment>
           ))}
