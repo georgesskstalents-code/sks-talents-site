@@ -205,10 +205,10 @@ export const animalHealthContent: DirectionCSector = {
   logosCounter: "",
   trustedBy: [
     { name: "Affinity Petcare", domain: "affinity-petcare.com" },
-    { name: "Saga Nutrition", domain: "sagavet.com" },
+    { name: "Saga Nutrition", domain: "saga-nutrition.fr" },
     { name: "Qovetia", domain: "qovetia.com" },
     { name: "Wolf Learning", domain: "wolflearning.com" },
-    { name: "Connex Sante", domain: "connexsante.com" },
+    { name: "Connex Sante", domain: "conexsante.com" },
     { name: "France Biotech", domain: "france-biotech.fr" }
   ],
 
