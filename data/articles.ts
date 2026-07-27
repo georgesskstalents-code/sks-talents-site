@@ -3164,6 +3164,13 @@ export const articles: Article[] = [
     author: "SKS TALENTS",
     date: "2026-04-20",
     readTime: 8,
+    internalLinks: [
+      { label: "Calculateur cout d'un mauvais recrutement", href: "/cout-mauvais-recrutement" },
+      { label: "Cout rate CEO biotech Series B", href: "/blog/cout-rate-ceo-biotech-series-b" },
+      { label: "Cout rate CTO deeptech Series A", href: "/blog/cout-rate-cto-deeptech-series-a" },
+      { label: "Cout rate CMO medtech scale-up", href: "/blog/cout-rate-cmo-medtech-scale-up" },
+      { label: "Scorecard dirigeant", href: "/scorecard-dirigeant" }
+    ],
     sources: [
       {
         name: "Culture RH",
