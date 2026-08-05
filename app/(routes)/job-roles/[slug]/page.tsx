@@ -11,6 +11,46 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+/**
+ * Extrait une fourchette "X-Y K€" depuis les formats variables de salary.
+ * Supporte : "42kEUR - 65kEUR", "Base 55kEUR - 90kEUR + 5kEUR - 15kEUR de variable".
+ * Retourne "" si non parsable.
+ */
+function extractSalaryLabel(salary: string | undefined): string {
+  if (!salary) return "";
+  const m = salary.match(/(\d+)\s*k\s*EUR\s*-\s*(\d+)\s*k\s*EUR/i);
+  if (m) return `${m[1]}-${m[2]} K€`;
+  const single = salary.match(/(\d+)\s*k\s*EUR/i);
+  if (single) return `${single[1]} K€`;
+  return "";
+}
+
+/**
+ * Fallback intelligent : construit un seoTitle CTR-optimise a partir des donnees
+ * de la fiche metier. Applique uniquement si role.seoTitle et notionRole.seoTitle
+ * absents. Formule : {titre} : salaire {fourchette}, missions | SKS
+ */
+function buildAutoSeoTitle(role: { title: string; salary?: string } | null | undefined): string | undefined {
+  if (!role?.title) return undefined;
+  const label = extractSalaryLabel(role.salary);
+  const salaryPart = label ? ` : salaire ${label}, missions` : " : missions et formation";
+  return `${role.title}${salaryPart} | SKS`;
+}
+
+/**
+ * Fallback intelligent : construit une seoDescription CTR-optimisee.
+ * Formule : Fiche metier {X} : missions, salaire {Y}, formations. Benchmark {secteur} 2026 SKS TALENTS.
+ */
+function buildAutoSeoDescription(
+  role: { title: string; salary?: string; sector?: string } | null | undefined
+): string | undefined {
+  if (!role?.title) return undefined;
+  const label = extractSalaryLabel(role.salary);
+  const salaryPart = label ? `salaire ${label}, ` : "";
+  const sectorPart = role.sector ? role.sector : "Life Sciences";
+  return `Fiche metier ${role.title} : missions cles, ${salaryPart}competences, formations et parcours. Benchmark sectoriel ${sectorPart} 2026 par SKS TALENTS, cabinet executive search.`;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const role = findJobRoleBySlug(slug);
@@ -23,10 +63,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = `https://www.skstalents.fr/job-roles/${slug}`;
 
   return {
-    title: notionRole?.seoTitle || role?.seoTitle || notionRole?.title || role?.title,
+    title:
+      notionRole?.seoTitle ||
+      role?.seoTitle ||
+      buildAutoSeoTitle(role) ||
+      notionRole?.title ||
+      role?.title,
     description:
       notionRole?.metaDescription ||
       role?.seoDescription ||
+      buildAutoSeoDescription(role) ||
       notionRole?.excerpt ||
       role?.summary,
     alternates: {
