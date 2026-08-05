@@ -118,32 +118,55 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const coverUrl = getBlogCoverUrl(slug);
   const finalTitle = notionArticle?.seoTitle || notionArticle?.title || article?.title || "";
-  const ogImage = coverUrl || notionArticle?.heroImageUrl;
-  const ogImageAlt = coverUrl
-    ? `Couverture editoriale : ${finalTitle}`
-    : notionArticle?.heroImageAlt || notionArticle?.title;
+
+  // Fallback chain complet pour l'image OG :
+  // 1. Cover PNG generee (public/blog-covers/{slug}.png) si presente
+  // 2. Image Notion heroImageUrl si presente
+  // 3. Image editorial catalog (getEditorialHeroImage) - toujours presente
+  let ogImageUrl: string;
+  let ogImageAlt: string;
+  if (coverUrl) {
+    ogImageUrl = `${siteUrl}${coverUrl}`;
+    ogImageAlt = `Couverture editoriale : ${finalTitle}`;
+  } else if (notionArticle?.heroImageUrl) {
+    ogImageUrl = notionArticle.heroImageUrl;
+    ogImageAlt = notionArticle.heroImageAlt || notionArticle.title || finalTitle;
+  } else {
+    const heroFallback = getEditorialHeroImage({
+      slug,
+      title: finalTitle,
+      topicLabel: article?.topic,
+      verticalLabel: article ? getArticleVerticalLabel(article.vertical) : undefined
+    });
+    ogImageUrl = heroFallback.src.startsWith("http")
+      ? heroFallback.src
+      : `${siteUrl}${heroFallback.src}`;
+    ogImageAlt = heroFallback.alt || finalTitle;
+  }
 
   return {
     title: finalTitle,
     description: notionArticle?.metaDescription || notionArticle?.excerpt || article?.excerpt,
-    openGraph: ogImage
-      ? {
-          images: [
-            {
-              url: ogImage,
-              width: 1200,
-              height: 627,
-              alt: ogImageAlt || finalTitle
-            }
-          ]
+    openGraph: {
+      title: finalTitle,
+      description: notionArticle?.metaDescription || notionArticle?.excerpt || article?.excerpt,
+      url: `${siteUrl}/blog/${slug}`,
+      type: "article",
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 627,
+          alt: ogImageAlt
         }
-      : undefined,
-    twitter: ogImage
-      ? {
-          card: "summary_large_image",
-          images: [ogImage]
-        }
-      : undefined
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: finalTitle,
+      description: notionArticle?.metaDescription || notionArticle?.excerpt || article?.excerpt,
+      images: [ogImageUrl]
+    }
   };
 }
 
