@@ -20,7 +20,7 @@ const scorecardItems = [
 ];
 
 export const metadata = {
-  title: "Mini scorecard dirigeant | Structuration RH & croissance | SKS TALENTS",
+  title: "Scorecard dirigeant : evaluez la readiness RH de votre scale-up en 5 min | SKS",
   description:
     "Une scorecard simple pour dirigeants, COO, CPO et DRH afin d’évaluer si l’organisation RH est prête à accompagner la prochaine phase de croissance.",
   alternates: {

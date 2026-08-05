@@ -22,7 +22,7 @@ const audiences = [
 ];
 
 export const metadata = {
-  title: "Pour qui ce site est utile | SKS TALENTS",
+  title: "A qui s'adresse SKS Talents : CEO biotech, DRH scale-up, DG veterinaire | SKS",
   description:
     "Une page claire pour comprendre à qui s’adresse SKS TALENTS : dirigeants, RH, candidats et étudiants sur les marchés Life Sciences et Animal Health.",
   alternates: {

@@ -8,7 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import { faqsByPage } from "@/data/faqsByPage";
 
 export const metadata: Metadata = {
-  title: "Orientation carrière Life Sciences & Animal Health",
+  title: "Orientation biotech, medtech, cosmetique : metiers, ecoles, salaires | SKS",
   description:
     "Agent d’orientation SKS TALENTS pour étudiants, jeunes diplômés et lycéens français en Afrique: biotech, medtech, cosmétique, santé animale et métiers vétérinaires.",
   keywords: [

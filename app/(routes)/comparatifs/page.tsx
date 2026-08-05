@@ -1,3 +1,19 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Comparatifs Life Sciences : RPO vs executive search, cabinet vs interne | SKS",
+  description:
+    "Analyses comparatives pour arbitrer entre modeles de recrutement : RPO, executive search, plateforme, equipe interne. Focus Life Sciences et Animal Health par SKS TALENTS, cabinet dedie.",
+  alternates: { canonical: "/comparatifs" },
+  openGraph: {
+    title: "Comparatifs Life Sciences : RPO vs executive search, cabinet vs interne",
+    description:
+      "Arbitrer entre modeles de recrutement Life Sciences : RPO, executive search, plateforme, interne. Analyses SKS TALENTS.",
+    url: "https://www.skstalents.fr/comparatifs",
+    type: "website"
+  }
+};
+
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { comparisons } from "@/data/comparisons";

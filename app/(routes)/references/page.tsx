@@ -1,3 +1,19 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "References clients SKS Talents : 100+ placements biotech, medtech, veterinaire",
+  description:
+    "Placements cadres executes pour scale-ups biotech Series A-C, diagnostic IVD, medtech, groupements veterinaires et petfood premium. 75 % de retention a 5 ans. References marche par SKS TALENTS.",
+  alternates: { canonical: "/references" },
+  openGraph: {
+    title: "References clients SKS Talents : 100+ placements Life Sciences et Animal Health",
+    description:
+      "Placements cadres biotech Series A-C, diagnostic IVD, medtech, veterinaire, petfood. 75 % retention 5 ans.",
+    url: "https://www.skstalents.fr/references",
+    type: "website"
+  }
+};
+
 import PageHero from "@/components/PageHero";
 import ReferenceCardMarquee from "@/components/ReferenceCardMarquee";
 import { Reference, references } from "@/data/references";

@@ -1064,6 +1064,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "biotech-medical-affairs-manager",
     title: "Medical Affairs Manager Biotech",
+    seoTitle: "Medical Affairs Manager Biotech : salaire 70-110 K€, missions MSL | SKS",
+    seoDescription:
+      "Fiche metier Medical Affairs Manager Biotech : evidence scientifique, KOL, MSL, salaire 70-110 K€ + bonus, formations. Benchmark biotech 2026 SKS TALENTS.",
     publishDate: may2026EditorialBatchDate,
     salary: "70kEUR - 110kEUR + bonus",
     salarySource:
@@ -1348,6 +1351,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "biotech-msat-engineer",
     title: "MSAT Engineer Biotech",
+    seoTitle: "MSAT Engineer Biotech : salaire 52-82 K€, missions bioproduction | SKS",
+    seoDescription:
+      "Fiche metier MSAT Engineer Biotech : transfert tech, industrialisation, salaire 52-82 K€, formations et ecoles. Benchmark bioproduction 2026 SKS TALENTS.",
     publishDate: may2026EditorialBatchDate,
     salary: "52kEUR - 82kEUR",
     sector: "Biotech",
@@ -1374,6 +1380,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "biotech-cmc-project-manager",
     title: "CMC Project Manager Biotech",
+    seoTitle: "CMC Project Manager Biotech : salaire 65-98 K€, missions | SKS",
+    seoDescription:
+      "Fiche metier CMC Project Manager Biotech : chemistry manufacturing controls, dossiers reglementaires, salaire 65-98 K€, formations. Benchmark 2026 SKS TALENTS.",
     publishDate: may2026EditorialBatchDate,
     salary: "65kEUR - 98kEUR",
     sector: "Biotech",
@@ -1452,6 +1461,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "biotech-medical-director",
     title: "Medical Director Biotech",
+    seoTitle: "Medical Director Biotech : salaire 100-170 K€, missions CMO | SKS",
+    seoDescription:
+      "Fiche metier Medical Director Biotech : leadership medical, essais cliniques, KOL, salaire 100-170 K€ + variable, formations et parcours. Benchmark 2026 SKS TALENTS.",
     salary: "100kEUR - 170kEUR + variable",
     sector: "Biotech",
     category: "Direction medicale",
@@ -2218,6 +2230,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "diagnostic-vp-sales",
     title: "VP Sales Diagnostic",
+    seoTitle: "VP Sales Diagnostic : salaire 140-260 K€, missions IVD | SKS TALENTS",
+    seoDescription:
+      "Fiche metier VP Sales Diagnostic : direction commerciale IVD, hopital-labo, salaire 140-260 K€ + variable, formations. Benchmark exec search 2026 SKS TALENTS.",
     salary: "140kEUR - 260kEUR + variable",
     sector: "Diagnostic",
     category: "Direction commerciale",
@@ -2243,6 +2258,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "biotech-vp-operations",
     title: "VP Operations Biotech",
+    seoTitle: "VP Operations Biotech : salaire 120-210 K€, missions scale-up | SKS",
+    seoDescription:
+      "Fiche metier VP Operations Biotech : industrialisation, GMP, supply chain, salaire 120-210 K€ + variable. Series B+ scale-up. Benchmark 2026 SKS TALENTS.",
     salary: "120kEUR - 210kEUR + variable",
     sector: "Biotech",
     category: "Direction operations",
@@ -2293,6 +2311,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "medical-vet-head-of-regulatory",
     title: "Head of Regulatory Medical Vet",
+    seoTitle: "Head of Regulatory Medical Vet : salaire 78-110 K€, EMA/DGAL | SKS",
+    seoDescription:
+      "Fiche metier Head of Regulatory Medical Vet : pharma veterinaire, EMA CVMP, DGAL, salaire 78-110 K€ + variable. Benchmark Animal Health 2026 SKS TALENTS.",
     salary: "78kEUR - 110kEUR + variable",
     sector: "Medical Vet",
     category: "Reglementaire",
@@ -2808,6 +2829,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "biotech-clinical-operations-manager",
     title: "Clinical Operations Manager Biotech",
+    seoTitle: "Clinical Operations Manager Biotech : 65-105 K€, essais cliniques | SKS",
+    seoDescription:
+      "Fiche metier Clinical Operations Manager Biotech : essais cliniques Phase I-III, CRO, centres, salaire 65-105 K€. Benchmark 2026 SKS TALENTS.",
     salary: "65kEUR - 105kEUR",
     sector: "Biotech",
     category: "Clinique / essais",
@@ -2946,6 +2970,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "diagnostic-ivdr-regulatory-affairs-specialist",
     title: "Regulatory Affairs Specialist IVDR (IVD)",
+    seoTitle: "Regulatory Affairs IVDR (IVD) : salaire 60-95 K€, dossiers | SKS TALENTS",
+    seoDescription:
+      "Fiche metier Regulatory Affairs Specialist IVDR (IVD) : PRRC, dossiers techniques, post-market surveillance, salaire 60-95 K€. Benchmark diagnostic 2026.",
     salary: "60kEUR - 95kEUR",
     sector: "Diagnostic",
     category: "Affaires réglementaires (IVD)",
@@ -3918,6 +3945,9 @@ const nuclearMedicineRoles: JobRole[] = [
   {
     slug: "diagnostic-nuclear-medicine-business-unit-director",
     title: "Business Unit Director Médecine Nucléaire",
+    seoTitle: "Business Unit Director Medecine Nucleaire : 110-165 K€ | SKS TALENTS",
+    seoDescription:
+      "Fiche metier Business Unit Director Medecine Nucleaire : radiopharmacie, TEP, PMSI, salaire 110-165 K€ + variable. Benchmark medecine nucleaire 2026 SKS TALENTS.",
     publishDate: may2026EditorialBatchDate,
     salary: "110kEUR - 165kEUR + variable",
     sector: "Diagnostic",

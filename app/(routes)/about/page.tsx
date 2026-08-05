@@ -1,3 +1,19 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "SKS Talents : cabinet executive search Life Sciences depuis 2018 | A propos",
+  description:
+    "8 ans d'expertise sectorielle Life Sciences et Animal Health, 100+ placements executes, note 4,5/5 Trustpilot sur 15 avis. Commission RH France Biotech. Cabinet dedie biotech, diagnostic, medtech, veterinaire, petfood.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "SKS Talents : cabinet executive search Life Sciences et Animal Health",
+    description:
+      "8 ans, 100+ placements, 4,5/5 Trustpilot. Dedie biotech, diagnostic, medtech, veterinaire, petfood premium.",
+    url: "https://www.skstalents.fr/about",
+    type: "website"
+  }
+};
+
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
 import CalendlyButton from "@/components/CalendlyButton";
