@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -11,6 +13,25 @@ export const dynamic = "force-dynamic";
 type Props = {
   params: Promise<{ slug: string }>;
 };
+
+const COVERS_DIR = path.join(process.cwd(), "public", "blog-covers");
+
+/**
+ * Retourne l'URL d'une cover PNG generee par scripts/generate_covers.py
+ * si le fichier existe dans public/blog-covers/{slug}.png. Sinon null.
+ * Cache implicite via fs (rapide).
+ */
+function getBlogCoverUrl(slug: string): string | null {
+  try {
+    const file = path.join(COVERS_DIR, `${slug}.png`);
+    if (fs.existsSync(file)) {
+      return `/blog-covers/${slug}.png`;
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
 
 function buildHowToSchema(slug: string, title: string, paragraphs: string[], articleUrl: string) {
   if (!slug.startsWith("comment-") && !slug.includes("playbook")) return null;
@@ -95,17 +116,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   }
 
+  const coverUrl = getBlogCoverUrl(slug);
+  const finalTitle = notionArticle?.seoTitle || notionArticle?.title || article?.title || "";
+  const ogImage = coverUrl || notionArticle?.heroImageUrl;
+  const ogImageAlt = coverUrl
+    ? `Couverture editoriale : ${finalTitle}`
+    : notionArticle?.heroImageAlt || notionArticle?.title;
+
   return {
-    title: notionArticle?.seoTitle || notionArticle?.title || article?.title,
+    title: finalTitle,
     description: notionArticle?.metaDescription || notionArticle?.excerpt || article?.excerpt,
-    openGraph: notionArticle?.heroImageUrl
+    openGraph: ogImage
       ? {
           images: [
             {
-              url: notionArticle.heroImageUrl,
-              alt: notionArticle.heroImageAlt || notionArticle.title
+              url: ogImage,
+              width: 1200,
+              height: 627,
+              alt: ogImageAlt || finalTitle
             }
           ]
+        }
+      : undefined,
+    twitter: ogImage
+      ? {
+          card: "summary_large_image",
+          images: [ogImage]
         }
       : undefined
   };
@@ -142,22 +178,40 @@ export default async function BlogDetailPage({
   const paragraphs = body.split("\n\n").filter(Boolean);
   const internalLinks = article?.internalLinks ?? [];
   const answerFirst = article?.answerFirst;
-  const heroVisual = notionArticle?.heroImageUrl
+  const coverUrl = getBlogCoverUrl(slug);
+  const heroVisual = coverUrl
     ? {
-        src: notionArticle.heroImageUrl,
-        alt: notionArticle.heroImageAlt || `Illustration pour ${title}`
+        src: coverUrl,
+        alt: `Couverture editoriale ${title}`
       }
-    : getEditorialHeroImage({
-        slug,
-        title,
-        topicLabel,
-        verticalLabel
-      });
+    : notionArticle?.heroImageUrl
+      ? {
+          src: notionArticle.heroImageUrl,
+          alt: notionArticle.heroImageAlt || `Illustration pour ${title}`
+        }
+      : getEditorialHeroImage({
+          slug,
+          title,
+          topicLabel,
+          verticalLabel
+        });
+  let schemaImageUrl: string;
+  if (coverUrl) {
+    schemaImageUrl = `${siteUrl}${coverUrl}`;
+  } else if (notionArticle?.heroImageUrl) {
+    schemaImageUrl = notionArticle.heroImageUrl;
+  } else if (heroVisual.src.startsWith("http")) {
+    schemaImageUrl = heroVisual.src;
+  } else {
+    schemaImageUrl = `${siteUrl}${heroVisual.src}`;
+  }
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
     description: excerpt,
+    image: schemaImageUrl,
     inLanguage: "fr-FR",
     mainEntityOfPage: articleUrl,
     datePublished: publishedAt,
