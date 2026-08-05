@@ -1,6 +1,8 @@
 export type JobRole = {
   slug: string;
   title: string;
+  seoTitle?: string;
+  seoDescription?: string;
   publishDate?: string;
   salary: string;
   salarySource?: string;
@@ -1241,6 +1243,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "cosmetique-formulation-scientist",
     title: "Formulation Scientist Cosmetique",
+    seoTitle: "R&D Cosmetique / Formulation : salaire 42-65 K€, missions | SKS",
+    seoDescription:
+      "Fiche metier R&D Cosmetique - Formulation Scientist : missions cles (formulation, stabilite, industrialisation), salaire 42-65 K€, formations et ecoles. Benchmark 2026 SKS TALENTS.",
     publishDate: may2026EditorialBatchDate,
     salary: "42kEUR - 65kEUR",
     sector: "Cosmetique",
@@ -1649,6 +1654,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "cosmetique-regulatory-affairs-manager",
     title: "Regulatory Affairs Manager Cosmétique",
+    seoTitle: "Regulatory Affairs Cosmetique : salaire 55-88 K€, missions | SKS",
+    seoDescription:
+      "Fiche metier Regulatory Affairs Manager Cosmetique : dossiers CPSR, claims, CPNP, missions cles, salaire 55-88 K€, formations et parcours. Benchmark 2026 SKS TALENTS.",
     publishDate: may2026EditorialBatchDate,
     salary: "55kEUR - 88kEUR",
     sector: "Cosmetique",
@@ -1675,6 +1683,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "cosmetique-international-marketing-manager",
     title: "International Marketing Manager Cosmétique",
+    seoTitle: "Marketing Cosmetique International : salaire 58-92 K€ | SKS",
+    seoDescription:
+      "Fiche metier International Marketing Manager Cosmetique : missions cles, salaire 58-92 K€ + variable, formations, ecoles, profils. Benchmark 2026 SKS TALENTS.",
     salary: "58kEUR - 92kEUR + variable",
     sector: "Cosmetique",
     category: "Marketing",
@@ -2028,6 +2039,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "cosmetique-export-manager-mena-afrique",
     title: "Export Manager Afrique & MENA Cosmétique",
+    seoTitle: "Export Manager Cosmetique MENA & Afrique : 65-108 K€ | SKS",
+    seoDescription:
+      "Fiche metier Export Manager Cosmetique Afrique & MENA : missions, salaire 65-108 K€ + variable, distributeurs, reglementation. Benchmark 2026 SKS TALENTS.",
     publishDate: may2026EditorialBatchDate,
     salary: "65kEUR - 108kEUR + variable",
     sector: "Cosmetique",
@@ -3189,6 +3203,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "cosmetique-cosmetic-safety-assessor",
     title: "Cosmetic Safety Assessor / Toxicologue Cosmétique",
+    seoTitle: "Cosmetic Safety Assessor : salaire 55-95 K€, missions | SKS",
+    seoDescription:
+      "Fiche metier Cosmetic Safety Assessor - Toxicologue Cosmetique : CPSR, DIP, evaluation securite produits, salaire 55-95 K€, formations. Benchmark 2026.",
     salary: "55kEUR - 95kEUR",
     sector: "Cosmetique",
     category: "Sécurité / réglementation",
@@ -3217,6 +3234,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "cosmetique-packaging-development-engineer",
     title: "Packaging Development Engineer Cosmétique",
+    seoTitle: "Packaging Development Engineer Cosmetique : 50-85 K€ | SKS",
+    seoDescription:
+      "Fiche metier Packaging Development Engineer Cosmetique : missions premium (materiaux, industrialisation), salaire 50-85 K€, formations. Benchmark 2026 SKS TALENTS.",
     salary: "50kEUR - 85kEUR",
     sector: "Cosmetique",
     category: "R&D / packaging",
@@ -3798,6 +3818,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "cosmetique-qa-compliance-manager",
     title: "QA Compliance Manager Cosmétique",
+    seoTitle: "QA Compliance Manager Cosmetique : salaire 55-90 K€ | SKS",
+    seoDescription:
+      "Fiche metier QA Compliance Manager Cosmetique : deviations, CAPA, audits, change control, salaire 55-90 K€, formations. Benchmark 2026 SKS TALENTS.",
     salary: "55kEUR - 90kEUR",
     salarySource:
       "Repere indicatif pour un QA compliance manager (deviation/CAPA, audits, change). A calibrer selon sites, sous-traitance et exigences export.",
@@ -3828,6 +3851,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "cosmetique-qhse-manager",
     title: "Responsable QHSE Cosmétique (Production)",
+    seoTitle: "Responsable Production Cosmetique / QHSE : 50-85 K€ | SKS",
+    seoDescription:
+      "Fiche metier Responsable Production Cosmetique (QHSE) : securite usine, standards terrain, salaire 50-85 K€, formations et parcours. Benchmark 2026 SKS TALENTS.",
     salary: "50kEUR - 85kEUR",
     salarySource:
       "Repere indicatif pour un responsable QHSE en environnement industriel. A ajuster selon taille usine, risques (chimie, solvants) et exposition audits / clients.",

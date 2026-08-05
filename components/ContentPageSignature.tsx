@@ -22,14 +22,14 @@ export default function ContentPageSignature({
               <h2 className="font-display text-4xl text-brand-ink sm:text-5xl">{title}</h2>
               <p className="max-w-2xl text-base leading-8 text-brand-stone">{description}</p>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-ink/60">
-                Your Talents, Our Future
+                Your Talent · Our Future
               </p>
             </div>
             <div className="flex justify-start lg:justify-end">
               <div className="relative h-24 w-full max-w-[320px] sm:h-28 sm:max-w-[360px]">
                 <Image
-                  src="/brand/logo-sks-talents-signature.svg"
-                  alt="Logo SKS Talents Your Talents, Our Future"
+                  src="/brand/logo-sks-talents.svg"
+                  alt="Logo SKS Talents - cabinet executive search Life Sciences et Animal Health"
                   fill
                   className="object-contain object-right-bottom"
                   sizes="(max-width: 768px) 260px, 360px"

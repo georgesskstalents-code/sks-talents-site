@@ -241,7 +241,7 @@ Use Calendly or contact CTA depending on qualification level.
 
 On SKS-created content, keep:
 - SKS Talents
-- Your Talents, Our Future
+- Your Talent · Our Future
 
 ## Final Objective
 

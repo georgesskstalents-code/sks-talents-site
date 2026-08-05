@@ -23,8 +23,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = `https://www.skstalents.fr/job-roles/${slug}`;
 
   return {
-    title: notionRole?.seoTitle || notionRole?.title || role?.title,
-    description: notionRole?.metaDescription || notionRole?.excerpt || role?.summary,
+    title: notionRole?.seoTitle || role?.seoTitle || notionRole?.title || role?.title,
+    description:
+      notionRole?.metaDescription ||
+      role?.seoDescription ||
+      notionRole?.excerpt ||
+      role?.summary,
     alternates: {
       canonical
     }
