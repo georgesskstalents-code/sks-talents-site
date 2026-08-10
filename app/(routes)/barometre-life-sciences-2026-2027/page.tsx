@@ -28,13 +28,22 @@ export const metadata: Metadata = {
     description:
       "Chiffres verifies sur le recrutement et les salaires cadres en biotech, medtech, veterinaire, petfood France 2026-2027. Data-first, citable, mise a jour annuelle.",
     url: CANONICAL,
-    type: "article"
+    type: "article",
+    images: [
+      {
+        url: "https://www.skstalents.fr/opengraph-image",
+        width: 1200,
+        height: 627,
+        alt: "Barometre Life Sciences France 2026-2027 - SKS Talents"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: "Barometre Life Sciences France 2026-2027",
     description:
-      "Chiffres verifies recrutement Life Sciences France. Cite librement avec attribution SKS Talents."
+      "Chiffres verifies recrutement Life Sciences France. Cite librement avec attribution SKS Talents.",
+    images: ["https://www.skstalents.fr/opengraph-image"]
   }
 };
 
