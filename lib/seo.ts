@@ -1,9 +1,11 @@
 export const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "ProfessionalService", "LocalBusiness"],
+  "@id": "https://www.skstalents.fr/#organization",
   name: "SKS TALENTS",
   alternateName: "SKS Talents",
   slogan: "Your Talent · Our Future",
+  priceRange: "€€€",
   url: "https://www.skstalents.fr",
   email: "g.kengue@skstalents.fr",
   logo: {
@@ -76,8 +78,20 @@ export const organizationSchema = {
     ratingValue: "4.6",
     bestRating: "5",
     worstRating: "1",
-    reviewCount: 17
-  }
+    reviewCount: 17,
+    url: "https://fr.trustpilot.com/review/skstalents.fr"
+  },
+  serviceType: [
+    "Executive Search Life Sciences",
+    "Executive Search Animal Health",
+    "Executive Search Biotech",
+    "Executive Search MedTech",
+    "Executive Search Diagnostic",
+    "Recrutement veterinaire",
+    "Recrutement petfood",
+    "Structuration RH digitalisation par l'IA",
+    "Recrutement scale-up Series A Series B"
+  ]
 };
 
 export const websiteSchema = {

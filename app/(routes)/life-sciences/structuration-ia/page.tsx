@@ -34,12 +34,29 @@ export const metadata: Metadata = {
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "CEO Copilot IA Life Sciences",
-  serviceType: "Executive Search · Talent Intelligence · CEO Copilot",
-  provider: { "@type": "Organization", name: "SKS TALENTS", url: "https://www.skstalents.fr" },
-  areaServed: ["France", "Europe"],
+  "@id": `${CANONICAL}#service`,
+  name: "Digitalisation RH par l'IA - Life Sciences - SKS Talents",
+  serviceType: "Digitalisation RH par l'IA",
+  provider: {
+    "@type": "Organization",
+    "@id": "https://www.skstalents.fr/#organization",
+    name: "SKS TALENTS",
+    url: "https://www.skstalents.fr"
+  },
+  areaServed: [
+    { "@type": "Country", name: "France" },
+    { "@type": "Country", name: "Europe" }
+  ],
   description: DESCRIPTION,
-  url: CANONICAL
+  url: CANONICAL,
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.6",
+    bestRating: "5",
+    worstRating: "1",
+    reviewCount: 17,
+    url: "https://fr.trustpilot.com/review/skstalents.fr"
+  }
 };
 
 const breadcrumbJsonLd = {

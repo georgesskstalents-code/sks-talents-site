@@ -57,12 +57,30 @@ const faqJsonLd = {
 const professionalServiceJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "SKS TALENTS",
+  "@id": `${page.metadata.canonical}#service`,
+  name: "SKS TALENTS - Executive Search Animal Health",
   url: page.metadata.canonical,
-  serviceType: "Recrutement Animal Health",
+  serviceType: "Executive Search Animal Health",
   description: page.metadata.description,
-  areaServed: ["France", "Europe"],
-  availableLanguage: ["French", "English"]
+  areaServed: [
+    { "@type": "Country", name: "France" },
+    { "@type": "Country", name: "Europe" }
+  ],
+  availableLanguage: ["French", "English"],
+  provider: {
+    "@type": "Organization",
+    "@id": "https://www.skstalents.fr/#organization",
+    name: "SKS TALENTS",
+    url: "https://www.skstalents.fr"
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.6",
+    bestRating: "5",
+    worstRating: "1",
+    reviewCount: 17,
+    url: "https://fr.trustpilot.com/review/skstalents.fr"
+  }
 };
 
 const breadcrumbJsonLd = {
