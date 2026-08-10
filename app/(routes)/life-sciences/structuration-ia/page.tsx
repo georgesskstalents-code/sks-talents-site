@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import LifeSciencesLanding from "./LifeSciencesLanding";
 
 const CANONICAL = "https://www.skstalents.fr/life-sciences/structuration-ia";
-const TITLE = "Structuration RH (Agent & automatisation) · Life Sciences | SKS TALENTS";
+const TITLE = "Digitalisation RH par l'IA - Life Sciences : agents, automatisation, structuration | SKS";
 const DESCRIPTION =
-  "Démo 30 sec : anticipez vos recrutements 6 mois à l'avance. Pour CEO biotech et deeptech Series A à C. 100 % rétention 12 mois.";
+  "Digitalisation RH par l'IA pour scale-ups biotech, medtech et deeptech Series A a C. Agents IA + automatisation + structuration. Demo 30 sec : anticipez vos recrutements 6 mois a l'avance.";
 
 export const metadata: Metadata = {
   title: TITLE,

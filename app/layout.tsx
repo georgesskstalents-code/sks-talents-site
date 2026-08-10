@@ -33,7 +33,10 @@ const baseKeywords = [
   "recrutement biotech Série B",
   "recrutement scale-up Life Sciences",
   "recrutement COMEX biotech",
+  "digitalisation RH par l'IA",
+  "digitalisation RH biotech",
   "structuration RH digitalisation",
+  "automatisation RH IA",
   "automatisation tâches RH",
   "executive search diagnostic",
   "executive search medtech",
@@ -65,7 +68,7 @@ export async function generateMetadata(): Promise<Metadata> {
       template: "%s | SKS TALENTS"
     },
     description:
-      "Cabinet d'executive search et structuration RH dédié aux Life Sciences & Santé animale (biotech, diagnostic, medtech, vétérinaire, petfood). Recrutement Série A, Série B, scale-up - décisions COMEX, digitalisation RH et automatisation des tâches à faible valeur ajoutée.",
+      "Cabinet d'executive search + digitalisation RH par l'IA dedie aux Life Sciences & Sante animale (biotech, diagnostic, medtech, veterinaire, petfood). Recrutement Serie A, Serie B, scale-up. Structuration RH, automatisation, agents IA. Decisions COMEX.",
     keywords,
     openGraph: {
       title: "SKS TALENTS - Executive Search Life Sciences & Santé animale",

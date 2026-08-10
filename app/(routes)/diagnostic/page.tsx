@@ -3,7 +3,7 @@ import FAQSection from "@/components/FAQSection";
 import { faqsByPage } from "@/data/faqsByPage";
 
 export const metadata = {
-  title: "Diagnostic structuration RH gratuit : 5 signaux pour scaler vos equipes | SKS",
+  title: "Diagnostic structuration et digitalisation RH par l'IA : 5 signaux gratuits | SKS",
   description:
     "5 signaux pour mesurer si votre organisation est prête à scaler. Score immédiat, lecture par zone (Chaos / Fragile / Structuré), diagnostic PDF complet sur demande.",
   alternates: {
