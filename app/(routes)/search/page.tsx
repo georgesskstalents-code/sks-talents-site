@@ -119,14 +119,14 @@ export async function generateMetadata({ searchParams }: SearchPageProps) {
 
   if (language === "en") {
     return {
-      title: "Search | SKS TALENTS",
+      title: "Search",
       description:
         "Search SKS TALENTS in English or French and get a quick answer grounded in our content and trusted official sources."
     };
   }
 
   return {
-    title: "Recherche | SKS TALENTS",
+    title: "Recherche",
     description:
       "Cherchez sur SKS TALENTS en français ou en anglais et obtenez une réponse rapide fondée sur nos contenus et des sources officielles."
   };

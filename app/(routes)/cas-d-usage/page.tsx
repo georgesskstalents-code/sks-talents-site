@@ -27,7 +27,7 @@ const useCases = [
 ];
 
 export const metadata = {
-  title: "Cas d’usage | SKS TALENTS",
+  title: "Cas d’usage",
   description:
     "Des cas d’usage concrets pour comprendre comment SKS TALENTS aide startups, scale-ups, entreprises sous tension recrutement et équipes RH débordées.",
   alternates: {

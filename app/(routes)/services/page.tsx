@@ -8,7 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import { faqsByPage } from "@/data/faqsByPage";
 
 const CANONICAL = "https://www.skstalents.fr/services";
-const TITLE = "Executive search + digitalisation RH par l'IA | SKS TALENTS Life Sciences";
+const TITLE = "Executive search + digitalisation RH par l'IA - Life Sciences";
 const DESCRIPTION =
   "Cabinet executive search Life Sciences et Animal Health + digitalisation RH par l'IA. Structuration RH, agents IA, automatisation. Accompagnement scale-up pour CEO biotech, medtech, veterinaire.";
 

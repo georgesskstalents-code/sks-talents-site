@@ -5,7 +5,7 @@ import InlineLeadForm from "@/components/InlineLeadForm";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Contact | SKS TALENTS",
+  title: "Contact",
   description:
     "Parlez à SKS TALENTS pour cadrer un recrutement critique, un besoin RPO ou une structuration RH en Life Sciences, biotech, diagnostic et Animal Health."
 };

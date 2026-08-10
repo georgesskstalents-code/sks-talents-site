@@ -10,7 +10,7 @@ import { glossaryConcepts, glossaryGroups, lexiconHubPage, whitepaperGuides } fr
 const canonicalUrl = "https://www.skstalents.fr/lexique-life-sciences-rh";
 
 export const metadata: Metadata = {
-  title: `${lexiconHubPage.metaTitle} | SKS TALENTS`,
+  title: lexiconHubPage.metaTitle,
   description: lexiconHubPage.metaDescription,
   keywords: [
     "structuration RH",

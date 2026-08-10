@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cartographie des fonds sante France 2026 : biotech, medtech, healthtech | SKS",
+  title: "Cartographie des fonds sante France 2026 : biotech, medtech, healthtech",
   description:
     "Fonds d'investissement sante actifs en France : biotech, medtech, healthtech, animal health. Signaux hiring post-levee, theses d'investissement, contexte scale-up. Cartographie SKS TALENTS.",
   alternates: { canonical: "/investment-funds" },

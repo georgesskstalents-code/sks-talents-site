@@ -293,7 +293,7 @@ export default function OrientationAgent() {
             <div class="wrap">
               <p class="brand">SKS TALENTS</p>
               <h1>Rapport d’orientation carrière</h1>
-              <p>Your Talents, Our Future.</p>
+              <p>Your Talent · Our Future.</p>
               <div class="card">
                 <p><strong>Nom:</strong> ${downloadLead.firstName} ${downloadLead.lastName}</p>
                 <p><strong>Email:</strong> ${downloadLead.email}</p>

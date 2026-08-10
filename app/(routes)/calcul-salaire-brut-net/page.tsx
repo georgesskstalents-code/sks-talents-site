@@ -7,7 +7,7 @@ import FAQSection from "@/components/FAQSection";
 import { faqsByPage } from "@/data/faqsByPage";
 
 export const metadata: Metadata = {
-  title: "Calcul salaire brut en net et coût employeur | SKS TALENTS",
+  title: "Calcul salaire brut en net et coût employeur",
   description:
     "Calculez le salaire brut en net et le coût employeur avec une estimation France plus fine par statut, net imposable et salaire net apres prelevement a la source.",
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: "/calcul-salaire-brut-net"
   },
   openGraph: {
-    title: "Calcul salaire brut en net et coût employeur | SKS TALENTS",
+    title: "Calcul salaire brut en net et coût employeur",
     description:
       "Simulateur France de salaire brut en net et coût employeur avec statut detaille, temps de travail, net imposable et estimation apres impots.",
     url: "https://www.skstalents.fr/calcul-salaire-brut-net",

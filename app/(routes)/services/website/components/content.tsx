@@ -231,10 +231,10 @@ export default function WebsiteServicesContent({ vimeoId }: WebsiteServicesConte
                 Service Website
               </span>
               <h1 className="mt-6 animate-fade-in-up font-display text-6xl leading-none sm:text-7xl">
-                Scaling teams
+                Your Talent
                 <br />
                 <span className="bg-gradient-to-r from-teal-300 to-cyan-300 bg-clip-text text-transparent">
-                  without losing soul
+                  Our Future
                 </span>
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/75 lg:mx-0">

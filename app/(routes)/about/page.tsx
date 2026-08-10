@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SKS Talents : executive search + digitalisation RH par l'IA - Life Sciences depuis 2018 | A propos",
+  title: "Executive search + digitalisation RH par l'IA - Life Sciences depuis 2018 - A propos",
   description:
     "8 ans d'expertise Life Sciences et Animal Health, 100+ placements executes, 4,5/5 Trustpilot. Executive search + digitalisation RH par l'IA. Commission RH France Biotech. Dedie biotech, diagnostic, medtech, veterinaire, petfood.",
   alternates: { canonical: "/about" },

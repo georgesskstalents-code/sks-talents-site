@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Comparatifs Life Sciences : RPO vs executive search, cabinet vs interne | SKS",
+  title: "Comparatifs Life Sciences : RPO vs executive search, cabinet vs interne",
   description:
     "Analyses comparatives pour arbitrer entre modeles de recrutement : RPO, executive search, plateforme, equipe interne. Focus Life Sciences et Animal Health par SKS TALENTS, cabinet dedie.",
   alternates: { canonical: "/comparatifs" },

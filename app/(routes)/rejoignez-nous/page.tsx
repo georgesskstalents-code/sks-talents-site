@@ -7,7 +7,7 @@ import SectionShell from "@/components/SectionShell";
 import { references } from "@/data/references";
 
 export const metadata: Metadata = {
-  title: "Rejoignez-nous | Recrutement Life Sciences, Diagnostic & Animal Health | SKS TALENTS",
+  title: "Rejoignez-nous | Recrutement Life Sciences, Diagnostic & Animal Health",
   description:
     "SKS TALENTS accompagne les entreprises qui recrutent dans les Life Sciences, le diagnostic, la santé animale et le petfood premium. Découvrez la vision de Georges Kengue, nos repères d’exécution et notre environnement de travail.",
   keywords: [

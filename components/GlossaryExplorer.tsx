@@ -221,7 +221,7 @@ export default function GlossaryExplorer({ groups }: Props) {
                             skstalents.fr/lexique
                           </p>
                           <p className="font-display italic text-brand-teal">
-                            Your Talents, Our Future
+                            Your Talent · Our Future
                           </p>
                         </div>
                       </div>

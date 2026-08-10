@@ -8,7 +8,7 @@ import SectionShell from "@/components/SectionShell";
 const CANONICAL = "https://www.skstalents.fr/cout-mauvais-recrutement";
 
 export const metadata: Metadata = {
-  title: "Calculateur cout d'un mauvais recrutement | SKS TALENTS",
+  title: "Calculateur cout d'un mauvais recrutement C-level Life Sciences",
   description:
     "Calculez le vrai cout d'un recrutement rate en Life Sciences et Animal Health : search, onboarding, vacance, equipe demobilisee, projets decales. Fourchettes bornees sources AON x France Biotech 2025.",
   keywords: [

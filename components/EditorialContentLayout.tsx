@@ -68,7 +68,7 @@ export function EditorialContentHero({
               priority
             />
           </div>
-          <p className={styles.brandTagline}>Your Talents, Our Future</p>
+          <p className={styles.brandTagline}>Your Talent · Our Future</p>
           <p className={styles.brandSignature}>SKS TALENTS</p>
         </div>
 
