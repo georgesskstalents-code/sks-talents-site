@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
 import CalendlyButton from "@/components/CalendlyButton";
+import TrustpilotWidget from "@/components/TrustpilotWidget";
 import FAQSection from "@/components/FAQSection";
 import { faqsByPage } from "@/data/faqsByPage";
 
@@ -102,6 +103,13 @@ export default function AboutPage() {
           </div>
         </SectionShell>
       </div>
+      <SectionShell
+        eyebrow="Preuve externe"
+        title="La confiance mesurée : 4,6/5 sur Trustpilot, 17 avis"
+        description="Nos clients partagent leur expérience de collaboration sur la plateforme d'avis publique Trustpilot. Preuve indépendante que nous ne contrôlons pas."
+      >
+        <TrustpilotWidget />
+      </SectionShell>
           <FAQSection eyebrow="FAQ" title={faqsByPage["about"].title} description={faqsByPage["about"].description} items={faqsByPage["about"].items} />
     </>
   );

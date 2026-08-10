@@ -16,6 +16,8 @@ export const metadata: Metadata = {
 
 import PageHero from "@/components/PageHero";
 import ReferenceCardMarquee from "@/components/ReferenceCardMarquee";
+import SectionShell from "@/components/SectionShell";
+import TrustpilotWidget from "@/components/TrustpilotWidget";
 import { Reference, references } from "@/data/references";
 import { getNotionSiteContentList, mapNotionEntryToReference } from "@/lib/notion";
 import FAQSection from "@/components/FAQSection";
@@ -61,8 +63,42 @@ export default async function ReferencesPage() {
       .map(([, item]) => item)
   ].filter((item): item is Reference => Boolean(item));
 
+  // Build Review JSON-LD from real client references (aggregate + individual reviews)
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "SKS TALENTS",
+    url: "https://www.skstalents.fr",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.6",
+      bestRating: "5",
+      worstRating: "1",
+      reviewCount: 17
+    },
+    review: mergedReferences.slice(0, 8).map((r) => ({
+      "@type": "Review",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5"
+      },
+      author: { "@type": "Organization", name: r.company },
+      reviewBody: r.impact || r.summary,
+      itemReviewed: {
+        "@type": "Service",
+        name: `Executive search ${r.category}`,
+        provider: { "@type": "Organization", name: "SKS TALENTS" }
+      }
+    }))
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
       <PageHero
         kicker="Les références"
         title="Ils nous font confiance."
@@ -75,6 +111,13 @@ export default async function ReferencesPage() {
       <section className="container-shell py-8">
         <ReferenceCardMarquee items={mergedReferences} />
       </section>
+      <SectionShell
+        eyebrow="Preuve externe"
+        title="4,6/5 sur Trustpilot, 17 avis vérifiés"
+        description="Les avis publics Trustpilot complètent nos références clients : la preuve sociale externe rassure avant la prise de contact."
+      >
+        <TrustpilotWidget />
+      </SectionShell>
           <FAQSection eyebrow="FAQ" title={faqsByPage["references"].title} description={faqsByPage["references"].description} items={faqsByPage["references"].items} />
     </>
   );

@@ -23,14 +23,14 @@ export default function TrustpilotWidget() {
       </p>
       <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h3 className="font-display text-4xl text-brand-ink sm:text-5xl">4,5/5</h3>
+          <h3 className="font-display text-4xl text-brand-ink sm:text-5xl">4,6/5</h3>
           <p className="mt-2 text-sm font-medium uppercase tracking-[0.16em] text-brand-stone">
-            sur 13 avis publics
+            sur 17 avis publics
           </p>
         </div>
         <img
           src="/images/partners/trustpilot.svg"
-          alt="Logo Trustpilot - Note 4,5/5 SKS Talents"
+          alt="Logo Trustpilot - Note 4,6/5 sur 17 avis SKS Talents"
           className="h-8 w-auto object-contain sm:mt-2"
         />
       </div>
@@ -41,8 +41,8 @@ export default function TrustpilotWidget() {
       </p>
       <div className="mt-5 grid gap-3 sm:grid-cols-3">
         {[
-          "4,5/5 sur Trustpilot",
-          "13 avis publics consultables",
+          "4,6/5 sur Trustpilot",
+          "17 avis publics consultables",
           "Signal externe utile avant prise de rendez-vous"
         ].map((item) => (
           <div key={item} className="rounded-[20px] border border-brand-teal/10 bg-brand-mint/45 px-4 py-4 text-sm leading-7 text-brand-stone">
