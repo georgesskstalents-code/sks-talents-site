@@ -52,16 +52,28 @@ const breadcrumbJsonLd = {
   ]
 };
 
+const VIMEO_ID = process.env.NEXT_PUBLIC_VIMEO_VIDEO_ID ?? process.env.VIMEO_VIDEO_ID ?? "851364422";
+
 const videoJsonLd = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  name: "Démo Agent CEO Copilot stratégique · SKS Talents",
+  name: "Demo Agent CEO Copilot strategique - Life Sciences - SKS Talents",
   description:
-    "Démo interactive de 30 secondes. Comment une CEO biotech Series B en oncologie passe de 2 jours à 5 minutes de préparation board, et anticipe ses recrutements 6 mois à l'avance.",
-  thumbnailUrl: "https://www.skstalents.fr/opengraph-image",
+    "Demo interactive de 30 secondes. Comment un.e CEO biotech Series B en oncologie passe de 2 jours a 5 minutes de preparation board, et anticipe ses recrutements 6 mois a l'avance.",
+  thumbnailUrl: `https://vumbnail.com/${VIMEO_ID}.jpg`,
   uploadDate: "2026-05-05T00:00:00Z",
   duration: "PT30S",
-  contentUrl: CANONICAL + "#demo"
+  contentUrl: `https://player.vimeo.com/video/${VIMEO_ID}`,
+  embedUrl: `https://player.vimeo.com/video/${VIMEO_ID}`,
+  url: CANONICAL,
+  publisher: {
+    "@type": "Organization",
+    name: "SKS TALENTS",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.skstalents.fr/brand/logo-sks-talents.svg"
+    }
+  }
 };
 
 const faqJsonLd = {

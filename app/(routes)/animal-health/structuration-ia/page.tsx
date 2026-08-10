@@ -56,16 +56,28 @@ const breadcrumbJsonLd = {
   ]
 };
 
+const VIMEO_ID = process.env.NEXT_PUBLIC_VIMEO_VIDEO_ID ?? process.env.VIMEO_VIDEO_ID ?? "851364422";
+
 const videoJsonLd = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  name: "Démo Agent Reporting Multi-Sites · SKS Talents",
+  name: "Demo Agent Reporting Multi-Sites - Animal Health - SKS Talents",
   description:
-    "Démo interactive de 30 secondes. Comment un cofondateur DG d'un groupement vétérinaire passe de 3 jours à 4 minutes de reporting mensuel.",
-  thumbnailUrl: "https://www.skstalents.fr/opengraph-image",
+    "Demo interactive de 30 secondes. Comment un.e cofondateur.rice DG d'un groupement veterinaire passe de 3 jours a 4 minutes de reporting mensuel.",
+  thumbnailUrl: `https://vumbnail.com/${VIMEO_ID}.jpg`,
   uploadDate: "2026-05-05T00:00:00Z",
   duration: "PT30S",
-  contentUrl: CANONICAL + "#demo"
+  contentUrl: `https://player.vimeo.com/video/${VIMEO_ID}`,
+  embedUrl: `https://player.vimeo.com/video/${VIMEO_ID}`,
+  url: CANONICAL,
+  publisher: {
+    "@type": "Organization",
+    name: "SKS TALENTS",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.skstalents.fr/brand/logo-sks-talents.svg"
+    }
+  }
 };
 
 const faqJsonLd = {
