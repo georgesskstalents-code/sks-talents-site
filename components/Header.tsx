@@ -64,7 +64,9 @@ const navGroups: NavGroup[] = [
         items: [
           { href: "/scorecard-dirigeant", label: "Scorecard dirigeant" },
           { href: "/diagnostic", label: "Diagnostic" },
-          { href: "/salary-benchmarks", label: "Salary benchmarks" }
+          { href: "/salary-benchmarks", label: "Salary benchmarks" },
+          { href: "/barometre-life-sciences-2026-2027", label: "Baromètre annuel" },
+          { href: "/cout-mauvais-recrutement", label: "Calculateur coût recrutement" }
         ]
       },
       {

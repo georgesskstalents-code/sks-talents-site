@@ -18,6 +18,8 @@ const dirigeantLinks = [
   { href: "/diagnostic", label: "Diagnostic" },
   { href: "/scorecard-dirigeant", label: "Scorecard dirigeant" },
   { href: "/salary-benchmarks", label: "Salary benchmarks" },
+  { href: "/barometre-life-sciences-2026-2027", label: "Baromètre annuel" },
+  { href: "/cout-mauvais-recrutement", label: "Calculateur coût recrutement" },
   { href: "/cas-d-usage", label: "Cas d'usage" },
   { href: "/comparatifs", label: "Comparatifs" },
   { href: "/studies", label: "Études & insights" }
