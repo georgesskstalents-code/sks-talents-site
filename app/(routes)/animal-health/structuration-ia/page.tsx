@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import AnimalHealthLanding from "./AnimalHealthLanding";
 
 const CANONICAL = "https://www.skstalents.fr/animal-health/structuration-ia";
-const TITLE = "Digitalisation RH par l'IA - Animal Health : agents, automatisation, reporting multi-sites | SKS";
+const TITLE = "Digitalisation santé animale par l'IA - Groupements vet, petfood, diagnostic | SKS";
 const DESCRIPTION =
-  "Digitalisation RH par l'IA pour groupements veterinaires, petfood et diagnostic animal. 3 agents IA + automatisation reporting. Demo 30 sec : 3 jours a 4 minutes de reporting multi-sites. ROI 6 mois. RGPD by design.";
+  "Digitalisation santé animale par l'IA : groupements veterinaires, cliniques, petfood, diagnostic. 3 agents IA + automatisation reporting multi-sites. Demo 30 sec : 3 jours a 4 minutes. ROI 6 mois. RGPD by design.";
 
 export const metadata: Metadata = {
   title: TITLE,

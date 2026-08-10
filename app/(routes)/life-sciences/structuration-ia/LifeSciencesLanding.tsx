@@ -162,13 +162,13 @@ export default function LifeSciencesLanding() {
       {/* ===== Section 1 - HERO (StructurationHero) ===== */}
       <StructurationHero
         vertical="life-sciences"
-        eyebrow="Executive Search  ·  Life Sciences"
+        eyebrow="Digitalisation RH par l'IA  ·  Life Sciences"
         headlineLines={[
-          "Vos process talent ne suivent plus",
-          "votre croissance.",
-          "Notre CEO Copilot IA, oui."
+          "Digitalisez vos RH par l'IA.",
+          "Vos process talent suivent enfin",
+          "votre croissance."
         ]}
-        subtitle="Combien de mois d'avance avez-vous sur votre prochain recrutement stratégique ? Nous transformons votre pilotage des talents, votre reporting board et votre rétention en agents IA qui travaillent pour vous."
+        subtitle="Digitalisation RH par l'IA pour scale-ups biotech, medtech et deeptech Series A à C. Combien de mois d'avance avez-vous sur votre prochain recrutement stratégique ? Nous transformons votre pilotage talents, reporting board et rétention en agents IA qui travaillent pour vous."
         question={{
           thematicLabel: "Le copilot IA qui transforme vos board meetings",
           questionText:

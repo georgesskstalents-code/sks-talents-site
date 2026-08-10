@@ -22,9 +22,9 @@ export const lifeSciencesHub = {
 export const animalHealthHub = {
   slug: "animal-health",
   path: "/animal-health",
-  title: "Animal Health Hub",
+  title: "Animal Health Hub - Digitalisation santé animale et recrutement",
   description:
-    "Un ensemble de pages sectorielles pour les laboratoires vétérinaires, les réseaux de cliniques et les acteurs du petfood premium."
+    "Pages sectorielles pour la digitalisation santé animale et le recrutement : laboratoires vétérinaires, groupements de cliniques, réseaux référés et acteurs du petfood premium. Executive search + digitalisation RH par l'IA."
 };
 
 export const lifeSciencesCategories: SectorCategory[] = [

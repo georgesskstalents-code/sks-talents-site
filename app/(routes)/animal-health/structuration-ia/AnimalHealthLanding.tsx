@@ -128,13 +128,13 @@ export default function AnimalHealthLanding() {
       {/* ===== Section 1 - HERO (StructurationHero) ===== */}
       <StructurationHero
         vertical="animal-health"
-        eyebrow="Executive Search  ·  Cliniques vétérinaires"
+        eyebrow="Digitalisation santé animale par l'IA  ·  Groupements vétérinaires & petfood"
         headlineLines={[
-          "Vos process RH ne suivent plus",
-          "la croissance de votre groupement.",
-          "Nos agents IA, oui."
+          "Digitalisez votre santé animale",
+          "par l'IA. Vos process RH suivent",
+          "enfin la croissance de votre groupement."
         ]}
-        subtitle="Combien de jours par mois passez-vous à comprendre vos cliniques au lieu de les faire grandir ? Nous transformons votre reporting, votre juridique RH et votre pipeline commercial en agents IA qui travaillent pour vous."
+        subtitle="Digitalisation santé animale par l'IA pour groupements vétérinaires, cliniques et petfood. Combien de jours par mois passez-vous à comprendre vos cliniques au lieu de les faire grandir ? Nous transformons votre reporting, votre juridique RH et votre pipeline commercial en agents IA qui travaillent pour vous."
         question={{
           thematicLabel: "Passer de 3 jours à 4 minutes de reporting mensuel",
           questionText:
