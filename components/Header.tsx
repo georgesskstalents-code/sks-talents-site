@@ -74,7 +74,7 @@ const navGroups: NavGroup[] = [
         items: [
           { href: "/job-roles", label: "Fiches métiers" },
           { href: "/blog", label: "Articles" },
-          { href: "/orientation", label: "Orientation" },
+          { href: "/orientation", label: "Orientez-vous" },
           { href: "/schools", label: "Écoles" },
           { href: "/lexique-life-sciences-rh", label: "Lexique" }
         ]

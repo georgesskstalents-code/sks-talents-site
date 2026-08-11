@@ -29,7 +29,7 @@ const candidatLinks = [
   { href: "/job-roles", label: "Fiches métiers" },
   { href: "/calcul-salaire-brut-net", label: "Calcul salaire brut/net" },
   { href: "/blog", label: "Articles" },
-  { href: "/orientation", label: "Orientation" },
+  { href: "/orientation", label: "Orientez-vous" },
   { href: "/schools", label: "Écoles" },
   { href: "/lexique-life-sciences-rh", label: "Lexique" },
   { href: "/investment-funds", label: "Investment funds" },

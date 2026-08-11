@@ -50,6 +50,7 @@ export default function InlineLeadForm({
     () =>
       form.firstName.trim().length > 1 &&
       /\S+@\S+\.\S+/.test(form.email) &&
+      form.company.trim().length > 1 &&
       (!turnstileEnabled || turnstileToken.length > 10),
     [form, turnstileEnabled, turnstileToken]
   );
@@ -71,7 +72,7 @@ export default function InlineLeadForm({
         message: "client_validation"
       });
       setState("error");
-      setMessage("Merci de renseigner votre prénom et votre email avant l’envoi.");
+      setMessage("Merci de renseigner votre prénom, email et entreprise avant l’envoi.");
       return;
     }
 
@@ -173,25 +174,26 @@ export default function InlineLeadForm({
           inputMode="email"
         />
 
+        <input
+          value={form.company}
+          onChange={(event) => updateField("company", event.target.value)}
+          className="rounded-2xl border border-brand-teal/15 px-4 py-4 text-base outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
+          placeholder="Entreprise*"
+          autoComplete="organization"
+        />
+
         <details className="group rounded-2xl border border-brand-teal/10 bg-brand-mint/15 px-4 py-3">
           <summary className="cursor-pointer text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
-            + Ajouter téléphone &amp; entreprise (optionnel)
+            + Ajouter téléphone (optionnel)
           </summary>
-          <div className="mt-3 grid gap-3 sm:grid-cols-2">
+          <div className="mt-3">
             <input
               value={form.phone}
               onChange={(event) => updateField("phone", event.target.value)}
-              className="rounded-2xl border border-brand-teal/15 px-4 py-3 text-sm outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
+              className="w-full rounded-2xl border border-brand-teal/15 px-4 py-3 text-sm outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
               placeholder="Téléphone"
               autoComplete="tel"
               inputMode="tel"
-            />
-            <input
-              value={form.company}
-              onChange={(event) => updateField("company", event.target.value)}
-              className="rounded-2xl border border-brand-teal/15 px-4 py-3 text-sm outline-none transition focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/15"
-              placeholder="Entreprise"
-              autoComplete="organization"
             />
           </div>
         </details>
