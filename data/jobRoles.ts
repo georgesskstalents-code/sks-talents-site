@@ -4647,6 +4647,574 @@ const may2026RoleBatch: JobRole[] = [
   }
 ];
 
+const august2026AnimalHealthBatch: JobRole[] = [
+  {
+    slug: "medical-vet-technical-manager-swine",
+    title: "Vétérinaire Technique Porc Grand Compte",
+    salary: "55kEUR - 81kEUR",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable, primes, véhicule et intéressement en supplément. Fourchette dépendante de l'expérience, taille et type d'entreprise (grand groupe international vs PME/labo national), région et périmètre du poste.",
+    sector: "Medical Vet",
+    category: "Affaires techniques filière porc",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Assure le support technique de la gamme porcine auprès des grands comptes industriels (groupements, intégrateurs, coopératives). Accompagne les protocoles vaccinaux, forme les équipes commerciales internes et les techniciens groupements, anime la relation KOL vétérinaires porc et remonte les insights terrain au marketing et R&D.",
+    skills: [
+      "Production porcine (naissage, engraissement, post-sevrage)",
+      "Vaccination et biosécurité (PPA, PCV2, SDRP, mycoplasmes)",
+      "Formation technique force de vente",
+      "Relation KOL vétérinaires filière porc",
+      "Autonomie et crédibilité terrain"
+    ],
+    successFactors: [
+      "Être crédible face aux praticien.ne.s et vétérinaires de groupement dès les premiers échanges.",
+      "Traduire des données techniques complexes en messages actionnables pour la force de vente.",
+      "Anticiper les tendances filière (biosécurité, PPA, antibiorésistance, bien-être animal, One Health)."
+    ],
+    path: [
+      "Vétérinaire praticien.ne porc",
+      "Vétérinaire technique porc",
+      "Chef de Produit Porc / Responsable Médical Porc"
+    ],
+    missions: [
+      "Accompagner les élevages porcins industriels sur les protocoles vaccinaux, sanitaires et de biosécurité.",
+      "Former les équipes commerciales internes et les techniciens groupements aux nouveautés produits et évolutions réglementaires.",
+      "Animer un réseau de KOL vétérinaires porc, participer aux congrès (AFMVP, IPVS, ESPHM) et remonter les insights terrain au marketing et à la R&D."
+    ],
+    studies: [
+      "Docteur.e vétérinaire (DEFV)",
+      "5+ ans d'expérience en production porcine",
+      "Formation continue biosécurité, PPA, antibiorésistance"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
+    relatedIndustries: [
+      "Laboratoires santé animale porc (Boehringer Ingelheim, Zoetis, MSD Animal Health, Ceva, Virbac)",
+      "Cabinets vétérinaires porcins (Porc.Spective, Chêne Vert Conseil)",
+      "Groupements porcins (Cooperl Arc Atlantique, Evel'Up, Aveltis, Porelia)",
+      "Nutrition animale porc (Sanders, Le Gouessant, Cargill)",
+      "Instituts techniques (IFIP, INRAE, Anses)"
+    ],
+    sources: [
+      { name: "IFIP - Institut du Porc", url: "https://ifip.asso.fr/" },
+      { name: "SNGTV - Groupements Techniques Vétérinaires", url: "https://www.sngtv.org/" },
+      { name: "AFMVP - Médecine Vétérinaire Porcine", url: "https://www.afmvp.com/" }
+    ]
+  },
+  {
+    slug: "medical-vet-technical-manager-poultry",
+    title: "Vétérinaire Technique Volaille",
+    salary: "45kEUR - 75kEUR",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable, primes, véhicule en supplément. Junior à senior : la fourchette basse cible les vétérinaires aviaires 2-4 ans, la fourchette haute cible les seniors expérimentés couvoir + vaccination.",
+    sector: "Medical Vet",
+    category: "Affaires techniques filière volaille",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Assure le support technique de la gamme aviaire (chair, ponte, dinde, canard) : audits couvoir, expertise vaccination (in ovo, nébulisation, sous-cutanée), formation force de vente, relation KOL vétérinaires aviaires et interlocuteurs intégrateurs.",
+    skills: [
+      "Systèmes de production aviaire (chair, ponte, dinde, canard, palmipèdes)",
+      "Vaccination aviaire (in ovo, spray, nébulisation, sous-cutanée)",
+      "Audits couvoir et biosécurité",
+      "Formation technique et scientifique",
+      "Relation KOL et intégrateurs"
+    ],
+    successFactors: [
+      "Maîtriser les spécificités des différents systèmes de production aviaire.",
+      "Apprécier la transversalité entre expertise technique, marketing et commercial.",
+      "Anticiper les risques sanitaires (grippe aviaire, Salmonella, Newcastle)."
+    ],
+    path: [
+      "Vétérinaire praticien.ne aviaire",
+      "Vétérinaire technique volaille",
+      "Product Manager Volaille / Responsable Médical Volaille"
+    ],
+    missions: [
+      "Réaliser les audits couvoir et accompagner les intégrateurs sur les protocoles vaccinaux et sanitaires.",
+      "Former la force de vente et les techniciens groupements aviaires aux évolutions produits.",
+      "Contribuer aux positionnements marketing par la valorisation scientifique des données terrain."
+    ],
+    studies: [
+      "Docteur.e vétérinaire (DEFV)",
+      "Spécialisation ou expérience aviaire (junior à senior accepté)",
+      "Formation continue biosécurité aviaire"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
+    relatedIndustries: [
+      "Laboratoires santé animale volaille (Ceva, Boehringer Ingelheim, MSD, Zoetis, Elanco)",
+      "Cabinets vétérinaires aviaires (Chêne Vert / Hyperion)",
+      "Zoopôle Ploufragan (recherche aviaire)",
+      "Couvoirs (Hubbard, Boyé Accouvage)",
+      "Groupes volaille (LDC, Terrena, Galliance, Duc, Bodin)"
+    ],
+    sources: [
+      { name: "ITAVI - Institut Technique de l'Aviculture", url: "https://www.itavi.asso.fr/" },
+      { name: "SNGTV - Groupements Techniques Vétérinaires", url: "https://www.sngtv.org/" },
+      { name: "Anses - Grippe aviaire et surveillance", url: "https://www.anses.fr/fr/system/files/anses-grippe-aviaire.pdf" }
+    ]
+  },
+  {
+    slug: "medical-vet-technical-manager-ruminant",
+    title: "Vétérinaire Technique Ruminant Bovin",
+    salary: "50kEUR - 75kEUR",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable, primes, véhicule en supplément. Fourchette dépendante de l'expérience, du périmètre (laitier / allaitant / mixte) et de la région d'exercice.",
+    sector: "Medical Vet",
+    category: "Affaires techniques filière ruminant",
+    shortageLevel: "Elevee",
+    summary:
+      "Assure le support technique de la gamme bovine (laitier et allaitant) : santé de la mamelle, reproduction, protocoles vaccinaux, accompagnement éleveurs et vétérinaires praticiens ruraux sur les enjeux sanitaires et de productivité.",
+    skills: [
+      "Production bovine laitière et allaitante",
+      "Santé de la mamelle et qualité du lait",
+      "Reproduction bovine et protocoles vaccinaux",
+      "Pédagogie et accompagnement éleveurs",
+      "Formation vétérinaires praticiens ruraux"
+    ],
+    successFactors: [
+      "Comprendre les contraintes économiques et opérationnelles de l'élevage bovin.",
+      "Avoir un vrai sens pédagogique face aux vétérinaires ruraux et éleveurs.",
+      "Trouver l'équilibre entre soutien technique et posture commerciale crédible."
+    ],
+    path: [
+      "Vétérinaire praticien.ne rural.e / mixte",
+      "Vétérinaire technique ruminant",
+      "Chef de Produit Bovin / Responsable Médical Ruminant"
+    ],
+    missions: [
+      "Accompagner les éleveurs bovins et vétérinaires praticiens sur les protocoles santé mamelle, reproduction et vaccination.",
+      "Former la force de vente aux enjeux techniques et sanitaires spécifiques ruminants.",
+      "Contribuer à la stratégie médicale des gammes bovines et aux publications scientifiques."
+    ],
+    studies: [
+      "Docteur.e vétérinaire (DEFV)",
+      "Expérience élevage bovin (praticien.ne rural.e ou mixte)",
+      "Formation continue santé bovine"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
+    relatedIndustries: [
+      "Laboratoires santé animale ruminants (Boehringer Ingelheim, MSD Animal Health, Zoetis, Ceva, Virbac, Vétoquinol)",
+      "Cabinets vétérinaires ruraux et GTV / SNGTV",
+      "Coopératives laitières (Lactalis, Sodiaal, Savencia, Agrial)",
+      "Nutrition animale ruminants (InVivo, Neovia/ADM, Sanders)",
+      "Contrôle laitier et instituts techniques (IDELE, CNIEL)"
+    ],
+    sources: [
+      { name: "IDELE - Institut de l'Élevage", url: "https://idele.fr/" },
+      { name: "SNGTV - Groupements Techniques Vétérinaires", url: "https://www.sngtv.org/" },
+      { name: "CNIEL - Interprofession laitière", url: "https://www.filiere-laitiere.fr/" }
+    ]
+  },
+  {
+    slug: "medical-vet-head-of-regulatory-europe",
+    title: "Head of Regulatory Affairs Europe Santé Animale",
+    salary: "90kEUR - 140kEUR",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. LTI, stock-options et bonus annuel en supplément (10-25% du fixe). Fourchette dépendante du portefeuille (mono-produit vs multi-thérapeutique), de la taille des équipes managées et de la dimension internationale.",
+    sector: "Medical Vet",
+    category: "Direction réglementaire",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Pilote les enregistrements et la conformité réglementaire à l'échelle européenne (EMA) pour un portefeuille santé animale. Définit la stratégie réglementaire, orchestre les soumissions, anime l'interface autorités et manage une équipe réglementaire senior.",
+    skills: [
+      "Réglementation santé animale européenne (EMA, VMD, DCVMP)",
+      "Stratégie réglementaire multi-pays",
+      "Management d'équipe réglementaire",
+      "Interface autorités et négociation",
+      "Anglais courant obligatoire"
+    ],
+    successFactors: [
+      "Comprendre les spécificités réglementaires vétérinaires vs pharma humaine.",
+      "Anticiper les évolutions du cadre EMA et adapter la stratégie du portefeuille.",
+      "Naviguer entre exigences science, business et compliance sans compromis dangereux."
+    ],
+    path: [
+      "Regulatory Affairs Specialist / Manager",
+      "Head of Regulatory pays / région",
+      "Head of Regulatory Europe / Global"
+    ],
+    missions: [
+      "Définir et déployer la stratégie réglementaire européenne du portefeuille santé animale.",
+      "Piloter les soumissions, variations et interactions avec EMA / autorités nationales.",
+      "Manager l'équipe réglementaire, orchestrer les partenariats consultants et anticiper les évolutions cadre EU."
+    ],
+    studies: [
+      "Docteur.e vétérinaire OU pharmacien.ne OU scientifique senior",
+      "10+ ans en affaires réglementaires santé animale",
+      "Master affaires réglementaires ou équivalent recommandé"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "Université d'Angers", "Faculté de pharmacie Strasbourg"],
+    relatedIndustries: [
+      "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac, Vétoquinol)",
+      "EMA / ANMV (ANSES) / autres autorités nationales EU",
+      "Cabinets consultants réglementaires (Halloran, Voisin Consulting, TSD Consulting)",
+      "Biotech animal health en croissance internationale",
+      "Vaccins vétérinaires et biologics"
+    ],
+    sources: [
+      { name: "EMA - Committee for Medicinal Products for Veterinary Use", url: "https://www.ema.europa.eu/en/committees/committee-medicinal-products-veterinary-use-cvmp" },
+      { name: "AnimalhealthEurope - Federation industrie AH", url: "https://www.animalhealtheurope.eu/" },
+      { name: "ANMV / ANSES - Agence Nationale Médicament Vétérinaire", url: "https://www.anses.fr/fr/content/anmv" }
+    ]
+  },
+  {
+    slug: "medical-vet-market-access-manager",
+    title: "Market Access Manager Santé Animale",
+    salary: "70kEUR - 110kEUR",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 15-25% + LTI selon niveau. Fourchette dépendante du périmètre (pays vs région EU), de la maturité produit et de la complexité des payeurs / prescripteurs ciblés.",
+    sector: "Medical Vet",
+    category: "Market access",
+    shortageLevel: "Elevee",
+    summary:
+      "Définit et déploie la stratégie d'accès au marché pour des gammes santé animale : pricing, valeur médico-économique, relations payeurs et prescripteurs, argumentaires d'adoption. Interface stratégique entre médical, marketing, ventes et affaires publiques.",
+    skills: [
+      "Pricing et stratégie médico-économique",
+      "Relations payeurs, prescripteurs et éleveurs décisionnaires",
+      "Argumentaires valeur et outreach commercial",
+      "Analyse données HEOR santé animale",
+      "Anglais courant obligatoire"
+    ],
+    successFactors: [
+      "Combiner rigueur scientifique et sens business dans un secteur non remboursé au sens classique.",
+      "Comprendre les circuits de décision spécifiques (vétérinaire prescripteur, éleveur payeur, groupement acheteur).",
+      "Construire des argumentaires valeur crédibles auprès de KOL exigeants."
+    ],
+    path: [
+      "Product Manager ou Medical Affairs santé animale",
+      "Market Access Specialist / Manager",
+      "Head of Market Access région / Europe"
+    ],
+    missions: [
+      "Élaborer la stratégie pricing et valeur médico-économique des gammes santé animale.",
+      "Piloter les relations avec payeurs institutionnels, prescripteurs et groupements acheteurs.",
+      "Développer les argumentaires d'adoption et outils commerciaux pour la force de vente."
+    ],
+    studies: [
+      "Docteur.e vétérinaire OU scientifique + compétence économique / stratégique",
+      "Master management ou HEOR recommandé",
+      "5-10 ans d'expérience santé animale ou pharma"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "ESSEC / HEC / ESCP", "Sciences Po"],
+    relatedIndustries: [
+      "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac)",
+      "Cabinets conseil market access santé animale",
+      "Agences HEOR (Icon, IQVIA vet)",
+      "Biotech animal health en phase de lancement",
+      "Nutrition animale et diagnostic vétérinaire"
+    ],
+    sources: [
+      { name: "AnimalhealthEurope - Industrie santé animale EU", url: "https://www.animalhealtheurope.eu/" },
+      { name: "Kynetec - Animal Health Market Intelligence", url: "https://kynetec.com/" }
+    ]
+  },
+  {
+    slug: "medical-vet-business-development-manager",
+    title: "Business Development Manager Santé Animale",
+    salary: "70kEUR - 110kEUR",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Bonus performance 20-30% + LTI selon taille des deals conclus. Fourchette dépendante du périmètre géographique et de la nature des accords (licensing, M&A, partenariats).",
+    sector: "Medical Vet",
+    category: "Business development",
+    shortageLevel: "Elevee",
+    summary:
+      "Identifie et développe les opportunités de croissance externe pour les laboratoires santé animale : partenariats stratégiques, licensing in / out, nouveaux marchés géographiques ou segments, veille concurrentielle et intelligence économique.",
+    skills: [
+      "Business development et licensing santé animale",
+      "M&A et due diligence stratégique",
+      "Veille concurrentielle et intelligence économique",
+      "Négociation contrats complexes",
+      "Réseau industriel et institutionnel santé animale"
+    ],
+    successFactors: [
+      "Avoir une fibre entrepreneuriale et une tolérance au risque calculé.",
+      "Combiner expertise scientifique / vétérinaire ET compréhension fine des modèles économiques.",
+      "Construire un réseau international avec KOL, VC, laboratoires concurrents et startups."
+    ],
+    path: [
+      "Vétérinaire / ingénieur avec expérience commerciale ou stratégique",
+      "Business Development Manager pays / région",
+      "Head of BD Europe / Global ou Chief Business Officer"
+    ],
+    missions: [
+      "Identifier les opportunités de licensing, M&A et partenariats stratégiques dans le portefeuille santé animale.",
+      "Piloter la veille concurrentielle et l'intelligence économique sur les segments cibles.",
+      "Négocier et closer les accords stratégiques en interface avec direction générale et affaires juridiques."
+    ],
+    studies: [
+      "Docteur.e vétérinaire OU ingénieur.e agri / agro",
+      "MBA ou Master management stratégique recommandé",
+      "7-10 ans d'expérience mixte scientifique + business"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "HEC / ESSEC / INSEAD"],
+    relatedIndustries: [
+      "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva)",
+      "Biotech et startups animal health / petcare",
+      "Fonds VC/PE santé animale (Digitalis Ventures, Companion Fund, Anterra Capital)",
+      "Cabinets conseil M&A santé (McKinsey Life Sciences, EY Parthenon)",
+      "Petfood premium et distribution vétérinaire"
+    ],
+    sources: [
+      { name: "Vetnosis / Animal Pharm - M&A et deals santé animale", url: "https://animalpharm.agribusinessintelligence.informa.com/" },
+      { name: "Digitalis Ventures - Fonds spécialisé animal health", url: "https://digitalisventures.com/" }
+    ]
+  },
+  {
+    slug: "medical-vet-country-manager-france",
+    title: "Country Manager France Santé Animale",
+    salary: "110kEUR - 180kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Bonus performance 30-50% + LTI stock-options significatives pour grands groupes internationaux. Fourchette dépendante de la taille du P&L, du nombre de collaborateurs et de la maturité de la filiale France.",
+    sector: "Medical Vet",
+    category: "Direction pays",
+    shortageLevel: "Elevee",
+    summary:
+      "Dirige une filiale ou un pays santé animale : P&L, management d'équipes commerciales, marketing, technique, opérations et affaires réglementaires. Définit et déploie la stratégie locale en cohérence avec les orientations groupe internationales.",
+    skills: [
+      "Direction générale P&L multi-fonctions",
+      "Leadership et management d'équipes 30-200 personnes",
+      "Stratégie commerciale santé animale multi-segments",
+      "Interface siège international et gestion matricielle",
+      "Anglais courant obligatoire, seconde langue appréciée"
+    ],
+    successFactors: [
+      "Être un leader confirmé avec un parcours commercial + management + opérations solide.",
+      "Comprendre les enjeux locaux France (filière élevage, cliniques vétérinaires, distribution) tout en dialoguant avec le siège international.",
+      "Naviguer les arbitrages entre croissance court terme et investissements structurels long terme."
+    ],
+    path: [
+      "Business Unit Director ou Directeur commercial santé animale",
+      "Country Manager pays secondaire / région émergente",
+      "Country Manager France ou Head of Southern Europe"
+    ],
+    missions: [
+      "Piloter le P&L de la filiale France santé animale et déployer la stratégie business locale.",
+      "Manager les directions commerciales, marketing, technique, opérations et réglementaires.",
+      "Représenter le groupe auprès des interlocuteurs stratégiques France (industriels, syndicats, autorités, KOL)."
+    ],
+    studies: [
+      "Docteur.e vétérinaire OU ingénieur.e agri / agro OU école de commerce",
+      "MBA recommandé pour les grands groupes",
+      "15+ ans d'expérience dont 5+ en direction opérationnelle santé animale"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "HEC / ESSEC / ESCP / INSEAD"],
+    relatedIndustries: [
+      "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac, Vétoquinol, Merial/Sanofi)",
+      "Petfood premium multinational (Nestlé Purina, Mars Petcare, Royal Canin, Hill's, Affinity Petcare)",
+      "Nutrition animale grands groupes (Cargill, ADM, InVivo, Neovia)",
+      "Groupes vétérinaires internationaux (AniCura, IVC Evidensia, VetPartners)",
+      "Cabinets conseil executive search santé animale"
+    ],
+    sources: [
+      { name: "AnimalhealthEurope - Industrie santé animale EU", url: "https://www.animalhealtheurope.eu/" },
+      { name: "SIMV - Syndicat de l'Industrie du Médicament et diagnostic Vétérinaires", url: "https://www.simv.org/" }
+    ]
+  },
+  {
+    slug: "medical-vet-key-account-manager-large-accounts",
+    title: "Key Account Manager Grand Compte Santé Animale",
+    salary: "50kEUR - 70kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 20-40% du fixe selon atteinte objectifs individuels et collectifs. Fourchette dépendante du portefeuille de comptes (nombre + poids stratégique) et du niveau de séniorité.",
+    sector: "Medical Vet",
+    category: "Commercial grand compte",
+    shortageLevel: "Elevee",
+    summary:
+      "Gère et développe un portefeuille de comptes stratégiques (groupements vétérinaires, coopératives, centrales d'achat, groupes distribution) : négociation d'appels d'offres, relation avec les décisionnaires en organisations complexes, reporting et pilotage business.",
+    skills: [
+      "Gestion grand compte et négociation commerciale complexe",
+      "Connaissance filière santé animale (vétérinaire, élevage, distribution)",
+      "Pilotage appels d'offres et contrats-cadres",
+      "Reporting business et CRM",
+      "Relation multi-niveaux (achat, technique, direction)"
+    ],
+    successFactors: [
+      "Combiner rigueur commerciale et compréhension technique des enjeux santé animale.",
+      "Naviguer les processus de décision complexes (achats, technique, direction) sans perdre en réactivité.",
+      "Construire une relation long terme fondée sur la valeur, pas uniquement sur le prix."
+    ],
+    path: [
+      "Technico-commercial.e ou véto commercial.e junior",
+      "Key Account Manager grand compte",
+      "Head of KAM / Directeur.rice commercial.e grands comptes"
+    ],
+    missions: [
+      "Développer le portefeuille de comptes stratégiques et négocier les contrats-cadres.",
+      "Répondre aux appels d'offres et défendre les propositions commerciales en interne et externe.",
+      "Assurer le reporting business, la remontée d'informations terrain et la coordination interne."
+    ],
+    studies: [
+      "Docteur.e vétérinaire OU ingénieur.e agri / agro OU école de commerce",
+      "3-8 ans d'expérience commerciale santé animale ou secteurs adjacents",
+      "Formation continue négociation grand compte"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "École de commerce généraliste"],
+    relatedIndustries: [
+      "Laboratoires santé animale (Zoetis, Boehringer Ingelheim, MSD, Ceva, Elanco, Virbac)",
+      "Nutrition animale (Sanders, InVivo, Neovia, Cargill)",
+      "Génétique animale (Groupe Grimaud, Hendrix Genetics)",
+      "Distribution vétérinaire (Alcyon, Coveto, Centravet)",
+      "Groupes vétérinaires (AniCura, IVC Evidensia, Sévétys, VetPartners, Univet)"
+    ],
+    sources: [
+      { name: "SIMV - Syndicat Industrie Médicament et Diagnostic Vétérinaires", url: "https://www.simv.org/" },
+      { name: "Ordre National des Vétérinaires - Démographie", url: "https://www.veterinaire.fr/" }
+    ]
+  },
+  {
+    slug: "petfood-veterinary-advisor",
+    title: "Vétérinaire Conseiller Technique Petfood",
+    salary: "50kEUR - 75kEUR",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 10-20%, véhicule et intéressement en supplément. Fourchette dépendante de la taille de la marque petfood (multinational vs premium challenger) et du périmètre.",
+    sector: "Petfood",
+    category: "Affaires techniques petfood",
+    shortageLevel: "Elevee",
+    summary:
+      "Assure le support scientifique et technique sur les gammes d'alimentation chien et chat : formation des prescripteurs vétérinaires, communication scientifique, relation KOL nutrition companion animal, contribution aux publications et positionnements marketing.",
+    skills: [
+      "Nutrition et physiologie chien / chat",
+      "Formation scientifique prescripteurs vétérinaires",
+      "Communication scientifique et publications",
+      "Relation KOL nutrition companion animal",
+      "Pédagogie et vulgarisation clinique"
+    ],
+    successFactors: [
+      "Combiner rigueur scientifique et pédagogie accessible aux praticien.ne.s en clinique.",
+      "Comprendre les enjeux commerciaux du petfood premium (positionnement, différenciation, claims).",
+      "Construire un réseau KOL solide en nutrition et médecine préventive companion animal."
+    ],
+    path: [
+      "Vétérinaire praticien.ne companion animal",
+      "Vétérinaire conseiller technique petfood",
+      "Scientific Affairs Manager / Head of Veterinary Advocacy petfood"
+    ],
+    missions: [
+      "Former les prescripteurs vétérinaires en clinique et en congrès aux gammes d'alimentation chien / chat.",
+      "Développer les contenus scientifiques (études cliniques, publications, argumentaires nutrition).",
+      "Animer le réseau KOL nutrition et médecine préventive companion animal."
+    ],
+    studies: [
+      "Docteur.e vétérinaire (DEFV)",
+      "Appétence nutrition et médecine préventive companion animal",
+      "Diplôme complémentaire ou spécialisation nutrition recommandée"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
+    relatedIndustries: [
+      "Petfood premium multinational (Royal Canin, Hill's, Nestlé Purina Pro Plan, Mars Petcare, Affinity Petcare)",
+      "Petfood challenger premium (Virbac Nutrition, Ultra Premium Direct, Saga Nutrition, Almo Nature)",
+      "Cliniques vétérinaires companion animal et groupements",
+      "Nutrition thérapeutique et diet vétérinaire",
+      "Distribution spécialisée petshop (Maxi Zoo, Zooplus, Truffaut)"
+    ],
+    sources: [
+      { name: "AFVAC - Association Française Vétérinaires Animaux de Compagnie", url: "https://www.afvac.com/" },
+      { name: "WSAVA Global Nutrition Committee", url: "https://wsava.org/global-guidelines/global-nutrition-guidelines/" }
+    ]
+  },
+  {
+    slug: "medical-vet-medical-affairs-manager",
+    title: "Responsable Médical Santé Animale",
+    salary: "65kEUR - 95kEUR",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Bonus performance 15-25% + LTI selon la taille du groupe. Fourchette dépendante du périmètre thérapeutique (mono-espèce vs multi-espèces) et de la maturité de la gamme.",
+    sector: "Medical Vet",
+    category: "Affaires médicales",
+    shortageLevel: "Elevee",
+    summary:
+      "Porte la responsabilité médicale d'une gamme santé animale : stratégie médicale, pharmacovigilance, publications scientifiques, essais cliniques, formation medico-marketing, interface R&D, marketing et affaires réglementaires.",
+    skills: [
+      "Stratégie médicale et scientifique gamme santé animale",
+      "Pharmacovigilance vétérinaire",
+      "Publications scientifiques et communication médicale",
+      "Pilotage essais cliniques et post-marketing",
+      "Interface cross-fonctionnelle (R&D, marketing, réglementaire)"
+    ],
+    successFactors: [
+      "Être un.e expert.e scientifique crédible sur une aire thérapeutique clairement identifiée.",
+      "Traduire les données scientifiques en messages actionnables pour marketing et force de vente.",
+      "Anticiper les enjeux pharmacovigilance et post-marketing avant qu'ils deviennent business-critical."
+    ],
+    path: [
+      "Vétérinaire spécialiste ou scientifique senior",
+      "Medical Advisor / Scientific Affairs Manager",
+      "Head of Medical Affairs / Medical Director région"
+    ],
+    missions: [
+      "Définir et déployer la stratégie médicale d'une gamme santé animale (positioning, evidence, communication).",
+      "Piloter la pharmacovigilance, la sécurité produit et les études post-marketing.",
+      "Coordonner l'interface R&D / marketing / réglementaire et animer les publications scientifiques."
+    ],
+    studies: [
+      "Docteur.e vétérinaire (DEFV) obligatoire",
+      "Doctorat ou spécialisation dans une aire thérapeutique appréciée",
+      "Anglais courant obligatoire, publications appréciées"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA", "Université d'Angers"],
+    relatedIndustries: [
+      "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac, Vétoquinol)",
+      "Biotech animal health et vaccins vétérinaires",
+      "Nutrition thérapeutique et petfood premium",
+      "Diagnostic vétérinaire",
+      "Écoles vétérinaires et centres hospitaliers universitaires vétérinaires (CHUV)"
+    ],
+    sources: [
+      { name: "AnimalhealthEurope - Federation industrie AH", url: "https://www.animalhealtheurope.eu/" },
+      { name: "SIMV - Syndicat Industrie Médicament et Diagnostic Vétérinaires", url: "https://www.simv.org/" }
+    ]
+  },
+  {
+    slug: "medical-vet-product-manager",
+    title: "Chef de Produit Santé Animale",
+    salary: "45kEUR - 70kEUR",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 10-20% du fixe. Fourchette dépendante de la taille de la gamme pilotée, du chiffre d'affaires géré et du niveau de séniorité (3-5 ans à 8-10 ans).",
+    sector: "Medical Vet",
+    category: "Marketing produit",
+    shortageLevel: "Elevee",
+    summary:
+      "Gère le cycle de vie d'une gamme santé animale : stratégie marketing produit, lancement, pricing, positionnement, coordination avec force de vente, analyse de marché et benchmarks concurrentiels. Fait le pont entre R&D, médical, ventes et communication.",
+    skills: [
+      "Marketing produit santé animale",
+      "Lancement produit et cycle de vie",
+      "Analyse de marché et intelligence concurrentielle",
+      "Coordination force de vente et outils commerciaux",
+      "Orientation data et exécution opérationnelle"
+    ],
+    successFactors: [
+      "Combiner rigueur analytique et sens du terrain (comprendre les praticien.ne.s et éleveurs).",
+      "Traduire une stratégie médicale et scientifique en plan marketing actionnable.",
+      "Piloter le lancement produit sans perdre en qualité d'exécution commerciale."
+    ],
+    path: [
+      "Assistant.e Chef de Produit ou technico-commercial.e",
+      "Chef de Produit Santé Animale",
+      "Senior Product Manager / Group Product Manager / Head of Marketing gamme"
+    ],
+    missions: [
+      "Définir le plan marketing d'une gamme santé animale (positioning, pricing, promotion, distribution).",
+      "Piloter les lancements produit et la coordination avec force de vente et affaires médicales.",
+      "Analyser les performances marché, la concurrence et proposer les évolutions produit / prix / offre."
+    ],
+    studies: [
+      "Docteur.e vétérinaire OU ingénieur.e agri / agro + spécialisation marketing",
+      "3-5 ans d'expérience marketing produit santé animale ou secteurs adjacents",
+      "Formation continue marketing digital et data appréciée"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "École de commerce généraliste"],
+    relatedIndustries: [
+      "Laboratoires santé animale (Zoetis, Boehringer Ingelheim, MSD, Ceva, Elanco, Virbac, Vétoquinol)",
+      "Petfood premium (Royal Canin, Hill's, Purina, Mars Petcare, Affinity)",
+      "Nutrition animale industrielle (Sanders, InVivo, Cargill)",
+      "Diagnostic vétérinaire (IDEXX, Zoetis Diagnostics, Virbac Diagnostics)",
+      "Distribution vétérinaire et petshop"
+    ],
+    sources: [
+      { name: "AnimalhealthEurope - Federation industrie AH", url: "https://www.animalhealtheurope.eu/" },
+      { name: "SIMV - Syndicat Industrie Médicament et Diagnostic Vétérinaires", url: "https://www.simv.org/" }
+    ]
+  }
+];
+
 const withDefaultRoleMetadata = (role: JobRole): JobRole => {
   const benchmark =
     glassdoorBenchmarks[role.slug] ?? glassdoorBenchmarks[role.slug.split("-").slice(1).join("-")];
@@ -4672,9 +5240,13 @@ const withDefaultRoleMetadata = (role: JobRole): JobRole => {
   };
 };
 
-const mergedJobRoles = [...strategicExtras, ...nuclearMedicineRoles, ...coreRoles, ...may2026RoleBatch].map(
-  withDefaultRoleMetadata
-);
+const mergedJobRoles = [
+  ...strategicExtras,
+  ...nuclearMedicineRoles,
+  ...coreRoles,
+  ...may2026RoleBatch,
+  ...august2026AnimalHealthBatch
+].map(withDefaultRoleMetadata);
 
 export const jobRoles: JobRole[] = Array.from(
   mergedJobRoles.reduce((acc, role) => {
