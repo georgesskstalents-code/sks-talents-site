@@ -53,8 +53,14 @@ export default function PrincipesFondateurs() {
         <div className="mt-6 flex items-start gap-3 rounded-2xl border border-brand-teal/15 bg-brand-mint/20 p-4 sm:p-5">
           <RefreshCw size={18} className="mt-0.5 shrink-0 text-brand-teal" />
           <p className="t-body">
-            <span className="font-semibold text-brand-ink">Architecture réversible.</span> Mistral,
-            Claude, GPT remplaçables en 1 clic sans reconstruire les assistants IA.
+            <span className="font-semibold text-brand-ink">Vous n&apos;êtes jamais bloqué avec un fournisseur.</span>{" "}
+            Grâce à <span className="font-semibold text-brand-ink">Dust</span> (plateforme française
+            d&apos;IA), vous choisissez le « cerveau » qui fait tourner vos assistants IA :
+            un modèle français (<span className="font-semibold text-brand-ink">Mistral</span>, hébergé
+            en Europe pour un maximum de confidentialité) ou un modèle américain
+            (<span className="font-semibold text-brand-ink">Claude, GPT</span>, pour la performance
+            maximale). Vous changez à tout moment, en 1 clic, sans jamais reconstruire vos
+            assistants IA.
           </p>
         </div>
       </div>

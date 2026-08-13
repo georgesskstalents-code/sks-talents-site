@@ -1,4 +1,4 @@
-import { Circle, CircleDot } from "lucide-react";
+import { CheckCircle2, CircleDot } from "lucide-react";
 
 type Vertical = "life-sciences" | "animal-health";
 
@@ -110,18 +110,18 @@ export default function OperatingSuite({ vertical }: { vertical: Vertical }) {
         </div>
 
         <div className="mt-10 rounded-3xl border border-brand-teal/10 bg-[#faf7f1] p-6 sm:p-8">
-          <p className="eyebrow">Roadmap 2027 · en construction</p>
+          <p className="eyebrow">Assistants IA complémentaires · déployables à la carte</p>
           <p className="mt-2 t-body">
-            Ces assistants IA rejoindront progressivement la Suite au fur et à mesure de nos
-            déploiements clients. Nous vous informons dès qu&apos;ils sont disponibles.
+            Ces assistants IA sont également disponibles. Nous les activons selon vos besoins
+            prioritaires identifiés en Phase 1 Diagnostic.
           </p>
           <ul className="mt-5 grid gap-3 sm:grid-cols-2">
             {cfg.roadmap.map((r) => (
               <li
                 key={r.name}
-                className="flex items-start gap-3 rounded-2xl border border-brand-teal/10 bg-white p-4"
+                className="flex items-start gap-3 rounded-2xl border border-brand-teal/15 bg-white p-4"
               >
-                <Circle size={14} className="mt-1 shrink-0 text-brand-stone/60" />
+                <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-brand-teal" />
                 <div>
                   <p className="font-semibold text-brand-ink">{r.name}</p>
                   <p
