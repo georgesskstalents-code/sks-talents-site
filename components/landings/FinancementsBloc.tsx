@@ -1,4 +1,4 @@
-import { CheckCircle, Coins, Info } from "lucide-react";
+import { CheckCircle, Coins } from "lucide-react";
 
 type Vertical = "life-sciences" | "animal-health";
 
@@ -8,7 +8,7 @@ type Aide = {
   desc: string;
 };
 
-const CONFIG: Record<Vertical, { aides: Aide[]; casConcret: string }> = {
+const CONFIG: Record<Vertical, { aides: Aide[] }> = {
   "life-sciences": {
     aides: [
       {
@@ -41,9 +41,7 @@ const CONFIG: Record<Vertical, { aides: Aide[]; casConcret: string }> = {
         title: "CPF · Formation dirigeant IA",
         desc: "Pour formation certifiante du dirigeant ou du référent IA interne."
       }
-    ],
-    casConcret:
-      "Sur un accompagnement récent, notre client a obtenu une prise en charge de 50 % via Région IDF + OPCO. Investissement net réduit de moitié."
+    ]
   },
   "animal-health": {
     aides: [
@@ -82,9 +80,7 @@ const CONFIG: Record<Vertical, { aides: Aide[]; casConcret: string }> = {
         title: "CPF · Formation dirigeant IA",
         desc: "Pour formation certifiante du dirigeant ou du référent IA interne."
       }
-    ],
-    casConcret:
-      "Sur un accompagnement récent, notre client a obtenu une prise en charge de 50 % via OPCO Uniformation + Région. Investissement net réduit de moitié."
+    ]
   }
 };
 
@@ -124,46 +120,34 @@ export default function FinancementsBloc({ vertical }: { vertical: Vertical }) {
           ))}
         </div>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="rounded-3xl border border-brand-teal/15 bg-white p-6 sm:p-7">
-            <p className="eyebrow">Comment obtenir vos financements</p>
-            <p className="mt-3 t-body">
-              Le montage de vos dossiers de financement est réalisé par{" "}
-              <span className="font-semibold text-brand-ink">
-                notre partenaire spécialisé
-              </span>
-              , expert reconnu depuis{" "}
-              <span className="font-semibold text-brand-ink">25 ans en Structuration,</span>{" "}
-              <span className="font-semibold text-brand-ink">Conformité et Financements</span>{" "}
-              publics.
-            </p>
-            <p className="mt-3 t-body">
-              Il s&apos;agit d&apos;une{" "}
-              <span className="font-semibold text-brand-ink">prestation distincte</span> de notre
-              accompagnement IA. Nous facilitons l&apos;introduction et la coordination avec
-              notre partenaire.
-            </p>
+        <div className="mt-10 rounded-3xl border border-brand-teal/15 bg-white p-6 sm:p-7">
+          <p className="eyebrow">Comment obtenir vos financements</p>
+          <p className="mt-3 t-body">
+            Le montage de vos dossiers de financement est réalisé par{" "}
+            <span className="font-semibold text-brand-ink">notre partenaire spécialisé</span>,
+            expert reconnu depuis{" "}
+            <span className="font-semibold text-brand-ink">25 ans en Structuration,</span>{" "}
+            <span className="font-semibold text-brand-ink">Conformité et Financements</span>{" "}
+            publics.
+          </p>
+          <p className="mt-3 t-body">
+            Il s&apos;agit d&apos;une{" "}
+            <span className="font-semibold text-brand-ink">prestation distincte</span> de notre
+            accompagnement IA. Nous facilitons l&apos;introduction et la coordination avec notre
+            partenaire.
+          </p>
 
-            <p className="mt-6 text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-teal">
-              Ce qui est inclus dans notre accompagnement SKS Talents
-            </p>
-            <ul className="mt-3 space-y-2">
-              {INCLUS.map((i) => (
-                <li key={i} className="flex items-start gap-2.5 t-body">
-                  <CheckCircle size={18} className="mt-0.5 shrink-0 text-brand-teal" />
-                  <span>{i}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="rounded-3xl bg-brand-ink p-6 text-white sm:p-7">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-mint">
-              <Info size={14} />
-              Cas concret
-            </div>
-            <p className="mt-4 t-body !text-white/90">{cfg.casConcret}</p>
-          </div>
+          <p className="mt-6 text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-teal">
+            Ce qui est inclus dans notre accompagnement SKS Talents
+          </p>
+          <ul className="mt-3 space-y-2">
+            {INCLUS.map((i) => (
+              <li key={i} className="flex items-start gap-2.5 t-body">
+                <CheckCircle size={18} className="mt-0.5 shrink-0 text-brand-teal" />
+                <span>{i}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
