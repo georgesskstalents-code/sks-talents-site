@@ -1,9 +1,11 @@
-# Calendrier LinkedIn SKS Talents 2026-2027 (V4)
+# Calendrier LinkedIn SKS Talents 2026-2027 (V4.1)
 
-> **✅ Plan V4 validé par Georges le 13 août 2026.**
+> **✅ Plan V4.1 validé par Georges le 13 août 2026.**
 > **⏸ En attente du signal "GO production" pour créer les ~182 pages dans Notion Calendar** (DB ID `644cc7c5-1fc0-4f16-a08c-db814364a614`).
 >
 > **Nouveauté V4** : 14 newsletters bi-mensuelles (au lieu de 7) + 14 vidéos teaser vendredi 17h + extension jusqu'au 31 mars 2027 + framework 6 niveaux Informer→Ouvrir + déclinaison 4 formats par newsletter (article SEO + newsletter + post/carrousel + vidéo).
+>
+> **Ajouts V4.1 (13 août 2026)** : (1) cadrage mensuel des piliers hebdo par thème newsletter (sem 1-2 = NL début de mois, sem 3-4 = NL fin de mois), (2) Niveau 3 reformulé "conséquence business dirigeant = risque roadmap 12 mois" (pas juste impacts personas), (3) CTA newsletter = 1 principal + 1 secondaire optionnel (au lieu de 1 seul), (4) règle absolue ANCRAGE TEMPOREL OBLIGATOIRE, (5) gabarit newsletter type validé (exemple AI Act 2 oct 2026).
 
 **Notion mirror** : https://app.notion.com/p/3ba0c86f96f4816fb677e51b4ec168c0?pvs=204
 **Memory** : `project_linkedin_plan_2026_2027.md`
@@ -50,13 +52,13 @@ Chaque newsletter génère 4 déliverables :
 
 **Total** = 4 formats × 14 newsletters = **56 déliverables éditoriaux hors posts LinkedIn de base**.
 
-## 1quater. Framework 6 niveaux Informer → Ouvrir (nouveau)
+## 1quater. Framework 6 niveaux Informer → Ouvrir (V4.1 mis à jour)
 
 Chaque contenu doit suivre cette progression :
 
-1. **Informer** (fait + donnée vérifiée)
+1. **Informer** (fait + donnée vérifiée + **date exacte**)
 2. **Expliquer** (pourquoi ce phénomène)
-3. **Conséquences** (impacts CEO/COO/CFO/DRH/Dir Industriels/Dir Scientifiques/Investisseurs/Groupes vet/Biotech/MedTech/Nutrition animale)
+3. **Conséquences business dirigeant** = **quel risque d'exécution sur la feuille de route 12 mois** (OKRs trimestre, roadmap produit, valorisation pré-levée, P&L opérationnel, due diligence RH), pour quel persona (CEO / CFO / CTO / DRH / COO / CMO / Dir Industriels / Dir Scientifiques / Investisseurs / Groupes vet / Biotech / MedTech / Nutrition animale). **Pas juste "impact par persona" mais "coût d'inaction sur les 12 prochains mois"**.
 4. **Illustrer** (exemple concret + cas SKS Talents anonymisé)
 5. **Recommander** (actions concrètes, jamais génériques)
 6. **Ouvrir** (question, tendance de fond, risque, opportunité, évolution à surveiller)
@@ -100,8 +102,48 @@ Chaque contenu doit suivre cette progression :
 6. **Zéro em-dash / en-dash**
 7. **Pronoms inclusifs** : docteur.e, praticien.ne, il/elle, directeur.rice
 8. **Style** : unicode bold, flèches ➼ ➥ ➨ →, structure Signal / Ce que ça change / Opportunités talents
-9. **CTA final systématique** : "Si ce type de contenu vous intéresse, likez, partagez ou suivez SKS Talents pour plus d'insights sur les Life Sciences & l'Animal Health"
+9. **CTA final systématique** (posts LinkedIn) : "Si ce type de contenu vous intéresse, likez, partagez ou suivez SKS Talents pour plus d'insights sur les Life Sciences & l'Animal Health"
 10. **Hashtags** avec préfixe `hashtag#` pour safe copy-paste
+11. **CTA newsletter** (V4.1) : **1 CTA principal** (Calendly 30 min "Cadrage 12 mois gratuit avec SKS Talents") + **1 CTA secondaire optionnel** (abonnement newsletter / téléchargement fiche métier / article blog). Zéro triple bloc commercial en pied de newsletter.
+12. **Ancrage temporel obligatoire** (V4.1) : chaque contenu est ancré sur la date du jour de rédaction (voir §4bis).
+
+## 4bis. Règle absolue V4.1 - ANCRAGE TEMPOREL OBLIGATOIRE
+
+Chaque contenu est ancré sur la date du jour de rédaction (vérifier system prompt `currentDate` à chaque session).
+
+- **Aucune projection au futur** d'un événement déjà passé
+- **Aucun "va se passer"** pour ce qui est déjà en cours
+- **Vérification systématique** du calendrier réel des événements cités (AI Act, EHDS, congrès sectoriels, publications réglementaires) AVANT chaque post
+
+**Repères clés à mémoriser :**
+
+| Événement | Date réelle |
+|---|---|
+| AI Act EU - Entrée en vigueur | 1er août 2024 |
+| AI Act EU - Interdictions systèmes prohibés | 2 février 2025 |
+| AI Act EU - Obligations GPAI | 2 août 2025 |
+| **AI Act EU - Obligations HAUT RISQUE** | **2 août 2026** (déjà applicable) |
+| AI Act EU - Application complète | 2 août 2027 |
+| Règlement vétérinaire UE 2019/6 | Déjà applicable |
+| EHDS - Application progressive | 2025-2028 |
+
+**Si doute sur une date** : vérifier sur source officielle (Commission européenne, CNIL, EMA, FDA, ANSES) AVANT de publier.
+
+## 4ter. Cadrage mensuel piliers hebdo par thème newsletter (V4.1)
+
+Chaque mois, la newsletter début de mois donne le **fil rouge thématique** des posts hebdo semaines 1-2.
+La newsletter fin de mois donne le fil rouge des semaines 3-4.
+
+Application :
+- LUN CONSEIL / MAR SIGNAL / MER DONNÉE / JEU VÉCU des semaines 1-2 tirent tous du même dossier que la newsletter début de mois
+- Semaines 3-4 idem avec la newsletter fin de mois
+- Vendredi = teaser vidéo (17h) + amplification
+
+**Exemple octobre 2026** :
+- NL 2 oct "IA Act contrôles" → 8 posts sem 1-2 tournent autour IA Act (fiche métier Chief Data & AI Governance Officer, chiffres CNIL, cas anonymisé Copilot RH, opinion sur les contrôles)
+- NL 30 oct "IA sans gouvernance" → 8 posts sem 3-4 tournent autour gouvernance IA
+
+**Bénéfice** : cohérence lecteur, montée en puissance thématique, article SEO qui capitalise sur 2 semaines de reach LinkedIn.
 
 ## 5. 18 sources autorisées
 
@@ -719,6 +761,119 @@ hashtag#[NomEvent] hashtag#[Secteur] hashtag#SKSTalents
 ```
 
 ---
+
+## 13bis. Gabarit newsletter type V4.1 (validé 13 août 2026)
+
+**Exemple concret validé** : newsletter du vendredi 2 octobre 2026 - "IA Act : ce que les dirigeants Life Sciences doivent démontrer depuis le 2 août 2026".
+
+Structure obligatoire (~800-1200 mots, 5 min lecture) :
+
+```
+[TITRE]
+IA Act : ce que les dirigeants Life Sciences doivent démontrer depuis le 2 août 2026
+
+[SOUS-TITRE / ACCROCHE LinkedIn]
+Les obligations haut risque de l'AI Act sont entrées en application il y a 8 semaines.
+La CNIL a lancé ses premiers contrôles ciblés en septembre. Ce que vos pairs CEO, DRH
+et Chief Data ont fait cet été pour ne pas être pris de court.
+
+[NIVEAU 1 - INFORMER]
+Fait principal + date exacte + source officielle.
+Ex : "L'AI Act est entré en application pour les systèmes haut risque le 2 août 2026.
+Depuis 8 semaines, les entreprises qui déploient..."
+Source : Commission européenne (règlement 2024/1689).
+
+[NIVEAU 2 - EXPLIQUER]
+3 mécanismes structurants "désormais opposables" :
+1. Documentation technique
+2. Surveillance humaine effective (Article 14 AI Act)
+3. Journal des décisions
+Amende maximale : 7% CA mondial (AI Act EU, Article 99).
+
+[NIVEAU 3 - CONSÉQUENCES BUSINESS DIRIGEANT]
+Risque d'exécution sur la feuille de route 12 mois, par persona :
+
+**CEO scale-up biotech pré-Serie B** : défaut conformité IA sur screening candidats
+bloque la due diligence RH investisseurs. 2 tours de table décalés de 4-6 mois cet été 2026.
+
+**DRH biotech ou petfood 300-800 pers** : ATS avec scoring IA = système haut risque
+depuis 8 semaines. Plan de recrutement Q4 2026 et Q1 2027 en risque de gel si pas cartographié.
+
+**Chief Medical Officer / VP Regulatory Medtech** : SaMD ML entre depuis août dans
+double référentiel MDR + AI Act. 2 dossiers à aligner sur même roadmap produit.
+
+**CFO scale-up Series A/B** : ligne "IA Act compliance" = 80-250 k€ selon nb de systèmes.
+À faire apparaître dans forecast Q4 2026 et budget 2027 dès maintenant.
+
+[NIVEAU 4 - ILLUSTRER]
+Cas SKS Talents anonymisé (biotech oncologie, 240 pers, Series B levée jan 2026).
+Audit interne avril 2026 → 11 systèmes identifiés, 4 haut risque (ATS scoring, aide
+décision clinique, surveillance qualité, priorisation R&D).
+3 recrutements structurants pourvus avant le 2 août 2026 :
+- Chief Data & AI Governance Officer (rattaché CEO)
+- AI Compliance Manager (rattaché Chief Data)
+- DPO renforcé.e avec spécialisation IA
+
+[NIVEAU 5 - RECOMMANDER]
+Actions concrètes datées (avant fin novembre 2026, avant vague contrôles Q1 2027) :
+1. Cartographier systèmes IA en 3 semaines (nb médian 8-14 systèmes par entreprise 200-800 pers)
+2. Classifier "haut risque" vs "risque limité" (Annexe III AI Act)
+3. Formaliser surveillance humaine (Article 14) : qui décide, qui contrôle, qui journalise
+4. Anticiper 2-3 recrutements structurants (Chief Data, AI Compliance, DPO renforcé.e)
+
+[NIVEAU 6 - OUVRIR]
+La vraie question n'est plus "sommes-nous conformes ?".
+Elle est : combien de nos décisions stratégiques des 8 dernières semaines ont été
+arbitrées par un système IA que personne dans le comité de direction ne sait expliquer ?
+C'est le point de bascule que les inspecteurs vont chercher en premier lors des contrôles
+qui démarrent ce mois-ci.
+
+[CTA PRINCIPAL]
+Cartographier vos systèmes IA en 30 minutes avec un expert avant les premiers contrôles ?
+→ Réservez un Cadrage 12 mois gratuit avec SKS Talents
+https://calendly.com/g-kengue/talentconsulting
+
+[CTA SECONDAIRE OPTIONNEL]
+Recevez chaque mois notre analyse dirigeants Life Sciences et Animal Health.
+→ S'abonner à la newsletter SKS Talents
+
+[SIGNATURE]
+SKS Talents
+Cabinet d'executive search et de structuration IA RH - Life Sciences et Animal Health.
+```
+
+**Checklist de vérification avant publication** (12 points) :
+
+| Règle V4.1 | À vérifier |
+|---|---|
+| Framework 6 niveaux (Informer → Ouvrir) | Chaque niveau présent et distinct |
+| Niveau 3 = conséquence business dirigeant + risque roadmap | Formulation "risque d'exécution feuille de route" par persona |
+| Cas SKS Talents anonymisé | Toujours présent, chiffré, avec profils recrutés |
+| Zéro em-dash / en-dash | Grep `—` et `–` avant publication |
+| Pronoms inclusifs | `il/elle`, `directeur.rice`, `salarié.es`, `docteur.e` |
+| Chaque chiffre = source + année | Aucun chiffre nu |
+| Signature SKS Talents (pas Georges) | Pied de newsletter obligatoire |
+| Zéro mention Google/ChatGPT/Claude/Mistral | Grep noms de LLM dans corps |
+| CTA principal + CTA secondaire optionnel | 1 principal Calendly + 1 secondaire max |
+| Rappel surveillance humaine Article 14 (si IA) | Systématique sur newsletters IA |
+| Zéro chiffre "temps gagné" inventé | Aucun % gain sans source |
+| Ancrage temporel (dates exactes vérifiées) | Rien au futur si déjà passé |
+
+## 13ter. Déclinaisons associées à chaque newsletter (V4.1)
+
+Chaque thème newsletter génère **4 déliverables** publiés autour du même week-end :
+
+| Format | Support | Timing | Objectif |
+|---|---|---|---|
+| Newsletter LinkedIn (5 min lecture) | LinkedIn PAGE | Vendredi 7h30 | Nurturing 1407 abonnés |
+| Post + carrousel LinkedIn | LinkedIn PAGE | Même vendredi 7h30 | Reach viral algorithmique |
+| Vidéo LinkedIn 60-90 sec teaser | LinkedIn PAGE | Vendredi 17h | Reach vidéo + rappel newsletter |
+| Article SEO 2000-3000 mots | Blog `/blog/[slug]` | Publié samedi ou lundi | Référencement site + citation LLM |
+
+**Exemple pour NL 2 oct "IA Act contrôles"** :
+- Slug article SEO : `/blog/ia-act-life-sciences-controles-2027`
+- Carrousel : 8-10 slides "Les 3 obligations opposables depuis le 2 août + 2-3 recrutements à anticiper"
+- Vidéo teaser 17h : "Les 3 inspections que la CNIL prépare pour 2027"
 
 ## 14. Prochaine étape
 
