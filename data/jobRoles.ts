@@ -5524,6 +5524,630 @@ const august2026AnimalHealthBatch: JobRole[] = [
       { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
       { name: "France Invest - Governance VC/PE santé", url: "https://www.franceinvest.eu/" }
     ]
+  },
+  {
+    slug: "veterinary-talent-acquisition-specialist",
+    title: "Talent Acquisition Specialist Vétérinaire",
+    salary: "40kEUR - 60kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 10-15 % sur volume et qualité de recrutements. Fourchette dépendante du nombre de cliniques à sourcer et du niveau de séniorité (3-8 ans).",
+    sector: "Veterinary",
+    category: "Talent acquisition vétérinaire",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Pilote le sourcing et le recrutement des vétérinaires, ASV et fonctions support pour un groupement de cliniques vétérinaires en croissance. Fait face à un marché en pénurie structurelle avec 5000 postes vétérinaires non pourvus en France. Doit combiner sourcing digital, marque employeur, réseau sectoriel et process d'entretien optimisés.",
+    skills: [
+      "Sourcing vétérinaires et ASV (marché en pénurie)",
+      "Marque employeur et attractivité multisite",
+      "Process recrutement et entretiens structurés",
+      "ATS et outils digitaux de recrutement",
+      "Compréhension du marché vétérinaire FR (Ordre + SNVEL)"
+    ],
+    successFactors: [
+      "Comprendre les vraies motivations des vétérinaires (autonomie, qualité de vie, formation continue) au-delà du salaire.",
+      "Construire un pipeline candidats permanent, pas seulement réactif aux besoins urgents.",
+      "Structurer la marque employeur du groupement pour se différencier des concurrents consolidateurs."
+    ],
+    path: [
+      "Chargé.e de recrutement junior santé ou vétérinaire",
+      "Talent Acquisition Specialist Vétérinaire",
+      "Head of Talent Acquisition groupement / DRH multisite"
+    ],
+    missions: [
+      "Sourcer et recruter les vétérinaires, ASV et fonctions support pour les cliniques du groupement.",
+      "Développer la marque employeur du groupement auprès des écoles vétérinaires et sur les canaux digitaux.",
+      "Structurer les process d'entretien et de sélection pour garantir qualité et vitesse de recrutement."
+    ],
+    studies: [
+      "Master RH ou Talent Acquisition",
+      "3-8 ans d'expérience recrutement (idéalement santé, vétérinaire ou multisite)",
+      "Formation continue sourcing digital et marque employeur"
+    ],
+    schools: ["Écoles RH (IGS, Ciffop, IAE)", "Sciences Po", "Écoles de commerce"],
+    relatedIndustries: [
+      "Groupements vétérinaires (AniCura, IVC Evidensia, VetPartners France, Univet, Sévétys, VetOne)",
+      "Cabinets vétérinaires indépendants en croissance",
+      "Réseaux santé humaine multisite (soins primaires, kinésithérapie)",
+      "Cabinets de recrutement spécialisés vétérinaire",
+      "Écoles vétérinaires (Oniris, VetAgro Sup, ENVT, ENVA) partenariats employabilité"
+    ],
+    sources: [
+      { name: "Ordre National des Vétérinaires - Démographie et tensions", url: "https://www.veterinaire.fr/" },
+      { name: "SNVEL - Syndicat National Vétérinaires Exercice Libéral", url: "https://www.snvel.fr/" },
+      { name: "Vetstoria Digital Transformation Report", url: "https://www.vetstoria.com/" }
+    ]
+  },
+  {
+    slug: "medical-vet-commercial-director-france-animal-nutrition",
+    title: "Directeur.rice Commercial.e France Nutrition Animale",
+    salary: "85kEUR - 110kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 25-40 % + véhicule + intéressement. Fourchette dépendante de la taille du portefeuille clients (distributeurs, éleveurs, coopératives) et de la marge nette du canal.",
+    sector: "Medical Vet",
+    category: "Direction commerciale nutrition animale",
+    shortageLevel: "Elevee",
+    summary:
+      "Pilote la direction commerciale France d'une marque de nutrition animale. Développe le réseau de distributeurs, éleveurs directs et coopératives agricoles. Défend la marge canal face à la pression des groupements d'achat. Manage une force de vente terrain de 5 à 20 commerciaux.",
+    skills: [
+      "Direction commerciale multi-canaux (distributeurs, éleveurs, coopératives)",
+      "Négociation grands comptes et coopératives",
+      "Management force de vente terrain",
+      "Pilotage marge nette et pricing",
+      "Connaissance filière nutrition animale (bovin, porc, volaille, aqua)"
+    ],
+    successFactors: [
+      "Naviguer les circuits de décision complexes des coopératives et centrales d'achat.",
+      "Fédérer une force de vente terrain autonome sur des territoires étendus.",
+      "Défendre la marge canal face à la pression des acheteurs concentrés."
+    ],
+    path: [
+      "Responsable commercial régional ou KAM Nutrition Animale",
+      "Directeur.rice Commercial.e France Nutrition Animale",
+      "Country Manager France ou VP Sales Europe"
+    ],
+    missions: [
+      "Piloter la stratégie commerciale France de la marque nutrition animale sur ses canaux distributeurs, éleveurs et coopératives.",
+      "Manager la force de vente terrain (5 à 20 commerciaux régionaux) et les key account managers.",
+      "Négocier les contrats-cadres avec les coopératives, centrales d'achat et grands distributeurs, en défendant la marge nette."
+    ],
+    studies: [
+      "Docteur.e vétérinaire OU ingénieur.e agri / agro OU école de commerce",
+      "10-15 ans d'expérience commerciale nutrition animale ou secteurs adjacents (santé animale, coopératives)",
+      "MBA ou formation continue direction commerciale appréciés"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "AgroParisTech", "Institut Agro Montpellier", "HEC / ESSEC"],
+    relatedIndustries: [
+      "Nutrition animale (Sanders, InVivo, Cargill, Neovia/ADM, Provimi)",
+      "Coopératives agricoles (Terrena, Agrial, Triskalia/Eureden)",
+      "Laboratoires santé animale (Boehringer Ingelheim, MSD, Zoetis, Ceva)",
+      "Distribution vétérinaire et petshop",
+      "Génétique animale (Grimaud, Hendrix Genetics)"
+    ],
+    sources: [
+      { name: "IDELE - Institut de l'Élevage", url: "https://idele.fr/" },
+      { name: "IFIP - Institut du Porc", url: "https://ifip.asso.fr/" },
+      { name: "ITAVI - Institut Technique de l'Aviculture", url: "https://www.itavi.asso.fr/" }
+    ]
+  },
+  {
+    slug: "medical-vet-growth-marketing-crm-manager",
+    title: "Growth Marketing & CRM Manager Santé Animale",
+    salary: "55kEUR - 85kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 10-20 % sur objectifs acquisition/rétention. Fourchette dépendante du périmètre (agence formation, petfood, éditeur SaaS santé animale) et de la maturité data.",
+    sector: "Medical Vet",
+    category: "Growth marketing et CRM santé animale",
+    shortageLevel: "Elevee",
+    summary:
+      "Pilote la stratégie growth marketing et CRM d'une agence de formation, d'une marque petfood ou d'un éditeur SaaS santé animale. Structure l'acquisition digitale, la rétention client et l'exploitation data pour maximiser la marge brute et le LTV.",
+    skills: [
+      "Growth marketing acquisition et rétention",
+      "CRM et marketing automation (HubSpot, Salesforce, Brevo)",
+      "Data et analytics (GA4, dashboards)",
+      "Content marketing et lead nurturing",
+      "Compréhension écosystème santé animale et vétérinaire"
+    ],
+    successFactors: [
+      "Combiner rigueur data et créativité éditoriale pour parler aux vétérinaires et professionnels.",
+      "Structurer la CRM discipline (segmentation, lifecycle, scoring) sans over-engineering.",
+      "Piloter la marge brute et le LTV, pas juste le volume de leads."
+    ],
+    path: [
+      "Chargé.e marketing digital ou CRM junior",
+      "Growth Marketing & CRM Manager Santé Animale",
+      "Head of Marketing / VP Marketing scale-up santé animale"
+    ],
+    missions: [
+      "Piloter l'acquisition digitale (SEO, SEA, LinkedIn Ads, partenariats) sur les cibles vétérinaires et professionnels santé animale.",
+      "Structurer la CRM et l'automation marketing (segmentation clients, campagnes nurturing, réactivation).",
+      "Suivre et optimiser les KPIs growth (CAC, LTV, taux de conversion) et exploiter la data pour piloter la stratégie."
+    ],
+    studies: [
+      "École de commerce ou ingénieur avec spécialisation marketing digital",
+      "5-10 ans d'expérience growth marketing + CRM (idéalement B2B ou santé animale)",
+      "Certifications HubSpot / Salesforce / GA4 appréciées"
+    ],
+    schools: ["HEC / ESSEC / ESCP", "École de commerce généraliste", "Sciences Po", "Écoles ingénieur avec spécialisation marketing"],
+    relatedIndustries: [
+      "Agences formation santé animale",
+      "Marques petfood premium et challenger",
+      "Éditeurs SaaS santé animale (PMS cliniques, télémédecine, workflow)",
+      "Laboratoires santé animale (marketing digital)",
+      "Startups IA santé animale"
+    ],
+    sources: [
+      { name: "E-learning Letter - Média spécialisé digital learning", url: "https://www.e-learning-letter.com/" },
+      { name: "Culture RH - Média spécialisé RH", url: "https://culture-rh.com/" },
+      { name: "AnimalhealthEurope - Federation industrie AH", url: "https://www.animalhealtheurope.eu/" }
+    ]
+  },
+  {
+    slug: "biotech-group-cfo-pre-ipo",
+    title: "Group CFO Biotech Series pré-IPO",
+    salary: "150kEUR - 220kEUR + variable + LTI + equity",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 30-50 % + LTI stock-options significatives (2-5 % capital vesting) pour phase pré-IPO. Fourchette dépendante de la taille du groupe (100 à 500 collaborateurs) et de la roadmap capital markets.",
+    sector: "Biotech",
+    category: "Direction financière groupe pré-IPO",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Pilote la direction financière d'un groupe biotech en phase pré-IPO (levée Series C+, croissance externe, structuration capital markets). Interface board + investisseurs + banques d'affaires. Structure les rounds de financement, pilote le cash burn, prépare l'IPO ou la sortie M&A.",
+    skills: [
+      "Direction financière groupe biotech international",
+      "Structuration levées Series C+ et préparation IPO",
+      "M&A et due diligence buy-side",
+      "Reporting board et investisseurs institutionnels",
+      "Anglais courant obligatoire (interface banques d'affaires US/UK)"
+    ],
+    successFactors: [
+      "Naviguer les exigences des investisseurs institutionnels et des marchés capitaux sans crisper l'organisation.",
+      "Piloter le cash burn tout en préservant la vélocité R&D et clinique.",
+      "Structurer la finance pour supporter simultanément la croissance organique, la M&A et la préparation IPO."
+    ],
+    path: [
+      "CFO biotech Series B",
+      "Group CFO Biotech Series pré-IPO",
+      "CFO listed biotech ou Chief Financial Officer big pharma"
+    ],
+    missions: [
+      "Piloter la direction financière du groupe biotech en phase pré-IPO (finance, contrôle de gestion, trésorerie, taxation).",
+      "Structurer les rounds de financement Series C+ et préparer l'IPO ou la sortie M&A avec banques d'affaires.",
+      "Assurer le reporting board, investisseurs et régulateurs (préparation prospectus, roadshow, etc.)."
+    ],
+    studies: [
+      "École de commerce grande école (HEC, ESSEC, ESCP, INSEAD) ou école d'ingénieur + MBA",
+      "15+ ans d'expérience finance dont 8+ en direction financière biotech / life sciences",
+      "Expérience IPO ou M&A confirmée"
+    ],
+    schools: ["HEC", "ESSEC", "ESCP", "INSEAD", "Sciences Po", "Écoles ingénieur + MBA"],
+    relatedIndustries: [
+      "Biotech scale-up en phase Series C+ / pré-IPO",
+      "Groupes pharma en croissance externe",
+      "Fonds VC/PE santé (Sofinnova, Jeito, Bpifrance, Seventure, Truffle Capital)",
+      "Banques d'affaires spécialisées Life Sciences (Rothschild, Bryan Garnier, Portzamparc)",
+      "Big Four audit et transaction advisory (EY, PwC, KPMG, Deloitte)"
+    ],
+    sources: [
+      { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
+      { name: "Bpifrance - Biotech & Medtech VC funds", url: "https://www.bpifrance.com/products/biotech-and-medtech-vc-funds/" },
+      { name: "Leaders League - Fonds santé France 2025", url: "https://www.leadersleague.com/fr/classements/sante-pharma-and-biotechnologies-fonds-lbo-sante-fonds-d-investissement-france-2025" }
+    ]
+  },
+  {
+    slug: "biotech-plant-director-gmp-bpf",
+    title: "Plant Director BPF / GMP Biotech-Pharma",
+    salary: "110kEUR - 160kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 20-30 % + LTI selon la taille du groupe. Fourchette dépendante de la taille du site (50 à 400 collaborateurs), de la complexité produit (stérile / non stérile) et des inspections FDA / EMA.",
+    sector: "Biotech",
+    category: "Direction industrielle GMP",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Pilote un site de production biotech-pharma en environnement BPF (bonnes pratiques de fabrication) / GMP (Good Manufacturing Practice). Responsable production, qualité, EHS, HR site et budget. Interface autorités (ANSM, EMA, FDA) sur les inspections et les mises à jour de dossier CMC.",
+    skills: [
+      "Direction site industriel biotech-pharma BPF / GMP",
+      "Environnement stérile ou aseptique (fill and finish, biologics)",
+      "Interface autorités réglementaires (ANSM, EMA, FDA)",
+      "Management de site 50-400 collaborateurs",
+      "Anglais courant obligatoire"
+    ],
+    successFactors: [
+      "Maintenir un site en conformité BPF / GMP en continu, y compris pendant les scale-ups et modifications process.",
+      "Anticiper les inspections FDA / EMA plutôt que les subir.",
+      "Piloter production + qualité + EHS + HR + budget sans crisper les équipes techniques."
+    ],
+    path: [
+      "Head of Production ou Head of Manufacturing biotech",
+      "Plant Director BPF / GMP Biotech-Pharma",
+      "VP Manufacturing Europe ou Chief Manufacturing Officer"
+    ],
+    missions: [
+      "Piloter la production biotech-pharma en environnement BPF / GMP (batch release, capacité, planning industriel).",
+      "Garantir la conformité qualité, EHS et réglementaire du site (inspections ANSM, EMA, FDA).",
+      "Manager le site (production, qualité, maintenance, EHS, HR) et le budget opérationnel."
+    ],
+    studies: [
+      "Ingénieur.e génie industriel, chimie ou pharmaceutique",
+      "15+ ans d'expérience industrielle biotech-pharma dont 5+ en direction de site",
+      "Formation continue BPF / GMP et scale-up biotech"
+    ],
+    schools: ["Écoles ingénieur (Centrale, Mines, ENSIC, Chimie ParisTech)", "AgroParisTech", "Écoles pharma (Paris, Strasbourg)"],
+    relatedIndustries: [
+      "Biotech en phase industrielle (Sanofi, Servier, Ipsen, Boehringer Ingelheim, GSK)",
+      "CDMO biotech (Delpharm, Fareva, Recipharm)",
+      "Vaccins vétérinaires (site GMP)",
+      "Bioproduction (Faircraft, Enterome, Maat Pharma)",
+      "Sites production petfood industriel (moindre criticité mais process similaire)"
+    ],
+    sources: [
+      { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
+      { name: "LEEM - Les Entreprises du Médicament", url: "https://www.leem.org/" },
+      { name: "EMA - GMP guidelines", url: "https://www.ema.europa.eu/en/human-regulatory/research-development/compliance/good-manufacturing-practice" }
+    ]
+  },
+  {
+    slug: "biotech-head-of-engineering-lab-operations",
+    title: "Head of Engineering & Lab Operations Biotech Scale-up",
+    salary: "90kEUR - 140kEUR + variable + BSPCE",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 15-25 % + BSPCE ou stock-options (0.5-2 % capital) pour scale-up deeptech biotech. Fourchette dépendante de la taille de l'équipe (10 à 50 ingénieurs) et de la maturité technologique.",
+    sector: "Biotech",
+    category: "Direction ingénierie et lab operations",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Pilote l'ingénierie et les opérations laboratoire d'une scale-up biotech deeptech (bioproduction, gene therapy, synthetic biology). Assure la scalabilité des procédés du bench vers le pilote, puis vers l'industrialisation. Manage les ingénieurs bioproduction, automation et lab operations.",
+    skills: [
+      "Direction ingénierie biotech scale-up",
+      "Scale-up procédés bioproduction (bench → pilote → industriel)",
+      "Automation laboratoire et bioréacteurs",
+      "Management ingénieurs et scientifiques 10-50 personnes",
+      "Anglais courant obligatoire"
+    ],
+    successFactors: [
+      "Faire dialoguer science R&D et ingénierie industrielle sans compromis.",
+      "Anticiper les goulots d'étranglement scale-up avant qu'ils bloquent le programme clinique.",
+      "Fédérer une équipe hybride ingénieurs + scientifiques + techniciens autour d'une vision produit claire."
+    ],
+    path: [
+      "Ingénieur.e bioproduction senior ou Head of Bioengineering",
+      "Head of Engineering & Lab Operations Biotech Scale-up",
+      "VP Engineering ou Chief Manufacturing Officer"
+    ],
+    missions: [
+      "Piloter l'ingénierie et les opérations laboratoire de la scale-up biotech (bioproduction, automation, lab management).",
+      "Scaler les procédés du bench vers le pilote puis vers l'industrialisation en préservant la robustesse.",
+      "Manager les équipes ingénieurs et scientifiques, arbitrer les priorités techniques avec la R&D et la clinique."
+    ],
+    studies: [
+      "Ingénieur.e biotechnologies, génie des procédés ou bioingénierie",
+      "10-15 ans d'expérience scale-up biotech dont 5+ en management",
+      "Doctorat ou expérience académique de haut niveau appréciés"
+    ],
+    schools: ["Écoles ingénieur (Centrale, Mines, INSA, AgroParisTech, ENSIC)", "Universités biotechnologies (Paris-Saclay, Strasbourg)"],
+    relatedIndustries: [
+      "Biotech deeptech scale-up (Faircraft, Standing Ovation, Enterome, Maat Pharma)",
+      "Bioproduction et biofabs (Servier Bioproduction, Sanofi Bioproduction)",
+      "Startups synthetic biology et gene therapy",
+      "CDMO biotech spécialisés",
+      "Instituts de recherche transitionnelle (Institut Pasteur, INRAE, CNRS)"
+    ],
+    sources: [
+      { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
+      { name: "Bpifrance Le Hub - Biotech scale-up", url: "https://lehub.bpifrance.fr/" },
+      { name: "EIC Fund - European Innovation Council", url: "https://eic.ec.europa.eu/eic-fund_en" }
+    ]
+  },
+  {
+    slug: "medtech-cto-startup-scale-up",
+    title: "CTO MedTech Startup / Scale-up",
+    salary: "120kEUR - 180kEUR + variable + BSPCE",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 20-30 % + BSPCE ou equity (1-4 % capital vesting) selon stade Series A/B/C. Fourchette dépendante de la nature du produit (dispositif médical connecté, IA médicale, robotique).",
+    sector: "Diagnostic",
+    category: "Direction technique MedTech",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Pilote la direction technique d'une startup ou scale-up medtech (dispositif médical connecté, IA médicale, robotique chirurgicale, imagerie). Responsable roadmap produit, architecture logicielle et hardware, conformité MDR / IVDR, sécurité (cybersecurité device) et management équipe engineering.",
+    skills: [
+      "Direction technique medtech (software + hardware + regulatory)",
+      "Conformité MDR / IVDR / FDA 510k",
+      "Cybersécurité dispositifs médicaux connectés",
+      "Management équipe engineering 10-50 personnes",
+      "Anglais courant obligatoire"
+    ],
+    successFactors: [
+      "Naviguer les contraintes réglementaires (MDR, IVDR, FDA) sans étouffer l'innovation produit.",
+      "Piloter simultanément le roadmap produit et la conformité qualité du système de gestion (ISO 13485).",
+      "Recruter et retenir des ingénieurs seniors dans un marché medtech FR ultra-tendu."
+    ],
+    path: [
+      "Head of Engineering ou VP Engineering medtech",
+      "CTO MedTech Startup / Scale-up",
+      "CTO groupe medtech international ou Chief Product Officer"
+    ],
+    missions: [
+      "Piloter la direction technique de la medtech (roadmap produit, architecture software + hardware, sécurité).",
+      "Garantir la conformité réglementaire (MDR, IVDR, FDA) et le système de management de la qualité (ISO 13485).",
+      "Manager l'équipe engineering, définir la stratégie tech et arbitrer les priorités avec le CEO et le board."
+    ],
+    studies: [
+      "École ingénieur (informatique, électronique, biomédical)",
+      "12-18 ans d'expérience tech dont 5+ en direction technique medtech",
+      "Master ou doctorat en sciences biomédicales appréciés"
+    ],
+    schools: ["Écoles ingénieur (Polytechnique, Centrale, Mines, Telecom Paris, ENS)", "EPITA", "Master biomédical"],
+    relatedIndustries: [
+      "Startups medtech connectées (UroMems, SonoMind, Lucis, RDS, Lifebloom)",
+      "Scale-ups IA médicale (Owkin, Waiv, SquareMind, imagerie)",
+      "Robotique chirurgicale (Moon Surgical, Squair)",
+      "Dispositifs médicaux implantables (Sorin, Carmat)",
+      "Diagnostic in vitro digitalisé (bioMérieux Digital, HalioDx)"
+    ],
+    sources: [
+      { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
+      { name: "SIDIV - Syndicat de l'Industrie du Diagnostic In Vitro", url: "https://sidiv.fr/" },
+      { name: "EMA - Medical Devices Regulation", url: "https://www.ema.europa.eu/en/human-regulatory/overview/medical-devices" }
+    ]
+  },
+  {
+    slug: "medtech-international-growth-lead",
+    title: "International Growth Lead HealthTech / MedTech",
+    salary: "90kEUR - 140kEUR + variable + LTI",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 25-40 % + LTI selon atteinte objectifs pays. Fourchette dépendante du nombre de pays cibles (3 à 10) et de la maturité produit sur le marché.",
+    sector: "Diagnostic",
+    category: "Développement international HealthTech",
+    shortageLevel: "Elevee",
+    summary:
+      "Pilote le développement international d'une scale-up medtech ou healthtech en phase d'expansion. Ouvre les nouveaux marchés (EU, UK, US, Middle East, Asia), structure les filiales ou partenariats distributeurs, adapte le go-to-market par géographie. Interface board sur la stratégie geographique.",
+    skills: [
+      "Développement international multi-géographies",
+      "Structuration filiales et partenariats distributeurs",
+      "Go-to-market adapté par pays (regulatory + commercial)",
+      "Négociation contrats distribution et licensing internationaux",
+      "Anglais courant obligatoire, autres langues appréciées"
+    ],
+    successFactors: [
+      "Naviguer les spécificités réglementaires, culturelles et commerciales de chaque géographie.",
+      "Structurer les partenariats distributeurs sans dépendance excessive (ne pas céder trop d'exclusivité trop vite).",
+      "Piloter la croissance internationale sans consommer excessivement le cash de la scale-up."
+    ],
+    path: [
+      "Country Manager ou Business Development International medtech",
+      "International Growth Lead HealthTech / MedTech",
+      "VP International ou Chief Commercial Officer"
+    ],
+    missions: [
+      "Piloter le développement international de la medtech (identification pays cibles, entry strategy, structuration commerciale).",
+      "Ouvrir les nouveaux marchés via filiales, partenariats distributeurs ou joint-ventures selon la géographie.",
+      "Adapter le go-to-market par pays (regulatory + pricing + partenariats) et piloter la performance des filiales."
+    ],
+    studies: [
+      "École de commerce grande école ou ingénieur avec MBA",
+      "10-15 ans d'expérience internationale dont 5+ en scale-up healthtech / medtech",
+      "Expérience opérationnelle plusieurs pays (EU + US + Asie ou Middle East)"
+    ],
+    schools: ["HEC", "ESSEC", "ESCP", "INSEAD", "Écoles ingénieur + MBA"],
+    relatedIndustries: [
+      "Scale-ups medtech en internationalisation (UroMems, SonoMind, RDS, Lifebloom)",
+      "Scale-ups healthtech (Doctolib, Alan, Withings)",
+      "Groupes medtech internationaux (Envista, Boston Scientific, Stryker)",
+      "Diagnostic IVD international (bioMérieux, Roche Diagnostics, Abbott)",
+      "Fonds VC/PE growth santé (Sofinnova Growth, Kurma Partners)"
+    ],
+    sources: [
+      { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
+      { name: "Business France - Export santé", url: "https://www.businessfrance.fr/" },
+      { name: "France HealthCare - Ecosystème export", url: "https://www.francehealthcare.fr/" }
+    ]
+  },
+  {
+    slug: "biotech-ceo-scale-up",
+    title: "CEO Scale-up Biotech",
+    salary: "180kEUR - 320kEUR + variable + stock-options",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 40-60 % sur milestones cliniques/business + stock-options significatives (2-6 % capital vesting 4 ans). Fourchette dépendante du stade (Series A à pré-IPO) et de la taille de l'équipe (20 à 300 collaborateurs).",
+    sector: "Biotech",
+    category: "Direction générale scale-up biotech",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Pilote la direction générale d'une scale-up biotech en phase Series A à Series C+ (5 à 300 collaborateurs). Responsable stratégie, board management, levées de fonds, roadmap R&D et clinique, partenariats industriels, structuration COMEX. Interface investisseurs institutionnels + KOL scientifiques + autorités réglementaires.",
+    skills: [
+      "Direction générale scale-up biotech multi-phases (Series A à pré-IPO)",
+      "Board management et levée de fonds (Series B, C, pré-IPO, IPO)",
+      "Partenariats industriels (licensing, co-développement, M&A)",
+      "Vision scientifique et compréhension roadmap R&D / clinique",
+      "Anglais courant obligatoire (interface investisseurs + KOL internationaux)"
+    ],
+    successFactors: [
+      "Naviguer simultanément la vision scientifique long terme et l'exécution business court terme.",
+      "Construire une relation de confiance solide avec le board et les investisseurs institutionnels.",
+      "Attirer et retenir les talents C-level (CSO, CFO, CMO, VP Manufacturing) dans un marché ultra-tendu."
+    ],
+    path: [
+      "COO ou VP scale-up biotech + expérience opérationnelle senior",
+      "CEO Scale-up Biotech Series A/B",
+      "CEO biotech listed ou Chairman board"
+    ],
+    missions: [
+      "Piloter la direction générale de la scale-up biotech (stratégie, exécution, board, investisseurs).",
+      "Structurer les levées de fonds Series B/C/pré-IPO et les partenariats industriels (licensing, co-développement).",
+      "Recruter et manager le COMEX (CSO, CFO, CMO, VP Manufacturing) et interfacer les KOL scientifiques internationaux."
+    ],
+    studies: [
+      "Docteur.e (PhD sciences ou MD) ET/OU MBA grande école",
+      "15+ ans d'expérience biotech dont 5+ en direction générale ou COMEX C-level",
+      "Réseau scientifique et VC internationalement établi"
+    ],
+    schools: ["Doctorat sciences (Paris-Saclay, Strasbourg, Institut Pasteur)", "MBA (HEC, INSEAD, Wharton, Stanford, Harvard)"],
+    relatedIndustries: [
+      "Scale-ups biotech en phase Series A à pré-IPO (Nanobiotix, Sensorion, Adcytherix, Cyllène, Bionyra)",
+      "Groupes pharma en spin-out biotech",
+      "Instituts de recherche transitionnelle (Institut Pasteur, INRAE, CNRS)",
+      "Fonds VC/PE santé (Sofinnova, Jeito, Bpifrance, Seventure, Truffle Capital)",
+      "Big Pharma en partenariats et licensing"
+    ],
+    sources: [
+      { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
+      { name: "Bpifrance - Biotech & Medtech VC funds", url: "https://www.bpifrance.com/products/biotech-and-medtech-vc-funds/" },
+      { name: "Leaders League - Fonds santé France 2025", url: "https://www.leadersleague.com/fr/classements/sante-pharma-and-biotechnologies-fonds-lbo-sante-fonds-d-investissement-france-2025" }
+    ]
+  },
+  {
+    slug: "biotech-coo-scale-up",
+    title: "COO Scale-up Biotech / MedTech",
+    salary: "150kEUR - 230kEUR + variable + LTI",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 30-45 % + LTI stock-options (1-3 % capital). Fourchette dépendante du périmètre (industrialisation, supply chain, HR, finance) et de la maturité de l'organisation.",
+    sector: "Biotech",
+    category: "Direction opérations scale-up",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Pilote les opérations transverses d'une scale-up biotech ou medtech (industrialisation, supply chain, HR, IT, facility). Bras droit du CEO sur l'exécution opérationnelle. Structure les process, met en place le reporting, prépare l'organisation à la prochaine phase de croissance (Series C+, IPO, internationalisation).",
+    skills: [
+      "Direction opérations transverses scale-up (industrialisation + supply + HR + IT)",
+      "Structuration process et reporting scale-up",
+      "Management d'équipe multi-fonctions 50-300 personnes",
+      "Interface CEO et board sur l'exécution opérationnelle",
+      "Anglais courant obligatoire"
+    ],
+    successFactors: [
+      "Structurer les process sans étouffer la culture entrepreneuriale de la scale-up.",
+      "Anticiper les besoins organisationnels 12-18 mois avant qu'ils bloquent la croissance.",
+      "Être un vrai bras droit du CEO sans se substituer à lui.elle sur la stratégie."
+    ],
+    path: [
+      "VP Operations ou Head of Operations scale-up",
+      "COO Scale-up Biotech / MedTech",
+      "CEO scale-up ou COO groupe international"
+    ],
+    missions: [
+      "Piloter les opérations transverses de la scale-up (industrialisation, supply chain, HR, IT, facility).",
+      "Structurer les process et le reporting pour supporter la croissance (Series C+, IPO, internationalisation).",
+      "Manager les directeurs.rices de fonction support et interfacer le CEO + le board sur l'exécution opérationnelle."
+    ],
+    studies: [
+      "École ingénieur ou école de commerce + MBA apprécié",
+      "12-18 ans d'expérience opérations dont 5+ en scale-up biotech ou medtech",
+      "Expérience internationale multi-pays appréciée"
+    ],
+    schools: ["Écoles ingénieur (Centrale, Mines, Polytechnique)", "HEC", "ESSEC", "INSEAD"],
+    relatedIndustries: [
+      "Scale-ups biotech en phase Series B à pré-IPO",
+      "Scale-ups medtech en industrialisation",
+      "Groupes pharma en spin-out",
+      "CDMO biotech (Delpharm, Fareva, Recipharm)",
+      "Cabinets conseil opérations Life Sciences (McKinsey, BCG, Bain)"
+    ],
+    sources: [
+      { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
+      { name: "LEEM - Les Entreprises du Médicament", url: "https://www.leem.org/" },
+      { name: "Bpifrance Le Hub - Biotech scale-up", url: "https://lehub.bpifrance.fr/" }
+    ]
+  },
+  {
+    slug: "life-sciences-chro-scale-up",
+    title: "DRH Scale-up Life Sciences / Animal Health",
+    salary: "120kEUR - 180kEUR + variable + LTI",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 25-35 % + LTI stock-options (0.5-2 % capital). Fourchette dépendante de la taille de l'organisation (50 à 300 collaborateurs) et de la phase (Series B à pré-IPO).",
+    sector: "Biotech",
+    category: "Direction RH scale-up Life Sciences",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Pilote la direction des ressources humaines d'une scale-up Life Sciences ou Animal Health en croissance rapide (0 → 50 → 200+ collaborateurs). Structure la culture d'entreprise, les process RH, la marque employeur, la rémunération et la rétention des talents clés. Interface board sur la structuration People.",
+    skills: [
+      "Direction RH scale-up en hypercroissance",
+      "Structuration culture d'entreprise et marque employeur",
+      "Rémunération C-level et systèmes stock-options / BSPCE",
+      "Rétention des talents clés post-levée (vesting, career pathing)",
+      "Interface board et investisseurs sur les enjeux people"
+    ],
+    successFactors: [
+      "Structurer les process RH sans étouffer la culture entrepreneuriale founder-led.",
+      "Anticiper les tensions salariales et de rétention post-levée (guerre des talents).",
+      "Construire une marque employeur qui attire les talents seniors des Big Pharma / Big Groups."
+    ],
+    path: [
+      "HR Business Partner senior ou Head of HR scale-up",
+      "DRH Scale-up Life Sciences / Animal Health",
+      "DRH groupe international ou Chief People Officer listed company"
+    ],
+    missions: [
+      "Piloter la direction RH de la scale-up (recrutement, rémunération, formation, culture, mobility).",
+      "Structurer les process RH et la marque employeur pour supporter la croissance (0 → 200+ collaborateurs).",
+      "Interfacer le board et le CEO sur les enjeux people (rétention talents clés, stock-options, structuration COMEX)."
+    ],
+    studies: [
+      "Master RH ou école de commerce avec spécialisation RH",
+      "12-18 ans d'expérience RH dont 5+ en scale-up biotech / medtech / healthtech ou Animal Health",
+      "Formation continue rémunération C-level et systèmes equity appréciée"
+    ],
+    schools: ["HEC", "ESSEC", "ESCP", "Sciences Po", "IGS", "Ciffop", "IAE"],
+    relatedIndustries: [
+      "Scale-ups biotech en phase Series B à pré-IPO",
+      "Scale-ups medtech et healthtech en internationalisation",
+      "Groupements vétérinaires en consolidation (AniCura, IVC Evidensia, VetPartners, Univet, Sévétys)",
+      "Marques petfood en hypercroissance premium",
+      "Big Pharma / Groupes santé animale (vivier candidats RH senior)"
+    ],
+    sources: [
+      { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
+      { name: "Culture RH - Média spécialisé RH", url: "https://culture-rh.com/" },
+      { name: "Aon - Benchmarks de rémunération", url: "https://www.aon.com/" }
+    ]
+  },
+  {
+    slug: "biotech-technical-sales-engineer-ingredients",
+    title: "Ingénieur.e Technico-Commercial.e Ingrédients Biotech",
+    salary: "55kEUR - 80kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 15-25 % + véhicule. Fourchette dépendante de la région (Sud-Ouest, Grand Ouest, Île-de-France) et du portefeuille clients biotech-pharma.",
+    sector: "Biotech",
+    category: "Technico-commercial ingrédients biotech",
+    shortageLevel: "Elevee",
+    summary:
+      "Pilote la relation technico-commerciale entre un fabricant d'ingrédients biotech (probiotiques, prébiotiques, actifs cosmétiques, ferments) et ses clients biotech-pharma et cosmétique. Combine expertise scientifique de l'ingrédient et posture commerciale terrain. Poste itinérant régional.",
+    skills: [
+      "Technico-commercial ingrédients biotech (probiotiques, prébiotiques, actifs)",
+      "Interface clients formulation biotech-pharma et cosmétique",
+      "Négociation contrats et prix ingrédients",
+      "Support technique et formation clients",
+      "Français et anglais professionnels"
+    ],
+    successFactors: [
+      "Être crédible scientifiquement face aux équipes R&D et formulation clientes.",
+      "Combiner posture technique (support formulation) et posture commerciale (croissance CA région).",
+      "Développer un portefeuille clients biotech-pharma sans négliger le retour d'information vers la R&D interne."
+    ],
+    path: [
+      "Ingénieur.e formulation ou R&D biotech-cosmétique",
+      "Ingénieur.e Technico-Commercial.e Ingrédients Biotech",
+      "Key Account Manager ou Directeur.rice Commercial.e Ingrédients"
+    ],
+    missions: [
+      "Développer et fidéliser un portefeuille clients biotech-pharma et cosmétique sur une région donnée.",
+      "Assurer le support technique et la formation clients sur les ingrédients biotech (probiotiques, prébiotiques, actifs).",
+      "Remonter le feedback marché structuré à la R&D et au marketing produit."
+    ],
+    studies: [
+      "Ingénieur.e biotechnologies, chimie ou pharmacie",
+      "3-8 ans d'expérience technico-commerciale ingrédients biotech ou cosmétique",
+      "Formation continue vente technique appréciée"
+    ],
+    schools: ["Écoles ingénieur biotech (ENSTBB, ESIL, ENSAIA)", "Chimie ParisTech", "AgroParisTech"],
+    relatedIndustries: [
+      "Fabricants ingrédients biotech (Lesaffre, Roquette, Solabia, Biokar, Adisseo)",
+      "Actifs cosmétiques (Silab, Codif, Naolys, Lucas Meyer)",
+      "Ferments et probiotiques (Danisco, IFF Health, Lallemand)",
+      "Biotech clients formulation (labs formulation biotech-cosmétique)",
+      "Distributeurs ingrédients spécialisés"
+    ],
+    sources: [
+      { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
+      { name: "France Chimie - Fédération industrie chimie", url: "https://www.francechimie.fr/" },
+      { name: "COSMED - Association filière cosmétique", url: "https://www.cosmed.fr/" }
+    ]
   }
 ];
 
