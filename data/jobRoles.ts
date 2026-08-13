@@ -1152,7 +1152,7 @@ const strategicExtras: JobRole[] = [
       "Faire circuler les insights terrain vers medical, marketing et direction."
     ],
     studies: ["Veterinaire", "Pharmacie", "Doctorat sciences de la vie"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
     relatedIndustries: ["Medical Vet", "Animal health", "Vaccins veterinaires", "Diagnostic vet", "Scientific affairs"],
     sources: [...defaultRoleSources]
   },
@@ -1294,7 +1294,7 @@ const strategicExtras: JobRole[] = [
       "Aligner qualité, clinique, CMC et business sur les enjeux de conformité."
     ],
     studies: ["Pharmacie", "Vétérinaire", "Master affaires réglementaires"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
     relatedIndustries: ["Medical Vet", "Vaccins vétérinaires", "Biotech animale", "Diagnostic vet"]
   },
   {
@@ -1319,7 +1319,7 @@ const strategicExtras: JobRole[] = [
       "Aligner qualité de soin et performance opérationnelle."
     ],
     studies: ["Management", "Vétérinaire avec expérience management", "Master operations"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Institut Agro Rennes Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Institut Agro Rennes Angers"],
     relatedIndustries: ["Veterinary", "Groupes de cliniques", "Pet services", "Assurance animale"]
   },
   {
@@ -1742,7 +1742,7 @@ const strategicExtras: JobRole[] = [
       "Aligner les messages avec affaires réglementaires et marketing."
     ],
     studies: ["Vétérinaire", "Pharmacie", "Doctorat sciences de la vie"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
     relatedIndustries: ["Medical Vet", "Vaccins vétérinaires", "Diagnostic vet", "Animal biotech", "Nutrition thérapeutique"]
   },
   {
@@ -1767,7 +1767,7 @@ const strategicExtras: JobRole[] = [
       "Réduire les risques de rupture sur des références critiques."
     ],
     studies: ["Master supply chain", "Ingénieur", "Master opérations"],
-    schools: ["Oniris", "VetAgro Sup", "Institut Agro Rennes Angers", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Institut Agro Rennes Angers", "Universite d'Angers"],
     relatedIndustries: ["Medical Vet", "Animal biotech", "Vaccins", "Diagnostic vet", "Nutrition animale"]
   },
   {
@@ -1792,7 +1792,7 @@ const strategicExtras: JobRole[] = [
       "Déployer les priorités groupe sur le terrain."
     ],
     studies: ["Management", "Vétérinaire avec expérience management", "Master opérations"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Institut Agro Rennes Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Institut Agro Rennes Angers"],
     relatedIndustries: ["Veterinary", "Groupes de cliniques", "Pet services", "Assurance animale", "Diagnostics vet"]
   },
   {
@@ -1817,7 +1817,7 @@ const strategicExtras: JobRole[] = [
       "Aider à prioriser les investissements et les plans de performance."
     ],
     studies: ["École de commerce", "DSCG", "Master finance"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen"],
     relatedIndustries: ["Veterinary", "Groupes de cliniques", "Pet services", "Healthcare services"]
   },
   {
@@ -2019,7 +2019,7 @@ const strategicExtras: JobRole[] = [
       "Faire remonter les signaux concurrence, usage et besoins clients."
     ],
     studies: ["Vétérinaire", "École de commerce", "Master business international"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
     relatedIndustries: ["Medical Vet", "Animal health", "Vaccins", "Diagnostic vet", "Nutrition animale"]
   },
   {
@@ -2045,7 +2045,7 @@ const strategicExtras: JobRole[] = [
       "Fiabiliser les pratiques people sur plusieurs sites."
     ],
     studies: ["Master RH", "Psychologie du travail", "École de commerce"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Institut Agro Rennes Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Institut Agro Rennes Angers"],
     relatedIndustries: ["Veterinary", "Groupes de cliniques", "Pet services", "Animal health"]
   },
   {
@@ -2149,7 +2149,7 @@ const strategicExtras: JobRole[] = [
       "Faire le lien entre distributeurs, équipes internes et besoins terrain."
     ],
     studies: ["École de commerce", "Vétérinaire avec exposition business", "Master commerce international"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
     relatedIndustries: ["Medical Vet", "Animal health", "Vaccins vétérinaires", "Diagnostic vet", "Nutrition animale"]
   },
   {
@@ -2333,7 +2333,7 @@ const strategicExtras: JobRole[] = [
       "Soutenir les lancements et la disponibilité marché avec une lecture réglementaire robuste."
     ],
     studies: ["Vétérinaire", "Pharmacie", "Master affaires réglementaires"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Faculte de pharmacie Strasbourg"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg"],
     relatedIndustries: ["Medical Vet", "Animal health", "Vaccins vétérinaires", "Diagnostic vet", "Nutrition animale"]
   },
   {
@@ -2383,7 +2383,7 @@ const strategicExtras: JobRole[] = [
       "Faire remonter les besoins terrain vers marketing, ventes et médical."
     ],
     studies: ["École de commerce", "Vétérinaire avec fibre business", "Master marketing"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
     relatedIndustries: ["Medical Vet", "Animal health", "Vaccins vétérinaires", "Nutrition animale", "Diagnostic vet"]
   },
   {
@@ -2408,7 +2408,7 @@ const strategicExtras: JobRole[] = [
       "Améliorer visibilité pipeline, animation commerciale et croissance réseau."
     ],
     studies: ["École de commerce", "Master commerce international", "Vétérinaire avec exposition business"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
     relatedIndustries: ["Medical Vet", "Animal health", "Vaccins vétérinaires", "Nutrition animale", "Distribution spécialisée"]
   },
   {
@@ -2584,7 +2584,7 @@ const strategicExtras: JobRole[] = [
       "Faire le lien entre besoins terrain, marketing, médical et direction commerciale."
     ],
     studies: ["École de commerce", "Vétérinaire avec exposition terrain", "Master formation / management"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
     relatedIndustries: ["Medical Vet", "Animal health", "Vaccins vétérinaires", "Nutrition animale", "Distributor enablement"]
   },
   {
@@ -2687,7 +2687,7 @@ const strategicExtras: JobRole[] = [
       "Être l'interlocuteur clé des grands comptes et superviser les projets d'envergure de la conception à la livraison."
     ],
     studies: ["École de commerce", "Ingénierie", "Santé animale", "Management de projet ou formation équivalente"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Université Paris-Saclay"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Université Paris-Saclay"],
     relatedIndustries: ["Medical Vet", "Animal health", "Learning & development", "Edtech santé", "Formation scientifique"],
     sources: [
       {
@@ -3102,7 +3102,7 @@ const strategicExtras: JobRole[] = [
       "Travailler avec médical, qualité, réglementaire et réseaux vétérinaires."
     ],
     studies: ["Vétérinaire", "Pharmacie", "Master pharmacovigilance", "Master santé publique"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Faculte de pharmacie Strasbourg"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg"],
     relatedIndustries: ["Medical Vet", "Animal health", "Vet pharma", "Vaccins veterinaires", "Drug safety"],
     sources: [
       {
@@ -3133,7 +3133,7 @@ const strategicExtras: JobRole[] = [
       "Assurer une coordination robuste avec supply, réglementaire, marketing et finance."
     ],
     studies: ["École de commerce", "Master commerce international", "Vétérinaire avec exposition business", "Sciences + business"],
-    schools: ["EM Lyon", "ESSEC", "Oniris", "Audencia"],
+    schools: ["EM Lyon", "ESSEC", "ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Audencia"],
     relatedIndustries: ["Animal health", "Export", "Distribution spécialisée", "Afrique francophone", "Medtech"],
     sources: [
       { name: "Business France", url: "https://www.businessfrance.fr/" },
@@ -3621,7 +3621,7 @@ const strategicExtras: JobRole[] = [
       "Coordonner supply, marketing et service client pour tenir la promesse terrain."
     ],
     studies: ["Ecole de commerce", "Master sante animale", "Veterinaire avec orientation business", "Management"],
-    schools: ["Audencia", "EM Lyon", "Oniris", "VetAgro Sup"],
+    schools: ["Audencia", "EM Lyon", "ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen"],
     relatedIndustries: ["Medical Vet", "Vet pharma", "Vaccins veterinaires", "Distribution", "EMEA"],
     sources: [
       { name: "Mars", url: "https://www.mars.com/" },
@@ -3652,7 +3652,7 @@ const strategicExtras: JobRole[] = [
       "Coordonner partenaires (pet insurance, referes, telemedecine) pour enrichir l'offre."
     ],
     studies: ["Ecole veterinaire", "Ecole de commerce", "Master management sante", "MBA (option healthcare)"],
-    schools: ["Oniris", "VetAgro Sup", "EM Lyon", "ESSEC"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "EM Lyon", "ESSEC"],
     relatedIndustries: ["Medical Vet", "Veterinary", "Groupes de cliniques", "Services veterinaires", "Telemedecine vet"],
     sources: [
       { name: "Ordre national des vétérinaires", url: "https://www.veterinaire.fr/" },
@@ -4496,7 +4496,7 @@ const may2026RoleBatch: JobRole[] = [
       "Assurer la conformité des déclarations et la préparation aux audits sur le périmètre safety."
     ],
     studies: ["Vétérinaire", "Pharmacie", "Doctorat sciences", "Master pharmacovigilance"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Faculte de pharmacie Strasbourg", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg", "Universite d'Angers"],
     relatedIndustries: ["Animal health", "Vet pharma", "Vaccins veterinaires", "Compliance", "Product safety"],
     sources: [
       ...defaultRoleSources,
@@ -4528,7 +4528,7 @@ const may2026RoleBatch: JobRole[] = [
       "Contribuer à l'amélioration continue : rendement, robustesse, capacité et formation."
     ],
     studies: ["Ingénieur biotech", "Master bioprocédés", "Vétérinaire avec exposition industrialisation"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Faculte de pharmacie Strasbourg", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg", "Universite d'Angers"],
     relatedIndustries: ["Animal health", "Vaccins veterinaires", "Bioproduction", "GMP manufacturing", "Supply chain"]
   },
   {
@@ -4553,7 +4553,7 @@ const may2026RoleBatch: JobRole[] = [
       "Travailler avec marketing, qualité et regulatory pour maintenir un discours cohérent et conforme."
     ],
     studies: ["Vétérinaire", "Pharmacie", "Doctorat sciences de la vie"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Faculte de pharmacie Strasbourg", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg", "Universite d'Angers"],
     relatedIndustries: ["Animal health", "Vet pharma", "Vaccins veterinaires", "Medical communications", "Field support"],
     sources: [
       ...defaultRoleSources,
@@ -4585,7 +4585,7 @@ const may2026RoleBatch: JobRole[] = [
       "Structurer la communication clinique : comptes rendus, échanges, formation et retours."
     ],
     studies: ["Vétérinaire", "Spécialisation pathologie clinique", "Formation diagnostic avancé"],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Universite de Liege Vet", "Institut Agro Rennes Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite de Liege Vet", "Institut Agro Rennes Angers"],
     relatedIndustries: ["Veterinary", "Diagnostic vet", "Laboratoires", "Services veterinaires", "Petcare"],
     sources: [
       ...defaultRoleSources,
@@ -4842,7 +4842,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "10+ ans en affaires réglementaires santé animale",
       "Master affaires réglementaires ou équivalent recommandé"
     ],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Université d'Angers", "Faculté de pharmacie Strasbourg"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Université d'Angers", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac, Vétoquinol)",
       "EMA / ANMV (ANSES) / autres autorités nationales EU",
@@ -4894,7 +4894,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "Master management ou HEOR recommandé",
       "5-10 ans d'expérience santé animale ou pharma"
     ],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "ESSEC / HEC / ESCP", "Sciences Po"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "ESSEC / HEC / ESCP", "Sciences Po"],
     relatedIndustries: [
       "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac)",
       "Cabinets conseil market access santé animale",
@@ -4945,7 +4945,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "MBA ou Master management stratégique recommandé",
       "7-10 ans d'expérience mixte scientifique + business"
     ],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "HEC / ESSEC / INSEAD"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "HEC / ESSEC / INSEAD"],
     relatedIndustries: [
       "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva)",
       "Biotech et startups animal health / petcare",
@@ -4996,7 +4996,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "MBA recommandé pour les grands groupes",
       "15+ ans d'expérience dont 5+ en direction opérationnelle santé animale"
     ],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "HEC / ESSEC / ESCP / INSEAD"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "HEC / ESSEC / ESCP / INSEAD"],
     relatedIndustries: [
       "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac, Vétoquinol, Merial/Sanofi)",
       "Petfood premium multinational (Nestlé Purina, Mars Petcare, Royal Canin, Hill's, Affinity Petcare)",
@@ -5047,7 +5047,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "3-8 ans d'expérience commerciale santé animale ou secteurs adjacents",
       "Formation continue négociation grand compte"
     ],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "École de commerce généraliste"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "École de commerce généraliste"],
     relatedIndustries: [
       "Laboratoires santé animale (Zoetis, Boehringer Ingelheim, MSD, Ceva, Elanco, Virbac)",
       "Nutrition animale (Sanders, InVivo, Neovia, Cargill)",
@@ -5200,7 +5200,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "3-5 ans d'expérience marketing produit santé animale ou secteurs adjacents",
       "Formation continue marketing digital et data appréciée"
     ],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "École de commerce généraliste"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "École de commerce généraliste"],
     relatedIndustries: [
       "Laboratoires santé animale (Zoetis, Boehringer Ingelheim, MSD, Ceva, Elanco, Virbac, Vétoquinol)",
       "Petfood premium (Royal Canin, Hill's, Purina, Mars Petcare, Affinity)",
@@ -5251,7 +5251,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "8-15 ans d'expérience canal vétérinaire ou petfood premium",
       "MBA ou Master management stratégique apprécié"
     ],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "HEC / ESSEC / ESCP"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "HEC / ESSEC / ESCP"],
     relatedIndustries: [
       "Petfood premium multinational (Royal Canin, Hill's, Nestlé Purina Pro Plan, Mars Petcare, Affinity, Virbac Nutrition)",
       "Groupements vétérinaires FR (AniCura, IVC Evidensia, VetPartners France, Univet, Sévétys, VetOne)",
@@ -5303,7 +5303,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "10-15 ans d'expérience mixte terrain vétérinaire + finance / M&A",
       "Formation continue M&A santé (recommandée)"
     ],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "HEC / ESSEC / INSEAD"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "HEC / ESSEC / INSEAD"],
     relatedIndustries: [
       "Groupements vétérinaires consolidateurs (AniCura, IVC Evidensia, VetPartners France, Univet, Sévétys, VetOne, Argos Vet)",
       "Fonds VC/PE santé animale et petcare (Digitalis Ventures, Companion Fund, Ardian, IK Partners)",
@@ -5355,7 +5355,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "8-15 ans d'expérience mixte formation santé animale + operations",
       "Formation continue digital learning et sciences de l'éducation appréciée"
     ],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "Sciences de l'éducation", "École de commerce généraliste"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Sciences de l'éducation", "École de commerce généraliste"],
     relatedIndustries: [
       "Agences de formation santé animale (Vetalis, VetOnline, agences indépendantes)",
       "Laboratoires santé animale clients (Zoetis, Boehringer Ingelheim, MSD, Ceva, Elanco, Virbac, Vétoquinol)",
@@ -5407,7 +5407,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "7-15 ans d'expérience commerciale santé animale, services vétérinaires ou SaaS B2B",
       "MBA apprécié pour la dimension stratégique"
     ],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "HEC / ESSEC / ESCP", "École de commerce généraliste"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "HEC / ESSEC / ESCP", "École de commerce généraliste"],
     relatedIndustries: [
       "Startups IA santé animale (assistants IA vétérinaires, CRM santé animale)",
       "Éditeurs SaaS B2B vétérinaire (PMS cliniques, télémédecine, workflow)",
@@ -5459,7 +5459,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "5-10 ans d'expérience en management multisite (santé animale, santé humaine, retail, services)",
       "Formation continue accompagnement du changement recommandée"
     ],
-    schools: ["Oniris", "VetAgro Sup", "ENVT", "École de commerce généraliste", "Écoles management"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "École de commerce généraliste", "Écoles management"],
     relatedIndustries: [
       "Groupements vétérinaires en croissance et consolidation (AniCura, IVC Evidensia, VetPartners France, Univet, Sévétys, VetOne)",
       "Réseaux cliniques santé humaine (soins premiers, kinésithérapie, radiologie)",
@@ -5615,7 +5615,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "10-15 ans d'expérience commerciale nutrition animale ou secteurs adjacents (santé animale, coopératives)",
       "MBA ou formation continue direction commerciale appréciés"
     ],
-    schools: ["Oniris", "VetAgro Sup", "AgroParisTech", "Institut Agro Montpellier", "HEC / ESSEC"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "Institut Agro Montpellier", "HEC / ESSEC"],
     relatedIndustries: [
       "Nutrition animale (Sanders, InVivo, Cargill, Neovia/ADM, Provimi)",
       "Coopératives agricoles (Terrena, Agrial, Triskalia/Eureden)",
