@@ -5212,6 +5212,162 @@ const august2026AnimalHealthBatch: JobRole[] = [
       { name: "AnimalhealthEurope - Federation industrie AH", url: "https://www.animalhealtheurope.eu/" },
       { name: "SIMV - Syndicat Industrie Médicament et Diagnostic Vétérinaires", url: "https://www.simv.org/" }
     ]
+  },
+  {
+    slug: "medical-vet-head-of-vets-channel-petfood",
+    title: "Head of Vets Channel Petfood",
+    salary: "90kEUR - 130kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable 20-35 % du fixe + LTI selon la taille de la marque et la maturité du canal vétérinaire. Fourchette dépendante du poids du canal vet dans le CA France (30 à 60 % typiquement) et de la maturité groupements adressés.",
+    sector: "Medical Vet",
+    category: "Direction canal vétérinaire petfood",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Pilote la stratégie du canal vétérinaire d'une marque petfood premium en France. Défend la marge canal face à la montée en puissance des centrales d'achat de groupements vétérinaires (AniCura, IVC Evidensia, VetPartners) et à l'érosion de la prescription par le D2C. Construit des accords partenariat basés sur la valeur non-tarifaire (formation, data, exclusivité de gamme) plutôt que sur la seule remise sur volume.",
+    skills: [
+      "Direction canal vétérinaire prescripteur",
+      "Négociation grands comptes (centrales d'achat groupements)",
+      "Stratégie pricing et valeur non-tarifaire",
+      "Pilotage marge canal et prix net réalisé",
+      "Anglais courant obligatoire (interface siège international)"
+    ],
+    successFactors: [
+      "Comprendre le transfert de pouvoir de négociation en cours (indépendants vers centrales d'achat).",
+      "Construire des accords partenariat basés sur la valeur non-tarifaire (formation praticiens, data, exclusivité gamme) plutôt que la remise sur volume.",
+      "Défendre la marge canal devant un siège international dont les objectifs ont été fixés quand le canal était atomisé."
+    ],
+    path: [
+      "Product Manager Petfood ou KAM Petfood/Santé Animale",
+      "Head of Vets Channel régional",
+      "Head of Vets Channel Europe / Global"
+    ],
+    missions: [
+      "Piloter la stratégie du canal vétérinaire (prescripteurs + groupements) pour la marque petfood.",
+      "Négocier les accords cadres avec les centrales d'achat de groupements vétérinaires et les distributeurs spécialisés.",
+      "Défendre la marge canal et le prix net réalisé face à la pression des groupements consolidateurs et à l'érosion D2C."
+    ],
+    studies: [
+      "Docteur.e vétérinaire OU ingénieur.e agri / agro OU école de commerce",
+      "8-15 ans d'expérience canal vétérinaire ou petfood premium",
+      "MBA ou Master management stratégique apprécié"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "HEC / ESSEC / ESCP"],
+    relatedIndustries: [
+      "Petfood premium multinational (Royal Canin, Hill's, Nestlé Purina Pro Plan, Mars Petcare, Affinity, Virbac Nutrition)",
+      "Groupements vétérinaires FR (AniCura, IVC Evidensia, VetPartners France, Univet, Sévétys, VetOne)",
+      "Distribution vétérinaire (Alcyon, Coveto, Centravet)",
+      "Marques petfood challenger premium (Ultra Premium Direct, Saga Nutrition, Almo Nature)",
+      "Nutrition thérapeutique vétérinaire"
+    ],
+    sources: [
+      { name: "AnimalhealthEurope - Federation industrie AH", url: "https://www.animalhealtheurope.eu/" },
+      { name: "AFVAC - Association Française Vétérinaires Animaux de Compagnie", url: "https://www.afvac.com/" },
+      { name: "Kynetec Petfood Market Intelligence", url: "https://kynetec.com/" }
+    ]
+  },
+  {
+    slug: "medical-vet-network-development-director-consolidation",
+    title: "Directeur.rice Développement Réseau Consolidation Vétérinaire",
+    salary: "85kEUR - 130kEUR + package actionnariat",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Bonus performance 20-30 % + package actionnariat (equity, phantom shares) significatif pour aligner sur la valeur créée plutôt que le nombre de deals signés. Fourchette dépendante de la taille du groupement (10 à 100+ cliniques) et de la profondeur du pipeline propriétaire à sourcer.",
+    sector: "Veterinary",
+    category: "Direction M&A consolidation vétérinaire",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Pilote le pipeline propriétaire d'acquisitions pour un groupement vétérinaire en croissance. Sécurise les cibles avant la concurrence (autres consolidateurs), négocie des deals structurés pour préserver la valeur post-acquisition (earn-out, equity, rétention vétérinaires clés), et supervise la première phase d'intégration. Poste stratégique dans une course de consolidation contre des acteurs qui se disputent un stock de cibles fini.",
+    skills: [
+      "Pipeline propriétaire M&A (cibles non mises en concurrence)",
+      "Négociation deals structurés (prix + earn-out + equity + rétention)",
+      "Due diligence stratégique et opérationnelle",
+      "Structuration financière (LBO, LMBO, dette senior)",
+      "Réseau vétérinaire terrain et confrères"
+    ],
+    successFactors: [
+      "Construire un pipeline propriétaire (cibles non mises en concurrence = prix payé nettement plus bas).",
+      "Aligner sur la valeur créée (via package actionnariat) plutôt que sur le nombre de deals signés.",
+      "Anticiper les risques d'intégration post-acquisition (attrition vétérinaires clés, perte de patientèle) dès la phase de sourcing."
+    ],
+    path: [
+      "Vétérinaire praticien.ne senior ou Business Development santé animale",
+      "Deal Manager groupement vétérinaire",
+      "Directeur.rice Développement Réseau / Chief M&A Officer"
+    ],
+    missions: [
+      "Sourcer et qualifier les cibles d'acquisition dans la consolidation vétérinaire FR (5 à 30 cliniques par deal).",
+      "Négocier les termes des deals (prix, earn-out, equity, engagements de rétention des vétérinaires cédants).",
+      "Superviser la première phase d'intégration post-acquisition pour préserver la patientèle et la culture clinique."
+    ],
+    studies: [
+      "Docteur.e vétérinaire OU ingénieur.e agri / agro + MBA",
+      "10-15 ans d'expérience mixte terrain vétérinaire + finance / M&A",
+      "Formation continue M&A santé (recommandée)"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "HEC / ESSEC / INSEAD"],
+    relatedIndustries: [
+      "Groupements vétérinaires consolidateurs (AniCura, IVC Evidensia, VetPartners France, Univet, Sévétys, VetOne, Argos Vet)",
+      "Fonds VC/PE santé animale et petcare (Digitalis Ventures, Companion Fund, Ardian, IK Partners)",
+      "Cabinets M&A santé (Rothschild Healthcare, Lazard MidCap)",
+      "Cabinets vétérinaires indépendants en cession",
+      "Sociétés de conseil intégration post-acquisition"
+    ],
+    sources: [
+      { name: "Vetnosis / Animal Pharm - M&A et deals santé animale", url: "https://animalpharm.agribusinessintelligence.informa.com/" },
+      { name: "Digitalis Ventures - Fonds spécialisé animal health", url: "https://digitalisventures.com/" },
+      { name: "Ordre National des Vétérinaires - Démographie et consolidation", url: "https://www.veterinaire.fr/" }
+    ]
+  },
+  {
+    slug: "medical-vet-director-of-operations-training-agency",
+    title: "Directeur.rice des Opérations Agence de Formation Santé Animale",
+    salary: "75kEUR - 110kEUR",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Bonus 10-20 % + intéressement au résultat. Fourchette dépendante de la taille de l'agence (10 à 60 formateurs) et de la profondeur du portefeuille clients labos.",
+    sector: "Medical Vet",
+    category: "Direction opérations formation",
+    shortageLevel: "Elevee",
+    summary:
+      "Pilote l'industrialisation de la delivery d'une agence de formation santé animale prise entre des labos clients qui compriment leurs budgets et un modèle dont la marge dépend historiquement du temps humain. Transforme un service dépendant du temps humain en modules reproductibles enrichis de digital, maintient la qualité pédagogique tout en augmentant la scalabilité. Poste de marge brute, pas de croissance de volume.",
+    skills: [
+      "Industrialisation delivery formation santé animale",
+      "Reproductibilité modules et digital learning",
+      "Pilotage marge brute et efficience opérationnelle",
+      "Management d'équipe formateurs internes et externes",
+      "Interface labos clients santé animale"
+    ],
+    successFactors: [
+      "Transformer un service dépendant du temps humain en modules reproductibles enrichis de digital.",
+      "Maintenir la qualité pédagogique et la crédibilité scientifique tout en augmentant la scalabilité.",
+      "Piloter la marge brute plutôt que la croissance de volume (arbitrage stratégique face aux labos qui compriment leurs budgets)."
+    ],
+    path: [
+      "Chef.fe de projet formation santé animale",
+      "Head of Delivery / Head of Operations agence formation",
+      "Directeur.rice des Opérations / Managing Director agence"
+    ],
+    missions: [
+      "Industrialiser la delivery des modules de formation santé animale (présentiel, digital, hybride).",
+      "Piloter la marge brute, la reproductibilité des modules et l'efficience opérationnelle.",
+      "Encadrer les formateurs internes et externes, sourcer les experts scientifiques partenaires et interfacer les labos clients."
+    ],
+    studies: [
+      "Docteur.e vétérinaire OU ingénieur.e pédagogique OU école de commerce",
+      "8-15 ans d'expérience mixte formation santé animale + operations",
+      "Formation continue digital learning et sciences de l'éducation appréciée"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "Sciences de l'éducation", "École de commerce généraliste"],
+    relatedIndustries: [
+      "Agences de formation santé animale (Vetalis, VetOnline, agences indépendantes)",
+      "Laboratoires santé animale clients (Zoetis, Boehringer Ingelheim, MSD, Ceva, Elanco, Virbac, Vétoquinol)",
+      "EdTech santé et plateformes digital learning vétérinaire",
+      "Écoles vétérinaires et centres de formation continue (AFVAC, SNGTV)",
+      "Cabinets conseil L&D et transformation digitale formation"
+    ],
+    sources: [
+      { name: "AFVAC - Formations continues vétérinaires", url: "https://www.afvac.com/" },
+      { name: "E-learning Letter - Média spécialisé digital learning", url: "https://www.e-learning-letter.com/" },
+      { name: "WSAVA - Continuing Education vétérinaire", url: "https://wsava.org/" }
+    ]
   }
 ];
 
