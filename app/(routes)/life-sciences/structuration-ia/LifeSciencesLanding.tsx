@@ -1,174 +1,39 @@
 "use client";
 
 import Link from "next/link";
-import { Compass, Sparkles, TrendingUp, Users } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import CalendlyButton from "@/components/CalendlyButton";
 import ComplianceSection from "@/components/landings/ComplianceSection";
 import FAQHomeTabs from "@/components/FAQHomeTabs";
 import { StructurationHero } from "@/components/sections/StructurationHero";
 import DemoStage from "@/components/landings/DemoStage";
 import DiagnosticForm from "@/components/landings/DiagnosticForm";
+import GlossaireIA from "@/components/landings/GlossaireIA";
+import OperatingSuite from "@/components/landings/OperatingSuite";
+import ProblemesProduitsResultats from "@/components/landings/ProblemesProduitsResultats";
+import PrincipesFondateurs from "@/components/landings/PrincipesFondateurs";
+import CyberUrgenceBloc from "@/components/landings/CyberUrgenceBloc";
+import MethodologieBlocs from "@/components/landings/MethodologieBlocs";
+import FinancementsBloc from "@/components/landings/FinancementsBloc";
+import AILeadershipBriefing from "@/components/landings/AILeadershipBriefing";
 import { lifeSciencesScenes } from "./lifeSciencesScenes";
 import { lifeSciencesQuestions } from "./lifeSciencesQuestions";
 
-// Hide 3 detail blocks (3 moments critiques, profils hybrides, vocabulaire) - page allégée.
-// Repasser à true pour les ré-afficher sans toucher au code des sections.
-const SHOW_DETAIL_BLOCKS = false;
-
-// Pairs each CEO enjeu with the IA agent that solves it. Replaces the
-// previously separated "6 enjeux" + "6 agents" sections by a single
-// side-by-side row layout (left: enjeu; right: agent IA + ROI).
-type StandardItem = {
-  variant?: "standard";
-  enjeu: { num: string; title: string; quote: string; tone?: "amber" };
-  agent: { Icon: typeof Compass; title: string; desc: string; gain: string; note: string; badge?: string };
-};
-
-type FeatureItem = {
-  variant: "feature";
-  enjeu: {
-    num: string;
-    eyebrow: string;
-    titleA: string;
-    titleB: string;
-    stats: { label: string; value: string; caption: string }[];
-    quote: string;
-  };
-  agent: {
-    Icon: typeof Compass;
-    chipLabel: string;
-    eyebrow: string;
-    title: string;
-    desc: string;
-    gain: string;
-    badge?: string;
-    roi: { label?: string; value: string }[];
-  };
-};
-
-const enjeuxAvecAgents: (StandardItem | FeatureItem)[] = [
-  {
-    enjeu: { num: "01", title: "Reporting talent au board", quote: "Mon board me demande mes KPI talent en temps réel. Je leur sors un PowerPoint qui date d'il y a 3 mois." },
-    agent: {
-      Icon: Compass,
-      title: "Agent CEO Copilot stratégique",
-      desc: "Connecte roadmap R&D, ATS et données financières, anticipe les besoins talent à l'avance et génère votre board pack. Avec supervision humaine et traçabilité conforme à l'IA Act.",
-      gain: "Un board pack prêt en quelques minutes au lieu de plusieurs heures, et des besoins talent anticipés plusieurs mois à l'avance.",
-      note: "~6 mois d'anticipation, board pack en ~5 min (biotech Series B)",
-      badge: "DÉMO"
-    }
-  },
-  {
-    variant: "feature",
-    enjeu: {
-      num: "02",
-      eyebrow: "Enjeu terrain",
-      titleA: "Recruter coûte cher.",
-      titleB: "Recruter mal coûte plus.",
-      stats: [
-        { label: "Burn mensuel", value: "180-250 k€", caption: "masse salariale sur la roadmap" },
-        { label: "Échec recrutement", value: "~12 mois", caption: "perdus à chaque départ précoce" }
-      ],
-      quote: "Junior, manager ou C-level : si on rate l'onboarding, on redémarre."
-    },
-    agent: {
-      Icon: Users,
-      chipLabel: "Agents B + D",
-      eyebrow: "Duo agents IA SKS",
-      title: "Talent Intelligence & Rétention",
-      desc: "Optimise vos recrutements alignés sur la roadmap, pilote l'onboarding 90 jours sur toute l'équipe, et détecte les signaux faibles de désengagement avant qu'ils ne deviennent des départs.",
-      gain: "Des recrutements plus rapides et mieux ciblés, et un turnover réduit grâce à une rétention pilotée.",
-      badge: "NOUVEAU",
-      roi: [
-        { label: "Constaté", value: "jusqu'à -50 % time-to-fill" },
-        { value: "-60 % turnover" },
-        { label: "Déploiement", value: "~4 semaines" }
-      ]
-    }
-  },
-  {
-    enjeu: { num: "03", title: "Scaler de la Series B à la Series C", quote: "50 → 200 employés en 24 mois, avec des process datant de l'époque où on était 15.", tone: "amber" },
-    agent: {
-      Icon: TrendingUp,
-      title: "Agent Scale-up Playbook",
-      desc: "Bibliothèque vivante de process RH, templates et benchmarks adaptés à chaque phase de croissance.",
-      gain: "Des process RH qui évoluent au rythme de vos levées, sans tout réinventer à chaque palier.",
-      note: "Process structurés pour le passage Series A → C"
-    }
-  }
-];
-
-const moments = [
-  {
-    title: "Industrialisation medtech",
-    quote:
-      "Nous passons du prototype à la production. Notre CTO doit comprendre les bioprocédés OU l'électronique ET le scale industriel ET les normes médicales.",
-    stats: "1 mission flagship · Tech Lead 5+ ans · Fixe + BSPCE",
-    tone: "emerald"
-  },
-  {
-    title: "Scale deeptech biomatériaux",
-    quote:
-      "Nous fabriquons un nouveau matériau. Nous avons besoin d'un Head of Engineering qui maîtrise les bioprocédés ET le scale industriel.",
-    stats: "2 missions · MSc/PhD 10+ ans · 50-180 k€",
-    tone: "blue"
-  },
-  {
-    title: "Anticipation recrutements biotech",
-    quote:
-      "Quand on passe Phase II, j'ai besoin de mon Head of Clinical Ops 6 mois avant. Quand on prépare notre Series C, je dois prouver ma talent strategy à mes investisseurs.",
-    stats: "Enjeu transversal · Anticipation 6 mois · 100-200 k€ + BSPCE",
-    tone: "amber"
-  }
-] as const;
-
-const profils = [
-  { title: "PhD Ingénierie + Startup deeptech", desc: "MSc/PhD bioprocédés ou ingénierie avec mindset startup.", example: "Nos Head of Engineering passent du papier au pilote en 18 mois." },
-  { title: "Tech Lead + Normes medtech", desc: "CTO électronique avec maîtrise de la conformité ISO 13485, MDR, IVDR.", example: "Nos CTO sont fiables pour passer les normes médicales sans bloquer l'innovation." },
-  { title: "Lab Manager + Biotech startup", desc: "Bac+5 biotech avec leadership opérationnel en environnement startup hyper-croissance.", example: "Nos Lab Managers structurent les R&D sans alourdir." },
-  { title: "Head of CMC + Phase clinique", desc: "Director CMC avec passage Phase II/III réussi.", example: "Nos Head of CMC garantissent la roadmap clinique sur 24 mois." },
-  { title: "VP Regulatory + Stratégie business", desc: "Director Regulatory avec vision stratégique des parcours d'enregistrement.", example: "Nos VP Regulatory accélèrent le marquage CE de 12 à 6 mois." },
-  { title: "Director Industrialisation + Startup", desc: "Director Manufacturing avec capacité à passer du prototype au pilote industriel.", example: "Nos Directors Industrialization livrent les premiers lots commerciaux en 18 mois." }
-];
-
-const vocabulaire = {
-  "Biotech": [
-    "Head of CMC", "Director Clinical Operations", "VP Regulatory",
-    "Phase I/II/III", "Bioprocédés", "GMP/GLP", "ANSM", "EMA", "FDA",
-    "Marquage CE", "IND/NDA", "Therapeutics oncology", "Cell therapy",
-    "Bpifrance", "French Tech"
-  ],
-  "Medtech": [
-    "Dispositifs médicaux", "ISO 13485", "MDR / IVDR",
-    "Conception électronique", "Industrialisation", "IEC 60601",
-    "Notified Body", "Class IIa/IIb/III", "BSPCE", "Levée Series A/B"
-  ],
-  "Deeptech biomatériaux": [
-    "PhD ingénierie", "Bioprocédés", "Scale-up production",
-    "Lab biologie cellulaire", "Cellules souches", "Bioréacteurs", "Bpifrance"
-  ],
-  "E-santé": [
-    "Telemedicine", "SaaS B2B santé", "IA santé", "DTx",
-    "RGPD santé", "HDS hébergement", "CE marking software", "DMD",
-    "CMO", "ARS", "CNIL"
-  ]
-};
-
-const trustSignals = ["★ 4,5/5 Trustpilot", "France Biotech", "Saclay", "100+ placements"];
+const trustSignals = ["★ 4,6/5 Trustpilot", "France Biotech", "Saclay", "100+ placements"];
 
 export default function LifeSciencesLanding() {
   return (
     <main className="bg-white">
-      {/* ===== Section 1 - HERO (StructurationHero) ===== */}
+      {/* ===== Section 1 - HERO ===== */}
       <StructurationHero
         vertical="life-sciences"
         eyebrow="Digitalisation RH par l'IA  ·  Life Sciences"
         headlineLines={[
-          "Digitalisez vos RH par l'IA.",
-          "Vos process talent suivent enfin",
-          "votre croissance."
+          "Anticipez vos recrutements",
+          "6 mois à l'avance.",
+          "Sans y passer vos week-ends."
         ]}
-        subtitle="Digitalisation RH par l'IA pour scale-ups biotech, medtech et deeptech Series A à C. Combien de mois d'avance avez-vous sur votre prochain recrutement stratégique ? Nous transformons votre pilotage talents, reporting board et rétention en agents IA qui travaillent pour vous."
+        subtitle="Digitalisation RH par l'IA pour scale-ups biotech, medtech et deeptech Series A à C. Nous transformons votre pilotage talents, reporting board et rétention en assistants IA qui travaillent pour vous."
         question={{
           thematicLabel: "Le copilot IA qui transforme vos board meetings",
           questionText:
@@ -191,11 +56,11 @@ export default function LifeSciencesLanding() {
           description:
             "Anticipez vos recrutements stratégiques selon l'évolution de vos programmes.",
           enjeux: "3 enjeux structurels",
-          agents: "4 agents IA sectoriels",
+          agents: "4 assistants IA sectoriels",
           agentsDetail: "(dont le duo Talent Intelligence & Rétention)",
           roi: "ROI mesuré sur vos propres données."
         }}
-        pourquoiSKS="8 ans d'expertise  ·  Commission RH France Biotech  ·  100+ placements  ·  4,5/5 Trustpilot"
+        pourquoiSKS="8 ans d'expertise  ·  Commission RH France Biotech  ·  100+ placements  ·  4,6/5 Trustpilot"
       />
 
       {/* ===== Section 2 - DÉMO ===== */}
@@ -207,7 +72,7 @@ export default function LifeSciencesLanding() {
             <span className="italic text-brand-teal">vos board meetings</span>.
           </h2>
           <p className="mt-3 max-w-3xl t-body">
-            Une CEO biotech Series B en oncologie anticipe ses recrutements 6 mois à l'avance et
+            Une CEO biotech Series B en oncologie anticipe ses recrutements 6 mois à l&apos;avance et
             reporte au board en 5 minutes. Voici comment.
           </p>
           <div className="mt-8">
@@ -215,241 +80,26 @@ export default function LifeSciencesLanding() {
               sector="life_sciences"
               scenes={lifeSciencesScenes}
               totalSeconds={30}
-              ariaLabel="Démo interactive Agent CEO Copilot stratégique"
+              ariaLabel="Démo interactive Assistant CEO Copilot stratégique"
             />
           </div>
         </div>
       </section>
 
-      {/* ===== Section 3 - ENJEUX × AGENTS IA (fusion, redesign 2026-05-07) ===== */}
-      <section className="bg-gradient-to-b from-white via-brand-mint/8 to-white py-10 sm:py-14">
-        <div className="container-shell">
-          <p className="eyebrow">Vos enjeux → Notre réponse IA</p>
-          <h2 className="t-h1 max-w-3xl font-display">
-            3 enjeux dirigeants.{" "}
-            <span className="italic text-brand-teal">4 agents IA</span> qui y répondent.
-          </h2>
-          <p className="mt-3 max-w-3xl t-body">
-            À gauche, la phrase qu'on entend. À droite, l'agent IA qui transforme la situation, avec ce que vous y gagnez. Un enjeu peut mobiliser plusieurs agents : d'où 4 agents pour 3 enjeux.
-          </p>
-          <div className="mt-12 space-y-8">
-            {enjeuxAvecAgents.map((item, index) => {
-              const counter = `${String(index + 1).padStart(2, "0")} / ${String(enjeuxAvecAgents.length).padStart(2, "0")}`;
+      {/* ===== Section 3 - GLOSSAIRE assistant IA ===== */}
+      <GlossaireIA />
 
-              if (item.variant === "feature") {
-                const { enjeu, agent } = item;
-                const { Icon } = agent;
-                return (
-                  <article
-                    key={enjeu.num}
-                    className="group relative grid gap-5 overflow-hidden rounded-3xl border border-brand-teal/15 bg-white shadow-[0_22px_56px_rgba(15,58,60,0.08)] sm:grid-cols-[1fr_auto_1.15fr] sm:items-stretch sm:gap-0"
-                  >
-                    {/* Counter chip top-left */}
-                    <span className="absolute left-5 top-5 rounded-full border border-brand-teal/15 bg-[#faf7f1] px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-stone sm:left-7 sm:top-7">
-                      {counter}
-                    </span>
+      {/* ===== Section 4 - OPERATING SUITE ===== */}
+      <OperatingSuite vertical="life-sciences" />
 
-                    {/* LEFT - enjeu */}
-                    <div className="relative overflow-hidden bg-[#faf7f1] p-6 pt-16 sm:p-10 sm:pt-20">
-                      <p className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-amber-700/80">
-                        {enjeu.eyebrow}
-                      </p>
-                      <h3 className="mt-4 font-display text-[34px] leading-[1.05] text-brand-ink sm:text-[44px]">
-                        {enjeu.titleA}
-                        <br />
-                        <span className="italic text-brand-teal">{enjeu.titleB}</span>
-                      </h3>
+      {/* ===== Section 5 - 3 PROBLÈMES → ASSISTANT IA → RÉSULTAT ===== */}
+      <ProblemesProduitsResultats vertical="life-sciences" />
 
-                      <div className="mt-7 grid gap-5 sm:grid-cols-2">
-                        {enjeu.stats.map((s) => (
-                          <div key={s.label}>
-                            <p className="text-eyebrow font-semibold uppercase tracking-[0.2em] text-brand-stone">
-                              {s.label}
-                            </p>
-                            <p className="mt-2 font-display text-[32px] leading-none text-brand-ink sm:text-[38px]">
-                              {s.value}
-                            </p>
-                            <p className="mt-2 text-caption text-brand-stone">{s.caption}</p>
-                          </div>
-                        ))}
-                      </div>
-
-                      <blockquote className="mt-7 border-l-2 border-brand-teal/40 pl-4">
-                        <p className="font-display italic t-body text-brand-stone">
-                          « {enjeu.quote} »
-                        </p>
-                      </blockquote>
-                    </div>
-
-                    {/* CENTER - connector */}
-                    <div className="hidden flex-col items-center justify-center gap-3 px-2 sm:flex">
-                      <span className="h-full w-px border-l border-dashed border-brand-teal/30" aria-hidden />
-                      <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand-teal text-2xl text-white shadow-[0_10px_24px_rgba(15,58,60,0.18)]">
-                        ›
-                      </span>
-                      <p className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-teal/80">
-                        Transformation
-                      </p>
-                      <p className="font-display italic text-sm text-brand-stone">par SKS Talents</p>
-                      <span className="h-full w-px border-l border-dashed border-brand-teal/30" aria-hidden />
-                    </div>
-                    <div aria-hidden="true" className="flex flex-col items-center sm:hidden">
-                      <span className="h-6 w-px bg-brand-teal/40" />
-                      <span className="text-2xl text-brand-teal">↓</span>
-                    </div>
-
-                    {/* RIGHT - duo agents */}
-                    <div className="relative flex flex-col bg-white p-6 pt-16 sm:p-10 sm:pt-20">
-                      <span className="absolute left-5 top-5 rounded-full border border-brand-teal/30 bg-brand-mint/60 px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-teal sm:left-10 sm:top-7">
-                        {agent.chipLabel}
-                      </span>
-                      {agent.badge && (
-                        <span className="absolute right-5 top-5 rounded-full bg-brand-ink px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-white sm:right-10 sm:top-7">
-                          {agent.badge}
-                        </span>
-                      )}
-
-                      <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-mint/60 to-brand-mint/30 text-brand-teal">
-                        <Icon size={22} />
-                      </span>
-
-                      <p className="mt-5 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-teal/80">
-                        {agent.eyebrow}
-                      </p>
-                      <h4 className="mt-2 font-display text-[28px] leading-[1.1] text-brand-ink sm:text-[36px]">
-                        {agent.title}
-                      </h4>
-                      <p className="mt-4 t-body">{agent.desc}</p>
-
-                      <div className="mt-4 rounded-2xl bg-brand-mint/25 p-4">
-                        <p className="text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-teal">
-                          Ce que vous y gagnez
-                        </p>
-                        <p className="mt-1.5 t-body">{agent.gain}</p>
-                      </div>
-
-                      <div className="mt-auto pt-6">
-                        <div className="grid grid-cols-3 gap-px overflow-hidden rounded-2xl bg-brand-teal/20">
-                          {agent.roi.map((r, i) => (
-                            <div
-                              key={`${r.value}-${i}`}
-                              className="bg-gradient-to-r from-brand-teal to-brand-teal/85 px-4 py-4 text-white"
-                            >
-                              {r.label ? (
-                                <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70">
-                                  {r.label}
-                                </p>
-                              ) : (
-                                <span className="block h-[14px]" aria-hidden />
-                              )}
-                              <p className="mt-1 font-display text-base font-semibold leading-tight text-white sm:text-lg">
-                                {r.value}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                );
-              }
-
-              const { enjeu, agent } = item;
-              const { Icon } = agent;
-              return (
-                <article
-                  key={enjeu.num}
-                  className="group relative grid gap-5 sm:grid-cols-[1fr_auto_1.15fr] sm:items-stretch sm:gap-0"
-                >
-                  {/* Problème - fond crème, citation prominente */}
-                  <div className="relative overflow-hidden rounded-3xl bg-[#faf7f1] p-6 sm:rounded-r-none sm:p-7">
-                    <div className="flex items-baseline gap-3">
-                      <span
-                        className={`font-display text-[44px] leading-none sm:text-[52px] ${
-                          enjeu.tone === "amber" ? "text-amber-700" : "text-brand-teal"
-                        }`}
-                      >
-                        {enjeu.num}
-                      </span>
-                      <span className="text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-stone">
-                        Enjeu
-                      </span>
-                    </div>
-                    <p className="mt-4 t-h3 font-semibold text-brand-ink">{enjeu.title}</p>
-                    <blockquote className="mt-4 border-l-2 border-brand-teal/30 pl-4">
-                      <p className="font-display italic t-body text-brand-stone">"{enjeu.quote}"</p>
-                    </blockquote>
-                  </div>
-
-                  {/* Connecteur - flèche + label transformation */}
-                  <div className="hidden flex-col items-center justify-center px-2 sm:flex">
-                    <div className="flex flex-col items-center gap-2">
-                      <span className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-teal/70">
-                        Transformation
-                      </span>
-                      <span aria-hidden="true" className="text-3xl text-brand-teal">→</span>
-                    </div>
-                  </div>
-                  {/* Connecteur mobile : ligne verticale + flèche bas */}
-                  <div aria-hidden="true" className="flex flex-col items-center sm:hidden">
-                    <span className="h-6 w-px bg-brand-teal/40" />
-                    <span className="text-2xl text-brand-teal">↓</span>
-                  </div>
-
-                  {/* Solution - agent IA, fond blanc, ROI en bande teal */}
-                  <div className="relative flex flex-col overflow-hidden rounded-3xl border border-brand-teal/15 bg-white shadow-[0_18px_44px_rgba(15,58,60,0.08)] transition duration-300 group-hover:-translate-y-0.5 group-hover:shadow-[0_24px_56px_rgba(15,58,60,0.12)] sm:rounded-l-none">
-                    <div className="flex flex-1 flex-col p-6 sm:p-7">
-                      <div className="flex items-start justify-between gap-3">
-                        <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-mint/60 to-brand-mint/30 text-brand-teal">
-                          <Icon size={22} />
-                        </span>
-                        {agent.badge && (
-                          <span className="rounded-full bg-brand-ink px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.18em] text-white">
-                            {agent.badge}
-                          </span>
-                        )}
-                      </div>
-                      <p className="mt-4 t-h3 font-semibold text-brand-ink">{agent.title}</p>
-                      <p className="mt-2 t-body">{agent.desc}</p>
-                      <div className="mt-4 rounded-2xl bg-brand-mint/25 p-4">
-                        <p className="text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-teal">
-                          Ce que vous y gagnez
-                        </p>
-                        <p className="mt-1.5 t-body">{agent.gain}</p>
-                      </div>
-                    </div>
-                    {/* Constaté strip - bande teal en bas, métrique observée */}
-                    <div className="border-t border-brand-teal/15 bg-gradient-to-r from-brand-teal to-brand-teal/85 px-6 py-3 sm:px-7">
-                      <div className="flex items-baseline gap-3">
-                        <span className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-white/70">
-                          Constaté
-                        </span>
-                        <span className="font-display text-sm font-semibold text-white sm:text-base">
-                          {agent.note}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Step counter overlay (desktop only) */}
-                  <span
-                    aria-hidden="true"
-                    className="pointer-events-none absolute -top-4 left-6 hidden rounded-full border border-brand-teal/15 bg-white px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-stone shadow-sm sm:inline-block"
-                  >
-                    {counter}
-                  </span>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== Section 4 - DIAGNOSTIC (remonté du #10) ===== */}
+      {/* ===== Section 6 - DIAGNOSTIC ===== */}
       <section id="diagnostic" className="scroll-mt-24 bg-gradient-to-b from-brand-mint/15 to-white py-10 sm:py-14">
         <div className="container-shell">
           <p className="eyebrow">Diagnostic personnalisé · 5 min</p>
-          <h2 className="t-h1 max-w-3xl font-display">Quel agent IA déployer en premier ?</h2>
+          <h2 className="t-h1 max-w-3xl font-display">Quel assistant IA déployer en premier ?</h2>
           <p className="mt-3 max-w-3xl t-body">
             5 questions ciblées. Résultat immédiat. 3 priorités personnalisées.
           </p>
@@ -459,95 +109,31 @@ export default function LifeSciencesLanding() {
         </div>
       </section>
 
-      {SHOW_DETAIL_BLOCKS && (
-        <>
-          {/* ===== Section 4 - 3 MOMENTS CRITIQUES ===== */}
-          <section className="bg-gradient-to-b from-brand-mint/15 to-white py-10 sm:py-14">
-            <div className="container-shell">
-              <p className="eyebrow">Les moments où nos clients nous appellent</p>
-              <h2 className="t-h1 max-w-3xl font-display">3 moments business critiques. Notre terrain de jeu Life Sciences.</h2>
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                {moments.map((m) => {
-                  const accent: Record<string, string> = {
-                    emerald: "border-emerald-200 bg-emerald-50",
-                    blue: "border-blue-200 bg-blue-50",
-                    amber: "border-amber-200 bg-amber-50"
-                  };
-                  return (
-                    <article key={m.title} className={`rounded-3xl border p-6 ${accent[m.tone]}`}>
-                      <p className="t-h3 font-semibold">{m.title}</p>
-                      <p className="mt-3 font-display italic t-body text-brand-ink">"{m.quote}"</p>
-                      <p className="mt-4 text-caption font-semibold text-brand-stone">{m.stats}</p>
-                    </article>
-                  );
-                })}
-              </div>
-            </div>
-          </section>
+      {/* ===== Section 7 - 3 PRINCIPES FONDATEURS ===== */}
+      <PrincipesFondateurs />
 
-          {/* ===== Section 5 - PROFILS HYBRIDES ===== */}
-          <section className="bg-white py-10 sm:py-14">
-            <div className="container-shell">
-              <p className="eyebrow">Notre vraie spécialité</p>
-              <h2 className="t-h1 max-w-3xl font-display">
-                Les profils hybrides Life Sciences que personne ne sait trouver.
-              </h2>
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {profils.map((p) => (
-                  <article key={p.title} className="rounded-3xl border border-brand-teal/10 bg-white p-5 shadow-sm">
-                    <p className="t-h3 font-semibold uppercase tracking-wide text-brand-ink">{p.title}</p>
-                    <p className="mt-2 t-body">{p.desc}</p>
-                    <p className="mt-3 rounded-2xl bg-brand-mint/30 px-3 py-2 text-caption text-brand-stone">
-                      {p.example}
-                    </p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
+      {/* ===== Section 8 - CAS CYBER URGENCE MARCHÉ ===== */}
+      <CyberUrgenceBloc vertical="life-sciences" />
 
-          {/* ===== Section 6 - VOCABULAIRE ===== */}
-          <section className="bg-gradient-to-b from-white to-brand-mint/15 py-10 sm:py-14">
-            <div className="container-shell">
-              <p className="eyebrow">Le vocabulaire que nous maîtrisons</p>
-              <h2 className="t-h1 max-w-3xl font-display">
-                Pour vous, ces termes ne sont pas du jargon.{" "}
-                <span className="italic text-brand-teal">Pour la concurrence, oui.</span>
-              </h2>
-              <div className="mt-8 space-y-6">
-                {Object.entries(vocabulaire).map(([category, terms]) => (
-                  <div key={category}>
-                    <p className="text-eyebrow font-semibold uppercase tracking-wide text-brand-stone/80">
-                      {category}
-                    </p>
-                    <ul className="mt-3 flex flex-wrap gap-2">
-                      {terms.map((t) => (
-                        <li
-                          key={t}
-                          className="rounded-full border border-brand-teal/15 bg-white px-3 py-1.5 text-caption text-brand-stone"
-                        >
-                          {t}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        </>
-      )}
+      {/* ===== Section 9-14 - MÉTHODOLOGIE (timeline + phases + tailles + formation + investissement + prochaines etapes) ===== */}
+      <MethodologieBlocs vertical="life-sciences" />
 
-      {/* ===== Souveraineté & conformité (avant le CTA) ===== */}
+      {/* ===== Section 15 - FINANCEMENTS ===== */}
+      <FinancementsBloc vertical="life-sciences" />
+
+      {/* ===== Section 16 - AI LEADERSHIP BRIEFING ===== */}
+      <AILeadershipBriefing />
+
+      {/* ===== Section 17 - COMPLIANCE ===== */}
       <ComplianceSection
-        ownershipBody="Vos données talents, R&D et financières sont parmi les plus sensibles de votre entreprise. Nos agents IA sont conçus pour les protéger : hébergement en Europe, conformité RGPD, et aucune donnée de votre société utilisée pour entraîner des modèles tiers."
-        iaActBody="Le règlement européen sur l'IA encadre désormais les usages RH algorithmiques (tri, scoring, aide à la décision). Nos agents sont pensés pour la conformité dès la conception : traçabilité des décisions, supervision humaine, transparence des traitements. Vous adoptez l'IA aujourd'hui sans dette réglementaire demain."
+        ownershipBody="Vos données talents, R&D et financières sont parmi les plus sensibles de votre entreprise. Nos assistants IA sont conçus pour les protéger : hébergement en Europe, conformité RGPD, et aucune donnée de votre société utilisée pour entraîner des modèles tiers."
+        iaActBody="Le règlement européen sur l'IA encadre désormais les usages RH algorithmiques (tri, scoring, aide à la décision). Nos assistants sont pensés pour la conformité dès la conception : traçabilité des décisions, supervision humaine, transparence des traitements. Vous adoptez l'IA aujourd'hui sans dette réglementaire demain."
       />
 
-      {/* ===== FAQ tabs (rapatriee depuis la home 2026-05-17) ===== */}
+      {/* ===== Section 18 - FAQ ===== */}
       <FAQHomeTabs defaultVertical="life-sciences" />
 
-      {/* ===== Section 7 - CTA FINAL ===== */}
+      {/* ===== Section 19 - CTA FINAL ===== */}
       <section className="bg-brand-ink py-14 text-white sm:py-20">
         <div className="container-shell">
           <p className="text-eyebrow font-semibold uppercase text-white/60">Dernière étape</p>

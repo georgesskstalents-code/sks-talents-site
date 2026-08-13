@@ -1,140 +1,39 @@
 "use client";
 
 import Link from "next/link";
-import {
-  BarChart3,
-  CheckCircle,
-  FileText,
-  Phone,
-  Sparkles,
-  TrendingUp
-} from "lucide-react";
+import { Sparkles } from "lucide-react";
 import CalendlyButton from "@/components/CalendlyButton";
 import ComplianceSection from "@/components/landings/ComplianceSection";
 import FAQHomeTabs from "@/components/FAQHomeTabs";
 import { StructurationHero } from "@/components/sections/StructurationHero";
 import DemoStage from "@/components/landings/DemoStage";
 import DiagnosticForm from "@/components/landings/DiagnosticForm";
+import GlossaireIA from "@/components/landings/GlossaireIA";
+import OperatingSuite from "@/components/landings/OperatingSuite";
+import ProblemesProduitsResultats from "@/components/landings/ProblemesProduitsResultats";
+import PrincipesFondateurs from "@/components/landings/PrincipesFondateurs";
+import CyberUrgenceBloc from "@/components/landings/CyberUrgenceBloc";
+import MethodologieBlocs from "@/components/landings/MethodologieBlocs";
+import FinancementsBloc from "@/components/landings/FinancementsBloc";
+import AILeadershipBriefing from "@/components/landings/AILeadershipBriefing";
 import { animalHealthScenes } from "./animalHealthScenes";
 import { animalHealthQuestions } from "./animalHealthQuestions";
 
-// Hide 3 detail blocks (4 moments critiques, profils hybrides, vocabulaire) - page allégée.
-// Repasser à true pour les ré-afficher sans toucher au code des sections.
-const SHOW_DETAIL_BLOCKS = false;
-
-// Pairs each dirigeant enjeu with the IA agent that solves it (1-to-1 or 2-to-1).
-// 3 enjeux + 3 agents IA (1:1 strict).
-// Mise a jour 2026-05-13 : retrait M&A Pipeline + dashboard ROI + fusion Lead Catcher/Sales Closer = Sales Pipeline.
-const enjeuxAvecAgents: {
-  enjeux: { num: string; title: string; quote: string; tone?: "amber" | "yellow" }[];
-  agent: { Icon: typeof FileText; title: string; desc: string; gain: string; note: string; badge?: string };
-}[] = [
-  {
-    enjeux: [{ num: "01", title: "Documentation juridique RH dispersée", quote: "Tout est éclaté. Une due diligence me prend deux semaines." }],
-    agent: {
-      Icon: FileText,
-      title: "Agent Juridique RH multi-sites",
-      desc: "Centralise les contrats, génère des avenants conformes à la convention vétérinaire, alerte sur les échéances et prépare vos due diligences. Toujours avec supervision humaine et traçabilité conforme à l'IA Act.",
-      gain: "Vos documents RH centralisés et toujours à jour. Une due diligence prête en quelques jours plutôt qu'en quelques semaines.",
-      note: "~48 h vs 2 semaines (groupement accompagné)"
-    }
-  },
-  {
-    enjeux: [{ num: "02", title: "Plannings et pilotage financier ingérables sur Excel", quote: "Entre la pénurie de vétos, le turnover des équipes et 30 plannings sur Excel par site, je passe mon temps à boucher les trous au lieu de piloter." }],
-    agent: {
-      Icon: BarChart3,
-      title: "Agent Pilotage & Planning multi-sites",
-      desc: "Construit et ajuste les plannings de chaque clinique selon les effectifs réels, les gardes et les urgences, puis les relie aux KPI opérationnels et au P&L par site. Dashboard CODIR prêt chaque lundi.",
-      gain: "Vos sous-effectifs visibles avant qu'ils ne coûtent de l'activité, et un reporting consolidé sans ressaisie.",
-      note: "Reporting ~3 jours → quelques minutes",
-      badge: "DÉMO"
-    }
-  },
-  {
-    enjeux: [{ num: "03", title: "Pipeline commercial qui fuit", quote: "Des appels manqués, des leads qui refroidissent, un closing qu'on ne maîtrise pas.", tone: "amber" }],
-    agent: {
-      Icon: CheckCircle,
-      title: "Agent Sales Pipeline vétérinaire",
-      desc: "Réceptionne et qualifie les appels entrants 24/7, score les leads, suggère les prochaines actions, prépare les RDV et signale les deals à risque.",
-      gain: "Plus aucun appel entrant perdu, et des équipes concentrées sur les leads à fort potentiel plutôt que sur le tri.",
-      note: "Forte baisse des appels manqués, closing en hausse"
-    }
-  }
-];
-
-const moments = [
-  {
-    title: "Consolidation groupement vétérinaire",
-    quote:
-      "Nous rachetons une clinique tous les 2 mois. Nous avons besoin d'un coordinateur régional capable d'intégrer sans casser la culture.",
-    stats: "3 missions · Time-to-fill 6 sem · 45-100k€",
-    tone: "emerald"
-  },
-  {
-    title: "Scale commercial petfood",
-    quote:
-      "Nous voulons construire notre Vets Channel ou notre canal GSS. Nous cherchons un Head of qui parle vétérinaire ET sait piloter une force de vente.",
-    stats: "2 missions · Time-to-fill 12 sem · 70-180k€",
-    tone: "blue"
-  },
-  {
-    title: "Structuration scale PME santé",
-    quote:
-      "Nous passons de 30 à 100 employés. Nous avons besoin d'un DOP qui comprend notre secteur ET sait industrialiser nos process.",
-    stats: "1 mission flagship · Time-to-fill 10 sem · 90-130k€",
-    tone: "amber"
-  },
-  {
-    title: "Marque employeur & rétention",
-    quote:
-      "On perd 30 % de nos auxiliaires par an. Nos vétos partent à 18 mois. Notre marque employeur n'attire plus.",
-    stats: "Enjeu transversal · Détection 60-90j · Coût 30-80k€",
-    tone: "rose"
-  }
-] as const;
-
-const profils = [
-  { title: "Vétérinaire + Entrepreneur", desc: "DVM avec capacité de structuration business et appétence terrain.", example: "Nos vétérinaires Performance auditent 30 cliniques/an et génèrent +18 % de marge." },
-  { title: "Sales B2B + Expertise scientifique", desc: "KAM avec compréhension réelle de la nutrition animale ou pharmacologie vétérinaire.", example: "Nos Head of Vets Channel parlent science avant de parler commerce." },
-  { title: "M&A + Terrain vétérinaire", desc: "5-10 ans M&A qui aime la gestion de relations longues avec vétérinaires indépendants.", example: "Nos Responsables Développement closent 3-5 acquisitions/an." },
-  { title: "Sales petfood + Canal GSS", desc: "Directeur Commercial avec maîtrise des animaleries, GSS, et négociations centrales d'achats.", example: "Nos Directeurs Commerciaux PME doublent le chiffre d'affaires en 24 mois." },
-  { title: "DOP + Secteur santé animale", desc: "Directeur Opérations avec connaissance pharma / vétérinaire / formation B2B santé.", example: "Nos DOP comprennent les cycles laboratoires." },
-  { title: "Coordinateur + Réseau multi-sites", desc: "5+ ans terrain avec maîtrise des relations vétérinaires associés et gestion projet.", example: "Nos Coordinateurs sont les yeux et oreilles des directions de groupements." }
-];
-
-const vocabulaire = {
-  "Groupements vétérinaires": [
-    "Délégué Vétérinaire", "Coordinateur Régional", "ASV référent", "Vétérinaire associé",
-    "Cliniques canin/équin/mixte", "Performance clinique", "Plan d'audit clinique",
-    "Onboarding post-rachat", "Conventions vétérinaires", "Ordre vétérinaire",
-    "Indépendant vs salarié", "Acquisition de cliniques", "Earn-out", "Réseau franchisé"
-  ],
-  "Petfood multinationale": [
-    "KAM Vets", "Salesforce Vets", "Vets Team Leads", "Field Strategy",
-    "Vet Affairs", "KOL Relations", "GxP compliance", "DVM/Agronomy",
-    "Affaires Réglementaires Animal Health"
-  ],
-  "Petfood PME premium": [
-    "GSS", "Animaleries", "Centrales d'achats", "D2C", "Cleanlabel",
-    "Cru/BARF", "Premium nutrition", "Distribution sélective", "Marketing direct"
-  ]
-};
-
-const trustSignals = ["★ 4,5/5 Trustpilot", "France Biotech", "Saclay", "100+ placements"];
+const trustSignals = ["★ 4,6/5 Trustpilot", "France Biotech", "Saclay", "100+ placements"];
 
 export default function AnimalHealthLanding() {
   return (
     <main className="bg-white">
-      {/* ===== Section 1 - HERO (StructurationHero) ===== */}
+      {/* ===== Section 1 - HERO ===== */}
       <StructurationHero
         vertical="animal-health"
-        eyebrow="Digitalisation santé animale par l'IA  ·  Groupements vétérinaires & petfood"
+        eyebrow="Digitalisation santé animale par l'IA  ·  Groupements vétérinaires, Cliniques vétérinaires & petfood"
         headlineLines={[
-          "Digitalisez votre santé animale",
-          "par l'IA. Vos process RH suivent",
-          "enfin la croissance de votre groupement."
+          "Pilotez 30 cliniques",
+          "comme si vous en aviez",
+          "une."
         ]}
-        subtitle="Digitalisation santé animale par l'IA pour groupements vétérinaires, cliniques et petfood. Combien de jours par mois passez-vous à comprendre vos cliniques au lieu de les faire grandir ? Nous transformons votre reporting, votre juridique RH et votre pipeline commercial en agents IA qui travaillent pour vous."
+        subtitle="Digitalisez votre santé animale par l'IA. Vos process RH, juridique et pilotage suivent enfin la croissance de votre groupement, de votre clinique ou de votre marque petfood."
         question={{
           thematicLabel: "Passer de 3 jours à 4 minutes de reporting mensuel",
           questionText:
@@ -149,7 +48,7 @@ export default function AnimalHealthLanding() {
           line1Prefix: "Vos process RH ",
           line1Bold: "ne suivent plus",
           line1Suffix: " votre croissance.",
-          line2Italic: "Chez SKS Talents, nos agents IA, oui."
+          line2Italic: "Chez SKS Talents, nos assistants IA, oui."
         }}
         response={{
           cibleBold: "Pour les groupements de cliniques vétérinaires en consolidation",
@@ -157,11 +56,11 @@ export default function AnimalHealthLanding() {
           description:
             "Anticipez vos recrutements et structurez votre exécution opérationnelle.",
           enjeux: "3 enjeux structurels",
-          agents: "3 agents IA sectoriels",
+          agents: "4 assistants IA sectoriels",
           agentsDetail: "",
           roi: "ROI mesuré sur vos propres données."
         }}
-        pourquoiSKS="8 ans d'expertise vétérinaire  ·  Réseau vétérinaire national  ·  100+ placements  ·  4,5/5 Trustpilot"
+        pourquoiSKS="8 ans d'expertise vétérinaire  ·  Réseau vétérinaire national  ·  100+ placements  ·  4,6/5 Trustpilot"
       />
 
       {/* ===== Section 2 - DÉMO ===== */}
@@ -172,141 +71,33 @@ export default function AnimalHealthLanding() {
             Passer de 3 jours à <span className="italic text-brand-teal">4 minutes</span> de reporting mensuel.
           </h2>
           <p className="mt-3 max-w-3xl t-body">
-            C'est ce qu'on a mis en place chez un groupement vétérinaire.
+            C&apos;est ce qu&apos;on a mis en place chez un groupement vétérinaire.
           </p>
           <div className="mt-8">
             <DemoStage
               sector="animal_health"
               scenes={animalHealthScenes}
               totalSeconds={30}
-              ariaLabel="Démo interactive Agent Reporting Multi-Sites"
+              ariaLabel="Démo interactive Assistant Reporting Multi-Sites"
             />
           </div>
         </div>
       </section>
 
-      {/* ===== Section 3 - ENJEUX × AGENTS IA (fusion, redesign 2026-05-07) ===== */}
-      <section className="bg-gradient-to-b from-white via-brand-mint/8 to-white py-10 sm:py-14">
-        <div className="container-shell">
-          <p className="eyebrow">Vos enjeux → Notre réponse IA</p>
-          <h2 className="t-h1 max-w-3xl font-display">
-            3 enjeux dirigeants.{" "}
-            <span className="italic text-brand-teal">3 agents IA</span> qui y répondent.
-          </h2>
-          <p className="mt-3 max-w-3xl t-body">
-            À gauche, la phrase qu'on entend. À droite, l'agent IA qui transforme la situation, avec ce que vous y gagnez.
-          </p>
-          <div className="mt-12 space-y-8">
-            {enjeuxAvecAgents.map(({ enjeux, agent }, index) => {
-              const { Icon } = agent;
-              return (
-                <article
-                  key={agent.title}
-                  className="group relative grid gap-5 sm:grid-cols-[1fr_auto_1.15fr] sm:items-stretch sm:gap-0"
-                >
-                  {/* Enjeu(x) - fond crème, peut contenir 1 ou 2 enjeux */}
-                  <div className="relative overflow-hidden rounded-3xl bg-[#faf7f1] p-6 sm:rounded-r-none sm:p-7">
-                    <div className="flex items-baseline gap-3">
-                      <div className="flex items-baseline gap-1">
-                        {enjeux.map((e, i) => (
-                          <span
-                            key={e.num}
-                            className={`font-display text-[44px] leading-none sm:text-[52px] ${
-                              e.tone === "amber"
-                                ? "text-amber-700"
-                                : e.tone === "yellow"
-                                  ? "text-yellow-700"
-                                  : "text-brand-teal"
-                            } ${i > 0 ? "ml-1 text-[28px] sm:text-[32px]" : ""}`}
-                          >
-                            {i === 0 ? e.num : `+${e.num}`}
-                          </span>
-                        ))}
-                      </div>
-                      <span className="text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-stone">
-                        {enjeux.length > 1 ? "Enjeux" : "Enjeu"}
-                      </span>
-                    </div>
-                    <div className="mt-4 space-y-4">
-                      {enjeux.map((e) => (
-                        <div key={e.num}>
-                          <p className="t-h3 font-semibold text-brand-ink">{e.title}</p>
-                          <blockquote className="mt-2 border-l-2 border-brand-teal/30 pl-4">
-                            <p className="font-display italic t-body text-brand-stone">"{e.quote}"</p>
-                          </blockquote>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+      {/* ===== Section 3 - GLOSSAIRE assistant IA ===== */}
+      <GlossaireIA />
 
-                  {/* Connecteur desktop */}
-                  <div className="hidden flex-col items-center justify-center px-2 sm:flex">
-                    <div className="flex flex-col items-center gap-2">
-                      <span className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-teal/70">
-                        Transformation
-                      </span>
-                      <span aria-hidden="true" className="text-3xl text-brand-teal">→</span>
-                    </div>
-                  </div>
-                  {/* Connecteur mobile */}
-                  <div aria-hidden="true" className="flex flex-col items-center sm:hidden">
-                    <span className="h-6 w-px bg-brand-teal/40" />
-                    <span className="text-2xl text-brand-teal">↓</span>
-                  </div>
+      {/* ===== Section 4 - OPERATING SUITE ===== */}
+      <OperatingSuite vertical="animal-health" />
 
-                  {/* Solution - agent IA */}
-                  <div className="relative flex flex-col overflow-hidden rounded-3xl border border-brand-teal/15 bg-white shadow-[0_18px_44px_rgba(15,58,60,0.08)] transition duration-300 group-hover:-translate-y-0.5 group-hover:shadow-[0_24px_56px_rgba(15,58,60,0.12)] sm:rounded-l-none">
-                    <div className="flex flex-1 flex-col p-6 sm:p-7">
-                      <div className="flex items-start justify-between gap-3">
-                        <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-mint/60 to-brand-mint/30 text-brand-teal">
-                          <Icon size={22} />
-                        </span>
-                        {agent.badge && (
-                          <span className="rounded-full bg-brand-ink px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.18em] text-white">
-                            {agent.badge}
-                          </span>
-                        )}
-                      </div>
-                      <p className="mt-4 t-h3 font-semibold text-brand-ink">{agent.title}</p>
-                      <p className="mt-2 t-body">{agent.desc}</p>
-                      <div className="mt-4 rounded-2xl bg-brand-mint/25 p-4">
-                        <p className="text-eyebrow font-semibold uppercase tracking-[0.18em] text-brand-teal">
-                          Ce que vous y gagnez
-                        </p>
-                        <p className="mt-1.5 t-body">{agent.gain}</p>
-                      </div>
-                    </div>
-                    <div className="border-t border-brand-teal/15 bg-gradient-to-r from-brand-teal to-brand-teal/85 px-6 py-3 sm:px-7">
-                      <div className="flex items-baseline gap-3">
-                        <span className="text-eyebrow font-semibold uppercase tracking-[0.22em] text-white/70">
-                          Constaté
-                        </span>
-                        <span className="font-display text-sm font-semibold text-white sm:text-base">
-                          {agent.note}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+      {/* ===== Section 5 - 3 PROBLÈMES → ASSISTANT IA → RÉSULTAT ===== */}
+      <ProblemesProduitsResultats vertical="animal-health" />
 
-                  {/* Step counter */}
-                  <span
-                    aria-hidden="true"
-                    className="pointer-events-none absolute -top-4 left-6 hidden rounded-full border border-brand-teal/15 bg-white px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.22em] text-brand-stone shadow-sm sm:inline-block"
-                  >
-                    {String(index + 1).padStart(2, "0")} / {String(enjeuxAvecAgents.length).padStart(2, "0")}
-                  </span>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== Section 4 - DIAGNOSTIC (remonté du #10) ===== */}
+      {/* ===== Section 6 - DIAGNOSTIC ===== */}
       <section id="diagnostic" className="scroll-mt-24 bg-gradient-to-b from-brand-mint/15 to-white py-10 sm:py-14">
         <div className="container-shell">
           <p className="eyebrow">Diagnostic personnalisé · 5 min</p>
-          <h2 className="t-h1 max-w-3xl font-display">Quel agent IA déployer en premier ?</h2>
+          <h2 className="t-h1 max-w-3xl font-display">Quel assistant IA déployer en premier ?</h2>
           <p className="mt-3 max-w-3xl t-body">
             5 questions ciblées. Résultat immédiat. 3 priorités personnalisées.
           </p>
@@ -316,106 +107,37 @@ export default function AnimalHealthLanding() {
         </div>
       </section>
 
-      {SHOW_DETAIL_BLOCKS && (
-        <>
-          {/* ===== Section 4 - 4 MOMENTS CRITIQUES ===== */}
-          <section className="bg-gradient-to-b from-brand-mint/15 to-white py-10 sm:py-14">
-            <div className="container-shell">
-              <p className="eyebrow">Les moments où nos clients nous appellent</p>
-              <h2 className="t-h1 max-w-3xl font-display">4 moments business critiques. Notre terrain de jeu.</h2>
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {moments.map((m) => {
-                  const accent: Record<string, string> = {
-                    emerald: "border-emerald-200 bg-emerald-50",
-                    blue: "border-blue-200 bg-blue-50",
-                    amber: "border-amber-200 bg-amber-50",
-                    rose: "border-rose-200 bg-rose-50"
-                  };
-                  return (
-                    <article key={m.title} className={`rounded-3xl border p-6 ${accent[m.tone]}`}>
-                      <p className="t-h3 font-semibold">{m.title}</p>
-                      <p className="mt-3 font-display italic t-body text-brand-ink">"{m.quote}"</p>
-                      <p className="mt-4 text-caption font-semibold text-brand-stone">{m.stats}</p>
-                    </article>
-                  );
-                })}
-              </div>
-            </div>
-          </section>
+      {/* ===== Section 7 - 3 PRINCIPES FONDATEURS ===== */}
+      <PrincipesFondateurs />
 
-          {/* ===== Section 5 - PROFILS HYBRIDES ===== */}
-          <section className="bg-white py-10 sm:py-14">
-            <div className="container-shell">
-              <p className="eyebrow">Notre vraie spécialité</p>
-              <h2 className="t-h1 max-w-3xl font-display">
-                Les profils hybrides que personne ne sait trouver.
-              </h2>
-              <p className="mt-3 max-w-3xl t-body">
-                Notre méthode : croiser 2 ou 3 compétences rares pour trouver le profil que vos
-                concurrents cherchent encore dans 6 mois.
-              </p>
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {profils.map((p) => (
-                  <article key={p.title} className="rounded-3xl border border-brand-teal/10 bg-white p-5 shadow-sm">
-                    <p className="t-h3 font-semibold uppercase tracking-wide text-brand-ink">{p.title}</p>
-                    <p className="mt-2 t-body">{p.desc}</p>
-                    <p className="mt-3 rounded-2xl bg-brand-mint/30 px-3 py-2 text-caption text-brand-stone">
-                      {p.example}
-                    </p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
+      {/* ===== Section 8 - CAS CYBER URGENCE MARCHÉ ===== */}
+      <CyberUrgenceBloc vertical="animal-health" />
 
-          {/* ===== Section 6 - VOCABULAIRE ===== */}
-          <section className="bg-gradient-to-b from-white to-brand-mint/15 py-10 sm:py-14">
-            <div className="container-shell">
-              <p className="eyebrow">Le vocabulaire que nous maîtrisons</p>
-              <h2 className="t-h1 max-w-3xl font-display">
-                Pour vous, ces termes ne sont pas du jargon.{" "}
-                <span className="italic text-brand-teal">Pour la concurrence, oui.</span>
-              </h2>
-              <div className="mt-8 space-y-6">
-                {Object.entries(vocabulaire).map(([category, terms]) => (
-                  <div key={category}>
-                    <p className="text-eyebrow font-semibold uppercase tracking-wide text-brand-stone/80">
-                      {category}
-                    </p>
-                    <ul className="mt-3 flex flex-wrap gap-2">
-                      {terms.map((t) => (
-                        <li
-                          key={t}
-                          className="rounded-full border border-brand-teal/15 bg-white px-3 py-1.5 text-caption text-brand-stone"
-                        >
-                          {t}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        </>
-      )}
+      {/* ===== Section 9-14 - MÉTHODOLOGIE (timeline + phases + tailles + formation + investissement + prochaines etapes) ===== */}
+      <MethodologieBlocs vertical="animal-health" />
 
-      {/* ===== Souveraineté & conformité (avant le CTA) ===== */}
+      {/* ===== Section 15 - FINANCEMENTS ===== */}
+      <FinancementsBloc vertical="animal-health" />
+
+      {/* ===== Section 16 - AI LEADERSHIP BRIEFING ===== */}
+      <AILeadershipBriefing />
+
+      {/* ===== Section 17 - COMPLIANCE ===== */}
       <ComplianceSection
-        ownershipBody="Vos données RH, juridiques et financières sont parmi les plus sensibles de votre groupement. Nos agents IA sont conçus pour les protéger : hébergement en Europe, conformité RGPD, et aucune donnée de votre groupement utilisée pour entraîner des modèles tiers."
-        iaActBody="Le règlement européen sur l'IA encadre désormais les usages RH algorithmiques. Nos agents sont pensés pour la conformité dès la conception : traçabilité des décisions, supervision humaine, transparence des traitements. Vous adoptez l'IA aujourd'hui sans dette réglementaire demain."
+        ownershipBody="Vos données RH, juridiques et financières sont parmi les plus sensibles de votre groupement. Nos assistants IA sont conçus pour les protéger : hébergement en Europe, conformité RGPD, et aucune donnée de votre groupement utilisée pour entraîner des modèles tiers."
+        iaActBody="Le règlement européen sur l'IA encadre désormais les usages RH algorithmiques. Nos assistants sont pensés pour la conformité dès la conception : traçabilité des décisions, supervision humaine, transparence des traitements. Vous adoptez l'IA aujourd'hui sans dette réglementaire demain."
       />
 
-      {/* ===== FAQ tabs (rapatriee depuis la home 2026-05-17) ===== */}
+      {/* ===== Section 18 - FAQ ===== */}
       <FAQHomeTabs defaultVertical="animal-health" />
 
-      {/* ===== Section 7 - CTA FINAL ===== */}
+      {/* ===== Section 19 - CTA FINAL ===== */}
       <section className="bg-brand-ink py-14 text-white sm:py-20">
         <div className="container-shell">
           <p className="text-eyebrow font-semibold uppercase text-white/60">Dernière étape</p>
           <h2 className="t-h1 mt-2 max-w-3xl font-display text-white">
             Prêt à déployer{" "}
-            <span className="italic text-brand-mint">votre premier agent IA</span> ?
+            <span className="italic text-brand-mint">votre premier assistant IA</span> ?
           </h2>
           <p className="mt-3 max-w-2xl !text-white/70 t-body">
             15 min avec Georges. ROI projeté chiffré sur 6 mois. Pas de pitch commercial.
