@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
@@ -5,6 +6,43 @@ import { events } from "@/data/resources";
 import { getNotionSiteContentBySlug, mapNotionEntryToResourceItem } from "@/lib/notion";
 
 export const dynamic = "force-dynamic";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || "https://www.skstalents.fr";
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const staticItem = events.find((entry) => entry.slug === slug);
+  const notionItem = await getNotionSiteContentBySlug(slug, "event");
+  const item = notionItem ? { ...staticItem, ...mapNotionEntryToResourceItem(notionItem) } : staticItem;
+
+  if (!item) return {};
+
+  const canonical = `${siteUrl}/events/${slug}`;
+  const title = item.title;
+  const description = item.summary;
+
+  return {
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      type: "article",
+      siteName: "SKS TALENTS"
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description
+    }
+  };
+}
 
 export default async function EventDetailPage({
   params

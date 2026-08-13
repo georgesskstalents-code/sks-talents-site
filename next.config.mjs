@@ -91,6 +91,8 @@ const nextConfig = {
       // Slugs job-roles obsoletes (GSC 404, jamais publies). Ajout 2026-07-06.
       { source: "/job-roles/veterinary-referral-coordinator", destination: "/job-roles", permanent: true },
       { source: "/job-roles/veterinary-hospital-operations-manager", destination: "/job-roles", permanent: true },
+      { source: "/job-roles/biotech-procurement-manager-critical-materials", destination: "/job-roles", permanent: true },
+      { source: "/references-Références", destination: "/references", permanent: true },
       { source: "/afrique", destination: "/", permanent: true },
       { source: "/seminaires", destination: "/events", permanent: true },
       { source: "/article", destination: "/blog", permanent: true },

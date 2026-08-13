@@ -147,6 +147,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: finalTitle,
     description: notionArticle?.metaDescription || notionArticle?.excerpt || article?.excerpt,
+    alternates: {
+      canonical: `${siteUrl}/blog/${slug}`
+    },
     openGraph: {
       title: finalTitle,
       description: notionArticle?.metaDescription || notionArticle?.excerpt || article?.excerpt,

@@ -7,7 +7,6 @@ const cabinetLinks = [
   { href: "/team", label: "Notre équipe" },
   { href: "/references", label: "Références" },
   { href: "/press", label: "Presse" },
-  { href: "/media-kit", label: "Media kit" },
   { href: "/partenaires-media", label: "Partenaires & sponsorings" }
 ];
 
@@ -21,8 +20,7 @@ const dirigeantLinks = [
   { href: "/barometre-life-sciences-2026-2027", label: "Baromètre annuel" },
   { href: "/cout-mauvais-recrutement", label: "Calculateur coût recrutement" },
   { href: "/cas-d-usage", label: "Cas d'usage" },
-  { href: "/comparatifs", label: "Comparatifs" },
-  { href: "/studies", label: "Études & insights" }
+  { href: "/comparatifs", label: "Comparatifs" }
 ];
 
 const candidatLinks = [

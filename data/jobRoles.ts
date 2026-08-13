@@ -4564,38 +4564,6 @@ const may2026RoleBatch: JobRole[] = [
     ]
   },
   {
-    slug: "veterinary-clinical-pathologist",
-    title: "Clinical Pathologist Veterinary",
-    salary: "70kEUR - 120kEUR",
-    sector: "Veterinary",
-    category: "Clinique",
-    shortageLevel: "Tres elevee",
-    summary:
-      "Apporte une expertise diagnostique et décisionnelle sur des cas complexes (analyses, interprétation, synthèse), en sécurisant qualité, délais et communication clinique.",
-    skills: ["Clinical pathology", "Diagnostics interpretation", "Quality mindset", "Communication", "Case prioritization"],
-    successFactors: [
-      "Rendre l'analyse utile : synthèse claire, limites explicites, et recommandations actionnables.",
-      "Garder la qualité sous charge : standards, double lecture, traçabilité et priorisation.",
-      "Collaborer efficacement avec cliniciens, techniciens et laboratoires partenaires."
-    ],
-    path: ["Vétérinaire", "Pathology / diagnostic focus", "Clinical pathologist"],
-    missions: [
-      "Interpréter résultats biologiques et contribuer au diagnostic différentiel sur des cas complexes.",
-      "Travailler avec les équipes labo pour sécuriser qualité, délais et cohérence des données.",
-      "Structurer la communication clinique : comptes rendus, échanges, formation et retours."
-    ],
-    studies: ["Vétérinaire", "Spécialisation pathologie clinique", "Formation diagnostic avancé"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite de Liege Vet", "Institut Agro Rennes Angers"],
-    relatedIndustries: ["Veterinary", "Diagnostic vet", "Laboratoires", "Services veterinaires", "Petcare"],
-    sources: [
-      ...defaultRoleSources,
-      {
-        name: "Ordre national des vétérinaires",
-        url: "https://www.veterinaire.fr/"
-      }
-    ]
-  },
-  {
     slug: "petfood-packaging-development-engineer",
     title: "Packaging Development Engineer Petfood",
     salary: "50kEUR - 85kEUR",
