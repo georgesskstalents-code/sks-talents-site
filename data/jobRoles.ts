@@ -5368,6 +5368,162 @@ const august2026AnimalHealthBatch: JobRole[] = [
       { name: "E-learning Letter - Média spécialisé digital learning", url: "https://www.e-learning-letter.com/" },
       { name: "WSAVA - Continuing Education vétérinaire", url: "https://wsava.org/" }
     ]
+  },
+  {
+    slug: "medical-vet-head-of-commercial-development-ai-startup",
+    title: "Head of Commercial Development Startup IA Animal Health",
+    salary: "70kEUR - 100kEUR + variable + BSPCE",
+    salarySource:
+      "Ordre de grandeur France pour un.e first commercial hire en scale-up early stage. Fixe + variable 20-40 % + BSPCE ou equity aligné.e sur la création de valeur. Fourchette dépendante de la séniorité (7-15 ans d'expérience commerciale santé animale ou SaaS B2B).",
+    sector: "Medical Vet",
+    category: "Direction commerciale startup IA Animal Health",
+    shortageLevel: "Tres elevee",
+    summary:
+      "First commercial hire d'une startup française spécialisée dans les produits IA pour les professionnel.le.s de la santé animale (assistant IA privé, assistant vétérinaire, CRM santé animale). Poste stratégique de transition d'une organisation founder-led vers une phase commerciale structurée. Rattachement direct aux fondateur.rice.s.",
+    skills: [
+      "Direction commerciale et business development santé animale",
+      "Vente B2B SaaS et cycles de vente scale-up",
+      "Cartographie comptes et pipeline discipliné",
+      "Représentation externe et ambassadeur.rice produit",
+      "Français et anglais courants obligatoires"
+    ],
+    successFactors: [
+      "Comprendre en profondeur les produits et traduire la value proposition pour chaque segment client (vétérinaires, cliniques, industriels).",
+      "Libérer les fondateur.rice.s des tâches commerciales front-line pour qu'ils.elles se recentrent sur stratégie et produit.",
+      "Construire un playbook commercial reproductible sur lequel un.e second.e commercial pourra se brancher."
+    ],
+    path: [
+      "Sales Manager ou Business Development santé animale / SaaS B2B",
+      "Head of Commercial Development first hire scale-up",
+      "VP Sales ou Chief Revenue Officer post-scaling"
+    ],
+    missions: [
+      "Piloter la stratégie commerciale end-to-end : cartographie des comptes prioritaires, ciblage des décisionnaires, construction d'un pipeline discipliné.",
+      "Représenter la startup auprès des vétérinaires, cliniques, groupements et acteurs industriels de la santé animale.",
+      "Structurer l'infrastructure commerciale (CRM, tracking, follow-ups, pipeline reviews, reporting) et remonter le feedback marché structuré aux fondateur.rice.s et à l'équipe produit."
+    ],
+    studies: [
+      "Docteur.e vétérinaire OU école de commerce OU ingénieur.e agri / agro",
+      "7-15 ans d'expérience commerciale santé animale, services vétérinaires ou SaaS B2B",
+      "MBA apprécié pour la dimension stratégique"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "HEC / ESSEC / ESCP", "École de commerce généraliste"],
+    relatedIndustries: [
+      "Startups IA santé animale (assistants IA vétérinaires, CRM santé animale)",
+      "Éditeurs SaaS B2B vétérinaire (PMS cliniques, télémédecine, workflow)",
+      "Groupements vétérinaires en croissance (AniCura, IVC Evidensia, VetPartners France, Univet, Sévétys)",
+      "Distribution vétérinaire (Alcyon, Coveto, Centravet)",
+      "Écosystème deeptech HealthTech et Animal Health early stage"
+    ],
+    sources: [
+      { name: "AnimalhealthEurope - Federation industrie AH", url: "https://www.animalhealtheurope.eu/" },
+      { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
+      { name: "Vetstoria Digital Transformation Report", url: "https://www.vetstoria.com/" }
+    ]
+  },
+  {
+    slug: "veterinary-multisite-coordinator-france",
+    title: "Coordinateur.rice Multisite Cliniques Vétérinaires",
+    salary: "55kEUR - 85kEUR + véhicule",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Véhicule de fonction + variable 10-15 %. Fourchette dépendante de l'expérience management multisite et du nombre de cliniques à animer (10 à 40 typiquement).",
+    sector: "Veterinary",
+    category: "Coordination multisite terrain",
+    shortageLevel: "Elevee",
+    summary:
+      "Maillon essentiel de proximité pour les cliniques vétérinaires d'un groupement multi-sites. Accompagne les équipes sur le terrain, facilite leur quotidien opérationnel et garantit le bon déploiement des projets du groupe (RH, marketing, finance, process internes). Poste itinérant, majoritairement en clinique, au plus près des équipes.",
+    skills: [
+      "Management de proximité multisite (10 à 40 cliniques)",
+      "Accompagnement du changement et diplomatie",
+      "Adaptabilité face aux imprévus opérationnels",
+      "Communication et écoute active",
+      "Culture d'entreprise et fédération d'équipes"
+    ],
+    successFactors: [
+      "Insuffler une dynamique positive fondée sur l'écoute, l'entraide et la bienveillance face aux équipes cliniques.",
+      "Assurer le ruissellement des projets siège vers le terrain sans crisper les responsables de site (RH, marketing, finance, outils).",
+      "Être un.e ambassadeur.rice de la culture d'entreprise sur le terrain, avec présence physique majoritaire en cliniques."
+    ],
+    path: [
+      "Manager d'équipe multisite (santé animale, santé humaine, retail, services)",
+      "Coordinateur.rice Multisite Cliniques Vétérinaires",
+      "Directeur.rice Régional.e Cliniques Vétérinaires"
+    ],
+    missions: [
+      "Épauler les responsables de site et les équipes locales (vétérinaires, ASV) dans leurs décisions managériales quotidiennes.",
+      "Assurer la transmission et l'appropriation des sujets transverses venant du siège et de la direction de région (RH, marketing, finance, process internes).",
+      "Capter les besoins du terrain, apporter des solutions concrètes et réactives, et être le lien de proximité entre les cliniques et le siège."
+    ],
+    studies: [
+      "Docteur.e vétérinaire OU management école de commerce OU expérience équivalente",
+      "5-10 ans d'expérience en management multisite (santé animale, santé humaine, retail, services)",
+      "Formation continue accompagnement du changement recommandée"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "École de commerce généraliste", "Écoles management"],
+    relatedIndustries: [
+      "Groupements vétérinaires en croissance et consolidation (AniCura, IVC Evidensia, VetPartners France, Univet, Sévétys, VetOne)",
+      "Réseaux cliniques santé humaine (soins premiers, kinésithérapie, radiologie)",
+      "Retail et services multisites",
+      "Distribution vétérinaire et petshop",
+      "Fondations et associations santé animale"
+    ],
+    sources: [
+      { name: "Ordre National des Vétérinaires - Démographie", url: "https://www.veterinaire.fr/" },
+      { name: "SNGTV - Groupements Techniques Vétérinaires", url: "https://www.sngtv.org/" },
+      { name: "AFVAC - Formations Managériales Vétérinaires", url: "https://www.afvac.com/" }
+    ]
+  },
+  {
+    slug: "biotech-chairperson-board-scale-up-life-sciences",
+    title: "Président.e du Conseil d'Administration Scale-up Life Sciences",
+    salary: "Retainer 15kEUR - 40kEUR/an + BSPCE + D&O",
+    salarySource:
+      "Package de gouvernance : retainer annuel en numéraire 15-40 k€ + dotation en equity (BSPCE ou actions, % et vesting à définir avec le conseil) alignée sur la création de valeur, prise en charge des frais et assurance responsabilité des mandataires sociaux (RCMS / D&O). Le poids cash vs equity est adapté au stade de la société et à l'implication attendue.",
+    sector: "Biotech",
+    category: "Gouvernance Chairperson scale-up",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Mandat social non salarié de présidence du conseil d'administration d'une scale-up française Life Sciences en forte croissance internationale (biotech, diagnostic, medtech ou génomique clinique). Rôle stratégique de sparring-partner du CEO, contribution à la crédibilité de la société auprès des investisseurs et facilitation des mises en relation utiles. Implication typique : environ 1 jour par mois plus disponibilité entre les séances, souvent plus intense les premiers mois.",
+    skills: [
+      "Gouvernance de conseil d'administration et animation des débats",
+      "Sparring-partner CEO sans se substituer à l'exécutif",
+      "Vision stratégique long terme et alignement parties prenantes",
+      "Réseau écosystème pharma, biotech, financeurs et institutionnel",
+      "Indépendance de jugement et posture non-polarisante"
+    ],
+    successFactors: [
+      "Présider le conseil et garantir un fonctionnement de gouvernance au plus haut standard.",
+      "Contribuer à la crédibilité de la société auprès des investisseurs, partenaires et futurs financeurs.",
+      "Soutenir la structuration de la gouvernance dans un contexte de croissance et d'internationalisation (intégration post-acquisition, montée en maturité)."
+    ],
+    path: [
+      "Dirigeant.e ou administrateur.rice indépendant.e Life Sciences",
+      "Président.e du Conseil scale-up biotech / diagnostic / medtech",
+      "Multi-mandats gouvernance internationale"
+    ],
+    missions: [
+      "Présider le conseil, animer les débats et garantir un fonctionnement de gouvernance au plus haut standard.",
+      "Accompagner la vision stratégique et la réussite à long terme de l'entreprise en apportant un regard indépendant, être sparring-partner du CEO.",
+      "Veiller à l'alignement des parties prenantes (actionnaires, investisseurs, direction) et faciliter les mises en relation utiles avec l'écosystème pharma, biotech, financeurs ou institutionnel."
+    ],
+    studies: [
+      "Dirigeant.e ou administrateur.rice de haut niveau du secteur Life Sciences (biotech, diagnostic, medtech, pharma ou génomique)",
+      "Expérience confirmée de gouvernance (présidence de conseil ou mandats d'administrateur.rice indépendant.e)",
+      "Formations spécifiques gouvernance (IFA - Institut Français des Administrateurs) appréciées"
+    ],
+    schools: ["Grandes écoles + doctorat sciences", "IFA - Institut Français des Administrateurs", "Écoles Life Sciences internationales"],
+    relatedIndustries: [
+      "Scale-ups Life Sciences françaises en internationalisation (biotech, diagnostic, medtech, génomique clinique)",
+      "Grands groupes pharma en portefeuille administrateur.rice indépendant.e",
+      "Fonds VC/PE santé (Sofinnova, Jeito, Bpifrance, Seventure, Truffle Capital)",
+      "Institutions et écosystème (France Biotech, Angels Santé, EIC Fund)",
+      "Réseau IFA - Institut Français des Administrateurs"
+    ],
+    sources: [
+      { name: "IFA - Institut Français des Administrateurs", url: "https://www.ifa-asso.com/" },
+      { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
+      { name: "France Invest - Governance VC/PE santé", url: "https://www.franceinvest.eu/" }
+    ]
   }
 ];
 
