@@ -1,19 +1,75 @@
-# Calendrier LinkedIn SKS Talents 2026-2027
+# Calendrier LinkedIn SKS Talents 2026-2027 (V4)
 
-> **✅ Plan validé par Georges le 12 août 2026.**
-> **⏸ En attente du signal "GO production" pour créer les 121 pages dans Notion Calendar** (DB ID `644cc7c5-1fc0-4f16-a08c-db814364a614`).
+> **✅ Plan V4 validé par Georges le 13 août 2026.**
+> **⏸ En attente du signal "GO production" pour créer les ~182 pages dans Notion Calendar** (DB ID `644cc7c5-1fc0-4f16-a08c-db814364a614`).
+>
+> **Nouveauté V4** : 14 newsletters bi-mensuelles (au lieu de 7) + 14 vidéos teaser vendredi 17h + extension jusqu'au 31 mars 2027 + framework 6 niveaux Informer→Ouvrir + déclinaison 4 formats par newsletter (article SEO + newsletter + post/carrousel + vidéo).
 
 **Notion mirror** : https://app.notion.com/p/3ba0c86f96f4816fb677e51b4ec168c0?pvs=204
 **Memory** : `project_linkedin_plan_2026_2027.md`
 
 ---
 
-## 1. Vue d'ensemble
+## 1. Vue d'ensemble (V4)
 
-- **Période** : 22 semaines pleines (lundi 31 août 2026 → vendredi 30 janvier 2027)
-- **Volume total** : **121 posts**
-- **Cadence** : 5 posts base/semaine + agenda mensuel + rappels événements majeurs
+- **Période** : 30 semaines pleines (lundi 31 août 2026 → mardi 31 mars 2027) - **EXTENSION vs V3**
+- **Volume total posts LinkedIn** : **~182 posts**
+- **Volume total déliverables éditoriaux hors LinkedIn** : **56** (14 newsletters × 4 formats)
+- **Cadence** : 5 posts base/semaine + 14 newsletters bi-mensuelles + 14 vidéos teaser + agenda mensuel + rappels événements majeurs
 - **Ajustement Noël** : pause 28-31 déc, RECAP ANNÉE 25 déc, Vœux 2027 le 1 jan
+
+## 1bis. Nouveauté V4 - 14 NEWSLETTERS bi-mensuelles
+
+Le vendredi devient :
+- **1er vendredi** = NEWSLETTER début de mois (thème 1)
+- **Dernier vendredi** = NEWSLETTER fin de mois (thème 2, complémentaire)
+- **Vendredis 2-4** = FIL auto (radar semaine)
+
+Le **RECAP MOIS classique disparaît** (fusionné dans la NEWSLETTER fin de mois qui joue le rôle bilan/suite).
+
+### 14 titres newsletters V4 (nouveau calendrier éditorial)
+
+| Mois | 1er vendredi | Dernier vendredi | Impact SKS |
+|---|---|---|---|
+| Sept | Santé animale : les 5 métiers qui vont devenir impossibles à recruter d'ici 2030 | Innovation en nutrition animale : les compétences que les industriels recherchent désormais | **SKS Talents = expert Santé Animale + Nutrition** |
+| Oct | IA Act : ce que les dirigeants Life Sciences devront démontrer lors des premiers contrôles | Pourquoi un DRH ne pourra plus déployer une IA sans gouvernance | **SKS AI Lab = audits IA + gouvernance + formation** |
+| Nov | Consolidation vétérinaire : pourquoi certaines acquisitions détruisent de la valeur dès la 1ère année | Après une acquisition, les 100 premiers jours qui déterminent la rétention des talents | **SKS Talents = M&A + intégration + rétention + Executive Search** |
+| Déc | Les 7 décisions qui ont marqué les dirigeants que nous avons accompagnés en 2026 | Ce que 2026 nous a appris sur le recrutement des dirigeants Life Sciences | **Crédibilité via retours d'expérience terrain** |
+| Jan | JP Morgan Healthcare 2027 : les tendances qui vont impacter les dirigeants européens | Les recrutements stratégiques qui vont suivre JP Morgan 2027 | **Actualité internationale + anticipation recrutements** |
+| Fév | IA Act : un an après, où en sont réellement les entreprises ? | EHDS, IA Act, Biotech Act : ce que votre comité de direction doit anticiper en 2027 | **SKS AI Lab = partenaire transformation et gouvernance** |
+| Mars | Votre comité de direction est-il dimensionné pour votre prochaine levée de fonds ? | Les 4 fonctions qui créent réellement de la valeur dans une biotech | **SKS Talents = Executive Search + recrutements stratégiques** |
+
+## 1ter. Format 4-déclinaisons par newsletter (nouveau)
+
+Chaque newsletter génère 4 déliverables :
+
+1. **Article SEO** (2000-3000 mots) - publié sur le blog du site (référencement site + LLM)
+2. **Newsletter LinkedIn** écrite (5 min lecture) - nurturing 1407 abonnés
+3. **Post LinkedIn + carrousel** (angle viral + reach algorithmique)
+4. **Vidéo LinkedIn 60-90 sec** teaser (publiée vendredi 17h PAGE après la newsletter matin 7h30)
+
+**Total** = 4 formats × 14 newsletters = **56 déliverables éditoriaux hors posts LinkedIn de base**.
+
+## 1quater. Framework 6 niveaux Informer → Ouvrir (nouveau)
+
+Chaque contenu doit suivre cette progression :
+
+1. **Informer** (fait + donnée vérifiée)
+2. **Expliquer** (pourquoi ce phénomène)
+3. **Conséquences** (impacts CEO/COO/CFO/DRH/Dir Industriels/Dir Scientifiques/Investisseurs/Groupes vet/Biotech/MedTech/Nutrition animale)
+4. **Illustrer** (exemple concret + cas SKS Talents anonymisé)
+5. **Recommander** (actions concrètes, jamais génériques)
+6. **Ouvrir** (question, tendance de fond, risque, opportunité, évolution à surveiller)
+
+## 1quinquies. Sources autorisées étendues (V4)
+
+**Sources institutionnelles** (priorité) : France Biotech, EY, AON, McKinsey, BCG, Deloitte, PwC, WEF, FAO, Commission Européenne, EMA, FDA, ANSES, Eurostat, INSEE, OCDE, Banque mondiale, EIT Health, France 2030, Bpifrance, France Invest.
+
+**Sources sectorielles** (validées V3) : Kynetec, Vetnosis/Animal Pharm, Boehringer Digital Health Report, MSD Insights, Zoetis Global Impact, CEVA annual, Ordre National Vétérinaires FR, SNVEL, FVE, IFIP, ITAVI, IDELE, Vetstoria, VetCT, France Biotech Panorama, Bpifrance Le Hub, Leaders League, Biotech Finances.
+
+**Sources réglementaires** : AI Act EU officiel + CNIL + explorer.artificialintelligenceact.eu.
+
+**Règle stricte** : chaque chiffre = 1 source citée + année de l'étude. Zéro invention.
 
 ## 2. Pattern hebdomadaire strict
 
