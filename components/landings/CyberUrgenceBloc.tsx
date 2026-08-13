@@ -11,21 +11,21 @@ type Cas = {
 const CONFIG: Record<Vertical, Cas[]> = {
   "life-sciences": [
     {
-      date: "Juin 2026",
-      titre: "Novo Nordisk",
-      desc: "Fabricant d&apos;Ozempic. 1,3 To de données exfiltrées. Rançon demandée : 25 M$. Faille d&apos;entrée : un simple token GitHub oublié."
+      date: "Juin 2026 · Pharma mondiale",
+      titre: "Novo Nordisk (Danemark)",
+      desc: "Le géant pharmaceutique danois (fabricant d&apos;Ozempic et Wegovy) victime d&apos;une cyberattaque majeure. Le groupe d&apos;extorsion <strong>FulcrumSec</strong> réclame <strong>25 M$</strong>, refusés par le groupe. Butin exfiltré : plus d&apos;<strong>1 To de données</strong> (environ 700 000 fichiers) incluant recherche propriétaire, dépôts de code GitHub, modèles d&apos;IA propriétaires et données d&apos;essais cliniques. Faille d&apos;entrée : un simple <strong>token GitHub oublié</strong>."
     }
   ],
   "animal-health": [
     {
-      date: "2024",
-      titre: "Groupements vétérinaires nord-américains",
-      desc: "Plusieurs groupements bloqués par rançongiciel. 3 semaines d&apos;arrêt partiel pour certains sites. Dossiers patients rendus contre rançon."
+      date: "Pharma vétérinaire",
+      titre: "Virbac (France)",
+      desc: "Le laboratoire français, acteur mondial majeur de la santé animale, paralysé par une cyberattaque massive. Production ralentie ou arrêtée temporairement sur plusieurs sites mondiaux, le temps de sécuriser les infrastructures."
     },
     {
-      date: "2023",
-      titre: "Fuite de données santé animale en Europe",
-      desc: "Dossiers santé animale et données clients exposés publiquement dans un groupement européen. Contentieux RGPD en cours."
+      date: "Réseau clinique multi-sites",
+      titre: "National Veterinary Associates (États-Unis)",
+      desc: "Rançongiciel via le malware <strong>Ryuk</strong>. Accès aux dossiers médicaux des animaux bloqué dans <strong>plus de 400 cliniques vétérinaires</strong> du réseau NVA. Continuité des soins gravement impactée."
     }
   ]
 };
