@@ -1,25 +1,13 @@
 /**
- * Service schemas avec aggregateRating pour maximiser l'apparition
- * des etoiles jaunes dans les SERPs Google sur les requetes cibles :
- * - "recrutement life sciences"
- * - "recrutement sante animale"
- * - "recrutement veterinaire"
- * - "cabinet executive search biotech"
+ * Service schemas pour les pages hub metier.
  *
- * Chaque Service pointe vers le meme aggregateRating (4,6/5 sur 17 avis Trustpilot)
- * mais decrit un service distinct = Google associe la note a chaque page ranking.
+ * Note 2026-08-19 : aggregateRating retire du niveau Service suite
+ * a un signalement GSC ("Element : {service name}"). Le domain-wide
+ * aggregateRating reste porte par l'Organization schema (lib/seo.ts)
+ * qui est charge sur toutes les pages.
  *
  * A importer et injecter dans les pages hub (/life-sciences, /animal-health, etc).
  */
-
-const RATING = {
-  "@type": "AggregateRating" as const,
-  ratingValue: "4.6",
-  bestRating: "5",
-  worstRating: "1",
-  reviewCount: 17,
-  url: "https://fr.trustpilot.com/review/skstalents.fr"
-};
 
 const PROVIDER = {
   "@type": "Organization" as const,
@@ -46,17 +34,7 @@ export function buildServiceSchema(opts: {
     areaServed: (opts.areaServed ?? ["France", "Europe"]).map((c) => ({
       "@type": "Country",
       name: c
-    })),
-    aggregateRating: RATING,
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "EUR",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: "EUR",
-        description: "Sur devis - executive search cadres Life Sciences et Animal Health"
-      }
-    }
+    }))
   };
 }
 

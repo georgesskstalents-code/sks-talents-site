@@ -72,14 +72,6 @@ const professionalServiceJsonLd = {
     "@id": "https://www.skstalents.fr/#organization",
     name: "SKS TALENTS",
     url: "https://www.skstalents.fr"
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.6",
-    bestRating: "5",
-    worstRating: "1",
-    reviewCount: 17,
-    url: "https://fr.trustpilot.com/review/skstalents.fr"
   }
 };
 
