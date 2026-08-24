@@ -1,0 +1,211 @@
+{
+  "_comment": "Manifest des carrousels LinkedIn SKS Talents. Chaque carrousel = 7 slides. Variantes de slide : cover, body, highlight, data, cta.",
+  "_variants": {
+    "cover": "fond teal degrade blanc sur teal - slide d'ouverture",
+    "body": "fond blanc texte teal - slides de contenu principal",
+    "highlight": "fond mint clair - mise en avant enjeu ou promesse",
+    "data": "fond creme sable - chiffres et donnees",
+    "cta": "fond teal degrade blanc - slide de conclusion / CTA"
+  },
+  "carrousels": [
+    {
+      "slug": "hiring-porcs-go-sem36",
+      "title": "HIRING · Responsable Technique Porcs Grand Ouest",
+      "publish_date": "2026-08-31T07:30:00+02:00",
+      "channel": "perso",
+      "slides": [
+        {
+          "variant": "cover",
+          "eyebrow": "SKS Talents · Hiring",
+          "title": "Responsable Technique Porcs Grand Ouest",
+          "body": "Filière porcs · acteur industriel majeur de la nutrition animale"
+        },
+        {
+          "variant": "body",
+          "eyebrow": "Le poste",
+          "title": "Piloter la technique porcs sur tout le Grand Ouest",
+          "bullets": [
+            "Élevages, coopératives, ateliers de découpe",
+            "Interlocuteur terrain + reporting groupe",
+            "Autonomie commerciale + technique"
+          ]
+        },
+        {
+          "variant": "highlight",
+          "eyebrow": "Pourquoi maintenant ?",
+          "title": "La concurrence occupe le terrain",
+          "body": "Chaque semaine sans référent technique, c'est un point de contact fournisseur ou élevage qui glisse chez un concurrent. Nos clients accompagnés en post-PSE le confirment : la spirale s'amorce vite."
+        },
+        {
+          "variant": "body",
+          "eyebrow": "Profil recherché",
+          "title": "Ingé agri, agro ou vétérinaire",
+          "bullets": [
+            "5+ ans en filière porcs",
+            "Terrain Grand Ouest maîtrisé",
+            "Autonomie commerciale et technique"
+          ]
+        },
+        {
+          "variant": "body",
+          "eyebrow": "Ce qu'on cherche",
+          "title": "3 compétences critiques",
+          "bullets": [
+            "Connaissance fine de la filière porcs FR",
+            "Capacité à animer un réseau technique multi-sites",
+            "Aisance à passer du technique au commercial"
+          ]
+        },
+        {
+          "variant": "data",
+          "eyebrow": "Package et conditions",
+          "title": "Grand Ouest · Fixe + variable + véhicule",
+          "body": "Confidentiel. Discussion possible sans changer votre CV LinkedIn. Réponses garanties sous 48h."
+        },
+        {
+          "variant": "cta",
+          "eyebrow": "Prochaine étape",
+          "title": "Parlons-en 15 minutes",
+          "body": "DM ouvert sur ce post · ou réservez directement un créneau Calendly ci-dessous.",
+          "bullets": [
+            "calendly.com/g-kengue/talentconsulting"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "hiring-aviaire-go-sem36",
+      "title": "HIRING · Responsable Technique Aviaire Grand Ouest",
+      "publish_date": "2026-09-01T07:30:00+02:00",
+      "channel": "perso",
+      "slides": [
+        {
+          "variant": "cover",
+          "eyebrow": "SKS Talents · Hiring",
+          "title": "Responsable Technique Aviaire Grand Ouest",
+          "body": "2ème mandat · même acteur industriel majeur de la nutrition animale"
+        },
+        {
+          "variant": "body",
+          "eyebrow": "Le poste",
+          "title": "Piloter la technique aviaire sur le Grand Ouest",
+          "bullets": [
+            "Filière volaille de chair et pondeuses",
+            "Interlocuteur éleveur + prescripteur",
+            "Reporting groupe et pilotage terrain"
+          ]
+        },
+        {
+          "variant": "highlight",
+          "eyebrow": "Pourquoi maintenant ?",
+          "title": "3 défis simultanés",
+          "bullets": [
+            "Pression sanitaire post-influenza",
+            "Nouvelles obligations bien-être animal",
+            "Consolidation des groupements"
+          ]
+        },
+        {
+          "variant": "body",
+          "eyebrow": "Profil recherché",
+          "title": "Ingénieur ou vétérinaire aviaire",
+          "bullets": [
+            "5+ ans en aviaire (chair + pondeuses)",
+            "Terrain Grand Ouest maîtrisé",
+            "Capacité éleveur + prescripteur"
+          ]
+        },
+        {
+          "variant": "body",
+          "eyebrow": "Ce qu'on cherche",
+          "title": "3 compétences critiques",
+          "bullets": [
+            "Connaissance filière volaille de chair et pondeuses",
+            "Maîtrise biosécurité + nutrition + performance",
+            "Aisance terrain et reporting groupe"
+          ]
+        },
+        {
+          "variant": "data",
+          "eyebrow": "Package et conditions",
+          "title": "Grand Ouest · Fixe + variable + véhicule",
+          "body": "Confidentiel. Discussion possible sans changer votre CV LinkedIn. Réponses garanties sous 48h."
+        },
+        {
+          "variant": "cta",
+          "eyebrow": "Prochaine étape",
+          "title": "Parlons-en 15 minutes",
+          "body": "DM ouvert sur ce post · ou réservez directement un créneau Calendly ci-dessous.",
+          "bullets": [
+            "calendly.com/g-kengue/talentconsulting"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "hiring-gc-porcs-bzh-sem36",
+      "title": "HIRING · Responsable Grands Comptes Porcs BZH / Grand Ouest",
+      "publish_date": "2026-09-03T07:30:00+02:00",
+      "channel": "perso",
+      "slides": [
+        {
+          "variant": "cover",
+          "eyebrow": "SKS Talents · Hiring",
+          "title": "Responsable Grands Comptes Porcs Bretagne · Grand Ouest",
+          "body": "3ème mandat filière porcs · position stratégique GC"
+        },
+        {
+          "variant": "body",
+          "eyebrow": "Le poste",
+          "title": "Piloter les 5-10 comptes-clés BZH · GO",
+          "bullets": [
+            "Négociation direction achats",
+            "Enjeux P&L d'un groupement porcs",
+            "Reporting groupe et autonomie stratégique"
+          ]
+        },
+        {
+          "variant": "highlight",
+          "eyebrow": "Pourquoi maintenant ?",
+          "title": "La consolidation des groupements BZH s'accélère",
+          "body": "Sans interlocuteur senior dédié aux 5-10 comptes qui pèsent 60 % du chiffre, la relation devient transactionnelle. Et une relation transactionnelle, c'est la première qui saute quand un concurrent bouge son offre."
+        },
+        {
+          "variant": "body",
+          "eyebrow": "Profil recherché",
+          "title": "Commercial senior filière porcs",
+          "bullets": [
+            "8-15 ans en filière porcs",
+            "Historique comptes-clés démontré",
+            "Négociation direction achats"
+          ]
+        },
+        {
+          "variant": "body",
+          "eyebrow": "Ce qu'on cherche",
+          "title": "3 compétences critiques",
+          "bullets": [
+            "Portefeuille grands comptes porcs BZH / GO",
+            "Compréhension P&L d'un groupement porcs",
+            "Autonomie stratégique + reporting groupe carré"
+          ]
+        },
+        {
+          "variant": "data",
+          "eyebrow": "Package et conditions",
+          "title": "Bretagne · Grand Ouest",
+          "body": "Package attractif + variable + véhicule. Confidentiel. Discussion possible sans changer votre CV LinkedIn."
+        },
+        {
+          "variant": "cta",
+          "eyebrow": "Prochaine étape",
+          "title": "Parlons-en 15 minutes",
+          "body": "DM ouvert sur ce post · ou réservez directement un créneau Calendly ci-dessous.",
+          "bullets": [
+            "calendly.com/g-kengue/talentconsulting"
+          ]
+        }
+      ]
+    }
+  ]
+}
