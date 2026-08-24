@@ -1,1 +1,33 @@
 node_modules
+
+# Env / credentials locaux · ne JAMAIS committer
+.env
+.env.local
+.env.*.local
+.env.buffer
+.env.buffer.local
+
+# Vercel local mirror (deja pull avec `vercel env pull`)
+.vercel/.env*
+
+# Build outputs
+.next/
+.next_stale_*/
+out/
+build/
+dist/
+
+# System / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/settings.json
+
+# Logs / caches
+*.log
+.turbo/
+.eslintcache
+
+# Fichiers temporaires
+scratchpad/
+tmp/

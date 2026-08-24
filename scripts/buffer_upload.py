@@ -3,35 +3,55 @@
 Upload en batch de posts LinkedIn vers Buffer pour programmation.
 
 Usage :
-    python3 scripts/buffer_upload.py
+    python3 scripts/buffer_upload.py [CHEMIN_CSV]
 
-Le script demande interactivement :
-    - Clé API Buffer (access_token) : https://publish.buffer.com/developers/api
-    - Chemin CSV : docs/buffer-batch-pilote-sem36.csv
-    - Channel ID Buffer : 6a7b4c19b2d9d5774359e4eb (par exemple)
+Le script lit d'abord `.env.local` à la racine du projet pour :
+    - BUFFER_ACCESS_TOKEN
+    - BUFFER_CHANNEL_PAGE
+    - BUFFER_CHANNEL_PERSO
+
+Si une variable est vide, il la demande interactivement.
 
 Format CSV attendu (headers) :
     Text,Image URL,Posting Time,Channel
 
-    - Text       : contenu du post (échappé avec guillemets si contient virgule/retour ligne)
-    - Image URL  : URL publique de l'image ou vide
+    - Text        : contenu du post (échappé avec guillemets si contient virgule/retour ligne)
+    - Image URL   : URL publique de l'image ou vide
     - Posting Time : ISO 8601 "2026-08-31 07:30" (fuseau Europe/Paris)
-    - Channel    : "page" ou "perso" pour router vers le bon canal
+    - Channel     : "page" ou "perso" pour router vers le bon canal
 
 API utilisée : Buffer API v1 (https://buffer.com/developers/api/updates)
 """
 
 import csv
+import os
 import sys
 import time
 from datetime import datetime
 from getpass import getpass
+from pathlib import Path
 
 import requests
 from zoneinfo import ZoneInfo
 
 BUFFER_API_BASE = "https://api.bufferapp.com/1"
 PARIS_TZ = ZoneInfo("Europe/Paris")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+ENV_LOCAL_PATH = PROJECT_ROOT / ".env.local"
+
+
+def load_env_local() -> dict:
+    """Lit .env.local à la racine du projet et retourne un dict clé → valeur."""
+    env = {}
+    if not ENV_LOCAL_PATH.exists():
+        return env
+    for raw_line in ENV_LOCAL_PATH.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, val = line.partition("=")
+        env[key.strip()] = val.strip().strip('"').strip("'")
+    return env
 
 
 def parse_scheduled_at(value: str) -> int:
@@ -45,22 +65,40 @@ def parse_scheduled_at(value: str) -> int:
 def main() -> int:
     print("\n=== Buffer Bulk Upload · SKS Talents ===\n")
 
-    access_token = getpass("🔑 Buffer access_token (masqué à la saisie) : ").strip()
+    env = load_env_local()
+    if env:
+        print(f"✅ .env.local chargé depuis {ENV_LOCAL_PATH}\n")
+
+    access_token = env.get("BUFFER_ACCESS_TOKEN") or ""
+    if not access_token:
+        access_token = getpass("🔑 Buffer access_token (masqué à la saisie) : ").strip()
     if not access_token:
         print("❌ access_token vide, abandon.")
         return 1
 
-    csv_path = input("📁 Chemin CSV (ex: docs/buffer-batch-pilote-sem36.csv) : ").strip()
+    csv_path = sys.argv[1] if len(sys.argv) > 1 else ""
+    if not csv_path:
+        csv_path = input("📁 Chemin CSV (ex: docs/buffer-batch-pilote-sem36.csv) : ").strip()
     if not csv_path:
         print("❌ chemin CSV vide, abandon.")
         return 1
 
-    channel_page = input("📢 Channel ID PAGE SKS Talents (Enter pour skipper) : ").strip()
-    channel_perso = input("👤 Channel ID PERSO Georges (Enter pour skipper) : ").strip()
+    channel_page = env.get("BUFFER_CHANNEL_PAGE") or ""
+    channel_perso = env.get("BUFFER_CHANNEL_PERSO") or ""
+
+    if not channel_page:
+        channel_page = input("📢 Channel ID PAGE SKS Talents (Enter pour skipper) : ").strip()
+    if not channel_perso:
+        channel_perso = input("👤 Channel ID PERSO Georges (Enter pour skipper) : ").strip()
 
     if not channel_page and not channel_perso:
         print("❌ au moins un channel ID doit être renseigné.")
         return 1
+
+    if channel_page:
+        print(f"   PAGE  = {channel_page[:8]}…")
+    if channel_perso:
+        print(f"   PERSO = {channel_perso[:8]}…")
 
     with open(csv_path, "r", encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
