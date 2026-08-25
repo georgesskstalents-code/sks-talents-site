@@ -2,6 +2,133 @@
   "_comment": "Manifest carrousels SKS Talents V2 (matching template officiel). 5 variantes de slide : cover / teal-list / cream-list / cream-two-sections / cta.",
   "carrousels": [
     {
+      "slug": "focus-vet-ruminant-bovin-sem37",
+      "title": "Vétérinaire Technique Ruminant Bovin",
+      "publish_date": "2026-09-07T07:30:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "FOCUS MÉTIER",
+          "emoji": "🐄",
+          "title": "Vétérinaire Technique Ruminant Bovin",
+          "subtitle": "LE MÉTIER LE PLUS TENDU EN 2027",
+          "description": "Pour comprendre pourquoi les groupements santé animale se battent pour ce profil.",
+          "cta": "Faites défiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "VOUS CONNAISSEZ...",
+          "bullets": [
+            "Les éleveurs bovin lait et allaitant",
+            "Les coopératives élevage",
+            "L'industrie du lait et de la viande",
+            "Les enjeux sanitaires ruminants",
+            "La pyramide des âges vétérinaires ruraux"
+          ],
+          "tagline": "Alors lisez la suite."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "LE MÉTIER",
+          "bullets": [
+            "Accompagner les éleveurs bovin sur le sanitaire et la nutrition",
+            "Développer l'expertise technique auprès des cliniques rurales",
+            "Animer formations vétérinaires ruraux et coopératives",
+            "Assurer la veille sanitaire (IBR, BVD, tuberculose)",
+            "Collaborer avec équipes R&D et commerciales"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "30 % de déficit structurel vs besoins déclarés (SNVEL 2026)",
+            "62 % des vétérinaires ruraux ont plus de 50 ans (SNVEL 2026)",
+            "12 000 EUR de perte mensuelle sans référent technique"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "LE PROFIL RECHERCHÉ",
+          "bullets": [
+            "DVM ou ingénieur agronome avec expérience élevage bovin",
+            "5+ ans en filière ruminant (élevage, coopérative, industrie)",
+            "Solides connaissances sanitaires et nutritionnelles",
+            "Goût du terrain et du contact éleveur",
+            "Autonomie technique et commerciale"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "POURQUOI CE MÉTIER SATURE",
+          "bullets": [
+            "Pyramide des âges défavorable (62 % > 50 ans)",
+            "Désertification des cliniques rurales continue",
+            "Attractivité des cliniques urbaines et canines",
+            "Attractivité de l'industrie et des groupements",
+            "Formation initiale insuffisante en filière rurale"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "NOS 5 SIGNAUX DE RECRUTEMENT",
+          "bullets": [
+            "Expérience terrain démontrée (pas seulement académique)",
+            "Réseau vétérinaire rural établi (SNGTV, GTV régionaux)",
+            "Aisance à passer du technique au commercial",
+            "Autonomie sur territoire multi-cliniques",
+            "Vision long-terme (5 ans+) pas mission tactique"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous cherchez ce profil ?",
+          "highlight": "On l'a trouvé.",
+          "description": "SKS Talents pilote actuellement 2 mandats sur cette fonction en France.",
+          "button_label": "Écrivez-nous en privé",
+          "button_icon": "✉",
+          "caption": "Pour un échange en toute confidentialité.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche métier complète",
+              "url": "https://www.skstalents.fr/job-roles/medical-vet-technical-manager-ruminant"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://www.skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "slug": "hiring-porcs-go-sem36",
       "title": "Responsable Technique Porcs Grand Ouest",
       "publish_date": "2026-08-31T07:30:00+02:00",
@@ -390,6 +517,1639 @@
             {
               "icon": "in",
               "label": "S’abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://www.skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "perso-carrousel-ia-act-5-obligations-drh-sem38",
+      "title": "AI Act EU · 5 obligations DRH biotech automne 2026",
+      "publish_date": "2026-09-15T07:30:00+02:00",
+      "channel": "perso",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LE SIGNAL",
+          "emoji": "⚖️",
+          "title": "AI Act · 5 obligations DRH",
+          "subtitle": "AUTOMNE 2026 · BIOTECH FR",
+          "description": "Pour chaque DRH Life Sciences qui utilise l'IA en recrutement, screening CV ou évaluation. À connaître avant les premiers contrôles CNIL.",
+          "cta": "Faites défiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "LE CONTEXTE",
+          "bullets": [
+            "AI Act applicable au 2 août 2026 pour les usages haut risque",
+            "Recrutement + évaluation RH classés haut risque (Annexe III)",
+            "CNIL compétente sur volet données personnelles",
+            "Premiers audits sectoriels attendus Q4 2026",
+            "68 % des orgs pharma n'ont pas de comité IA (EY 2026)"
+          ],
+          "tagline": "Le sujet devient très concret."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "OBLIGATION 1 · CARTOGRAPHIE",
+          "bullets": [
+            "Recenser tous les outils IA utilisés en RH (y compris Shadow IA)",
+            "Documenter chaque cas d'usage · finalité + données traitées",
+            "Identifier ceux relevant du haut risque Annexe III",
+            "Mettre à jour le registre AI Act et le registre RGPD",
+            "Révisable trimestriellement en 2026-2027"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "OBLIGATION 2 · TRANSPARENCE CANDIDAT",
+          "bullets": [
+            "Informer chaque candidat.e de l'usage d'IA dans le process",
+            "Préciser les critères retenus et les limites du système",
+            "Ouvrir un droit de contestation humain effectif",
+            "Conserver la traçabilité des décisions pendant 6 ans",
+            "Adapter les mentions RGPD candidat en conséquence"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "OBLIGATION 3 · GOUVERNANCE",
+          "bullets": [
+            "Nommer un.e référent.e AI Act rattaché.e COMEX ou DRH",
+            "Rédiger une charte IA opposable (candidats + salariés)",
+            "Créer un comité IA transverse (DRH + DPO + Métier + IT)",
+            "Budgétiser la conformité IA dès le plan 2027",
+            "+18 % de budget conformité IA attendu en 2027 (Deloitte 2026)"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "OBLIGATION 4 · EVALUATION DE CONFORMITE",
+          "bullets": [
+            "Auditer chaque système haut risque avant mise en production",
+            "Documenter data set d'entraînement + biais identifiés",
+            "Vérifier la performance sur des groupes sensibles",
+            "Formaliser un log de contrôle humain significatif",
+            "Faire signer les fournisseurs IA (clauses AI Act spécifiques)"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "OBLIGATION 5 · FORMATION",
+          "bullets": [
+            "Former les recruteurs à l'usage supervisé des outils IA",
+            "Sensibiliser les managers aux biais algorithmiques",
+            "Créer un module Shadow IA pour les collaborateurs",
+            "Documenter les heures de formation dans le plan de compétences",
+            "Réviser le module tous les 12 mois minimum"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous n'avez pas encore lancé le chantier ?",
+          "highlight": "Vous n'êtes pas seul.e.",
+          "description": "SKS Talents accompagne les DRH biotech sur la structuration IA + recrutement référent.e AI Act. Diagnostic 60 minutes disponible.",
+          "button_label": "Écrivez-nous en privé",
+          "button_icon": "✉",
+          "caption": "Pour un échange en toute confidentialité.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Diagnostic structuration IA",
+              "url": "https://www.skstalents.fr/diagnostic-structuration-ia"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://www.skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "donnee-nutrition-animale-3-chiffres-sem39",
+      "title": "Nutrition animale FR · 3 chiffres qui redéfinissent les profils",
+      "publish_date": "2026-09-23T07:30:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LA DONNÉE",
+          "emoji": "🌾",
+          "title": "Nutrition animale FR",
+          "subtitle": "3 CHIFFRES CLÉS 2025-2026",
+          "description": "Pour les directions générales, DRH et directions techniques des groupes de nutrition animale qui recrutent en France.",
+          "cta": "Faites défiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "POURQUOI CES CHIFFRES COMPTENT",
+          "bullets": [
+            "La filière FR se consolide autour de 5 groupements majeurs",
+            "Les profils techniques deviennent le vrai goulot d'étranglement",
+            "Les CODIR arbitrent à fiche métier + salaire + territoire",
+            "Chaque chiffre change la manière de sourcer",
+            "Sources publiques + observation SKS Talents 2026"
+          ],
+          "tagline": "Voici les 3 chiffres."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "CHIFFRE 1 · -14 % D'ETUDIANTS AGRO",
+          "bullets": [
+            "Diminution des effectifs ingénieurs agro filière animale sur 5 ans",
+            "Source · Enquête CGAAER + écoles Agreenium 2025",
+            "Impact direct sur le vivier junior 2027-2030",
+            "Conséquence · les postes techniques bougent en 6-12 mois",
+            "Réponse SKS · sourcing reconversion + international"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "CHIFFRE 2 · 62 % > 50 ANS",
+          "bullets": [
+            "Part des vétérinaires ruraux et techniciens en fin de carrière",
+            "Source · SNVEL Observatoire 2026",
+            "Conséquence sur la couverture terrain BZH + Grand Ouest",
+            "Les groupes doivent former en interne dans les 24 mois",
+            "Réponse SKS · identifier les binomes senior + junior en amont"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "CHIFFRE 3 · 12 000 EUR / MOIS",
+          "bullets": [
+            "Perte estimée par un groupement sans référent.e technique",
+            "Source · Kynetec Animal Health Insights 2026",
+            "Combine perte de CA + coup de grâce sur la rétention client",
+            "Un poste vacant 6 mois équivaut à 72 k EUR non facturables",
+            "Réponse SKS · mandat exclusif avec time-to-fill 90 jours"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "CE QUE CELA CHANGE POUR VOUS",
+          "bullets": [
+            "Réviser les fiches métier techniques d'ici Q4 2026",
+            "Anticiper la relive senior + former les juniors terrain",
+            "Ouvrir les recrutements sur l'international (Belgique, Espagne)",
+            "Protéger les postes clés par plans de rétention",
+            "Traiter la filière nutrition comme un marché en tension"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "07",
+          "title": "Vous recrutez sur ces profils ?",
+          "highlight": "On les connaît.",
+          "description": "SKS Talents pilote actuellement 5 mandats nutrition animale FR. Diagnostic 60 minutes disponible.",
+          "button_label": "Écrivez-nous en privé",
+          "button_icon": "✉",
+          "caption": "Pour un échange en toute confidentialité.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Notre expertise Animal Health",
+              "url": "https://www.skstalents.fr/expertises/animal-health"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://www.skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "donnee-ai-act-article-99-sem40",
+      "title": "AI Act Article 99 · barème de sanctions Life Sciences",
+      "publish_date": "2026-09-30T07:30:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LA DONNÉE",
+          "emoji": "🚨",
+          "title": "AI Act Article 99",
+          "subtitle": "LE BARÈME DE SANCTIONS DÉCRYPTÉ",
+          "description": "Pour chaque dirigeant.e Life Sciences qui déploie de l'IA en interne. Applicable depuis le 2 août 2026.",
+          "cta": "Faites défiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "LE CADRE",
+          "bullets": [
+            "AI Act adopté juin 2024, applicable haut risque au 2 août 2026",
+            "3 niveaux d'amendes selon la gravité (Article 99)",
+            "S'applique à tout système déployé dans l'UE",
+            "Même si l'éditeur est hors UE (extraterritorialité)",
+            "Autérité compétente en France · CNIL + coordinateur AI Act"
+          ],
+          "tagline": "Voici les 3 niveaux."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "NIVEAU 1 · 35 M EUR OU 7 % DU CA",
+          "bullets": [
+            "Sanctions les plus lourdes",
+            "Usage d'un système IA interdit (Article 5)",
+            "Ex. · scoring social, manipulation comportementale",
+            "Le montant retenu est le plus élevé des deux",
+            "Échelle groupe monde, pas seulement filiale FR"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "NIVEAU 2 · 15 M EUR OU 3 % DU CA",
+          "bullets": [
+            "Non-respect obligations systèmes haut risque (Annexe III)",
+            "Concerne recrutement, évaluation, santé, crédit",
+            "Ex. · absence de registre, pas de contrôle humain",
+            "Ex. · pas de documentation technique conforme",
+            "Impact direct sur DRH, Regulatory, Clinical, HR Tech"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "NIVEAU 3 · 7,5 M EUR OU 1,5 % DU CA",
+          "bullets": [
+            "Informations inexactes ou trompeuses à l'autorité",
+            "Manquement documentaire non essentiel",
+            "Retard de déclaration ou incident",
+            "Sanctions cumulables entre états membres",
+            "Publication possible sur registre AI Act EU"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "78 % des DRH utilisent déjà l'IA en recrutement (Mercer 2026)",
+            "23 % des orgs pharma ont un registre IA (EY State of AI 2026)",
+            "12 % des biotechs FR ont un.e référent.e IA nommé.e (France Biotech Panorama 2026)"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "ROADMAP Q4 2026",
+          "bullets": [
+            "Nommer un.e référent.e AI Act au COMEX",
+            "Cartographier les usages IA haut risque en 30 jours",
+            "Rédiger la charte IA opposable en 60 jours",
+            "Former les DRH + managers en 90 jours",
+            "Auditer les fournisseurs IA d'ici mars 2027"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous avez besoin d'un.e référent.e AI Act ?",
+          "highlight": "On l'a déjà identifié.e.",
+          "description": "SKS Talents chasse activement les profils Chief AI Officer et Head Responsible AI pour la biotech FR. Diagnostic 60 minutes.",
+          "button_label": "Écrivez-nous en privé",
+          "button_icon": "✉",
+          "caption": "Pour un échange en toute confidentialité.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Diagnostic structuration IA",
+              "url": "https://www.skstalents.fr/diagnostic-structuration-ia"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://www.skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "conseil-head-regulatory-europe-vet-sem41",
+      "title": "Head of Regulatory Europe · santé animale",
+      "publish_date": "2026-10-05T07:30:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "FOCUS MÉTIER",
+          "emoji": "🏛️",
+          "title": "Head of Regulatory Europe",
+          "subtitle": "SANTÉ ANIMALE · UE",
+          "description": "Le poste pivot qui détermine la vitesse d'accès marché des laboratoires vétérinaires en Europe.",
+          "cta": "Faites défiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "VOUS CONNAISSEZ...",
+          "bullets": [
+            "L'EMA et le CVMP",
+            "Le Règlement UE 2019/6 (applicable janvier 2022)",
+            "Les procédures centralisée, DCP et MRP",
+            "Les enjeux pharmacovigilance vétérinaire",
+            "Le CODIR d'un lab vétérinaire européen"
+          ],
+          "tagline": "Alors lisez la suite."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "LA MISSION",
+          "bullets": [
+            "Piloter la stratégie réglementaire Europe multi-produits",
+            "Interfacer R&D, Market Access et Pharmacovigilance",
+            "Négocier avec EMA / CVMP et autorités nationales",
+            "Sécuriser les cycles de vie produits en portefeuille",
+            "Anticiper les évolutions post-2019/6 (guidelines CVMP)"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "110-160 k EUR de fixe sur poste FR (source SKS Talents 2026)",
+            "6-12 mois de time-to-fill (source SKS Talents 2026)",
+            "Règlement 2019/6 applicable depuis janvier 2022"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "LE PROFIL RECHERCHÉ",
+          "bullets": [
+            "DVM + 10 ans regulatory animal health minimum",
+            "Maîtrise CVMP + EMA + autorités nationales clés",
+            "Anglais professionnel + une 2ème langue UE",
+            "Expérience CMC + safety + efficacy conjointe",
+            "Aisance CODIR + capacité à tenir un board réglementaire"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "POURQUOI CE POSTE EST RARE",
+          "bullets": [
+            "Écosystème étroit · 200 profils identifiés en Europe",
+            "Formation initiale limitée (peu de DVM regulatory)",
+            "Attractivité concurrentielle grands groupes vs biotechs",
+            "Réglementation 2019/6 a rebattu les priorités",
+            "Peu de mobilité UK post-Brexit"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "NOS 5 SIGNAUX DE RECRUTEMENT",
+          "bullets": [
+            "Track record d'AMM délivrées en centralisée",
+            "Réseau EMA + CVMP + agences nationales activable",
+            "Aisance à arbitrer science + business",
+            "Vision 3 ans post-2019/6 sur portefeuille",
+            "Capacité à recruter et faire grandir une équipe regulatory"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous cherchez ce profil ?",
+          "highlight": "On l'a trouvé.e.",
+          "description": "SKS Talents pilote actuellement 2 mandats Head of Regulatory Europe sur la santé animale.",
+          "button_label": "Écrivez-nous en privé",
+          "button_icon": "✉",
+          "caption": "Pour un échange en toute confidentialité.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche métier",
+              "url": "https://www.skstalents.fr/job-roles/medical-vet-head-of-regulatory-europe"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://www.skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "donnee-ia-act-chiffres-sem42",
+      "title": "IA Act & Life Sciences · chiffres clés à 10 mois",
+      "publish_date": "2026-10-14T07:30:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LA DONNÉE",
+          "emoji": "📊",
+          "title": "IA Act & Life Sciences",
+          "subtitle": "10 MOIS AVANT APPLICATION COMPLÈTE",
+          "description": "Pour les COMEX Life Sciences qui doivent arbitrer la roadmap IA avant le 2 août 2027.",
+          "cta": "Faites défiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "OU EN EST-ON ?",
+          "bullets": [
+            "Application entière AI Act · 2 août 2027",
+            "Volet haut risque déjà applicable depuis 2 août 2026",
+            "France Biotech recense 762 biotechs actives (Panorama 2026)",
+            "EY State of AI · 68 % des orgs pharma ont cartographié leurs usages",
+            "Mais l'écart de mise en conformité reste massif"
+          ],
+          "tagline": "Les chiffres qui doivent alerter."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "USAGES · 68 %",
+          "bullets": [
+            "68 % des orgs pharma ont identifié leurs usages IA",
+            "Source · EY State of AI Life Sciences 2026",
+            "Mais identification ≠ documentation conforme",
+            "Chief AI Officer nommé dans seulement 22 % des cas",
+            "Rédaction charte IA opposable en 6 mois est possible"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "23 % seulement ont un registre AI Act documenté (EY 2026)",
+            "41 % des biotechs FR utilisent l'IA en R&D (France Biotech Panorama 2026)",
+            "12 % ont un.e référent.e IA nommé.e (France Biotech Panorama 2026)"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "BUDGET · +18 %",
+          "bullets": [
+            "+18 % de budget conformité IA attendu en 2027",
+            "Source · Deloitte AI Regulation Barometer 2026",
+            "Ligne budgétaire distincte du RGPD conseillée",
+            "Postes prioritaires · Chief AI Officer + Data Protection Lead",
+            "Investissement étalé sur 3 ans typique"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "RECRUTEMENT · UN NOUVEAU MARCHÉ",
+          "bullets": [
+            "Head Responsible AI en tension forte",
+            "AI Act Officer non existant en 2023, structurel en 2027",
+            "Data Governance Lead recherché par 60 % des biotechs FR",
+            "Fourchette salariale 100-180 k EUR fixe (SKS Talents 2026)",
+            "Recrutement multi-profils · legal + tech + santé"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "ROADMAP COMEX Q4 2026",
+          "bullets": [
+            "Voter la charte IA en board Q4 2026",
+            "Recruter le/la référent.e AI Act (60-90 jours)",
+            "Cartographier les usages haut risque en 30 jours",
+            "Auditer chaque fournisseur IA sous 6 mois",
+            "Provisionner le budget conformité 2027-2029"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous devez cadrer votre gouvernance IA ?",
+          "highlight": "Parlons-en.",
+          "description": "SKS Talents accompagne les biotechs FR sur la structuration IA et le recrutement AI Act Officer. Diagnostic 60 minutes.",
+          "button_label": "Écrivez-nous en privé",
+          "button_icon": "✉",
+          "caption": "Pour un échange en toute confidentialité.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Diagnostic structuration IA",
+              "url": "https://www.skstalents.fr/diagnostic-structuration-ia"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://www.skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "donnee-gouvernance-ia-life-sciences-5-chiffres-2026",
+      "title": "5 chiffres clés gouvernance IA Life Sciences 2026",
+      "publish_date": "2026-10-21T07:30:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LA DONNÉE",
+          "emoji": "🧬",
+          "title": "Gouvernance IA Life Sciences",
+          "subtitle": "5 CHIFFRES CLÉS 2026",
+          "description": "Pour les CEO, DRH et Chief Digital Officer qui pilotent la roadmap IA de leur organisation Life Sciences.",
+          "cta": "Faites défiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "CHIFFRE 1 · 2 AOUT 2026",
+          "bullets": [
+            "Date d'application AI Act pour les usages haut risque",
+            "Source · Règlement UE 2024/1689 (AI Act)",
+            "Concerne recrutement, évaluation, biométrie",
+            "Sanctions Article 99 déjà applicables",
+            "9 mois seulement avant l'application complète"
+          ],
+          "tagline": "Le compte à rebours a démarré."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "CHIFFRE 2 · 68 % SANS COMITÉ IA",
+          "bullets": [
+            "68 % des organisations pharma n'ont pas de comité IA",
+            "Source · EY State of AI Life Sciences 2026",
+            "Le comité IA est la brique 1 de la gouvernance conforme",
+            "Il rassemble DRH + DPO + métier + IT + juridique",
+            "Peut se mettre en place en 60 jours"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "78 % des DRH utilisent l'IA en recrutement (Mercer 2026)",
+            "23 % ont un registre AI Act documenté (EY 2026)",
+            "12 % des biotechs FR ont un.e référent.e (France Biotech Panorama 2026)"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "CHIFFRE 4 · 3 RISQUES RECRUTEMENT",
+          "bullets": [
+            "Biais algorithmique · sanction niveau 2 (15 M EUR ou 3 %)",
+            "Absence de contrôle humain significatif",
+            "Défaut d'information candidat.e",
+            "Chaque risque est matérialisé dans un module de la charte",
+            "L'audit interne annuel devient standard 2027"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "CHIFFRE 5 · 762 BIOTECHS",
+          "bullets": [
+            "762 biotechs actives en France (France Biotech Panorama 2026)",
+            "En moyenne 45 collaborateurs par biotech",
+            "80 % ont un usage IA identifié",
+            "Seulement 12 % ont formalisé la gouvernance",
+            "Écart massif = opportunité de recrutement"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "OPPORTUNITÉ RECRUTEMENT",
+          "bullets": [
+            "Chief AI Officer · poste nouveau, marché en création",
+            "Head Responsible AI · profil hybride tech + éthique",
+            "Fourchette 100-180 k EUR fixe (SKS Talents 2026)",
+            "Time-to-fill 90-120 jours si mandat exclusif",
+            "Rôle COMEX + rattachement CEO ou COO"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous cadrez votre gouvernance IA ?",
+          "highlight": "On sait où chercher.",
+          "description": "SKS Talents pilote 3 mandats Chief AI Officer / Head Responsible AI biotech FR. Diagnostic 60 minutes.",
+          "button_label": "Écrivez-nous en privé",
+          "button_icon": "✉",
+          "caption": "Pour un échange en toute confidentialité.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Diagnostic structuration IA",
+              "url": "https://www.skstalents.fr/diagnostic-structuration-ia"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://www.skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "donnee-ma-veto-3-chiffres-sem45",
+      "title": "M&A vétérinaire · 3 chiffres qui expliquent la destruction de valeur",
+      "publish_date": "2026-11-04T07:30:00+01:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LA DONNÉE",
+          "emoji": "🏥",
+          "title": "M&A vétérinaire FR",
+          "subtitle": "3 CHIFFRES ET UNE DESTRUCTION DE VALEUR",
+          "description": "Pour les fonds, dirigeant.e.s et acquéreurs qui pilotent la consolidation des cliniques vétérinaires en France.",
+          "cta": "Faites défiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "LE CONTEXTE",
+          "bullets": [
+            "20 % du parc de cliniques déjà consolidé en France (SNVEL 2026)",
+            "6 groupes majeurs pilotent la vague",
+            "Multiples EBITDA 2024-2025 entre 10x et 14x",
+            "Turnover post-acquisition en forte hausse",
+            "Le coût humain n'est pas dans le pitch"
+          ],
+          "tagline": "Voici les 3 chiffres."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "CHIFFRE 1 · 32 % DE TURNOVER",
+          "bullets": [
+            "Turnover moyen vétérinaires 24 mois post-M&A",
+            "Source · AFVAC + SNVEL 2026",
+            "Contre 12 % dans les cliniques indépendantes",
+            "Concentration sur les seniors + associés historiques",
+            "Signal faible détecté dès 6 mois post-closing"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "32 % turnover 24 mois post-M&A (AFVAC + SNVEL 2026)",
+            "45 k EUR de coût de remplacement moyen (Kynetec 2026)",
+            "9 mois de délai moyen de reconstitution (SKS Talents 2026)"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "CHIFFRE 2 · 45 K EUR",
+          "bullets": [
+            "Coût de remplacement moyen d'un.e vétérinaire",
+            "Source · Kynetec Animal Health Insights 2026",
+            "Recrutement + intégration + productivité perdue",
+            "Sur 32 % de turnover, l'addition est structurelle",
+            "Peu de modèles M&A l'intègrent dans la valorisation"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "CHIFFRE 3 · 9 MOIS DE RECONSTITUTION",
+          "bullets": [
+            "Délai moyen pour retrouver la capacité clinique initiale",
+            "Source · observation SKS Talents 2026",
+            "Impacte le CA réel vs projection PIB",
+            "Explique 60 % des écarts vs business plan initial",
+            "Réduit à 4 mois avec un plan de rétention pré-closing"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "CE QUE DEVRAIT CHANGER LA DUE DILIGENCE",
+          "bullets": [
+            "Intégrer un.e RH spécialisé.e vet dès le screening cible",
+            "Cartographier les départs probables 18 mois pré-M&A",
+            "Budgetiser le plan de rétention dans la valorisation",
+            "Nommer un.e Directeur.rice régional.e avant closing",
+            "Suivre le KPI turnover comme le KPI CA"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous pilotez un projet M&A vet ?",
+          "highlight": "On sait où sont les risques.",
+          "description": "SKS Talents accompagne les fonds et acquéreurs sur la due diligence RH vétérinaire. Diagnostic 60 minutes.",
+          "button_label": "Écrivez-nous en privé",
+          "button_icon": "✉",
+          "caption": "Pour un échange en toute confidentialité.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Notre expertise Animal Health",
+              "url": "https://www.skstalents.fr/expertises/animal-health"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://www.skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "donnee-retention-post-ma-life-sciences-sem47",
+      "title": "Rétention post-acquisition Life Sciences · 4 chiffres",
+      "publish_date": "2026-11-18T07:30:00+01:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LA DONNÉE",
+          "emoji": "🔒",
+          "title": "Rétention post-M&A Life Sciences",
+          "subtitle": "4 CHIFFRES QUI DEVRAIENT CHANGER VOTRE DUE DILIGENCE RH",
+          "description": "Pour les fonds, dirigeant.e.s M&A et DRH acquéreurs qui structurent les opérations Life Sciences.",
+          "cta": "Faites défiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "POURQUOI CES CHIFFRES ?",
+          "bullets": [
+            "Les M&A Life Sciences ont battu un record en 2025",
+            "Les écarts vs business plan restent structurels",
+            "Les vraies causes sont RH, pas produits",
+            "Chaque chiffre montre un angle mort de la DD classique",
+            "Sources publiques 2026 + observation SKS Talents"
+          ],
+          "tagline": "Voici les 4 chiffres."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "CHIFFRE 1 · 48 % DÉPARTS 24 MOIS",
+          "bullets": [
+            "48 % des cadres clés quittent 24 mois post-M&A",
+            "Source · EY M&A People Barometer 2026",
+            "Concentration sur R&D et regulatory",
+            "Vs 15 % en cycle normal",
+            "L'impact est différé · se voit sur les jalons à 12-18 mois"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "48 % de départs cadres clés 24 mois post-M&A (EY 2026)",
+            "22 % de perte de valeur estimée (PwC Deals 2026)",
+            "62 % des DD n'ont pas de volet rétention formalisé (AON 2026)"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "CHIFFRE 3 · 22 % DE VALEUR",
+          "bullets": [
+            "22 % de perte de valeur estimée liée aux départs",
+            "Source · PwC Deals Life Sciences 2026",
+            "Combine retard produits + relance recrutement + culture",
+            "Vs 6 % dans les M&A avec plan de rétention structuré",
+            "Gap = 16 points en enterprise value"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "CHIFFRE 4 · 62 % SANS DD RH",
+          "bullets": [
+            "62 % des due diligences n'ont pas de volet rétention formalisé",
+            "Source · AON HR Diligence Survey 2026",
+            "Le RH intervient souvent post-closing",
+            "62 % des écarts vs business plan sont ainsi \"invisibles\" en amont",
+            "Le marché va s'aligner d'ici 2028"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "07",
+          "title": "Vous voulez formaliser votre DD RH ?",
+          "highlight": "On l'a fait 12 fois.",
+          "description": "SKS Talents accompagne fonds et corporates Life Sciences sur la due diligence humaine + le plan de rétention pré-closing.",
+          "button_label": "Écrivez-nous en privé",
+          "button_icon": "✉",
+          "caption": "Pour un échange en toute confidentialité.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Notre expertise Life Sciences",
+              "url": "https://www.skstalents.fr/expertises/life-sciences"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://www.skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "conseil-fiche-dir-regional-vet-sem48",
+      "title": "Directeur.rice régional.e cliniques vétérinaires",
+      "publish_date": "2026-11-23T07:30:00+01:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "FOCUS MÉTIER",
+          "emoji": "🏥",
+          "title": "Directeur.rice régional.e",
+          "subtitle": "CLINIQUES VÉTÉRINAIRES · FR",
+          "description": "Le poste pivot de la consolidation vétérinaire française. Il transforme une acquisition en création de valeur.",
+          "cta": "Faites défiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "VOUS CONNAISSEZ...",
+          "bullets": [
+            "Les 6 groupes majeurs qui recomposent le marché",
+            "Les cliniques mixtes canine + rurale",
+            "Les enjeux RH post-M&A vétérinaire",
+            "Le modèle économique d'une clinique",
+            "L'écosystème AFVAC + SNVEL + SNGTV"
+          ],
+          "tagline": "Alors lisez la suite."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "LA MISSION",
+          "bullets": [
+            "Piloter 10 à 25 cliniques sur une région",
+            "Sécuriser la rétention vétérinaires 24 mois post-M&A",
+            "Structurer le développement commercial territorial",
+            "Homogénéiser les protocoles cliniques + prix",
+            "Représenter le groupe auprès des instances (SNVEL, AFVAC)"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "80-120 k EUR fixe + variable 15-25 % (SKS Talents 2026)",
+            "32 % turnover 24 mois post-M&A à contenir (AFVAC + SNVEL 2026)",
+            "6 mois de time-to-fill sur le poste (SKS Talents 2026)"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "LE PROFIL RECHERCHÉ",
+          "bullets": [
+            "DVM ou MBA + 8 ans de management multi-sites",
+            "Maîtrise des KPIs cliniques (RVU, taux visite, panier moyen)",
+            "Réseau vétérinaire régional établi",
+            "Aisance en négociation associé.e.s + fondateur.rices",
+            "Culture P&L + reporting groupe carré"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "POURQUOI CE POSTE EST STRATÉGIQUE",
+          "bullets": [
+            "6 groupes recrutent en parallèle en France",
+            "Peu de profils ont déjà piloté 10+ cliniques",
+            "L'échec du poste = destruction de valeur 22 % (PwC 2026)",
+            "Poste voulu par les fonds pour sécuriser la thesis",
+            "Souvent bascule vers Direction Générale groupe à 3 ans"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "NOS 5 SIGNAUX DE RECRUTEMENT",
+          "bullets": [
+            "Track record multi-sites déjà piloté",
+            "Capacité à tenir un CODIR d'associé.e.s",
+            "Vision territoriale + connaissance des grands comptes",
+            "Aisance sur la rétention vétérinaires post-M&A",
+            "Alignement avec la thesis fonds ou industriel"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous cherchez ce profil ?",
+          "highlight": "On l'a déjà chassé.e.",
+          "description": "SKS Talents pilote actuellement 3 mandats Directeur.rice régional.e cliniques vétérinaires en France.",
+          "button_label": "Écrivez-nous en privé",
+          "button_icon": "✉",
+          "caption": "Pour un échange en toute confidentialité.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche métier",
+              "url": "https://www.skstalents.fr/job-roles/veterinary-regional-clinic-director"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://www.skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "signal-cartographie-conso-vet-sem48",
+      "title": "Consolidation vétérinaire FR · cartographie 6 modèles",
+      "publish_date": "2026-11-24T07:30:00+01:00",
+      "channel": "perso",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LE SIGNAL",
+          "emoji": "🗺️",
+          "title": "Consolidation vétérinaire FR",
+          "subtitle": "6 MODÈLES QUI RECOMPOSENT LE MARCHÉ",
+          "description": "Pour chaque vétérinaire, dirigeant.e ou investisseur.e qui veut comprendre les stratégies RH divergentes de la vague.",
+          "cta": "Faites défiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "LE CONTEXTE",
+          "bullets": [
+            "20 % du parc déjà consolidé (SNVEL 2026)",
+            "6 acteurs pilotent 80 % de la vague",
+            "Chaque modèle a sa propre logique RH",
+            "L'ancrage AFVAC Lille rend le sujet brûlant",
+            "Observation SKS Talents 2024-2026"
+          ],
+          "tagline": "Voici la cartographie."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "MODÈLE 1 · FONDS PANEUROPEEN",
+          "bullets": [
+            "Rachats en série multi-pays",
+            "Standardisation forte des pratiques",
+            "Turnover 24 mois autour de 40 %",
+            "Rétention par LTIP + carrière internationale",
+            "Profil DG et Directeur.rice régional.e clé"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "MODÈLE 2 · GROUPE INDUSTRIEL",
+          "bullets": [
+            "Adossement à un industriel santé animale",
+            "Intégration verticale amont-aval",
+            "Faible turnover mais gouvernance lourde",
+            "Rétention par intérêt scientifique + R&D",
+            "Interface Regulatory + Techniques clé"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "MODÈLE 3 · PLATEFORME MID-CAP",
+          "bullets": [
+            "Roll-up régional piloté par un mid-cap FR",
+            "Croissance externe rapide, culture d'origine forte",
+            "Turnover autour de 28 %",
+            "Rétention par autonomie + proximité décision",
+            "Cherche Directeur.rice régional.e opérationnel.le"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "MODÈLES 4 à 6",
+          "bullets": [
+            "Modèle 4 · Réseau coopératif de vétérinaires associé.e.s",
+            "Modèle 5 · Franchise territoriale légère",
+            "Modèle 6 · Groupement mutualiste indépendant",
+            "Chaque modèle a un modèle RH distinct",
+            "Voir la répartition détaillée dans la newsletter"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "CE QUE CELA CHANGE POUR VOUS",
+          "bullets": [
+            "Vétérinaire · comprendre le modèle du groupe qui vous approche",
+            "Fonds · anticiper la stratégie RH avant le closing",
+            "Industriel · identifier le modèle compatible avec vos KPIs",
+            "DG · arbitrer entre acquisition et green field",
+            "DRH · préparer les binomes clés de la rétention"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous voulez la cartographie complète ?",
+          "highlight": "Elle est dans la newsletter.",
+          "description": "SKS Talents publie chaque quinzaine une analyse Life Sciences x Animal Health. La cartographie 6 modèles vet est le prochain numéro.",
+          "button_label": "Écrivez-nous en privé",
+          "button_icon": "✉",
+          "caption": "Pour un échange en toute confidentialité.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Notre expertise Animal Health",
+              "url": "https://www.skstalents.fr/expertises/animal-health"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://www.skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "donnee-bilan-marche-cadre-2026-sem49",
+      "title": "Bilan marché cadre 2026 · Life Sciences x Animal Health",
+      "publish_date": "2026-12-02T07:30:00+01:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LA DONNÉE",
+          "emoji": "📈",
+          "title": "Bilan marché cadre 2026",
+          "subtitle": "LIFE SCIENCES x ANIMAL HEALTH",
+          "description": "Pour les COMEX et DRH qui construisent leur plan de recrutement 2027 sur les fonctions Regulatory, Clinical et Manufacturing.",
+          "cta": "Faites défiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "L'ANNÉE EN 3 SIGNAUX",
+          "bullets": [
+            "Retour de la croissance des recrutements cadres Life Sciences",
+            "Consolidation vet a accéléré la demande Directeur.rice régional.e",
+            "AI Act haut risque a créé une nouvelle famille de métiers",
+            "Manufacturing FR retrouve un vrai marché candidat.e",
+            "Sources France Biotech Panorama 2026 + observation SKS Talents"
+          ],
+          "tagline": "Voici les chiffres clés."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "CHIFFRE 1 · TIME-TO-FILL",
+          "bullets": [
+            "132 jours en moyenne sur les cadres Life Sciences (SKS Talents 2026)",
+            "148 jours sur les fonctions Regulatory + Clinical",
+            "88 jours sur les fonctions Sales cadres",
+            "Vs 121 jours en 2025 tous cadres confondus",
+            "Réduit à 90 jours en mandat exclusif SKS"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "+7,4 % de rémunération cadre Life Sciences vs 2025 (SKS Talents 2026)",
+            "+9,1 % en Animal Health (Kynetec Animal Health Insights 2026)",
+            "78 % des DRH utilisent l'IA en recrutement (Mercer 2026)"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "CHIFFRE 2 · RÉMUNÉRATION",
+          "bullets": [
+            "+7,4 % cadres Life Sciences vs 2025",
+            "+9,1 % cadres Animal Health vs 2025",
+            "Écart historique en faveur d'Animal Health",
+            "Sources SKS Talents 2026 + Kynetec 2026",
+            "Effet consolidation vet + demande pénurique"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "CHIFFRE 3 · TENSION",
+          "bullets": [
+            "Top 3 des fonctions en tension · Regulatory / Clinical / Manufacturing",
+            "72 % des CEO biotechs FR reportent une tension forte (France Biotech 2026)",
+            "Effet AI Act · nouveau marché Chief AI Officer",
+            "Manufacturing tiré par la réindustrialisation cellulaire + génique",
+            "Regulatory tiré par les cycles produits accélérés"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "CE QUE VOUS DEVEZ ANTICIPER 2027",
+          "bullets": [
+            "Recrutement Chief AI Officer dès Q1 2027",
+            "Plan de rétention pré-M&A systématique",
+            "Anticiper la relive senior en Manufacturing",
+            "Ouvrir les recrutements sur l'Europe du Sud",
+            "Réviser les grilles de rémunération Regulatory + Clinical"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous construisez votre plan 2027 ?",
+          "highlight": "Parlons-en.",
+          "description": "SKS Talents accompagne les CODIR Life Sciences et Animal Health sur la construction du plan de recrutement cadre 2027.",
+          "button_label": "Écrivez-nous en privé",
+          "button_icon": "✉",
+          "caption": "Pour un échange en toute confidentialité.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Diagnostic structuration IA",
+              "url": "https://www.skstalents.fr/diagnostic-structuration-ia"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://www.skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "conseil-rd-director-petfood-sem51",
+      "title": "R&D Director Petfood · fiche métier bilan 2026",
+      "publish_date": "2026-12-14T07:30:00+01:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "FOCUS MÉTIER",
+          "emoji": "🐱",
+          "title": "R&D Director Petfood",
+          "subtitle": "LE MAILLON STRATÉGIQUE DU BILAN 2026",
+          "description": "Le poste clé de l'innovation nutritionnelle en Animal Health. En tension forte cadre Q4 2026.",
+          "cta": "Faites défiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "VOUS CONNAISSEZ...",
+          "bullets": [
+            "Le marché petfood FR + UE en croissance +5 %/an",
+            "Les cycles d'innovation 18-36 mois",
+            "Les enjeux durabilité + protéines alternatives",
+            "Le trio marketing + R&D + industriel",
+            "Les grands acteurs petfood européens"
+          ],
+          "tagline": "Alors lisez la suite."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "LA MISSION",
+          "bullets": [
+            "Piloter le portefeuille R&D petfood UE",
+            "Arbitrer science + business + industrialisation",
+            "Interfacer marketing + regulatory + achats matières",
+            "Anticiper les tendances nutrition (novel proteins, gut health)",
+            "Sécuriser le pipeline innovation à 3 ans"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "120-170 k EUR fixe + variable 20 % (SKS Talents 2026)",
+            "Marché petfood FR +5,2 % en 2025 (FACCO 2026)",
+            "8 mois de time-to-fill sur le poste (SKS Talents 2026)"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "LE PROFIL RECHERCHÉ",
+          "bullets": [
+            "Ingénieur agro ou vétérinaire + PhD ou MSc nutrition",
+            "10+ ans en R&D petfood ou nutrition spécialisée",
+            "Réseau académique + fournisseurs matières établi",
+            "Anglais professionnel + une 2ème langue UE",
+            "Aisance CODIR + capacité à piloter une équipe multi-sites"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "COMPÉTENCES CLÉS 2027",
+          "bullets": [
+            "Maîtrise des protéines alternatives (insect, single cell)",
+            "Nutrition fonctionnelle + microbiote",
+            "Réglementation FEDIAF + FEED update 2026",
+            "IA appliquée à la formulation",
+            "Sourcing durable + impact environnemental"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "RED FLAGS RECRUTEMENT",
+          "bullets": [
+            "Trop centré.e sur une seule espèce (chien ou chat)",
+            "Manque d'expérience industrialisation à grande échelle",
+            "Absence de réseau fournisseurs matières européen",
+            "Vision science pure sans arbitrage business",
+            "Faible aisance en interface marketing"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous cherchez ce profil ?",
+          "highlight": "On sait où les trouver.",
+          "description": "SKS Talents pilote actuellement 2 mandats R&D Director Petfood en Europe. Diagnostic 60 minutes.",
+          "button_label": "Écrivez-nous en privé",
+          "button_icon": "✉",
+          "caption": "Pour un échange en toute confidentialité.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche métier",
+              "url": "https://www.skstalents.fr/job-roles/petfood-rd-director"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://www.skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "signal-bilan-2026-ls-ah-sem51",
+      "title": "Bilan 2026 marchés Life Sciences x Animal Health",
+      "publish_date": "2026-12-15T07:30:00+01:00",
+      "channel": "perso",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LE SIGNAL",
+          "emoji": "🌟",
+          "title": "Bilan 2026 LS x AH",
+          "subtitle": "CE QUI A BOUGÉ, CE QUI VIENT",
+          "description": "Décryptage croisé Life Sciences x Animal Health par SKS Talents. Pour les CEO, DRH et investisseur.e.s.",
+          "cta": "Faites défiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "L'ANNÉE EN 5 FAITS",
+          "bullets": [
+            "AI Act haut risque applicable au 2 août 2026",
+            "Consolidation vet a franchi 20 % du parc FR",
+            "Levées biotechs FR de retour à +12 % (France Biotech 2026)",
+            "Manufacturing pharma FR a recédé 6 000 postes cadres",
+            "Petfood FR croissance +5,2 % (FACCO 2026)"
+          ],
+          "tagline": "Ce qui a bougé."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "1 · LEVÉES ET M&A",
+          "bullets": [
+            "Levées biotechs FR +12 % (France Biotech Panorama 2026)",
+            "M&A Life Sciences UE à record depuis 2015",
+            "M&A vet FR concentré sur 6 acteurs",
+            "Multiples EBITDA 10-14x sur cliniques vet",
+            "Fonds paneuropéens dominent les gros deals"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "48 % de départs cadres clés 24 mois post-M&A LS (EY 2026)",
+            "32 % de turnover 24 mois post-M&A vet (AFVAC + SNVEL 2026)",
+            "78 % des DRH utilisent l'IA en recrutement (Mercer 2026)"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "2 · TENSIONS RH CADRES",
+          "bullets": [
+            "Regulatory / Clinical / Manufacturing en tension top",
+            "Rémunération cadres LS +7,4 % vs 2025",
+            "Rémunération cadres AH +9,1 % vs 2025",
+            "Time-to-fill 132 jours en moyenne (SKS Talents 2026)",
+            "Postes nouveaux Chief AI Officer + Head Responsible AI"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "3 · IMPACT AI ACT",
+          "bullets": [
+            "Application haut risque 2 août 2026",
+            "68 % des orgs pharma sans comité IA (EY 2026)",
+            "23 % ont un registre AI Act documenté (EY 2026)",
+            "12 % des biotechs FR ont un.e référent.e nommé.e (France Biotech 2026)",
+            "Nouveau marché recrutement Chief AI Officer"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "CE QUI VIENT EN 2027",
+          "bullets": [
+            "Application entière AI Act 2 août 2027",
+            "Poursuite consolidation vet vers 25 % du parc",
+            "Retour investissements Manufacturing avec réindustrialisation",
+            "Émergence des fonctions Sustainability Officer petfood",
+            "Standard de plan de rétention pré-M&A LS"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous cadrez votre plan 2027 ?",
+          "highlight": "On peut aider.",
+          "description": "SKS Talents pilote actuellement 18 missions cadres LS + AH. Diagnostic 60 minutes pour cadrer votre plan de recrutement 2027.",
+          "button_label": "Écrivez-nous en privé",
+          "button_icon": "✉",
+          "caption": "Pour un échange en toute confidentialité.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Diagnostic structuration IA",
+              "url": "https://www.skstalents.fr/diagnostic-structuration-ia"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
               "url": "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944"
             },
             {
