@@ -111,7 +111,119 @@ const nextConfig = {
       // On consolide vers l'index /blog : les anciens slugs (accents/apostrophes,
       // ex. agroindustrie-cote-d'ivoire) n'ont pas d'equivalent /blog/{slug} => re-404.
       // Ajuste 2026-07-06 (avant: -> /blog/:slug* qui renvoyait vers des slugs inexistants).
-      { source: "/article/:slug*", destination: "/blog", permanent: true }
+      { source: "/article/:slug*", destination: "/blog", permanent: true },
+
+      // Sprint SKS Autonomous Cabinet v3 - Chantier 2 (Agent 1, 2026-08-26).
+      // Slugs blog cites en interne dans plusieurs articles mais absents de data/articles.ts.
+      // Cible : 0 URL 404. On redirige vers l'article existant le plus proche pour ne pas casser la lecture ni le SEO.
+      {
+        source: "/blog/cyber-ia-animal-health-cas-verifies",
+        destination: "/blog/ot-cybersecurity-lab-medtech",
+        permanent: true
+      },
+      {
+        source: "/blog/panorama-life-sciences-2026",
+        destination: "/blog/france-healthtech-2026-emploi-recrutement",
+        permanent: true
+      },
+      {
+        source: "/blog/salaires-biotech-france-2026",
+        destination: "/blog/aon-remuneration-life-sciences-2025-2026",
+        permanent: true
+      },
+
+      // Slugs job-roles cites en interne (articles.relatedRoles) mais absents de data/jobRoles.ts.
+      // Redirect vers la fiche existante la plus proche, ou fallback /job-roles.
+      {
+        source: "/job-roles/biotech-assay-development-scientist",
+        destination: "/job-roles/biotech-senior-scientist-arn-therapeutics",
+        permanent: true
+      },
+      {
+        source: "/job-roles/biotech-msat-engineer-single-use",
+        destination: "/job-roles/biotech-msat-engineer",
+        permanent: true
+      },
+      {
+        source: "/job-roles/biotech-qa-release-manager",
+        destination: "/job-roles/biotech-qa-batch-release-manager",
+        permanent: true
+      },
+      {
+        source: "/job-roles/diagnostic-clinical-affairs-project-manager",
+        destination: "/job-roles/diagnostic-clinical-affairs-manager",
+        permanent: true
+      },
+      {
+        source: "/job-roles/diagnostic-field-service-engineer-africa",
+        destination: "/job-roles/diagnostic-field-service-manager",
+        permanent: true
+      },
+      {
+        source: "/job-roles/diagnostic-hl7-interoperability-architect",
+        destination: "/job-roles/diagnostic-data-engineer-clinical",
+        permanent: true
+      },
+      {
+        source: "/job-roles/diagnostic-installation-qualification-validation-engineer",
+        destination: "/job-roles/diagnostic-service-operations-director",
+        permanent: true
+      },
+      {
+        source: "/job-roles/diagnostic-technical-support-scientist-molecular",
+        destination: "/job-roles/diagnostic-customer-success-manager",
+        permanent: true
+      },
+      {
+        source: "/job-roles/medical-vet-customer-education-manager",
+        destination: "/job-roles/medical-vet-commercial-training-manager",
+        permanent: true
+      },
+      {
+        source: "/job-roles/medical-vet-demand-planning-manager",
+        destination: "/job-roles/medical-vet-supply-planning-lead",
+        permanent: true
+      },
+      {
+        source: "/job-roles/medical-vet-regulatory-affairs-manager",
+        destination: "/job-roles/medical-vet-regulatory-affairs-vaccines",
+        permanent: true
+      },
+      {
+        source: "/job-roles/medical-vet-veterinary-rd-scientist",
+        destination: "/job-roles",
+        permanent: true
+      },
+      {
+        source: "/job-roles/petfood-demand-planner",
+        destination: "/job-roles/petfood-technical-services-manager",
+        permanent: true
+      },
+      {
+        source: "/job-roles/petfood-formulation-scientist",
+        destination: "/job-roles/petfood-palatability-scientist",
+        permanent: true
+      },
+      {
+        source: "/job-roles/petfood-regulatory-affairs-manager",
+        destination: "/job-roles",
+        permanent: true
+      },
+      {
+        source: "/job-roles/veterinary-practice-integration-manager",
+        destination: "/job-roles/veterinary-clinic-operations-director",
+        permanent: true
+      },
+      {
+        source: "/job-roles/cross-sector-ai-quality-manager-health",
+        destination: "/job-roles",
+        permanent: true
+      },
+      {
+        source: "/job-roles/cross-sector-health-data-governance-lead",
+        destination: "/job-roles",
+        permanent: true
+      }
     ];
   },
   async headers() {
@@ -126,12 +238,12 @@ const nextConfig = {
       "block-all-mixed-content",
       "upgrade-insecure-requests",
       "img-src 'self' data: blob: https://images.unsplash.com https://upload.wikimedia.org https://i.vimeocdn.com https://*.vimeocdn.com https://image.trustpilot.com https://fr.trustpilot.com https://widget.trustpilot.com https://www.google-analytics.com https://app.chatwoot.com https://www.google.com https://*.google.com https://*.googleusercontent.com https://logo.clearbit.com https://*.elfsight.com",
-      `script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://www.googletagmanager.com https://static.senja.io https://widget.trustpilot.com https://app.chatwoot.com https://translate.google.com https://translate.googleapis.com https://elfsightcdn.com https://*.elfsight.com${
+      `script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://www.googletagmanager.com https://static.senja.io https://widget.trustpilot.com https://app.chatwoot.com https://translate.google.com https://translate.googleapis.com https://elfsightcdn.com https://*.elfsight.com https://plausible.io${
         dashboard ? " https://unpkg.com" : ""
       }`,
       `style-src 'self' 'unsafe-inline'${dashboard ? " https://fonts.googleapis.com" : ""}`,
       `font-src 'self' data: https://*.elfsight.com${dashboard ? " https://fonts.gstatic.com" : ""}`,
-      "connect-src 'self' https://player.vimeo.com https://*.vimeo.com https://*.vimeocdn.com https://calendly.com https://assets.calendly.com https://fr.trustpilot.com https://widget.trustpilot.com https://static.senja.io https://www.google-analytics.com https://region1.google-analytics.com https://challenges.cloudflare.com https://app.chatwoot.com https://*.chatwoot.com wss://app.chatwoot.com wss://*.chatwoot.com https://translate.google.com https://translate.googleapis.com https://elfsightcdn.com https://*.elfsight.com",
+      "connect-src 'self' https://player.vimeo.com https://*.vimeo.com https://*.vimeocdn.com https://calendly.com https://assets.calendly.com https://fr.trustpilot.com https://widget.trustpilot.com https://static.senja.io https://www.google-analytics.com https://region1.google-analytics.com https://challenges.cloudflare.com https://app.chatwoot.com https://*.chatwoot.com wss://app.chatwoot.com wss://*.chatwoot.com https://translate.google.com https://translate.googleapis.com https://elfsightcdn.com https://*.elfsight.com https://plausible.io",
       "frame-src 'self' https://player.vimeo.com https://calendly.com https://assets.calendly.com https://challenges.cloudflare.com https://widget.trustpilot.com https://*.trustpilot.com https://*.senja.io https://app.chatwoot.com https://*.chatwoot.com https://translate.google.com https://*.elfsight.com",
       "form-action 'self' https://calendly.com"
     ].join("; ");

@@ -606,10 +606,16 @@ def generate_pdf(carrousel: dict, chrome_bin: str) -> Tuple[Path, subprocess.Com
 
 
 def main() -> int:
+    global OUTPUT_DIR
     manifest_path = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_MANIFEST
     if not manifest_path.exists():
         print(f"❌ Manifest introuvable: {manifest_path}")
         return 1
+
+    if len(sys.argv) > 2:
+        OUTPUT_DIR = Path(sys.argv[2])
+        if not OUTPUT_DIR.is_absolute():
+            OUTPUT_DIR = PROJECT_ROOT / OUTPUT_DIR
 
     chrome_bin = find_chrome()
     if not chrome_bin:

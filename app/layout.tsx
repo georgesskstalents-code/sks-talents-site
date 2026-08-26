@@ -111,6 +111,20 @@ export default function RootLayout({
         <link rel="preconnect" href="https://i.vimeocdn.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://challenges.cloudflare.com" />
+        {/* Plausible Analytics (cookieless, RGPD-friendly). Script hosted on plausible.io. */}
+        <link rel="preconnect" href="https://plausible.io" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://plausible.io" />
+        <script
+          defer
+          data-domain="skstalents.fr"
+          src="https://plausible.io/js/script.tagged-events.js"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}"
+          }}
+        />
         {/* RSS auto-discovery - picked up by Google News, LLM crawlers, feed readers */}
         <link rel="alternate" type="application/rss+xml" title="SKS TALENTS - Articles" href="/feed.xml" />
       </head>

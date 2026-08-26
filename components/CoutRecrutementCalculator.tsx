@@ -1,6 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import SimulatorLeadForm from "@/components/SimulatorLeadForm";
+import { trackEvent } from "@/lib/analytics";
 
 type RoleTier =
   | "c-level"
@@ -164,6 +166,63 @@ export default function CoutRecrutementCalculator() {
     [annualSalary, role, timeToFillMonths, teamSize]
   );
 
+  const startedRef = useRef(false);
+  const completedRef = useRef(false);
+
+  // simulator_started : premiere interaction utile de l'utilisateur.rice.
+  useEffect(() => {
+    if (startedRef.current) return;
+    // La premiere valeur par defaut n'est pas comptee ; on attend un changement de parametre.
+    const isDefault =
+      annualSalary === 120000 &&
+      roleTier === "vp-director" &&
+      timeToFillMonths === 4 &&
+      teamSize === 5;
+    if (isDefault) return;
+    startedRef.current = true;
+    trackEvent("simulator_started", { simulator: "cout-mauvais-recrutement" });
+  }, [annualSalary, roleTier, timeToFillMonths, teamSize]);
+
+  // simulator_completed : resultat stabilise (450 ms sans nouvelle modif). Une seule fois.
+  useEffect(() => {
+    if (completedRef.current) return;
+    if (!startedRef.current) return;
+    const timer = setTimeout(() => {
+      if (completedRef.current) return;
+      completedRef.current = true;
+      trackEvent("simulator_completed", {
+        simulator: "cout-mauvais-recrutement",
+        role: roleTier,
+        total_min: Math.round(result.totalMin),
+        total_max: Math.round(result.totalMax)
+      });
+    }, 450);
+    return () => clearTimeout(timer);
+  }, [result.totalMin, result.totalMax, roleTier]);
+
+  const simulatorContext = useMemo(
+    () => ({
+      role: roleTier,
+      annual_salary_eur: annualSalary,
+      time_to_fill_months: timeToFillMonths,
+      team_size: teamSize,
+      total_min_eur: Math.round(result.totalMin),
+      total_max_eur: Math.round(result.totalMax),
+      multiplier_min: Number(result.multiplierMin.toFixed(2)),
+      multiplier_max: Number(result.multiplierMax.toFixed(2))
+    }),
+    [
+      roleTier,
+      annualSalary,
+      timeToFillMonths,
+      teamSize,
+      result.totalMin,
+      result.totalMax,
+      result.multiplierMin,
+      result.multiplierMax
+    ]
+  );
+
   return (
     <div className="grid gap-8 lg:grid-cols-[380px_1fr]">
       <div className="card-surface space-y-5 p-6">
@@ -304,6 +363,11 @@ export default function CoutRecrutementCalculator() {
             demande un cadrage specifique.
           </p>
         </div>
+
+        <SimulatorLeadForm
+          simulatorId="cout-mauvais-recrutement"
+          simulatorContext={simulatorContext}
+        />
       </div>
     </div>
   );
