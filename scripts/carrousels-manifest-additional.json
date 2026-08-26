@@ -1,0 +1,1923 @@
+{
+  "_comment": "Manifest carrousels ADDITIONNELS Q4 2026 (Agent 2 sprint v3). 15 carrousels 8 slides.",
+  "carrousels": [
+    {
+      "slug": "add-sales-manager-petfood-fiche",
+      "title": "Sales Manager Petfood France - fiche metier 2026",
+      "publish_date": "2026-09-04T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "FOCUS METIER",
+          "emoji": "🐶",
+          "title": "Sales Manager Petfood",
+          "subtitle": "FRANCE 2026",
+          "description": "Le poste qui arbitre entre GMS, clinique veto, specialisee et D2C.",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "VOUS CONNAISSEZ...",
+          "bullets": [
+            "Les 5 groupes qui pesent 60 pourcent du marche",
+            "Les enjeux MDD en GMS",
+            "Le canal specialise et vet",
+            "Les enjeux D2C petfood",
+            "Les cycles achats des distributeurs"
+          ],
+          "tagline": "Alors lisez la suite."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "LA MISSION",
+          "bullets": [
+            "Piloter le P&L des canaux vet, GMS et D2C",
+            "Encadrer les KAM et Sales Regions",
+            "Negocier les accords annuels enseignes",
+            "Arbitrer la strategie de gamme et prix",
+            "Animer la roadmap sales avec le COMEX"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "5 Mds EUR marche FR 2025 (FACCO 2025)",
+            "+3 pourcent par an de croissance",
+            "60 pourcent du marche detenu par 5 groupes"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "LE PROFIL RECHERCHE",
+          "bullets": [
+            "8 a 12 ans en petfood ou agroalimentaire",
+            "Maitrise CRM et pilotage KAM",
+            "Aisance direction achats enseignes",
+            "P&L canal + strategie gamme",
+            "Vision D2C et digital"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "POURQUOI CE POSTE EST TENDU",
+          "bullets": [
+            "Consolidation petfood en cours",
+            "D2C accelere sans casser les canaux",
+            "Vivier restreint aux profils multi-canaux",
+            "Concurrence pharma et FMCG sur le meme profil",
+            "+8 pourcent de fixe observe en 2026"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "NOS 5 SIGNAUX DE RECRUTEMENT",
+          "bullets": [
+            "Track record P&L canal",
+            "Reseau achats enseignes actif",
+            "Cases D2C reussis",
+            "Pilotage KAM demontre",
+            "Vision 3 ans sur la strategie de gamme"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous recrutez ce profil ?",
+          "highlight": "On l'a trouve.e.",
+          "description": "SKS Talents pilote actuellement 3 mandats Sales Manager petfood en France.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche metier complete",
+              "url": "https://skstalents.fr/job-roles/sales-manager-petfood"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "add-cfo-petfood-fiche",
+      "title": "CFO Petfood - fiche metier 2026",
+      "publish_date": "2026-09-07T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "FOCUS METIER",
+          "emoji": "💼",
+          "title": "CFO Petfood",
+          "subtitle": "FRANCE 2026",
+          "description": "Le poste financier qui pilote la marge dans un marche a 5 acteurs dominants.",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "VOUS CONNAISSEZ...",
+          "bullets": [
+            "La structure de couts d'un fabricant petfood",
+            "Le pricing multi-canaux GMS / vet / D2C",
+            "Les cycles matieres premieres",
+            "Les enjeux CSRD 2025",
+            "Les operations de M&A du secteur"
+          ],
+          "tagline": "Alors lisez la suite."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "LA MISSION",
+          "bullets": [
+            "Piloter le P&L groupe et par filiale",
+            "Structurer le controlling par canal",
+            "Preparer les operations M&A et LBO",
+            "Interfacer investisseurs et banques",
+            "Cadre reporting CSRD conforme"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "150-220 k EUR fixe median FR 2026",
+            "6-12 mois de time-to-fill",
+            "LTIP dans 80 pourcent des packages"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "LE PROFIL RECHERCHE",
+          "bullets": [
+            "10-15 ans finance industrie",
+            "Vecu M&A structurant",
+            "Aisance investisseurs et banques",
+            "Anglais professionnel",
+            "Vision produit + industriel"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "POURQUOI CE POSTE EST TENDU",
+          "bullets": [
+            "Consolidation petfood cree la demande",
+            "Peu de CFO ont fait 3+ M&A dans le secteur",
+            "Concurrence FMCG et fonds sur le meme profil",
+            "CSRD ajoute une couche de complexite",
+            "LTIP peu standardise"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "NOS 5 SIGNAUX DE RECRUTEMENT",
+          "bullets": [
+            "Track record M&A demontre",
+            "Vecu LBO ou build-up",
+            "Maitrise controlling multi-canaux",
+            "Aisance board et investisseurs",
+            "Vision 3 ans strategie financiere"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous recrutez ce profil ?",
+          "highlight": "On l'a trouve.e.",
+          "description": "SKS Talents pilote 2 mandats CFO petfood en portefeuille.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche metier complete",
+              "url": "https://skstalents.fr/job-roles/cfo-petfood"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "add-rd-petfood-fiche",
+      "title": "R&D Manager Petfood - fiche metier 2026",
+      "publish_date": "2026-09-10T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "FOCUS METIER",
+          "emoji": "🧪",
+          "title": "R&D Manager Petfood",
+          "subtitle": "FRANCE 2026",
+          "description": "Le poste central qui prepare les gammes 2027-2030 face aux nouvelles proteines.",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "VOUS CONNAISSEZ...",
+          "bullets": [
+            "Les proteines alternatives (insecte, algue, vegetal)",
+            "La reglementation FEDIAF et EU",
+            "Les enjeux appetence chien et chat",
+            "Les process d'extrusion et de cuisson",
+            "Les protocoles d'etudes cliniques petfood"
+          ],
+          "tagline": "Alors lisez la suite."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "LA MISSION",
+          "bullets": [
+            "Piloter la roadmap R&D 3 ans",
+            "Encadrer une equipe 5 a 15 R&D",
+            "Interfacer marketing et achats matieres",
+            "Suivre les etudes cliniques et appetence",
+            "Sourcer les ingredients alternatifs"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "+35 pourcent d'attention consommateurs sur les proteines alternatives (Kynetec 2025)",
+            "5 M EUR budget R&D moyen sur un fabricant TOP 10 FR",
+            "3 a 5 ans de cycle produit standard"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "LE PROFIL RECHERCHE",
+          "bullets": [
+            "Ingenieur agro ou docteur en nutrition animale",
+            "8-12 ans en R&D petfood ou agroalim",
+            "Reseau ecoles agro et labos actif",
+            "Aisance CODIR et transversalite",
+            "Vision science + business"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "POURQUOI CE POSTE EST TENDU",
+          "bullets": [
+            "Proteines alternatives = nouveau savoir-faire",
+            "Concurrence R&D pharma et FMCG",
+            "Peu de labos petfood sur le sol francais",
+            "Reglementation en mouvement",
+            "Vivier ecoles limite en France"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "NOS 5 SIGNAUX DE RECRUTEMENT",
+          "bullets": [
+            "Portefeuille produits laisses en marche",
+            "Publications ou brevets petfood",
+            "Reseau ecoles et labos actif",
+            "Encadrement equipe demontre",
+            "Vision 3 ans sur les proteines alternatives"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous recrutez ce profil ?",
+          "highlight": "On l'a trouve.e.",
+          "description": "SKS Talents pilote 2 mandats R&D petfood en portefeuille.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche metier complete",
+              "url": "https://skstalents.fr/job-roles/rd-manager-petfood"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "add-marketing-petfood-fiche",
+      "title": "Chief Marketing Officer Petfood - fiche metier 2026",
+      "publish_date": "2026-09-14T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "FOCUS METIER",
+          "emoji": "📣",
+          "title": "Chief Marketing Officer Petfood",
+          "subtitle": "FRANCE 2026",
+          "description": "Le poste qui reinvente la relation client sur GMS, vet, specialisee et D2C.",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "VOUS CONNAISSEZ...",
+          "bullets": [
+            "La segmentation premium petfood",
+            "Les 5 canaux de distribution FR",
+            "Les strategies fidelisation D2C",
+            "Le brand equity multi-marques",
+            "Les cycles achats consommateurs"
+          ],
+          "tagline": "Alors lisez la suite."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "LA MISSION",
+          "bullets": [
+            "Piloter la strategie marque groupe",
+            "Segmenter les gammes premium / mainstream",
+            "Accelerer le D2C sans casser la specialisee",
+            "Piloter le budget media et brand",
+            "Interfacer R&D et Sales"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "+8 pourcent segment premium chien 2025 (FACCO)",
+            "D2C = 4 a 8 pourcent des ventes premium",
+            "LTV D2C x 3.2 vs GMS"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "LE PROFIL RECHERCHE",
+          "bullets": [
+            "10-15 ans marketing FMCG ou petcare",
+            "Vecu D2C et digital",
+            "Aisance CODIR + board",
+            "Anglais professionnel",
+            "Portefeuille segmentation premium"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "POURQUOI CE POSTE EST TENDU",
+          "bullets": [
+            "D2C encore peu maitrise dans le secteur",
+            "Concurrence FMCG sur les memes profils",
+            "Necessite de piloter 5 canaux en parallele",
+            "Attentes CSRD sur la comm marque",
+            "+10 pourcent fixe observe 2026"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "NOS 5 SIGNAUX DE RECRUTEMENT",
+          "bullets": [
+            "Cases D2C reussis",
+            "Segmentation premium demontree",
+            "Aisance board + investisseurs",
+            "Reseau media et retail actif",
+            "Vision 3 ans strategie marque"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous recrutez ce profil ?",
+          "highlight": "On l'a trouve.e.",
+          "description": "SKS Talents pilote 2 mandats CMO petfood en portefeuille.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche metier complete",
+              "url": "https://skstalents.fr/job-roles/chief-marketing-officer-petfood"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "add-product-manager-petfood-fiche",
+      "title": "Product Manager Petfood - fiche metier 2026",
+      "publish_date": "2026-09-17T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "FOCUS METIER",
+          "emoji": "🎯",
+          "title": "Product Manager Petfood",
+          "subtitle": "FRANCE 2026",
+          "description": "Le poste operationnel qui structure les gammes premium et alternative proteins.",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "VOUS CONNAISSEZ...",
+          "bullets": [
+            "La segmentation chien / chat / mini-pets",
+            "Le pricing multi-canaux",
+            "Les insights consommateurs petcare",
+            "Le cycle produit petfood 24-36 mois",
+            "Les enjeux packaging recyclable"
+          ],
+          "tagline": "Alors lisez la suite."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "LA MISSION",
+          "bullets": [
+            "Piloter le lancement de 3 a 8 references par an",
+            "Interfacer R&D, achats et sales",
+            "Cadre le pricing et positionnement",
+            "Coordonner la campagne go-to-market",
+            "Suivre le P&L reference"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "55-75 k EUR fixe median FR 2026",
+            "24-36 mois cycle produit standard",
+            "5 a 8 references par PM en moyenne"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "LE PROFIL RECHERCHE",
+          "bullets": [
+            "5-8 ans marketing FMCG ou petcare",
+            "Vecu lancement gammes premium",
+            "Aisance R&D + achats + sales",
+            "P&L reference maitrise",
+            "Anglais professionnel"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "POURQUOI CE POSTE EST TENDU",
+          "bullets": [
+            "Concurrence FMCG et beauty sur les juniors",
+            "Alternative proteins = nouveau savoir-faire",
+            "Attentes packaging refill accelerees",
+            "Cycle produit long, deficit de patience",
+            "+7 pourcent fixe observe 2026"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "NOS 5 SIGNAUX DE RECRUTEMENT",
+          "bullets": [
+            "Track record lancement produit",
+            "Vecu premium demontre",
+            "Aisance transversale",
+            "P&L reference documente",
+            "Vision 3 ans sur les proteines alternatives"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous recrutez ce profil ?",
+          "highlight": "On l'a trouve.e.",
+          "description": "SKS Talents pilote 3 mandats Product Manager petfood en portefeuille.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche metier complete",
+              "url": "https://skstalents.fr/job-roles/product-manager-petfood"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "add-head-sustainability-petfood-fiche",
+      "title": "Head of Sustainability Petfood - fiche metier 2026",
+      "publish_date": "2026-09-21T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "FOCUS METIER",
+          "emoji": "🌱",
+          "title": "Head of Sustainability Petfood",
+          "subtitle": "FRANCE 2026",
+          "description": "Le poste qui n'existait pas il y a 3 ans, devenu strategique dans tous les groupes de plus de 300 M EUR de CA.",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "VOUS CONNAISSEZ...",
+          "bullets": [
+            "CSRD applicable exercice 2025",
+            "Les ingredients alternatifs (insecte, algue)",
+            "Le Scope 3 en petfood",
+            "Le packaging recyclable et refill",
+            "Les attentes retail Carrefour, Casino, Leclerc"
+          ],
+          "tagline": "Alors lisez la suite."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "LA MISSION",
+          "bullets": [
+            "Piloter la roadmap ingredients alternatifs",
+            "Reduire l'empreinte Scope 3 (80 pourcent des emissions)",
+            "Structurer le packaging refill",
+            "Rediger la comm CSRD conforme",
+            "Interfacer retail sur les scores"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "80 pourcent des emissions viennent des matieres premieres",
+            "85-130 k EUR fixe median 2026",
+            "+15 pourcent de tension recrutement 2026"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "LE PROFIL RECHERCHE",
+          "bullets": [
+            "8-12 ans agroalim ou petfood",
+            "Formation sustainability ou reconversion",
+            "Aisance CODIR + retail",
+            "Anglais professionnel",
+            "Vision science + business + comm"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "POURQUOI CE POSTE EST TENDU",
+          "bullets": [
+            "Poste inexistant il y a 3 ans",
+            "CSRD accelere la demande",
+            "Concurrence FMCG et beauty",
+            "Formation initiale limitee",
+            "Peu de profils avec P&L significatif"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "NOS 5 SIGNAUX DE RECRUTEMENT",
+          "bullets": [
+            "Track record CSRD demontre",
+            "Reseau matieres premieres alternatives",
+            "Aisance transversale CODIR",
+            "Vision science + business",
+            "Rattachement CEO ou COO en negociation"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous recrutez ce profil ?",
+          "highlight": "On l'a trouve.e.",
+          "description": "SKS Talents pilote 2 mandats Head of Sustainability petfood en portefeuille.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche metier complete",
+              "url": "https://skstalents.fr/job-roles/head-of-sustainability-petfood"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "add-cso-animal-health-fiche",
+      "title": "Chief Scientific Officer santé animale - fiche metier 2026",
+      "publish_date": "2026-09-28T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "FOCUS METIER",
+          "emoji": "🔬",
+          "title": "Chief Scientific Officer",
+          "subtitle": "SANTE ANIMALE FR 2026",
+          "description": "Le poste dont on parle en board, celui qu'on recrute rarement bien.",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "VOUS CONNAISSEZ...",
+          "bullets": [
+            "La difference CSO vs Head of R&D",
+            "Les cycles produits vet 5-10 ans",
+            "Les collaborations academiques cles",
+            "La propriete intellectuelle strategique",
+            "Le board d'un lab vet"
+          ],
+          "tagline": "Alors lisez la suite."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "LA MISSION",
+          "bullets": [
+            "Arbitrer les priorites scientifiques 5 ans",
+            "Representer la science en board",
+            "Piloter la propriete intellectuelle",
+            "Sponsoriser les collaborations academiques",
+            "Interfacer regulatory et R&D"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "180-280 k EUR fixe + LTIP",
+            "9-15 mois time-to-fill",
+            "6 pourcent seulement des postes pourvus < 9 mois en Europe"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "LE PROFIL RECHERCHE",
+          "bullets": [
+            "DVM + PhD ou equivalent",
+            "15-20 ans R&D vet ou pharma",
+            "Culture veterinaire indispensable",
+            "Anglais scientifique impeccable",
+            "Aisance board + investisseurs"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "POURQUOI CE POSTE EST RARE",
+          "bullets": [
+            "Vivier CSO vet estime a 60 personnes en Europe",
+            "Confusion CSO vs Head of R&D dans les briefs",
+            "Package COMEX pas toujours propose",
+            "Rattachement CEO indispensable",
+            "Concurrence pharma sur les memes profils"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "NOS 5 SIGNAUX DE RECRUTEMENT",
+          "bullets": [
+            "Track record AMM et brevets",
+            "Reseau academique demontre",
+            "Vecu board significatif",
+            "Vision 5 ans portefeuille strategique",
+            "Aisance capacite a recruter le/la Head of R&D"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous cherchez ce profil ?",
+          "highlight": "On l'a trouve.e.",
+          "description": "SKS Talents pilote 2 mandats CSO santé animale en portefeuille.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche metier complete",
+              "url": "https://skstalents.fr/job-roles/chief-scientific-officer-animal-health"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "add-h5n1-3-postes-urgents",
+      "title": "H5N1 - 3 postes qui deviennent critiques automne 2026",
+      "publish_date": "2026-10-02T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LE SIGNAL",
+          "emoji": "🐦",
+          "title": "Grippe aviaire H5N1",
+          "subtitle": "LES 3 POSTES CRITIQUES AUTOMNE 2026",
+          "description": "Pour les DRH et directions techniques integrateurs, cooperatives et labos vet.",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "LE CONTEXTE",
+          "bullets": [
+            "Vague H5N1 2025-2026 couvre 22 pays",
+            "Intensite forte attendue automne 2026 en Europe",
+            "Vaccination canards obligatoire depuis 2023",
+            "4 regions FR en zone rouge",
+            "Marche RH qui bouge vite"
+          ],
+          "tagline": "Voici les 3 postes critiques."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "POSTE 1 · RESPONSABLE BIOSECURITE",
+          "bullets": [
+            "Poste passe de support a strategique",
+            "Pilote les protocoles et la formation eleveurs",
+            "Interface avec la DDPP",
+            "Fourchette 55-75 k EUR fixe",
+            "Time-to-fill 2-4 mois"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "POSTE 2 · VETERINAIRE TECHNIQUE AVIAIRE",
+          "bullets": [
+            "DVM + 5 ans mini filiere",
+            "Terrain + protocoles + indemnisations",
+            "3-5 postes ouverts en permanence Grand Ouest",
+            "Fourchette 65-90 k EUR fixe",
+            "Reseau SNGTV + AFVAC obligatoire"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "POSTE 3 · REGULATORY VACCINS AVIAIRES",
+          "bullets": [
+            "Marche etroit 30 personnes activables FR",
+            "Vaccination H5N1 obligatoire canards",
+            "Portefeuille AMM en evolution",
+            "Fourchette 90-130 k EUR fixe",
+            "Time-to-fill 6-9 mois"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "POURQUOI ILS SONT TENDUS",
+          "bullets": [
+            "Vague H5N1 accelere la demande",
+            "Vivier tres restreint sur les 3 profils",
+            "Concurrence labos + integrateurs sur les memes CV",
+            "Pas de plan de succession dans la plupart des orgs",
+            "Reglementation vaccination en mouvement"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "CE QUE FONT LES ORGS QUI GAGNENT L'AUTOMNE",
+          "bullets": [
+            "Recrutent avant novembre",
+            "Cadrent le poste en amont du pic",
+            "Provisionnent le variable adapte",
+            "Nomment un.e binome interne",
+            "Suivent la mobilite avec un.e RH dedie.e"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous ouvrez un de ces postes ?",
+          "highlight": "On les connait.",
+          "description": "SKS Talents pilote 4 mandats aviaires actifs cet automne.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche metier veterinaire aviaire",
+              "url": "https://skstalents.fr/job-roles/medical-vet-technical-manager-poultry"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "add-vet-tech-ia-nouveau-referentiel",
+      "title": "Vet Tech + IA - le nouveau referentiel 2027",
+      "publish_date": "2026-10-05T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LE CONSEIL",
+          "emoji": "🐾",
+          "title": "Vet Tech + IA",
+          "subtitle": "LE NOUVEAU REFERENTIEL 2027",
+          "description": "Pour chaque CEO ou DRH clinique qui structure une equipe veterinaire.",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "LE CONSTAT",
+          "bullets": [
+            "Le/la vet tech pese 40 pourcent du temps clinique utile",
+            "Moins de 15 pourcent des cliniques ont formalise le role",
+            "L'IA veterinaire reduit 30-40 pourcent du temps admin",
+            "Le/la vet tech forme.e devient le poste pivot",
+            "Fiche metier doublee en 2027"
+          ],
+          "tagline": "Voici le nouveau referentiel."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "COMPETENCES CLASSIQUES 2024",
+          "bullets": [
+            "Accueil clientele",
+            "Contention et prelevements",
+            "Laboratoire courant",
+            "Gestion stock",
+            "Support administratif"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "NOUVELLES COMPETENCES 2027",
+          "bullets": [
+            "Triage IA en salle d'attente",
+            "Transcription auto consultations",
+            "Recall client automatise",
+            "Lecture dashboards cliniques",
+            "Animation plan de sante annuel"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "OUTILS A INTEGRER",
+          "bullets": [
+            "SmartFlow ou equivalent",
+            "Vetstoria pour la prise de RDV",
+            "Digitail ou Provet Cloud",
+            "Modules IA transcription",
+            "Dashboards KPI cliniques"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "REMUNERATION 2026",
+          "bullets": [
+            "Vet tech classique : 26-32 k EUR fixe",
+            "Vet tech forme IA : 32-42 k EUR fixe",
+            "Prime d'evolution 5-10 pourcent",
+            "Formation IA remboursee",
+            "Budget IA cabinet 3-8 k EUR / an"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "LES 3 ETAPES DE STRUCTURATION",
+          "bullets": [
+            "Redigez la fiche metier vet tech augmente",
+            "Provisionnez le budget IA 12 mois",
+            "Formez avant de recruter les nouveaux",
+            "Nommez un.e referent.e IA en clinique",
+            "Suivez les KPI temps admin en dashboard"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous structurez votre equipe vet 2027 ?",
+          "highlight": "On peut cadrer.",
+          "description": "SKS Talents accompagne les groupes vet sur la structuration equipe et IA.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Diagnostic structuration",
+              "url": "https://skstalents.fr/diagnostic-structuration-ia"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "add-5-signaux-marche-ah-q4",
+      "title": "5 signaux marche AH + Petfood - Q4 2026",
+      "publish_date": "2026-10-12T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LE SIGNAL",
+          "emoji": "📡",
+          "title": "5 signaux marche Q4 2026",
+          "subtitle": "SANTE ANIMALE + PETFOOD",
+          "description": "Pour les CODIR qui pilotent la roadmap Q1 2027.",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "POURQUOI CES SIGNAUX ?",
+          "bullets": [
+            "Veille SKS Talents Q3 2026",
+            "Signaux convergents en Q4",
+            "Impact direct sur le plan de recrutement",
+            "Sources publiques + observation terrain",
+            "Vue transversale AH + petfood"
+          ],
+          "tagline": "Voici les 5 signaux."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "SIGNAL 1 · LEVEE YNSECT 45 M EUR",
+          "bullets": [
+            "Serie D reussie Q3 2026",
+            "Insecte petfood se structure",
+            "3 postes CSO + Head of R&D + Chief Commercial concurrents ouverts",
+            "Reformulation en cours chez les acteurs incumbents"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "SIGNAL 2 · RACHAT VET ANIMA BZH",
+          "bullets": [
+            "Groupe europeen non nomme",
+            "Consolidation cliniques FR en phase 3",
+            "Fonds nordiques regardent activement",
+            "2-3 deals attendus d'ici mars 2027",
+            "Postes Directeurs regionaux ouverts"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "SIGNAL 3 · CHIEF AI OFFICER PETFOOD",
+          "bullets": [
+            "Top 5 FR nomme.e un.e CAIO en Q3 2026",
+            "IA generative arrive en R&D et marketing petfood",
+            "Poste devient standard 2027",
+            "Concurrence pharma sur meme profil",
+            "Fourchette 130-180 k EUR observe"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "SIGNAL 4 · CONSOLIDATION SIMV",
+          "bullets": [
+            "Integration achevee",
+            "Plan social pilote 15-25 postes redeployes",
+            "Marche liquide sur marketing, medical, commercial",
+            "Fenetre de recrutement 3-6 mois",
+            "Opportunite pour les challengers"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "SIGNAL 5 · AMR 2027 - RETRAITS",
+          "bullets": [
+            "Premiers labos vet retirent 3 references classees critiques",
+            "Portefeuille evolue vite",
+            "Postes regulatory et R&D en tension",
+            "Reformulation 2eme generation en cours",
+            "Impact time-to-market majeur"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous lisez votre plan Q1 2027 ?",
+          "highlight": "On peut le cadrer.",
+          "description": "SKS Talents partage sa lecture terrain avec les CODIR AH + petfood.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Notre expertise Animal Health",
+              "url": "https://skstalents.fr/expertises/animal-health"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "add-consolidation-vet-3-chiffres",
+      "title": "Consolidation cliniques vet - 3 chiffres 2026",
+      "publish_date": "2026-10-19T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LA DONNEE",
+          "emoji": "🏥",
+          "title": "Consolidation cliniques vet FR",
+          "subtitle": "3 CHIFFRES QUI CHANGENT LA DD",
+          "description": "Pour les fonds, dirigeant.e.s et acquereurs qui pilotent la consolidation vet.",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "LE CONTEXTE",
+          "bullets": [
+            "20 pourcent du parc deja consolide (SNVEL 2026)",
+            "6 groupes majeurs pilotent la vague",
+            "Multiples EBITDA 10-14x",
+            "Turnover post-acquisition en hausse",
+            "Le cout humain reste absent des pitchs"
+          ],
+          "tagline": "Voici les 3 chiffres."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "CHIFFRE 1 · 32 POURCENT TURNOVER",
+          "bullets": [
+            "Turnover moyen vet 24 mois post-M&A",
+            "Source AFVAC + SNVEL 2026",
+            "Contre 12 pourcent independantes",
+            "Concentre sur seniors + associes",
+            "Signal faible detecte a 6 mois"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "CHIFFRE 2 · 45 K EUR REMPLACEMENT",
+          "bullets": [
+            "Cout de remplacement moyen d'un.e DVM",
+            "Source Kynetec Animal Health Insights 2026",
+            "Recrutement + integration + productivite perdue",
+            "Sur 32 pourcent de turnover l'addition est structurelle",
+            "Peu de modeles M&A l'integrent"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "CHIFFRE 3 · 9 MOIS RECONSTITUTION",
+          "bullets": [
+            "Delai moyen pour retrouver la capacite clinique",
+            "Source observation SKS Talents 2026",
+            "Impacte le CA reel vs business plan",
+            "Explique 60 pourcent des ecarts",
+            "Reduit a 4 mois avec plan de retention pre-closing"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "CE QUE DEVRAIT CHANGER LA DD",
+          "bullets": [
+            "Integrer un.e RH vet des le screening",
+            "Cartographier les departs 18 mois pre-M&A",
+            "Budgetiser le plan de retention",
+            "Nommer un.e Directeur.rice regional.e avant closing",
+            "Suivre le KPI turnover comme le KPI CA"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "LES 5 KPI POST-M&A A SUIVRE",
+          "bullets": [
+            "Turnover vet a 6, 12, 24 mois",
+            "Anciennete moyenne DVM sur site",
+            "NPS clients cliniques",
+            "Marge nette site",
+            "Utilisation salle de consultation"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous pilotez un dossier M&A vet ?",
+          "highlight": "On sait ou sont les risques.",
+          "description": "SKS Talents accompagne fonds et acquereurs sur la DD RH veterinaire.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Notre expertise Animal Health",
+              "url": "https://skstalents.fr/expertises/animal-health"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "add-regulatory-europe-vet-3-chiffres",
+      "title": "Regulatory EMA santé animale - le point 2026",
+      "publish_date": "2026-10-26T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LA DONNEE",
+          "emoji": "🏛️",
+          "title": "Regulatory EMA santé animale",
+          "subtitle": "LE POINT MARCHE 2026",
+          "description": "Pour les CEO et Chief Regulatory qui pilotent l'acces marche Europe.",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "LE CADRE",
+          "bullets": [
+            "Reglement UE 2019/6 applicable depuis 2022",
+            "Procedure centralisee elargie",
+            "Pharmacovigilance renforcee (VigiVet + PSUR)",
+            "Cadre AMR restructure les portefeuilles",
+            "EMA + CVMP + agences nationales cles"
+          ],
+          "tagline": "Voici les 3 chiffres."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "CHIFFRE 1 · 200 PROFILS EN EUROPE",
+          "bullets": [
+            "Vivier Head of Regulatory Europe vet",
+            "Marche etroit, tres concurrentiel",
+            "Peu de mobilite UK post-Brexit",
+            "Concurrence pharma sur meme profil",
+            "Formation initiale limitee (peu de DVM regulatory)"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "CHIFFRE 2 · 110-160 K EUR FIXE",
+          "bullets": [
+            "Fourchette 2026 poste France",
+            "Variable 15-25 pourcent",
+            "LTIP dans 60 pourcent des packages",
+            "Vehicule de fonction standard",
+            "Package total 150-220 k EUR"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "CHIFFRE 3 · 6-12 MOIS TIME-TO-FILL",
+          "bullets": [
+            "Delai observe 2024-2026",
+            "Depend du brief propre ou pas",
+            "Reseau EMA + CVMP indispensable",
+            "Anglais professionnel + 2eme langue UE",
+            "Aisance CODIR + board"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "POURQUOI CE POSTE BLOQUE VOS AMM",
+          "bullets": [
+            "Une AMM centralisee mal cadree = 12-18 mois de retard",
+            "Un dossier CMC incomplet double le time-to-market",
+            "Un.e mauvais.e Head reg ralentit tout le portefeuille",
+            "Le/la bon.ne debloque 12-18 mois",
+            "Investissement rentable des 12 mois"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "ROADMAP RECRUTEMENT",
+          "bullets": [
+            "Cadrez la mission autour du portefeuille 2027-2030",
+            "Ouvrez le poste 12 mois avant le besoin",
+            "Anticipez la relation CVMP + agences",
+            "Prevoyez binome regulatory + market access",
+            "Budgetisez le package COMEX"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous ouvrez ce poste ?",
+          "highlight": "On le connait.",
+          "description": "SKS Talents pilote 3 mandats Head of Regulatory Europe santé animale.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche metier complete",
+              "url": "https://skstalents.fr/job-roles/medical-vet-head-of-regulatory-europe"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "add-rem-2026-santé-animale-grille",
+      "title": "Remunerations 2026 santé animale - grille honnete SKS",
+      "publish_date": "2026-11-02T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LA DONNEE",
+          "emoji": "💶",
+          "title": "Remunerations 2026 santé animale",
+          "subtitle": "LA GRILLE HONNETE SKS TALENTS",
+          "description": "Basee sur 18 mandats livres cette annee (7 AH + 11 LS).",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "METHODE",
+          "bullets": [
+            "18 mandats SKS Talents livres en 2026",
+            "Fixe median FR + variable moyen",
+            "Sources croisees candidats + entreprises",
+            "Fourchettes serrees sur les postes cles",
+            "Actualisation trimestrielle en interne"
+          ],
+          "tagline": "Voici la grille par poste."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "POSTES TECHNIQUES VET",
+          "bullets": [
+            "Vet Technical Manager : 65-90 k EUR fixe",
+            "Variable 10-15 pourcent",
+            "Vehicule fonction",
+            "Prime bureau 3-6 k EUR / an",
+            "+8 pourcent observe en 2026"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "POSTES COMMERCIAUX",
+          "bullets": [
+            "Key Account Manager : 75-110 k EUR fixe + variable 20-40 pourcent",
+            "Sales Manager region : 90-130 k EUR + variable 25-45 pourcent",
+            "Chief Commercial : 130-180 k EUR fixe + variable + LTIP",
+            "Prime signature rare > 15 pourcent",
+            "Vehicule fonction standard"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "POSTES REGULATORY + SUSTAINABILITY",
+          "bullets": [
+            "Head of Regulatory Europe : 110-160 k EUR fixe",
+            "Head of Sustainability petfood : 85-130 k EUR fixe",
+            "AI Act Officer emergent : 90-140 k EUR fixe",
+            "+15 pourcent observe en 2026",
+            "Variable 15-25 pourcent"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "POSTES COMEX + BOARD",
+          "bullets": [
+            "Chief Scientific Officer : 180-280 k EUR + LTIP",
+            "CFO groupe santé animale : 150-220 k EUR + LTIP",
+            "CEO filiale : 220-350 k EUR + LTIP + bonus",
+            "Package total peut atteindre 500 k EUR",
+            "Rattachement CEO ou board obligatoire"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "ERREURS FREQUENTES DE BRIEF",
+          "bullets": [
+            "Sous-estimer le variable des KAM seniors",
+            "Oublier prime bureau + vehicule dans le package annonce",
+            "Refuser 4/5eme sur profils techniques rares",
+            "Ignorer le package total (fixe + var + LTIP + avantages)",
+            "Confondre CSO et Head of R&D dans le package"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous cadrez un brief 2026 ?",
+          "highlight": "On partage la grille.",
+          "description": "SKS Talents peut vous partager la grille complete par vertical.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Notre expertise Animal Health",
+              "url": "https://skstalents.fr/expertises/animal-health"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "add-5-competences-kam-ah",
+      "title": "Les 5 competences qui font un.e KAM AH exceptionnel.le",
+      "publish_date": "2026-11-09T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "LE CONSEIL",
+          "emoji": "🎯",
+          "title": "KAM santé animale exceptionnel.le",
+          "subtitle": "LES 5 COMPETENCES DIFFERENCIANTES",
+          "description": "Pour les CEO et CCO qui recrutent les KAM strategiques 2027.",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "LE CONSTAT",
+          "bullets": [
+            "Un.e KAM moyen atteint ses objectifs",
+            "Un.e KAM exceptionnel.le fait +30 pourcent sur ses comptes strategiques",
+            "La difference n'est pas dans le CV",
+            "Elle est dans 5 competences precises",
+            "Scoreables en entretien avec la bonne grille"
+          ],
+          "tagline": "Voici les 5 competences."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "COMPETENCE 1 · LECTURE DU P&L CLIENT",
+          "bullets": [
+            "Comprendre le P&L clinique / integrateur / cooperative",
+            "Savoir pourquoi le vaccin X aide la marge nette",
+            "Traduire l'offre en impact financier",
+            "Anticiper les arbitrages achats",
+            "Passer du prix unitaire au TCO"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "COMPETENCE 2 · CARTOGRAPHIE MULTI-NIVEAUX",
+          "bullets": [
+            "Un compte cle = 4 a 8 decideurs",
+            "Identifier direction achats + technique + generale + prescripteurs",
+            "Adapter le discours par niveau",
+            "Suivre les mouvements internes",
+            "Maintenir la carte a jour trimestriellement"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "COMPETENCE 3 · NEGOCIATION EN LANGAGE BOARD",
+          "bullets": [
+            "Defendre l'offre en marge, EBITDA, time-to-value",
+            "Pas en prix unitaire seul",
+            "Preparer les contrats annuels en langage financier",
+            "Anticiper les concessions par lot",
+            "Etre pret.e a defendre en CODIR client"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "COMPETENCE 4 · DISCIPLINE REPORTING",
+          "bullets": [
+            "Reporting hebdo carre",
+            "Pilotage terrain intense",
+            "Ni exces d'un cote ni carence de l'autre",
+            "Outil CRM propre",
+            "Vision 90 jours par compte"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "COMPETENCE 5 · RESEAU ACTIVE",
+          "bullets": [
+            "Reseau qui parle avant le premier RDV",
+            "SNGTV, groupements, associations, ecoles vet",
+            "Presence sur les evenements filiere",
+            "Contribution active a la communaute",
+            "Recommandations naturelles"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous ouvrez un poste KAM ?",
+          "highlight": "On partage la grille.",
+          "description": "SKS Talents peut vous partager la matrice d'evaluation KAM exceptionnel.le.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche metier KAM",
+              "url": "https://skstalents.fr/job-roles/medical-vet-key-account-manager-large-accounts"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "add-data-scientist-petfood-fiche",
+      "title": "Data Scientist Petfood - fiche metier 2026",
+      "publish_date": "2026-11-16T16:00:00+02:00",
+      "channel": "page",
+      "slides": [
+        {
+          "variant": "cover",
+          "wave_label": "FOCUS METIER",
+          "emoji": "📊",
+          "title": "Data Scientist Petfood",
+          "subtitle": "FRANCE 2026",
+          "description": "Le poste qui pilote la personnalisation, la formulation et le forecasting.",
+          "cta": "Faites defiler"
+        },
+        {
+          "variant": "teal-list",
+          "num": "02",
+          "eyebrow": "VOUS CONNAISSEZ...",
+          "bullets": [
+            "Les cycles achats petfood",
+            "Les donnees CRM et retail",
+            "La formulation nutritionnelle",
+            "Les enjeux personnalisation D2C",
+            "Les modeles de forecasting demand"
+          ],
+          "tagline": "Alors lisez la suite."
+        },
+        {
+          "variant": "cream-list",
+          "num": "03",
+          "eyebrow": "LA MISSION",
+          "bullets": [
+            "Piloter les modeles de personnalisation D2C",
+            "Cadrer les experimentations R&D",
+            "Optimiser le forecasting demand",
+            "Structurer les dashboards executifs",
+            "Interfacer marketing, sales et R&D"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "04",
+          "eyebrow": "3 CHIFFRES QUI CHANGENT TOUT",
+          "bullets": [
+            "70-100 k EUR fixe median FR 2026",
+            "3-6 mois time-to-fill",
+            "Poste nouveau chez 60 pourcent des groupes"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "05",
+          "eyebrow": "LE PROFIL RECHERCHE",
+          "bullets": [
+            "Master ou PhD data science",
+            "5-8 ans en industrie FMCG ou petfood",
+            "Python + SQL + cloud data",
+            "Vecu personnalisation D2C",
+            "Aisance metier + technique"
+          ]
+        },
+        {
+          "variant": "teal-list",
+          "num": "06",
+          "eyebrow": "POURQUOI CE POSTE EST EMERGENT",
+          "bullets": [
+            "Poste absent des orgs il y a 3 ans",
+            "Data D2C en volume suffisant",
+            "Concurrence FMCG et retail sur meme profil",
+            "Rattachement pas standardise",
+            "Peu de profils avec vecu petfood specifique"
+          ]
+        },
+        {
+          "variant": "cream-list",
+          "num": "07",
+          "eyebrow": "NOS 5 SIGNAUX DE RECRUTEMENT",
+          "bullets": [
+            "Portefeuille cases data documentes",
+            "Vecu D2C ou fidelisation",
+            "Aisance metier + technique",
+            "Communication executive fluide",
+            "Vision 3 ans strategie data"
+          ]
+        },
+        {
+          "variant": "cta",
+          "num": "08",
+          "title": "Vous ouvrez un poste data petfood ?",
+          "highlight": "On sait ou chercher.",
+          "description": "SKS Talents pilote 2 mandats Data Scientist petfood en portefeuille.",
+          "button_label": "Ecrivez-nous en prive",
+          "button_icon": "✉",
+          "caption": "Pour un echange en toute confidentialite.",
+          "links": [
+            {
+              "icon": "📋",
+              "label": "Voir la fiche metier complete",
+              "url": "https://skstalents.fr/job-roles/data-scientist-petfood"
+            },
+            {
+              "icon": "in",
+              "label": "S'abonner sur LinkedIn",
+              "url": "https://www.linkedin.com/newsletters/[a-remplir]"
+            },
+            {
+              "icon": "↗",
+              "label": "www.skstalents.fr",
+              "url": "https://skstalents.fr"
+            }
+          ],
+          "actions": [
+            {
+              "icon": "♥",
+              "label": "Aimer",
+              "sub": "et commenter"
+            },
+            {
+              "icon": "▤",
+              "label": "Enregistrer",
+              "sub": "pour plus tard"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
