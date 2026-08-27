@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 
 async function readJsonl(filePath) {
@@ -135,6 +135,146 @@ const topSearchQueries = topEntries(searchQueries, 10);
 const topics = buildTopics({ topSearchQueries, topAgentQueries });
 const leadLogMissing = leadsRaw.length === 0;
 
+// ---------------- Section: Chantiers site 1+2+3 status ----------------
+
+async function readChantiersStatus() {
+  const candidates = [
+    path.join(process.cwd(), "docs", "SPRINT_V3_CHANTIERS_STATUS.md"),
+    path.join(process.cwd(), "docs", "chantiers-site-status.md")
+  ];
+  for (const file of candidates) {
+    try {
+      const raw = await readFile(file, "utf8");
+      const trimmed = raw.trim();
+      if (trimmed) {
+        return trimmed.split("\n").slice(0, 40).join("\n");
+      }
+    } catch {
+      // continue
+    }
+  }
+  return "- Aucun statut chantier releve (fichier docs/SPRINT_V3_CHANTIERS_STATUS.md absent)";
+}
+
+const chantiersStatus = await readChantiersStatus();
+
+// ---------------- Section: Content Master v2 posts publies ----------------
+
+async function readPublishedPosts() {
+  const dir = path.join(process.cwd(), "docs", "posts-additionnels-q4-2026");
+  let files = [];
+  try {
+    files = await readdir(dir);
+  } catch {
+    return [];
+  }
+  const published = [];
+  for (const name of files) {
+    if (!name.toLowerCase().endsWith(".md")) continue;
+    const raw = await readFile(path.join(dir, name), "utf8");
+    if (!raw.startsWith("---")) continue;
+    const end = raw.indexOf("\n---", 3);
+    if (end === -1) continue;
+    const fm = raw.slice(3, end);
+    const statut = /^\s*statut\s*:\s*(.+?)\s*$/im.exec(fm)?.[1]?.trim().toLowerCase();
+    if (statut !== "published") continue;
+    const title = /^\s*title\s*:\s*(.+?)\s*$/im.exec(fm)?.[1]?.trim() || name;
+    const publishedAt = /^\s*published_at\s*:\s*(.+?)\s*$/im.exec(fm)?.[1]?.trim() || "";
+    if (publishedAt) {
+      const dt = new Date(publishedAt).getTime();
+      if (!Number.isFinite(dt) || dt < cutoff.getTime()) continue;
+    }
+    published.push({ title: title.replace(/^"|"$/g, ""), file: name, publishedAt });
+  }
+  return published;
+}
+
+const publishedPosts = await readPublishedPosts();
+
+// ---------------- Section: Chloe Live conversations ----------------
+
+const chloePath = path.join(process.cwd(), "data", "chloe-chat-log.jsonl");
+const chloeRaw = await readJsonl(chloePath);
+const chloeWeek = chloeRaw.filter(
+  (entry) => new Date(entry.createdAt || entry.ts || 0).getTime() >= cutoff.getTime()
+);
+const chloeSessions = new Set();
+const chloeTopics = {};
+for (const entry of chloeWeek) {
+  if (entry.sessionId) chloeSessions.add(entry.sessionId);
+  const msg = String(entry.userMessage || entry.message || entry.query || "").toLowerCase();
+  if (!msg) continue;
+  const tags = [];
+  if (/(recrut|chasse|shortlist|mission)/.test(msg)) tags.push("Recrutement");
+  if (/(cadrage|brief|scope|fiche de poste)/.test(msg)) tags.push("Cadrage");
+  if (/(salaire|remuneration|package)/.test(msg)) tags.push("Remuneration");
+  if (/(structur|organisation|ops|process)/.test(msg)) tags.push("Structuration");
+  if (/(diagnostic|maturite)/.test(msg)) tags.push("Diagnostic");
+  for (const t of tags) inc(chloeTopics, t);
+}
+const chloeTopTopics = topEntries(chloeTopics, 5);
+
+// ---------------- Section: Leads captures ----------------
+
+const bufferLogPath = path.join(process.cwd(), "data", "buffer-drafts-log.jsonl");
+const simulatorLogPath = path.join(process.cwd(), "data", "simulator-lead-log.jsonl");
+const bufferRaw = await readJsonl(bufferLogPath);
+const simulatorRaw = await readJsonl(simulatorLogPath);
+
+const bufferWeek = bufferRaw.filter((e) => new Date(e.ts || 0).getTime() >= cutoff.getTime());
+const simulatorWeek = simulatorRaw.filter(
+  (e) => new Date(e.createdAt || e.ts || 0).getTime() >= cutoff.getTime()
+);
+const chloeEmails = chloeWeek.filter((e) => typeof e.email === "string" && e.email.includes("@"));
+
+const leadsCapturedTotal = leads.length + simulatorWeek.length + chloeEmails.length;
+const bufferDraftsThisWeek = bufferWeek.filter((e) => e.ok !== false).length;
+
+// ---------------- Section: Decision de la semaine (Claude API) ----------------
+
+async function generateWeeklyDecision(signals) {
+  const apiKey = process.env.ANTHROPIC_API_KEY || process.env.CLAUDE_API_KEY;
+  if (!apiKey) {
+    return "- (ANTHROPIC_API_KEY absent) Regarde les 3 pages qui montent, si l'une n'a pas de CTA vers /diagnostic, ajoute-le.";
+  }
+  const prompt = `Tu es le Chief of Staff de Georges Kengue (SKS Talents, cabinet exec search Life Sciences / Animal Health / Petfood). \n\nA partir de ces signaux hebdomadaires du site + operations, propose UNE seule decision concrete que Georges doit prendre cette semaine (24-48h). Sois ultra-specifique, une phrase max, action executable.\n\nSignaux:\n${signals}\n\nContraintes: pas d'em-dash, pas d'en-dash, pronoms inclusifs il/elle, francais business direct.`;
+  try {
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({
+        model: process.env.CLAUDE_DECISION_MODEL || "claude-opus-4-5-20250929",
+        max_tokens: 300,
+        messages: [{ role: "user", content: prompt }]
+      })
+    });
+    const txt = await res.text().catch(() => "");
+    if (!res.ok) return `- (Claude API ${res.status}) Prends 30 min pour lire les tops requetes et definir un post LinkedIn priorite.`;
+    const parsed = JSON.parse(txt);
+    const content = parsed?.content?.[0]?.text?.trim();
+    return content ? `- ${content}` : "- (Reponse vide) Prendre 20 min lundi matin pour cadrer la priorite semaine.";
+  } catch (err) {
+    return `- (erreur Claude: ${err.message}) Bloque 20 min lundi matin pour prioriser un chantier site.`;
+  }
+}
+
+const decisionSignals = [
+  `pageviews_7j=${totalPageviews}`,
+  `leads_7j=${leadsCapturedTotal}`,
+  `chloe_sessions_7j=${chloeSessions.size}`,
+  `buffer_drafts_7j=${bufferDraftsThisWeek}`,
+  `posts_publies_7j=${publishedPosts.length}`,
+  `top_page=${topPages[0]?.[0] || "n/a"}`,
+  `top_agent_query=${topAgentQueries[0]?.[0] || "n/a"}`,
+  `top_cta=${topCtaClicks[0]?.[0] || "n/a"}`
+].join(" · ");
+
+const weeklyDecision = await generateWeeklyDecision(decisionSignals);
+
 const lines = [
   `Période: ${toIsoDate(cutoff)} → ${toIsoDate(now)} (7 jours glissants, UTC)`,
   "",
@@ -164,7 +304,35 @@ const lines = [
   formatList(topSearchQueries, ""),
   "",
   "## Sujets à créer ensuite (demande récurrente)",
-  topics.map((topic) => `- ${topic}`).join("\n")
+  topics.map((topic) => `- ${topic}`).join("\n"),
+  "",
+  "## Chantiers site 1+2+3 · status",
+  chantiersStatus,
+  "",
+  "## Content Master v2 · nouveaux posts publiés cette semaine",
+  publishedPosts.length
+    ? publishedPosts
+        .map((p) => `- ${p.title}${p.publishedAt ? ` (${p.publishedAt})` : ""} · docs/posts-additionnels-q4-2026/${p.file}`)
+        .join("\n")
+    : "- Aucun post publié cette semaine (frontmatter statut: published dans docs/posts-additionnels-q4-2026/)",
+  "",
+  "## Chloé Live · conversations cette semaine",
+  `- Sessions distinctes: ${chloeSessions.size}`,
+  `- Messages utilisateurs: ${chloeWeek.length}`,
+  `- Emails captés dans le chat: ${chloeEmails.length}`,
+  chloeTopTopics.length
+    ? `- Top thèmes:\n${chloeTopTopics.map(([t, c]) => `  - ${t}: ${c}`).join("\n")}`
+    : "- Top thèmes: (aucun signal)",
+  "",
+  "## Leads capturés cette semaine",
+  `- Total consolidé: ${leadsCapturedTotal}`,
+  `- Depuis endpoint diagnostic (site-lead-log): ${leads.length}`,
+  `- Depuis simulateur (simulator-lead-log): ${simulatorWeek.length}`,
+  `- Depuis Chloé chat (email capté): ${chloeEmails.length}`,
+  `- Drafts LinkedIn poussés dans Buffer: ${bufferDraftsThisWeek}`,
+  "",
+  "## Décision de la semaine",
+  weeklyDecision
 ];
 
 process.stdout.write(`${lines.join("\n")}\n`);
