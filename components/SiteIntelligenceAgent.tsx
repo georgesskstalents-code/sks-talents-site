@@ -577,6 +577,7 @@ export default function SiteIntelligenceAgent({
             role="region"
             aria-label="Messages du chat"
             className="space-y-4 overflow-y-auto bg-slate-50 px-4 py-4"
+            data-lenis-prevent
             style={{
               height: "min(60vh, 480px)",
               minHeight: "300px",
