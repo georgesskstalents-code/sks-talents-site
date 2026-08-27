@@ -233,11 +233,15 @@ export default function SiteIntelligenceAgent({
   // Tracks whether the user is reading at the bottom. If they scrolled up to
   // re-read, we must NOT yank them back down on every streamed token.
   const atBottomRef = useRef(true);
-  // Set as soon as the user starts a wheel / touch gesture on the scroll area.
+  // Set as soon as the user starts a wheel / touch / mouse gesture on the scroll area.
   // While true, streaming updates NEVER force the scroll position - so the
   // user can freely scroll up to re-read a long answer, even mid-stream.
   const userInteractingRef = useRef(false);
   const interactingTimeoutRef = useRef<number | null>(null);
+  // Distinguish programmatic scrolls (auto-follow) from user scrolls.
+  // Without this, our own `el.scrollTop = el.scrollHeight` fires an onScroll
+  // that resets atBottomRef=true, erasing any user intent to scroll up.
+  const programmaticScrollRef = useRef(false);
   // Voice input (Web Speech API). Silent fallback : the button is only rendered
   // when the browser supports it, no error UI otherwise.
   const [voiceSupported, setVoiceSupported] = useState(false);
@@ -252,9 +256,11 @@ export default function SiteIntelligenceAgent({
     if (interactingTimeoutRef.current) {
       window.clearTimeout(interactingTimeoutRef.current);
     }
+    // 8s covers the typical SSE stream duration (delta bursts fire ~10-50 fois/s).
+    // The real gate is atBottomRef; this timeout is just a mobile-touch safety net.
     interactingTimeoutRef.current = window.setTimeout(() => {
       userInteractingRef.current = false;
-    }, 1500);
+    }, 8000);
   };
 
   // Body scroll lock : quand le chat est ouvert, on bloque le scroll de la page derriere.
@@ -337,14 +343,22 @@ export default function SiteIntelligenceAgent({
   // Follow the conversation only while the user is already at the bottom AND
   // is not actively scrolling. If they wheeled / touched up to re-read, leave
   // their position untouched so they can read freely, even while a long
-  // answer is still streaming in.
+  // answer is still streaming in. We flip programmaticScrollRef around the
+  // scroll write so the onScroll handler ignores our own scroll and does not
+  // reset atBottomRef=true, which would erase the user's intent to scroll up.
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
     if (userInteractingRef.current) return;
     if (!atBottomRef.current) return;
 
+    programmaticScrollRef.current = true;
     el.scrollTop = el.scrollHeight;
+    // Release the flag on the next frame, after the browser has fired the
+    // synthetic onScroll for this write.
+    requestAnimationFrame(() => {
+      programmaticScrollRef.current = false;
+    });
   }, [messages, loading]);
 
   // Detect Web Speech API once on mount (Chrome/Edge/Safari desktop, Safari iOS 14.5+).
@@ -413,7 +427,11 @@ export default function SiteIntelligenceAgent({
   useEffect(() => {
     if (open && scrollRef.current) {
       atBottomRef.current = true;
+      programmaticScrollRef.current = true;
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+      requestAnimationFrame(() => {
+        programmaticScrollRef.current = false;
+      });
     }
   }, [open]);
 
@@ -581,8 +599,8 @@ export default function SiteIntelligenceAgent({
   return (
     <div className="fixed bottom-5 right-5 z-[2147483000]" data-no-translate>
       {open ? (
-        <div className="pointer-events-auto flex h-[min(78vh,720px)] w-[min(94vw,390px)] flex-col overflow-hidden rounded-[28px] border border-brand-line bg-white shadow-[0_24px_70px_rgba(15,23,42,0.22)]">
-          <div className="bg-gradient-to-r from-brand-ink via-brand-teal to-cyan-600 px-5 py-4 text-white">
+        <div className="pointer-events-auto flex h-[min(78vh,720px)] h-[min(78dvh,720px)] w-[min(94vw,390px)] flex-col overflow-hidden rounded-[28px] border border-brand-line bg-white shadow-[0_24px_70px_rgba(15,23,42,0.22)]">
+          <div className="shrink-0 bg-gradient-to-r from-brand-ink via-brand-teal to-cyan-600 px-5 py-4 text-white">
             <div className="flex items-start justify-between gap-3">
               <div>
                 <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">
@@ -606,8 +624,15 @@ export default function SiteIntelligenceAgent({
           <div
             ref={scrollRef}
             onScroll={(event) => {
+              // Ignore the synthetic onScroll fired by our own auto-follow
+              // write, otherwise atBottomRef gets reset to true and the user's
+              // intent to scroll up is silently erased.
+              if (programmaticScrollRef.current) return;
               const el = event.currentTarget;
-              atBottomRef.current = el.scrollHeight - el.scrollTop - el.clientHeight < 40;
+              // Tight 4 px threshold: only "truly glued to the bottom" keeps
+              // auto-follow armed. One wheel tick (>=~40 px) is enough to opt out.
+              atBottomRef.current =
+                el.scrollHeight - el.scrollTop - el.clientHeight < 4;
             }}
             onWheel={(event) => {
               // Wheel fires BEFORE the browser applies the scroll, so we can
@@ -620,6 +645,9 @@ export default function SiteIntelligenceAgent({
             onTouchStart={markUserInteracting}
             onTouchMove={markUserInteracting}
             onPointerDown={markUserInteracting}
+            // onMouseDown covers the desktop scrollbar drag case that neither
+            // wheel nor touch nor pointer capture on all browsers.
+            onMouseDown={markUserInteracting}
             className="min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain bg-slate-50 px-4 py-4"
           >
             {messages.map((message) => (
@@ -650,7 +678,7 @@ export default function SiteIntelligenceAgent({
             ) : null}
           </div>
 
-          <div className="border-t border-brand-line bg-white px-4 py-3">
+          <div className="shrink-0 border-t border-brand-line bg-white px-4 py-3">
             <div className="mb-2 flex items-center justify-between gap-3">
               <p className="text-xs text-brand-stone">{ui.helper}</p>
               <div className="flex items-center gap-2">
