@@ -312,6 +312,7 @@ export default function ChloeLiveWidget({ ficheSlug, ficheTitle, onClose }: Prop
         <>
           <div
             ref={scrollRef}
+            data-lenis-prevent
             style={{
               flex: 1,
               overflowY: "auto",
