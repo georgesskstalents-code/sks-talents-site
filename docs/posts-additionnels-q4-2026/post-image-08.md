@@ -33,5 +33,5 @@ SKS Talents
 
 ---
 
-**Newsletter LinkedIn :** https://www.linkedin.com/newsletters/[a-remplir]
+**Newsletter LinkedIn :** https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944
 **Site :** https://skstalents.fr

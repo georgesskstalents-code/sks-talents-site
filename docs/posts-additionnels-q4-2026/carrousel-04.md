@@ -79,7 +79,7 @@ pdf_output: output/carousels-additional/add-marketing-petfood-fiche.pdf
 - Bouton : Ecrivez-nous en prive
 - Liens cliquables :
   1. Voir la fiche metier complete : https://skstalents.fr/job-roles/chief-marketing-officer-petfood
-  2. S'abonner sur LinkedIn : https://www.linkedin.com/newsletters/[a-remplir]
+  2. S'abonner sur LinkedIn : https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944
   3. www.skstalents.fr : https://skstalents.fr
 
 ## Caption LinkedIn du carrousel (a copier-coller dans Buffer)
@@ -88,7 +88,7 @@ SKS Talents pilote 2 mandats CMO petfood en portefeuille.
 
 3 liens utiles :
 - https://skstalents.fr/job-roles/chief-marketing-officer-petfood
-- Newsletter LinkedIn : https://www.linkedin.com/newsletters/[a-remplir]
+- Newsletter LinkedIn : https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944
 - Site : https://skstalents.fr
 
 SKS Talents

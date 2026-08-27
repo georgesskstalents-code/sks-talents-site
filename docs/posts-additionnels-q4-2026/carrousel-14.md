@@ -81,7 +81,7 @@ pdf_output: output/carousels-additional/add-5-competences-kam-ah.pdf
 - Bouton : Ecrivez-nous en prive
 - Liens cliquables :
   1. Voir la fiche metier KAM : https://skstalents.fr/job-roles/medical-vet-key-account-manager-large-accounts
-  2. S'abonner sur LinkedIn : https://www.linkedin.com/newsletters/[a-remplir]
+  2. S'abonner sur LinkedIn : https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944
   3. www.skstalents.fr : https://skstalents.fr
 
 ## Caption LinkedIn du carrousel (a copier-coller dans Buffer)
@@ -90,7 +90,7 @@ SKS Talents peut vous partager la matrice d'evaluation KAM exceptionnel.le.
 
 3 liens utiles :
 - https://skstalents.fr/job-roles/medical-vet-key-account-manager-large-accounts
-- Newsletter LinkedIn : https://www.linkedin.com/newsletters/[a-remplir]
+- Newsletter LinkedIn : https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944
 - Site : https://skstalents.fr
 
 SKS Talents

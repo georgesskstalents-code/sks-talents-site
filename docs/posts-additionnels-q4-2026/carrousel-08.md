@@ -81,7 +81,7 @@ pdf_output: output/carousels-additional/add-h5n1-3-postes-urgents.pdf
 - Bouton : Ecrivez-nous en prive
 - Liens cliquables :
   1. Voir la fiche metier veterinaire aviaire : https://skstalents.fr/job-roles/medical-vet-technical-manager-poultry
-  2. S'abonner sur LinkedIn : https://www.linkedin.com/newsletters/[a-remplir]
+  2. S'abonner sur LinkedIn : https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944
   3. www.skstalents.fr : https://skstalents.fr
 
 ## Caption LinkedIn du carrousel (a copier-coller dans Buffer)
@@ -90,7 +90,7 @@ SKS Talents pilote 4 mandats aviaires actifs cet automne.
 
 3 liens utiles :
 - https://skstalents.fr/job-roles/medical-vet-technical-manager-poultry
-- Newsletter LinkedIn : https://www.linkedin.com/newsletters/[a-remplir]
+- Newsletter LinkedIn : https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944
 - Site : https://skstalents.fr
 
 SKS Talents
