@@ -2,6 +2,7 @@
 
 import { MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { useCookieConsent } from "@/lib/useCookieConsent";
 import { useSwipeToDismiss } from "@/lib/useSwipeToDismiss";
 
@@ -23,6 +24,9 @@ const COPY = {
 type Lang = keyof typeof COPY;
 
 export default function ChatwootWidget() {
+  const pathname = usePathname();
+  const chloeEnabled = process.env.NEXT_PUBLIC_CHLOE_LIVE_ENABLED === "true";
+  const isChloeFichePath = chloeEnabled && pathname?.startsWith("/job-roles/");
   const [hintVisible, setHintVisible] = useState(false);
   const [lang, setLang] = useState<Lang>("fr");
   const consent = useCookieConsent();
@@ -121,6 +125,7 @@ export default function ChatwootWidget() {
   // Hide the floating button while the cookie banner is still asking for consent
   // (otherwise it overlaps the banner buttons on mobile). Reappears once a choice is made.
   if (consent === null) return null;
+  if (isChloeFichePath) return null;
 
   const dismissHint = () => {
     setHintVisible(false);

@@ -188,6 +188,8 @@ export default function SiteIntelligenceAgent({
   externalOnly?: boolean;
 }) {
   const pathname = usePathname();
+  const chloeEnabled = process.env.NEXT_PUBLIC_CHLOE_LIVE_ENABLED === "true";
+  const isChloeFichePath = chloeEnabled && pathname?.startsWith("/job-roles/");
   const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(!externalOnly);
   const [language, setLanguage] = useState<ChatLanguage>("fr");
@@ -511,6 +513,10 @@ export default function SiteIntelligenceAgent({
   }
 
   if (!mounted) {
+    return null;
+  }
+
+  if (isChloeFichePath) {
     return null;
   }
 
