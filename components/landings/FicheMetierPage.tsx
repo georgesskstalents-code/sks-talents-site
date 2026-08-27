@@ -244,6 +244,24 @@ export default function FicheMetierPage({ role, relatedRoles, relatedArticles = 
                 </div>
               </div>
 
+              <div className="fm-salary-variability">
+                <h4 className="fm-salary-variability-title">Ce qui peut faire varier ces salaires</h4>
+                <p className="fm-salary-variability-intro">
+                  Bien que ces fourchettes soient de vrais repères de marché, le montant final dépend de trois critères :
+                </p>
+                <ul className="fm-salary-variability-list">
+                  <li>
+                    <strong>La taille de l&apos;entreprise</strong> · s&apos;agit-il d&apos;une multinationale (ex : Mars Petcare, Nestlé Purina, Sanofi, Servier), d&apos;une PME dynamique ou d&apos;une startup du secteur (PetTech, biotech, medtech, deeptech) ?
+                  </li>
+                  <li>
+                    <strong>La localisation</strong> · ces packages correspondent à des sièges sociaux basés en France (Paris / Régions) ou en Europe de l&apos;Ouest (Allemagne, Benelux). Un poste en dehors de ces zones peut varier de 20 à 30 %.
+                  </li>
+                  <li>
+                    <strong>La part variable</strong> · à ce niveau de responsabilité (Head of, CFO, CEO), la rémunération comprend souvent un bonus annuel (20 à 40 %) ou des parts de capital (MIP, equity, phantom stock) qui ne sont pas détaillés dans la fourchette ci-dessus.
+                  </li>
+                </ul>
+              </div>
+
               {role.sources && role.sources.length > 0 && (
                 <div className="fm-sources">
                   {role.sources.map((s) => (

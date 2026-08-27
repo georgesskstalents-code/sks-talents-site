@@ -228,6 +228,38 @@
   font-size: 13.5px; color: var(--fm-ink-2);
   line-height: 1.5;
 }
+.fm-salary-variability {
+  margin-top: 32px;
+  padding: 24px 28px;
+  background: #F7F5EC;
+  border-left: 4px solid #4A9B9B;
+  border-radius: 4px;
+}
+.fm-salary-variability-title {
+  font-family: var(--fm-mono); font-size: 12px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: #17A7A0; margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.fm-salary-variability-intro {
+  font-size: 14.5px; color: var(--fm-ink-1);
+  line-height: 1.55; margin: 0 0 14px 0;
+}
+.fm-salary-variability-list {
+  margin: 0; padding: 0; list-style: none;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.fm-salary-variability-list li {
+  font-size: 14px; color: var(--fm-ink-2);
+  line-height: 1.6; padding-left: 20px; position: relative;
+}
+.fm-salary-variability-list li::before {
+  content: "→"; position: absolute; left: 0;
+  color: #4A9B9B; font-weight: 700;
+}
+.fm-salary-variability-list li strong {
+  color: var(--fm-ink-1); font-weight: 600;
+}
 .fm-sources {
   margin-top: 28px;
   display: flex; gap: 10px; flex-wrap: wrap;
