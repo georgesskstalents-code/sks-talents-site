@@ -223,6 +223,15 @@ const nextConfig = {
         source: "/job-roles/cross-sector-health-data-governance-lead",
         destination: "/job-roles",
         permanent: true
+      },
+
+      // Sprint v3 fix-404-audit (Agent 2, 2026-08-27).
+      // ChloeLiveWidget pointait vers /mentions-legales (source corrigee dans le composant).
+      // Redirect defensif pour tout backlink externe ou bookmark ayant capture l'ancien lien.
+      {
+        source: "/mentions-legales",
+        destination: "/legal/mentions-legales",
+        permanent: true
       }
     ];
   },
