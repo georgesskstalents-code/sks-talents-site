@@ -6119,6 +6119,471 @@ const august2026AnimalHealthBatch: JobRole[] = [
   }
 ];
 
+const august2026ChloeBatchDate = "2026-08-27";
+
+const august2026ChloeBatch: JobRole[] = [
+  {
+    slug: "head-of-marketing-petfood-premium",
+    title: "Head of Marketing Petfood Premium",
+    seoTitle: "Head of Marketing Petfood Premium : salaire 100-140 K€, missions | SKS",
+    seoDescription:
+      "Fiche metier Head of Marketing Petfood Premium : brand building, trade, digital, salaire 100-140 K€, formations. Benchmark FR 2026 SKS TALENTS.",
+    publishDate: august2026ChloeBatchDate,
+    salary: "100kEUR - 140kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable cible 15-20 % du fixe et LTI 5-10 % en supplement selon la taille du groupe et la trajectoire de la marque. Fourchette calibree pour un.e directeur.rice marketing petfood pilotant 5-10 personnes sur des marques premium (fresh food, sans cereales, insectes).",
+    sector: "Petfood",
+    category: "Direction marketing",
+    shortageLevel: "Elevee",
+    summary:
+      "Dirige la strategie marketing des marques premium petfood, orchestre brand building, trade et digital, et pilote une equipe marketing 5-10 personnes pour installer la preference d'achat.",
+    skills: [
+      "Brand building premium (fresh food, sans cereales, insectes)",
+      "Trade marketing GMS et retail specialise",
+      "Digital, e-commerce et data marketing",
+      "P&L marque et pilotage media mix",
+      "Management d'equipe marketing 5-10 personnes"
+    ],
+    successFactors: [
+      "Trouver l'equilibre entre logique premium et exigences retail multi-canal.",
+      "Faire dialoguer brand, trade, digital et R&D sans siloter les roadmaps.",
+      "Transformer les insights animaux et humains en positionnement lisible en rayon."
+    ],
+    path: [
+      "Brand manager senior",
+      "Marketing director marque",
+      "Head of marketing groupe petfood"
+    ],
+    missions: [
+      "Definir la strategie marketing des marques premium et arbitrer le portefeuille.",
+      "Piloter brand building, trade GMS et animalerie, digital et e-commerce.",
+      "Manager une equipe 5-10 personnes (brand, trade, digital, insights).",
+      "Suivre le P&L marque, arbitrer media mix et innovations avec R&D et supply.",
+      "Preparer les revues comex et defendre les investissements marketing."
+    ],
+    studies: [
+      "Ecole de commerce ou master marketing",
+      "8-15 ans d'experience marketing FMCG premium ou petfood",
+      "Anglais courant obligatoire pour groupes internationaux"
+    ],
+    schools: ["HEC Paris", "ESSEC", "ESCP", "EDHEC", "EM Lyon", "AgroParisTech", "Institut Agro Rennes-Angers"],
+    relatedIndustries: [
+      "Groupes petfood premium (Mars Petcare, Nestle Purina, Affinity, United Petfood)",
+      "Marques challenger fresh food et sans cereales (Edgard Cooper, Tomojo, Ultra Premium Direct, Hector Kitchen)",
+      "FMCG premium alimentaire humain (transferts frequents)",
+      "Retail specialise animalerie et pure players e-commerce",
+      "Agences media, brand et data marketing"
+    ],
+    sources: [
+      { name: "FACCO - Federation des fabricants d'aliments pour animaux familiers", url: "https://www.facco.fr/" },
+      { name: "PROMOJARDIN - Marche petfood specialise", url: "https://www.promojardin.com/" }
+    ]
+  },
+  {
+    slug: "head-of-innovation-petfood",
+    title: "Head of Innovation Petfood",
+    seoTitle: "Head of Innovation Petfood : salaire 110-150 K€, missions R&D | SKS",
+    seoDescription:
+      "Fiche metier Head of Innovation Petfood : pipeline produits premium, claims scientifiques, sourcing durable, salaire 110-150 K€. Benchmark FR 2026 SKS TALENTS.",
+    publishDate: august2026ChloeBatchDate,
+    salary: "110kEUR - 150kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable cible 20 % du fixe. Fourchette dependante de la taille du groupe, du perimetre R&D + go-to-market et du nombre de marches couverts.",
+    sector: "Petfood",
+    category: "Direction innovation",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Porte la strategie innovation petfood a l'articulation R&D et go-to-market : pipeline produits premium, claims scientifiques defendables, sourcing durable et pilotage transversal avec marketing, qualite et supply.",
+    skills: [
+      "Pipeline innovation produit multi-annee",
+      "Nutrition animale et formulation premium",
+      "Claims scientifiques et defense reglementaire",
+      "Sourcing durable (proteines alternatives, insectes, sous-produits valorises)",
+      "Go-to-market et co-construction avec marketing"
+    ],
+    successFactors: [
+      "Etre a l'aise entre logique scientifique, contraintes industrielles et logique de marque.",
+      "Prioriser les projets a fort potentiel plutot que multiplier les initiatives.",
+      "Savoir defendre un claim face au marketing, aux autorites et aux distributeurs."
+    ],
+    path: [
+      "R&D manager ou nutrition scientist senior",
+      "Innovation manager petfood",
+      "Head of innovation ou VP innovation"
+    ],
+    missions: [
+      "Definir la roadmap innovation 3-5 ans et arbitrer le portefeuille projets.",
+      "Piloter la generation d'idees, la validation scientifique et le time-to-market.",
+      "Structurer une politique de sourcing durable (insectes, algues, proteines alternatives).",
+      "Aligner claims scientifiques avec marketing, reglementaire et service clients.",
+      "Manager une equipe innovation R&D transverse et piloter les partenariats externes."
+    ],
+    studies: [
+      "Ingenieur.e agro ou nutrition",
+      "Doctorat nutrition animale ou sciences du vivant apprecie",
+      "10-15 ans d'experience R&D ou innovation petfood / nutrition animale"
+    ],
+    schools: ["AgroParisTech", "Institut Agro Rennes-Angers", "Institut Agro Montpellier", "ENSAIA", "Oniris"],
+    relatedIndustries: [
+      "Petfood premium (Mars Petcare, Nestle Purina, Hill's, Affinity, United Petfood)",
+      "Marques fresh food et clean label (Edgard Cooper, Tomojo, Yora, Hector Kitchen)",
+      "Ingredientistes petfood (Diana Pet Food / Symrise, ADM, Kemin)",
+      "Startups proteines alternatives (Innovafeed, Ynsect, Entobel)",
+      "Instituts techniques (Anses, INRAE, Adisseo R&D)"
+    ],
+    sources: [
+      { name: "FACCO - Marche petfood France", url: "https://www.facco.fr/" },
+      { name: "FEFAC - Federation europeenne alimentation animale", url: "https://fefac.eu/" }
+    ]
+  },
+  {
+    slug: "cfo-petfood-group",
+    title: "CFO Groupe Petfood",
+    seoTitle: "CFO Groupe Petfood : salaire 130-180 K€, missions M&A IPO prep | SKS",
+    seoDescription:
+      "Fiche metier CFO Groupe Petfood : pilotage finance groupe 100-500 M€, M&A, refinancement, reporting international. Salaire 130-180 K€. Benchmark FR 2026 SKS TALENTS.",
+    publishDate: august2026ChloeBatchDate,
+    salary: "130kEUR - 180kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable STI cible 20-30 % du fixe et LTI 10-20 % (actions, phantom, MEP). Fourchette dependante de la taille du groupe (100-500 M€ CA), du perimetre international et de la trajectoire (M&A, refinancement, IPO prep).",
+    sector: "Petfood",
+    category: "Direction financiere",
+    shortageLevel: "Elevee",
+    summary:
+      "Dirige la finance d'un groupe petfood 100-500 M€ de CA : pilotage P&L, cash et bilan consolide, gestion des operations M&A et refinancement, preparation IPO le cas echeant, reporting international et dialogue investisseurs.",
+    skills: [
+      "Direction finance groupe multi-sites",
+      "M&A, integration et post-merger",
+      "Refinancement, LBO et dialogue banques",
+      "Preparation IPO et relation investisseurs",
+      "Consolidation IFRS et reporting international"
+    ],
+    successFactors: [
+      "Concilier vision strategique groupe et rigueur d'execution operationnelle.",
+      "Batir une lecture financiere lisible pour un actionnariat souvent PE ou familial.",
+      "Anticiper le mur de refinancement plutot que le subir."
+    ],
+    path: [
+      "Directeur.rice financier.e BU ou pays",
+      "Group controller ou finance director",
+      "CFO groupe"
+    ],
+    missions: [
+      "Piloter le P&L, le cash et le bilan consolide du groupe.",
+      "Structurer les operations M&A, refinancement et preparer une eventuelle IPO.",
+      "Superviser controlling, tresorerie, fiscalite, consolidation et audit interne.",
+      "Animer le reporting aupres du board, des actionnaires et des banques.",
+      "Faire dialoguer finance, supply, commerce et marketing sur les grands arbitrages."
+    ],
+    studies: [
+      "Ecole de commerce ou ingenieur avec double competence finance",
+      "DSCG, master finance, MBA ou audit big four apprecie",
+      "12-20 ans d'experience finance dont directions groupe"
+    ],
+    schools: ["HEC Paris", "ESSEC", "ESCP", "EM Lyon", "EDHEC", "Sciences Po Paris", "Dauphine"],
+    relatedIndustries: [
+      "Groupes petfood consolides (United Petfood, Partner in Pet Food, Butcher's, Monge)",
+      "FMCG alimentaire humain (transferts frequents vers petfood)",
+      "Private equity mid-cap et large-cap (CVC, PAI, Ardian, Eurazeo)",
+      "Cabinets M&A et banques d'affaires",
+      "Audit et transaction services (Big Four)"
+    ],
+    sources: [
+      { name: "FACCO - Marche petfood France", url: "https://www.facco.fr/" },
+      { name: "France Invest - Statistiques PE", url: "https://www.franceinvest.eu/" }
+    ]
+  },
+  {
+    slug: "category-manager-petfood",
+    title: "Category Manager Petfood",
+    seoTitle: "Category Manager Petfood : salaire 65-90 K€, missions GMS | SKS",
+    seoDescription:
+      "Fiche metier Category Manager Petfood : pilotage categorie chien chat premium sans cereales snacks, relation acheteurs GMS. Salaire 65-90 K€. Benchmark FR 2026 SKS TALENTS.",
+    publishDate: august2026ChloeBatchDate,
+    salary: "65kEUR - 90kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable cible 15 % du fixe. Fourchette dependante de l'enseigne cliente, du portefeuille de categories et du niveau de seniorite.",
+    sector: "Petfood",
+    category: "Category management",
+    shortageLevel: "Elevee",
+    summary:
+      "Pilote une categorie retail petfood (chien, chat, premium, sans cereales, snacks), entretient la relation avec les acheteur.rice.s GMS, structure le mix produit et anime l'innovation trade en collaboration avec la force de vente.",
+    skills: [
+      "Category management GMS et retail specialise",
+      "Analyse Nielsen, IRI, panels distributeurs",
+      "Merchandising et assortiment",
+      "Negociation acheteur.rice enseignes",
+      "Trade marketing et innovation retail"
+    ],
+    successFactors: [
+      "Croiser les insights shopper avec la mecanique reelle du rayon.",
+      "Nourrir la relation acheteur.rice sans se laisser enfermer par le sell-in.",
+      "Traduire un plan categoriel en actions terrain executables par la force de vente."
+    ],
+    path: [
+      "Chef.fe de secteur ou compte cle",
+      "Category analyst puis category manager",
+      "Senior category manager ou trade marketing manager"
+    ],
+    missions: [
+      "Piloter une categorie petfood (chien, chat, premium, sans cereales, snacks) sur un perimetre enseignes.",
+      "Analyser panels et donnees shopper pour eclairer assortiment, prix et promo.",
+      "Construire les plans categoriels et les defendre avec les acheteur.rice.s.",
+      "Coordonner marketing, force de vente et supply autour du plan promo et de l'innovation.",
+      "Piloter les revues d'assortiment et les temps forts categoriels."
+    ],
+    studies: [
+      "Ecole de commerce ou master marketing / distribution",
+      "5-10 ans d'experience GMS, category management ou trade marketing",
+      "Maitrise Nielsen / IRI appreciee"
+    ],
+    schools: ["ESSEC", "EDHEC", "NEOMA", "SKEMA", "Kedge", "Institut Agro Rennes-Angers"],
+    relatedIndustries: [
+      "Groupes petfood (Mars Petcare, Nestle Purina, Affinity, United Petfood)",
+      "Enseignes GMS (Carrefour, E.Leclerc, Systeme U, Intermarche, Auchan)",
+      "Retail specialise (Maxi Zoo, Animalis, Tom&Co)",
+      "FMCG alimentaire (transferts frequents category management)",
+      "Instituts panels (NielsenIQ, Circana / IRI, Kantar)"
+    ],
+    sources: [
+      { name: "FACCO - Marche petfood France", url: "https://www.facco.fr/" },
+      { name: "LSA - Actualites distribution", url: "https://www.lsa-conso.fr/" }
+    ]
+  },
+  {
+    slug: "brand-manager-petfood-premium",
+    title: "Brand Manager Petfood Premium",
+    seoTitle: "Brand Manager Petfood Premium : salaire 55-80 K€, missions | SKS",
+    seoDescription:
+      "Fiche metier Brand Manager Petfood Premium : ownership marque, positionnement, communication, roadmap produit. Salaire 55-80 K€. Benchmark FR 2026 SKS TALENTS.",
+    publishDate: august2026ChloeBatchDate,
+    salary: "55kEUR - 80kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable cible 15 % du fixe. Fourchette dependante de la marque geree (challenger vs marque leader), du budget medias et de l'exposition management.",
+    sector: "Petfood",
+    category: "Marketing brand",
+    shortageLevel: "Elevee",
+    summary:
+      "Assure l'ownership d'une marque premium petfood : positionnement, plateforme de communication, roadmap produit, pilotage des agences et suivi du P&L marque.",
+    skills: [
+      "Brand management premium",
+      "Plateforme de marque et communication 360",
+      "Pilotage agences (creation, media, digital, PR)",
+      "P&L marque et pricing",
+      "Insights consommateur.rice et etudes qualitatives"
+    ],
+    successFactors: [
+      "Tenir le cap du positionnement face aux tentations de sur-promotion.",
+      "Faire vivre la marque au-dela du 30 secondes TV, jusqu'au rayon et au SAV.",
+      "Aligner claim scientifique, claim marketing et perception reelle du.de la client.e."
+    ],
+    path: [
+      "Chef.fe de produit junior",
+      "Brand manager",
+      "Senior brand manager ou marketing manager"
+    ],
+    missions: [
+      "Detenir le positionnement, la plateforme de marque et le plan de communication.",
+      "Piloter les agences creation, media, digital et RP.",
+      "Construire la roadmap produit avec R&D, packaging et supply.",
+      "Suivre le P&L de la marque et defendre les investissements marketing.",
+      "Nourrir la marque avec des insights consommateur.rice.s et animal.e.s de compagnie."
+    ],
+    studies: [
+      "Ecole de commerce ou master marketing",
+      "4-8 ans d'experience FMCG ou petfood",
+      "Anglais courant apprecie"
+    ],
+    schools: ["HEC Paris", "ESSEC", "ESCP", "EDHEC", "EM Lyon", "NEOMA", "SKEMA"],
+    relatedIndustries: [
+      "Groupes petfood premium (Mars Petcare, Nestle Purina, Affinity, Hill's)",
+      "Marques challenger fresh food et clean label (Edgard Cooper, Tomojo, Ultra Premium Direct, Hector Kitchen)",
+      "FMCG premium (transferts frequents vers petfood)",
+      "Agences creation, media, PR specialisees",
+      "Retail specialise animalerie"
+    ],
+    sources: [
+      { name: "FACCO - Marche petfood France", url: "https://www.facco.fr/" },
+      { name: "IREP - Marche publicitaire France", url: "https://www.irep.asso.fr/" }
+    ]
+  },
+  {
+    slug: "head-of-sustainability-petfood",
+    title: "Head of Sustainability Petfood",
+    seoTitle: "Head of Sustainability Petfood : salaire 90-130 K€, missions CSRD ESG | SKS",
+    seoDescription:
+      "Fiche metier Head of Sustainability Petfood : empreinte carbone recettes, sourcing durable, CSRD, scope 1/2/3, ESG. Salaire 90-130 K€. Benchmark FR 2026 SKS TALENTS.",
+    publishDate: august2026ChloeBatchDate,
+    salary: "90kEUR - 130kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable cible 15 % du fixe. Fonction jeune dans le petfood, avec un turnover eleve (environ 40 % de sortie sous 18 mois), la fourchette basse cible les profils monter-en-poste, la haute les seniors avec deja une premiere reussite CSRD.",
+    sector: "Petfood",
+    category: "Direction RSE ESG",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Structure la strategie sustainability petfood sur le double perimetre produit (empreinte carbone recettes, sourcing durable, packaging, claims) et corporate (CSRD, scope 1/2/3, gouvernance ESG). Fonction jeune dans le secteur, avec un turnover eleve estime a 40 % sous 18 mois, qu'un cadrage clair de mandat permet de reduire.",
+    skills: [
+      "Bilan carbone produit et ACV (analyse cycle de vie)",
+      "Sourcing durable (proteines alternatives, cereales, packaging)",
+      "CSRD, ESRS, scope 1/2/3",
+      "Gouvernance ESG et reporting extra-financier",
+      "Alliances filiere et lobbying responsable"
+    ],
+    successFactors: [
+      "Obtenir un mandat clair sur le double perimetre produit et corporate des la prise de poste.",
+      "Ne pas confondre plan RSE affichage et transformation reelle des recettes ou de la supply.",
+      "Defendre les arbitrages carbone / cout / performance en comex sans perdre en credibilite.",
+      "Se premunir des ecueils qui alimentent le turnover secteur : mandat flou, pas de budget dedie, isolation dans la com corporate."
+    ],
+    path: [
+      "Sustainability manager ou responsable ACV",
+      "Head of sustainability produit ou corporate",
+      "Direction RSE ou VP sustainability groupe"
+    ],
+    missions: [
+      "Piloter la strategie sustainability sur perimetre produit (empreinte carbone recettes, packaging, sourcing).",
+      "Structurer la conformite CSRD, ESRS, scope 1/2/3 et le reporting extra-financier.",
+      "Construire la gouvernance ESG (board, comex, filiales) et animer les alliances filiere.",
+      "Manager une equipe RSE / ACV et coordonner R&D, supply, achats et communication.",
+      "Documenter les claims durabilite et securiser l'exposition greenwashing."
+    ],
+    studies: [
+      "Ingenieur.e agro ou environnement",
+      "Master specialise RSE, ESG, sustainability ou developpement durable",
+      "8-15 ans d'experience RSE dont exposition FMCG ou nutrition"
+    ],
+    schools: ["AgroParisTech", "Mines ParisTech", "Institut Agro Rennes-Angers", "HEC Paris", "ESSEC", "Sciences Po Paris"],
+    relatedIndustries: [
+      "Groupes petfood (Mars Petcare, Nestle Purina, Affinity, United Petfood)",
+      "FMCG alimentaire (Danone, Unilever, Nestle - transferts sustainability frequents)",
+      "Cabinets conseil ESG (EcoAct, Carbone 4, Utopies, I Care)",
+      "Ingredientistes proteines alternatives (Innovafeed, Ynsect, Nextprotein)",
+      "Autorites et referentiels (ADEME, EFRAG, SBTi, PEF)"
+    ],
+    sources: [
+      { name: "ADEME - Bilan carbone et ACV agroalimentaire", url: "https://www.ademe.fr/" },
+      { name: "EFRAG - Referentiel CSRD ESRS", url: "https://www.efrag.org/" },
+      { name: "FACCO - Marche petfood France", url: "https://www.facco.fr/" }
+    ]
+  },
+  {
+    slug: "ceo-veterinary-group",
+    title: "CEO Groupe Veterinaire",
+    seoTitle: "CEO Groupe Veterinaire : salaire 180-280 K€, missions multi-site | SKS",
+    seoDescription:
+      "Fiche metier CEO Groupe Veterinaire : direction generale 100-500 cliniques, 200-800 collaborateur.rice.s, equity ou phantom. Salaire 180-280 K€. Benchmark FR 2026 SKS TALENTS.",
+    publishDate: august2026ChloeBatchDate,
+    salary: "180kEUR - 280kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable STI cible 30-40 % du fixe et LTI significatif (equity ou phantom sur scale-up soutenue par private equity). Fourchette dependante de la taille du groupe (100-500 sites), du perimetre geographique et de la phase (build-up, integration, sortie).",
+    sector: "Veterinary",
+    category: "Direction generale",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Dirige un groupe de cliniques veterinaires 100-500 sites : posture d'operateur multi-site rigoureux et de leader people credible aupres des veterinaires et directeur.rice.s de clinique. Pilote 200-800 collaborateur.rice.s, la relation actionnaires et le plan de croissance.",
+    skills: [
+      "Direction generale groupe multi-site",
+      "Operating model retail medical et pilotage P&L par site",
+      "Leadership people credible face aux veterinaires et ASV",
+      "Strategie build-up et integration post-acquisition",
+      "Relation actionnaires PE ou industriels et gouvernance board"
+    ],
+    successFactors: [
+      "Tenir ensemble exigence economique et qualite de soin sans compromis dangereux.",
+      "Etre credible aupres des veterinaires : profil medical ou tres longue exposition sante.",
+      "Reussir la structuration RH d'un metier en tension et fideliser les directeur.rice.s de site.",
+      "Faire vivre une culture commune apres des acquisitions successives."
+    ],
+    path: [
+      "Directeur.rice regional.e cliniques ou COO",
+      "Managing director pays sante animale ou retail medical",
+      "CEO groupe veterinaire"
+    ],
+    missions: [
+      "Definir et deployer la strategie du groupe : croissance organique, build-up et integration.",
+      "Piloter l'operating model multi-site, le P&L consolide et la performance par region.",
+      "Animer la gouvernance : board, actionnaires, comex et directions regionales.",
+      "Structurer la strategie RH d'un secteur en tension (attractivite, formation, retention).",
+      "Representer le groupe aupres des instances de la profession et du secteur sante animale."
+    ],
+    studies: [
+      "Docteur.e veterinaire avec parcours management OU dirigeant.e experimente.e sante / retail medical",
+      "MBA ou executive education apprecie",
+      "15-25 ans d'experience dont directions multi-site significatives"
+    ],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "HEC Paris", "INSEAD", "ESSEC"],
+    relatedIndustries: [
+      "Groupes cliniques veterinaires (IVC Evidensia, VetPartners, Univet, Anicura, Argos Veterinaire)",
+      "Retail medical humain (Ramsay Sante, Elsan, Almaviva, Colisee)",
+      "Groupes dentaires ou opticiens (transferts operating model multi-site)",
+      "Private equity buy-and-build (Ardian, IK, PAI, Bridgepoint)",
+      "Instances profession (Ordre National des Veterinaires, SNVEL)"
+    ],
+    sources: [
+      { name: "Ordre National des Veterinaires", url: "https://www.veterinaire.fr/" },
+      { name: "SNVEL - Syndicat National des Veterinaires d'Exercice Liberal", url: "https://www.snvel.fr/" }
+    ]
+  },
+  {
+    slug: "head-of-rd-animal-health",
+    title: "Head of R&D Sante Animale",
+    seoTitle: "Head of R&D Sante Animale : salaire 140-190 K€, missions pipeline | SKS",
+    seoDescription:
+      "Fiche metier Head of R&D Sante Animale : pipeline pharma biologiques vaccins diagnostic IA, 20-80 chercheur.se.s. Salaire 140-190 K€. Benchmark FR 2026 SKS TALENTS.",
+    publishDate: august2026ChloeBatchDate,
+    salary: "140kEUR - 190kEUR + variable",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. Variable cible 20-25 % du fixe et LTI selon groupe. Fourchette dependante du perimetre R&D (mono-technologie vs pharma + biologiques + vaccins + diagnostic + IA), de la taille des equipes et de l'exposition internationale.",
+    sector: "Medical Vet",
+    category: "Direction R&D",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Dirige la R&D d'un laboratoire sante animale sur un perimetre elargi : pipeline pharmaceutique, biologiques, vaccins, diagnostic et applications IA. Manage 20-80 chercheur.se.s, arbitre les investissements et defend les projets face au comex et aux autorites.",
+    skills: [
+      "Direction R&D multi-technologies (pharma, biologiques, vaccins, diagnostic, IA)",
+      "Pipeline management et arbitrage portefeuille projets",
+      "Interface reglementaire EMA / ANMV, USDA, PMDA",
+      "Partenariats academiques et deals in-licensing",
+      "Management d'equipes 20-80 chercheur.se.s"
+    ],
+    successFactors: [
+      "Naviguer entre technologies tres differentes sans sur-investir dans une seule.",
+      "Arbitrer entre pipeline propre, partenariats externes et acquisitions ciblees.",
+      "Maintenir un dialogue scientifique credible avec les leaders d'opinion veterinaires.",
+      "Faire monter en competence les equipes sur l'IA sans caricaturer l'apport."
+    ],
+    path: [
+      "R&D manager ou head of therapeutic area",
+      "Head of R&D pays ou region",
+      "Head of R&D global ou CSO"
+    ],
+    missions: [
+      "Piloter la roadmap R&D et le portefeuille projets multi-technologies.",
+      "Arbitrer les investissements pharma, biologiques, vaccins, diagnostic et IA.",
+      "Animer les partenariats academiques et securiser les deals in-licensing.",
+      "Manager une equipe 20-80 chercheur.se.s et structurer les centres de R&D.",
+      "Defendre les projets face au comex, aux autorites et aux KOL veterinaires."
+    ],
+    studies: [
+      "Docteur.e veterinaire, pharmacien.ne ou PhD sciences du vivant",
+      "MBA ou executive education en direction R&D apprecie",
+      "15-20 ans d'experience R&D sante animale ou pharma humaine transferable"
+    ],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "Institut Pasteur", "Universite Paris-Saclay"],
+    relatedIndustries: [
+      "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac, Vetoquinol)",
+      "Diagnostic veterinaire (IDEXX, Zoetis Diagnostics, Innovative Diagnostics)",
+      "Biotech animal health emergentes",
+      "R&D pharma humaine (transferts frequents)",
+      "Instituts et laboratoires publics (INRAE, Anses, Institut Pasteur)"
+    ],
+    sources: [
+      { name: "AnimalhealthEurope - Federation industrie sante animale", url: "https://www.animalhealtheurope.eu/" },
+      { name: "Anses - Agence securite sanitaire alimentation environnement travail", url: "https://www.anses.fr/" }
+    ]
+  }
+];
+
 const withDefaultRoleMetadata = (role: JobRole): JobRole => {
   const benchmark =
     glassdoorBenchmarks[role.slug] ?? glassdoorBenchmarks[role.slug.split("-").slice(1).join("-")];
@@ -6149,7 +6614,8 @@ const mergedJobRoles = [
   ...nuclearMedicineRoles,
   ...coreRoles,
   ...may2026RoleBatch,
-  ...august2026AnimalHealthBatch
+  ...august2026AnimalHealthBatch,
+  ...august2026ChloeBatch
 ].map(withDefaultRoleMetadata);
 
 export const jobRoles: JobRole[] = Array.from(

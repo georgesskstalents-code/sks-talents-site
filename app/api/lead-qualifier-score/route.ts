@@ -398,7 +398,8 @@ export async function POST(request: Request) {
     );
   }
 
-  const body = (await parseJsonBody<LeadBody>(request)) ?? {};
+  const parsed = await parseJsonBody<LeadBody>(request);
+  const body: Partial<LeadBody> = parsed.ok ? parsed.body ?? {} : {};
   const email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
   const source = typeof body.source === "string" ? body.source.trim().slice(0, 120) : "";
   const context = typeof body.context === "string" ? body.context.slice(0, 4000) : "";
