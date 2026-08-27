@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>H5N1 - 3 postes qui deviennent critiques automne 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #4A9B9B;
+    --teal-dark: #163334;
+    --teal-deep: #1A5A5A;
+    --cream: #EFEDE4;
+    --cream-soft: #F5F1E8;
+    --white: #FFFFFF;
+    --text: #163334;
+  }
+  @page { size: 1080px 1350px; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.4;
+  }
+  .slide {
+    width: 1080px;
+    height: 1350px;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide:last-child { page-break-after: auto; }
+
+  /* ============ COVER SLIDE ============ */
+  .cover { background: var(--cream); padding-bottom: 70px; }
+  .cover-wave {
+    background: var(--teal);
+    padding: 100px 90px 60px;
+    position: relative;
+    color: var(--white);
+  }
+  .cover-wave-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    font-size: 42px;
+    text-align: center;
+    color: var(--white);
+  }
+  .cover-wave::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; right: 0;
+    height: 40px;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1080 40' preserveAspectRatio='none'><path d='M0,20 Q60,5 120,20 T240,20 T360,20 T480,20 T600,20 T720,20 T840,20 T960,20 T1080,20 L1080,40 L0,40 Z' fill='%23EFEDE4'/></svg>") no-repeat center bottom;
+    background-size: 100% 100%;
+  }
+  .cover-wave-notch {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 46px;
+    height: 90px;
+    background: var(--cream);
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  .cover-body { padding: 100px 90px 0; flex: 1; }
+  .cover-emoji { font-size: 88px; margin-bottom: 40px; line-height: 1; }
+  .cover-title, .cta-title, .cta-highlight, .footer-brand, .teal-list .tagline, .cta-button {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  }
+  .cover-title {
+    font-weight: 700;
+    font-size: 74px;
+    line-height: 1.05;
+    color: var(--text);
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+  .cover-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 28px;
+    color: var(--teal);
+    margin-bottom: 24px;
+  }
+  .cover-divider { width: 70px; height: 5px; background: var(--teal); margin-bottom: 32px; }
+  .cover-desc {
+    font-size: 28px;
+    line-height: 1.45;
+    color: var(--text);
+    margin-bottom: 60px;
+    max-width: 820px;
+  }
+  .cover-cta {
+    color: var(--teal);
+    font-weight: 700;
+    font-size: 26px;
+  }
+
+  /* ============ TEAL LIST SLIDE ============ */
+  .teal-list { background: var(--teal); color: var(--white); padding: 90px 90px 70px; }
+  .teal-list .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 60px;
+  }
+
+  /* ============ CREAM LIST SLIDE ============ */
+  .cream-list { background: var(--cream); color: var(--text); padding: 90px 90px 70px; }
+  .cream-list .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: var(--teal);
+    margin-bottom: 60px;
+  }
+
+  /* Big number top-right for list slides */
+  .slide-num-big {
+    position: absolute;
+    top: 80px;
+    right: 90px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 1;
+  }
+  .teal-list .slide-num-big { color: rgba(255,255,255,0.85); }
+  .cream-list .slide-num-big, .cta .slide-num-big { color: rgba(22,51,52,0.15); }
+
+  /* Bulleted lists */
+  ul.bullets { list-style: none; }
+  ul.bullets li {
+    font-size: 32px;
+    line-height: 1.45;
+    padding-left: 44px;
+    position: relative;
+    margin-bottom: 22px;
+  }
+  ul.bullets li::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 15px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+  .teal-list ul.bullets li::before { background: var(--white); }
+  .cream-list ul.bullets li::before { background: var(--teal); }
+
+  /* Section blocks (for CONDITIONS + DEPLACEMENTS combined) */
+  .cream-list .section + .section { margin-top: 40px; }
+  .cream-list .section-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: var(--teal);
+    margin-bottom: 20px;
+  }
+  .cream-list .section-text {
+    font-size: 26px;
+    line-height: 1.55;
+    color: var(--text);
+  }
+
+  /* Teal list tagline (bottom) */
+  .teal-list .tagline {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 34px;
+    color: var(--white);
+    margin-top: 40px;
+    align-self: flex-start;
+  }
+
+  /* ============ FOOTER (shared) ============ */
+  .slide-footer {
+    margin-top: auto;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 22px;
+  }
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+  .footer-tagline { font-weight: 400; }
+  .teal-list .slide-footer, .teal-list .footer-brand { color: var(--white); }
+
+  /* ============ CTA SLIDE ============ */
+  .cta { background: var(--cream); padding: 100px 90px 70px; }
+  .cta-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 1.05;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .cta-highlight {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 1.1;
+    color: var(--teal);
+    margin-bottom: 28px;
+  }
+  .cta-desc {
+    font-size: 28px;
+    line-height: 1.4;
+    color: var(--text);
+    max-width: 820px;
+    margin-bottom: 40px;
+  }
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 26px 42px;
+    background: var(--white);
+    border: 2px solid var(--teal);
+    border-radius: 10px;
+    color: var(--text);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+  .cta-button-icon { font-size: 30px; color: var(--teal); }
+  .cta-caption {
+    font-size: 22px;
+    color: var(--teal-deep);
+    opacity: 0.75;
+    margin-bottom: 40px;
+  }
+  .cta-links { display: flex; flex-direction: column; gap: 22px; margin-bottom: 40px; }
+  a.cta-link, .cta-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--teal);
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 1.2;
+    max-width: 900px;
+  }
+  .cta-link-label {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: visible;
+  }
+  .cta-link-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    flex-shrink: 0;
+    background: var(--teal);
+    color: var(--white);
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: 0;
+  }
+  .cta-actions {
+    display: flex;
+    gap: 60px;
+    margin-top: 20px;
+  }
+  .cta-action { text-align: center; }
+  .cta-action-circle {
+    width: 96px;
+    height: 96px;
+    background: var(--teal);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    margin: 0 auto 14px;
+  }
+  .cta-action-label {
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--text);
+  }
+  .cta-action-sub {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--text);
+  }
+</style>
+</head>
+<body>
+
+    <div class="slide cover">
+      <div class="cover-wave">
+        <div class="cover-wave-label">LE SIGNAL</div>
+        <div class="cover-wave-notch"></div>
+      </div>
+      <div class="cover-body">
+        <div class="cover-emoji">🐦</div>
+        <div class="cover-title">Grippe aviaire H5N1</div>
+        <div class="cover-subtitle">LES 3 POSTES CRITIQUES AUTOMNE 2026</div>
+        <div class="cover-divider"></div>
+        <div class="cover-desc">Pour les DRH et directions techniques integrateurs, cooperatives et labos vet.</div>
+        <div class="cover-cta">→ Faites defiler</div>
+      </div>
+      <div class="slide-footer" style="padding: 0 90px;">
+        <span class="footer-brand">SKS Talents</span>
+        <span class="footer-tagline">Your Talent · Our Future</span>
+      </div>
+    </div>
+    
+
+    <div class="slide teal-list">
+      <div class="eyebrow">LE CONTEXTE</div>
+      <div class="slide-num-big">02</div>
+      <ul class="bullets"><li>Vague H5N1 2025-2026 couvre 22 pays</li><li>Intensite forte attendue automne 2026 en Europe</li><li>Vaccination canards obligatoire depuis 2023</li><li>4 regions FR en zone rouge</li><li>Marche RH qui bouge vite</li></ul>
+      <div class="tagline">Voici les 3 postes critiques.</div>
+      <div class="slide-footer">
+        <span class="footer-brand">SKS Talents</span>
+        <span class="footer-tagline">Your Talent · Our Future</span>
+      </div>
+    </div>
+    
+
+    <div class="slide cream-list">
+      <div class="eyebrow">POSTE 1 · RESPONSABLE BIOSECURITE</div>
+      <div class="slide-num-big">03</div>
+      <ul class="bullets"><li>Poste passe de support a strategique</li><li>Pilote les protocoles et la formation eleveurs</li><li>Interface avec la DDPP</li><li>Fourchette 55-75 k EUR fixe</li><li>Time-to-fill 2-4 mois</li></ul>
+      
+      <div class="slide-footer">
+        <span class="footer-brand">SKS Talents</span>
+        <span class="footer-tagline">Your Talent · Our Future</span>
+      </div>
+    </div>
+    
+
+    <div class="slide teal-list">
+      <div class="eyebrow">POSTE 2 · VETERINAIRE TECHNIQUE AVIAIRE</div>
+      <div class="slide-num-big">04</div>
+      <ul class="bullets"><li>DVM + 5 ans mini filiere</li><li>Terrain + protocoles + indemnisations</li><li>3-5 postes ouverts en permanence Grand Ouest</li><li>Fourchette 65-90 k EUR fixe</li><li>Reseau SNGTV + AFVAC obligatoire</li></ul>
+      
+      <div class="slide-footer">
+        <span class="footer-brand">SKS Talents</span>
+        <span class="footer-tagline">Your Talent · Our Future</span>
+      </div>
+    </div>
+    
+
+    <div class="slide cream-list">
+      <div class="eyebrow">POSTE 3 · REGULATORY VACCINS AVIAIRES</div>
+      <div class="slide-num-big">05</div>
+      <ul class="bullets"><li>Marche etroit 30 personnes activables FR</li><li>Vaccination H5N1 obligatoire canards</li><li>Portefeuille AMM en evolution</li><li>Fourchette 90-130 k EUR fixe</li><li>Time-to-fill 6-9 mois</li></ul>
+      
+      <div class="slide-footer">
+        <span class="footer-brand">SKS Talents</span>
+        <span class="footer-tagline">Your Talent · Our Future</span>
+      </div>
+    </div>
+    
+
+    <div class="slide teal-list">
+      <div class="eyebrow">POURQUOI ILS SONT TENDUS</div>
+      <div class="slide-num-big">06</div>
+      <ul class="bullets"><li>Vague H5N1 accelere la demande</li><li>Vivier tres restreint sur les 3 profils</li><li>Concurrence labos + integrateurs sur les memes CV</li><li>Pas de plan de succession dans la plupart des orgs</li><li>Reglementation vaccination en mouvement</li></ul>
+      
+      <div class="slide-footer">
+        <span class="footer-brand">SKS Talents</span>
+        <span class="footer-tagline">Your Talent · Our Future</span>
+      </div>
+    </div>
+    
+
+    <div class="slide cream-list">
+      <div class="eyebrow">CE QUE FONT LES ORGS QUI GAGNENT L&#x27;AUTOMNE</div>
+      <div class="slide-num-big">07</div>
+      <ul class="bullets"><li>Recrutent avant novembre</li><li>Cadrent le poste en amont du pic</li><li>Provisionnent le variable adapte</li><li>Nomment un.e binome interne</li><li>Suivent la mobilite avec un.e RH dedie.e</li></ul>
+      
+      <div class="slide-footer">
+        <span class="footer-brand">SKS Talents</span>
+        <span class="footer-tagline">Your Talent · Our Future</span>
+      </div>
+    </div>
+    
+
+    <div class="slide cta">
+      <div class="slide-num-big">08</div>
+      <div class="cta-title">Vous ouvrez un de ces postes ?</div>
+      <div class="cta-highlight">On les connait.</div>
+      <div class="cta-desc">SKS Talents pilote 4 mandats aviaires actifs cet automne.</div>
+      <div class="cta-button"><span class="cta-button-icon">✉</span> Ecrivez-nous en prive</div>
+      <div class="cta-caption">Pour un echange en toute confidentialite.</div>
+      <div class="cta-links">
+        <a href="https://skstalents.fr/job-roles/medical-vet-technical-manager-poultry" class="cta-link">
+          <span class="cta-link-icon">📋</span>
+          <span class="cta-link-label">Voir la fiche metier veterinaire aviaire</span>
+        </a>
+        
+        <a href="https://www.linkedin.com/newsletters/[a-remplir]" class="cta-link">
+          <span class="cta-link-icon">in</span>
+          <span class="cta-link-label">S&#x27;abonner sur LinkedIn</span>
+        </a>
+        
+        <a href="https://skstalents.fr" class="cta-link">
+          <span class="cta-link-icon">↗</span>
+          <span class="cta-link-label">www.skstalents.fr</span>
+        </a>
+        </div>
+      <div class="cta-actions">
+        <div class="cta-action">
+          <div class="cta-action-circle">♥</div>
+          <div class="cta-action-label">Aimer</div>
+          <div class="cta-action-sub">et commenter</div>
+        </div>
+        
+        <div class="cta-action">
+          <div class="cta-action-circle">▤</div>
+          <div class="cta-action-label">Enregistrer</div>
+          <div class="cta-action-sub">pour plus tard</div>
+        </div>
+        </div>
+      <div class="slide-footer">
+        <span class="footer-brand">SKS Talents</span>
+        <span class="footer-tagline">Your Talent · Our Future</span>
+      </div>
+    </div>
+    
+</body>
+</html>
