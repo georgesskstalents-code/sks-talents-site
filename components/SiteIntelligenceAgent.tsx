@@ -221,6 +221,18 @@ export default function SiteIntelligenceAgent({
     setMessages([createWelcomeMessage(nextLanguage)]);
   }, []);
 
+  // Body scroll lock quand le chat est ouvert (fix CEO 2026-08-27 · scroll figé
+  // qui rendait la lecture des reponses longues impossible sur mobile).
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    if (!open) return;
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [open]);
+
   // Keep the chat language in sync with the site FR/EN toggle. When the visitor
   // flips the site language, the chat follows it (UI copy + next answer language).
   // An ongoing conversation is preserved; only the standalone welcome bubble is swapped.
