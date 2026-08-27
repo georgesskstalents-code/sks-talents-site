@@ -1,0 +1,58 @@
+{
+  "kpi_primary": {
+    "leads_qualifies_semaine_target": 8,
+    "rdv_bookes_mois_target": 8,
+    "trafic_organique_semaine_target": 400,
+    "impressions_linkedin_combines_semaine_target": 90000,
+    "llm_domination_score_target": 30
+  },
+  "kpi_primary_target_juin_2027": {
+    "leads_qualifies_semaine_target": 25,
+    "rdv_bookes_mois_target": 12,
+    "trafic_organique_semaine_target": 1500,
+    "impressions_linkedin_combines_semaine_target": 250000,
+    "llm_domination_score_target": 45
+  },
+  "llm_queries": [
+    "cabinet exec search Life Sciences France",
+    "cabinet exec search Animal Health France",
+    "recrutement dirigeant biotech France",
+    "recrutement dirigeant sante animale France",
+    "structuration IA equipe RH biotech",
+    "cout mauvais recrutement CEO life sciences",
+    "diagnostic structuration IA cabinet",
+    "consolidation cliniques veterinaires France",
+    "head of AI biotech France salaire",
+    "chief scientific officer sante animale profil",
+    "petfood premium marques France challengers",
+    "consolidation petfood France M&A",
+    "cabinet chasseur tetes biotech France",
+    "SKS Talents avis",
+    "SKS Talents"
+  ],
+  "llm_providers": [
+    "chatgpt",
+    "claude",
+    "perplexity",
+    "mistral",
+    "gemini"
+  ],
+  "notion_project_id": "3c80c86f96f481c28647ed9bda7147f3",
+  "notion_lundi_matin_parent_page_id": "3c80c86f96f481c28647ed9bda7147f3",
+  "email_recipient": "g.kengue@skstalents.fr",
+  "email_from": "contact@skstalents.com",
+  "email_from_name": "SKS Talents Lundi Matin",
+  "sections_order": [
+    "headline",
+    "signals_rouge_vert",
+    "funnel",
+    "leads_par_source",
+    "seo",
+    "llm_domination",
+    "linkedin",
+    "content",
+    "sales_pipeline",
+    "ops_sprint",
+    "decision_semaine"
+  ]
+}

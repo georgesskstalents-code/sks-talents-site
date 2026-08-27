@@ -1,0 +1,57 @@
+name: Lundi Matin SKS · rapport hebdo consolide
+
+on:
+  schedule:
+    # Lundi 6h Paris (5h UTC en hiver, 4h UTC en ete)
+    # On lance a 05:30 UTC pour couvrir les 2 cas · le script est idempotent (log local)
+    - cron: "30 5 * * 1"
+  workflow_dispatch:
+
+jobs:
+  generate-and-send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install deps
+        run: npm ci --no-audit --no-fund
+
+      - name: Run LLM domination scan
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/llm-domination-scan.mjs
+
+      - name: Generate + send Lundi Matin SKS
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          PLAUSIBLE_API_KEY: ${{ secrets.PLAUSIBLE_API_KEY }}
+          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN }}
+          GSC_OAUTH_CLIENT_ID: ${{ secrets.GSC_OAUTH_CLIENT_ID }}
+          GSC_OAUTH_CLIENT_SECRET: ${{ secrets.GSC_OAUTH_CLIENT_SECRET }}
+          GSC_OAUTH_REFRESH_TOKEN: ${{ secrets.GSC_OAUTH_REFRESH_TOKEN }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+        run: node scripts/generate-lundi-matin-sks.mjs
+
+      - name: Persist snapshots (LLM history + weekly HTML)
+        if: always()
+        run: |
+          git config user.name "sks-lundi-matin-bot"
+          git config user.email "bot@skstalents.fr"
+          git add data/llm-domination-history.jsonl data/llm-domination-latest.json data/lundi-matin-snapshots/ 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(lundi-matin): snapshot week $(date -u +%Y-W%V)"
+            git push
+          fi
