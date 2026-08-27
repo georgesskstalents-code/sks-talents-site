@@ -103,12 +103,20 @@ function computeResult(
   const projectImpactMin = projectImpactMid * 0.5;
   const projectImpactMax = projectImpactMid * 1.5;
 
+  const searchPct = Math.round(role.searchFeePct * 100);
+  const onboardingPct = Math.round(role.onboardingPct * 100);
   const breakdown: BreakdownItem[] = [
     {
-      label: "Cout de search et onboarding du remplacement",
-      min: searchCostMin + onboardingCostMin,
-      max: searchCostMax + onboardingCostMax,
-      note: `Frais cabinet (${Math.round(role.searchFeePct * 100)} % type) + ramp-up 12 mois.`
+      label: "Cout de search du remplacement",
+      min: searchCostMin,
+      max: searchCostMax,
+      note: `Honoraires cabinet exec search ~${searchPct} % du salaire annuel (fourchette +/- 20 %).`
+    },
+    {
+      label: "Cout d'onboarding et ramp-up",
+      min: onboardingCostMin,
+      max: onboardingCostMax,
+      note: `Ramp-up productivite 12 premiers mois ~${onboardingPct} % du salaire annuel (fourchette +/- 25 %).`
     },
     {
       label: "Cout de vacance du poste",
