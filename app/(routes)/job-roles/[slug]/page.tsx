@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import FicheMetierPage from "@/components/landings/FicheMetierPage";
+import ChloeLiveBubble from "@/components/ChloeLiveBubble";
 import { getRelatedArticlesBySector } from "@/data/articles";
 import { findJobRoleBySlug, getRelatedJobRoles } from "@/data/jobRoles";
+import {
+  findChloeFicheBySlug,
+  isChloeActiveFor
+} from "@/data/chloe-fiches-priority";
 import { getNotionSiteContentBySlug } from "@/lib/notion";
 
 export const dynamic = "force-dynamic";
@@ -209,6 +214,12 @@ export default async function JobRoleDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(occupationJsonLd) }}
       />
       <FicheMetierPage role={resolvedRole} relatedRoles={relatedRoles} relatedArticles={relatedArticles} />
+      {isChloeActiveFor(resolvedRole.slug) ? (
+        <ChloeLiveBubble
+          ficheSlug={resolvedRole.slug}
+          ficheTitle={findChloeFicheBySlug(resolvedRole.slug)?.targetTitle || resolvedRole.title}
+        />
+      ) : null}
     </>
   );
 }
