@@ -352,5 +352,101 @@ export const schoolProgramCatalog: SchoolProgramCatalogEntry[] = [
         tags: ["biologie", "sante", "medical affairs", "recherche clinique", "animal"]
       }
     ]
+  },
+  {
+    schoolTitle: "Harvard Business School",
+    schoolSlug: "harvard-business-school",
+    matchNames: ["Harvard Business School", "HBS", "Harvard", "Harvard University"],
+    programs: [
+      {
+        title: "MBA Harvard Business School",
+        url: "https://www.hbs.edu/mba",
+        tags: ["mba", "general-management", "leadership", "strategy", "c-level", "international"]
+      },
+      {
+        title: "General Management Program (GMP)",
+        url: "https://www.exed.hbs.edu/general-management-program/",
+        tags: ["executive-education", "general-management", "leadership", "strategy", "c-level"]
+      },
+      {
+        title: "Advanced Management Program (AMP)",
+        url: "https://www.exed.hbs.edu/advanced-management-program/",
+        tags: ["executive-education", "leadership", "c-level", "strategy", "international"]
+      },
+      {
+        title: "Program for Leadership Development (PLD)",
+        url: "https://www.exed.hbs.edu/pld/",
+        tags: ["executive-education", "leadership", "general-management", "high-potential"]
+      },
+      {
+        title: "Transforming Health Care Delivery",
+        url: "https://www.exed.hbs.edu/managing-health-care-delivery/",
+        tags: ["executive-education", "healthcare", "leadership", "operations", "life-sciences"]
+      }
+    ]
+  },
+  {
+    schoolTitle: "MIT Sloan School of Management",
+    schoolSlug: "mit-sloan",
+    matchNames: ["MIT Sloan", "MIT", "MIT Sloan School of Management", "Massachusetts Institute of Technology"],
+    programs: [
+      {
+        title: "MIT Sloan MBA",
+        url: "https://mitsloan.mit.edu/mba",
+        tags: ["mba", "leadership", "innovation", "strategy", "analytics", "life-sciences", "medtech"]
+      },
+      {
+        title: "MIT Sloan Executive MBA",
+        url: "https://mitsloan.mit.edu/emba",
+        tags: ["mba", "executive-education", "leadership", "c-level", "innovation"]
+      },
+      {
+        title: "MIT Sloan Fellows",
+        url: "https://mitsloan.mit.edu/fellows",
+        tags: ["mba", "leadership", "innovation", "international", "strategy", "c-level"]
+      },
+      {
+        title: "Artificial Intelligence: Implications for Business Strategy",
+        url: "https://executive.mit.edu/course/artificial-intelligence-implications-for-business-strategy/a056g00000URaa3AAD.html",
+        tags: ["executive-education", "ai", "strategy", "analytics", "medtech", "innovation"]
+      },
+      {
+        title: "Frontiers of Generative AI in Business",
+        url: "https://executive.mit.edu/course/frontiers-of-generative-ai-in-business/a05U1000002xz4jIAA.html",
+        tags: ["executive-education", "ai", "innovation", "strategy", "medtech"]
+      },
+      {
+        title: "MIT xPRO - programmes en ligne AI, data et transformation",
+        url: "https://xpro.mit.edu/",
+        tags: ["executive-education", "ai", "data", "analytics", "innovation"]
+      }
+    ]
+  },
+  {
+    schoolTitle: "Yale School of Management",
+    schoolSlug: "yale-som",
+    matchNames: ["Yale SOM", "Yale School of Management", "Yale", "Yale University"],
+    programs: [
+      {
+        title: "Yale SOM MBA",
+        url: "https://som.yale.edu/programs/mba",
+        tags: ["mba", "leadership", "strategy", "healthcare", "international", "c-level"]
+      },
+      {
+        title: "Yale SOM MBA for Executives",
+        url: "https://som.yale.edu/programs/emba",
+        tags: ["mba", "executive-education", "leadership", "c-level", "healthcare"]
+      },
+      {
+        title: "Healthcare Management (Executive Education)",
+        url: "https://som.yale.edu/executive-education/for-individuals/leadership/healthcare-management",
+        tags: ["executive-education", "healthcare", "leadership", "operations", "life-sciences"]
+      },
+      {
+        title: "Elevated Leadership Program",
+        url: "https://som.yale.edu/executive-education/for-individuals/leadership/elevated-leadership-program",
+        tags: ["executive-education", "leadership", "c-level", "strategy"]
+      }
+    ]
   }
 ];

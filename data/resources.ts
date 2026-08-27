@@ -170,7 +170,10 @@ const rawSchools: ResourceItem[] = [
   { slug: "universite-d-angers", title: "Université d’Angers", summary: "Écosystème universitaire intéressant pour sciences du vivant, santé et industries associées.", sector: "Biotech", location: "Angers", dateLabel: "17 avr. 2023" },
   { slug: "master-formulation-data-mining-cergy", title: "Master formulation et data mining, Cergy", summary: "Programme hybride entre formulation, data et innovation produit.", sector: "Cosmétique", location: "Cergy", dateLabel: "17 avr. 2023" },
   { slug: "isipca-versailles", title: "ISIPCA", summary: "Référence pour parfum, cosmétique et aromatique alimentaire avec très forte lisibilité secteur.", sector: "Cosmétique", location: "Versailles", dateLabel: "17 avr. 2023" },
-  { slug: "polytechnique", title: "École Polytechnique", summary: "Profils d’excellence pour deeptech, data, medtech, biotech et innovation scientifique.", sector: "MedTech", location: "Palaiseau", dateLabel: "17 avr. 2023" }
+  { slug: "polytechnique", title: "École Polytechnique", summary: "Profils d’excellence pour deeptech, data, medtech, biotech et innovation scientifique.", sector: "MedTech", location: "Palaiseau", dateLabel: "17 avr. 2023" },
+  { slug: "harvard-business-school", title: "Harvard Business School", summary: "MBA et executive education de reference pour les profils C-level Life Sciences, MedTech et sante animale (GMP, AMP, PLD, Transforming Health Care Delivery).", sector: "Life Sciences", location: "Boston, USA", href: "https://www.hbs.edu/", logoUrl: favicon("https://www.hbs.edu/") },
+  { slug: "mit-sloan", title: "MIT Sloan School of Management", summary: "MBA, Sloan Fellows et executive education MIT (AI Implications, Generative AI) mobilises par les dirigeant.e.s tech Life Sciences, MedTech et robotique.", sector: "MedTech", location: "Cambridge, USA", href: "https://mitsloan.mit.edu/", logoUrl: favicon("https://mitsloan.mit.edu/") },
+  { slug: "yale-som", title: "Yale School of Management", summary: "MBA, MBA for Executives et Healthcare Management pour dirigeant.e.s mission-driven, sustainability, healthcare et animal health.", sector: "Life Sciences", location: "New Haven, USA", href: "https://som.yale.edu/", logoUrl: favicon("https://som.yale.edu/") }
 ];
 
 export const schools: ResourceItem[] = rawSchools.map((item) => {
