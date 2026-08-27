@@ -123,34 +123,82 @@ function renderSeo(seo) {
   );
 }
 
-function renderLlm(llm) {
-  const providers = Object.entries(llm.by_provider || {})
-    .map(
-      ([name, obj]) => `
-      <tr>
-        <td style="padding:6px;font-family:'Inter',sans-serif;font-size:13px;color:#163334;text-transform:capitalize;">${esc(name)}</td>
-        <td style="padding:6px;font-family:'Inter',sans-serif;font-size:13px;text-align:right;">${esc(obj.mentions)}/${esc(obj.out_of)}</td>
-        <td style="padding:6px;font-family:'Inter',sans-serif;font-size:13px;text-align:right;color:${obj.pct >= 40 ? "#17A7A0" : obj.pct >= 20 ? "#666" : "#C0392B"};font-weight:700;">${esc(obj.pct)}%</td>
-      </tr>`
-    )
+function renderCoreVisibility(cv) {
+  if (!cv) return "";
+  const num = cv.num ?? 0;
+  const denom = cv.denom ?? 75;
+  const pct = cv.pct ?? 0;
+  const prevNum = cv.previous_num;
+  const evolution = prevNum !== undefined && prevNum !== null
+    ? (num > prevNum ? `<span style="color:#17A7A0;">↗ +${num - prevNum} mentions vs semaine précédente</span>`
+      : num < prevNum ? `<span style="color:#C0392B;">↘ ${num - prevNum} mentions</span>`
+      : `<span style="color:#666;">= stable vs semaine précédente</span>`)
+    : `<span style="color:#666;">Baseline · 1re mesure</span>`;
+  return section(
+    "Core Visibility Score · SKS dans les LLM",
+    `
+    <div style="font-family:'Inter',sans-serif;font-size:14px;color:#163334;">
+      <div style="margin-bottom:10px;">
+        <span style="font-family:'Playfair Display',Georgia,serif;font-size:32px;color:#4A9B9B;font-weight:700;">${esc(num)}/${esc(denom)}</span>
+        <span style="font-size:16px;color:#163334;margin-left:8px;">(${esc(pct)}%)</span>
+      </div>
+      <div style="margin-bottom:8px;">${evolution}</div>
+      <div style="font-size:12px;color:#666;line-height:1.5;">
+        Mesure stable sur les 15 requêtes core × 5 LLMs = 75 points. Les requêtes rotating ne rentrent PAS dans ce score.<br>
+        🎯 Cible 2026 : 30/75 · Cible juin 2027 : 45/75.
+      </div>
+    </div>`
+  );
+}
+
+function renderGeoActions(actions) {
+  if (!actions || !actions.length) {
+    return section(
+      "GEO Intelligence · actions cette semaine",
+      `<div style="font-family:'Inter',sans-serif;font-size:13px;color:#666;">Aucune action prioritaire cette semaine · scan sans données exploitables OU synthèse Claude indisponible. Voir alertes contextuelles ci-dessous.</div>`
+    );
+  }
+  const items = actions
+    .sort((a, b) => (a.priority || 99) - (b.priority || 99))
+    .slice(0, 5)
+    .map((a) => {
+      const competitorsStr = (a.concurrents_dominants || [])
+        .slice(0, 3)
+        .map((c) => `${esc(c.name)} (${esc(c.tier || "n/a")} · ${esc(c.seen_in_llms || "?")}/5)`)
+        .join(" · ");
+      const impactColor = a.impact_potentiel === "high" ? "#17A7A0" : a.impact_potentiel === "medium" ? "#B08040" : "#666";
+      const effortLabel = { low: "faible", medium: "moyen", high: "élevé" }[a.effort] || a.effort;
+      return `
+      <div style="padding:14px;margin-bottom:12px;background:#F7F5EC;border-left:4px solid #4A9B9B;border-radius:4px;">
+        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#666;margin-bottom:4px;">PRIORITÉ ${esc(a.priority)} · impact <span style="color:${impactColor};font-weight:700;">${esc(a.impact_potentiel)}</span> · effort ${esc(effortLabel)}</div>
+        <div style="font-family:'Playfair Display',Georgia,serif;font-size:16px;color:#163334;margin-bottom:8px;">${esc(a.query)}</div>
+        <div style="font-family:'Inter',sans-serif;font-size:13px;color:#163334;line-height:1.55;">
+          <strong>Constat</strong> · ${esc(a.constat)}<br>
+          ${competitorsStr ? `<strong>Concurrents dominants</strong> · ${competitorsStr}<br>` : ""}
+          <strong>Raison probable du gap</strong> · ${esc(a.raison_probable_gap || "à investiguer")}<br>
+          <strong>Page concernée</strong> · <code style="background:#EFEDE4;padding:2px 5px;border-radius:2px;">${esc(a.page_concernee)}</code><br>
+          <strong>Action précise</strong> · ${esc(a.action_precise)}<br>
+          <em style="color:#666;font-size:12px;">${esc(a.reasoning || "")} · délai visibilité estimé : ${esc(a.estimated_time_to_visibility_weeks || "?")} semaines.</em>
+        </div>
+      </div>`;
+    })
     .join("");
   return section(
-    "LLM domination · le nouveau SEO",
+    "GEO Intelligence · actions cette semaine",
     `
-    <div style="font-family:'Inter',sans-serif;font-size:14px;color:#163334;margin-bottom:12px;">
-      <strong style="font-size:20px;color:#4A9B9B;">${esc(llm.score_num)}/${esc(llm.score_denom)}</strong> mentions "SKS Talents" détectées sur ${esc(llm.query_count)} requêtes × ${esc(llm.provider_count)} LLM = <strong>${esc(llm.score_pct)}%</strong>
-    </div>
-    <table style="width:100%;border-collapse:collapse;">
-      <thead>
-        <tr>
-          <th style="text-align:left;padding:6px;border-bottom:2px solid #4A9B9B;font-family:'Inter',sans-serif;font-size:12px;">LLM</th>
-          <th style="text-align:right;padding:6px;border-bottom:2px solid #4A9B9B;font-family:'Inter',sans-serif;font-size:12px;">Mentions</th>
-          <th style="text-align:right;padding:6px;border-bottom:2px solid #4A9B9B;font-family:'Inter',sans-serif;font-size:12px;">%</th>
-        </tr>
-      </thead>
-      <tbody>${providers}</tbody>
-    </table>
-    <div style="font-family:'Inter',sans-serif;font-size:12px;color:#666;margin-top:8px;">🎯 Cible juin 2027 · 45/75 (60%)</div>`
+    <div style="font-family:'Inter',sans-serif;font-size:12px;color:#666;margin-bottom:12px;">3 à 5 actions priorisées · générées par Claude à partir du scan hebdo + inventaire site + concurrents détectés.</div>
+    ${items}`
+  );
+}
+
+function renderContextualAlerts(alerts) {
+  if (!alerts || !alerts.length) return "";
+  const items = alerts
+    .map((a) => `<li style="margin:6px 0;color:${a.level === "critical" ? "#C0392B" : "#B08040"};">${esc(a.message)}${a.link ? ` <a href="${esc(a.link)}" style="color:#4A9B9B;">voir détail</a>` : ""}</li>`)
+    .join("");
+  return section(
+    "⚠️ Alertes cette semaine",
+    `<ul style="font-family:'Inter',sans-serif;font-size:13px;padding-left:18px;margin:0;">${items}</ul>`
   );
 }
 
@@ -201,12 +249,14 @@ export function renderLundiMatinEmail(data) {
       ${renderSignals(data.signals_rouge, data.signals_vert)}
       ${renderLeadsTable(data.leads_par_source)}
       ${renderSeo(data.seo)}
-      ${renderLlm(data.llm)}
+      ${renderCoreVisibility(data.core_visibility)}
+      ${renderGeoActions(data.geo_actions)}
       ${renderLinkedIn(data.linkedin)}
       ${section("Contenu produit vs publié", `<div style="font-family:'Inter',sans-serif;font-size:13px;color:#163334;">${esc(data.content_summary)}</div>`)}
       ${section("Sales Pipeline (Notion)", `<div style="font-family:'Inter',sans-serif;font-size:13px;color:#163334;">${esc(data.sales_pipeline_summary)}</div>`)}
       ${section("Ops · Sprint SKS Autonomous Cabinet v3", `<div style="font-family:'Inter',sans-serif;font-size:13px;color:#163334;line-height:1.7;">${esc(data.ops_sprint_summary)}</div>`)}
       ${renderDecision(data.decision_semaine)}
+      ${renderContextualAlerts(data.contextual_alerts)}
       <tr><td style="padding:24px;background:#EFEDE4;text-align:center;border-top:1px solid #E5E1D6;">
         <div style="font-family:'Playfair Display',Georgia,serif;font-size:14px;color:#163334;font-weight:700;">SKS Talents</div>
         <div style="font-family:'Inter',sans-serif;font-size:11px;color:#666;margin-top:4px;">Lundi Matin · rapport hebdomadaire consolidé</div>

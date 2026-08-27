@@ -158,6 +158,66 @@ async function gatherLlmScan() {
   }
 }
 
+async function gatherGeoRecommendations() {
+  const p = path.join(PROJECT_ROOT, "data", "geo-recommendations-latest.json");
+  try {
+    return JSON.parse(await fs.readFile(p, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+async function loadPreviousCoreScore() {
+  const p = path.join(PROJECT_ROOT, "data", "llm-domination-history.jsonl");
+  try {
+    const raw = await fs.readFile(p, "utf8");
+    const lines = raw.trim().split(/\r?\n/);
+    if (lines.length < 2) return null;
+    const prev = JSON.parse(lines[lines.length - 2]);
+    return prev?.core_visibility_score?.num ?? null;
+  } catch {
+    return null;
+  }
+}
+
+function buildContextualAlerts(llm, geo) {
+  const alerts = [];
+  if (llm?.scan_meta?.scan_availability_pct !== undefined && llm.scan_meta.scan_availability_pct < CONFIG.geo.alert_thresholds.scan_availability_min_pct) {
+    alerts.push({
+      level: "warn",
+      message: `Scan partiel · ${llm.scan_meta.scan_availability_pct}% des appels LLM disponibles cette semaine (seuil ${CONFIG.geo.alert_thresholds.scan_availability_min_pct}%).`,
+    });
+  }
+  if (geo?.fallback?.reason) {
+    alerts.push({
+      level: "warn",
+      message: `Recommandations GEO indisponibles · ${geo.fallback.reason}. Actions de la semaine non generees.`,
+    });
+  }
+  // Count queries with high inferred-vs-observed ratio
+  if (llm?.per_query) {
+    let inferredSources = 0;
+    let nativeSources = 0;
+    for (const q of llm.per_query) {
+      for (const r of Object.values(q.per_llm || {})) {
+        if (r?.sources_native) nativeSources += r.sources_native.length;
+        if (r?.competitors_detected) inferredSources += r.competitors_detected.length;
+      }
+    }
+    const totalSources = inferredSources + nativeSources;
+    if (totalSources > 0) {
+      const inferredPct = Math.round((inferredSources / totalSources) * 100);
+      if (inferredPct > CONFIG.geo.alert_thresholds.inferred_sources_ratio_high_pct) {
+        alerts.push({
+          level: "warn",
+          message: `Sources inferred (${inferredPct}%) > sources natives · analyse concurrents cette semaine a interpreter avec prudence.`,
+        });
+      }
+    }
+  }
+  return alerts;
+}
+
 async function gatherContentPublished() {
   const bufferLog = await safeReadJsonl(path.join(PROJECT_ROOT, "data", "buffer-drafts-log.jsonl"));
   const since = Date.now() - 7 * 24 * 3600 * 1000;
@@ -188,7 +248,7 @@ async function gatherNotionSalesPipeline() {
 // -----------------------------------------------------------------------
 
 async function buildReportData(now) {
-  const [chloe, leads, simulator, plausible, gsc, llm, content, sales] = await Promise.all([
+  const [chloe, leads, simulator, plausible, gsc, llm, content, sales, geo, prevCoreScore] = await Promise.all([
     gatherChloeLive(),
     gatherLeadsQualifier(),
     gatherSimulator(),
@@ -197,20 +257,24 @@ async function buildReportData(now) {
     gatherLlmScan(),
     gatherContentPublished(),
     gatherNotionSalesPipeline(),
+    gatherGeoRecommendations(),
+    loadPreviousCoreScore(),
   ]);
 
   const totalQualified = (leads.qualified_70_plus || 0);
   const totalChatConv = chloe.conversations || 0;
   const totalTraffic = plausible?.visitors || 0;
 
+  const coreNum = llm?.core_visibility_score?.num ?? 0;
+  const coreDenom = llm?.core_visibility_score?.denom ?? 75;
   const headline_title = `Cette semaine · ${totalQualified} leads qualifies · ${totalChatConv} conversations Chloe · ${totalTraffic} visiteurs`;
-  const headline_subtitle = `Pipeline nouveau visible + LLM domination ${llm ? `${llm.score_num}/${llm.score_denom}` : "n/a"}`;
+  const headline_subtitle = `Core Visibility ${coreNum}/${coreDenom} · ${(geo?.actions?.length || 0)} actions GEO priorisees`;
 
   const signals_rouge = [
     content?.drafts_pending > 0
       ? `${content.drafts_pending} drafts en attente Buffer non publies`
       : null,
-    llm && llm.score_pct < 30 ? "LLM domination sous 30% · pousser mentions SKS Talents dans les 3 LLM les plus faibles" : null,
+    llm?.core_visibility_score?.pct < 30 ? `Core Visibility ${llm.core_visibility_score.pct}% sous cible 40%` : null,
     totalQualified < CONFIG.kpi_primary.leads_qualifies_semaine_target
       ? `Leads qualifies (${totalQualified}) sous cible hebdo (${CONFIG.kpi_primary.leads_qualifies_semaine_target})`
       : null,
@@ -219,7 +283,7 @@ async function buildReportData(now) {
   const signals_vert = [
     chloe.high_score > 3 ? `Chloe Live · ${chloe.high_score} conversations score > 70` : null,
     content?.posts_published > 3 ? `${content.posts_published} posts publies cette semaine` : null,
-    llm?.score_pct >= 40 ? `LLM domination a ${llm.score_pct}% · momentum positif` : null,
+    llm?.core_visibility_score?.pct >= 40 ? `Core Visibility Score a ${llm.core_visibility_score.pct}% · momentum positif` : null,
   ].filter(Boolean).slice(0, 3);
 
   const leads_par_source = [
@@ -244,23 +308,14 @@ async function buildReportData(now) {
       lost: [{ query: "n/a", from: "-", to: "-" }],
       watch: [{ query: "GSC snapshot manquant · script `scripts/gsc-oauth-helper.mjs` a jour ?", from: "-", to: "-" }],
     },
-    llm: llm ? {
-      score_num: llm.score_num,
-      score_denom: llm.score_denom,
-      score_pct: llm.score_pct,
-      query_count: CONFIG.llm_queries.length,
-      provider_count: CONFIG.llm_providers.length,
-      by_provider: llm.by_provider,
-    } : {
-      score_num: 0,
-      score_denom: CONFIG.llm_queries.length * CONFIG.llm_providers.length,
-      score_pct: 0,
-      query_count: CONFIG.llm_queries.length,
-      provider_count: CONFIG.llm_providers.length,
-      by_provider: Object.fromEntries(
-        CONFIG.llm_providers.map((p) => [p, { mentions: 0, out_of: CONFIG.llm_queries.length, pct: 0 }])
-      ),
+    core_visibility: {
+      num: coreNum,
+      denom: coreDenom,
+      pct: llm?.core_visibility_score?.pct ?? 0,
+      previous_num: prevCoreScore,
     },
+    geo_actions: geo?.actions || [],
+    contextual_alerts: buildContextualAlerts(llm, geo),
     linkedin: {
       perso_followers: 9283,
       perso_followers_prev: 9250,
