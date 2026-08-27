@@ -634,3 +634,54 @@ export async function sendDiagnosticStructurationLeadEmail({
     text: body
   });
 }
+
+export type SimulatorLeadPayload = {
+  email: string;
+  mode: "entreprise" | "candidat";
+  simulatorContext: Record<string, string | number | boolean | null | undefined>;
+  pagePath: string;
+  submittedAt: string;
+};
+
+export async function sendSimulatorLeadEmail({
+  recipient,
+  from,
+  payload
+}: {
+  recipient: string;
+  from: string;
+  payload: SimulatorLeadPayload;
+}) {
+  const modeLabel = payload.mode === "entreprise" ? "Entreprise (DRH/CEO)" : "Candidat (dirigeant.e)";
+  const subject = `Nouveau lead simulateur cout recrutement - ${modeLabel} - ${payload.email}`;
+
+  const contextLines = Object.entries(payload.simulatorContext)
+    .filter(([, value]) => value !== undefined && value !== null && value !== "")
+    .map(([key, value]) => `  - ${escapeBody(key)}: ${escapeBody(String(value))}`);
+
+  const body = [
+    "",
+    "Nouvelle demande de rapport detaille simulateur depuis skstalents.fr",
+    "",
+    `Email: ${escapeBody(payload.email)}`,
+    `Mode: ${modeLabel}`,
+    "",
+    "Contexte simulateur:",
+    ...(contextLines.length ? contextLines : ["  (aucun parametre transmis)"]),
+    "",
+    `Page: ${escapeBody(payload.pagePath)}`,
+    `Envoye le: ${payload.submittedAt}`,
+    "",
+    "---",
+    `Repondre directement a cet email pour envoyer le rapport detaille (Reply-To = ${escapeBody(payload.email)}).`,
+    "Signature: SKS Talents"
+  ].join("\n");
+
+  await sendPlainTextEmail({
+    recipient,
+    from,
+    replyTo: payload.email,
+    subject,
+    text: body
+  });
+}
