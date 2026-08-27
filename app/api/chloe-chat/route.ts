@@ -150,7 +150,7 @@ export async function POST(request: Request) {
   }
 
   const client = new Anthropic({ apiKey });
-  const model = process.env.CHLOE_MODEL || process.env.ANTHROPIC_MODEL || "claude-sonnet-4-5-20250929";
+  const model = process.env.CHLOE_MODEL || process.env.ANTHROPIC_MODEL || "claude-sonnet-5";
 
   const systemPrompt = buildChloeSystemPrompt({ role, fiche });
 

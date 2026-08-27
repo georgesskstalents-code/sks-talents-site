@@ -39,8 +39,8 @@ export default function ChloeLiveBubble({ ficheSlug, ficheTitle }: Props) {
       return;
     }
 
-    const timer = window.setTimeout(() => setVisible(true), 15000);
-    return () => window.clearTimeout(timer);
+    // Apparition immediate pour maximiser le taux d'ouverture (CEO 2026-08-27)
+    setVisible(true);
   }, []);
 
   function handleClose() {

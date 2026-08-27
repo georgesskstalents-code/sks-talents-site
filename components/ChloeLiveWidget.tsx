@@ -34,11 +34,47 @@ export default function ChloeLiveWidget({ ficheSlug, ficheTitle, onClose }: Prop
   const [rgpdOk, setRgpdOk] = useState(false);
   const [loading, setLoading] = useState(false);
   const [lastAction, setLastAction] = useState<ApiResponse["action"] | null>(null);
+  const [listening, setListening] = useState(false);
+  const [voiceSupported, setVoiceSupported] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const recognitionRef = useRef<any>(null);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [messages, loading]);
+
+  // Setup Web Speech API pour dictee vocale FR (utile mobile + gain de temps)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SR) return;
+    const recog = new SR();
+    recog.lang = "fr-FR";
+    recog.continuous = false;
+    recog.interimResults = false;
+    recog.onresult = (e: any) => {
+      const text = e.results?.[0]?.[0]?.transcript || "";
+      if (text) setInput((cur) => (cur ? cur + " " + text : text));
+    };
+    recog.onend = () => setListening(false);
+    recog.onerror = () => setListening(false);
+    recognitionRef.current = recog;
+    setVoiceSupported(true);
+    return () => {
+      try { recog.abort(); } catch { /* no-op */ }
+    };
+  }, []);
+
+  function toggleListening() {
+    const recog = recognitionRef.current;
+    if (!recog) return;
+    if (listening) {
+      try { recog.stop(); } catch { /* no-op */ }
+      setListening(false);
+    } else {
+      try { recog.start(); setListening(true); } catch { /* no-op */ }
+    }
+  }
 
   async function send(userText: string) {
     const clean = userText.trim();
@@ -301,7 +337,7 @@ export default function ChloeLiveWidget({ ficheSlug, ficheTitle, onClose }: Prop
               placeholder={
                 lastAction === "capture_email"
                   ? "Votre email pour recevoir la fiche + barometre..."
-                  : "Votre question a Chloe..."
+                  : listening ? "J'ecoute..." : "Votre question a Chloe..."
               }
               disabled={loading}
               aria-label="Message a Chloe"
@@ -317,6 +353,26 @@ export default function ChloeLiveWidget({ ficheSlug, ficheTitle, onClose }: Prop
                 fontFamily: "inherit"
               }}
             />
+            {voiceSupported && (
+              <button
+                type="button"
+                onClick={toggleListening}
+                aria-label={listening ? "Arreter dictee vocale" : "Dictee vocale"}
+                title={listening ? "Arreter dictee" : "Dictee vocale (FR)"}
+                style={{
+                  background: listening ? "#C0392B" : COLORS.teal,
+                  color: "#fff",
+                  border: "none",
+                  padding: "0 12px",
+                  borderRadius: 10,
+                  cursor: "pointer",
+                  fontSize: 16,
+                  minWidth: 44
+                }}
+              >
+                {listening ? "■" : "🎙"}
+              </button>
+            )}
             <button
               type="submit"
               disabled={loading || !input.trim()}
