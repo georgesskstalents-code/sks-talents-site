@@ -16,7 +16,7 @@ const COLORS = {
 };
 
 /**
- * Bulle bas-droite qui s'affiche apres 15 secondes sur la page.
+ * Bulle bas-droite qui s'affiche immediatement au chargement de la page.
  * Feature flag NEXT_PUBLIC_CHLOE_LIVE_ENABLED = "true" pour activer en prod.
  * SSR-safe : rien ne se rend cote serveur, tout part sur mount.
  */
@@ -39,8 +39,8 @@ export default function ChloeLiveBubble({ ficheSlug, ficheTitle }: Props) {
       return;
     }
 
-    const timer = window.setTimeout(() => setVisible(true), 15000);
-    return () => window.clearTimeout(timer);
+    // Apparition immediate au mount (plus de setTimeout 15000ms).
+    setVisible(true);
   }, []);
 
   function handleClose() {
