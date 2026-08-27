@@ -356,9 +356,18 @@ export default function SiteIntelligenceAgent({
       listeningRef.current = false;
       setListening(false);
     };
-    recognition.onerror = () => {
+    recognition.onerror = (e: unknown) => {
       listeningRef.current = false;
       setListening(false);
+      const err = e as { error?: string };
+      const code = err?.error || "";
+      if (code === "not-allowed" || code === "service-not-allowed") {
+        setError(
+          language === "fr"
+            ? "Micro bloque. Autorisez l'acces au micro : cliquez sur l'icone cadenas dans la barre d'adresse puis autorisez skstalents.fr pour le microphone."
+            : "Mic blocked. Allow microphone access: click the padlock icon in the address bar then allow skstalents.fr for microphone."
+        );
+      }
     };
     recognition.onresult = (event) => {
       const first = event.results[0];
@@ -565,8 +574,12 @@ export default function SiteIntelligenceAgent({
           </div>
 
           <div
-            className="min-h-0 flex-1 space-y-4 overflow-y-auto bg-slate-50 px-4 py-4"
+            role="region"
+            aria-label="Messages du chat"
+            className="space-y-4 overflow-y-auto bg-slate-50 px-4 py-4"
             style={{
+              height: "min(60vh, 480px)",
+              minHeight: "300px",
               WebkitOverflowScrolling: "touch",
               overscrollBehavior: "contain",
               touchAction: "pan-y"
