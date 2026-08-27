@@ -150,10 +150,16 @@ export async function POST(request: Request) {
   }
 
   const client = new Anthropic({ apiKey });
-  // Model par defaut : claude-sonnet-5 (le precedent claude-sonnet-4-5-20250929 renvoyait
-  // une erreur `model_not_found` en prod, ce qui declenchait le fallback "souci technique").
-  // Fallback dur en dernier ressort si CHLOE_MODEL / ANTHROPIC_MODEL ne sont pas set.
-  const model = process.env.CHLOE_MODEL || process.env.ANTHROPIC_MODEL || "claude-sonnet-5";
+  // Chaine de fallback : plusieurs modeles testes dans l'ordre jusqu'a en trouver un
+  // qui repond. Empeche que la depreciation d'un modele bloque Chloe entiere.
+  const modelCandidates: string[] = [];
+  if (process.env.CHLOE_MODEL) modelCandidates.push(process.env.CHLOE_MODEL);
+  if (process.env.ANTHROPIC_MODEL) modelCandidates.push(process.env.ANTHROPIC_MODEL);
+  modelCandidates.push(
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5",
+    "claude-3-5-sonnet-20241022"
+  );
 
   const systemPrompt = buildChloeSystemPrompt({ role, fiche });
 
@@ -163,43 +169,39 @@ export async function POST(request: Request) {
   ];
 
   let assistantText = "";
-  try {
-    const completion = await client.messages.create({
-      model,
-      max_tokens: 700,
-      system: systemPrompt,
-      messages: messages.map((m) => ({ role: m.role, content: m.content }))
-    });
-    const first = completion.content?.[0];
-    if (first && first.type === "text") {
-      assistantText = first.text;
+  let lastErrorDetail: string | null = null;
+  let modelUsed = "";
+  for (const candidate of modelCandidates) {
+    try {
+      const completion = await client.messages.create({
+        model: candidate,
+        max_tokens: 700,
+        system: systemPrompt,
+        messages: messages.map((m) => ({ role: m.role, content: m.content }))
+      });
+      const first = completion.content?.[0];
+      if (first && first.type === "text") {
+        assistantText = first.text;
+        modelUsed = candidate;
+        break;
+      }
+    } catch (err) {
+      const errAny = err as { message?: string; status?: number; error?: unknown };
+      lastErrorDetail = `[${candidate}] status=${errAny?.status || "n/a"} msg=${errAny?.message || String(err).slice(0, 200)}`;
+      console.error("chloe-chat anthropic try failed", { candidate, ficheSlug, detail: lastErrorDetail });
+      continue;
     }
-  } catch (err) {
-    // Log detaille (visible dans Vercel logs) pour identifier la vraie cause en cas de
-    // nouvelle regression. On garde la stack + le message brut.
-    const errAny = err as { message?: string; status?: number; error?: unknown; stack?: string };
-    console.error(
-      "chloe-chat anthropic error",
-      JSON.stringify(
-        {
-          model,
-          ficheSlug,
-          errorName: (err as Error)?.name,
-          message: errAny?.message,
-          status: errAny?.status,
-          errorPayload: errAny?.error,
-          stack: errAny?.stack
-        },
-        null,
-        2
-      )
-    );
+  }
+
+  if (!assistantText) {
+    console.error("chloe-chat ALL models failed", { ficheSlug, lastErrorDetail });
     return NextResponse.json(
       {
         response:
           "Bonjour, moi c'est Chloe. Je rencontre un souci technique. Reessayez dans un instant ou contactez Georges directement. SKS Talents",
-        score: 0
-      } satisfies ChatResponseBody,
+        score: 0,
+        _debug_last_error: lastErrorDetail
+      },
       { status: 200 }
     );
   }
