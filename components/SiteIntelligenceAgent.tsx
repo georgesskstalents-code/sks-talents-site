@@ -228,51 +228,20 @@ export default function SiteIntelligenceAgent({
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const scrollRef = useRef<HTMLDivElement | null>(null);
+  // End-of-list anchor for one-shot auto-scroll to the newest message.
+  const endRef = useRef<HTMLDivElement | null>(null);
+  // Track message count so we only auto-scroll on a NEW message, not on every streamed token.
+  const lastMessageCountRef = useRef(0);
   const languageRef = useRef<ChatLanguage>("fr");
-  // Tracks whether the user is reading at the bottom. If they scrolled up to
-  // re-read, we must NOT yank them back down on every streamed token.
-  const atBottomRef = useRef(true);
-  // Set as soon as the user starts a wheel / touch / mouse gesture on the scroll area.
-  // While true, streaming updates NEVER force the scroll position - so the
-  // user can freely scroll up to re-read a long answer, even mid-stream.
-  const userInteractingRef = useRef(false);
-  const interactingTimeoutRef = useRef<number | null>(null);
-  // Distinguish programmatic scrolls (auto-follow) from user scrolls.
-  // Without this, our own `el.scrollTop = el.scrollHeight` fires an onScroll
-  // that resets atBottomRef=true, erasing any user intent to scroll up.
-  const programmaticScrollRef = useRef(false);
   // Voice input (Web Speech API). Silent fallback : the button is only rendered
   // when the browser supports it, no error UI otherwise.
   const [voiceSupported, setVoiceSupported] = useState(false);
   const [listening, setListening] = useState(false);
   const recognitionRef = useRef<SpeechRecognitionLike | null>(null);
+  const listeningRef = useRef(false);
   const currentPath = useMemo(() => pathname ?? "/", [pathname]);
   const ui = copy[language];
   const consent = useCookieConsent();
-
-  const markUserInteracting = () => {
-    userInteractingRef.current = true;
-    if (interactingTimeoutRef.current) {
-      window.clearTimeout(interactingTimeoutRef.current);
-    }
-    // 8s covers the typical SSE stream duration (delta bursts fire ~10-50 fois/s).
-    // The real gate is atBottomRef; this timeout is just a mobile-touch safety net.
-    interactingTimeoutRef.current = window.setTimeout(() => {
-      userInteractingRef.current = false;
-    }, 8000);
-  };
-
-  // Body scroll lock : quand le chat est ouvert, on bloque le scroll de la page derriere.
-  useEffect(() => {
-    if (typeof document === "undefined") return;
-    if (!open) return;
-    const originalOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = originalOverflow;
-    };
-  }, [open]);
 
   useEffect(() => {
     languageRef.current = language;
@@ -286,9 +255,7 @@ export default function SiteIntelligenceAgent({
     setMessages([createWelcomeMessage(nextLanguage)]);
   }, []);
 
-  // Keep the chat language in sync with the site FR/EN toggle. When the visitor
-  // flips the site language, the chat follows it (UI copy + next answer language).
-  // An ongoing conversation is preserved; only the standalone welcome bubble is swapped.
+  // Keep the chat language in sync with the site FR/EN toggle.
   useEffect(() => {
     if (typeof window === "undefined") {
       return;
@@ -340,41 +307,35 @@ export default function SiteIntelligenceAgent({
     };
   }, []);
 
-  // Follow the conversation only while the user is already at the bottom AND
-  // is not actively scrolling. If they wheeled / touched up to re-read, leave
-  // their position untouched so they can read freely, even while a long
-  // answer is still streaming in. We flip programmaticScrollRef around the
-  // scroll write so the onScroll handler ignores our own scroll and does not
-  // reset atBottomRef=true, which would erase the user's intent to scroll up.
+  // One-shot auto-scroll ONLY when the number of messages changes (new bubble),
+  // never on token deltas inside an existing bubble. The user can scroll freely
+  // mid-stream without being yanked back down.
   useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    if (userInteractingRef.current) return;
-    if (!atBottomRef.current) return;
+    if (messages.length === lastMessageCountRef.current) {
+      return;
+    }
+    lastMessageCountRef.current = messages.length;
+    endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  }, [messages.length]);
 
-    programmaticScrollRef.current = true;
-    el.scrollTop = el.scrollHeight;
-    // Release the flag on the next frame, after the browser has fired the
-    // synthetic onScroll for this write.
-    requestAnimationFrame(() => {
-      programmaticScrollRef.current = false;
-    });
-  }, [messages, loading]);
+  // Ensure the latest message is visible when the panel is opened.
+  useEffect(() => {
+    if (!open) return;
+    endRef.current?.scrollIntoView({ behavior: "auto", block: "end" });
+  }, [open]);
 
   // Detect Web Speech API once on mount (Chrome/Edge/Safari desktop, Safari iOS 14.5+).
   useEffect(() => {
     setVoiceSupported(Boolean(getSpeechRecognitionCtor()));
     return () => {
       recognitionRef.current?.stop();
-      if (interactingTimeoutRef.current) {
-        window.clearTimeout(interactingTimeoutRef.current);
-      }
     };
   }, []);
 
-  function toggleVoiceInput() {
-    if (typeof window === "undefined") return;
-    if (listening) {
+  // Voice: rip-and-replace with Georges' minimal pattern.
+  // Direct start() / stop() at click, no wrappers, no gates.
+  function handleMicClick() {
+    if (listeningRef.current) {
       recognitionRef.current?.stop();
       return;
     }
@@ -384,34 +345,27 @@ export default function SiteIntelligenceAgent({
     const recognition = new Recognition();
     recognition.lang = language === "fr" ? "fr-FR" : "en-US";
     recognition.continuous = false;
-    recognition.interimResults = true;
+    recognition.interimResults = false;
     recognition.maxAlternatives = 1;
 
-    // Snapshot what was already in the input so voice dictation appends
-    // instead of erasing text the user typed by hand.
-    const baseText = input.trim();
-    recognition.onstart = () => setListening(true);
-    recognition.onend = () => setListening(false);
-    recognition.onerror = () => setListening(false);
+    recognition.onstart = () => {
+      listeningRef.current = true;
+      setListening(true);
+    };
+    recognition.onend = () => {
+      listeningRef.current = false;
+      setListening(false);
+    };
+    recognition.onerror = () => {
+      listeningRef.current = false;
+      setListening(false);
+    };
     recognition.onresult = (event) => {
-      const results = event.results;
-      let transcript = "";
-      for (let i = 0; i < results.length; i++) {
-        const r = results[i] as ArrayLike<{ transcript: string }> & { isFinal?: boolean };
-        const alt = r[0];
-        if (!alt || typeof alt.transcript !== "string") continue;
-        transcript += alt.transcript;
-      }
-      transcript = transcript.trim();
-      const combined = baseText ? `${baseText} ${transcript}` : transcript;
-      if (combined) {
-        setInput(combined);
-      }
-      const lastResult = results[results.length - 1] as
-        | (ArrayLike<{ transcript: string }> & { isFinal?: boolean })
-        | undefined;
-      if (lastResult && lastResult.isFinal) {
-        recognition.stop();
+      const first = event.results[0];
+      const alt = first ? first[0] : undefined;
+      const transcript = alt && typeof alt.transcript === "string" ? alt.transcript.trim() : "";
+      if (transcript) {
+        setInput((current) => (current.trim() ? `${current.trim()} ${transcript}` : transcript));
       }
     };
 
@@ -419,21 +373,10 @@ export default function SiteIntelligenceAgent({
     try {
       recognition.start();
     } catch {
+      listeningRef.current = false;
       setListening(false);
     }
   }
-
-  // Opening the chat always lands at the latest message.
-  useEffect(() => {
-    if (open && scrollRef.current) {
-      atBottomRef.current = true;
-      programmaticScrollRef.current = true;
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-      requestAnimationFrame(() => {
-        programmaticScrollRef.current = false;
-      });
-    }
-  }, [open]);
 
   async function submitMessage(messageText: string) {
     const trimmed = messageText.trim();
@@ -622,33 +565,12 @@ export default function SiteIntelligenceAgent({
           </div>
 
           <div
-            ref={scrollRef}
-            onScroll={(event) => {
-              // Ignore the synthetic onScroll fired by our own auto-follow
-              // write, otherwise atBottomRef gets reset to true and the user's
-              // intent to scroll up is silently erased.
-              if (programmaticScrollRef.current) return;
-              const el = event.currentTarget;
-              // Tight 4 px threshold: only "truly glued to the bottom" keeps
-              // auto-follow armed. One wheel tick (>=~40 px) is enough to opt out.
-              atBottomRef.current =
-                el.scrollHeight - el.scrollTop - el.clientHeight < 4;
+            className="min-h-0 flex-1 space-y-4 overflow-y-auto bg-slate-50 px-4 py-4"
+            style={{
+              WebkitOverflowScrolling: "touch",
+              overscrollBehavior: "contain",
+              touchAction: "pan-y"
             }}
-            onWheel={(event) => {
-              // Wheel fires BEFORE the browser applies the scroll, so we can
-              // immediately opt out of auto-scroll when the user reaches up.
-              if (event.deltaY < 0) {
-                atBottomRef.current = false;
-              }
-              markUserInteracting();
-            }}
-            onTouchStart={markUserInteracting}
-            onTouchMove={markUserInteracting}
-            onPointerDown={markUserInteracting}
-            // onMouseDown covers the desktop scrollbar drag case that neither
-            // wheel nor touch nor pointer capture on all browsers.
-            onMouseDown={markUserInteracting}
-            className="min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain bg-slate-50 px-4 py-4"
           >
             {messages.map((message) => (
               <div
@@ -676,6 +598,7 @@ export default function SiteIntelligenceAgent({
                 </div>
               </div>
             ) : null}
+            <div ref={endRef} />
           </div>
 
           <div className="shrink-0 border-t border-brand-line bg-white px-4 py-3">
@@ -753,8 +676,7 @@ export default function SiteIntelligenceAgent({
               {voiceSupported ? (
                 <button
                   type="button"
-                  onClick={toggleVoiceInput}
-                  disabled={loading}
+                  onClick={handleMicClick}
                   aria-pressed={listening}
                   aria-label={
                     listening
@@ -774,7 +696,7 @@ export default function SiteIntelligenceAgent({
                         ? "Dictee vocale"
                         : "Voice dictation"
                   }
-                  className={`inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border transition disabled:cursor-not-allowed disabled:opacity-50 ${
+                  className={`inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border transition ${
                     listening
                       ? "animate-pulse border-red-600 bg-red-600 text-white"
                       : "border-brand-line bg-white text-brand-teal hover:bg-brand-mint"
