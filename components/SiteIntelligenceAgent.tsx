@@ -1,6 +1,6 @@
 "use client";
 
-import { Loader2, MessageCircle, Mic, MicOff, SendHorizonal, Sparkles, X } from "lucide-react";
+import { Loader2, MessageCircle, SendHorizonal, Sparkles, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -197,9 +197,6 @@ export default function SiteIntelligenceAgent({
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [listening, setListening] = useState(false);
-  const [voiceSupported, setVoiceSupported] = useState(false);
-  const recognitionRef = useRef<SpeechRecognition | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const languageRef = useRef<ChatLanguage>("fr");
   // Tracks whether the user is reading at the bottom. If they scrolled up to
@@ -209,80 +206,8 @@ export default function SiteIntelligenceAgent({
   const ui = copy[language];
   const consent = useCookieConsent();
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const Recognition =
-      (window as unknown as { SpeechRecognition?: typeof SpeechRecognition }).SpeechRecognition ||
-      (window as unknown as { webkitSpeechRecognition?: typeof SpeechRecognition })
-        .webkitSpeechRecognition;
-    setVoiceSupported(Boolean(Recognition));
-  }, []);
-
-  function toggleVoiceInput() {
-    if (typeof window === "undefined") return;
-    if (listening) {
-      recognitionRef.current?.stop();
-      return;
-    }
-
-    const Recognition =
-      (window as unknown as { SpeechRecognition?: typeof SpeechRecognition }).SpeechRecognition ||
-      (window as unknown as { webkitSpeechRecognition?: typeof SpeechRecognition })
-        .webkitSpeechRecognition;
-    if (!Recognition) return;
-
-    const recognition = new Recognition();
-    recognition.lang = language === "fr" ? "fr-FR" : "en-US";
-    recognition.continuous = false;
-    recognition.interimResults = true;
-    recognition.maxAlternatives = 1;
-
-    recognition.onstart = () => setListening(true);
-    recognition.onerror = () => {
-      setListening(false);
-      setError(
-        language === "fr"
-          ? "Micro indisponible. Vérifiez les permissions du navigateur."
-          : "Microphone unavailable. Check browser permissions."
-      );
-    };
-    recognition.onend = () => setListening(false);
-    recognition.onresult = (event: SpeechRecognitionEvent) => {
-      const transcript = Array.from(event.results)
-        .map((r) => r[0]?.transcript ?? "")
-        .join(" ")
-        .trim();
-      if (transcript) {
-        setInput(transcript);
-      }
-      // Auto-submit when final result is in
-      const lastResult = event.results[event.results.length - 1];
-      if (lastResult?.isFinal && transcript.length > 1) {
-        recognition.stop();
-        // Mark this query as voice-originated for analytics
-        try {
-          fetch("/api/site-analytics", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            keepalive: true,
-            body: JSON.stringify({
-              type: "agent_query_voice",
-              path: currentPath,
-              query: transcript,
-              sessionId: getSessionId(),
-              createdAt: new Date().toISOString()
-            })
-          }).catch(() => undefined);
-        } catch {
-          // ignore
-        }
-        void submitMessage(transcript);
-      }
-    };
-
-    recognitionRef.current = recognition;
-    recognition.start();
-  }
+  // Voice input removed (2026-08-27) · Web Speech API trop instable cross-browser.
+  // Chloe Live sur /job-roles/* embarque la version amelioree du vocal FR.
 
   useEffect(() => {
     languageRef.current = language;
@@ -654,37 +579,9 @@ export default function SiteIntelligenceAgent({
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
                 rows={2}
-                placeholder={listening ? (language === "fr" ? "À l’écoute…" : "Listening…") : ui.placeholder}
-                className={`min-h-[56px] flex-1 resize-none rounded-[18px] border px-4 py-3 text-sm outline-none transition ${
-                  listening
-                    ? "border-brand-teal ring-2 ring-brand-teal/20 bg-brand-mint/15"
-                    : "border-brand-line focus:border-brand-teal"
-                }`}
+                placeholder={ui.placeholder}
+                className="min-h-[56px] flex-1 resize-none rounded-[18px] border border-brand-line focus:border-brand-teal px-4 py-3 text-sm outline-none transition"
               />
-              {voiceSupported ? (
-                <button
-                  type="button"
-                  onClick={toggleVoiceInput}
-                  disabled={loading}
-                  aria-pressed={listening}
-                  aria-label={
-                    listening
-                      ? language === "fr"
-                        ? "Arrêter la dictée vocale"
-                        : "Stop voice input"
-                      : language === "fr"
-                        ? "Activer la dictée vocale"
-                        : "Start voice input"
-                  }
-                  className={`inline-flex h-12 w-12 items-center justify-center rounded-full transition disabled:cursor-not-allowed disabled:opacity-50 ${
-                    listening
-                      ? "bg-red-500 text-white animate-pulse"
-                      : "border border-brand-teal/30 bg-white text-brand-teal hover:bg-brand-mint"
-                  }`}
-                >
-                  {listening ? <MicOff size={18} /> : <Mic size={18} />}
-                </button>
-              ) : null}
               <button
                 type="submit"
                 disabled={loading || input.trim().length < 2}
