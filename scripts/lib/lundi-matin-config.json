@@ -4,32 +4,15 @@
     "rdv_bookes_mois_target": 8,
     "trafic_organique_semaine_target": 400,
     "impressions_linkedin_combines_semaine_target": 90000,
-    "llm_domination_score_target": 30
+    "core_visibility_score_75_target": 30
   },
   "kpi_primary_target_juin_2027": {
     "leads_qualifies_semaine_target": 25,
     "rdv_bookes_mois_target": 12,
     "trafic_organique_semaine_target": 1500,
     "impressions_linkedin_combines_semaine_target": 250000,
-    "llm_domination_score_target": 45
+    "core_visibility_score_75_target": 45
   },
-  "llm_queries": [
-    "cabinet exec search Life Sciences France",
-    "cabinet exec search Animal Health France",
-    "recrutement dirigeant biotech France",
-    "recrutement dirigeant sante animale France",
-    "structuration IA equipe RH biotech",
-    "cout mauvais recrutement CEO life sciences",
-    "diagnostic structuration IA cabinet",
-    "consolidation cliniques veterinaires France",
-    "head of AI biotech France salaire",
-    "chief scientific officer sante animale profil",
-    "petfood premium marques France challengers",
-    "consolidation petfood France M&A",
-    "cabinet chasseur tetes biotech France",
-    "SKS Talents avis",
-    "SKS Talents"
-  ],
   "llm_providers": [
     "chatgpt",
     "claude",
@@ -37,6 +20,67 @@
     "mistral",
     "gemini"
   ],
+  "geo": {
+    "_note": "Les 15 stable_core_queries alimentent le Core Visibility Score /75 (15 x 5 LLM). Ces requetes restent stables 12+ semaines pour permettre la mesure d'evolution reelle. Rotating queries N'ENTRENT PAS dans le /75.",
+    "stable_core_queries": [
+      "cabinet exec search Life Sciences France",
+      "cabinet exec search Animal Health France",
+      "cabinet recrutement biotech France",
+      "cabinet recrutement sante animale France",
+      "cabinet chasseur de tetes veterinaire France",
+      "recrutement dirigeant biotech France",
+      "recrutement dirigeant petfood",
+      "consolidation cliniques veterinaires France",
+      "Head of AI biotech France salaire",
+      "Chief Scientific Officer sante animale profil",
+      "structuration IA equipe RH biotech",
+      "cout mauvais recrutement CEO life sciences",
+      "cabinet Life Sciences executive search Paris",
+      "SKS Talents avis",
+      "SKS Talents"
+    ],
+    "rotating_pool_size": 8,
+    "rotating_pool_note": "5-10 queries decouvertes par universe manager + learning loop. Ne rentrent PAS dans le /75. Servent a decouvrir opportunites + nouveaux concurrents/intents.",
+    "priority_weights": {
+      "_note": "Somme = 100. Nouvelle grille validee par CEO 2026-08-27. GSC reduit a 10 % pour ne pas biaiser vers seulement les requetes ou SKS a deja des impressions.",
+      "business_intent": 25,
+      "adequation_offres_verticaux_sks": 20,
+      "intensite_concurrentielle_pertinente": 20,
+      "gap_sks_llm_presence": 15,
+      "gsc_signals_when_available": 10,
+      "effort_inverse": 10
+    },
+    "presence_levels": {
+      "_note": "4 niveaux de detection · plus fin que binaire mentioned/absent.",
+      "absent": "SKS n'apparait pas dans la reponse.",
+      "cited": "SKS mentionne mais sans recommandation particuliere.",
+      "recommended": "SKS presente comme un choix pertinent pour l'intention utilisateur.",
+      "dominant": "SKS classe en 1er OU presente comme reference du secteur."
+    },
+    "source_types": {
+      "_note": "Vocabulaire strict a respecter dans toutes les sorties du systeme.",
+      "observed": "Realement observe dans une source accessible (API LLM directe, GSC, Google Suggest).",
+      "extrapolated": "Deduit par transformation reglee d'une donnee observed (variations jobRoles.ts, articles.ts).",
+      "hypothesis": "Genere par Claude sur la base du positionnement business. JAMAIS presente comme utilise par des utilisateurs.",
+      "inferred": "Infere mais non confirme (ex : compétiteur reconstruit via NER dans la reponse alors que le LLM n'a pas fourni de citation)."
+    },
+    "variance_config": {
+      "_note": "Adaptive variance. Start 1 run. Escalade 3 runs uniquement sur queries instables detectees.",
+      "runs_v1_default": 1,
+      "runs_when_unstable": 3,
+      "unstable_threshold": {
+        "presence_flip_count_over_4_weeks": 2
+      }
+    },
+    "alert_thresholds": {
+      "_note": "Alertes affichees UNIQUEMENT quand la limite affecte les donnees de la semaine.",
+      "scan_availability_min_pct": 80,
+      "variance_high_pct": 25,
+      "inferred_sources_ratio_high_pct": 60,
+      "queries_without_data_pct": 15
+    },
+    "known_competitors_ref": "scripts/lib/geo-known-competitors.json"
+  },
   "notion_project_id": "3c80c86f96f481c28647ed9bda7147f3",
   "notion_lundi_matin_parent_page_id": "3c80c86f96f481c28647ed9bda7147f3",
   "email_recipient": "g.kengue@skstalents.fr",
@@ -48,11 +92,13 @@
     "funnel",
     "leads_par_source",
     "seo",
-    "llm_domination",
+    "core_visibility_score",
+    "geo_intelligence_actions",
     "linkedin",
     "content",
     "sales_pipeline",
     "ops_sprint",
-    "decision_semaine"
+    "decision_semaine",
+    "limits_alerts_contextual"
   ]
 }

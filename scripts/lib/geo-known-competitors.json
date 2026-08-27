@@ -1,0 +1,46 @@
+{
+  "_meta": {
+    "description": "Liste curatee des competiteurs directs et adjacents de SKS Talents pour l'analyse LLM. Utilisee pour scorer l'intensite concurrentielle pertinente (pas juste le nombre de noms cites).",
+    "tier_definitions": {
+      "tier1_direct": "Cabinet exec search specialise Life Sciences / Animal Health / Petfood en France · comparable direct SKS.",
+      "tier2_adjacent": "Cabinet exec search generaliste FR/EU avec exposition LS/AH · concurrent partiel.",
+      "tier3_tangential": "Cabinet generaliste sans specialisation LS/AH · signal faible."
+    },
+    "scoring": {
+      "tier1_direct": 1.0,
+      "tier2_adjacent": 0.5,
+      "tier3_tangential": 0.15
+    },
+    "last_updated": "2026-08-27",
+    "extensible": "Ajouter les nouveaux competiteurs decouverts via learning loop dans tier1_direct manuellement apres validation Georges."
+  },
+  "tier1_direct": [
+    { "name": "Delville Management", "domains": ["delvillemanagement.com"], "verticals": ["life-sciences", "health"] },
+    { "name": "Alexander Hughes", "domains": ["alexanderhughes.com"], "verticals": ["life-sciences"] },
+    { "name": "MSL Recruitment", "domains": ["mslrecruitment.com"], "verticals": ["life-sciences", "biotech"] },
+    { "name": "PharmaLogics", "domains": ["pharmalogics.com"], "verticals": ["life-sciences"] },
+    { "name": "Barrington James", "domains": ["barringtonjames.com"], "verticals": ["life-sciences", "biotech"] },
+    { "name": "Progress Consulting", "domains": ["progressconsulting.fr"], "verticals": ["life-sciences", "health"] },
+    { "name": "Coleman", "domains": ["colemanfrance.com"], "verticals": ["life-sciences", "health"] },
+    { "name": "Kingsley Gate Partners", "domains": ["kingsleygate.com"], "verticals": ["life-sciences", "health"] }
+  ],
+  "tier2_adjacent": [
+    { "name": "Egon Zehnder", "domains": ["egonzehnder.com"], "verticals": ["executive-search"] },
+    { "name": "Spencer Stuart", "domains": ["spencerstuart.com"], "verticals": ["executive-search"] },
+    { "name": "Russell Reynolds", "domains": ["russellreynolds.com"], "verticals": ["executive-search"] },
+    { "name": "Heidrick & Struggles", "domains": ["heidrick.com"], "verticals": ["executive-search"] },
+    { "name": "Korn Ferry", "domains": ["kornferry.com"], "verticals": ["executive-search"] },
+    { "name": "Michael Page", "domains": ["michaelpage.fr", "michaelpage.com"], "verticals": ["executive-search", "recruitment"] },
+    { "name": "Hays", "domains": ["hays.fr", "hays.com"], "verticals": ["executive-search", "recruitment"] },
+    { "name": "Robert Half", "domains": ["roberthalf.fr", "roberthalf.com"], "verticals": ["executive-search", "recruitment"] },
+    { "name": "Robert Walters", "domains": ["robertwalters.fr", "robertwalters.com"], "verticals": ["executive-search"] },
+    { "name": "Fyte", "domains": ["fyte.com"], "verticals": ["executive-search"] },
+    { "name": "Vidal Associates Consulting", "domains": ["vidal-associates.com"], "verticals": ["executive-search"] }
+  ],
+  "tier3_tangential": [
+    { "name": "APEC", "domains": ["apec.fr"], "verticals": ["recruitment-board"] },
+    { "name": "LinkedIn Recruiter", "domains": ["linkedin.com"], "verticals": ["job-board"] },
+    { "name": "Cadremploi", "domains": ["cadremploi.fr"], "verticals": ["job-board"] },
+    { "name": "Indeed", "domains": ["indeed.fr"], "verticals": ["job-board"] }
+  ]
+}

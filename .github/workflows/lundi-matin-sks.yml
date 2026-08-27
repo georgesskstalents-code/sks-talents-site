@@ -24,7 +24,12 @@ jobs:
       - name: Install deps
         run: npm ci --no-audit --no-fund
 
-      - name: Run LLM domination scan
+      - name: Build GEO query universe (Layer 1+2+3)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/geo-query-universe.mjs
+
+      - name: Run LLM domination scan v2 (structured)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -32,6 +37,16 @@ jobs:
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/llm-domination-scan.mjs
+
+      - name: Build GEO recommendations (3-5 actions)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/geo-recommendation-engine.mjs
+
+      - name: Learn from scans (update universe hypothesis pool)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/geo-learn-from-scans.mjs
 
       - name: Generate + send Lundi Matin SKS
         env:
@@ -45,12 +60,12 @@ jobs:
           GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
         run: node scripts/generate-lundi-matin-sks.mjs
 
-      - name: Persist snapshots (LLM history + weekly HTML)
+      - name: Persist snapshots (universe + scan history + recommendations + weekly HTML)
         if: always()
         run: |
           git config user.name "sks-lundi-matin-bot"
           git config user.email "bot@skstalents.fr"
-          git add data/llm-domination-history.jsonl data/llm-domination-latest.json data/lundi-matin-snapshots/ 2>/dev/null || true
+          git add data/geo-query-universe.json data/llm-domination-history.jsonl data/llm-domination-latest.json data/geo-recommendations-latest.json data/geo-learning-latest.json data/lundi-matin-snapshots/ 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "chore(lundi-matin): snapshot week $(date -u +%Y-W%V)"
             git push
