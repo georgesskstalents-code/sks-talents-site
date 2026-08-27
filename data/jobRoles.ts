@@ -1483,7 +1483,7 @@ const strategicExtras: JobRole[] = [
       "Aligner les messages médicaux avec les enjeux de développement, de preuve et de commercialisation."
     ],
     studies: ["Médecine", "Pharmacie", "Doctorat sciences de la vie avec forte exposition clinique"],
-    schools: ["Universite Paris-Saclay", "Institut Pasteur", "Faculte de pharmacie Strasbourg", "Universite d'Angers"],
+    schools: ["Universite Paris-Saclay", "Institut Pasteur", "Faculte de pharmacie Strasbourg", "Universite d'Angers", "Harvard Business School"],
     relatedIndustries: ["Biotech", "Biopharma", "Medtech", "Clinical development", "Rare diseases"]
   },
   {
@@ -3968,7 +3968,7 @@ const nuclearMedicineRoles: JobRole[] = [
       "Piloter les comptes stratégiques, les partenaires clés et les indicateurs de performance."
     ],
     studies: ["École de commerce", "Ingénieur + business", "Pharmacien ou scientifique avec forte exposition marché"],
-    schools: ["HEC Paris", "ESSEC", "CentraleSupélec", "Université Paris-Saclay"],
+    schools: ["HEC Paris", "ESSEC", "CentraleSupélec", "Université Paris-Saclay", "Harvard Business School", "MIT Sloan"],
     relatedIndustries: ["Médecine nucléaire", "Diagnostic", "Oncologie", "Radiopharmacie", "RIV"],
     sources: [
       {
@@ -4038,7 +4038,7 @@ const nuclearMedicineRoles: JobRole[] = [
       "Travailler avec sociétés savantes, associations, autorités et directions internes."
     ],
     studies: ["Pharmacien", "École de commerce", "Master santé publique / économie de la santé"],
-    schools: ["Sciences Po", "Université Paris-Saclay", "ESSEC", "Faculté de pharmacie Montpellier"],
+    schools: ["Sciences Po", "Université Paris-Saclay", "ESSEC", "Faculté de pharmacie Montpellier", "Harvard Business School", "Yale SOM"],
     relatedIndustries: ["RIV", "Médecine nucléaire", "Oncologie", "Diagnostic", "Health policy"],
     sources: [
       {
@@ -4810,7 +4810,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "10+ ans en affaires réglementaires santé animale",
       "Master affaires réglementaires ou équivalent recommandé"
     ],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Université d'Angers", "Faculté de pharmacie Strasbourg"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Université d'Angers", "Faculté de pharmacie Strasbourg", "Harvard Business School"],
     relatedIndustries: [
       "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac, Vétoquinol)",
       "EMA / ANMV (ANSES) / autres autorités nationales EU",
@@ -4913,7 +4913,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "MBA ou Master management stratégique recommandé",
       "7-10 ans d'expérience mixte scientifique + business"
     ],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "HEC / ESSEC / INSEAD"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "HEC / ESSEC / INSEAD", "Harvard Business School"],
     relatedIndustries: [
       "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva)",
       "Biotech et startups animal health / petcare",
@@ -4964,7 +4964,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "MBA recommandé pour les grands groupes",
       "15+ ans d'expérience dont 5+ en direction opérationnelle santé animale"
     ],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "HEC / ESSEC / ESCP / INSEAD"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "HEC / ESSEC / ESCP / INSEAD", "Harvard Business School"],
     relatedIndustries: [
       "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac, Vétoquinol, Merial/Sanofi)",
       "Petfood premium multinational (Nestlé Purina, Mars Petcare, Royal Canin, Hill's, Affinity Petcare)",
@@ -5271,7 +5271,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "10-15 ans d'expérience mixte terrain vétérinaire + finance / M&A",
       "Formation continue M&A santé (recommandée)"
     ],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "HEC / ESSEC / INSEAD"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "HEC / ESSEC / INSEAD", "Harvard Business School", "Yale SOM"],
     relatedIndustries: [
       "Groupements vétérinaires consolidateurs (AniCura, IVC Evidensia, VetPartners France, Univet, Sévétys, VetOne, Argos Vet)",
       "Fonds VC/PE santé animale et petcare (Digitalis Ventures, Companion Fund, Ardian, IK Partners)",
@@ -5323,7 +5323,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "8-15 ans d'expérience mixte formation santé animale + operations",
       "Formation continue digital learning et sciences de l'éducation appréciée"
     ],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Sciences de l'éducation", "École de commerce généraliste"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Sciences de l'éducation", "École de commerce généraliste", "Harvard Business School"],
     relatedIndustries: [
       "Agences de formation santé animale (Vetalis, VetOnline, agences indépendantes)",
       "Laboratoires santé animale clients (Zoetis, Boehringer Ingelheim, MSD, Ceva, Elanco, Virbac, Vétoquinol)",
@@ -5375,7 +5375,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "7-15 ans d'expérience commerciale santé animale, services vétérinaires ou SaaS B2B",
       "MBA apprécié pour la dimension stratégique"
     ],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "HEC / ESSEC / ESCP", "École de commerce généraliste"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "HEC / ESSEC / ESCP", "École de commerce généraliste", "MIT Sloan", "Harvard Business School"],
     relatedIndustries: [
       "Startups IA santé animale (assistants IA vétérinaires, CRM santé animale)",
       "Éditeurs SaaS B2B vétérinaire (PMS cliniques, télémédecine, workflow)",
@@ -5479,7 +5479,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "Expérience confirmée de gouvernance (présidence de conseil ou mandats d'administrateur.rice indépendant.e)",
       "Formations spécifiques gouvernance (IFA - Institut Français des Administrateurs) appréciées"
     ],
-    schools: ["Grandes écoles + doctorat sciences", "IFA - Institut Français des Administrateurs", "Écoles Life Sciences internationales"],
+    schools: ["Grandes écoles + doctorat sciences", "IFA - Institut Français des Administrateurs", "Écoles Life Sciences internationales", "Harvard Business School", "Yale SOM"],
     relatedIndustries: [
       "Scale-ups Life Sciences françaises en internationalisation (biotech, diagnostic, medtech, génomique clinique)",
       "Grands groupes pharma en portefeuille administrateur.rice indépendant.e",
@@ -5583,7 +5583,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "10-15 ans d'expérience commerciale nutrition animale ou secteurs adjacents (santé animale, coopératives)",
       "MBA ou formation continue direction commerciale appréciés"
     ],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "Institut Agro Montpellier", "HEC / ESSEC"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "Institut Agro Montpellier", "HEC / ESSEC", "Harvard Business School"],
     relatedIndustries: [
       "Nutrition animale (Sanders, InVivo, Cargill, Neovia/ADM, Provimi)",
       "Coopératives agricoles (Terrena, Agrial, Triskalia/Eureden)",
@@ -5687,7 +5687,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "15+ ans d'expérience finance dont 8+ en direction financière biotech / life sciences",
       "Expérience IPO ou M&A confirmée"
     ],
-    schools: ["HEC", "ESSEC", "ESCP", "INSEAD", "Sciences Po", "Écoles ingénieur + MBA"],
+    schools: ["HEC", "ESSEC", "ESCP", "INSEAD", "Sciences Po", "Écoles ingénieur + MBA", "Harvard Business School", "MIT Sloan"],
     relatedIndustries: [
       "Biotech scale-up en phase Series C+ / pré-IPO",
       "Groupes pharma en croissance externe",
@@ -5843,7 +5843,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "12-18 ans d'expérience tech dont 5+ en direction technique medtech",
       "Master ou doctorat en sciences biomédicales appréciés"
     ],
-    schools: ["Écoles ingénieur (Polytechnique, Centrale, Mines, Telecom Paris, ENS)", "EPITA", "Master biomédical"],
+    schools: ["Écoles ingénieur (Polytechnique, Centrale, Mines, Telecom Paris, ENS)", "EPITA", "Master biomédical", "MIT Sloan"],
     relatedIndustries: [
       "Startups medtech connectées (UroMems, SonoMind, Lucis, RDS, Lifebloom)",
       "Scale-ups IA médicale (Owkin, Waiv, SquareMind, imagerie)",
@@ -5895,7 +5895,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "10-15 ans d'expérience internationale dont 5+ en scale-up healthtech / medtech",
       "Expérience opérationnelle plusieurs pays (EU + US + Asie ou Middle East)"
     ],
-    schools: ["HEC", "ESSEC", "ESCP", "INSEAD", "Écoles ingénieur + MBA"],
+    schools: ["HEC", "ESSEC", "ESCP", "INSEAD", "Écoles ingénieur + MBA", "Harvard Business School", "MIT Sloan"],
     relatedIndustries: [
       "Scale-ups medtech en internationalisation (UroMems, SonoMind, RDS, Lifebloom)",
       "Scale-ups healthtech (Doctolib, Alan, Withings)",
@@ -5947,7 +5947,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "15+ ans d'expérience biotech dont 5+ en direction générale ou COMEX C-level",
       "Réseau scientifique et VC internationalement établi"
     ],
-    schools: ["Doctorat sciences (Paris-Saclay, Strasbourg, Institut Pasteur)", "MBA (HEC, INSEAD, Wharton, Stanford, Harvard)"],
+    schools: ["Doctorat sciences (Paris-Saclay, Strasbourg, Institut Pasteur)", "MBA (HEC, INSEAD, Wharton, Stanford, Harvard)", "Harvard Business School", "MIT Sloan", "Yale SOM"],
     relatedIndustries: [
       "Scale-ups biotech en phase Series A à pré-IPO (Nanobiotix, Sensorion, Adcytherix, Cyllène, Bionyra)",
       "Groupes pharma en spin-out biotech",
@@ -5999,7 +5999,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "12-18 ans d'expérience opérations dont 5+ en scale-up biotech ou medtech",
       "Expérience internationale multi-pays appréciée"
     ],
-    schools: ["Écoles ingénieur (Centrale, Mines, Polytechnique)", "HEC", "ESSEC", "INSEAD"],
+    schools: ["Écoles ingénieur (Centrale, Mines, Polytechnique)", "HEC", "ESSEC", "INSEAD", "Harvard Business School", "MIT Sloan"],
     relatedIndustries: [
       "Scale-ups biotech en phase Series B à pré-IPO",
       "Scale-ups medtech en industrialisation",
@@ -6051,7 +6051,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "12-18 ans d'expérience RH dont 5+ en scale-up biotech / medtech / healthtech ou Animal Health",
       "Formation continue rémunération C-level et systèmes equity appréciée"
     ],
-    schools: ["HEC", "ESSEC", "ESCP", "Sciences Po", "IGS", "Ciffop", "IAE"],
+    schools: ["HEC", "ESSEC", "ESCP", "Sciences Po", "IGS", "Ciffop", "IAE", "Harvard Business School", "Yale SOM"],
     relatedIndustries: [
       "Scale-ups biotech en phase Series B à pré-IPO",
       "Scale-ups medtech et healthtech en internationalisation",
@@ -6166,7 +6166,7 @@ const august2026ChloeBatch: JobRole[] = [
       "8-15 ans d'experience marketing FMCG premium ou petfood",
       "Anglais courant obligatoire pour groupes internationaux"
     ],
-    schools: ["HEC Paris", "ESSEC", "ESCP", "EDHEC", "EM Lyon", "AgroParisTech", "Institut Agro Rennes-Angers"],
+    schools: ["HEC Paris", "ESSEC", "ESCP", "EDHEC", "EM Lyon", "AgroParisTech", "Institut Agro Rennes-Angers", "Harvard Business School"],
     relatedIndustries: [
       "Groupes petfood premium (Mars Petcare, Nestle Purina, Affinity, United Petfood)",
       "Marques challenger fresh food et sans cereales (Edgard Cooper, Tomojo, Ultra Premium Direct, Hector Kitchen)",
@@ -6223,7 +6223,7 @@ const august2026ChloeBatch: JobRole[] = [
       "Doctorat nutrition animale ou sciences du vivant apprecie",
       "10-15 ans d'experience R&D ou innovation petfood / nutrition animale"
     ],
-    schools: ["AgroParisTech", "Institut Agro Rennes-Angers", "Institut Agro Montpellier", "ENSAIA", "Oniris"],
+    schools: ["AgroParisTech", "Institut Agro Rennes-Angers", "Institut Agro Montpellier", "ENSAIA", "Oniris", "MIT Sloan", "Harvard Business School"],
     relatedIndustries: [
       "Petfood premium (Mars Petcare, Nestle Purina, Hill's, Affinity, United Petfood)",
       "Marques fresh food et clean label (Edgard Cooper, Tomojo, Yora, Hector Kitchen)",
@@ -6280,7 +6280,7 @@ const august2026ChloeBatch: JobRole[] = [
       "DSCG, master finance, MBA ou audit big four apprecie",
       "12-20 ans d'experience finance dont directions groupe"
     ],
-    schools: ["HEC Paris", "ESSEC", "ESCP", "EM Lyon", "EDHEC", "Sciences Po Paris", "Dauphine"],
+    schools: ["HEC Paris", "ESSEC", "ESCP", "EM Lyon", "EDHEC", "Sciences Po Paris", "Dauphine", "Harvard Business School", "MIT Sloan"],
     relatedIndustries: [
       "Groupes petfood consolides (United Petfood, Partner in Pet Food, Butcher's, Monge)",
       "FMCG alimentaire humain (transferts frequents vers petfood)",
@@ -6452,7 +6452,7 @@ const august2026ChloeBatch: JobRole[] = [
       "Master specialise RSE, ESG, sustainability ou developpement durable",
       "8-15 ans d'experience RSE dont exposition FMCG ou nutrition"
     ],
-    schools: ["AgroParisTech", "Mines ParisTech", "Institut Agro Rennes-Angers", "HEC Paris", "ESSEC", "Sciences Po Paris"],
+    schools: ["AgroParisTech", "Mines ParisTech", "Institut Agro Rennes-Angers", "HEC Paris", "ESSEC", "Sciences Po Paris", "Yale SOM", "Harvard Business School"],
     relatedIndustries: [
       "Groupes petfood (Mars Petcare, Nestle Purina, Affinity, United Petfood)",
       "FMCG alimentaire (Danone, Unilever, Nestle - transferts sustainability frequents)",
@@ -6511,7 +6511,7 @@ const august2026ChloeBatch: JobRole[] = [
       "MBA ou executive education apprecie",
       "15-25 ans d'experience dont directions multi-site significatives"
     ],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "HEC Paris", "INSEAD", "ESSEC"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "HEC Paris", "INSEAD", "ESSEC", "Harvard Business School", "Yale SOM"],
     relatedIndustries: [
       "Groupes cliniques veterinaires (IVC Evidensia, VetPartners, Univet, Anicura, Argos Veterinaire)",
       "Retail medical humain (Ramsay Sante, Elsan, Almaviva, Colisee)",
@@ -6569,7 +6569,7 @@ const august2026ChloeBatch: JobRole[] = [
       "MBA ou executive education en direction R&D apprecie",
       "15-20 ans d'experience R&D sante animale ou pharma humaine transferable"
     ],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "Institut Pasteur", "Universite Paris-Saclay"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "Institut Pasteur", "Universite Paris-Saclay", "Harvard Business School", "MIT Sloan"],
     relatedIndustries: [
       "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac, Vetoquinol)",
       "Diagnostic veterinaire (IDEXX, Zoetis Diagnostics, Innovative Diagnostics)",

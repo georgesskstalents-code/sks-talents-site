@@ -81,7 +81,10 @@ const schoolAliases: Record<string, string[]> = {
   "uco-biotechnologies-produits-cosmetiques": [
     "uco biotechnologies cosmetiques",
     "uco biotechnologies produits cosmetiques"
-  ]
+  ],
+  "harvard-business-school": ["harvard business school", "harvard", "hbs", "harvard university"],
+  "mit-sloan": ["mit sloan", "mit", "mit sloan school of management", "massachusetts institute of technology"],
+  "yale-som": ["yale som", "yale school of management", "yale", "yale university"]
 };
 
 const schoolIndex = schools.map((school) => ({
