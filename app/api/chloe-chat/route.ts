@@ -150,7 +150,10 @@ export async function POST(request: Request) {
   }
 
   const client = new Anthropic({ apiKey });
-  const model = process.env.CHLOE_MODEL || process.env.ANTHROPIC_MODEL || "claude-sonnet-4-5-20250929";
+  // Model par defaut : claude-sonnet-5 (le precedent claude-sonnet-4-5-20250929 renvoyait
+  // une erreur `model_not_found` en prod, ce qui declenchait le fallback "souci technique").
+  // Fallback dur en dernier ressort si CHLOE_MODEL / ANTHROPIC_MODEL ne sont pas set.
+  const model = process.env.CHLOE_MODEL || process.env.ANTHROPIC_MODEL || "claude-sonnet-5";
 
   const systemPrompt = buildChloeSystemPrompt({ role, fiche });
 
@@ -172,7 +175,25 @@ export async function POST(request: Request) {
       assistantText = first.text;
     }
   } catch (err) {
-    console.error("chloe-chat anthropic error", err);
+    // Log detaille (visible dans Vercel logs) pour identifier la vraie cause en cas de
+    // nouvelle regression. On garde la stack + le message brut.
+    const errAny = err as { message?: string; status?: number; error?: unknown; stack?: string };
+    console.error(
+      "chloe-chat anthropic error",
+      JSON.stringify(
+        {
+          model,
+          ficheSlug,
+          errorName: (err as Error)?.name,
+          message: errAny?.message,
+          status: errAny?.status,
+          errorPayload: errAny?.error,
+          stack: errAny?.stack
+        },
+        null,
+        2
+      )
+    );
     return NextResponse.json(
       {
         response:

@@ -5,6 +5,31 @@ import { useEffect, useRef, useState } from "react";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
+// Types minimaux Web Speech API (evite d'importer les types DOM speech de TS).
+type SpeechRecognitionLike = {
+  lang: string;
+  continuous: boolean;
+  interimResults: boolean;
+  maxAlternatives: number;
+  onstart: (() => void) | null;
+  onend: (() => void) | null;
+  onerror: ((e: unknown) => void) | null;
+  onresult: ((e: { results: ArrayLike<ArrayLike<{ transcript: string }>> & { length: number } & { [i: number]: ArrayLike<{ transcript: string }> & { isFinal?: boolean } } }) => void) | null;
+  start: () => void;
+  stop: () => void;
+};
+
+type SpeechRecognitionCtor = new () => SpeechRecognitionLike;
+
+function getSpeechRecognitionCtor(): SpeechRecognitionCtor | null {
+  if (typeof window === "undefined") return null;
+  const w = window as unknown as {
+    SpeechRecognition?: SpeechRecognitionCtor;
+    webkitSpeechRecognition?: SpeechRecognitionCtor;
+  };
+  return w.SpeechRecognition || w.webkitSpeechRecognition || null;
+}
+
 type ApiResponse = {
   response: string;
   action?: "capture_email" | "suggest_rdv";
@@ -34,11 +59,76 @@ export default function ChloeLiveWidget({ ficheSlug, ficheTitle, onClose }: Prop
   const [rgpdOk, setRgpdOk] = useState(false);
   const [loading, setLoading] = useState(false);
   const [lastAction, setLastAction] = useState<ApiResponse["action"] | null>(null);
+  const [voiceSupported, setVoiceSupported] = useState(false);
+  const [listening, setListening] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const recognitionRef = useRef<SpeechRecognitionLike | null>(null);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [messages, loading]);
+
+  // Detection Web Speech API (Chrome/Edge/Safari desktop, Safari iOS 14.5+).
+  useEffect(() => {
+    setVoiceSupported(Boolean(getSpeechRecognitionCtor()));
+  }, []);
+
+  // Body scroll lock : quand le widget est ouvert, on empeche la page de scroller
+  // derriere lui. Restaure l'overflow d'origine au demontage.
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, []);
+
+  function toggleVoiceInput() {
+    if (typeof window === "undefined") return;
+    if (listening) {
+      recognitionRef.current?.stop();
+      return;
+    }
+    const Recognition = getSpeechRecognitionCtor();
+    if (!Recognition) return;
+
+    const recognition = new Recognition();
+    recognition.lang = "fr-FR";
+    recognition.continuous = false;
+    recognition.interimResults = true;
+    recognition.maxAlternatives = 1;
+
+    recognition.onstart = () => setListening(true);
+    recognition.onend = () => setListening(false);
+    recognition.onerror = () => setListening(false);
+    recognition.onresult = (event) => {
+      const results = event.results;
+      let transcript = "";
+      for (let i = 0; i < results.length; i++) {
+        const r = results[i];
+        const alt = r[0];
+        if (alt && typeof alt.transcript === "string") {
+          transcript += `${alt.transcript} `;
+        }
+      }
+      transcript = transcript.trim();
+      if (transcript) {
+        setInput((cur) => (cur ? `${cur} ${transcript}` : transcript));
+      }
+      const lastResult = results[results.length - 1] as (ArrayLike<{ transcript: string }> & { isFinal?: boolean }) | undefined;
+      if (lastResult && lastResult.isFinal) {
+        recognition.stop();
+      }
+    };
+
+    recognitionRef.current = recognition;
+    try {
+      recognition.start();
+    } catch {
+      setListening(false);
+    }
+  }
 
   async function send(userText: string) {
     const clean = userText.trim();
@@ -299,9 +389,11 @@ export default function ChloeLiveWidget({ ficheSlug, ficheTitle, onClose }: Prop
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder={
-                lastAction === "capture_email"
-                  ? "Votre email pour recevoir la fiche + barometre..."
-                  : "Votre question a Chloe..."
+                listening
+                  ? "A l'ecoute..."
+                  : lastAction === "capture_email"
+                    ? "Votre email pour recevoir la fiche + barometre..."
+                    : "Votre question a Chloe..."
               }
               disabled={loading}
               aria-label="Message a Chloe"
@@ -317,6 +409,29 @@ export default function ChloeLiveWidget({ ficheSlug, ficheTitle, onClose }: Prop
                 fontFamily: "inherit"
               }}
             />
+            {voiceSupported ? (
+              <button
+                type="button"
+                onClick={toggleVoiceInput}
+                disabled={loading}
+                aria-pressed={listening}
+                aria-label={listening ? "Arreter la dictee vocale" : "Activer la dictee vocale"}
+                title={listening ? "Arreter la dictee vocale" : "Dictee vocale (francais)"}
+                style={{
+                  background: listening ? "#dc2626" : COLORS.paper,
+                  color: listening ? "#fff" : COLORS.ink,
+                  border: `1px solid ${listening ? "#dc2626" : "rgba(22,51,52,0.15)"}`,
+                  padding: "0 12px",
+                  borderRadius: 10,
+                  cursor: loading ? "not-allowed" : "pointer",
+                  fontSize: 16,
+                  opacity: loading ? 0.5 : 1,
+                  minWidth: 42
+                }}
+              >
+                {listening ? "Stop" : "Voix"}
+              </button>
+            ) : null}
             <button
               type="submit"
               disabled={loading || !input.trim()}
