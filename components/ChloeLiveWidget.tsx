@@ -182,7 +182,7 @@ export default function ChloeLiveWidget({ ficheSlug, ficheTitle, onClose }: Prop
           <p style={{ fontSize: 13, lineHeight: 1.5, margin: "0 0 12px" }}>
             Cette conversation est enregistree pour ameliorer nos services. Voir nos{" "}
             <Link
-              href="/mentions-legales"
+              href="/legal/mentions-legales"
               style={{ color: COLORS.teal, textDecoration: "underline" }}
             >
               mentions legales
