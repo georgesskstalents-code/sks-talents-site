@@ -80,7 +80,7 @@ pdf_output: output/carousels-additional/add-5-signaux-marche-ah-q4.pdf
 - Bouton : Ecrivez-nous en prive
 - Liens cliquables :
   1. Notre expertise Animal Health : https://skstalents.fr/expertises/animal-health
-  2. S'abonner sur LinkedIn : https://www.linkedin.com/newsletters/[a-remplir]
+  2. S'abonner sur LinkedIn : https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944
   3. www.skstalents.fr : https://skstalents.fr
 
 ## Caption LinkedIn du carrousel (a copier-coller dans Buffer)
@@ -89,7 +89,7 @@ SKS Talents partage sa lecture terrain avec les CODIR AH + petfood.
 
 3 liens utiles :
 - https://skstalents.fr/expertises/animal-health
-- Newsletter LinkedIn : https://www.linkedin.com/newsletters/[a-remplir]
+- Newsletter LinkedIn : https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944
 - Site : https://skstalents.fr
 
 SKS Talents

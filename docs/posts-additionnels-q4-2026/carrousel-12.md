@@ -81,7 +81,7 @@ pdf_output: output/carousels-additional/add-regulatory-europe-vet-3-chiffres.pdf
 - Bouton : Ecrivez-nous en prive
 - Liens cliquables :
   1. Voir la fiche metier complete : https://skstalents.fr/job-roles/medical-vet-head-of-regulatory-europe
-  2. S'abonner sur LinkedIn : https://www.linkedin.com/newsletters/[a-remplir]
+  2. S'abonner sur LinkedIn : https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944
   3. www.skstalents.fr : https://skstalents.fr
 
 ## Caption LinkedIn du carrousel (a copier-coller dans Buffer)
@@ -90,7 +90,7 @@ SKS Talents pilote 3 mandats Head of Regulatory Europe santé animale.
 
 3 liens utiles :
 - https://skstalents.fr/job-roles/medical-vet-head-of-regulatory-europe
-- Newsletter LinkedIn : https://www.linkedin.com/newsletters/[a-remplir]
+- Newsletter LinkedIn : https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7105568193447890944
 - Site : https://skstalents.fr
 
 SKS Talents
