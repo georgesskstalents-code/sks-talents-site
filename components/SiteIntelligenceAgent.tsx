@@ -1,6 +1,6 @@
 "use client";
 
-import { Loader2, MessageCircle, SendHorizonal, Sparkles, X } from "lucide-react";
+import { Loader2, MessageCircle, Mic, MicOff, SendHorizonal, Sparkles, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -30,6 +30,37 @@ const CONTENT_GAP_PHRASES = [
 function looksLikeContentGap(answer: string) {
   const lower = answer.toLowerCase();
   return CONTENT_GAP_PHRASES.some((phrase) => lower.includes(phrase));
+}
+
+// Types minimaux Web Speech API (evite d'importer les types DOM speech de TS).
+type SpeechRecognitionLike = {
+  lang: string;
+  continuous: boolean;
+  interimResults: boolean;
+  maxAlternatives: number;
+  onstart: (() => void) | null;
+  onend: (() => void) | null;
+  onerror: ((e: unknown) => void) | null;
+  onresult:
+    | ((e: {
+        results: ArrayLike<ArrayLike<{ transcript: string }>> & { length: number } & {
+          [i: number]: ArrayLike<{ transcript: string }> & { isFinal?: boolean };
+        };
+      }) => void)
+    | null;
+  start: () => void;
+  stop: () => void;
+};
+
+type SpeechRecognitionCtor = new () => SpeechRecognitionLike;
+
+function getSpeechRecognitionCtor(): SpeechRecognitionCtor | null {
+  if (typeof window === "undefined") return null;
+  const w = window as unknown as {
+    SpeechRecognition?: SpeechRecognitionCtor;
+    webkitSpeechRecognition?: SpeechRecognitionCtor;
+  };
+  return w.SpeechRecognition || w.webkitSpeechRecognition || null;
 }
 
 function reportContentGap(query: string, answer: string, path: string, sessionId: string) {
@@ -202,9 +233,29 @@ export default function SiteIntelligenceAgent({
   // Tracks whether the user is reading at the bottom. If they scrolled up to
   // re-read, we must NOT yank them back down on every streamed token.
   const atBottomRef = useRef(true);
+  // Set as soon as the user starts a wheel / touch gesture on the scroll area.
+  // While true, streaming updates NEVER force the scroll position - so the
+  // user can freely scroll up to re-read a long answer, even mid-stream.
+  const userInteractingRef = useRef(false);
+  const interactingTimeoutRef = useRef<number | null>(null);
+  // Voice input (Web Speech API). Silent fallback : the button is only rendered
+  // when the browser supports it, no error UI otherwise.
+  const [voiceSupported, setVoiceSupported] = useState(false);
+  const [listening, setListening] = useState(false);
+  const recognitionRef = useRef<SpeechRecognitionLike | null>(null);
   const currentPath = useMemo(() => pathname ?? "/", [pathname]);
   const ui = copy[language];
   const consent = useCookieConsent();
+
+  const markUserInteracting = () => {
+    userInteractingRef.current = true;
+    if (interactingTimeoutRef.current) {
+      window.clearTimeout(interactingTimeoutRef.current);
+    }
+    interactingTimeoutRef.current = window.setTimeout(() => {
+      userInteractingRef.current = false;
+    }, 1500);
+  };
 
   // Body scroll lock : quand le chat est ouvert, on bloque le scroll de la page derriere.
   useEffect(() => {
@@ -283,16 +334,80 @@ export default function SiteIntelligenceAgent({
     };
   }, []);
 
-  // Follow the conversation only while the user is already at the bottom.
-  // If they scrolled up, leave their position untouched so they can read freely.
+  // Follow the conversation only while the user is already at the bottom AND
+  // is not actively scrolling. If they wheeled / touched up to re-read, leave
+  // their position untouched so they can read freely, even while a long
+  // answer is still streaming in.
   useEffect(() => {
     const el = scrollRef.current;
-    if (!el || !atBottomRef.current) {
-      return;
-    }
+    if (!el) return;
+    if (userInteractingRef.current) return;
+    if (!atBottomRef.current) return;
 
     el.scrollTop = el.scrollHeight;
   }, [messages, loading]);
+
+  // Detect Web Speech API once on mount (Chrome/Edge/Safari desktop, Safari iOS 14.5+).
+  useEffect(() => {
+    setVoiceSupported(Boolean(getSpeechRecognitionCtor()));
+    return () => {
+      recognitionRef.current?.stop();
+      if (interactingTimeoutRef.current) {
+        window.clearTimeout(interactingTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  function toggleVoiceInput() {
+    if (typeof window === "undefined") return;
+    if (listening) {
+      recognitionRef.current?.stop();
+      return;
+    }
+    const Recognition = getSpeechRecognitionCtor();
+    if (!Recognition) return;
+
+    const recognition = new Recognition();
+    recognition.lang = language === "fr" ? "fr-FR" : "en-US";
+    recognition.continuous = false;
+    recognition.interimResults = true;
+    recognition.maxAlternatives = 1;
+
+    // Snapshot what was already in the input so voice dictation appends
+    // instead of erasing text the user typed by hand.
+    const baseText = input.trim();
+    recognition.onstart = () => setListening(true);
+    recognition.onend = () => setListening(false);
+    recognition.onerror = () => setListening(false);
+    recognition.onresult = (event) => {
+      const results = event.results;
+      let transcript = "";
+      for (let i = 0; i < results.length; i++) {
+        const r = results[i] as ArrayLike<{ transcript: string }> & { isFinal?: boolean };
+        const alt = r[0];
+        if (!alt || typeof alt.transcript !== "string") continue;
+        transcript += alt.transcript;
+      }
+      transcript = transcript.trim();
+      const combined = baseText ? `${baseText} ${transcript}` : transcript;
+      if (combined) {
+        setInput(combined);
+      }
+      const lastResult = results[results.length - 1] as
+        | (ArrayLike<{ transcript: string }> & { isFinal?: boolean })
+        | undefined;
+      if (lastResult && lastResult.isFinal) {
+        recognition.stop();
+      }
+    };
+
+    recognitionRef.current = recognition;
+    try {
+      recognition.start();
+    } catch {
+      setListening(false);
+    }
+  }
 
   // Opening the chat always lands at the latest message.
   useEffect(() => {
@@ -492,8 +607,19 @@ export default function SiteIntelligenceAgent({
             ref={scrollRef}
             onScroll={(event) => {
               const el = event.currentTarget;
-              atBottomRef.current = el.scrollHeight - el.scrollTop - el.clientHeight < 80;
+              atBottomRef.current = el.scrollHeight - el.scrollTop - el.clientHeight < 40;
             }}
+            onWheel={(event) => {
+              // Wheel fires BEFORE the browser applies the scroll, so we can
+              // immediately opt out of auto-scroll when the user reaches up.
+              if (event.deltaY < 0) {
+                atBottomRef.current = false;
+              }
+              markUserInteracting();
+            }}
+            onTouchStart={markUserInteracting}
+            onTouchMove={markUserInteracting}
+            onPointerDown={markUserInteracting}
             className="min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain bg-slate-50 px-4 py-4"
           >
             {messages.map((message) => (
@@ -587,13 +713,52 @@ export default function SiteIntelligenceAgent({
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
                 rows={2}
-                placeholder={ui.placeholder}
+                placeholder={
+                  listening
+                    ? language === "fr"
+                      ? "A l'ecoute..."
+                      : "Listening..."
+                    : ui.placeholder
+                }
                 className="min-h-[56px] flex-1 resize-none rounded-[18px] border border-brand-line px-4 py-3 text-sm outline-none transition focus:border-brand-teal"
               />
+              {voiceSupported ? (
+                <button
+                  type="button"
+                  onClick={toggleVoiceInput}
+                  disabled={loading}
+                  aria-pressed={listening}
+                  aria-label={
+                    listening
+                      ? language === "fr"
+                        ? "Arreter la dictee vocale"
+                        : "Stop voice dictation"
+                      : language === "fr"
+                        ? "Activer la dictee vocale"
+                        : "Start voice dictation"
+                  }
+                  title={
+                    listening
+                      ? language === "fr"
+                        ? "Arreter la dictee"
+                        : "Stop dictation"
+                      : language === "fr"
+                        ? "Dictee vocale"
+                        : "Voice dictation"
+                  }
+                  className={`inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border transition disabled:cursor-not-allowed disabled:opacity-50 ${
+                    listening
+                      ? "animate-pulse border-red-600 bg-red-600 text-white"
+                      : "border-brand-line bg-white text-brand-teal hover:bg-brand-mint"
+                  }`}
+                >
+                  {listening ? <MicOff size={18} /> : <Mic size={18} />}
+                </button>
+              ) : null}
               <button
                 type="submit"
                 disabled={loading || input.trim().length < 2}
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-teal text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+                className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-teal text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
                 aria-label={ui.send}
               >
                 <SendHorizonal size={18} />
