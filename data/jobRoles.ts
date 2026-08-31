@@ -4697,15 +4697,16 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "Product Manager Volaille / Responsable Médical Volaille"
     ],
     missions: [
-      "Apporter aux clients de la filière (ayants droit, conseillers, techniciens, éleveurs) une information scientifique et technique fiable, et animer les réunions techniques auprès de ces acteurs.",
-      "Développer et pérenniser la relation avec les leaders d'opinion, les sociétés savantes et les experts de terrain.",
-      "Accompagner les clients dans leurs investigations techniques et les encadrer jusqu'à la publication de leurs résultats.",
-      "Réaliser l'analyse technique des segments de marché et des produits concurrents, et assurer la veille scientifique du domaine.",
-      "Fournir aux chefs de produit l'information technique et les arguments nécessaires aux outils promotionnels et aux campagnes de la gamme.",
-      "Concevoir et monitorer les essais cliniques et techniques terrain.",
-      "Rédiger et publier des articles scientifiques en revues à comité de lecture, congrès et presse professionnelle, et alimenter la présence scientifique de l'entreprise en ligne.",
+      "Organiser et réaliser le plan d'audits en couvoir sur les différentes espèces avicoles (Gallus, dinde, palmipèdes).",
+      "Apporter l'expertise vaccination au couvoir : voie sous-cutanée, in ovo, nébulisation.",
+      "Investiguer les problématiques sanitaires et techniques rencontrées sur le terrain.",
+      "Apporter aux acteurs de la filière (ayants droit, conseillers, techniciens, éleveurs) une information scientifique fiable et animer les réunions techniques.",
       "Prendre en charge la formation initiale et continue de la force de vente et l'accompagner sur le terrain.",
-      "Remonter aux Affaires Réglementaires les cas relevant de la pharmacovigilance et tenir le CRM à jour."
+      "Concevoir et monitorer les essais cliniques et techniques terrain.",
+      "Contribuer aux supports techniques et marketing de la gamme, à l'analyse des segments de marché et à la veille scientifique.",
+      "Rédiger et publier des articles scientifiques en revues à comité de lecture, congrès et presse professionnelle.",
+      "Développer et pérenniser la relation avec les leaders d'opinion, les sociétés savantes et les experts de terrain.",
+      "Contribuer aux obligations pharmaceutiques et réglementaires de la gamme (pharmacovigilance, bonnes pratiques de distribution)."
     ],
     studies: [
       "Docteur.e vétérinaire (DEFV)",
