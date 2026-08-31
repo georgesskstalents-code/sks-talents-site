@@ -251,13 +251,13 @@ export default function FicheMetierPage({ role, relatedRoles, relatedArticles = 
                 </p>
                 <ul className="fm-salary-variability-list">
                   <li>
-                    <strong>La taille de l&apos;entreprise</strong> · s&apos;agit-il d&apos;une multinationale (ex : Mars Petcare, Nestlé Purina, Sanofi, Servier), d&apos;une PME dynamique ou d&apos;une startup du secteur (PetTech, biotech, medtech, deeptech) ?
+                    <strong>La taille de l&apos;entreprise</strong>
                   </li>
                   <li>
-                    <strong>La localisation</strong> · ces packages correspondent à des sièges sociaux basés en France (Paris / Régions) ou en Europe de l&apos;Ouest (Allemagne, Benelux). Un poste en dehors de ces zones peut varier de 20 à 30 %.
+                    <strong>La localisation</strong>
                   </li>
                   <li>
-                    <strong>La part variable</strong> · à ce niveau de responsabilité (Head of, CFO, CEO), la rémunération comprend souvent un bonus annuel (20 à 40 %) ou des parts de capital (MIP, equity, phantom stock) qui ne sont pas détaillés dans la fourchette ci-dessus.
+                    <strong>La part variable</strong>
                   </li>
                 </ul>
               </div>
