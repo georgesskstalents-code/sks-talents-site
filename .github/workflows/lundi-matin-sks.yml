@@ -6,6 +6,8 @@ on:
     # On lance a 05:30 UTC pour couvrir les 2 cas · le script est idempotent (log local)
     - cron: "30 5 * * 1"
   workflow_dispatch:
+permissions:
+  contents: write
 
 jobs:
   generate-and-send:
