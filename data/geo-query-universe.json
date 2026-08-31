@@ -1,0 +1,1002 @@
+{
+  "generated_at": "2026-08-31T22:02:45.976Z",
+  "counts": {
+    "layer1_observed": 0,
+    "layer2_extrapolated": 30,
+    "layer3_hypothesis": 0,
+    "total_after_dedup": 45,
+    "stable_core": 15
+  },
+  "stable_core_queries": [
+    {
+      "query": "SKS Talents",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "SKS Talents avis",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cabinet Life Sciences executive search Paris",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cout mauvais recrutement CEO life sciences",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "structuration IA equipe RH biotech",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "Chief Scientific Officer sante animale profil",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "Head of AI biotech France salaire",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "consolidation cliniques veterinaires France",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "recrutement dirigeant petfood",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "recrutement dirigeant biotech France",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cabinet chasseur de tetes veterinaire France",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cabinet recrutement sante animale France",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cabinet recrutement biotech France",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cabinet exec search Animal Health France",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cabinet exec search Life Sciences France",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    }
+  ],
+  "rotating_candidates": [
+    {
+      "query": "cabinet recrutement medical affairs manager biotech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Affairs Manager Biotech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet exec search medical affairs manager biotech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Affairs Manager Biotech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet chasseur de tetes medical affairs manager biotech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Affairs Manager Biotech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet recrutement market access manager biotech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Market Access Manager Biotech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet exec search market access manager biotech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Market Access Manager Biotech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet chasseur de tetes market access manager biotech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Market Access Manager Biotech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet recrutement medical science liaison medical vet",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Science Liaison Medical Vet",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet exec search medical science liaison medical vet",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Science Liaison Medical Vet",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    }
+  ],
+  "full_universe": [
+    {
+      "query": "SKS Talents",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "SKS Talents avis",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cabinet Life Sciences executive search Paris",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cout mauvais recrutement CEO life sciences",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "structuration IA equipe RH biotech",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "Chief Scientific Officer sante animale profil",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "Head of AI biotech France salaire",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "consolidation cliniques veterinaires France",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "recrutement dirigeant petfood",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "recrutement dirigeant biotech France",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cabinet chasseur de tetes veterinaire France",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cabinet recrutement sante animale France",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cabinet recrutement biotech France",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cabinet exec search Animal Health France",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cabinet exec search Life Sciences France",
+      "source_type": "hypothesis",
+      "origin": "core_config",
+      "is_stable_core": true,
+      "priority": {
+        "priority_total_prescan": 100,
+        "note": "core query config"
+      }
+    },
+    {
+      "query": "cabinet recrutement medical affairs manager biotech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Affairs Manager Biotech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet exec search medical affairs manager biotech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Affairs Manager Biotech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet chasseur de tetes medical affairs manager biotech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Affairs Manager Biotech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet recrutement market access manager biotech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Market Access Manager Biotech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet exec search market access manager biotech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Market Access Manager Biotech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet chasseur de tetes market access manager biotech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Market Access Manager Biotech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet recrutement medical science liaison medical vet",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Science Liaison Medical Vet",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet exec search medical science liaison medical vet",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Science Liaison Medical Vet",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet chasseur de tetes medical science liaison medical vet",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Science Liaison Medical Vet",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet recrutement data science manager diagnostic & medtech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Data Science Manager Diagnostic & Medtech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet exec search data science manager diagnostic & medtech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Data Science Manager Diagnostic & Medtech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet chasseur de tetes data science manager diagnostic & medtech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Data Science Manager Diagnostic & Medtech",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 61,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "recrutement medical affairs manager biotech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Affairs Manager Biotech",
+      "priority": {
+        "intent": "hire",
+        "intent_score": 22,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 58,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "recruter un medical affairs manager biotech France",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Affairs Manager Biotech",
+      "priority": {
+        "intent": "hire",
+        "intent_score": 22,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 58,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "recrutement market access manager biotech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Market Access Manager Biotech",
+      "priority": {
+        "intent": "hire",
+        "intent_score": 22,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 58,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "recruter un market access manager biotech France",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Market Access Manager Biotech",
+      "priority": {
+        "intent": "hire",
+        "intent_score": 22,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 58,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "recrutement medical science liaison medical vet",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Science Liaison Medical Vet",
+      "priority": {
+        "intent": "hire",
+        "intent_score": 22,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 58,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "recruter un medical science liaison medical vet France",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Science Liaison Medical Vet",
+      "priority": {
+        "intent": "hire",
+        "intent_score": 22,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 58,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "recrutement data science manager diagnostic & medtech",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Data Science Manager Diagnostic & Medtech",
+      "priority": {
+        "intent": "hire",
+        "intent_score": 22,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 58,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "recruter un data science manager diagnostic & medtech France",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Data Science Manager Diagnostic & Medtech",
+      "priority": {
+        "intent": "hire",
+        "intent_score": 22,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 58,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet recrutement senior scientist arn therapeutics",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Senior Scientist ARN Therapeutics",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 0,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 51,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet exec search senior scientist arn therapeutics",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Senior Scientist ARN Therapeutics",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 0,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 51,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "cabinet chasseur de tetes senior scientist arn therapeutics",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Senior Scientist ARN Therapeutics",
+      "priority": {
+        "intent": "find_provider",
+        "intent_score": 25,
+        "adequation_score": 0,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 51,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "recrutement senior scientist arn therapeutics",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Senior Scientist ARN Therapeutics",
+      "priority": {
+        "intent": "hire",
+        "intent_score": 22,
+        "adequation_score": 0,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 48,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "recruter un senior scientist arn therapeutics France",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Senior Scientist ARN Therapeutics",
+      "priority": {
+        "intent": "hire",
+        "intent_score": 22,
+        "adequation_score": 0,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 48,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "medical affairs manager biotech salaire France",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Affairs Manager Biotech",
+      "priority": {
+        "intent": "info",
+        "intent_score": 8,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 44,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "market access manager biotech salaire France",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Market Access Manager Biotech",
+      "priority": {
+        "intent": "info",
+        "intent_score": 8,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 44,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "medical science liaison medical vet salaire France",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Medical Science Liaison Medical Vet",
+      "priority": {
+        "intent": "info",
+        "intent_score": 8,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 44,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "data science manager diagnostic & medtech salaire France",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Data Science Manager Diagnostic & Medtech",
+      "priority": {
+        "intent": "info",
+        "intent_score": 8,
+        "adequation_score": 10,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 44,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    },
+    {
+      "query": "senior scientist arn therapeutics salaire France",
+      "source_type": "extrapolated",
+      "origin": "jobRoles_template",
+      "derived_from": "Senior Scientist ARN Therapeutics",
+      "priority": {
+        "intent": "info",
+        "intent_score": 8,
+        "adequation_score": 0,
+        "intensite_placeholder": 10,
+        "gap_placeholder": 8,
+        "gsc_score": 0,
+        "effort_score": 8,
+        "priority_total_prescan": 34,
+        "note": "priority_total_prescan · intensite_concurrentielle et gap seront mis a jour post-scan LLM."
+      },
+      "is_stable_core": false
+    }
+  ],
+  "last_learning_update": "2026-08-31T22:02:46.336Z",
+  "last_learning_additions": 0
+}

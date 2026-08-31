@@ -1,0 +1,715 @@
+{
+  "scanned_at": "2026-08-31T22:02:46.245Z",
+  "duration_ms": 6,
+  "core_visibility_score": {
+    "num": 0,
+    "denom": 75,
+    "pct": 0,
+    "note": "Core Visibility Score : mentions detectees (level != absent) sur les 15 stable_core_queries x 5 LLMs."
+  },
+  "scan_meta": {
+    "total_queries_scanned": 23,
+    "core_queries_count": 15,
+    "rotating_queries_count": 8,
+    "providers_used": [
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mistral",
+      "gemini"
+    ],
+    "scan_availability_pct": 0
+  },
+  "per_query": [
+    {
+      "query": "SKS Talents",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "SKS Talents avis",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cabinet Life Sciences executive search Paris",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cout mauvais recrutement CEO life sciences",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "structuration IA equipe RH biotech",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "Chief Scientific Officer sante animale profil",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "Head of AI biotech France salaire",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "consolidation cliniques veterinaires France",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "recrutement dirigeant petfood",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "recrutement dirigeant biotech France",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cabinet chasseur de tetes veterinaire France",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cabinet recrutement sante animale France",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cabinet recrutement biotech France",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cabinet exec search Animal Health France",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cabinet exec search Life Sciences France",
+      "source_type": "hypothesis",
+      "is_stable_core": true,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cabinet recrutement medical affairs manager biotech",
+      "source_type": "extrapolated",
+      "is_stable_core": false,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cabinet exec search medical affairs manager biotech",
+      "source_type": "extrapolated",
+      "is_stable_core": false,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cabinet chasseur de tetes medical affairs manager biotech",
+      "source_type": "extrapolated",
+      "is_stable_core": false,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cabinet recrutement market access manager biotech",
+      "source_type": "extrapolated",
+      "is_stable_core": false,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cabinet exec search market access manager biotech",
+      "source_type": "extrapolated",
+      "is_stable_core": false,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cabinet chasseur de tetes market access manager biotech",
+      "source_type": "extrapolated",
+      "is_stable_core": false,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cabinet recrutement medical science liaison medical vet",
+      "source_type": "extrapolated",
+      "is_stable_core": false,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    },
+    {
+      "query": "cabinet exec search medical science liaison medical vet",
+      "source_type": "extrapolated",
+      "is_stable_core": false,
+      "per_llm": {
+        "chatgpt": {
+          "available": false
+        },
+        "claude": {
+          "available": false
+        },
+        "perplexity": {
+          "available": false
+        },
+        "mistral": {
+          "available": false
+        },
+        "gemini": {
+          "available": false
+        }
+      },
+      "competitors_aggregated": [],
+      "presence_summary": {
+        "absent": 0,
+        "cited": 0,
+        "recommended": 0,
+        "dominant": 0,
+        "unavailable": 5
+      }
+    }
+  ]
+}

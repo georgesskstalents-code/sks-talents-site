@@ -1,0 +1,9 @@
+{
+  "ran_at": "2026-08-31T22:02:46.338Z",
+  "based_on_scan_at": "2026-08-31T22:02:46.245Z",
+  "recurrent_competitors": [],
+  "recurrent_terms": [],
+  "new_hypothesis_generated": 0,
+  "added_to_universe": 0,
+  "scope_note": "Ce systeme devient plus representatif des opportunites et patterns observes dans notre benchmark LLM. Il ne represente pas le comportement reel de tous les utilisateurs LLM."
+}
