@@ -4671,9 +4671,9 @@ const august2026AnimalHealthBatch: JobRole[] = [
   {
     slug: "medical-vet-technical-manager-poultry",
     title: "Vétérinaire Technique Volaille",
-    salary: "45kEUR - 75kEUR",
+    salary: "45kEUR - 90kEUR",
     salarySource:
-      "Ordre de grandeur France, fixe brut annuel. Variable, primes, véhicule en supplément. Junior à senior : la fourchette basse cible les vétérinaires aviaires 2-4 ans, la fourchette haute cible les seniors expérimentés couvoir + vaccination.",
+      "Ordre de grandeur France, fixe brut annuel. Le positionnement dans la fourchette dépend de trois critères : la taille de l'entreprise, la localisation du poste et la part variable propre à chaque structure (bonus, primes, véhicule), non incluse dans la fourchette.",
     sector: "Medical Vet",
     category: "Affaires techniques filière volaille",
     shortageLevel: "Tres elevee",
@@ -4697,9 +4697,15 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "Product Manager Volaille / Responsable Médical Volaille"
     ],
     missions: [
-      "Réaliser les audits couvoir et accompagner les intégrateurs sur les protocoles vaccinaux et sanitaires.",
-      "Former la force de vente et les techniciens groupements aviaires aux évolutions produits.",
-      "Contribuer aux positionnements marketing par la valorisation scientifique des données terrain."
+      "Apporter aux clients de la filière (ayants droit, conseillers, techniciens, éleveurs) une information scientifique et technique fiable, et animer les réunions techniques auprès de ces acteurs.",
+      "Développer et pérenniser la relation avec les leaders d'opinion, les sociétés savantes et les experts de terrain.",
+      "Accompagner les clients dans leurs investigations techniques et les encadrer jusqu'à la publication de leurs résultats.",
+      "Réaliser l'analyse technique des segments de marché et des produits concurrents, et assurer la veille scientifique du domaine.",
+      "Fournir aux chefs de produit l'information technique et les arguments nécessaires aux outils promotionnels et aux campagnes de la gamme.",
+      "Concevoir et monitorer les essais cliniques et techniques terrain.",
+      "Rédiger et publier des articles scientifiques en revues à comité de lecture, congrès et presse professionnelle, et alimenter la présence scientifique de l'entreprise en ligne.",
+      "Prendre en charge la formation initiale et continue de la force de vente et l'accompagner sur le terrain.",
+      "Remonter aux Affaires Réglementaires les cas relevant de la pharmacovigilance et tenir le CRM à jour."
     ],
     studies: [
       "Docteur.e vétérinaire (DEFV)",
@@ -4708,11 +4714,11 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
     relatedIndustries: [
-      "Laboratoires santé animale volaille (Ceva, Boehringer Ingelheim, MSD, Zoetis, Elanco)",
-      "Cabinets vétérinaires aviaires (Chêne Vert / Hyperion)",
-      "Zoopôle Ploufragan (recherche aviaire)",
-      "Couvoirs (Hubbard, Boyé Accouvage)",
-      "Groupes volaille (LDC, Terrena, Galliance, Duc, Bodin)"
+      "Laboratoires de santé animale, gamme aviaire",
+      "Cabinets et groupes vétérinaires aviaires",
+      "Instituts techniques et centres de recherche avicoles",
+      "Couvoirs et entreprises de sélection génétique",
+      "Groupements, intégrateurs et industriels de la filière volaille"
     ],
     sources: [
       { name: "ITAVI - Institut Technique de l'Aviculture", url: "https://www.itavi.asso.fr/" },
