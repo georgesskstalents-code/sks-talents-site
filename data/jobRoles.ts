@@ -4125,31 +4125,6 @@ const nuclearMedicineRoles: JobRole[] = [
 
 const may2026RoleBatch: JobRole[] = [
   {
-    slug: "biotech-data-integrity-lead",
-    title: "Data Integrity Lead (GxP) Biotech",
-    salary: "70kEUR - 110kEUR",
-    sector: "Biotech",
-    category: "Validation / data integrity",
-    shortageLevel: "Tres elevee",
-    summary:
-      "Assure l'intégrité et la traçabilité des données (ALCOA+) sur des environnements GxP, en reliant qualité, IT et opérations pour rendre les preuves auditables et exploitables.",
-    skills: ["Data integrity (ALCOA+)", "GxP / Annex 11", "Risk assessment", "Change control", "Stakeholder management"],
-    successFactors: [
-      "Traduire les exigences qualité en décisions opérationnelles simples et tenables.",
-      "Prioriser les risques réels (données critiques) plutôt que multiplier la paperasse.",
-      "Créer une coopération efficace entre QA, IT, labo et production."
-    ],
-    path: ["QA specialist", "CSV / validation engineer", "Data integrity lead"],
-    missions: [
-      "Définir le cadre data integrity (périmètre, criticité, contrôles, gouvernance) sur les systèmes GxP.",
-      "Piloter analyses de risques, plans de remédiation, et preuves associées (audit trail, accès, sauvegardes, revue).",
-      "Structurer la collaboration avec QA/CSV, IT, métiers et fournisseurs pour tenir l'exécution."
-    ],
-    studies: ["Ingénieur", "Master qualité / pharma", "Master systèmes d'information"],
-    schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
-    relatedIndustries: ["Biotech", "Bioproduction", "LIMS / ELN", "GxP", "Digital manufacturing"]
-  },
-  {
     slug: "biotech-lims-product-owner",
     title: "LIMS Product Owner Biotech",
     salary: "60kEUR - 95kEUR",
@@ -4619,14 +4594,14 @@ const august2026AnimalHealthBatch: JobRole[] = [
   {
     slug: "medical-vet-technical-manager-swine",
     title: "Vétérinaire Technique Porc Grand Compte",
-    salary: "55kEUR - 81kEUR",
+    salary: "45kEUR - 90kEUR",
     salarySource:
-      "Ordre de grandeur France, fixe brut annuel. Variable, primes, véhicule et intéressement en supplément. Fourchette dépendante de l'expérience, taille et type d'entreprise (grand groupe international vs PME/labo national), région et périmètre du poste.",
+      "Ordre de grandeur France, fixe brut annuel. La fourchette basse correspond aux profils en début de parcours, la fourchette haute aux profils seniors. Le positionnement dépend de trois critères : la taille de l'entreprise, la localisation du poste et la part variable propre à chaque structure (bonus, primes, véhicule), non incluse dans la fourchette.",
     sector: "Medical Vet",
     category: "Affaires techniques filière porc",
     shortageLevel: "Tres elevee",
     summary:
-      "Assure le support technique de la gamme porcine auprès des grands comptes industriels (groupements, intégrateurs, coopératives). Accompagne les protocoles vaccinaux, forme les équipes commerciales internes et les techniciens groupements, anime la relation KOL vétérinaires porc et remonte les insights terrain au marketing et R&D.",
+      "Un poste à la croisée du terrain, de la science et de l'industrie, au contact direct des vétérinaires praticien.ne.s et des acteurs de la filière porcine : accompagnement des solutions de prévention, expertise sanitaire et diagnostique, formation des équipes commerciales et marketing, animation de la relation avec les experts de la filière.",
     skills: [
       "Production porcine (naissage, engraissement, post-sevrage)",
       "Vaccination et biosécurité (PPA, PCV2, SDRP, mycoplasmes)",
@@ -4645,22 +4620,27 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "Chef de Produit Porc / Responsable Médical Porc"
     ],
     missions: [
-      "Accompagner les élevages porcins industriels sur les protocoles vaccinaux, sanitaires et de biosécurité.",
-      "Former les équipes commerciales internes et les techniciens groupements aux nouveautés produits et évolutions réglementaires.",
-      "Animer un réseau de KOL vétérinaires porc, participer aux congrès (AFMVP, IPVS, ESPHM) et remonter les insights terrain au marketing et à la R&D."
+      "Accompagner les vétérinaires sur le terrain et dans la mise en place des solutions de prévention.",
+      "Développer des projets et partenariats techniques avec les clients.",
+      "Apporter son expertise sur les problématiques sanitaires et les approches diagnostiques.",
+      "Former les équipes commerciales et marketing.",
+      "Animer des réunions techniques auprès des vétérinaires.",
+      "Analyser les nouvelles publications scientifiques et assurer la veille concurrentielle.",
+      "Contribuer aux études terrain, aux publications et aux supports scientifiques.",
+      "Développer des relations avec les experts et les leaders d'opinion de la filière."
     ],
     studies: [
       "Docteur.e vétérinaire (DEFV)",
-      "5+ ans d'expérience en production porcine",
+      "Expérience en production porcine, de junior à senior",
       "Formation continue biosécurité, PPA, antibiorésistance"
     ],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
     relatedIndustries: [
-      "Laboratoires santé animale porc (Boehringer Ingelheim, Zoetis, MSD Animal Health, Ceva, Virbac)",
-      "Cabinets vétérinaires porcins (Porc.Spective, Chêne Vert Conseil)",
-      "Groupements porcins (Cooperl Arc Atlantique, Evel'Up, Aveltis, Porelia)",
-      "Nutrition animale porc (Sanders, Le Gouessant, Cargill)",
-      "Instituts techniques (IFIP, INRAE, Anses)"
+      "Laboratoires de santé animale, gamme porcine",
+      "Cabinets et groupes vétérinaires porcins",
+      "Groupements, coopératives et intégrateurs porcins",
+      "Nutrition animale, filière porc",
+      "Instituts techniques et centres de recherche de la filière"
     ],
     sources: [
       { name: "IFIP - Institut du Porc", url: "https://ifip.asso.fr/" },
