@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import FicheMetierPage from "@/components/landings/FicheMetierPage";
 import ChloeLiveBubble from "@/components/ChloeLiveBubble";
 import { getRelatedArticlesBySector } from "@/data/articles";
@@ -9,6 +9,7 @@ import {
   isChloeActiveFor
 } from "@/data/chloe-fiches-priority";
 import { getNotionSiteContentBySlug } from "@/lib/notion";
+import { resolveJobRoleSlug } from "@/lib/slugRescueRegistry";
 
 export const dynamic = "force-dynamic";
 
@@ -62,7 +63,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const notionRole = await getNotionSiteContentBySlug(slug, "job_role");
 
   if (!role && !notionRole) {
-    return {};
+    // Slug inconnu : la page rendra soit un 308 vers la fiche la plus proche,
+    // soit un 404 utile. Dans les deux cas Google ne doit pas indexer l'URL.
+    return { robots: { index: false, follow: true } };
   }
 
   const canonical = `https://www.skstalents.fr/job-roles/${slug}`;
@@ -156,6 +159,13 @@ export default async function JobRoleDetailPage({
   const notionRole = await getNotionSiteContentBySlug(slug, "job_role");
 
   if (!role && !notionRole) {
+    // Filet de securite "slug devine" (LLM, backlink approximatif, faute de
+    // frappe). next.config.mjs a deja eu sa chance : on tente ici un 308 vers
+    // la fiche la plus proche, sinon on rend un 404 utile (not-found.tsx).
+    const rescue = resolveJobRoleSlug(slug);
+    if (rescue.status === "redirect") {
+      permanentRedirect(`/job-roles/${rescue.slug}`);
+    }
     notFound();
   }
 

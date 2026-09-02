@@ -1090,7 +1090,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Pharmacie", "Doctorat sciences de la vie", "Medecine ou PhD avec exposition medical affairs"],
     schools: ["Universite Paris-Saclay", "Institut Pasteur", "Faculte de pharmacie Strasbourg", "ESBS Strasbourg"],
-    relatedIndustries: ["Biotech", "Biopharma", "Cell therapy", "Gene therapy", "Medical communications"],
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "Cell therapy",
+      "Gene therapy",
+      "Medical communications"
+    ],
     sources: [
       ...defaultRoleSources,
       {
@@ -1125,7 +1131,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Pharmacie", "Master sante publique", "Master economie de la sante", "Doctorat sciences de la vie"],
     schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "AgroParisTech"],
-    relatedIndustries: ["Biotech", "Biopharma", "Health economics", "Rare diseases", "Medical strategy"],
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "Health economics",
+      "Rare diseases",
+      "Medical strategy"
+    ],
     sources: [...defaultRoleSources]
   },
   {
@@ -1153,7 +1165,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Veterinaire", "Pharmacie", "Doctorat sciences de la vie"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
-    relatedIndustries: ["Medical Vet", "Animal health", "Vaccins veterinaires", "Diagnostic vet", "Scientific affairs"],
+    relatedIndustries: [
+      "Medical Vet",
+      "Animal health",
+      "Vaccins veterinaires",
+      "Diagnostic vet",
+      "Scientific affairs"
+    ],
     sources: [...defaultRoleSources]
   },
   {
@@ -1182,7 +1200,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master data science", "Ingenieur IA", "Bioinformatique", "PhD data / sante"],
     schools: ["Grenoble INP - Ensimag", "EPITA", "Telecom Paris", "Universite Paris-Saclay"],
-    relatedIndustries: ["Diagnostic", "Medtech", "Health data", "Digital health", "AI healthcare"],
+    relatedIndustries: [
+      "Diagnostic",
+      "Medtech",
+      "Health data",
+      "Digital health",
+      "AI healthcare"
+    ],
     sources: [
       ...defaultRoleSources,
       {
@@ -1216,7 +1240,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["PhD biologie moleculaire", "PhD biotechnologies", "Master sciences du vivant avec experience"],
     schools: ["Universite Paris-Saclay", "Institut Pasteur", "ESBS Strasbourg", "EBI Cergy"],
-    relatedIndustries: ["Biotech", "Biopharma", "Gene therapy", "CDMO", "Research platforms"]
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "Gene therapy",
+      "CDMO",
+      "Research platforms"
+    ]
   },
   {
     slug: "diagnostic-bioinformaticien-ngs",
@@ -1241,7 +1271,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master bioinformatique", "PhD genomique", "Ingenieur data + biologie"],
     schools: ["Universite Paris-Saclay", "Grenoble INP - Ensimag", "EPITA", "Telecom Paris"],
-    relatedIndustries: ["Diagnostic", "Genomique", "Health data", "Biotech", "Research hospitals"]
+    relatedIndustries: [
+      "Diagnostic",
+      "Genomique",
+      "Health data",
+      "Biotech",
+      "Research hospitals"
+    ]
   },
   {
     slug: "cosmetique-formulation-scientist",
@@ -1270,7 +1306,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master formulation cosmetique", "Chimie", "Ingenierie cosmetique"],
     schools: ["ISIPCA", "ICAP Montpellier", "Chimie ParisTech", "ESCOM Compiegne"],
-    relatedIndustries: ["Cosmetique", "Dermocosmetique", "Ingredients actifs", "Green chemistry", "Beauty tech"]
+    relatedIndustries: [
+      "Cosmetique",
+      "Dermocosmetique",
+      "Ingredients actifs",
+      "Green chemistry",
+      "Beauty tech"
+    ]
   },
   {
     slug: "medical-vet-regulatory-affairs-vaccines",
@@ -1295,7 +1337,12 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Pharmacie", "Vétérinaire", "Master affaires réglementaires"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
-    relatedIndustries: ["Medical Vet", "Vaccins vétérinaires", "Biotech animale", "Diagnostic vet"]
+    relatedIndustries: [
+      "Medical Vet",
+      "Vaccins vétérinaires",
+      "Biotech animale",
+      "Diagnostic vet"
+    ]
   },
   {
     slug: "veterinary-clinic-operations-director",
@@ -1320,7 +1367,12 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Management", "Vétérinaire avec expérience management", "Master operations"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Institut Agro Rennes Angers"],
-    relatedIndustries: ["Veterinary", "Groupes de cliniques", "Pet services", "Assurance animale"]
+    relatedIndustries: [
+      "Veterinary",
+      "Groupes de cliniques",
+      "Pet services",
+      "Assurance animale"
+    ]
   },
   {
     slug: "petfood-rd-director",
@@ -1346,7 +1398,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingenieur agro / nutrition", "Master nutrition animale", "Doctorat nutrition"],
     schools: ["AgroParisTech", "Institut Agro Montpellier", "ENSAIA", "Sciences Agro Bordeaux"],
-    relatedIndustries: ["Petfood", "Nutrition animale", "Feed additives", "Agro-industrie", "FMCG premium"]
+    relatedIndustries: [
+      "Petfood",
+      "Nutrition animale",
+      "Feed additives",
+      "Agro-industrie",
+      "FMCG premium"
+    ]
   },
   {
     slug: "biotech-msat-engineer",
@@ -1375,7 +1433,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Diplôme d'ingénieur bioprocédés", "Master biotech", "PhD avec exposition industrielle"],
     schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech"],
-    relatedIndustries: ["Biotech", "Biopharma", "CDMO", "Cell therapy", "Industrial biotech"]
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "CDMO",
+      "Cell therapy",
+      "Industrial biotech"
+    ]
   },
   {
     slug: "biotech-cmc-project-manager",
@@ -1404,7 +1468,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur biotech", "Pharmacie", "Master gestion de projet scientifique"],
     schools: ["Universite Paris-Saclay", "Institut Pasteur", "ESBS Strasbourg", "EBI Cergy"],
-    relatedIndustries: ["Biotech", "Biopharma", "CDMO", "Gene therapy", "Cell therapy"]
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "CDMO",
+      "Gene therapy",
+      "Cell therapy"
+    ]
   },
   {
     slug: "biotech-qa-batch-release-manager",
@@ -1430,7 +1500,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Pharmacie", "Master qualité", "Ingénieur bioprocédés"],
     schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "ESBS Strasbourg", "EBI Cergy"],
-    relatedIndustries: ["Biotech", "Biopharma", "CDMO", "Vaccins", "Production GMP"]
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "CDMO",
+      "Vaccins",
+      "Production GMP"
+    ]
   },
   {
     slug: "biotech-tech-transfer-manager",
@@ -1456,7 +1532,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur biotech", "Master génie des procédés", "PhD avec exposition industrielle"],
     schools: ["Universite Paris-Saclay", "AgroParisTech", "ESBS Strasbourg", "EBI Cergy"],
-    relatedIndustries: ["Biotech", "Biopharma", "CDMO", "Industrial biotech", "Therapy manufacturing"]
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "CDMO",
+      "Industrial biotech",
+      "Therapy manufacturing"
+    ]
   },
   {
     slug: "biotech-medical-director",
@@ -1484,7 +1566,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Médecine", "Pharmacie", "Doctorat sciences de la vie avec forte exposition clinique"],
     schools: ["Universite Paris-Saclay", "Institut Pasteur", "Faculte de pharmacie Strasbourg", "Universite d'Angers", "Harvard Business School"],
-    relatedIndustries: ["Biotech", "Biopharma", "Medtech", "Clinical development", "Rare diseases"]
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "Medtech",
+      "Clinical development",
+      "Rare diseases"
+    ]
   },
   {
     slug: "biotech-qa-manager",
@@ -1509,7 +1597,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Pharmacie", "Master qualité", "Ingénieur biotech / bioprocédés"],
     schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "ESBS Strasbourg", "EBI Cergy"],
-    relatedIndustries: ["Biotech", "Biopharma", "CDMO", "Vaccins", "Therapy manufacturing"]
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "CDMO",
+      "Vaccins",
+      "Therapy manufacturing"
+    ]
   },
   {
     slug: "biotech-msat-lead",
@@ -1534,7 +1628,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Diplôme d'ingénieur bioprocédés", "Master biotech", "PhD avec forte exposition industrielle"],
     schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech"],
-    relatedIndustries: ["Biotech", "Biopharma", "CDMO", "Cell therapy", "Industrial biotech"]
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "CDMO",
+      "Cell therapy",
+      "Industrial biotech"
+    ]
   },
   {
     slug: "diagnostic-field-service-manager",
@@ -1559,7 +1659,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur biomédical", "Ingénieur instrumentation", "Master management technique"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Instrumentation", "Laboratoires"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Instrumentation",
+      "Laboratoires"
+    ]
   },
   {
     slug: "diagnostic-field-application-manager",
@@ -1585,7 +1691,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master biologie / diagnostic", "Ingénieur biomédical", "Sciences de la vie + expérience terrain"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Instrumentation", "Customer enablement"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Instrumentation",
+      "Customer enablement"
+    ]
   },
   {
     slug: "diagnostic-clinical-affairs-manager",
@@ -1610,7 +1722,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Pharmacie", "Master clinique", "Biologie médicale", "Ingénieur biomédical"],
     schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Grenoble INP - Ensimag"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Clinical research", "Precision medicine"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Clinical research",
+      "Precision medicine"
+    ]
   },
   {
     slug: "diagnostic-lims-product-owner",
@@ -1636,7 +1754,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur informatique", "Master bioinfo", "Ingénieur biomédical"],
     schools: ["Telecom Paris", "EPITA", "Grenoble INP - Ensimag", "Universite Paris-Saclay"],
-    relatedIndustries: ["Diagnostic", "Health data", "LIMS", "Medtech", "Middleware healthcare"]
+    relatedIndustries: [
+      "Diagnostic",
+      "Health data",
+      "LIMS",
+      "Medtech",
+      "Middleware healthcare"
+    ]
   },
   {
     slug: "diagnostic-key-account-manager-ivd",
@@ -1661,7 +1785,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Ingénieur avec expérience commerciale", "Master vente B2B"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Hospital accounts", "Laboratory equipment"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Hospital accounts",
+      "Laboratory equipment"
+    ]
   },
   {
     slug: "cosmetique-regulatory-affairs-manager",
@@ -1690,7 +1820,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master affaires réglementaires", "Chimie", "Ingénierie cosmétique"],
     schools: ["ISIPCA", "ICAP Montpellier", "Chimie ParisTech", "ESCOM Compiegne"],
-    relatedIndustries: ["Cosmetique", "Dermocosmetique", "Beauty tech", "Ingredients", "Packaging premium"]
+    relatedIndustries: [
+      "Cosmetique",
+      "Dermocosmetique",
+      "Beauty tech",
+      "Ingredients",
+      "Packaging premium"
+    ]
   },
   {
     slug: "cosmetique-international-marketing-manager",
@@ -1718,7 +1854,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Master marketing", "Formation cosmétique + business"],
     schools: ["ISIPCA", "ICAP Montpellier", "ESCOM Compiegne", "Chimie ParisTech"],
-    relatedIndustries: ["Cosmetique", "Beauty tech", "Dermocosmetique", "FMCG premium", "Ingredients"]
+    relatedIndustries: [
+      "Cosmetique",
+      "Beauty tech",
+      "Dermocosmetique",
+      "FMCG premium",
+      "Ingredients"
+    ]
   },
   {
     slug: "medical-vet-scientific-affairs-manager",
@@ -1743,7 +1885,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Vétérinaire", "Pharmacie", "Doctorat sciences de la vie"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
-    relatedIndustries: ["Medical Vet", "Vaccins vétérinaires", "Diagnostic vet", "Animal biotech", "Nutrition thérapeutique"]
+    relatedIndustries: [
+      "Medical Vet",
+      "Vaccins vétérinaires",
+      "Diagnostic vet",
+      "Animal biotech",
+      "Nutrition thérapeutique"
+    ]
   },
   {
     slug: "medical-vet-supply-planning-lead",
@@ -1768,7 +1916,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master supply chain", "Ingénieur", "Master opérations"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Institut Agro Rennes Angers", "Universite d'Angers"],
-    relatedIndustries: ["Medical Vet", "Animal biotech", "Vaccins", "Diagnostic vet", "Nutrition animale"]
+    relatedIndustries: [
+      "Medical Vet",
+      "Animal biotech",
+      "Vaccins",
+      "Diagnostic vet",
+      "Nutrition animale"
+    ]
   },
   {
     slug: "veterinary-regional-clinic-director",
@@ -1793,7 +1947,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Management", "Vétérinaire avec expérience management", "Master opérations"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Institut Agro Rennes Angers"],
-    relatedIndustries: ["Veterinary", "Groupes de cliniques", "Pet services", "Assurance animale", "Diagnostics vet"]
+    relatedIndustries: [
+      "Veterinary",
+      "Groupes de cliniques",
+      "Pet services",
+      "Assurance animale",
+      "Diagnostics vet"
+    ]
   },
   {
     slug: "veterinary-finance-manager-clinic-group",
@@ -1818,7 +1978,12 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "DSCG", "Master finance"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen"],
-    relatedIndustries: ["Veterinary", "Groupes de cliniques", "Pet services", "Healthcare services"]
+    relatedIndustries: [
+      "Veterinary",
+      "Groupes de cliniques",
+      "Pet services",
+      "Healthcare services"
+    ]
   },
   {
     slug: "petfood-technical-services-manager",
@@ -1843,7 +2008,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Nutrition animale", "Ingénieur agro", "Master qualité / sciences du vivant"],
     schools: ["AgroParisTech", "Institut Agro Montpellier", "ENSAIA", "Sciences Agro Bordeaux"],
-    relatedIndustries: ["Petfood", "Nutrition animale", "Feed additives", "Agro-industrie", "Customer support B2B"]
+    relatedIndustries: [
+      "Petfood",
+      "Nutrition animale",
+      "Feed additives",
+      "Agro-industrie",
+      "Customer support B2B"
+    ]
   },
   {
     slug: "petfood-palatability-scientist",
@@ -1868,7 +2039,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master nutrition animale", "Ingénieur agro", "Doctorat nutrition"],
     schools: ["AgroParisTech", "Institut Agro Montpellier", "ENSAIA", "Sciences Agro Bordeaux"],
-    relatedIndustries: ["Petfood", "Nutrition animale", "R&D produit", "Feed additives", "Premium FMCG"]
+    relatedIndustries: [
+      "Petfood",
+      "Nutrition animale",
+      "R&D produit",
+      "Feed additives",
+      "Premium FMCG"
+    ]
   },
   {
     slug: "petfood-manufacturing-excellence-lead",
@@ -1893,7 +2070,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur industriel", "Ingénieur agroalimentaire", "Master opérations"],
     schools: ["Institut Agro Dijon", "Sciences Agro Bordeaux", "ENSAIA", "AgroParisTech"],
-    relatedIndustries: ["Petfood", "Agro-industrie", "Nutrition animale", "Food safety", "Manufacturing"]
+    relatedIndustries: [
+      "Petfood",
+      "Agro-industrie",
+      "Nutrition animale",
+      "Food safety",
+      "Manufacturing"
+    ]
   },
   {
     slug: "biotech-ai-scientist",
@@ -1919,7 +2102,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["PhD bioinformatique", "Master IA", "PhD biologie computationnelle"],
     schools: ["Universite Paris-Saclay", "EPITA", "Telecom Paris", "Grenoble INP - Ensimag"],
-    relatedIndustries: ["Biotech", "Health data", "Drug discovery", "Digital biology", "Computational R&D"]
+    relatedIndustries: [
+      "Biotech",
+      "Health data",
+      "Drug discovery",
+      "Digital biology",
+      "Computational R&D"
+    ]
   },
   {
     slug: "diagnostic-data-engineer-clinical",
@@ -1944,7 +2133,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master data", "Ingénieur informatique", "Bioinformatique"],
     schools: ["Grenoble INP - Ensimag", "EPITA", "Telecom Paris", "Universite Paris-Saclay"],
-    relatedIndustries: ["Diagnostic", "Health data", "Clinical research", "Medtech", "Interoperability"]
+    relatedIndustries: [
+      "Diagnostic",
+      "Health data",
+      "Clinical research",
+      "Medtech",
+      "Interoperability"
+    ]
   },
   {
     slug: "diagnostic-cybersecurity-engineer",
@@ -1970,7 +2165,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master cybersécurité", "Ingénieur informatique", "Master systèmes d'information"],
     schools: ["Telecom Paris", "EPITA", "Grenoble INP - Ensimag", "Universite Paris-Saclay"],
-    relatedIndustries: ["Diagnostic", "Medtech", "Health data", "Medical devices", "Middleware healthcare"]
+    relatedIndustries: [
+      "Diagnostic",
+      "Medtech",
+      "Health data",
+      "Medical devices",
+      "Middleware healthcare"
+    ]
   },
   {
     slug: "biotech-sales-operations-director",
@@ -1995,7 +2196,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Ingénieur + business", "Master data / commercial"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA"],
-    relatedIndustries: ["Biotech", "Healthtech", "Medtech", "Diagnostics", "Commercial operations"]
+    relatedIndustries: [
+      "Biotech",
+      "Healthtech",
+      "Medtech",
+      "Diagnostics",
+      "Commercial operations"
+    ]
   },
   {
     slug: "medical-vet-area-sales-manager",
@@ -2020,7 +2227,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Vétérinaire", "École de commerce", "Master business international"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
-    relatedIndustries: ["Medical Vet", "Animal health", "Vaccins", "Diagnostic vet", "Nutrition animale"]
+    relatedIndustries: [
+      "Medical Vet",
+      "Animal health",
+      "Vaccins",
+      "Diagnostic vet",
+      "Nutrition animale"
+    ]
   },
   {
     slug: "veterinary-hr-business-partner",
@@ -2046,7 +2259,12 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master RH", "Psychologie du travail", "École de commerce"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Institut Agro Rennes Angers"],
-    relatedIndustries: ["Veterinary", "Groupes de cliniques", "Pet services", "Animal health"]
+    relatedIndustries: [
+      "Veterinary",
+      "Groupes de cliniques",
+      "Pet services",
+      "Animal health"
+    ]
   },
   {
     slug: "cosmetique-export-manager-mena-afrique",
@@ -2075,7 +2293,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Master commerce international", "Formation cosmétique + business"],
     schools: ["ISIPCA", "ICAP Montpellier", "ESCOM Compiegne"],
-    relatedIndustries: ["Cosmetique", "Beauty tech", "FMCG premium", "Dermocosmetique", "Export international"]
+    relatedIndustries: [
+      "Cosmetique",
+      "Beauty tech",
+      "FMCG premium",
+      "Dermocosmetique",
+      "Export international"
+    ]
   },
   {
     slug: "diagnostic-account-manager",
@@ -2100,7 +2324,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Ingénieur avec fibre business", "Master vente B2B / sciences"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Hospital accounts", "Laboratory equipment"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Hospital accounts",
+      "Laboratory equipment"
+    ]
   },
   {
     slug: "diagnostic-tender-manager",
@@ -2125,7 +2355,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Master santé / affaires publiques", "Ingénieur avec expérience marché public"],
     schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Telecom Paris"],
-    relatedIndustries: ["Diagnostic", "Medtech", "IVD", "Hospital accounts", "Public procurement"]
+    relatedIndustries: [
+      "Diagnostic",
+      "Medtech",
+      "IVD",
+      "Hospital accounts",
+      "Public procurement"
+    ]
   },
   {
     slug: "medical-vet-distributor-manager",
@@ -2150,7 +2386,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Vétérinaire avec exposition business", "Master commerce international"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
-    relatedIndustries: ["Medical Vet", "Animal health", "Vaccins vétérinaires", "Diagnostic vet", "Nutrition animale"]
+    relatedIndustries: [
+      "Medical Vet",
+      "Animal health",
+      "Vaccins vétérinaires",
+      "Diagnostic vet",
+      "Nutrition animale"
+    ]
   },
   {
     slug: "diagnostic-customer-success-manager",
@@ -2175,7 +2417,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master management", "Sciences de la vie + expérience service", "École de commerce"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Software healthcare", "Customer enablement"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Software healthcare",
+      "Customer enablement"
+    ]
   },
   {
     slug: "biotech-commercial-excellence-manager",
@@ -2200,7 +2448,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Ingénieur + business", "Master data / commercial"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA"],
-    relatedIndustries: ["Biotech", "Healthtech", "Medtech", "Diagnostics", "Commercial operations"]
+    relatedIndustries: [
+      "Biotech",
+      "Healthtech",
+      "Medtech",
+      "Diagnostics",
+      "Commercial operations"
+    ]
   },
   {
     slug: "biotech-pricing-market-access-manager",
@@ -2225,7 +2479,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Pharmacie", "HEOR / économie de la santé", "Sciences + business"],
     schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Institut Pasteur", "Universite d'Angers"],
-    relatedIndustries: ["Biotech", "Biopharma", "Rare diseases", "Medtech", "Market access"]
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "Rare diseases",
+      "Medtech",
+      "Market access"
+    ]
   },
   {
     slug: "diagnostic-vp-sales",
@@ -2253,7 +2513,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Ingénieur + forte exposition commerciale", "MBA optionnel"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Hospital accounts", "Laboratory equipment"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Hospital accounts",
+      "Laboratory equipment"
+    ]
   },
   {
     slug: "biotech-vp-operations",
@@ -2281,7 +2547,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Diplôme d'ingénieur", "Formation opérations / supply", "Executive education"],
     schools: ["Universite Paris-Saclay", "AgroParisTech", "ESBS Strasbourg", "EBI Cergy"],
-    relatedIndustries: ["Biotech", "Biopharma", "CDMO", "Cell therapy", "Industrial biotech"]
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "CDMO",
+      "Cell therapy",
+      "Industrial biotech"
+    ]
   },
   {
     slug: "biotech-head-of-quality",
@@ -2306,7 +2578,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Pharmacie", "Master qualité", "Ingénieur bioprocédés / biotech"],
     schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "ESBS Strasbourg", "EBI Cergy"],
-    relatedIndustries: ["Biotech", "Biopharma", "CDMO", "Vaccins", "Therapy manufacturing"]
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "CDMO",
+      "Vaccins",
+      "Therapy manufacturing"
+    ]
   },
   {
     slug: "medical-vet-head-of-regulatory",
@@ -2334,7 +2612,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Vétérinaire", "Pharmacie", "Master affaires réglementaires"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg"],
-    relatedIndustries: ["Medical Vet", "Animal health", "Vaccins vétérinaires", "Diagnostic vet", "Nutrition animale"]
+    relatedIndustries: [
+      "Medical Vet",
+      "Animal health",
+      "Vaccins vétérinaires",
+      "Diagnostic vet",
+      "Nutrition animale"
+    ]
   },
   {
     slug: "diagnostic-tender-excellence-director",
@@ -2359,7 +2643,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Master santé / affaires publiques", "Sciences + gestion de projet"],
     schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Telecom Paris"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Hospital accounts", "Public procurement"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Hospital accounts",
+      "Public procurement"
+    ]
   },
   {
     slug: "medical-vet-channel-marketing-manager",
@@ -2384,7 +2674,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Vétérinaire avec fibre business", "Master marketing"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
-    relatedIndustries: ["Medical Vet", "Animal health", "Vaccins vétérinaires", "Nutrition animale", "Diagnostic vet"]
+    relatedIndustries: [
+      "Medical Vet",
+      "Animal health",
+      "Vaccins vétérinaires",
+      "Nutrition animale",
+      "Diagnostic vet"
+    ]
   },
   {
     slug: "medical-vet-distributor-excellence-manager",
@@ -2409,7 +2705,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Master commerce international", "Vétérinaire avec exposition business"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
-    relatedIndustries: ["Medical Vet", "Animal health", "Vaccins vétérinaires", "Nutrition animale", "Distribution spécialisée"]
+    relatedIndustries: [
+      "Medical Vet",
+      "Animal health",
+      "Vaccins vétérinaires",
+      "Nutrition animale",
+      "Distribution spécialisée"
+    ]
   },
   {
     slug: "diagnostic-customer-experience-director",
@@ -2434,7 +2736,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Master management", "Sciences + forte exposition service"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Laboratory equipment", "Customer enablement"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Laboratory equipment",
+      "Customer enablement"
+    ]
   },
   {
     slug: "diagnostic-service-operations-director",
@@ -2460,7 +2768,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur biomédical", "Ingénieur instrumentation", "Master management technique"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Instrumentation", "Laboratories"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Instrumentation",
+      "Laboratories"
+    ]
   },
   {
     slug: "biotech-revenue-operations-manager",
@@ -2485,7 +2799,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Ingénieur + business", "Master data / management"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA"],
-    relatedIndustries: ["Biotech", "Healthtech", "Medtech", "Diagnostics", "Commercial operations"]
+    relatedIndustries: [
+      "Biotech",
+      "Healthtech",
+      "Medtech",
+      "Diagnostics",
+      "Commercial operations"
+    ]
   },
   {
     slug: "diagnostic-bid-manager-international",
@@ -2510,7 +2830,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Master santé / commerce international", "Sciences + gestion de projet"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "Faculte de pharmacie Strasbourg"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Hospital accounts", "International bids"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Hospital accounts",
+      "International bids"
+    ]
   },
   {
     slug: "biotech-strategic-partnerships-manager",
@@ -2535,7 +2861,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Doctorat / ingénieur avec exposition business", "MBA optionnel"],
     schools: ["Universite Paris-Saclay", "Institut Pasteur", "AgroParisTech", "ESBS Strasbourg"],
-    relatedIndustries: ["Biotech", "Biopharma", "Deeptech", "Healthtech", "Strategic alliances"]
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "Deeptech",
+      "Healthtech",
+      "Strategic alliances"
+    ]
   },
   {
     slug: "diagnostic-after-sales-director",
@@ -2560,7 +2892,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur biomédical", "Master management", "Ingénieur instrumentation + leadership"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Instrumentation", "Service contracts"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Instrumentation",
+      "Service contracts"
+    ]
   },
   {
     slug: "medical-vet-commercial-training-manager",
@@ -2585,7 +2923,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Vétérinaire avec exposition terrain", "Master formation / management"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
-    relatedIndustries: ["Medical Vet", "Animal health", "Vaccins vétérinaires", "Nutrition animale", "Distributor enablement"]
+    relatedIndustries: [
+      "Medical Vet",
+      "Animal health",
+      "Vaccins vétérinaires",
+      "Nutrition animale",
+      "Distributor enablement"
+    ]
   },
   {
     slug: "petfood-commercial-chiens-chats",
@@ -2610,7 +2954,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Agroalimentaire", "Nutrition animale", "Business avec forte culture terrain"],
     schools: ["AgroParisTech", "Institut Agro Montpellier", "ENSAIA", "EM Lyon"],
-    relatedIndustries: ["Petfood", "Nutrition animale", "Réseaux spécialisés", "Grande distribution sélective", "Animal health retail"]
+    relatedIndustries: [
+      "Petfood",
+      "Nutrition animale",
+      "Réseaux spécialisés",
+      "Grande distribution sélective",
+      "Animal health retail"
+    ]
   },
   {
     slug: "veterinary-developpement-performance-clinique",
@@ -2635,7 +2985,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Vétérinaire", "Master management de la santé", "Formation complémentaire en opérations ou business"],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
-    relatedIndustries: ["Veterinary", "Groupes de cliniques", "Pet services", "Excellence opérationnelle", "Practice performance"]
+    relatedIndustries: [
+      "Veterinary",
+      "Groupes de cliniques",
+      "Pet services",
+      "Excellence opérationnelle",
+      "Practice performance"
+    ]
   },
   {
     slug: "veterinary-imageur",
@@ -2660,7 +3016,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Vétérinaire", "Internat / résidanat imagerie", "Formation approfondie en imagerie diagnostique"],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
-    relatedIndustries: ["Veterinary", "Imagerie vétérinaire", "Cliniques référées", "Oncologie vétérinaire", "Chirurgie vétérinaire"]
+    relatedIndustries: [
+      "Veterinary",
+      "Imagerie vétérinaire",
+      "Cliniques référées",
+      "Oncologie vétérinaire",
+      "Chirurgie vétérinaire"
+    ]
   },
   {
     slug: "medical-vet-directeur-operations-learning",
@@ -2688,7 +3050,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Ingénierie", "Santé animale", "Management de projet ou formation équivalente"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Université Paris-Saclay"],
-    relatedIndustries: ["Medical Vet", "Animal health", "Learning & development", "Edtech santé", "Formation scientifique"],
+    relatedIndustries: [
+      "Medical Vet",
+      "Animal health",
+      "Learning & development",
+      "Edtech santé",
+      "Formation scientifique"
+    ],
     sources: [
       {
         name: "Glassdoor - Directeur des Opérations France",
@@ -2720,7 +3088,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Bac +3 / +5 business", "Bac +3 / +5 marketing", "Bac +3 / +5 sciences"],
     schools: ["École de commerce", "Master marketing", "Formation scientifique"],
-    relatedIndustries: ["Medtech", "Biotech", "Animal health", "Industrie internationale", "Réseaux de partenaires"]
+    relatedIndustries: [
+      "Medtech",
+      "Biotech",
+      "Animal health",
+      "Industrie internationale",
+      "Réseaux de partenaires"
+    ]
   },
   {
     slug: "biotech-csv-validation-engineer",
@@ -2745,7 +3119,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur informatique", "Ingénieur qualité / procédés", "Master systèmes d'information", "Master qualité"],
     schools: ["Telecom Paris", "EPITA", "CentraleSupélec", "Universite Paris-Saclay"],
-    relatedIndustries: ["Biotech", "Bioproduction", "CDMO", "GxP", "Digital manufacturing"],
+    relatedIndustries: [
+      "Biotech",
+      "Bioproduction",
+      "CDMO",
+      "GxP",
+      "Digital manufacturing"
+    ],
     sources: [...defaultRoleSources]
   },
   {
@@ -2771,7 +3151,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Pharmacie", "Microbiologie", "Master qualité", "Ingénieur bioprocédés"],
     schools: ["Faculte de pharmacie Strasbourg", "Universite Paris-Saclay", "Institut Pasteur", "AgroParisTech"],
-    relatedIndustries: ["Biotech", "Bioproduction", "Aseptic manufacturing", "Cell therapy", "CDMO"],
+    relatedIndustries: [
+      "Biotech",
+      "Bioproduction",
+      "Aseptic manufacturing",
+      "Cell therapy",
+      "CDMO"
+    ],
     sources: [...defaultRoleSources]
   },
   {
@@ -2797,7 +3183,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur automatisme", "Ingénieur maintenance", "Ingénieur instrumentation", "Master systèmes industriels"],
     schools: ["CentraleSupélec", "Mines Paris", "Grenoble INP", "Universite Paris-Saclay"],
-    relatedIndustries: ["Biotech", "Bioproduction", "Industrie 4.0", "Maintenance critique", "CDMO"],
+    relatedIndustries: [
+      "Biotech",
+      "Bioproduction",
+      "Industrie 4.0",
+      "Maintenance critique",
+      "CDMO"
+    ],
     sources: [...defaultRoleSources]
   },
   {
@@ -2823,7 +3215,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur industriel", "Ingénieur informatique", "Master systèmes d'information", "Master qualité"],
     schools: ["Telecom Paris", "CentraleSupélec", "EPITA", "Universite Paris-Saclay"],
-    relatedIndustries: ["Biotech", "Bioproduction", "GxP", "Industrial IT", "CDMO"],
+    relatedIndustries: [
+      "Biotech",
+      "Bioproduction",
+      "GxP",
+      "Industrial IT",
+      "CDMO"
+    ],
     sources: [...defaultRoleSources]
   },
   {
@@ -2852,7 +3250,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Pharmacie", "Master recherche clinique", "Master santé publique", "Sciences de la vie + clinique"],
     schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Sciences Po", "ESSEC"],
-    relatedIndustries: ["Biotech", "Biopharma", "Clinical trials", "CRO", "Regulated environments"],
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "Clinical trials",
+      "CRO",
+      "Regulated environments"
+    ],
     sources: [...defaultRoleSources]
   },
   {
@@ -2878,7 +3282,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Pharmacie", "Médecine", "Master pharmacovigilance", "Master santé publique"],
     schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Universite de Montpellier pharmacie"],
-    relatedIndustries: ["Biotech", "Biopharma", "Clinical development", "Drug safety", "Regulatory"],
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "Clinical development",
+      "Drug safety",
+      "Regulatory"
+    ],
     sources: [...defaultRoleSources, { name: "LEEM", url: "https://www.leem.org/" }]
   },
   {
@@ -2904,7 +3314,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Doctorat sciences de la vie", "Ingénieur bioprocédés", "Master biotechnologies"],
     schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech"],
-    relatedIndustries: ["Biotech", "Bioproduction", "Cell therapy", "CDMO", "Industrialization"],
+    relatedIndustries: [
+      "Biotech",
+      "Bioproduction",
+      "Cell therapy",
+      "CDMO",
+      "Industrialization"
+    ],
     sources: [...defaultRoleSources, { name: "France Biotech - Panorama 2026", url: FRANCE_BIOTECH_PANORAMA_2026_URL }]
   },
   {
@@ -2930,7 +3346,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Bioinformatique", "Ingénieur informatique", "Master systèmes d'information", "Sciences + informatique"],
     schools: ["Telecom Paris", "EPITA", "Grenoble INP - Ensimag", "Universite Paris-Saclay"],
-    relatedIndustries: ["Diagnostic", "IVD", "Laboratoires d'analyses", "Health data", "Interoperability"],
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Laboratoires d'analyses",
+      "Health data",
+      "Interoperability"
+    ],
     sources: [
       ...defaultRoleSources,
       { name: "SIDIV", url: "https://sidiv.fr/" },
@@ -2960,7 +3382,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur informatique", "Master systèmes d'information", "Bioinformatique", "Ingénierie biomédicale"],
     schools: ["Telecom Paris", "Grenoble INP - Ensimag", "EPITA", "CentraleSupélec"],
-    relatedIndustries: ["Diagnostic", "IVD", "Hôpital", "Interopérabilité", "Health IT"],
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Hôpital",
+      "Interopérabilité",
+      "Health IT"
+    ],
     sources: [
       ...defaultRoleSources,
       { name: "SIDIV", url: "https://sidiv.fr/" },
@@ -2993,7 +3421,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Pharmacie", "Ingénieur biomédical", "Master affaires réglementaires", "Master qualité"],
     schools: ["Faculte de pharmacie Strasbourg", "Universite Paris-Saclay", "Telecom Paris"],
-    relatedIndustries: ["Diagnostic", "IVD", "Regulatory", "Quality systems", "Hospital ecosystem"],
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Regulatory",
+      "Quality systems",
+      "Hospital ecosystem"
+    ],
     sources: [
       ...defaultRoleSources,
       { name: "SIDIV", url: "https://sidiv.fr/" }
@@ -3022,7 +3456,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Bioinformatique", "Biostatistiques", "Master data santé", "Sciences de la vie"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "Grenoble INP - Ensimag"],
-    relatedIndustries: ["Diagnostic", "Medtech", "Clinical evidence", "Health data", "Regulated environments"],
+    relatedIndustries: [
+      "Diagnostic",
+      "Medtech",
+      "Clinical evidence",
+      "Health data",
+      "Regulated environments"
+    ],
     sources: [...defaultRoleSources]
   },
   {
@@ -3048,7 +3488,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur biomédical", "Ingénieur informatique", "Sciences + support", "Master systèmes"],
     schools: ["Telecom Paris", "UTC Biomed", "EPITA"],
-    relatedIndustries: ["Diagnostic", "Medtech", "Customer support", "After-sales", "Hospital ecosystem"],
+    relatedIndustries: [
+      "Diagnostic",
+      "Medtech",
+      "Customer support",
+      "After-sales",
+      "Hospital ecosystem"
+    ],
     sources: [
       ...defaultRoleSources,
       { name: "Roche Diagnostics", url: "https://diagnostics.roche.com/" }
@@ -3077,7 +3523,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master cybersecurite", "Ingénieur informatique", "Master systèmes d'information"],
     schools: ["Telecom Paris", "EPITA", "CentraleSupélec"],
-    relatedIndustries: ["Diagnostic", "Medtech", "Health data", "Service operations", "Industrial IT"],
+    relatedIndustries: [
+      "Diagnostic",
+      "Medtech",
+      "Health data",
+      "Service operations",
+      "Industrial IT"
+    ],
     sources: [...defaultRoleSources]
   },
   {
@@ -3103,7 +3555,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Vétérinaire", "Pharmacie", "Master pharmacovigilance", "Master santé publique"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg"],
-    relatedIndustries: ["Medical Vet", "Animal health", "Vet pharma", "Vaccins veterinaires", "Drug safety"],
+    relatedIndustries: [
+      "Medical Vet",
+      "Animal health",
+      "Vet pharma",
+      "Vaccins veterinaires",
+      "Drug safety"
+    ],
     sources: [
       {
         name: "Aon - Benchmarks de remuneration",
@@ -3134,7 +3592,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Master commerce international", "Vétérinaire avec exposition business", "Sciences + business"],
     schools: ["EM Lyon", "ESSEC", "ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Audencia"],
-    relatedIndustries: ["Animal health", "Export", "Distribution spécialisée", "Afrique francophone", "Medtech"],
+    relatedIndustries: [
+      "Animal health",
+      "Export",
+      "Distribution spécialisée",
+      "Afrique francophone",
+      "Medtech"
+    ],
     sources: [
       { name: "Business France", url: "https://www.businessfrance.fr/" },
       { name: "Bpifrance", url: "https://www.bpifrance.fr/" }
@@ -3163,7 +3627,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Vétérinaire", "Management en santé", "Formation leadership"],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
-    relatedIndustries: ["Veterinary", "Groupes de cliniques", "Centres référés", "Services vétérinaires", "Petcare"],
+    relatedIndustries: [
+      "Veterinary",
+      "Groupes de cliniques",
+      "Centres référés",
+      "Services vétérinaires",
+      "Petcare"
+    ],
     sources: [
       { name: "Ordre national des vétérinaires", url: "https://www.veterinaire.fr/" },
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
@@ -3192,7 +3662,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur agroalimentaire", "Qualité", "Master sécurité des aliments", "Ingénieur procédés"],
     schools: ["Institut Agro Montpellier", "AgroParisTech", "Sciences Agro Bordeaux", "ENSAIA"],
-    relatedIndustries: ["Petfood", "Nutrition animale", "Premium FMCG", "Food safety", "Supply chain"],
+    relatedIndustries: [
+      "Petfood",
+      "Nutrition animale",
+      "Premium FMCG",
+      "Food safety",
+      "Supply chain"
+    ],
     sources: [
       { name: "Mars", url: "https://www.mars.com/" },
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
@@ -3221,7 +3697,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur agroalimentaire", "École de commerce", "Master achats", "Supply chain"],
     schools: ["AgroParisTech", "Institut Agro Dijon", "Sciences Agro Bordeaux", "EM Lyon"],
-    relatedIndustries: ["Petfood", "Nutrition animale", "Procurement", "Agro-industrie", "Supply chain"],
+    relatedIndustries: [
+      "Petfood",
+      "Nutrition animale",
+      "Procurement",
+      "Agro-industrie",
+      "Supply chain"
+    ],
     sources: [
       { name: "Mars", url: "https://www.mars.com/" },
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
@@ -3253,7 +3735,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Pharmacie", "Toxicologie", "Master chimie", "Master réglementation cosmétique"],
     schools: ["ISIPCA", "ICAP Montpellier", "Chimie ParisTech", "ESCOM Compiegne"],
-    relatedIndustries: ["Cosmetique", "Dermocosmetique", "Ingredients actifs", "Regulatory", "Beauty tech"],
+    relatedIndustries: [
+      "Cosmetique",
+      "Dermocosmetique",
+      "Ingredients actifs",
+      "Regulatory",
+      "Beauty tech"
+    ],
     sources: [
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
     ]
@@ -3284,7 +3772,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingénieur matériaux", "Ingénieur packaging", "Chimie", "Design industriel"],
     schools: ["Chimie ParisTech", "ESCOM Compiegne", "ISIPCA"],
-    relatedIndustries: ["Cosmetique", "Packaging premium", "Green chemistry", "Industrialization", "Premium FMCG"],
+    relatedIndustries: [
+      "Cosmetique",
+      "Packaging premium",
+      "Green chemistry",
+      "Industrialization",
+      "Premium FMCG"
+    ],
     sources: [
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
     ]
@@ -3312,7 +3806,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["École de commerce", "Master RH", "Psychologie du travail", "Management"],
     schools: ["EM Lyon", "ESSEC", "Sciences Po", "Audencia"],
-    relatedIndustries: ["Life Sciences", "Biotech", "Diagnostic", "Medtech", "HR"],
+    relatedIndustries: [
+      "Life Sciences",
+      "Biotech",
+      "Diagnostic",
+      "Medtech",
+      "HR"
+    ],
     sources: [
       { name: "Culture RH", url: "https://culture-rh.com/" },
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
@@ -3343,7 +3843,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Pharmacie", "Ingenieur qualite / industriel", "Master systemes d'information", "Master data / compliance"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "ESBS Strasbourg"],
-    relatedIndustries: ["Biotech", "Biopharma", "CDMO specialisees", "Digital manufacturing", "GxP"],
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "CDMO specialisees",
+      "Digital manufacturing",
+      "GxP"
+    ],
     sources: [
       ...defaultRoleSources,
       { name: "LEEM", url: "https://www.leem.org/" }
@@ -3374,7 +3880,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingenieur qualite", "Pharmacie", "Master sciences du vivant", "Master management qualite"],
     schools: ["Universite Paris-Saclay", "EBI Cergy", "AgroParisTech", "Faculte de pharmacie Strasbourg"],
-    relatedIndustries: ["Biotech", "Biopharma", "Cell therapy", "CDMO specialisees", "GMP"],
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "Cell therapy",
+      "CDMO specialisees",
+      "GMP"
+    ],
     sources: [
       ...defaultRoleSources,
       { name: "LEEM", url: "https://www.leem.org/" }
@@ -3405,7 +3917,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingenieur bioprocedes", "Master qualite", "Pharmacie", "Master genie industriel"],
     schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "Institut Pasteur"],
-    relatedIndustries: ["Biotech", "Biopharma", "Cell therapy", "Quality operations", "GMP"],
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "Cell therapy",
+      "Quality operations",
+      "GMP"
+    ],
     sources: [
       ...defaultRoleSources,
       { name: "LEEM", url: "https://www.leem.org/" }
@@ -3436,7 +3954,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Diplome d'ingenieur", "Master bioinformatique / data", "Master instrumentation", "Biotechnologies"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "Grenoble INP - Ensimag", "ESBS Strasbourg"],
-    relatedIndustries: ["Biotech", "Digital health", "Bioinformatics", "Laboratoire", "Automation"],
+    relatedIndustries: [
+      "Biotech",
+      "Digital health",
+      "Bioinformatics",
+      "Laboratoire",
+      "Automation"
+    ],
     sources: [
       ...defaultRoleSources,
       { name: "France Biotech - Panorama 2026", url: FRANCE_BIOTECH_PANORAMA_2026_URL }
@@ -3467,7 +3991,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master qualite", "Pharmacie", "Ingenieur", "Master RH / formation (avec exposé industrie)"],
     schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "EBI Cergy"],
-    relatedIndustries: ["Biotech", "Biopharma", "Industrialisation", "Quality", "GMP"],
+    relatedIndustries: [
+      "Biotech",
+      "Biopharma",
+      "Industrialisation",
+      "Quality",
+      "GMP"
+    ],
     sources: [
       ...defaultRoleSources,
       { name: "LEEM", url: "https://www.leem.org/" }
@@ -3498,7 +4028,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingenieur biomedical", "Pharmacie", "Master biologie / diagnostic", "Master marketing (avec base technique)"],
     schools: ["Telecom Paris", "Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "EPITA"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Health data", "Laboratoires d'analyses"],
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Health data",
+      "Laboratoires d'analyses"
+    ],
     sources: [
       { name: "SIDIV", url: "https://sidiv.fr/" },
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
@@ -3529,7 +4065,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingenieur", "Master management industriel", "Supply chain", "Master service management"],
     schools: ["CentraleSupelec", "Telecom Paris", "EM Lyon"],
-    relatedIndustries: ["Diagnostic", "Medtech", "Service operations", "Customer experience", "IVD"],
+    relatedIndustries: [
+      "Diagnostic",
+      "Medtech",
+      "Service operations",
+      "Customer experience",
+      "IVD"
+    ],
     sources: [
       { name: "Mindray", url: "https://www.mindray.com/" },
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
@@ -3560,7 +4102,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingenieur informatique", "Master informatique sante", "Bioinformatique", "Master systemes d'information"],
     schools: ["Telecom Paris", "EPITA", "Grenoble INP - Ensimag"],
-    relatedIndustries: ["Diagnostic", "Health data", "Laboratoires d'analyses", "IVD", "Interoperabilite"],
+    relatedIndustries: [
+      "Diagnostic",
+      "Health data",
+      "Laboratoires d'analyses",
+      "IVD",
+      "Interoperabilite"
+    ],
     sources: [
       { name: "SIDIV", url: "https://sidiv.fr/" },
       { name: "Roche Diagnostics", url: "https://diagnostics.roche.com/" }
@@ -3591,7 +4139,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master affaires reglementaires", "Pharmacie", "Ingenieur biomedical", "Qualite"],
     schools: ["Faculte de pharmacie Strasbourg", "Universite Paris-Saclay", "Telecom Paris"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Regulatory", "Packaging"],
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Regulatory",
+      "Packaging"
+    ],
     sources: [
       { name: "SIDIV", url: "https://sidiv.fr/" },
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
@@ -3622,7 +4176,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ecole de commerce", "Master sante animale", "Veterinaire avec orientation business", "Management"],
     schools: ["Audencia", "EM Lyon", "ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen"],
-    relatedIndustries: ["Medical Vet", "Vet pharma", "Vaccins veterinaires", "Distribution", "EMEA"],
+    relatedIndustries: [
+      "Medical Vet",
+      "Vet pharma",
+      "Vaccins veterinaires",
+      "Distribution",
+      "EMEA"
+    ],
     sources: [
       { name: "Mars", url: "https://www.mars.com/" },
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
@@ -3653,7 +4213,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ecole veterinaire", "Ecole de commerce", "Master management sante", "MBA (option healthcare)"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "EM Lyon", "ESSEC"],
-    relatedIndustries: ["Medical Vet", "Veterinary", "Groupes de cliniques", "Services veterinaires", "Telemedecine vet"],
+    relatedIndustries: [
+      "Medical Vet",
+      "Veterinary",
+      "Groupes de cliniques",
+      "Services veterinaires",
+      "Telemedecine vet"
+    ],
     sources: [
       { name: "Ordre national des vétérinaires", url: "https://www.veterinaire.fr/" },
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
@@ -3684,7 +4250,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Diplome veterinaire", "Residency / formation ECC", "Formations continues urgences / reanimation"],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
-    relatedIndustries: ["Veterinary", "Groupes de cliniques", "Services veterinaires de specialite", "Diagnostic vet", "Pet insurance"],
+    relatedIndustries: [
+      "Veterinary",
+      "Groupes de cliniques",
+      "Services veterinaires de specialite",
+      "Diagnostic vet",
+      "Pet insurance"
+    ],
     sources: [
       { name: "Ordre national des vétérinaires", url: "https://www.veterinaire.fr/" }
     ]
@@ -3714,7 +4286,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Diplome veterinaire", "Formation specialisee anesthesie", "Formations continues anesthesie / douleur"],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
-    relatedIndustries: ["Veterinary", "Groupes de cliniques", "Services veterinaires de specialite", "Diagnostic vet", "Telemedecine vet"],
+    relatedIndustries: [
+      "Veterinary",
+      "Groupes de cliniques",
+      "Services veterinaires de specialite",
+      "Diagnostic vet",
+      "Telemedecine vet"
+    ],
     sources: [
       { name: "Ordre national des vétérinaires", url: "https://www.veterinaire.fr/" }
     ]
@@ -3744,7 +4322,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Diplome veterinaire", "Formation clinique / biologie", "Specialisation pathologie clinique (si applicable)"],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
-    relatedIndustries: ["Veterinary", "Diagnostic veterinaire", "Laboratoires d'analyses", "Telemedecine vet", "Services veterinaires de specialite"],
+    relatedIndustries: [
+      "Veterinary",
+      "Diagnostic veterinaire",
+      "Laboratoires d'analyses",
+      "Telemedecine vet",
+      "Services veterinaires de specialite"
+    ],
     sources: [
       { name: "Ordre national des vétérinaires", url: "https://www.veterinaire.fr/" }
     ]
@@ -3774,7 +4358,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingenieur agroalimentaire", "Master sciences sensorielles", "Nutrition", "Statistiques appliquees"],
     schools: ["Institut Agro Montpellier", "AgroParisTech", "ENSAIA", "Sciences Agro Bordeaux"],
-    relatedIndustries: ["Petfood", "Premium FMCG", "Nutrition animale", "R&D", "Food science"],
+    relatedIndustries: [
+      "Petfood",
+      "Premium FMCG",
+      "Nutrition animale",
+      "R&D",
+      "Food science"
+    ],
     sources: [
       { name: "Mars", url: "https://www.mars.com/" },
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
@@ -3805,7 +4395,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingenieur agroalimentaire", "Master qualite", "Master affaires reglementaires", "Nutrition"],
     schools: ["AgroParisTech", "Institut Agro Dijon", "Institut Agro Montpellier"],
-    relatedIndustries: ["Petfood", "Food safety", "Regulatory", "Export", "Agro-industrie"],
+    relatedIndustries: [
+      "Petfood",
+      "Food safety",
+      "Regulatory",
+      "Export",
+      "Agro-industrie"
+    ],
     sources: [
       { name: "Mars", url: "https://www.mars.com/" },
       { name: "Business France", url: "https://www.businessfrance.fr/" }
@@ -3836,7 +4432,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Supply chain", "Ingenieur industriel", "Ecole de commerce", "Master logistique"],
     schools: ["Institut Agro Dijon", "AgroParisTech", "EM Lyon"],
-    relatedIndustries: ["Petfood", "Agro-industrie", "Supply chain", "Premium FMCG", "Procurement"],
+    relatedIndustries: [
+      "Petfood",
+      "Agro-industrie",
+      "Supply chain",
+      "Premium FMCG",
+      "Procurement"
+    ],
     sources: [
       { name: "Mars", url: "https://www.mars.com/" },
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
@@ -3870,7 +4472,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Master qualite", "Chimie", "Pharmacie", "Ingenieur"],
     schools: ["ISIPCA", "Chimie ParisTech", "ICAP Montpellier", "ESCOM Compiegne"],
-    relatedIndustries: ["Cosmetique", "Dermocosmetique", "Packaging premium", "Green chemistry", "Premium FMCG"],
+    relatedIndustries: [
+      "Cosmetique",
+      "Dermocosmetique",
+      "Packaging premium",
+      "Green chemistry",
+      "Premium FMCG"
+    ],
     sources: [
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
     ]
@@ -3903,7 +4511,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingenieur HSE", "Master QHSE", "Chimie / genie industriel", "Master environnement"],
     schools: ["Chimie ParisTech", "ESCOM Compiegne", "ISIPCA"],
-    relatedIndustries: ["Cosmetique", "Industrialisation", "Green chemistry", "Packaging premium", "Premium FMCG"],
+    relatedIndustries: [
+      "Cosmetique",
+      "Industrialisation",
+      "Green chemistry",
+      "Packaging premium",
+      "Premium FMCG"
+    ],
     sources: [
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL }
     ]
@@ -3933,7 +4547,13 @@ const strategicExtras: JobRole[] = [
     ],
     studies: ["Ingenieur informatique", "Master cybersecurite", "Master systemes d'information", "MBA (option leadership)"],
     schools: ["Telecom Paris", "EPITA", "CentraleSupelec", "ESSEC"],
-    relatedIndustries: ["Life Sciences", "Biotech", "Diagnostic", "Medtech", "Cybersecurite"],
+    relatedIndustries: [
+      "Life Sciences",
+      "Biotech",
+      "Diagnostic",
+      "Medtech",
+      "Cybersecurite"
+    ],
     sources: [
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL },
       { name: "Culture RH", url: "https://culture-rh.com/" }
@@ -3969,7 +4589,13 @@ const nuclearMedicineRoles: JobRole[] = [
     ],
     studies: ["École de commerce", "Ingénieur + business", "Pharmacien ou scientifique avec forte exposition marché"],
     schools: ["HEC Paris", "ESSEC", "CentraleSupélec", "Université Paris-Saclay", "Harvard Business School", "MIT Sloan"],
-    relatedIndustries: ["Médecine nucléaire", "Diagnostic", "Oncologie", "Radiopharmacie", "RIV"],
+    relatedIndustries: [
+      "Médecine nucléaire",
+      "Diagnostic",
+      "Oncologie",
+      "Radiopharmacie",
+      "RIV"
+    ],
     sources: [
       {
         name: "France Biotech - État des lieux de la médecine nucléaire",
@@ -4004,7 +4630,13 @@ const nuclearMedicineRoles: JobRole[] = [
     ],
     studies: ["Ingénieur procédés", "Pharmacien industriel", "Master qualité / production"],
     schools: ["Mines Paris", "Chimie ParisTech", "Université Paris-Saclay", "Faculté de pharmacie Strasbourg"],
-    relatedIndustries: ["Radiopharmacie", "Médecine nucléaire", "Bioproduction", "Diagnostic", "Oncologie"],
+    relatedIndustries: [
+      "Radiopharmacie",
+      "Médecine nucléaire",
+      "Bioproduction",
+      "Diagnostic",
+      "Oncologie"
+    ],
     sources: [
       {
         name: "Orano - Médecine nucléaire",
@@ -4039,7 +4671,13 @@ const nuclearMedicineRoles: JobRole[] = [
     ],
     studies: ["Pharmacien", "École de commerce", "Master santé publique / économie de la santé"],
     schools: ["Sciences Po", "Université Paris-Saclay", "ESSEC", "Faculté de pharmacie Montpellier", "Harvard Business School", "Yale SOM"],
-    relatedIndustries: ["RIV", "Médecine nucléaire", "Oncologie", "Diagnostic", "Health policy"],
+    relatedIndustries: [
+      "RIV",
+      "Médecine nucléaire",
+      "Oncologie",
+      "Diagnostic",
+      "Health policy"
+    ],
     sources: [
       {
         name: "France Biotech - Task force dédiée à l'innovation en médecine nucléaire",
@@ -4074,7 +4712,13 @@ const nuclearMedicineRoles: JobRole[] = [
     ],
     studies: ["École de commerce", "Pharmacien avec exposition commerciale", "Scientifique + business"],
     schools: ["ESSEC", "EM Lyon", "Université Paris-Saclay", "Faculté de pharmacie Strasbourg"],
-    relatedIndustries: ["Médecine nucléaire", "Diagnostic", "Oncologie", "RIV", "Hôpital"],
+    relatedIndustries: [
+      "Médecine nucléaire",
+      "Diagnostic",
+      "Oncologie",
+      "RIV",
+      "Hôpital"
+    ],
     sources: [
       {
         name: "Centre Oscar Lambret - La médecine nucléaire",
@@ -4109,7 +4753,13 @@ const nuclearMedicineRoles: JobRole[] = [
     ],
     studies: ["Ingénieur biomédical", "Ingénieur instrumentation", "Master physique appliquée"],
     schools: ["Télécom Paris", "CentraleSupélec", "Université Paris-Saclay", "Grenoble INP"],
-    relatedIndustries: ["Médecine nucléaire", "PET scan", "Cyclotron", "Diagnostic", "Maintenance critique"],
+    relatedIndustries: [
+      "Médecine nucléaire",
+      "PET scan",
+      "Cyclotron",
+      "Diagnostic",
+      "Maintenance critique"
+    ],
     sources: [
       {
         name: "Dominique Ouattara - Centre Européen de Médecine Nucléaire annoncé à Abidjan",
@@ -4147,7 +4797,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Ingénieur", "Master bioinformatique / data", "Master systèmes d'information"],
     schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
-    relatedIndustries: ["Biotech", "Laboratoires", "LIMS / ELN", "Data governance", "Diagnostic"]
+    relatedIndustries: [
+      "Biotech",
+      "Laboratoires",
+      "LIMS / ELN",
+      "Data governance",
+      "Diagnostic"
+    ]
   },
   {
     slug: "biotech-csv-validation-lead",
@@ -4172,7 +4828,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Ingénieur", "Master qualité", "Master systèmes d'information"],
     schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
-    relatedIndustries: ["Biotech", "GxP", "LIMS / ELN", "MES", "Automation"]
+    relatedIndustries: [
+      "Biotech",
+      "GxP",
+      "LIMS / ELN",
+      "MES",
+      "Automation"
+    ]
   },
   {
     slug: "biotech-upstream-process-development-scientist",
@@ -4197,7 +4859,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Master bioprocédés", "Ingénieur biotech", "Doctorat sciences de la vie"],
     schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
-    relatedIndustries: ["Biotech", "Bioproduction", "Cell therapy", "CDMO", "Industrialisation"]
+    relatedIndustries: [
+      "Biotech",
+      "Bioproduction",
+      "Cell therapy",
+      "CDMO",
+      "Industrialisation"
+    ]
   },
   {
     slug: "biotech-downstream-process-development-scientist",
@@ -4222,7 +4890,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Master bioprocédés", "Ingénieur biotech", "Doctorat sciences de la vie"],
     schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
-    relatedIndustries: ["Biotech", "Bioproduction", "CDMO", "Purification", "Industrialisation"]
+    relatedIndustries: [
+      "Biotech",
+      "Bioproduction",
+      "CDMO",
+      "Purification",
+      "Industrialisation"
+    ]
   },
   {
     slug: "biotech-qc-microbiology-lead",
@@ -4247,7 +4921,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Master microbiologie", "Ingénieur biotech", "Master qualité"],
     schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
-    relatedIndustries: ["Biotech", "Sterility assurance", "Environmental monitoring", "GMP manufacturing", "CDMO"]
+    relatedIndustries: [
+      "Biotech",
+      "Sterility assurance",
+      "Environmental monitoring",
+      "GMP manufacturing",
+      "CDMO"
+    ]
   },
   {
     slug: "biotech-sterility-assurance-specialist",
@@ -4272,7 +4952,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Ingénieur biotech", "Master qualité pharma", "Master microbiologie"],
     schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
-    relatedIndustries: ["Biotech", "Aseptic manufacturing", "Cell therapy", "Sterility assurance", "GMP"]
+    relatedIndustries: [
+      "Biotech",
+      "Aseptic manufacturing",
+      "Cell therapy",
+      "Sterility assurance",
+      "GMP"
+    ]
   },
   {
     slug: "biotech-single-use-technology-engineer",
@@ -4297,7 +4983,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Ingénieur biotech", "Master bioprocédés", "Ingénieur procédés"],
     schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
-    relatedIndustries: ["Biotech", "Bioproduction", "Single-use", "CDMO", "Supply chain critique"]
+    relatedIndustries: [
+      "Biotech",
+      "Bioproduction",
+      "Single-use",
+      "CDMO",
+      "Supply chain critique"
+    ]
   },
   {
     slug: "biotech-ot-cybersecurity-engineer",
@@ -4322,7 +5014,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Ingénieur informatique", "Master cybersecurite", "Ingénieur automatisme avec spécialisation"],
     schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Grenoble INP - Ensimag"],
-    relatedIndustries: ["Biotech", "GMP manufacturing", "Automation", "OT security", "Digital operations"]
+    relatedIndustries: [
+      "Biotech",
+      "GMP manufacturing",
+      "Automation",
+      "OT security",
+      "Digital operations"
+    ]
   },
   {
     slug: "diagnostic-ivd-software-engineer",
@@ -4347,7 +5045,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Ingénieur logiciel", "Master informatique", "Ingénieur biomédical + software"],
     schools: ["Universite Paris-Saclay", "Grenoble INP - Ensimag", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Digital health", "Software regulated"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Digital health",
+      "Software regulated"
+    ]
   },
   {
     slug: "diagnostic-software-quality-engineer",
@@ -4372,7 +5076,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Ingénieur", "Master qualité", "Master informatique"],
     schools: ["Universite Paris-Saclay", "Grenoble INP - Ensimag", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
-    relatedIndustries: ["Diagnostic", "IVD", "Medtech", "Quality systems", "Regulated software"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Medtech",
+      "Quality systems",
+      "Regulated software"
+    ]
   },
   {
     slug: "diagnostic-biostatistician",
@@ -4397,7 +5107,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Master biostatistiques", "Master data science santé", "Ingénieur statistique"],
     schools: ["Universite Paris-Saclay", "Grenoble INP - Ensimag", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
-    relatedIndustries: ["Diagnostic", "IVD", "Clinical evidence", "Medical imaging", "Health data"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "Clinical evidence",
+      "Medical imaging",
+      "Health data"
+    ]
   },
   {
     slug: "diagnostic-field-application-scientist-ngs",
@@ -4422,7 +5138,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Master biologie moléculaire", "Ingénieur biotech", "Master bioinformatique"],
     schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Telecom Paris", "Grenoble INP - Ensimag"],
-    relatedIndustries: ["Diagnostic", "NGS", "Laboratoires d'analyses", "Bioinformatique", "Support terrain"]
+    relatedIndustries: [
+      "Diagnostic",
+      "NGS",
+      "Laboratoires d'analyses",
+      "Bioinformatique",
+      "Support terrain"
+    ]
   },
   {
     slug: "diagnostic-pms-vigilance-manager-ivd",
@@ -4447,7 +5169,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Pharmacie", "Master affaires réglementaires", "Ingénieur biomédical"],
     schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Telecom Paris", "EPITA"],
-    relatedIndustries: ["Diagnostic", "IVD", "IVDR", "Quality systems", "Customer support"]
+    relatedIndustries: [
+      "Diagnostic",
+      "IVD",
+      "IVDR",
+      "Quality systems",
+      "Customer support"
+    ]
   },
   {
     slug: "medical-vet-pharmacovigilance-specialist",
@@ -4472,7 +5200,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Vétérinaire", "Pharmacie", "Doctorat sciences", "Master pharmacovigilance"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg", "Universite d'Angers"],
-    relatedIndustries: ["Animal health", "Vet pharma", "Vaccins veterinaires", "Compliance", "Product safety"],
+    relatedIndustries: [
+      "Animal health",
+      "Vet pharma",
+      "Vaccins veterinaires",
+      "Compliance",
+      "Product safety"
+    ],
     sources: [
       ...defaultRoleSources,
       {
@@ -4504,7 +5238,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Ingénieur biotech", "Master bioprocédés", "Vétérinaire avec exposition industrialisation"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg", "Universite d'Angers"],
-    relatedIndustries: ["Animal health", "Vaccins veterinaires", "Bioproduction", "GMP manufacturing", "Supply chain"]
+    relatedIndustries: [
+      "Animal health",
+      "Vaccins veterinaires",
+      "Bioproduction",
+      "GMP manufacturing",
+      "Supply chain"
+    ]
   },
   {
     slug: "medical-vet-veterinary-medical-advisor",
@@ -4529,7 +5269,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Vétérinaire", "Pharmacie", "Doctorat sciences de la vie"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg", "Universite d'Angers"],
-    relatedIndustries: ["Animal health", "Vet pharma", "Vaccins veterinaires", "Medical communications", "Field support"],
+    relatedIndustries: [
+      "Animal health",
+      "Vet pharma",
+      "Vaccins veterinaires",
+      "Medical communications",
+      "Field support"
+    ],
     sources: [
       ...defaultRoleSources,
       {
@@ -4561,7 +5307,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Ingénieur packaging", "Ingénieur agroalimentaire", "Ingénieur matériaux"],
     schools: ["Institut Agro Montpellier", "AgroParisTech", "Sciences Agro Bordeaux", "ENSAIA", "Institut Agro Dijon"],
-    relatedIndustries: ["Petfood", "Premium FMCG", "Packaging", "Food safety", "Supply chain"]
+    relatedIndustries: [
+      "Petfood",
+      "Premium FMCG",
+      "Packaging",
+      "Food safety",
+      "Supply chain"
+    ]
   },
   {
     slug: "petfood-supplier-quality-engineer",
@@ -4586,7 +5338,13 @@ const may2026RoleBatch: JobRole[] = [
     ],
     studies: ["Ingénieur agroalimentaire", "Qualité", "Ingénieur procédés", "Master sécurité des aliments"],
     schools: ["Institut Agro Montpellier", "AgroParisTech", "Sciences Agro Bordeaux", "ENSAIA", "Institut Agro Dijon"],
-    relatedIndustries: ["Petfood", "Nutrition animale", "Supplier quality", "Co-manufacturing", "Food safety"]
+    relatedIndustries: [
+      "Petfood",
+      "Nutrition animale",
+      "Supplier quality",
+      "Co-manufacturing",
+      "Food safety"
+    ]
   }
 ];
 
@@ -4747,10 +5505,10 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
     relatedIndustries: [
-      "Laboratoires santé animale ruminants (Boehringer Ingelheim, MSD Animal Health, Zoetis, Ceva, Virbac, Vétoquinol)",
+      "Laboratoires santé animale ruminants",
       "Cabinets vétérinaires ruraux et GTV / SNGTV",
-      "Coopératives laitières (Lactalis, Sodiaal, Savencia, Agrial)",
-      "Nutrition animale ruminants (InVivo, Neovia/ADM, Sanders)",
+      "Coopératives laitières",
+      "Nutrition animale ruminants",
       "Contrôle laitier et instituts techniques (IDELE, CNIEL)"
     ],
     sources: [
@@ -4799,9 +5557,9 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Université d'Angers", "Faculté de pharmacie Strasbourg", "Harvard Business School"],
     relatedIndustries: [
-      "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac, Vétoquinol)",
+      "Big Pharma Animal Health",
       "EMA / ANMV (ANSES) / autres autorités nationales EU",
-      "Cabinets consultants réglementaires (Halloran, Voisin Consulting, TSD Consulting)",
+      "Cabinets consultants réglementaires",
       "Biotech animal health en croissance internationale",
       "Vaccins vétérinaires et biologics"
     ],
@@ -4851,9 +5609,9 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "ESSEC / HEC / ESCP", "Sciences Po"],
     relatedIndustries: [
-      "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac)",
+      "Big Pharma Animal Health",
       "Cabinets conseil market access santé animale",
-      "Agences HEOR (Icon, IQVIA vet)",
+      "Agences HEOR",
       "Biotech animal health en phase de lancement",
       "Nutrition animale et diagnostic vétérinaire"
     ],
@@ -4902,10 +5660,10 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "HEC / ESSEC / INSEAD", "Harvard Business School"],
     relatedIndustries: [
-      "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva)",
+      "Big Pharma Animal Health",
       "Biotech et startups animal health / petcare",
-      "Fonds VC/PE santé animale (Digitalis Ventures, Companion Fund, Anterra Capital)",
-      "Cabinets conseil M&A santé (McKinsey Life Sciences, EY Parthenon)",
+      "Fonds VC/PE santé animale",
+      "Cabinets conseil M&A santé",
       "Petfood premium et distribution vétérinaire"
     ],
     sources: [
@@ -4953,10 +5711,10 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "HEC / ESSEC / ESCP / INSEAD", "Harvard Business School"],
     relatedIndustries: [
-      "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac, Vétoquinol, Merial/Sanofi)",
-      "Petfood premium multinational (Nestlé Purina, Mars Petcare, Royal Canin, Hill's, Affinity Petcare)",
-      "Nutrition animale grands groupes (Cargill, ADM, InVivo, Neovia)",
-      "Groupes vétérinaires internationaux (AniCura, IVC Evidensia, VetPartners)",
+      "Big Pharma Animal Health",
+      "Petfood premium multinational",
+      "Nutrition animale grands groupes",
+      "Groupes vétérinaires internationaux",
       "Cabinets conseil executive search santé animale"
     ],
     sources: [
@@ -4967,25 +5725,25 @@ const august2026AnimalHealthBatch: JobRole[] = [
   {
     slug: "medical-vet-key-account-manager-large-accounts",
     title: "Key Account Manager Grand Compte Santé Animale",
-    salary: "50kEUR - 70kEUR + variable",
+    salary: "40kEUR - 70kEUR + variable",
     salarySource:
-      "Ordre de grandeur France, fixe brut annuel. Variable 20-40% du fixe selon atteinte objectifs individuels et collectifs. Fourchette dépendante du portefeuille de comptes (nombre + poids stratégique) et du niveau de séniorité.",
+      "Ordre de grandeur France, fixe brut annuel, variable en supplément (20 à 40 % du fixe selon l'atteinte des objectifs individuels et collectifs). Le positionnement dans la fourchette dépend du profil et de la séniorité, de la taille de l'entreprise, de la localisation du poste et du poids stratégique du portefeuille de comptes.",
     sector: "Medical Vet",
-    category: "Commercial grand compte",
+    category: "Commercial grand compte et pilotage par la donnée",
     shortageLevel: "Elevee",
     summary:
-      "Gère et développe un portefeuille de comptes stratégiques (groupements vétérinaires, coopératives, centrales d'achat, groupes distribution) : négociation d'appels d'offres, relation avec les décisionnaires en organisations complexes, reporting et pilotage business.",
+      "Gère et développe un portefeuille de comptes stratégiques de la filière santé animale, avec une double exigence : la négociation et le référencement d'un côté, le pilotage par la donnée de l'autre (prévisions trimestrielles, consolidation des achats, indicateurs de performance, ciblage). Le poste garde un ancrage terrain fort : lecture des tableaux de bord d'élevage, audits, formation aux bonnes pratiques de vaccination.",
     skills: [
       "Gestion grand compte et négociation commerciale complexe",
-      "Connaissance filière santé animale (vétérinaire, élevage, distribution)",
-      "Pilotage appels d'offres et contrats-cadres",
-      "Reporting business et CRM",
-      "Relation multi-niveaux (achat, technique, direction)"
+      "Prévisions de ventes, consolidation et analyse des données d'achats",
+      "Pilotage par indicateurs et reporting commercial",
+      "Conduite d'élevage, tableaux de bord technico-économiques, données d'abattage",
+      "Audits terrain et formation aux bonnes pratiques de vaccination"
     ],
     successFactors: [
-      "Combiner rigueur commerciale et compréhension technique des enjeux santé animale.",
-      "Naviguer les processus de décision complexes (achats, technique, direction) sans perdre en réactivité.",
-      "Construire une relation long terme fondée sur la valeur, pas uniquement sur le prix."
+      "Piloter le compte par la donnée, pas par le seul relationnel : prévision, consolidation, indicateurs.",
+      "Cartographier tous les décisionnaires d'une structure et suivre l'évolution permanente des centres de décision.",
+      "Rester crédible en élevage autant qu'en salle de négociation."
     ],
     path: [
       "Technico-commercial.e ou véto commercial.e junior",
@@ -4993,22 +5751,32 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "Head of KAM / Directeur.rice commercial.e grands comptes"
     ],
     missions: [
-      "Développer le portefeuille de comptes stratégiques et négocier les contrats-cadres.",
-      "Répondre aux appels d'offres et défendre les propositions commerciales en interne et externe.",
-      "Assurer le reporting business, la remontée d'informations terrain et la coordination interne."
+      "Suivre un portefeuille de grands comptes, visiter les structures et les responsables qui les composent, identifier l'ensemble des acteurs et décisionnaires.",
+      "Développer des relations de long terme avec les décisionnaires et assurer une veille sur l'évolution des structures de décision.",
+      "Développer les ventes et les référencements, préparer et négocier les propositions commerciales et les appels d'offres.",
+      "Participer à l'élaboration des stratégies grands comptes et de la politique commerciale.",
+      "Proposer, animer et suivre les plans d'action marketing et techniques dédiés à chaque compte, et informer régulièrement les clients de leur avancement.",
+      "Fournir un prévisionnel trimestriel des ventes terrain sur les comptes suivis.",
+      "Consolider et analyser les données d'achats des grands comptes, et assurer le reporting des ventes.",
+      "Exploiter les données pour optimiser le ciblage et la couverture clients, définir et suivre les indicateurs de performance.",
+      "Anticiper les tendances du marché et détecter les opportunités à partir des données disponibles.",
+      "Comprendre la gestion d'un élevage, analyser les tableaux de bord technico-économiques et les données d'abattage.",
+      "Réaliser des audits terrain et former le personnel d'élevage aux bonnes pratiques de vaccination.",
+      "Coordonner les actions avec les équipes commerciales, techniques et marketing, et gérer les ressources et budgets alloués.",
+      "Représenter l'entreprise lors des manifestations professionnelles, dans le respect des obligations propres au médicament vétérinaire, et faire remonter les signalements qualité et effets indésirables."
     ],
     studies: [
       "Docteur.e vétérinaire OU ingénieur.e agri / agro OU école de commerce",
-      "3-8 ans d'expérience commerciale santé animale ou secteurs adjacents",
+      "Expérience commerciale en santé animale ou secteurs adjacents, de junior à confirmé.e",
       "Formation continue négociation grand compte"
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "École de commerce généraliste"],
     relatedIndustries: [
-      "Laboratoires santé animale (Zoetis, Boehringer Ingelheim, MSD, Ceva, Elanco, Virbac)",
-      "Nutrition animale (Sanders, InVivo, Neovia, Cargill)",
-      "Génétique animale (Groupe Grimaud, Hendrix Genetics)",
-      "Distribution vétérinaire (Alcyon, Coveto, Centravet)",
-      "Groupes vétérinaires (AniCura, IVC Evidensia, Sévétys, VetPartners, Univet)"
+      "Laboratoires de santé animale",
+      "Nutrition animale",
+      "Génétique animale et sélection",
+      "Distribution et centrales d'achat vétérinaires",
+      "Groupements et groupes de cliniques vétérinaires"
     ],
     sources: [
       { name: "SIMV - Syndicat Industrie Médicament et Diagnostic Vétérinaires", url: "https://www.simv.org/" },
@@ -5055,11 +5823,11 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
     relatedIndustries: [
-      "Petfood premium multinational (Royal Canin, Hill's, Nestlé Purina Pro Plan, Mars Petcare, Affinity Petcare)",
-      "Petfood challenger premium (Virbac Nutrition, Ultra Premium Direct, Saga Nutrition, Almo Nature)",
+      "Petfood premium multinational",
+      "Petfood challenger premium",
       "Cliniques vétérinaires companion animal et groupements",
       "Nutrition thérapeutique et diet vétérinaire",
-      "Distribution spécialisée petshop (Maxi Zoo, Zooplus, Truffaut)"
+      "Distribution spécialisée petshop"
     ],
     sources: [
       { name: "AFVAC - Association Française Vétérinaires Animaux de Compagnie", url: "https://www.afvac.com/" },
@@ -5106,7 +5874,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA", "Université d'Angers"],
     relatedIndustries: [
-      "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac, Vétoquinol)",
+      "Big Pharma Animal Health",
       "Biotech animal health et vaccins vétérinaires",
       "Nutrition thérapeutique et petfood premium",
       "Diagnostic vétérinaire",
@@ -5157,10 +5925,10 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "École de commerce généraliste"],
     relatedIndustries: [
-      "Laboratoires santé animale (Zoetis, Boehringer Ingelheim, MSD, Ceva, Elanco, Virbac, Vétoquinol)",
-      "Petfood premium (Royal Canin, Hill's, Purina, Mars Petcare, Affinity)",
-      "Nutrition animale industrielle (Sanders, InVivo, Cargill)",
-      "Diagnostic vétérinaire (IDEXX, Zoetis Diagnostics, Virbac Diagnostics)",
+      "Laboratoires santé animale",
+      "Petfood premium",
+      "Nutrition animale industrielle",
+      "Diagnostic vétérinaire",
       "Distribution vétérinaire et petshop"
     ],
     sources: [
@@ -5208,10 +5976,10 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "HEC / ESSEC / ESCP"],
     relatedIndustries: [
-      "Petfood premium multinational (Royal Canin, Hill's, Nestlé Purina Pro Plan, Mars Petcare, Affinity, Virbac Nutrition)",
-      "Groupements vétérinaires FR (AniCura, IVC Evidensia, VetPartners France, Univet, Sévétys, VetOne)",
-      "Distribution vétérinaire (Alcyon, Coveto, Centravet)",
-      "Marques petfood challenger premium (Ultra Premium Direct, Saga Nutrition, Almo Nature)",
+      "Petfood premium multinational",
+      "Groupements vétérinaires FR",
+      "Distribution vétérinaire",
+      "Marques petfood challenger premium",
       "Nutrition thérapeutique vétérinaire"
     ],
     sources: [
@@ -5260,9 +6028,9 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "HEC / ESSEC / INSEAD", "Harvard Business School", "Yale SOM"],
     relatedIndustries: [
-      "Groupements vétérinaires consolidateurs (AniCura, IVC Evidensia, VetPartners France, Univet, Sévétys, VetOne, Argos Vet)",
-      "Fonds VC/PE santé animale et petcare (Digitalis Ventures, Companion Fund, Ardian, IK Partners)",
-      "Cabinets M&A santé (Rothschild Healthcare, Lazard MidCap)",
+      "Groupements vétérinaires consolidateurs",
+      "Fonds VC/PE santé animale et petcare",
+      "Cabinets M&A santé",
       "Cabinets vétérinaires indépendants en cession",
       "Sociétés de conseil intégration post-acquisition"
     ],
@@ -5312,8 +6080,8 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Sciences de l'éducation", "École de commerce généraliste", "Harvard Business School"],
     relatedIndustries: [
-      "Agences de formation santé animale (Vetalis, VetOnline, agences indépendantes)",
-      "Laboratoires santé animale clients (Zoetis, Boehringer Ingelheim, MSD, Ceva, Elanco, Virbac, Vétoquinol)",
+      "Agences de formation santé animale",
+      "Laboratoires santé animale clients",
       "EdTech santé et plateformes digital learning vétérinaire",
       "Écoles vétérinaires et centres de formation continue (AFVAC, SNGTV)",
       "Cabinets conseil L&D et transformation digitale formation"
@@ -5366,8 +6134,8 @@ const august2026AnimalHealthBatch: JobRole[] = [
     relatedIndustries: [
       "Startups IA santé animale (assistants IA vétérinaires, CRM santé animale)",
       "Éditeurs SaaS B2B vétérinaire (PMS cliniques, télémédecine, workflow)",
-      "Groupements vétérinaires en croissance (AniCura, IVC Evidensia, VetPartners France, Univet, Sévétys)",
-      "Distribution vétérinaire (Alcyon, Coveto, Centravet)",
+      "Groupements vétérinaires en croissance",
+      "Distribution vétérinaire",
       "Écosystème deeptech HealthTech et Animal Health early stage"
     ],
     sources: [
@@ -5416,7 +6184,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "École de commerce généraliste", "Écoles management"],
     relatedIndustries: [
-      "Groupements vétérinaires en croissance et consolidation (AniCura, IVC Evidensia, VetPartners France, Univet, Sévétys, VetOne)",
+      "Groupements vétérinaires en croissance et consolidation",
       "Réseaux cliniques santé humaine (soins premiers, kinésithérapie, radiologie)",
       "Retail et services multisites",
       "Distribution vétérinaire et petshop",
@@ -5470,7 +6238,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
     relatedIndustries: [
       "Scale-ups Life Sciences françaises en internationalisation (biotech, diagnostic, medtech, génomique clinique)",
       "Grands groupes pharma en portefeuille administrateur.rice indépendant.e",
-      "Fonds VC/PE santé (Sofinnova, Jeito, Bpifrance, Seventure, Truffle Capital)",
+      "Fonds VC/PE santé",
       "Institutions et écosystème (France Biotech, Angels Santé, EIC Fund)",
       "Réseau IFA - Institut Français des Administrateurs"
     ],
@@ -5520,7 +6288,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["Écoles RH (IGS, Ciffop, IAE)", "Sciences Po", "Écoles de commerce"],
     relatedIndustries: [
-      "Groupements vétérinaires (AniCura, IVC Evidensia, VetPartners France, Univet, Sévétys, VetOne)",
+      "Groupements vétérinaires",
       "Cabinets vétérinaires indépendants en croissance",
       "Réseaux santé humaine multisite (soins primaires, kinésithérapie)",
       "Cabinets de recrutement spécialisés vétérinaire",
@@ -5572,11 +6340,11 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "Institut Agro Montpellier", "HEC / ESSEC", "Harvard Business School"],
     relatedIndustries: [
-      "Nutrition animale (Sanders, InVivo, Cargill, Neovia/ADM, Provimi)",
-      "Coopératives agricoles (Terrena, Agrial, Triskalia/Eureden)",
-      "Laboratoires santé animale (Boehringer Ingelheim, MSD, Zoetis, Ceva)",
+      "Nutrition animale",
+      "Coopératives agricoles",
+      "Laboratoires santé animale",
       "Distribution vétérinaire et petshop",
-      "Génétique animale (Grimaud, Hendrix Genetics)"
+      "Génétique animale"
     ],
     sources: [
       { name: "IDELE - Institut de l'Élevage", url: "https://idele.fr/" },
@@ -5678,9 +6446,9 @@ const august2026AnimalHealthBatch: JobRole[] = [
     relatedIndustries: [
       "Biotech scale-up en phase Series C+ / pré-IPO",
       "Groupes pharma en croissance externe",
-      "Fonds VC/PE santé (Sofinnova, Jeito, Bpifrance, Seventure, Truffle Capital)",
-      "Banques d'affaires spécialisées Life Sciences (Rothschild, Bryan Garnier, Portzamparc)",
-      "Big Four audit et transaction advisory (EY, PwC, KPMG, Deloitte)"
+      "Fonds VC/PE santé",
+      "Banques d'affaires spécialisées Life Sciences",
+      "Big Four audit et transaction advisory"
     ],
     sources: [
       { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
@@ -5728,10 +6496,10 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["Écoles ingénieur (Centrale, Mines, ENSIC, Chimie ParisTech)", "AgroParisTech", "Écoles pharma (Paris, Strasbourg)"],
     relatedIndustries: [
-      "Biotech en phase industrielle (Sanofi, Servier, Ipsen, Boehringer Ingelheim, GSK)",
-      "CDMO biotech (Delpharm, Fareva, Recipharm)",
+      "Biotech en phase industrielle",
+      "CDMO biotech",
       "Vaccins vétérinaires (site GMP)",
-      "Bioproduction (Faircraft, Enterome, Maat Pharma)",
+      "Bioproduction",
       "Sites production petfood industriel (moindre criticité mais process similaire)"
     ],
     sources: [
@@ -5780,8 +6548,8 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["Écoles ingénieur (Centrale, Mines, INSA, AgroParisTech, ENSIC)", "Universités biotechnologies (Paris-Saclay, Strasbourg)"],
     relatedIndustries: [
-      "Biotech deeptech scale-up (Faircraft, Standing Ovation, Enterome, Maat Pharma)",
-      "Bioproduction et biofabs (Servier Bioproduction, Sanofi Bioproduction)",
+      "Biotech deeptech scale-up",
+      "Bioproduction et biofabs",
       "Startups synthetic biology et gene therapy",
       "CDMO biotech spécialisés",
       "Instituts de recherche transitionnelle (Institut Pasteur, INRAE, CNRS)"
@@ -5832,11 +6600,11 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["Écoles ingénieur (Polytechnique, Centrale, Mines, Telecom Paris, ENS)", "EPITA", "Master biomédical", "MIT Sloan"],
     relatedIndustries: [
-      "Startups medtech connectées (UroMems, SonoMind, Lucis, RDS, Lifebloom)",
-      "Scale-ups IA médicale (Owkin, Waiv, SquareMind, imagerie)",
-      "Robotique chirurgicale (Moon Surgical, Squair)",
-      "Dispositifs médicaux implantables (Sorin, Carmat)",
-      "Diagnostic in vitro digitalisé (bioMérieux Digital, HalioDx)"
+      "Startups medtech connectées",
+      "Scale-ups IA médicale",
+      "Robotique chirurgicale",
+      "Dispositifs médicaux implantables",
+      "Diagnostic in vitro digitalisé"
     ],
     sources: [
       { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
@@ -5884,11 +6652,11 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["HEC", "ESSEC", "ESCP", "INSEAD", "Écoles ingénieur + MBA", "Harvard Business School", "MIT Sloan"],
     relatedIndustries: [
-      "Scale-ups medtech en internationalisation (UroMems, SonoMind, RDS, Lifebloom)",
-      "Scale-ups healthtech (Doctolib, Alan, Withings)",
-      "Groupes medtech internationaux (Envista, Boston Scientific, Stryker)",
-      "Diagnostic IVD international (bioMérieux, Roche Diagnostics, Abbott)",
-      "Fonds VC/PE growth santé (Sofinnova Growth, Kurma Partners)"
+      "Scale-ups medtech en internationalisation",
+      "Scale-ups healthtech",
+      "Groupes medtech internationaux",
+      "Diagnostic IVD international",
+      "Fonds VC/PE growth santé"
     ],
     sources: [
       { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
@@ -5936,10 +6704,10 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["Doctorat sciences (Paris-Saclay, Strasbourg, Institut Pasteur)", "MBA (HEC, INSEAD, Wharton, Stanford, Harvard)", "Harvard Business School", "MIT Sloan", "Yale SOM"],
     relatedIndustries: [
-      "Scale-ups biotech en phase Series A à pré-IPO (Nanobiotix, Sensorion, Adcytherix, Cyllène, Bionyra)",
+      "Scale-ups biotech en phase Series A à pré-IPO",
       "Groupes pharma en spin-out biotech",
       "Instituts de recherche transitionnelle (Institut Pasteur, INRAE, CNRS)",
-      "Fonds VC/PE santé (Sofinnova, Jeito, Bpifrance, Seventure, Truffle Capital)",
+      "Fonds VC/PE santé",
       "Big Pharma en partenariats et licensing"
     ],
     sources: [
@@ -5991,8 +6759,8 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "Scale-ups biotech en phase Series B à pré-IPO",
       "Scale-ups medtech en industrialisation",
       "Groupes pharma en spin-out",
-      "CDMO biotech (Delpharm, Fareva, Recipharm)",
-      "Cabinets conseil opérations Life Sciences (McKinsey, BCG, Bain)"
+      "CDMO biotech",
+      "Cabinets conseil opérations Life Sciences"
     ],
     sources: [
       { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
@@ -6042,7 +6810,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
     relatedIndustries: [
       "Scale-ups biotech en phase Series B à pré-IPO",
       "Scale-ups medtech et healthtech en internationalisation",
-      "Groupements vétérinaires en consolidation (AniCura, IVC Evidensia, VetPartners, Univet, Sévétys)",
+      "Groupements vétérinaires en consolidation",
       "Marques petfood en hypercroissance premium",
       "Big Pharma / Groupes santé animale (vivier candidats RH senior)"
     ],
@@ -6092,9 +6860,9 @@ const august2026AnimalHealthBatch: JobRole[] = [
     ],
     schools: ["Écoles ingénieur biotech (ENSTBB, ESIL, ENSAIA)", "Chimie ParisTech", "AgroParisTech"],
     relatedIndustries: [
-      "Fabricants ingrédients biotech (Lesaffre, Roquette, Solabia, Biokar, Adisseo)",
-      "Actifs cosmétiques (Silab, Codif, Naolys, Lucas Meyer)",
-      "Ferments et probiotiques (Danisco, IFF Health, Lallemand)",
+      "Fabricants ingrédients biotech",
+      "Actifs cosmétiques",
+      "Ferments et probiotiques",
       "Biotech clients formulation (labs formulation biotech-cosmétique)",
       "Distributeurs ingrédients spécialisés"
     ],
@@ -6155,8 +6923,8 @@ const august2026ChloeBatch: JobRole[] = [
     ],
     schools: ["HEC Paris", "ESSEC", "ESCP", "EDHEC", "EM Lyon", "AgroParisTech", "Institut Agro Rennes-Angers", "Harvard Business School"],
     relatedIndustries: [
-      "Groupes petfood premium (Mars Petcare, Nestle Purina, Affinity, United Petfood)",
-      "Marques challenger fresh food et sans cereales (Edgard Cooper, Tomojo, Ultra Premium Direct, Hector Kitchen)",
+      "Groupes petfood premium",
+      "Marques challenger fresh food et sans cereales",
       "FMCG premium alimentaire humain (transferts frequents)",
       "Retail specialise animalerie et pure players e-commerce",
       "Agences media, brand et data marketing"
@@ -6212,11 +6980,11 @@ const august2026ChloeBatch: JobRole[] = [
     ],
     schools: ["AgroParisTech", "Institut Agro Rennes-Angers", "Institut Agro Montpellier", "ENSAIA", "Oniris", "MIT Sloan", "Harvard Business School"],
     relatedIndustries: [
-      "Petfood premium (Mars Petcare, Nestle Purina, Hill's, Affinity, United Petfood)",
-      "Marques fresh food et clean label (Edgard Cooper, Tomojo, Yora, Hector Kitchen)",
-      "Ingredientistes petfood (Diana Pet Food / Symrise, ADM, Kemin)",
-      "Startups proteines alternatives (Innovafeed, Ynsect, Entobel)",
-      "Instituts techniques (Anses, INRAE, Adisseo R&D)"
+      "Petfood premium",
+      "Marques fresh food et clean label",
+      "Ingredientistes petfood",
+      "Startups proteines alternatives",
+      "Instituts techniques"
     ],
     sources: [
       { name: "FACCO - Marche petfood France", url: "https://www.facco.fr/" },
@@ -6269,9 +7037,9 @@ const august2026ChloeBatch: JobRole[] = [
     ],
     schools: ["HEC Paris", "ESSEC", "ESCP", "EM Lyon", "EDHEC", "Sciences Po Paris", "Dauphine", "Harvard Business School", "MIT Sloan"],
     relatedIndustries: [
-      "Groupes petfood consolides (United Petfood, Partner in Pet Food, Butcher's, Monge)",
+      "Groupes petfood consolides",
       "FMCG alimentaire humain (transferts frequents vers petfood)",
-      "Private equity mid-cap et large-cap (CVC, PAI, Ardian, Eurazeo)",
+      "Private equity mid-cap et large-cap",
       "Cabinets M&A et banques d'affaires",
       "Audit et transaction services (Big Four)"
     ],
@@ -6326,11 +7094,11 @@ const august2026ChloeBatch: JobRole[] = [
     ],
     schools: ["ESSEC", "EDHEC", "NEOMA", "SKEMA", "Kedge", "Institut Agro Rennes-Angers"],
     relatedIndustries: [
-      "Groupes petfood (Mars Petcare, Nestle Purina, Affinity, United Petfood)",
-      "Enseignes GMS (Carrefour, E.Leclerc, Systeme U, Intermarche, Auchan)",
-      "Retail specialise (Maxi Zoo, Animalis, Tom&Co)",
+      "Groupes petfood",
+      "Enseignes GMS",
+      "Retail specialise",
       "FMCG alimentaire (transferts frequents category management)",
-      "Instituts panels (NielsenIQ, Circana / IRI, Kantar)"
+      "Instituts d'études et panels consommateurs"
     ],
     sources: [
       { name: "FACCO - Marche petfood France", url: "https://www.facco.fr/" },
@@ -6383,8 +7151,8 @@ const august2026ChloeBatch: JobRole[] = [
     ],
     schools: ["HEC Paris", "ESSEC", "ESCP", "EDHEC", "EM Lyon", "NEOMA", "SKEMA"],
     relatedIndustries: [
-      "Groupes petfood premium (Mars Petcare, Nestle Purina, Affinity, Hill's)",
-      "Marques challenger fresh food et clean label (Edgard Cooper, Tomojo, Ultra Premium Direct, Hector Kitchen)",
+      "Groupes petfood premium",
+      "Marques challenger fresh food et clean label",
       "FMCG premium (transferts frequents vers petfood)",
       "Agences creation, media, PR specialisees",
       "Retail specialise animalerie"
@@ -6441,10 +7209,10 @@ const august2026ChloeBatch: JobRole[] = [
     ],
     schools: ["AgroParisTech", "Mines ParisTech", "Institut Agro Rennes-Angers", "HEC Paris", "ESSEC", "Sciences Po Paris", "Yale SOM", "Harvard Business School"],
     relatedIndustries: [
-      "Groupes petfood (Mars Petcare, Nestle Purina, Affinity, United Petfood)",
-      "FMCG alimentaire (Danone, Unilever, Nestle - transferts sustainability frequents)",
-      "Cabinets conseil ESG (EcoAct, Carbone 4, Utopies, I Care)",
-      "Ingredientistes proteines alternatives (Innovafeed, Ynsect, Nextprotein)",
+      "Groupes petfood",
+      "FMCG alimentaire",
+      "Cabinets conseil ESG",
+      "Ingredientistes proteines alternatives",
       "Autorites et referentiels (ADEME, EFRAG, SBTi, PEF)"
     ],
     sources: [
@@ -6500,10 +7268,10 @@ const august2026ChloeBatch: JobRole[] = [
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "HEC Paris", "INSEAD", "ESSEC", "Harvard Business School", "Yale SOM"],
     relatedIndustries: [
-      "Groupes cliniques veterinaires (IVC Evidensia, VetPartners, Univet, Anicura, Argos Veterinaire)",
-      "Retail medical humain (Ramsay Sante, Elsan, Almaviva, Colisee)",
+      "Groupes cliniques veterinaires",
+      "Retail medical humain",
       "Groupes dentaires ou opticiens (transferts operating model multi-site)",
-      "Private equity buy-and-build (Ardian, IK, PAI, Bridgepoint)",
+      "Private equity buy-and-build",
       "Instances profession (Ordre National des Veterinaires, SNVEL)"
     ],
     sources: [
@@ -6558,8 +7326,8 @@ const august2026ChloeBatch: JobRole[] = [
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "Institut Pasteur", "Universite Paris-Saclay", "Harvard Business School", "MIT Sloan"],
     relatedIndustries: [
-      "Big Pharma Animal Health (Zoetis, Boehringer Ingelheim, MSD Animal Health, Elanco, Ceva, Virbac, Vetoquinol)",
-      "Diagnostic veterinaire (IDEXX, Zoetis Diagnostics, Innovative Diagnostics)",
+      "Big Pharma Animal Health",
+      "Diagnostic veterinaire",
       "Biotech animal health emergentes",
       "R&D pharma humaine (transferts frequents)",
       "Instituts et laboratoires publics (INRAE, Anses, Institut Pasteur)"
