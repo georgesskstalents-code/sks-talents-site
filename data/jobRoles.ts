@@ -5946,7 +5946,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
     category: "Direction canal vétérinaire petfood",
     shortageLevel: "Tres elevee",
     summary:
-      "Pilote la stratégie du canal vétérinaire d'une marque petfood premium en France. Défend la marge canal face à la montée en puissance des centrales d'achat de groupements vétérinaires (AniCura, IVC Evidensia, VetPartners) et à l'érosion de la prescription par le D2C. Construit des accords partenariat basés sur la valeur non-tarifaire (formation, data, exclusivité de gamme) plutôt que sur la seule remise sur volume.",
+      "Pilote la stratégie du canal vétérinaire d'une marque petfood premium en France. Défend la marge canal face à la montée en puissance des centrales d'achat des groupements vétérinaires consolidateurs et à l'érosion de la prescription par le D2C. Construit des accords partenariat basés sur la valeur non-tarifaire (formation, data, exclusivité de gamme) plutôt que sur la seule remise sur volume.",
     skills: [
       "Direction canal vétérinaire prescripteur",
       "Négociation grands comptes (centrales d'achat groupements)",
