@@ -5351,7 +5351,7 @@ const may2026RoleBatch: JobRole[] = [
 const august2026AnimalHealthBatch: JobRole[] = [
   {
     slug: "medical-vet-technical-manager-swine",
-    title: "Vétérinaire Technique Porc Grand Compte",
+    title: "Vétérinaire Technique Porc",
     salary: "45kEUR - 90kEUR",
     salarySource:
       "Ordre de grandeur France, fixe brut annuel. La fourchette basse correspond aux profils en début de parcours, la fourchette haute aux profils seniors. Le positionnement dépend de trois critères : la taille de l'entreprise, la localisation du poste et la part variable propre à chaque structure (bonus, primes, véhicule), non incluse dans la fourchette.",
@@ -5359,11 +5359,13 @@ const august2026AnimalHealthBatch: JobRole[] = [
     category: "Affaires techniques filière porc",
     shortageLevel: "Tres elevee",
     summary:
-      "Un poste à la croisée du terrain, de la science et de l'industrie, au contact direct des vétérinaires praticien.ne.s et des acteurs de la filière porcine : accompagnement des solutions de prévention, expertise sanitaire et diagnostique, formation des équipes commerciales et marketing, animation de la relation avec les experts de la filière.",
+      "Un poste à la croisée du terrain, de la science et de l'industrie, au contact direct des vétérinaires praticien.ne.s et des acteurs de la filière porcine : accompagnement de la vaccination en élevage, approches diagnostiques, études terrain, formation technique des équipes commerciales et marketing, veille scientifique et relation avec les leaders d'opinion.",
     skills: [
       "Production porcine (naissage, engraissement, post-sevrage)",
       "Vaccination et biosécurité (PPA, PCV2, SDRP, mycoplasmes)",
-      "Formation technique force de vente",
+      "Approches diagnostiques et protocoles vaccinaux en élevage",
+      "Formation technique force de vente et équipes marketing",
+      "Lecture et vulgarisation de publications scientifiques en anglais",
       "Relation KOL vétérinaires filière porc",
       "Autonomie et crédibilité terrain"
     ],
@@ -5378,14 +5380,20 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "Chef de Produit Porc / Responsable Médical Porc"
     ],
     missions: [
-      "Accompagner les vétérinaires sur le terrain et dans la mise en place des solutions de prévention.",
-      "Développer des projets et partenariats techniques avec les clients.",
-      "Apporter son expertise sur les problématiques sanitaires et les approches diagnostiques.",
-      "Former les équipes commerciales et marketing.",
-      "Animer des réunions techniques auprès des vétérinaires.",
-      "Analyser les nouvelles publications scientifiques et assurer la veille concurrentielle.",
-      "Contribuer aux études terrain, aux publications et aux supports scientifiques.",
-      "Développer des relations avec les experts et les leaders d'opinion de la filière."
+      "Accompagner le ou la vétérinaire praticien.ne dans la mise en place de la vaccination en élevage.",
+      "Évaluer, développer et proposer des approches diagnostiques en lien avec les médicaments de la gamme.",
+      "Développer et mettre en place des partenariats et projets techniques chez les clients, en collaboration avec les équipes commerciales.",
+      "Apporter le soutien technique vétérinaire à la gamme, soutenir l'équipe commerciale et mener des actions de proximité.",
+      "Élaborer et animer des réunions techniques à destination des vétérinaires.",
+      "Former techniquement les équipes commerciales et marketing, et leur apporter régulièrement l'information sur les produits et les pathologies.",
+      "Analyser les publications scientifiques en anglais et les transformer en documents techniques synthétiques pour les équipes et les clients.",
+      "Initier et suivre des études terrain avec les équipes techniques concernées.",
+      "Rédiger des articles scientifiques et des documents techniques destinés aux clients.",
+      "Participer aux réunions techniques avec les équipes internationales et partager les informations remontées du terrain.",
+      "Analyser les produits concurrents et assurer la diffusion de la veille concurrentielle.",
+      "Développer des relations privilégiées avec les leaders d'opinion de la filière.",
+      "Participer à la création des supports marketing et assurer la validation technique et scientifique des outils développés.",
+      "Assurer la pharmacovigilance des médicaments et respecter les obligations de qualité et de conformité de l'activité pharmaceutique vétérinaire."
     ],
     studies: [
       "Docteur.e vétérinaire (DEFV)",
