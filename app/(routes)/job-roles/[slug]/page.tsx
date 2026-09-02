@@ -96,18 +96,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  */
 function parseSalaryRange(s: string): { min: number; max: number; median: number } | null {
   if (!s) return null;
-  const matches = s.match(/(\d+)\s*[--]\s*(\d+)/);
+  // Les valeurs de data/jobRoles.ts sont ecrites "45kEUR - 90kEUR",
+  // parfois prefixees ("Base 50kEUR - 100kEUR + 10kEUR - 49kEUR de variable").
+  // On tolere donc une unite collee au nombre et on retient la premiere plage.
+  const unit = "(?:\\s*(?:kEUR|KEUR|k€|K€|k|K))?";
+  const rangeRe = new RegExp(`(\\d+)${unit}\\s*-\\s*(\\d+)${unit}`);
+  const matches = s.match(rangeRe);
   if (matches) {
-    const min = Number(matches[1]) * 1000;
-    const max = Number(matches[2]) * 1000;
-    return { min, max, median: Math.round((min + max) / 2) };
+    const min = toAnnualEuros(Number(matches[1]));
+    const max = toAnnualEuros(Number(matches[2]));
+    if (min > 0 && max >= min) {
+      return { min, max, median: Math.round((min + max) / 2) };
+    }
   }
   const single = s.match(/(\d+)/);
   if (single) {
-    const v = Number(single[1]) * 1000;
-    return { min: v, max: v, median: v };
+    const v = toAnnualEuros(Number(single[1]));
+    if (v > 0) return { min: v, max: v, median: v };
   }
   return null;
+}
+
+/** Les fiches expriment les salaires en milliers d'euros ; on normalise en euros. */
+function toAnnualEuros(value: number): number {
+  if (!Number.isFinite(value) || value <= 0) return 0;
+  return value >= 1000 ? value : value * 1000;
 }
 
 function buildOccupationJsonLd(role: {
