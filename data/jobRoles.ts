@@ -5351,7 +5351,7 @@ const may2026RoleBatch: JobRole[] = [
 const august2026AnimalHealthBatch: JobRole[] = [
   {
     slug: "medical-vet-technical-manager-swine",
-    title: "Vétérinaire Technique Porc Grand Compte",
+    title: "Vétérinaire Technique Porc",
     salary: "45kEUR - 90kEUR",
     salarySource:
       "Ordre de grandeur France, fixe brut annuel. La fourchette basse correspond aux profils en début de parcours, la fourchette haute aux profils seniors. Le positionnement dépend de trois critères : la taille de l'entreprise, la localisation du poste et la part variable propre à chaque structure (bonus, primes, véhicule), non incluse dans la fourchette.",
