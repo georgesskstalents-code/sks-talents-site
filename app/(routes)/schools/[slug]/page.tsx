@@ -1,9 +1,10 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import ResourceLogo from "@/components/ResourceLogo";
 import { schools } from "@/data/resources";
 import { getNotionSiteContentBySlug, mapNotionEntryToResourceItem } from "@/lib/notion";
+import { resolveSchoolSlug } from "@/lib/slugRescueRegistry";
 
 export const dynamic = "force-dynamic";
 
@@ -54,6 +55,11 @@ export default async function SchoolDetailPage({
   );
 
   if (!item) {
+    // Filet de securite "slug devine" : voir lib/slugRescue.ts.
+    const rescue = resolveSchoolSlug(slug);
+    if (rescue.status === "redirect") {
+      permanentRedirect(`/schools/${rescue.slug}`);
+    }
     notFound();
   }
 

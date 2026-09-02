@@ -30,7 +30,9 @@ const nextConfig = {
       },
       {
         source: "/blog/index-egalite-femmes-hommes-2026-obligations-employeurs",
-        destination: "/blog/egalite-remuneration-femmes-hommes-obligations-employeurs-france-2026",
+        // Cible corrigee 2026-09-02 : l'ancienne destination n'existe pas dans
+        // data/articles.ts, la redirection tombait sur un 404.
+        destination: "/blog/aon-remuneration-life-sciences-2025-2026",
         permanent: true
       },
       {
@@ -184,11 +186,10 @@ const nextConfig = {
         destination: "/job-roles/medical-vet-supply-planning-lead",
         permanent: true
       },
-      {
-        source: "/job-roles/medical-vet-regulatory-affairs-manager",
-        destination: "/job-roles/medical-vet-regulatory-affairs-vaccines",
-        permanent: true
-      },
+      // 2026-09-02 : les redirects sur /job-roles/medical-vet-regulatory-affairs-manager
+      // et /job-roles/petfood-regulatory-affairs-manager ont ete retires. Ces deux
+      // fiches sont desormais reellement generees par data/jobRoles.ts et figurent
+      // dans le sitemap : la redirection masquait une page valide.
       {
         source: "/job-roles/medical-vet-veterinary-rd-scientist",
         destination: "/job-roles",
@@ -202,11 +203,6 @@ const nextConfig = {
       {
         source: "/job-roles/petfood-formulation-scientist",
         destination: "/job-roles/petfood-palatability-scientist",
-        permanent: true
-      },
-      {
-        source: "/job-roles/petfood-regulatory-affairs-manager",
-        destination: "/job-roles",
         permanent: true
       },
       {

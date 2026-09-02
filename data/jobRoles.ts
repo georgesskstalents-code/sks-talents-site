@@ -4967,25 +4967,25 @@ const august2026AnimalHealthBatch: JobRole[] = [
   {
     slug: "medical-vet-key-account-manager-large-accounts",
     title: "Key Account Manager Grand Compte Santé Animale",
-    salary: "50kEUR - 70kEUR + variable",
+    salary: "40kEUR - 70kEUR + variable",
     salarySource:
-      "Ordre de grandeur France, fixe brut annuel. Variable 20-40% du fixe selon atteinte objectifs individuels et collectifs. Fourchette dépendante du portefeuille de comptes (nombre + poids stratégique) et du niveau de séniorité.",
+      "Ordre de grandeur France, fixe brut annuel, variable en supplément (20 à 40 % du fixe selon l'atteinte des objectifs individuels et collectifs). Le positionnement dans la fourchette dépend du profil et de la séniorité, de la taille de l'entreprise, de la localisation du poste et du poids stratégique du portefeuille de comptes.",
     sector: "Medical Vet",
-    category: "Commercial grand compte",
+    category: "Commercial grand compte et pilotage par la donnée",
     shortageLevel: "Elevee",
     summary:
-      "Gère et développe un portefeuille de comptes stratégiques (groupements vétérinaires, coopératives, centrales d'achat, groupes distribution) : négociation d'appels d'offres, relation avec les décisionnaires en organisations complexes, reporting et pilotage business.",
+      "Gère et développe un portefeuille de comptes stratégiques de la filière santé animale, avec une double exigence : la négociation et le référencement d'un côté, le pilotage par la donnée de l'autre (prévisions trimestrielles, consolidation des achats, indicateurs de performance, ciblage). Le poste garde un ancrage terrain fort : lecture des tableaux de bord d'élevage, audits, formation aux bonnes pratiques de vaccination.",
     skills: [
       "Gestion grand compte et négociation commerciale complexe",
-      "Connaissance filière santé animale (vétérinaire, élevage, distribution)",
-      "Pilotage appels d'offres et contrats-cadres",
-      "Reporting business et CRM",
-      "Relation multi-niveaux (achat, technique, direction)"
+      "Prévisions de ventes, consolidation et analyse des données d'achats",
+      "Pilotage par indicateurs et reporting commercial",
+      "Conduite d'élevage, tableaux de bord technico-économiques, données d'abattage",
+      "Audits terrain et formation aux bonnes pratiques de vaccination"
     ],
     successFactors: [
-      "Combiner rigueur commerciale et compréhension technique des enjeux santé animale.",
-      "Naviguer les processus de décision complexes (achats, technique, direction) sans perdre en réactivité.",
-      "Construire une relation long terme fondée sur la valeur, pas uniquement sur le prix."
+      "Piloter le compte par la donnée, pas par le seul relationnel : prévision, consolidation, indicateurs.",
+      "Cartographier tous les décisionnaires d'une structure et suivre l'évolution permanente des centres de décision.",
+      "Rester crédible en élevage autant qu'en salle de négociation."
     ],
     path: [
       "Technico-commercial.e ou véto commercial.e junior",
@@ -4993,22 +4993,32 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "Head of KAM / Directeur.rice commercial.e grands comptes"
     ],
     missions: [
-      "Développer le portefeuille de comptes stratégiques et négocier les contrats-cadres.",
-      "Répondre aux appels d'offres et défendre les propositions commerciales en interne et externe.",
-      "Assurer le reporting business, la remontée d'informations terrain et la coordination interne."
+      "Suivre un portefeuille de grands comptes, visiter les structures et les responsables qui les composent, identifier l'ensemble des acteurs et décisionnaires.",
+      "Développer des relations de long terme avec les décisionnaires et assurer une veille sur l'évolution des structures de décision.",
+      "Développer les ventes et les référencements, préparer et négocier les propositions commerciales et les appels d'offres.",
+      "Participer à l'élaboration des stratégies grands comptes et de la politique commerciale.",
+      "Proposer, animer et suivre les plans d'action marketing et techniques dédiés à chaque compte, et informer régulièrement les clients de leur avancement.",
+      "Fournir un prévisionnel trimestriel des ventes terrain sur les comptes suivis.",
+      "Consolider et analyser les données d'achats des grands comptes, et assurer le reporting des ventes.",
+      "Exploiter les données pour optimiser le ciblage et la couverture clients, définir et suivre les indicateurs de performance.",
+      "Anticiper les tendances du marché et détecter les opportunités à partir des données disponibles.",
+      "Comprendre la gestion d'un élevage, analyser les tableaux de bord technico-économiques et les données d'abattage.",
+      "Réaliser des audits terrain et former le personnel d'élevage aux bonnes pratiques de vaccination.",
+      "Coordonner les actions avec les équipes commerciales, techniques et marketing, et gérer les ressources et budgets alloués.",
+      "Représenter l'entreprise lors des manifestations professionnelles, dans le respect des obligations propres au médicament vétérinaire, et faire remonter les signalements qualité et effets indésirables."
     ],
     studies: [
       "Docteur.e vétérinaire OU ingénieur.e agri / agro OU école de commerce",
-      "3-8 ans d'expérience commerciale santé animale ou secteurs adjacents",
+      "Expérience commerciale en santé animale ou secteurs adjacents, de junior à confirmé.e",
       "Formation continue négociation grand compte"
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "AgroParisTech", "École de commerce généraliste"],
     relatedIndustries: [
-      "Laboratoires santé animale (Zoetis, Boehringer Ingelheim, MSD, Ceva, Elanco, Virbac)",
-      "Nutrition animale (Sanders, InVivo, Neovia, Cargill)",
-      "Génétique animale (Groupe Grimaud, Hendrix Genetics)",
-      "Distribution vétérinaire (Alcyon, Coveto, Centravet)",
-      "Groupes vétérinaires (AniCura, IVC Evidensia, Sévétys, VetPartners, Univet)"
+      "Laboratoires de santé animale",
+      "Nutrition animale",
+      "Génétique animale et sélection",
+      "Distribution et centrales d'achat vétérinaires",
+      "Groupements et groupes de cliniques vétérinaires"
     ],
     sources: [
       { name: "SIMV - Syndicat Industrie Médicament et Diagnostic Vétérinaires", url: "https://www.simv.org/" },

@@ -2,11 +2,12 @@ import fs from "node:fs";
 import path from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import EditorialContentLayout, { getEditorialHeroImage } from "@/components/EditorialContentLayout";
 import { articles, getArticleVerticalLabel } from "@/data/articles";
 import { getNotionSiteContentBySlug } from "@/lib/notion";
+import { resolveArticleSlug } from "@/lib/slugRescueRegistry";
 
 export const dynamic = "force-dynamic";
 
@@ -113,7 +114,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = articles.find((entry) => entry.slug === slug);
 
   if (!article && !notionArticle) {
-    return {};
+    // Slug inconnu : 308 vers l'analyse la plus proche ou 404 utile.
+    return { robots: { index: false, follow: true } };
   }
 
   const coverUrl = getBlogCoverUrl(slug);
@@ -181,6 +183,11 @@ export default async function BlogDetailPage({
   const article = articles.find((entry) => entry.slug === slug);
 
   if (!article && !notionArticle) {
+    // Filet de securite "slug devine" : voir lib/slugRescue.ts.
+    const rescue = resolveArticleSlug(slug);
+    if (rescue.status === "redirect") {
+      permanentRedirect(`/blog/${rescue.slug}`);
+    }
     notFound();
   }
 
