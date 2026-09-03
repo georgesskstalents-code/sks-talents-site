@@ -5732,12 +5732,12 @@ const august2026AnimalHealthBatch: JobRole[] = [
   },
   {
     slug: "medical-vet-key-account-manager-large-accounts",
-    title: "Responsable Grands Comptes Porc Santé Animale",
+    title: "Responsable Grands Comptes Porc",
     salary: "40kEUR - 70kEUR + variable",
     salarySource:
       "Ordre de grandeur France, fixe brut annuel, variable en supplément (20 à 40 % du fixe selon l'atteinte des objectifs individuels et collectifs). Le positionnement dans la fourchette dépend du profil et de la séniorité, de la taille de l'entreprise, de la localisation du poste et du poids stratégique du portefeuille de comptes.",
     sector: "Medical Vet",
-    category: "Commercial grand compte et pilotage par la donnée",
+    category: "Santé animale · Grands comptes et pilotage par la donnée",
     shortageLevel: "Elevee",
     summary:
       "Gère et développe un portefeuille de comptes stratégiques de la filière porcine, avec une double exigence : la négociation et le référencement d'un côté, le pilotage par la donnée de l'autre (prévisions trimestrielles, consolidation des achats, indicateurs de performance, ciblage). Le poste garde un ancrage terrain fort : lecture des tableaux de bord d'élevage, audits, formation aux bonnes pratiques de vaccination.",
