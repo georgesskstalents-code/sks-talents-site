@@ -1,0 +1,58 @@
+name: Sentinelle skstalents.fr · sante des URLs
+
+on:
+  schedule:
+    # Toutes les 6 heures. GitHub Actions a un acces reseau normal vers
+    # skstalents.fr, contrairement au sandbox des routines cloud.
+    - cron: "10 1,7,13,19 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Crawl de production
+        id: crawl
+        continue-on-error: true
+        run: |
+          chmod +x scripts/sentinelle-site.sh
+          REPORT_FILE=report.md bash scripts/sentinelle-site.sh
+
+      - name: Ouvrir ou mettre a jour l'issue de suivi
+        if: steps.crawl.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="Sentinelle · anomalies detectees sur skstalents.fr"
+          EXISTING=$(gh issue list --state open --label sentinelle --json number --jq '.[0].number' || true)
+          gh label create sentinelle --color B60205 --description "Detecte par la sentinelle du site" 2>/dev/null || true
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body-file report.md
+            echo "Commentaire ajoute sur l'issue #$EXISTING"
+          else
+            gh issue create --title "$TITLE" --label sentinelle --body-file report.md
+          fi
+
+      - name: Fermer l'issue si tout est revenu au vert
+        if: steps.crawl.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          EXISTING=$(gh issue list --state open --label sentinelle --json number --jq '.[0].number' || true)
+          if [ -n "$EXISTING" ]; then
+            gh issue close "$EXISTING" --comment "Sentinelle : tout est revenu au vert, aucune anomalie sur ce passage."
+          fi
+
+      - name: Echouer si anomalies
+        if: steps.crawl.outcome == 'failure'
+        run: |
+          echo "Des anomalies ont ete detectees, voir l'issue ouverte."
+          exit 1

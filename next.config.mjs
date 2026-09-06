@@ -86,21 +86,27 @@ const nextConfig = {
       { source: "/contactez-nous", destination: "/contact", permanent: true },
       { source: "/legal/cgv-CGV", destination: "/legal/cgv", permanent: true },
       { source: "/legal/cgu-CGU", destination: "/legal/cgu", permanent: true },
-      { source: "/orientation-Orientation", destination: "/orientation", permanent: true },
-      { source: "/comparatifs-Comparatifs-m", destination: "/comparatifs", permanent: true },
-      { source: "/blog-Articles-m", destination: "/blog", permanent: true },
       { source: "/offres_emploi", destination: "/job-roles", permanent: true },
+      // Variantes de navigation legacy "/{page}-{Libelle}" et "/{page}-{Libelle}-m"
+      // (GSC 404, 2026-09-07). Les regles exactes precedentes echouaient sur les
+      // accents percent-encodes envoyes par Googlebot, ex. /references-R%C3%A9f%C3%A9rences.
+      { source: "/references-:suffix", destination: "/references", permanent: true },
+      { source: "/schools-:suffix", destination: "/schools", permanent: true },
+      { source: "/diagnostic-:suffix", destination: "/diagnostic", permanent: true },
+      { source: "/orientation-:suffix", destination: "/orientation", permanent: true },
+      { source: "/comparatifs-:suffix", destination: "/comparatifs", permanent: true },
+      { source: "/blog-:suffix", destination: "/blog", permanent: true },
+      // Route image OpenGraph tronquee remontee par GSC.
+      { source: "/barometre-life-sciences-2026-2027/opengraph", destination: "/barometre-life-sciences-2026-2027", permanent: true },
       // Slugs job-roles obsoletes (GSC 404, jamais publies). Ajout 2026-07-06.
       { source: "/job-roles/veterinary-referral-coordinator", destination: "/job-roles", permanent: true },
       { source: "/job-roles/veterinary-hospital-operations-manager", destination: "/job-roles", permanent: true },
       { source: "/job-roles/biotech-procurement-manager-critical-materials", destination: "/job-roles", permanent: true },
-      { source: "/references-Références", destination: "/references", permanent: true },
       { source: "/afrique", destination: "/", permanent: true },
       { source: "/seminaires", destination: "/events", permanent: true },
       { source: "/article", destination: "/blog", permanent: true },
       { source: "/faq_entreprises", destination: "/contact", permanent: true },
       { source: "/faq_candidats", destination: "/contact", permanent: true },
-      { source: "/diagnostic-Diagnostic-m", destination: "/diagnostic", permanent: true },
       { source: "/politique_de_gestion_de_cookies", destination: "/legal/politique-cookies", permanent: true },
       { source: "/job_details/:slug", destination: "/job-roles", permanent: true },
       { source: "/fiche_metier/:slug", destination: "/job-roles", permanent: true },
@@ -108,7 +114,6 @@ const nextConfig = {
       { source: "/flUW7AcgBiicCMqb4JgItuKPidWEQMIY0B9v9jLFYk=", destination: "/", permanent: true },
       { source: "/blogArticles", destination: "/blog", permanent: true },
       { source: "/lexique-life-sciences-rhLexique", destination: "/lexique-life-sciences-rh", permanent: true },
-      { source: "/orientation-Orientation-m", destination: "/orientation", permanent: true },
       // Contenu /article/* legacy (WordPress) = supprime, hors positionnement.
       // On consolide vers l'index /blog : les anciens slugs (accents/apostrophes,
       // ex. agroindustrie-cote-d'ivoire) n'ont pas d'equivalent /blog/{slug} => re-404.
@@ -287,7 +292,14 @@ const nextConfig = {
       }
     ];
 
+    const noIndexHeader = [{ key: "X-Robots-Tag", value: "noindex" }];
+
     return [
+      // Routes techniques : images OpenGraph et flux RSS n'ont rien a faire
+      // dans l'index Google (GSC "Exploree, non indexee", 2026-09-07).
+      { source: "/opengraph-image", headers: noIndexHeader },
+      { source: "/:path*/opengraph-image", headers: noIndexHeader },
+      { source: "/feed.xml", headers: noIndexHeader },
       {
         source: "/dashboard/:path*",
         headers: [
