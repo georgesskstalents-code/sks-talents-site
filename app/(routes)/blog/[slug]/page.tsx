@@ -334,13 +334,6 @@ export default async function BlogDetailPage({
         ].filter(Boolean)}
       >
         <div className="space-y-6 text-base leading-8 text-brand-stone">
-          <div className="rounded-[22px] border border-brand-teal/12 bg-white/80 p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
-              Repères
-            </p>
-            <p className="mt-3 text-sm leading-7 text-brand-stone">{audienceLabel}</p>
-            <p className="mt-2 text-sm leading-7 text-brand-stone">{kicker}</p>
-          </div>
           {answerFirst ? (
             <div className="rounded-[22px] border border-brand-teal/20 bg-brand-mint/30 p-6">
               <p className="text-base leading-8 text-brand-ink">{answerFirst}</p>
@@ -370,25 +363,28 @@ export default async function BlogDetailPage({
               <p className="mb-4 font-mono text-[0.64rem] uppercase tracking-[0.2em] text-[#e8e2d4]">
                 Méthodologie et sources
               </p>
-              <ul className="grid list-none gap-3 p-0">
+              <ul className="grid list-none gap-3 p-0 text-left">
                 {sources.map((source) => {
                   const { org, doc } = splitSource(source.name);
                   return (
-                    <li
-                      key={source.url}
-                      className="grid gap-x-4 gap-y-1 text-[0.9rem] sm:grid-cols-[8rem_1fr] sm:items-baseline"
-                    >
-                      <span className="font-mono text-[0.66rem] uppercase tracking-[0.12em] text-[#e8e2d4]">
-                        {org}
-                      </span>
-                      <a
-                        href={source.url}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="text-white/90 underline decoration-[#e8e2d4]/50 underline-offset-2 transition hover:decoration-[#e8e2d4]"
-                      >
-                        {doc}
-                      </a>
+                    <li key={source.name} className="text-left text-[0.92rem] leading-relaxed text-white/90">
+                      {org ? (
+                        <span className="mr-2 font-mono text-[0.66rem] uppercase tracking-[0.12em] text-[#e8e2d4]">
+                          {org}
+                        </span>
+                      ) : null}
+                      {source.url ? (
+                        <a
+                          href={source.url}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="underline decoration-[#e8e2d4]/40 underline-offset-2 transition hover:decoration-[#e8e2d4]"
+                        >
+                          {doc}
+                        </a>
+                      ) : (
+                        <span>{doc}</span>
+                      )}
                     </li>
                   );
                 })}

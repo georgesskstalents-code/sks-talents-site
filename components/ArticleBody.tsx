@@ -309,20 +309,17 @@ function ArticleBlocks({ blocks, keyPrefix }: { blocks: Block[]; keyPrefix: stri
               <p className="mb-4 font-mono text-[0.64rem] uppercase tracking-[0.2em] text-[#e8e2d4]">
                 Méthodologie et sources
               </p>
-              <ul className="grid list-none gap-3 p-0">
+              <ul className="grid list-none gap-3 p-0 text-left">
                 {block.items.map((item, i) => {
                   const { org, doc } = splitSource(item);
                   return (
-                    <li
-                      key={`${key}-s${i}`}
-                      className="grid gap-x-4 gap-y-1 text-[0.9rem] sm:grid-cols-[8rem_1fr] sm:items-baseline"
-                    >
-                      <span className="font-mono text-[0.66rem] uppercase tracking-[0.12em] text-[#e8e2d4]">
-                        {org}
-                      </span>
-                      <span className="text-white/90">
-                        <Inline text={doc} keyPrefix={`${key}-s${i}`} />
-                      </span>
+                    <li key={`${key}-s${i}`} className="text-left text-[0.92rem] leading-relaxed text-white/90">
+                      {org ? (
+                        <span className="mr-2 font-mono text-[0.66rem] uppercase tracking-[0.12em] text-[#e8e2d4]">
+                          {org}
+                        </span>
+                      ) : null}
+                      <Inline text={doc} keyPrefix={`${key}-s${i}`} />
                     </li>
                   );
                 })}
