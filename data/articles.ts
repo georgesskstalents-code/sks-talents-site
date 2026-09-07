@@ -1,4 +1,4 @@
-export type ArticlePersona = "CEO" | "COO" | "DRH" | "CPO";
+export type ArticlePersona = "CEO" | "COO" | "DRH" | "CPO" | "Investisseur";
 
 export type ArticleInternalLink = {
   label: string;
@@ -4562,32 +4562,7 @@ export const articles: Article[] = [
         url: "https://www.aon.com/france/aon-france/landing-page/guides_enquetes_remuneration.jsp"
       }
     ]
-  }
-];
-
-export function getArticlePersonaOptions() {
-  return ["Tous", ...new Set(articles.flatMap((article) => article.persona))];
-}
-
-export function getArticleVerticalLabel(vertical: string) {
-  return verticalLabels[vertical] ?? vertical;
-}
-
-const sectorToVerticalMap: Record<string, string[]> = {
-  Biotech: ["biotech", "people-ops"],
-  Diagnostic: ["diagnostic", "biotech"],
-  "Medical & Vet": ["medical-vet", "vet-services"],
-  "Medical Vet": ["medical-vet", "vet-services"],
-  Cosmetique: ["cosmétique", "cosmetique"],
-  Cosmétique: ["cosmétique", "cosmetique"],
-  Petfood: ["petfood", "vet-services"],
-  "Vet Services": ["vet-services", "medical-vet"],
-  Veterinaire: ["medical-vet", "vet-services"],
-  "Cross-sector": ["people-ops", "biotech"]
-};
-
-export function getRelatedArticlesBySector(sector: string, limit = 3) {
-  const verticals = sectorToVerticalMap[sector] || ["people-ops",
+  },
   {
     id: "7-decisions-marque-dirigeants-2026-sks-talents",
     title: "Les 7 decisions qui ont marque les dirigeants que nous avons accompagnes en 2026",
@@ -4741,6 +4716,30 @@ export function getRelatedArticlesBySector(sector: string, limit = 3) {
     ],
   }
 ];
+
+export function getArticlePersonaOptions() {
+  return ["Tous", ...new Set(articles.flatMap((article) => article.persona))];
+}
+
+export function getArticleVerticalLabel(vertical: string) {
+  return verticalLabels[vertical] ?? vertical;
+}
+
+const sectorToVerticalMap: Record<string, string[]> = {
+  Biotech: ["biotech", "people-ops"],
+  Diagnostic: ["diagnostic", "biotech"],
+  "Medical & Vet": ["medical-vet", "vet-services"],
+  "Medical Vet": ["medical-vet", "vet-services"],
+  Cosmetique: ["cosmétique", "cosmetique"],
+  Cosmétique: ["cosmétique", "cosmetique"],
+  Petfood: ["petfood", "vet-services"],
+  "Vet Services": ["vet-services", "medical-vet"],
+  Veterinaire: ["medical-vet", "vet-services"],
+  "Cross-sector": ["people-ops", "biotech"]
+};
+
+export function getRelatedArticlesBySector(sector: string, limit = 3) {
+  const verticals = sectorToVerticalMap[sector] || ["people-ops"];
   const matched = articles.filter((a) => verticals.includes(a.vertical));
   matched.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   return matched.slice(0, limit).map((a) => ({

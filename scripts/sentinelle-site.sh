@@ -147,6 +147,51 @@ else
 fi
 note ""
 
+# ------------------------------------------- 4. Liens internes vers du contenu
+note "## 4. Liens internes vers des contenus inexistants"
+note ""
+
+# Cette section existe a cause d'un bug reel : 8 articles avaient ete inseres
+# apres la fermeture du tableau `articles` dans data/articles.ts, a l'interieur
+# du corps d'une fonction. Le fichier compilait, le site ne les servait pas, et
+# des articles publies pointaient vers eux. Le crawl du sitemap ne peut pas voir
+# ce cas : ces URLs n'y figurent pas, justement parce qu'elles n'existent pas.
+#
+# On teste les liens reellement, en suivant les redirections : une cible
+# couverte par une regle de redirection est legitime, seule une 404 finale
+# compte comme anomalie.
+
+grep -rhoE '/(blog|job-roles)/[a-z0-9-]+' data components app lib 2>/dev/null \
+  | sort -u > /tmp/sentinelle-refs.txt
+
+# On ne reteste pas ce que le crawl du sitemap a deja couvert.
+sed "s|^$BASE||" /tmp/sentinelle-urls.txt | sort -u > /tmp/sentinelle-known.txt
+comm -23 /tmp/sentinelle-refs.txt /tmp/sentinelle-known.txt > /tmp/sentinelle-refs-todo.txt
+
+REFS=$(wc -l < /tmp/sentinelle-refs-todo.txt | tr -d ' ')
+
+if [ "$REFS" -gt 0 ]; then
+  sed "s|^|$BASE|" /tmp/sentinelle-refs-todo.txt \
+    | xargs -P 8 -n 1 bash -c \
+      'printf "%s %s\n" "$(curl -s -o /dev/null -L --max-redirs 3 -w "%{http_code}" --max-time 25 "$1")" "$1"' _ \
+    > /tmp/sentinelle-refs-results.txt
+  DEAD=$(awk '$1 != "200"' /tmp/sentinelle-refs-results.txt)
+else
+  DEAD=""
+fi
+
+if [ -n "$DEAD" ]; then
+  COUNT=$(printf '%s\n' "$DEAD" | grep -c .)
+  anomaly "- **$COUNT lien(s) interne(s) vers un contenu introuvable** sur $REFS references hors sitemap. Soit le contenu cible manque, soit il a ete ecrit au mauvais endroit dans le fichier de donnees :"
+  note ""
+  note '```'
+  printf '%s\n' "$DEAD" >> "$REPORT"
+  note '```'
+else
+  note "- $REFS liens internes hors sitemap testes, tous aboutissent."
+fi
+note ""
+
 # ------------------------------------------------------------------- Verdict
 note "## Verdict"
 note ""
