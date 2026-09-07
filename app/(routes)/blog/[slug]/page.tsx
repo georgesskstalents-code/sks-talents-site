@@ -3,7 +3,7 @@ import path from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
-import ArticleBody, { headingId, parseArticle } from "@/components/ArticleBody";
+import ArticleBody, { headingId, parseArticle, splitSource } from "@/components/ArticleBody";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import EditorialContentLayout, { getEditorialHeroImage } from "@/components/EditorialContentLayout";
 import { articles, getArticleVerticalLabel } from "@/data/articles";
@@ -173,8 +173,13 @@ export default async function BlogDetailPage({
   // Sommaire cliquable : construit a partir des titres de section reels de
   // l'article, jamais d'une liste ecrite a la main.
   const sections = parseArticle(body)
-    .filter((b): b is { kind: "heading"; level: 2 | 3; text: string } => b.kind === "heading" && b.level === 2)
-    .map((b, i) => ({ id: headingId(b.text), label: b.text, num: String(i + 1).padStart(2, "0") }));
+    .flatMap((b) => {
+      if (b.kind === "heading" && b.level === 2) return [{ id: headingId(b.text), label: b.text }];
+      // Les sections metier sont regroupees en bloc : leur ancre porte le nom du metier.
+      if (b.kind === "metier") return [{ id: headingId(b.name), label: b.name }];
+      return [];
+    })
+    .map((b, i) => ({ ...b, num: String(i + 1).padStart(2, "0") }));
 
   const titleParts = title.split(" · ");
   const heroOverline = titleParts.length > 1 ? titleParts[0] : undefined;
@@ -361,23 +366,33 @@ export default async function BlogDetailPage({
             </div>
           ) : null}
           {sources.length ? (
-            <div className="rounded-[24px] border border-brand-teal/10 bg-brand-mint/35 p-6">
-              <p className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-brand-teal">
+            <div className="my-10 bg-[#1d5457] px-7 py-6">
+              <p className="mb-4 font-mono text-[0.64rem] uppercase tracking-[0.2em] text-[#e8e2d4]">
                 Méthodologie et sources
               </p>
-              <div className="mt-4 grid gap-3">
-                {sources.map((source) => (
-                  <a
-                    key={source.url}
-                    href={source.url}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="text-sm font-semibold text-brand-teal transition hover:opacity-80"
-                  >
-                    {source.name}
-                  </a>
-                ))}
-              </div>
+              <ul className="grid list-none gap-3 p-0">
+                {sources.map((source) => {
+                  const { org, doc } = splitSource(source.name);
+                  return (
+                    <li
+                      key={source.url}
+                      className="grid gap-x-4 gap-y-1 text-[0.9rem] sm:grid-cols-[8rem_1fr] sm:items-baseline"
+                    >
+                      <span className="font-mono text-[0.66rem] uppercase tracking-[0.12em] text-[#e8e2d4]">
+                        {org}
+                      </span>
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="text-white/90 underline decoration-[#e8e2d4]/50 underline-offset-2 transition hover:decoration-[#e8e2d4]"
+                      >
+                        {doc}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           ) : null}
         </div>
