@@ -388,19 +388,24 @@
 /* Texte justifie avec cesure : le francais se justifie mal sans cesure,
    les deux vont ensemble. Reserve aux paragraphes courants, jamais aux
    titres, aux listes ni aux encadres. */
-.articleFlat :where(p, li) {
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-}
-/* Les etiquettes, titres et lignes courtes restent au fer a gauche :
-   justifier une ligne de trois mots produit des trous. */
-.articleFlat :where(h2, h3, .lab) {
+/* Fer a gauche, sans cesure. La justification, sur une colonne de 40rem en
+   francais, coupe les mots et creuse des trous entre eux : elle degrade la
+   lecture au lieu de l'aider. */
+.articleFlat :where(p, li, h2, h3) {
   text-align: left;
   hyphens: manual;
+  -webkit-hyphens: manual;
 }
-@media (max-width: 640px) {
-  .articleFlat :where(p, li) {
-    text-align: left;
-  }
+
+/* Respiration : interlignage genereux et vraie separation entre paragraphes.
+   Un texte trop serre se lit comme un bloc. */
+.articleFlat .content {
+  line-height: 1.85;
 }
+.articleFlat .content p {
+  margin-bottom: 1.7rem;
+}
+.articleFlat .content li {
+  line-height: 1.75;
+}
+
