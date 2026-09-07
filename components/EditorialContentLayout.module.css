@@ -384,3 +384,23 @@
     margin-bottom: 6px;
   }
 }
+
+/* Texte justifie avec cesure : le francais se justifie mal sans cesure,
+   les deux vont ensemble. Reserve aux paragraphes courants, jamais aux
+   titres, aux listes ni aux encadres. */
+.articleFlat :where(p, li) {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+/* Les etiquettes, titres et lignes courtes restent au fer a gauche :
+   justifier une ligne de trois mots produit des trous. */
+.articleFlat :where(h2, h3, .lab) {
+  text-align: left;
+  hyphens: manual;
+}
+@media (max-width: 640px) {
+  .articleFlat :where(p, li) {
+    text-align: left;
+  }
+}
