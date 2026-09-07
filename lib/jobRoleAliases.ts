@@ -78,6 +78,16 @@ const ALIAS_CONFIG: AliasGenerationConfig = {
  * (404 en prod avec `utm_source=chatgpt.com`, 2026-08-31).
  */
 export const MANUAL_JOB_ROLE_ALIASES: Record<string, string> = {
+  // Slugs imprimes dans les carrousels LinkedIn additionnels Q4 2026
+  // (scripts/carrousels-manifest-additional.json). Les PDF sont deja generes et
+  // diffuses : l'URL est figee dans le document, on ne peut plus la corriger a
+  // la source. On la fait donc aboutir sur la fiche existante la plus proche,
+  // en attendant la creation des fiches dediees.
+  "sales-manager-petfood": "petfood-commercial-chiens-chats",
+  "rd-manager-petfood": "petfood-rd-director",
+  "chief-marketing-officer-petfood": "head-of-marketing-petfood-premium",
+  "chief-scientific-officer-animal-health": "head-of-rd-animal-health",
+
   // Sante animale · commerce
   "key-account-manager-animal-health": "medical-vet-key-account-manager-large-accounts",
   "key-account-manager-sante-animale": "medical-vet-key-account-manager-large-accounts",
