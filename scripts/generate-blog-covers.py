@@ -58,8 +58,8 @@ HTML_TPL = """<!DOCTYPE html>
   html, body {{ width: {w}px; height: {h}px; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }}
   body {{
     font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: #EFEDE4;
-    color: #163334;
+    background: #FFFFFF;
+    color: #1E2A2A;
     overflow: hidden;
   }}
   .cover {{
@@ -110,7 +110,7 @@ HTML_TPL = """<!DOCTYPE html>
     font-weight: 700;
     font-size: 48px;
     line-height: 1.1;
-    color: #163334;
+    color: #1E2A2A;
     letter-spacing: -0.01em;
     max-width: 1000px;
   }}
@@ -137,7 +137,7 @@ HTML_TPL = """<!DOCTYPE html>
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 22px;
-    color: #163334;
+    color: #1E2A2A;
   }}
   .tagline {{
     color: #17A7A0;
@@ -237,6 +237,43 @@ def generate_cover(fm, chrome_bin, out_dir):
     return png_path, result
 
 
+
+ARTICLES_TS = PROJECT_ROOT / "data" / "articles.ts"
+
+
+def read_articles_dataset():
+    """Extrait slug, titre, verticale et sujet de chaque article de data/articles.ts.
+
+    On decoupe le fichier sur les lignes `    slug: "..."` plutot que sur les
+    accolades : le champ `content` contient du markdown qui casse tout decoupage
+    structurel naif.
+    """
+    if not ARTICLES_TS.exists():
+        return []
+    src = ARTICLES_TS.read_text(encoding="utf-8")
+    anchors = [m for m in re.finditer(r'^    slug: "([^"]+)"', src, re.M)]
+    out = []
+    for i, m in enumerate(anchors):
+        lo = anchors[i - 1].end() if i else 0
+        hi = anchors[i + 1].start() if i + 1 < len(anchors) else len(src)
+        window = src[lo:hi]
+
+        def field(name):
+            f = re.search(r'^    %s: "((?:[^"\\]|\\.)*)"' % name, window, re.M)
+            return f.group(1) if f else ""
+
+        vertical = field("vertical") or "life-sciences"
+        if vertical not in ("life-sciences", "animal-health"):
+            vertical = "animal-health" if ("vet" in vertical or "petfood" in vertical) else "life-sciences"
+        out.append({
+            "slug": m.group(1),
+            "title": field("title"),
+            "vertical": vertical,
+            "topic": field("topic"),
+        })
+    return out
+
+
 def main():
     chrome_bin = find_chrome()
     if not chrome_bin:
@@ -247,14 +284,35 @@ def main():
     PUBLIC_DIR.mkdir(parents=True, exist_ok=True)
 
     files = sorted(NEWSLETTERS_DIR.glob("*.md"))
+    entries = []
+    for f in files:
+        fm = parse_frontmatter(f.read_text(encoding="utf-8"))
+        if fm and fm.get("slug"):
+            entries.append(fm)
+
+    # docs/newsletters ne couvre qu'une partie du blog. La source de verite des
+    # articles publies est data/articles.ts : on la lit pour generer une
+    # couverture par article, sans quoi les anciennes couvertures restent en
+    # place avec l'ancienne palette.
+    entries += read_articles_dataset()
+
+    seen = set()
+    unique = []
+    for fm in entries:
+        if fm["slug"] in seen:
+            continue
+        seen.add(fm["slug"])
+        unique.append(fm)
+    entries = unique
     print(f"=== SKS Blog Cover Generator ===\n")
     print(f"Chrome: {chrome_bin}")
     print(f"Output: {OUTPUT_DIR.relative_to(PROJECT_ROOT)}\n")
 
     ok, ko = 0, 0
-    for f in files:
-        fm = parse_frontmatter(f.read_text(encoding="utf-8"))
-        if not fm or not fm.get("slug"):
+    script_mtime = Path(__file__).stat().st_mtime
+    for fm in entries:
+        existing = PUBLIC_DIR / f"{fm['slug']}.png"
+        if existing.exists() and existing.stat().st_mtime > script_mtime:
             continue
         try:
             png_path, result = generate_cover(fm, chrome_bin, OUTPUT_DIR)
