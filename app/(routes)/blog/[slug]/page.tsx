@@ -3,7 +3,7 @@ import path from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
-import ArticleBody from "@/components/ArticleBody";
+import ArticleBody, { headingId, parseArticle } from "@/components/ArticleBody";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import EditorialContentLayout, { getEditorialHeroImage } from "@/components/EditorialContentLayout";
 import { articles, getArticleVerticalLabel } from "@/data/articles";
@@ -166,6 +166,25 @@ export default async function BlogDetailPage({
   const audienceLabel = article?.persona.join(", ") || "CEO, COO, CPO, DRH";
   const publishedAt = notionArticle?.publishDate || article?.date || new Date().toISOString().slice(0, 10);
   const articleUrl = `${siteUrl}/blog/${slug}`;
+
+  // Les titres sont ecrits "Sujet · phrase". Le sujet remonte en surtitre et la
+  // phrase devient le titre : le lecteur voit la thematique, puis l'accroche,
+  // au lieu d'un bloc unique qui se casse sur quatre lignes.
+  // Sommaire cliquable : construit a partir des titres de section reels de
+  // l'article, jamais d'une liste ecrite a la main.
+  const sections = parseArticle(body)
+    .filter((b): b is { kind: "heading"; level: 2 | 3; text: string } => b.kind === "heading" && b.level === 2)
+    .map((b, i) => ({ id: headingId(b.text), label: b.text, num: String(i + 1).padStart(2, "0") }));
+
+  const titleParts = title.split(" · ");
+  const heroOverline = titleParts.length > 1 ? titleParts[0] : undefined;
+  const heroTitle =
+    titleParts.length > 1
+      ? (() => {
+          const rest = titleParts.slice(1).join(" · ");
+          return rest.charAt(0).toUpperCase() + rest.slice(1);
+        })()
+      : title;
   const paragraphs = body.split("\n\n").filter(Boolean);
   const internalLinks = article?.internalLinks ?? [];
   const answerFirst = article?.answerFirst;
@@ -274,14 +293,37 @@ export default async function BlogDetailPage({
         />
       ) : null}
       <EditorialContentLayout
-        badge={topicLabel ? `${verticalLabel} · ${topicLabel}` : verticalLabel}
-        title={title}
+        badge={topicLabel || verticalLabel}
+        overline={heroOverline}
+        title={heroTitle}
         description={excerpt || kicker}
         imageSrc={heroVisual.src}
         imageAlt={heroVisual.alt}
         variant="typographic"
+        sidebar={
+          sections.length > 2 ? (
+            <nav aria-label="Sommaire de l'article">
+              <p className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-brand-teal">
+                Sommaire
+              </p>
+              <ol className="mt-3 grid list-none gap-2 border-l border-brand-ink/10 p-0">
+                {sections.map((section) => (
+                  <li key={section.id} className="pl-4 text-sm leading-snug">
+                    <a
+                      href={`#${section.id}`}
+                      className="text-brand-stone transition hover:text-brand-teal"
+                    >
+                      <span className="font-mono text-[0.7rem] text-brand-teal">{section.num}</span>{" "}
+                      {section.label}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          ) : undefined
+        }
         meta={[
-          article?.author || "SKS TALENTS",
+          "SKS Talents",
           new Date(publishedAt).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }),
           article?.readTime ? `${article.readTime} min de lecture` : ""
         ].filter(Boolean)}
@@ -320,8 +362,8 @@ export default async function BlogDetailPage({
           ) : null}
           {sources.length ? (
             <div className="rounded-[24px] border border-brand-teal/10 bg-brand-mint/35 p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
-                Sources
+              <p className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-brand-teal">
+                Méthodologie et sources
               </p>
               <div className="mt-4 grid gap-3">
                 {sources.map((source) => (

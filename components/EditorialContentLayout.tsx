@@ -18,8 +18,12 @@ type HeroProps = {
    * deux fois. L'image reste utilisee comme visuel de partage social.
    */
   variant?: "image" | "typographic";
+  /** Surtitre affiche au-dessus du titre, sur sa propre ligne. */
+  overline?: string;
   /** Ligne de contexte sous le titre : auteur, date, temps de lecture. */
   meta?: string[];
+  /** Colonne laterale, utilisee par le blog pour le sommaire cliquable. */
+  sidebar?: ReactNode;
 };
 
 type LayoutProps = HeroProps & {
@@ -33,6 +37,7 @@ export function EditorialContentHero({
   imageSrc = DEFAULT_HERO_IMAGE,
   imageAlt = "Réunion stratégique autour d'un sujet RH, marché ou organisationnel",
   variant = "image",
+  overline,
   meta = []
 }: HeroProps) {
   if (variant === "typographic") {
@@ -40,6 +45,7 @@ export function EditorialContentHero({
       <section className={styles.typoHero}>
         <div className={styles.typoShell}>
           <p className={styles.typoBadge}>{badge}</p>
+          {overline ? <p className={styles.typoOverline}>{overline}</p> : null}
           <h1 className={styles.typoTitle}>{title}</h1>
           <hr className={styles.typoRule} />
           {description ? <p className={styles.typoStandfirst}>{description}</p> : null}
@@ -117,7 +123,9 @@ export default function EditorialContentLayout({
   imageSrc,
   imageAlt,
   variant,
+  overline,
   meta,
+  sidebar,
   children
 }: LayoutProps) {
   return (
@@ -129,11 +137,13 @@ export default function EditorialContentLayout({
         imageSrc={imageSrc}
         imageAlt={imageAlt}
         variant={variant}
+        overline={overline}
         meta={meta}
       />
       <section className={styles.bodyShell}>
-        <div className={styles.bodyInner}>
-          <article className={styles.article}>
+        <div className={sidebar ? styles.bodyWithAside : styles.bodyInner}>
+          {sidebar ? <aside className={styles.aside}>{sidebar}</aside> : null}
+          <article className={sidebar ? styles.articleFlat : styles.article}>
             <div className={styles.content}>{children}</div>
           </article>
         </div>

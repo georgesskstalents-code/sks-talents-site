@@ -86,6 +86,17 @@ type Block =
   | { kind: "steps"; items: string[] }
   | { kind: "rule" };
 
+/** Identifiant d'ancre stable, utilise par le sommaire cliquable. */
+export function headingId(text: string) {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 60);
+}
+
 const HEADING = /^(#{1,4})\s+(.*)$/;
 const BULLET = /^[-*]\s+(.*)$/;
 const NUMBERED = /^\d+\.\s+(.*)$/;
@@ -157,6 +168,7 @@ export function parseArticle(body: string): Block[] {
 
 export default function ArticleBody({ body, keyPrefix }: { body: string; keyPrefix: string }): ReactNode {
   const blocks = parseArticle(body);
+  let headingIndex = 0;
 
   return (
     <>
@@ -168,11 +180,22 @@ export default function ArticleBody({ body, keyPrefix }: { body: string; keyPref
         }
 
         if (block.kind === "heading") {
+          if (block.level === 2) {
+            headingIndex += 1;
+          }
+          const num = String(headingIndex).padStart(2, "0");
           return block.level === 2 ? (
             <h2
               key={key}
-              className="mb-4 mt-14 font-display text-[2rem] font-normal leading-tight text-brand-ink [text-wrap:balance]"
+              id={headingId(block.text)}
+              className="relative mb-4 mt-14 scroll-mt-24 pl-12 font-display text-[1.9rem] font-normal leading-tight text-brand-ink [text-wrap:balance]"
             >
+              <span
+                aria-hidden="true"
+                className="absolute left-0 top-[0.42em] font-mono text-[0.7rem] tracking-[0.14em] text-brand-teal"
+              >
+                {num}
+              </span>
               <Inline text={block.text} keyPrefix={key} />
             </h2>
           ) : (
@@ -184,8 +207,11 @@ export default function ArticleBody({ body, keyPrefix }: { body: string; keyPref
 
         if (block.kind === "quote") {
           return (
-            <div key={key} className="my-8 bg-brand-mint px-6 py-5 text-[0.99rem]">
-              <p>
+            <div key={key} className="my-8 bg-[#1d5457] px-7 py-6 text-[0.99rem]">
+              <p className="mb-2 font-mono text-[0.64rem] uppercase tracking-[0.2em] text-[#e8e2d4]">
+                À retenir
+              </p>
+              <p className="text-white/[0.93]">
                 <Inline text={block.text} keyPrefix={key} />
               </p>
             </div>
