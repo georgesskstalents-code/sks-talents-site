@@ -166,6 +166,19 @@ export default async function BlogDetailPage({
   const audienceLabel = article?.persona.join(", ") || "CEO, COO, CPO, DRH";
   const publishedAt = notionArticle?.publishDate || article?.date || new Date().toISOString().slice(0, 10);
   const articleUrl = `${siteUrl}/blog/${slug}`;
+
+  // Les titres sont ecrits "Sujet · phrase". Le sujet remonte en surtitre et la
+  // phrase devient le titre : le lecteur voit la thematique, puis l'accroche,
+  // au lieu d'un bloc unique qui se casse sur quatre lignes.
+  const titleParts = title.split(" · ");
+  const heroOverline = titleParts.length > 1 ? titleParts[0] : undefined;
+  const heroTitle =
+    titleParts.length > 1
+      ? (() => {
+          const rest = titleParts.slice(1).join(" · ");
+          return rest.charAt(0).toUpperCase() + rest.slice(1);
+        })()
+      : title;
   const paragraphs = body.split("\n\n").filter(Boolean);
   const internalLinks = article?.internalLinks ?? [];
   const answerFirst = article?.answerFirst;
@@ -274,8 +287,9 @@ export default async function BlogDetailPage({
         />
       ) : null}
       <EditorialContentLayout
-        badge={topicLabel ? `${verticalLabel} · ${topicLabel}` : verticalLabel}
-        title={title}
+        badge={topicLabel || verticalLabel}
+        overline={heroOverline}
+        title={heroTitle}
         description={excerpt || kicker}
         imageSrc={heroVisual.src}
         imageAlt={heroVisual.alt}

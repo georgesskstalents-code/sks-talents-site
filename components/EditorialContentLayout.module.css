@@ -253,15 +253,26 @@
   font-weight: 600;
 }
 .typoTitle {
-  max-width: 40rem;
-  margin: 20px 0 0;
+  /* Plus large que le chapo : le titre doit tenir en deux ou trois lignes,
+     comme sur la couverture, et non se casser en quatre lignes etroites. */
+  max-width: 52rem;
+  margin: 10px 0 0;
   font-family: var(--font-display), Georgia, serif;
   font-weight: 400;
-  font-size: clamp(2.4rem, 5.4vw, 3.9rem);
+  font-size: clamp(1.9rem, 3.6vw, 2.9rem);
   line-height: 1.06;
   letter-spacing: -0.015em;
   color: #1e2a2a;
   text-wrap: balance;
+}
+.typoOverline {
+  max-width: 52rem;
+  margin: 22px 0 0;
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  line-height: 1.2;
+  color: #41a0a4;
 }
 .typoRule {
   width: 56px;
