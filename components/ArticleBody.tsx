@@ -84,7 +84,81 @@ type Block =
   | { kind: "quote"; text: string }
   | { kind: "bullets"; items: string[] }
   | { kind: "steps"; items: string[] }
-  | { kind: "rule" };
+  | { kind: "rule" }
+  | { kind: "sources"; items: string[] }
+  | { kind: "timeline"; steps: Array<{ when: string; items: string[] }> }
+  | { kind: "metier"; label: string; name: string; body: Block[] };
+
+const SOURCES_HEADING = /^(m[ée]thodologie|sources)/i;
+const HORIZON_HEADING = /^(?:actions?\s+)?[àa]?\s*horizon\s+(.+)$/i;
+const METIER_HEADING = /^m[ée]tier\s+n[°o]\s*(\d+)\s*[·:-]\s*(.+)$/i;
+
+/** Une source ecrite "SIMV, Chiffres cles ..." se coupe en organisme et document. */
+export function splitSource(item: string) {
+  const m = item.match(/^([^,·:]{2,42})\s*[,·:]\s*(.+)$/);
+  if (!m) return { org: "", doc: item };
+  return { org: m[1].trim(), doc: m[2].trim() };
+}
+
+/**
+ * Regroupements de presentation. Ils ne changent jamais le texte : ils
+ * reconnaissent une structure deja ecrite par la redaction et lui donnent une
+ * forme. Si la structure n'est pas la, on retombe sur le rendu courant.
+ */
+function group(blocks: Block[]): Block[] {
+  const out: Block[] = [];
+  for (let i = 0; i < blocks.length; i++) {
+    const b = blocks[i];
+
+    // Sources : un titre "Sources" ou "Methodologie" suivi d'une liste.
+    if (b.kind === "heading" && SOURCES_HEADING.test(b.text)) {
+      const next = blocks[i + 1];
+      if (next && next.kind === "bullets") {
+        out.push({ kind: "sources", items: next.items });
+        i += 1;
+        continue;
+      }
+    }
+
+    // Plan d'action : suite de "A horizon X" suivis d'une liste numerotee.
+    if (b.kind === "heading" && b.level === 3 && HORIZON_HEADING.test(b.text)) {
+      const steps: Array<{ when: string; items: string[] }> = [];
+      let j = i;
+      while (j < blocks.length) {
+        const h = blocks[j];
+        const list = blocks[j + 1];
+        const m = h.kind === "heading" && h.level === 3 ? h.text.match(HORIZON_HEADING) : null;
+        if (!m || !list || (list.kind !== "steps" && list.kind !== "bullets")) break;
+        steps.push({ when: m[1].trim(), items: list.items });
+        j += 2;
+      }
+      if (steps.length >= 2) {
+        out.push({ kind: "timeline", steps });
+        i = j - 1;
+        continue;
+      }
+    }
+
+    // Metier : un titre "Metier n°X · Nom" et tout ce qui le suit jusqu'au titre suivant.
+    if (b.kind === "heading" && b.level === 2) {
+      const m = b.text.match(METIER_HEADING);
+      if (m) {
+        const body: Block[] = [];
+        let j = i + 1;
+        while (j < blocks.length && !(blocks[j].kind === "heading" && (blocks[j] as { level: number }).level === 2)) {
+          body.push(blocks[j]);
+          j += 1;
+        }
+        out.push({ kind: "metier", label: `Métier n°${m[1]}`, name: m[2].trim(), body });
+        i = j - 1;
+        continue;
+      }
+    }
+
+    out.push(b);
+  }
+  return out;
+}
 
 /** Identifiant d'ancre stable, utilise par le sommaire cliquable. */
 export function headingId(text: string) {
@@ -163,11 +237,14 @@ export function parseArticle(body: string): Block[] {
     paragraph.push(line);
   }
   flushAll();
-  return blocks;
+  return group(blocks);
 }
 
 export default function ArticleBody({ body, keyPrefix }: { body: string; keyPrefix: string }): ReactNode {
-  const blocks = parseArticle(body);
+  return <ArticleBlocks blocks={parseArticle(body)} keyPrefix={keyPrefix} />;
+}
+
+function ArticleBlocks({ blocks, keyPrefix }: { blocks: Block[]; keyPrefix: string }): ReactNode {
   let headingIndex = 0;
 
   return (
@@ -202,6 +279,90 @@ export default function ArticleBody({ body, keyPrefix }: { body: string; keyPref
             <h3 key={key} className="mb-3 mt-9 text-base font-semibold text-brand-ink">
               <Inline text={block.text} keyPrefix={key} />
             </h3>
+          );
+        }
+
+        if (block.kind === "sources") {
+          return (
+            <div key={key} className="my-10 bg-[#1d5457] px-7 py-6">
+              <p className="mb-4 font-mono text-[0.64rem] uppercase tracking-[0.2em] text-[#e8e2d4]">
+                Méthodologie et sources
+              </p>
+              <ul className="grid list-none gap-3 p-0">
+                {block.items.map((item, i) => {
+                  const { org, doc } = splitSource(item);
+                  return (
+                    <li
+                      key={`${key}-s${i}`}
+                      className="grid gap-x-4 gap-y-1 text-[0.9rem] sm:grid-cols-[8rem_1fr] sm:items-baseline"
+                    >
+                      <span className="font-mono text-[0.66rem] uppercase tracking-[0.12em] text-[#e8e2d4]">
+                        {org}
+                      </span>
+                      <span className="text-white/90">
+                        <Inline text={doc} keyPrefix={`${key}-s${i}`} />
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          );
+        }
+
+        if (block.kind === "timeline") {
+          return (
+            <div key={key} className="relative my-10 pl-9">
+              <span
+                aria-hidden="true"
+                className="absolute bottom-2 left-[0.55rem] top-2 w-px bg-brand-ink/10"
+              />
+              {block.steps.map((step, i) => (
+                <div key={`${key}-t${i}`} className="relative mb-8 last:mb-0">
+                  <span
+                    aria-hidden="true"
+                    className="absolute -left-[1.93rem] top-[0.45rem] h-3 w-3 rounded-full bg-[#1d5457] ring-4 ring-white"
+                  />
+                  <p className="font-mono text-[0.64rem] uppercase tracking-[0.16em] text-brand-teal">
+                    {step.when}
+                  </p>
+                  <ul className="mt-3 grid list-none gap-2 p-0">
+                    {step.items.map((item, j) => (
+                      <li key={`${key}-t${i}-i${j}`} className="relative pl-5 text-[0.95rem]">
+                        <span
+                          aria-hidden="true"
+                          className="absolute left-0 top-[0.7em] h-1.5 w-1.5 rounded-full bg-brand-teal"
+                        />
+                        <Inline text={item} keyPrefix={`${key}-t${i}-i${j}`} />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          );
+        }
+
+        if (block.kind === "metier") {
+          headingIndex += 1;
+          return (
+            <section
+              key={key}
+              id={headingId(block.name)}
+              className="my-12 scroll-mt-24 grid gap-6 md:grid-cols-[minmax(0,14rem)_1fr] md:gap-8"
+            >
+              <div className="flex flex-col justify-between bg-[#1d5457] px-6 py-6">
+                <p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#e8e2d4]">
+                  {block.label}
+                </p>
+                <h2 className="mt-4 font-display text-[1.7rem] font-normal leading-tight text-white">
+                  {block.name}
+                </h2>
+              </div>
+              <div className="min-w-0">
+                <ArticleBlocks blocks={block.body} keyPrefix={key} />
+              </div>
+            </section>
           );
         }
 
