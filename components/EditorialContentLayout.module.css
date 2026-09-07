@@ -227,3 +227,69 @@
     height: 7px;
   }
 }
+
+/* ---------------------------------------------------------------
+   Hero typographique (blog). Fond blanc, titre noir, teal en accent.
+   La couverture generee contient deja le titre : l'afficher ici le
+   repetait deux fois. Elle reste le visuel de partage social.
+   --------------------------------------------------------------- */
+.typoHero {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(30, 42, 42, 0.12);
+  padding: 72px 0 48px;
+}
+.typoShell {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.typoBadge {
+  max-width: 40rem;
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #41a0a4;
+  font-weight: 600;
+}
+.typoTitle {
+  max-width: 40rem;
+  margin: 20px 0 0;
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5.4vw, 3.9rem);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  color: #1e2a2a;
+  text-wrap: balance;
+}
+.typoRule {
+  width: 56px;
+  height: 3px;
+  background: #41a0a4;
+  border: 0;
+  margin: 32px 0 24px;
+}
+.typoStandfirst {
+  max-width: 40rem;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: #4f4e4a;
+}
+.typoMeta {
+  max-width: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(30, 42, 42, 0.12);
+  font-size: 0.82rem;
+  color: #4f4e4a;
+}
+
+@media (max-width: 640px) {
+  .typoHero { padding: 48px 0 32px; }
+  .typoRule { margin: 24px 0 20px; }
+}

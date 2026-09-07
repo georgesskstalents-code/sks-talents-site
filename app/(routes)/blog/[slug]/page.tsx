@@ -274,11 +274,17 @@ export default async function BlogDetailPage({
         />
       ) : null}
       <EditorialContentLayout
-        badge={verticalLabel}
+        badge={topicLabel ? `${verticalLabel} · ${topicLabel}` : verticalLabel}
         title={title}
         description={excerpt || kicker}
         imageSrc={heroVisual.src}
         imageAlt={heroVisual.alt}
+        variant="typographic"
+        meta={[
+          article?.author || "SKS TALENTS",
+          new Date(publishedAt).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }),
+          article?.readTime ? `${article.readTime} min de lecture` : ""
+        ].filter(Boolean)}
       >
         <div className="space-y-6 text-base leading-8 text-brand-stone">
           <div className="rounded-[22px] border border-brand-teal/12 bg-white/80 p-5">
