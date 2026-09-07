@@ -234,9 +234,10 @@
    repetait deux fois. Elle reste le visuel de partage social.
    --------------------------------------------------------------- */
 .typoHero {
-  background: #ffffff;
-  border-bottom: 1px solid rgba(30, 42, 42, 0.12);
-  padding: 72px 0 48px;
+  /* Fond teal profond, meme valeur que la couverture de partage : la page et
+     l'image publiee sur LinkedIn parlent la meme langue. */
+  background: #1d5457;
+  padding: 64px 0 48px;
 }
 .typoShell {
   max-width: 992px;
@@ -244,12 +245,12 @@
   padding: 0 24px;
 }
 .typoBadge {
-  max-width: 40rem;
+  max-width: 52rem;
   margin: 0;
   font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #41a0a4;
+  color: #e8e2d4;
   font-weight: 600;
 }
 .typoTitle {
@@ -260,9 +261,9 @@
   font-family: var(--font-display), Georgia, serif;
   font-weight: 400;
   font-size: clamp(1.9rem, 3.6vw, 2.9rem);
-  line-height: 1.06;
-  letter-spacing: -0.015em;
-  color: #1e2a2a;
+  line-height: 1.1;
+  letter-spacing: -0.012em;
+  color: #ffffff;
   text-wrap: balance;
 }
 .typoOverline {
@@ -272,21 +273,21 @@
   font-weight: 400;
   font-size: clamp(1.35rem, 2.2vw, 1.7rem);
   line-height: 1.2;
-  color: #41a0a4;
+  color: #e8e2d4;
 }
 .typoRule {
   width: 56px;
   height: 3px;
-  background: #41a0a4;
+  background: #e8e2d4;
   border: 0;
   margin: 32px 0 24px;
 }
 .typoStandfirst {
   max-width: 40rem;
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   line-height: 1.65;
-  color: #4f4e4a;
+  color: rgba(255, 255, 255, 0.85);
 }
 .typoMeta {
   max-width: 40rem;
@@ -295,12 +296,91 @@
   gap: 8px 20px;
   margin-top: 36px;
   padding-top: 20px;
-  border-top: 1px solid rgba(30, 42, 42, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
   font-size: 0.82rem;
-  color: #4f4e4a;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 @media (max-width: 640px) {
   .typoHero { padding: 48px 0 32px; }
   .typoRule { margin: 24px 0 20px; }
+}
+
+
+/* ---------------------------------------------------------------
+   Corps a deux colonnes : sommaire cliquable a gauche, article a
+   droite. Le sommaire suit le defilement sur grand ecran et passe
+   au-dessus du texte sur mobile.
+   --------------------------------------------------------------- */
+.bodyWithAside {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+.aside {
+  align-self: start;
+}
+@media (min-width: 900px) {
+  .bodyWithAside {
+    grid-template-columns: 13rem 1fr;
+    gap: 56px;
+  }
+  .aside {
+    position: sticky;
+    top: 24px;
+  }
+}
+
+
+/* ---------------------------------------------------------------
+   Article du blog : pas de carte, pas de double filet, pas de barre
+   decorative. Une page blanche et de la typographie, comme une
+   maquette d'agence. Tout est aligne sur une seule colonne de texte.
+   --------------------------------------------------------------- */
+.articleFlat {
+  position: relative;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  min-width: 0;
+}
+.articleFlat .content,
+.articleFlat > div {
+  max-width: 40rem;
+}
+
+/* Rien ne doit deborder : ni une URL collee, ni un mot compose long. */
+.articleFlat :where(p, li, h2, h3, blockquote) {
+  overflow-wrap: anywhere;
+}
+.articleFlat :where(table, pre) {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Rythme vertical constant : c'est ce qui fait la difference entre une
+   page propre et une page qui respire mal. */
+.articleFlat .content > :first-child {
+  margin-top: 0;
+}
+.articleFlat .content > :last-child {
+  margin-bottom: 0;
+}
+
+/* Le numero de section est en retrait suspendu sur grand ecran, et
+   repasse au-dessus du titre sur mobile pour ne jamais serrer le texte. */
+@media (max-width: 640px) {
+  .articleFlat h2 {
+    padding-left: 0 !important;
+  }
+  .articleFlat h2 > span[aria-hidden="true"] {
+    position: static !important;
+    display: block;
+    margin-bottom: 6px;
+  }
 }

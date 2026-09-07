@@ -22,6 +22,8 @@ type HeroProps = {
   overline?: string;
   /** Ligne de contexte sous le titre : auteur, date, temps de lecture. */
   meta?: string[];
+  /** Colonne laterale, utilisee par le blog pour le sommaire cliquable. */
+  sidebar?: ReactNode;
 };
 
 type LayoutProps = HeroProps & {
@@ -123,6 +125,7 @@ export default function EditorialContentLayout({
   variant,
   overline,
   meta,
+  sidebar,
   children
 }: LayoutProps) {
   return (
@@ -138,8 +141,9 @@ export default function EditorialContentLayout({
         meta={meta}
       />
       <section className={styles.bodyShell}>
-        <div className={styles.bodyInner}>
-          <article className={styles.article}>
+        <div className={sidebar ? styles.bodyWithAside : styles.bodyInner}>
+          {sidebar ? <aside className={styles.aside}>{sidebar}</aside> : null}
+          <article className={sidebar ? styles.articleFlat : styles.article}>
             <div className={styles.content}>{children}</div>
           </article>
         </div>
