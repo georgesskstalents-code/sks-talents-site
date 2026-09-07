@@ -3,6 +3,7 @@ import path from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
+import ArticleBody from "@/components/ArticleBody";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import EditorialContentLayout, { getEditorialHeroImage } from "@/components/EditorialContentLayout";
 import { articles, getArticleVerticalLabel } from "@/data/articles";
@@ -61,49 +62,6 @@ function buildHowToSchema(slug: string, title: string, paragraphs: string[], art
       text: s.text
     }))
   };
-}
-
-function renderInlineMarkdown(text: string, keyPrefix: string) {
-  const parts: Array<string | { href: string; label: string }> = [];
-  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)/g;
-  let lastIndex = 0;
-  let match: RegExpExecArray | null;
-  while ((match = pattern.exec(text)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push(text.slice(lastIndex, match.index));
-    }
-    parts.push({ label: match[1], href: match[2] });
-    lastIndex = match.index + match[0].length;
-  }
-  if (lastIndex < text.length) {
-    parts.push(text.slice(lastIndex));
-  }
-  if (parts.length === 1 && typeof parts[0] === "string") {
-    return text;
-  }
-  return parts.map((part, idx) =>
-    typeof part === "string" ? (
-      <span key={`${keyPrefix}-t-${idx}`}>{part}</span>
-    ) : part.href.startsWith("/") ? (
-      <Link
-        key={`${keyPrefix}-l-${idx}`}
-        href={part.href}
-        className="font-semibold text-brand-teal underline decoration-brand-teal/30 underline-offset-2 hover:decoration-brand-teal"
-      >
-        {part.label}
-      </Link>
-    ) : (
-      <a
-        key={`${keyPrefix}-l-${idx}`}
-        href={part.href}
-        target="_blank"
-        rel="noreferrer noopener"
-        className="font-semibold text-brand-teal underline decoration-brand-teal/30 underline-offset-2 hover:decoration-brand-teal"
-      >
-        {part.label}
-      </a>
-    )
-  );
 }
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || "https://www.skstalents.fr";
@@ -335,14 +293,7 @@ export default async function BlogDetailPage({
               <p className="text-base leading-8 text-brand-ink">{answerFirst}</p>
             </div>
           ) : null}
-          {paragraphs.map((paragraph, index) => (
-            <p
-              key={`${slug}-${index}`}
-              className={index === 0 ? "text-lg leading-9 text-brand-ink" : undefined}
-            >
-              {renderInlineMarkdown(paragraph, `${slug}-${index}`)}
-            </p>
-          ))}
+          <ArticleBody body={body} keyPrefix={slug} />
           {internalLinks.length ? (
             <div className="rounded-[24px] border border-brand-teal/10 bg-white/85 p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
