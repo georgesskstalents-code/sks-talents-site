@@ -25,6 +25,24 @@ function stripInternalMarkers(text: string) {
   return INTERNAL_MARKERS.reduce((acc, re) => acc.replace(re, ""), text).trim();
 }
 
+/** Le bloc affiche deja son etiquette : on retire celle ecrite dans le texte. */
+function stripRetenirPrefix(text: string) {
+  return text.replace(/^(?:\*\*)?\s*[ÀA]\s+retenir\s*(?:\*\*)?\s*[.:·-]?\s*(?:\*\*)?\s*/i, "").trim();
+}
+
+/**
+ * Un "A retenir" de plus de deux phrases se lit mal en pave. On le decoupe en
+ * puces sur les fins de phrase, sans toucher a un seul mot.
+ */
+function toBullets(text: string): string[] {
+  if (text.length < 260) return [text];
+  const parts = text
+    .split(/(?<=[.!?])\s+(?=[A-ZÀ-ÜÉÈÊ])/)
+    .map((t) => t.trim())
+    .filter(Boolean);
+  return parts.length >= 3 ? parts : [text];
+}
+
 type Segment = { type: "text" | "bold" | "italic"; value: string } | { type: "link"; label: string; href: string };
 
 /** Gras, italique et liens, dans cet ordre de priorite. */
@@ -223,7 +241,10 @@ export function parseArticle(body: string): Block[] {
 
     if (line.startsWith(">")) {
       flushAll();
-      blocks.push({ kind: "quote", text: stripInternalMarkers(line.replace(/^>\s?/, "")) });
+      blocks.push({
+        kind: "quote",
+        text: stripRetenirPrefix(stripInternalMarkers(line.replace(/^>\s?/, "")))
+      });
       continue;
     }
 
@@ -368,13 +389,33 @@ function ArticleBlocks({ blocks, keyPrefix }: { blocks: Block[]; keyPrefix: stri
 
         if (block.kind === "quote") {
           return (
-            <div key={key} className="my-8 bg-[#1d5457] px-7 py-6 text-[0.99rem]">
-              <p className="mb-2 font-mono text-[0.64rem] uppercase tracking-[0.2em] text-[#e8e2d4]">
+            <div key={key} className="my-8 bg-[#1d5457] px-7 py-6 text-[0.97rem]">
+              <p className="mb-3 font-mono text-[0.64rem] uppercase tracking-[0.2em] text-[#e8e2d4]">
                 À retenir
               </p>
-              <p className="text-white/[0.93]">
-                <Inline text={block.text} keyPrefix={key} />
-              </p>
+              {(() => {
+                const parts = toBullets(block.text);
+                if (parts.length === 1) {
+                  return (
+                    <p className="leading-relaxed text-white/[0.93]">
+                      <Inline text={parts[0]} keyPrefix={key} />
+                    </p>
+                  );
+                }
+                return (
+                  <ul className="grid list-none gap-2.5 p-0">
+                    {parts.map((part, i) => (
+                      <li key={`${key}-r${i}`} className="relative pl-5 leading-relaxed text-white/[0.93]">
+                        <span
+                          aria-hidden="true"
+                          className="absolute left-0 top-[0.66em] h-1.5 w-1.5 rounded-full bg-[#e8e2d4]"
+                        />
+                        <Inline text={part} keyPrefix={`${key}-r${i}`} />
+                      </li>
+                    ))}
+                  </ul>
+                );
+              })()}
             </div>
           );
         }
