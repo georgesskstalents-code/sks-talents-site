@@ -87,6 +87,7 @@ export const MANUAL_JOB_ROLE_ALIASES: Record<string, string> = {
   "rd-manager-petfood": "petfood-rd-director",
   "chief-marketing-officer-petfood": "head-of-marketing-petfood-premium",
   "chief-scientific-officer-animal-health": "head-of-rd-animal-health",
+  "data-scientist-petfood": "petfood-data-scientist",
 
   // Sante animale · commerce
   "key-account-manager-animal-health": "medical-vet-key-account-manager-large-accounts",
