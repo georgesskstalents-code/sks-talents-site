@@ -1,3 +1,5 @@
+import { proof } from "@/data/proof";
+
 export type SectorLandingPageKey = "life" | "animal";
 
 export type SectorLandingMetric = {
@@ -130,9 +132,9 @@ export type SectorLandingPage = {
 };
 
 const sharedMetrics: SectorLandingMetric[] = [
-  { value: "10 j", label: "1re shortlist qualifiée" },
+  { value: `${proof.firstShortlistDays} j ouvrés`, label: "1re shortlist qualifiée" },
   { value: "15j → 1M", label: "De l’intake à la signature (selon projet)" },
-  { value: "92%", label: "Missions satisfaites" },
+  { value: `${proof.retention5y}%`, label: "Rétention à 5 ans" },
   { value: "100+", label: "Placements / mandats" }
 ];
 
@@ -417,9 +419,9 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
         description: "Le process reste resserré, piloté et lisible pour protéger la décision jusqu’au closing."
       },
       {
-        value: "92%",
-        label: "Missions satisfaites",
-        description: "Le niveau d’exigence reste maintenu jusqu’au closing et à la prise de poste."
+        value: `${proof.retention5y}%`,
+        label: "Rétention à 5 ans",
+        description: "Le niveau d’exigence reste maintenu jusqu’au closing, et le placement se juge dans la durée."
       }
     ],
     faqTitle: "FAQ · Recrutement Life Sciences",
@@ -627,9 +629,9 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
         description: "Le process reste piloté pour ne pas laisser les urgences terrain absorber toute la qualité de décision."
       },
       {
-        value: "92%",
-        label: "Missions satisfaites",
-        description: "Le pilotage reste propre même quand le marché est localement très tendu."
+        value: `${proof.retention5y}%`,
+        label: "Rétention à 5 ans",
+        description: "Le pilotage reste propre même quand le marché est localement très tendu, et le placement se juge dans la durée."
       }
     ],
     faqTitle: "FAQ · Recrutement Santé Animale",

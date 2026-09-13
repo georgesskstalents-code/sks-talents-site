@@ -18,6 +18,7 @@ import PageHero from "@/components/PageHero";
 import ReferenceCardMarquee from "@/components/ReferenceCardMarquee";
 import SectionShell from "@/components/SectionShell";
 import TrustpilotWidget from "@/components/TrustpilotWidget";
+import { proofLabels } from "@/data/proof";
 import { Reference, references } from "@/data/references";
 import { getNotionSiteContentList, mapNotionEntryToReference } from "@/lib/notion";
 import FAQSection from "@/components/FAQSection";
@@ -113,7 +114,7 @@ export default async function ReferencesPage() {
       </section>
       <SectionShell
         eyebrow="Preuve externe"
-        title="4,6/5 sur Trustpilot, 17 avis vérifiés"
+        title={`${proofLabels.trustpilotSentence} vérifiés`}
         description="Les avis publics Trustpilot complètent nos références clients : la preuve sociale externe rassure avant la prise de contact."
       >
         <TrustpilotWidget />

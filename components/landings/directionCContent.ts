@@ -1,3 +1,5 @@
+import { proof } from "@/data/proof";
+
 // SKS Talents - content for /life-sciences and /animal-health
 // Texte VERBATIM depuis le bundle Direction C (Marketing Agency).
 // URLs internes converties en chemins relatifs pour le routing Next.js.
@@ -77,10 +79,10 @@ export const lifeSciencesContent: DirectionCSector = {
 
   metricsEyebrow: "Résultats observés",
   metrics: [
-    { value: "10 j", label: "1re shortlist qualifiée" },
+    { value: `${proof.firstShortlistDays} j ouvrés`, label: "1re shortlist qualifiée" },
     { value: "15j → 1M", label: "De l'intake à la signature (selon projet)" },
-    { value: "92%", label: "Missions satisfaites" },
-    { value: "100+", label: "Placements / mandats" }
+    { value: `${proof.retention5y}%`, label: "Rétention à 5 ans" },
+    { value: "100+", label: "Placements cadres" }
   ],
 
   logosEyebrow: "Ils nous ont fait confiance",
@@ -133,7 +135,7 @@ export const lifeSciencesContent: DirectionCSector = {
   differentiationEyebrow: "Différenciation",
   differentiationTitle: "Notre travail ne s'arrête pas à la signature.",
   differentiation: [
-    { label: "Rétention long terme", value: "75%", body: "Des candidats placés restent 5 ans ou plus. Le placement est jugé sur la durée, pas sur la signature." },
+    { label: "Rétention long terme", value: `${proof.retention5y}%`, body: "Des candidats placés restent 5 ans ou plus. Le placement est jugé sur la durée, pas sur la signature." },
     { label: "Suivi onboarding", value: "90 j", body: "Accompagnement structuré de la prise de poste : signaux faibles, calage avec le CODIR, alertes précoces." },
     { label: "Garantie de remplacement", value: "1", body: "Une garantie contractuelle si le candidat quitte le poste dans les 12 mois. Vous n'êtes jamais seul." }
   ],
@@ -156,9 +158,9 @@ export const lifeSciencesContent: DirectionCSector = {
     {
       eyebrow: "Voie A · 01",
       title: "Vous recrutez un C-level",
-      body: "CEO, COO, VP, DRH pour Life Sciences. 92% missions satisfaites.",
-      statValue: "92%",
-      statLabel: "missions satisfaites",
+      body: "CEO, COO, VP, DRH pour Life Sciences.",
+      statValue: "100+",
+      statLabel: "placements cadres",
       cta: { label: "Je réserve un call de 15 min", url: "https://calendly.com/g-kengue/talentconsulting" },
       icon: "target"
     },
@@ -195,10 +197,10 @@ export const animalHealthContent: DirectionCSector = {
 
   metricsEyebrow: "Résultats observés",
   metrics: [
-    { value: "10 j", label: "1re shortlist qualifiée" },
+    { value: `${proof.firstShortlistDays} j ouvrés`, label: "1re shortlist qualifiée" },
     { value: "15j → 1M", label: "De l'intake à la signature (selon projet)" },
-    { value: "92%", label: "Missions satisfaites" },
-    { value: "100+", label: "Placements / mandats" }
+    { value: `${proof.retention5y}%`, label: "Rétention à 5 ans" },
+    { value: "100+", label: "Placements cadres" }
   ],
 
   logosEyebrow: "Ils nous ont fait confiance",
@@ -251,7 +253,7 @@ export const animalHealthContent: DirectionCSector = {
   differentiationEyebrow: "Différenciation",
   differentiationTitle: "Notre travail ne s'arrête pas à la signature.",
   differentiation: [
-    { label: "Rétention long terme", value: "75%", body: "Des candidats placés restent 5 ans ou plus. Le placement est jugé sur la durée, pas sur la signature." },
+    { label: "Rétention long terme", value: `${proof.retention5y}%`, body: "Des candidats placés restent 5 ans ou plus. Le placement est jugé sur la durée, pas sur la signature." },
     { label: "Suivi onboarding", value: "90 j", body: "Accompagnement structuré de la prise de poste : signaux faibles, calage avec le CODIR, alertes précoces." },
     { label: "Garantie de remplacement", value: "1", body: "Une garantie contractuelle si le candidat quitte le poste dans les 12 mois. Vous n'êtes jamais seul." }
   ],
@@ -274,9 +276,9 @@ export const animalHealthContent: DirectionCSector = {
     {
       eyebrow: "Voie A · 01",
       title: "Vous recrutez un C-level",
-      body: "CEO, COO, DG pour Animal Health. 92% missions satisfaites.",
-      statValue: "92%",
-      statLabel: "missions satisfaites",
+      body: "CEO, COO, DG pour Animal Health.",
+      statValue: "100+",
+      statLabel: "placements cadres",
       cta: { label: "Je réserve un call de 15 min", url: "https://calendly.com/g-kengue/talentconsulting" },
       icon: "target"
     },

@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Executive search + digitalisation RH par l'IA - Life Sciences depuis 2018 - A propos",
+  title: "À propos de SKS Talents",
   description:
-    "8 ans d'expertise Life Sciences et Animal Health, 100+ placements executes, 4,5/5 Trustpilot. Executive search + digitalisation RH par l'IA. Commission RH France Biotech. Dedie biotech, diagnostic, medtech, veterinaire, petfood.",
+    `Cabinet executive search Life Sciences et santé animale : ${proofLabels.experience}, ${proof.placementsLabel}, ${proofLabels.trustpilotWithCount} Trustpilot. Commission RH France Biotech.`,
   alternates: { canonical: "/about" },
   openGraph: {
     title: "SKS Talents : cabinet executive search Life Sciences et Animal Health",
     description:
-      "8 ans, 100+ placements, 4,5/5 Trustpilot. Dedie biotech, diagnostic, medtech, veterinaire, petfood premium.",
+      `${proofLabels.experience}, ${proof.placementsLabel}, ${proofLabels.trustpilot}. Biotech, diagnostic, medtech, vétérinaire et petfood premium.`,
     url: "https://www.skstalents.fr/about",
     type: "website"
   }
@@ -18,6 +18,7 @@ import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
 import CalendlyButton from "@/components/CalendlyButton";
 import TrustpilotWidget from "@/components/TrustpilotWidget";
+import { proof, proofLabels } from "@/data/proof";
 import FAQSection from "@/components/FAQSection";
 import { faqsByPage } from "@/data/faqsByPage";
 
@@ -40,7 +41,7 @@ const values = [
   {
     title: "Tenue dans le temps",
     body:
-      "75 % des recrutements 2019 sont toujours en poste 6 ans plus tard. La vraie réussite se mesure dans la durée."
+      `${proof.retention5y} % des candidats placés sont toujours en poste 5 ans plus tard. La vraie réussite se mesure dans la durée.`
   }
 ];
 
@@ -49,7 +50,7 @@ export default function AboutPage() {
     <>
       <PageHero
         kicker="Qui sommes-nous"
-        title="Plus de 10 ans au service des marchés scientifiques et animal health."
+        title={`${proof.experienceYears} ans au service des marchés scientifiques et de la santé animale.`}
         description="SKS TALENTS aide les entreprises à recruter des leaders et à structurer des organisations RH solides sur des environnements où la crédibilité marché compte autant que l’exécution."
       />
       <div id="histoire" style={{ scrollMarginTop: "100px" }}>
@@ -105,7 +106,7 @@ export default function AboutPage() {
       </div>
       <SectionShell
         eyebrow="Preuve externe"
-        title="La confiance mesurée : 4,6/5 sur Trustpilot, 17 avis"
+        title={`La confiance mesurée : ${proofLabels.trustpilotSentence}`}
         description="Nos clients partagent leur expérience de collaboration sur la plateforme d'avis publique Trustpilot. Preuve indépendante que nous ne contrôlons pas."
       >
         <TrustpilotWidget />

@@ -1,9 +1,10 @@
 import CalendlyButton from "@/components/CalendlyButton";
 import HeroBackgroundVideo from "@/components/HeroBackgroundVideo";
+import { proof, proofLabels } from "@/data/proof";
 
 const heroStats = [
   ["100+", "placements"],
-  ["10 j", "1re shortlist"],
+  [`${proof.firstShortlistDays} j ouvrés`, "1re shortlist"],
   ["seed → scale-up", "exec search"]
 ];
 

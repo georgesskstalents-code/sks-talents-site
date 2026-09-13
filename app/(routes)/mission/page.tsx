@@ -2,6 +2,7 @@ import CalendlyButton from "@/components/CalendlyButton";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
+import { proof, proofLabels } from "@/data/proof";
 
 export default function MissionPage() {
   return (
@@ -69,8 +70,8 @@ export default function MissionPage() {
             <div className="grid gap-4 sm:grid-cols-3">
               {[
                 ["100+", "placements"],
-                ["10 jours", "1re shortlist"],
-                ["4.5/5", "Trustpilot"]
+                [proof.firstShortlistLabel, "1re shortlist"],
+                [proofLabels.trustpilotRatingSlash, "Trustpilot"]
               ].map(([value, label]) => (
                 <div key={label} className="rounded-[24px] border border-brand-teal/10 bg-brand-mint/35 p-5">
                   <p className="font-display text-4xl text-brand-teal">{value}</p>

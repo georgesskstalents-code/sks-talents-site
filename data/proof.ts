@@ -44,6 +44,7 @@ export const proof = {
 export const proofLabels = {
   experience: `${proof.experienceYears} ans d'expertise`,
   trustpilot: `${proof.trustpilotRatingLabel}/5 Trustpilot`,
+  trustpilotRatingSlash: `${proof.trustpilotRatingLabel}/5`,
   trustpilotWithCount: `${proof.trustpilotRatingLabel}/5 sur ${proof.trustpilotCount} avis`,
   trustpilotSentence: `${proof.trustpilotRatingLabel}/5 sur Trustpilot, ${proof.trustpilotCount} avis`
 } as const;

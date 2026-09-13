@@ -3,15 +3,16 @@ import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import type { SeoGrowthPage } from "@/data/seoGrowthPages";
 import Link from "next/link";
+import { proof } from "@/data/proof";
 
 type Props = {
   page: SeoGrowthPage;
 };
 
 const proofItems = [
-  { value: "10 j", label: "1re shortlist qualifiée" },
+  { value: `${proof.firstShortlistDays} j ouvrés`, label: "1re shortlist qualifiée" },
   { value: "15j → 1M", label: "De l’intake à la signature (selon projet)" },
-  { value: "92%", label: "Missions satisfaites" },
+  { value: `${proof.retention5y}%`, label: "Rétention à 5 ans" },
   { value: "100+", label: "Placements / mandats" }
 ];
 

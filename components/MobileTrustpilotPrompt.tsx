@@ -3,6 +3,7 @@
 import { Star, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useCookieConsent } from "@/lib/useCookieConsent";
+import { proof, proofLabels } from "@/data/proof";
 
 const SHOWS_KEY = "sks-trustpilot-shows-count";
 const DISMISSED_AT_KEY = "sks-trustpilot-dismissed-at";
@@ -115,7 +116,7 @@ export default function MobileTrustpilotPrompt() {
           <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-stone/80">
             Avis SKS Talents
           </span>
-          <span className="text-sm font-semibold text-brand-ink">4,5/5 sur Trustpilot</span>
+          <span className="text-sm font-semibold text-brand-ink">{proofLabels.trustpilotRatingSlash} sur Trustpilot</span>
         </span>
         <button
           type="button"

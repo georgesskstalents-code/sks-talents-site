@@ -329,7 +329,7 @@ function Testimonial() {
               Ce que nos clients et candidats <span className="c-italic">disent de nous.</span>
             </h2>
             <p className="c-section-lede">
-              Témoignages réels de candidats placés et de dirigeants accompagnés depuis 2018.
+              Témoignages réels de candidats placés et de dirigeants accompagnés.
             </p>
           </div>
           <a
