@@ -84,13 +84,16 @@ export default async function LatestInsights() {
             ) : null}
             <div className="mt-auto flex items-center justify-between pt-6">
               {insight.date ? (
-                <p className="text-xs text-brand-stone/80">
+                <time
+                  className="block text-xs text-brand-stone/80"
+                  dateTime={new Date(insight.date).toISOString().slice(0, 10)}
+                >
                   {new Date(insight.date).toLocaleDateString("fr-FR", {
                     day: "2-digit",
                     month: "long",
                     year: "numeric"
                   })}
-                </p>
+                </time>
               ) : <span />}
               <span className="inline-flex items-center gap-1 text-sm font-semibold text-brand-teal transition group-hover:gap-2">
                 Lire <ArrowUpRight size={14} />
