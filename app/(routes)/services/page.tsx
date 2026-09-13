@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { orgRef, pageGraph } from "@/lib/seo";
 import FounderCard from "@/components/FounderCard";
 import MethodNarrative from "@/components/MethodNarrative";
 import PageHero from "@/components/PageHero";
@@ -26,18 +27,12 @@ export const metadata: Metadata = {
   }
 };
 
-const serviceJsonLd = {
-  "@context": "https://schema.org",
+const serviceNode = {
   "@type": "Service",
   "@id": `${CANONICAL}#service`,
   name: "Executive Search + Digitalisation RH par l'IA - Life Sciences",
   serviceType: "Executive Search + Digitalisation RH par l'IA",
-  provider: {
-    "@type": "Organization",
-    "@id": "https://www.skstalents.fr/#organization",
-    name: "SKS TALENTS",
-    url: "https://www.skstalents.fr"
-  },
+  provider: orgRef,
   areaServed: [
     { "@type": "Country", name: "France" },
     { "@type": "Country", name: "Europe" }
@@ -46,8 +41,7 @@ const serviceJsonLd = {
   url: CANONICAL
 };
 
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
+const breadcrumbJsonLdNode = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Accueil", item: "https://www.skstalents.fr" },
@@ -58,8 +52,13 @@ const breadcrumbJsonLd = {
 export default function ServicesPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script
+        id="services-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageGraph([breadcrumbJsonLdNode, serviceNode]))
+        }}
+      />
 
       {/* 1. Hero */}
       <PageHero

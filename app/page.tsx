@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CalendarClock, FlaskConical, PawPrint, Star, Target, TrendingUp } from "lucide-react";
 import FAQHomeSimple from "@/components/FAQHomeSimple";
-import { getFaqHomeSimpleJsonLd } from "@/data/faqHomeSimpleContent";
+import { FAQ_HOME_SIMPLE_ITEMS } from "@/data/faqHomeSimpleContent";
+import { faqNode, orgRef, pageGraph } from "@/lib/seo";
 import Hero from "@/components/Hero";
 import PersonaPortalsGrid, { type PersonaPortal } from "@/components/PersonaPortalsGrid";
 import RevealOnScroll from "@/components/RevealOnScroll";
@@ -113,11 +114,9 @@ const personaPortals: PersonaPortal[] = [
 ];
 
 export default function HomePage() {
-  const faqJsonLd = getFaqHomeSimpleJsonLd();
 
   const HOME_VIMEO_ID = process.env.NEXT_PUBLIC_VIMEO_VIDEO_ID ?? process.env.VIMEO_VIDEO_ID ?? "851364422";
-  const homeVideoJsonLd = {
-    "@context": "https://schema.org",
+  const homeVideoNode = {
     "@type": "VideoObject",
     name: "SKS Talents - Executive search Life Sciences et Animal Health",
     description:
@@ -128,27 +127,17 @@ export default function HomePage() {
     contentUrl: `https://player.vimeo.com/video/${HOME_VIMEO_ID}`,
     embedUrl: `https://player.vimeo.com/video/${HOME_VIMEO_ID}`,
     url: "https://www.skstalents.fr/",
-    publisher: {
-      "@type": "Organization",
-      name: "SKS TALENTS",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.skstalents.fr/brand/logo-sks-talents.svg"
-      }
-    }
+    publisher: orgRef
   };
 
   return (
     <>
       <script
-        id="home-faq-jsonld"
+        id="home-jsonld"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <script
-        id="home-video-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeVideoJsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageGraph([faqNode(FAQ_HOME_SIMPLE_ITEMS), homeVideoNode]))
+        }}
       />
       <SmoothScrollProvider />
 

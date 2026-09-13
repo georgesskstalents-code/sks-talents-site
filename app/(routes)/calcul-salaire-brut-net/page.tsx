@@ -42,46 +42,11 @@ export default function SalaryCalculatorPage() {
       "Simulateur pour convertir un salaire brut en net et estimer un coût employeur avec une logique France plus detaillee."
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Quelle difference entre salaire net et net imposable ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Le net imposable reintegre notamment la part non deductible de CSG-CRDS. Il sert de base au calcul du prelevement a la source et peut donc etre superieur au net verse."
-        }
-      },
-      {
-        "@type": "Question",
-        name: "Comment est estime le coût employeur ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Le coût employeur additionne le brut et les charges patronales estimees. Il varie selon le statut, l'effectif, le taux accidents du travail et d'eventuels alleegements."
-        }
-      },
-      {
-        "@type": "Question",
-        name: "Le resultat est-il identique a une fiche de paie ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Non. Le simulateur donne une estimation structuree et credible, mais une fiche de paie reelle depend de la convention collective, de l'entreprise, des exonérations et de la situation individuelle."
-        }
-      }
-    ]
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <PageHero
         kicker="Simulateur salaire"

@@ -1,0 +1,38 @@
+{
+  "type": "Prerender",
+  "expiration": false,
+  "sourcePath": "/investment-funds/[slug]",
+  "group": 90,
+  "bypassToken": "c3f898f15360f1366e29d02aa1aa0e99",
+  "experimentalBypassFor": [
+    {
+      "type": "header",
+      "key": "next-action"
+    },
+    {
+      "type": "header",
+      "key": "content-type",
+      "value": "multipart/form-data;.*"
+    }
+  ],
+  "fallback": {
+    "type": "FileFsRef",
+    "mode": 33188,
+    "fsPath": "seventure-partners.prerender-fallback.html"
+  },
+  "initialHeaders": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(routes)/layout,_N_T_/(routes)/investment-funds/layout,_N_T_/(routes)/investment-funds/[slug]/layout,_N_T_/(routes)/investment-funds/[slug]/page,_N_T_/investment-funds/seventure-partners",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+  },
+  "allowQuery": [],
+  "allowHeader": [
+    "host",
+    "x-matched-path",
+    "x-prerender-revalidate",
+    "x-prerender-revalidate-if-generated",
+    "x-next-revalidated-tags",
+    "x-next-revalidate-tag-token"
+  ]
+}

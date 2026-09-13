@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+Host: https://www.skstalents.fr
+Sitemap: https://www.skstalents.fr/sitemap.xml

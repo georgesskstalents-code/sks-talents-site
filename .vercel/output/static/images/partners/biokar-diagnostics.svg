@@ -1,0 +1,8 @@
+<svg width="320" height="140" viewBox="0 0 320 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="140" rx="24" fill="white"/>
+  <path d="M33 48C58 18 115 16 152 34" stroke="#18A34A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M55 72C81 58 119 56 153 62" stroke="#18A34A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M53 97C84 114 118 112 155 104" stroke="#18A34A" stroke-width="8" stroke-linecap="round"/>
+  <text x="92" y="84" fill="#9CA3AF" font-family="Arial, Helvetica, sans-serif" font-size="58" letter-spacing="10">Biokar</text>
+  <text x="181" y="111" fill="#6B7280" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">diagnostics</text>
+</svg>
