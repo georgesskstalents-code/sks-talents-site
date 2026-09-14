@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { fileLastmod, notInFuture } from "@/lib/sitemapLastmod";
+import { jobRoleIndexing } from "@/lib/jobRoleIndexing";
 import { articles } from "@/data/articles";
 import { jobRoles } from "@/data/jobRoles";
 import { references } from "@/data/references";
@@ -39,13 +40,15 @@ function hasSubstantialArticle(a: typeof articles[number]): boolean {
   return Boolean(a.slug) && a.content.length > 500 && a.excerpt.length > 80;
 }
 
+const jobRoleSlugs = new Set(jobRoles.map((r) => r.slug));
+
 function hasSubstantialJobRole(r: typeof jobRoles[number]): boolean {
-  return (
-    Boolean(r.slug) &&
-    r.missions.length >= 2 &&
-    r.skills.length >= 3 &&
-    r.successFactors.length >= 1
-  );
+  if (!r.slug || r.missions.length < 2 || r.skills.length < 3 || r.successFactors.length < 1) {
+    return false;
+  }
+  // Les fiches en noindex et celles canonicalisees vers une autre URL n'ont
+  // rien a faire dans le sitemap : on n'annonce que les URLs a indexer.
+  return jobRoleIndexing(r.slug, (slug) => jobRoleSlugs.has(slug)).mode === "index";
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
