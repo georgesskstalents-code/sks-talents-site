@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { stripBrandSuffix } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import SeoGrowthLandingPage from "@/components/SeoGrowthLandingPage";
 import { getSeoGrowthPage, seoGrowthPages } from "@/data/seoGrowthPages";
@@ -24,14 +25,14 @@ export async function generateMetadata({
   const url = `https://www.skstalents.fr/${page.slug}`;
 
   return {
-    title: `${page.metaTitle} | SKS TALENTS`,
+    title: stripBrandSuffix(page.metaTitle),
     description: page.metaDescription,
     keywords: [page.primaryKeyword, ...page.secondaryKeywords, ...page.clusterItems],
     alternates: {
       canonical: url
     },
     openGraph: {
-      title: page.metaTitle,
+      title: stripBrandSuffix(page.metaTitle),
       description: page.metaDescription,
       url,
       siteName: "SKS TALENTS",
@@ -40,7 +41,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: page.metaTitle,
+      title: stripBrandSuffix(page.metaTitle),
       description: page.metaDescription
     }
   };

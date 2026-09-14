@@ -252,3 +252,19 @@ export function faqNode(faqs: ReadonlyArray<{ question: string; answer: string }
  */
 export const organizationSchema = { "@context": "https://schema.org", ...organizationNode };
 export const websiteSchema = { "@context": "https://schema.org", ...websiteNode };
+
+/**
+ * Le layout racine applique le template `%s | SKS TALENTS` a chaque title de
+ * page. Les titres ecrits en base contenaient deja ce suffixe, ce qui
+ * produisait `... | SKS TALENTS | SKS TALENTS | SKS TALENTS` dans le SERP :
+ * titre tronque, illisible, et zero clic sur des pages pourtant bien placees.
+ *
+ * Cette fonction retire tout suffixe de marque deja present pour que le
+ * template soit la seule source du suffixe.
+ */
+export function stripBrandSuffix(title: string): string {
+  return title
+    .replace(/\s*[|\u00b7\-]\s*SKS(\s+TALENTS)?\s*$/i, "")
+    .replace(/\s*[|\u00b7\-]\s*SKS(\s+TALENTS)?\s*$/i, "")
+    .trim();
+}

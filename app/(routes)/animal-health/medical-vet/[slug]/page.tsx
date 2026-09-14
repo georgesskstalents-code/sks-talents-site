@@ -1,9 +1,30 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import { animalHealthHub, getSectorPage } from "@/data/sectors";
 
 const categorySlug = "medical-vet";
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const page = getSectorPage("animal-health", categorySlug, slug);
+  if (!page) return {};
+  const url = `https://www.skstalents.fr/animal-health/medical-vet/${slug}`;
+  const title = `${page.title} : recrutement santé animale`;
+  const description = page.summary.slice(0, 155);
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, siteName: "SKS TALENTS" }
+  };
+}
+
 
 export function generateStaticParams() {
   return ["pharma-vaccins", "biotech-animal"].map((slug) => ({ slug }));

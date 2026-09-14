@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import ExternalLinkGrid from "@/components/ExternalLinkGrid";
 import PageHero from "@/components/PageHero";
 import ResourceLogo from "@/components/ResourceLogo";
 import { ResourceItem, schools } from "@/data/resources";
 import { getNotionSiteContentList, mapNotionEntryToResourceItem } from "@/lib/notion";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Écoles et formations Life Sciences et vétérinaires",
+  description:
+    "Les écoles et masters qui alimentent les recrutements en biotech, diagnostic, medtech, vétérinaire et petfood, avec les débouchés associés.",
+  alternates: { canonical: "https://www.skstalents.fr/schools" }
+};
 
 export const dynamic = "force-dynamic";
 

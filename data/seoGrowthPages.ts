@@ -309,7 +309,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     metaTitle: "Cabinet de recrutement Life Sciences Paris | SKS TALENTS",
     metaDescription:
-      "Cabinet de recrutement Life Sciences à Paris pour biotech, diagnostic, healthtech et e-santé. Executive search, RPO et structuration RH pour dirigeants et scale-ups."
+      "Cabinet de recrutement Life Sciences à Paris : biotech, diagnostic, healthtech, e-santé. Executive search, RPO et structuration RH pour scale-ups."
   },
   {
     slug: "cabinet-recrutement-sante-animale-paris",
@@ -380,7 +380,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     metaTitle: "Cabinet de recrutement Santé animale Paris | SKS TALENTS",
     metaDescription:
-      "Cabinet de recrutement santé animale à Paris pour groupes vétérinaires, petfood, nutrition animale et fonctions corporate. Executive search, RPO et structuration RH."
+      "Cabinet de recrutement santé animale à Paris : groupements vétérinaires, petfood, nutrition animale. Executive search, RPO et structuration RH."
   },
   {
     slug: "cabinet-recrutement-e-sante-france",
@@ -520,7 +520,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     metaTitle: "Cabinet de recrutement Petfood France | SKS TALENTS",
     metaDescription:
-      "Cabinet de recrutement petfood en France pour nutrition animale, innovation produit, opérations, qualité et leadership. Executive search, RPO et structuration RH."
+      "Cabinet de recrutement petfood en France : nutrition animale, innovation produit, opérations et direction. Executive search et RPO."
   },
   {
     slug: "recrutement-nutrition-animale-france",
@@ -589,7 +589,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     metaTitle: "Recrutement nutrition animale France | SKS TALENTS",
     metaDescription:
-      "Recrutement nutrition animale en France pour petfood, innovation produit, qualité, business et leadership. SKS TALENTS accompagne les marchés animaux à forte technicité."
+      "Recrutement nutrition animale et petfood en France : innovation produit, qualité, opérations et direction. Marchés animaux à forte technicité."
   },
   {
     slug: "recrutement-apres-levee-de-fonds",
@@ -1443,7 +1443,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     metaTitle: "Recruter un DRH santé | SKS TALENTS",
     metaDescription:
-      "Comment recruter un DRH santé ou Head of People. Structuration RH, scale-up, automatisation des process et executive search pour biotech, healthtech et animal health."
+      "Recruter un DRH santé ou Head of People : structuration RH, scale-up et executive search pour biotech, healthtech et santé animale."
   },
   {
     slug: "chasse-de-tete-dirigeants-sante",
@@ -1626,7 +1626,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     metaTitle: "RPO recrutement Life Sciences | SKS TALENTS",
     metaDescription:
-      "RPO recrutement Life Sciences : externaliser une capacité de recrutement pour biotech, diagnostic, healthtech et animal health sans perdre l’exigence sectorielle."
+      "RPO Life Sciences : externaliser votre capacité de recrutement en biotech, diagnostic et santé animale, sans perdre l’exigence sectorielle."
   },
   {
     slug: "externalisation-recrutement-sante",
@@ -1809,7 +1809,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     metaTitle: "Recrutement profils rares santé | SKS TALENTS",
     metaDescription:
-      "Recrutement de profils rares en santé : executive search, lecture marché, shortlist décidable et approche directe pour biotech, diagnostic, healthtech et animal health."
+      "Recrutement de profils rares en santé : approche directe, lecture marché et shortlist décidable pour biotech, diagnostic et santé animale."
   },
   {
     slug: "structuration-rh-startup-sante",
@@ -1978,7 +1978,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     metaTitle: "Automatisation des processus RH santé | SKS TALENTS",
     metaDescription:
-      "Automatisation des processus RH en santé, biotech et healthtech : recrutement, onboarding, suivi pipeline et People Ops pour gagner du temps sans perdre la qualité."
+      "Automatiser vos process RH en santé et biotech : recrutement, onboarding et suivi pipeline, pour gagner du temps sans perdre en qualité."
   },
   {
     slug: "bpifrance-biotech-medtech",
@@ -2326,7 +2326,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
     ],
     metaTitle: "Angels Santé | business angels santé et hiring | SKS TALENTS",
     metaDescription:
-      "Angels Santé : lecture claire du réseau de business angels santé, de l’amorçage biotech / medtech / e-santé et des implications recrutement vues par SKS TALENTS."
+      "Angels Santé : le réseau de business angels santé, l’amorçage biotech, medtech et e-santé, et ce que cela implique côté recrutement."
   },
   {
     slug: "seventure-partners-life-sciences",

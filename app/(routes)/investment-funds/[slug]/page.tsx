@@ -1,8 +1,33 @@
+import type { Metadata } from "next";
+import { stripBrandSuffix } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
 import { getInvestmentFund, investmentFunds } from "@/data/investmentFunds";
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const fund = getInvestmentFund(slug);
+  if (!fund) return {};
+  const url = `https://www.skstalents.fr/investment-funds/${slug}`;
+  // Le champ seo existait dans data/investmentFunds.ts mais n'etait jamais lu :
+  // les 6 fiches fonds sortaient avec le titre generique du site.
+  const title = stripBrandSuffix(fund.seo.title);
+  const description = fund.seo.description.slice(0, 155);
+  return {
+    title,
+    description,
+    keywords: fund.seo.keywords,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, siteName: "SKS TALENTS" }
+  };
+}
+
 
 export function generateStaticParams() {
   return investmentFunds.map((fund) => ({ slug: fund.slug }));

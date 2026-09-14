@@ -7423,7 +7423,362 @@ const withDefaultRoleMetadata = (role: JobRole): JobRole => {
   };
 };
 
+/**
+ * Fiches sante animale reellement differenciees.
+ *
+ * Ces six fiches etaient generees par la matrice secteur x metier : leur
+ * contenu etait identique a celui de la biotech, seul le nom du secteur
+ * changeait. Or l'export Search Console du 12/06 au 11/09/2026 montre que ce
+ * sont precisement celles qui recoivent deja des clics, jusqu'a 40 % de CTR en
+ * position 4,8. Elles sont donc reecrites avec la realite du terrain sante
+ * animale, et placees avant `coreRoles` pour surcharger la version generee.
+ *
+ * Les fourchettes de remuneration reprennent celles deja publiees sur les
+ * fiches generees correspondantes. Aucun nouveau chiffre n'est introduit.
+ */
+const differentiatedAnimalHealthRoles: JobRole[] = [
+  {
+    slug: "veterinary-drh",
+    title: "DRH Groupement Veterinaire",
+    seoTitle: "DRH groupement vétérinaire : salaire, missions, multisite",
+    seoDescription:
+      "Fiche métier DRH en groupement vétérinaire : pilotage multisite, rétention des ASV, convention collective, intégration post-acquisition. Salaire et parcours.",
+    publishDate: "2026-09-14",
+    salary: "Base 60kEUR - 99kEUR + 6kEUR - 25kEUR de variable / complement",
+    salarySource:
+      "Repere indicatif aligne sur la fiche DRH generee et sur la fiche HR Business Partner Veterinary publiees sur ce site. A calibrer selon le nombre de sites pilotes et la taille des effectifs.",
+    sector: "Veterinary",
+    category: "Ressources humaines",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Structure la fonction RH d'un groupement de cliniques : plusieurs sites, des conventions et des pratiques heritees de chaque rachat, et une tension permanente sur les auxiliaires specialise.e.s veterinaires. Le poste n'a presque rien de commun avec un.e DRH de siege.",
+    skills: [
+      "Pilotage RH multisite",
+      "Convention collective des cabinets et cliniques veterinaires",
+      "Retention et fidelisation des ASV",
+      "Integration RH post-acquisition",
+      "Dialogue avec des associe.e.s praticien.ne.s"
+    ],
+    successFactors: [
+      "Tenir un cadre RH commun sans effacer l'identite de chaque clinique rachetee.",
+      "Etre credible face a des veterinaires associe.e.s qui jugent d'abord la comprehension du metier de soin.",
+      "Traiter le turnover des ASV comme un indicateur de direction, pas comme un sujet administratif."
+    ],
+    path: [
+      "HR Business Partner multisite",
+      "DRH groupement veterinaire",
+      "Directeur.rice des ressources humaines groupe"
+    ],
+    missions: [
+      "Harmoniser contrats, grilles et plannings heritees des cliniques rachetees, sans declencher de depart en cascade.",
+      "Construire une politique de retention des auxiliaires specialise.e.s veterinaires, premier poste de fragilite operationnelle d'une clinique.",
+      "Piloter le volet RH des acquisitions : cartographie sociale avant signature, entretiens des personnes cles, plan des 90 premiers jours.",
+      "Outiller la fonction RH sur plusieurs sites : dossiers centralises, reporting social consolide, process de recrutement commun.",
+      "Accompagner les directeur.rice.s de site sur le management, souvent des praticien.ne.s sans formation d'encadrement."
+    ],
+    studies: [
+      "Master ressources humaines",
+      "Ecole de commerce specialisation RH",
+      "Master droit social"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "IGS Paris", "Institut Agro Rennes-Angers"],
+    relatedIndustries: [
+      "Veterinary",
+      "Groupes de cliniques",
+      "Diagnostic vet",
+      "Telemedecine vet"
+    ],
+    sources: [
+      { name: "Aon - Benchmarks de remuneration", url: "https://www.aon.com/" },
+      { name: "France Biotech - Panorama France HealthTech", url: "https://france-biotech.fr/" }
+    ]
+  },
+  {
+    slug: "medical-vet-business-unit-director",
+    title: "Directeur Business Unit Sante Animale",
+    seoTitle: "Directeur Business Unit santé animale : salaire, missions",
+    seoDescription:
+      "Fiche métier Directeur.rice de Business Unit en santé animale : P&L, gamme pharma vétérinaire, réseau distributeurs et prescription. Salaire et parcours.",
+    publishDate: "2026-09-14",
+    salary: "100kEUR - 170kEUR + bonus",
+    salarySource:
+      "Repere indicatif repris de la fiche Directeur Business Unit generee sur ce site. A calibrer selon la taille du P&L pilote et l'etendue geographique.",
+    sector: "Medical Vet",
+    category: "Direction generale",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Porte le compte de resultat d'une gamme pharma veterinaire ou d'un segment espece. La difficulte propre au secteur : la decision d'achat passe par un.e prescripteur.rice veterinaire, pas par l'utilisateur final, et le circuit de distribution est un acteur a part entiere.",
+    skills: [
+      "Pilotage de P&L",
+      "Strategie de gamme pharma veterinaire",
+      "Animation d'un reseau de distributeurs",
+      "Marketing de prescription",
+      "Reglementation du medicament veterinaire"
+    ],
+    successFactors: [
+      "Arbitrer entre volume distributeur et valeur de prescription sans casser l'un des deux canaux.",
+      "Parler le langage clinique aux veterinaires et le langage marge aux distributeurs.",
+      "Anticiper les fins de brevet et les generiques sur une gamme mature."
+    ],
+    path: [
+      "Chef.fe de produit sante animale",
+      "Directeur.rice Business Unit sante animale",
+      "Directeur.rice general.e filiale"
+    ],
+    missions: [
+      "Piloter le compte de resultat d'une gamme ou d'un segment espece, du prix de cession a la marge nette.",
+      "Definir la strategie de gamme : lancements, extensions d'indication, arbitrages de fin de cycle.",
+      "Animer le reseau de distributeurs et les centrales, qui pesent sur l'acces au marche autant que la qualite du produit.",
+      "Piloter la strategie de prescription aupres des veterinaires, en coordination avec les affaires medicales.",
+      "Integrer les contraintes reglementaires du medicament veterinaire dans le calendrier commercial."
+    ],
+    studies: [
+      "Ecole de commerce",
+      "Doctorat veterinaire complete d'une formation gestion",
+      "Master marketing sante"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "Audencia", "Institut Agro Montpellier"],
+    relatedIndustries: [
+      "Medical Vet",
+      "Vet pharma",
+      "Vaccins veterinaires",
+      "Animal biotech"
+    ],
+    sources: [
+      { name: "Aon - Benchmarks de remuneration", url: "https://www.aon.com/" },
+      { name: "France Biotech - Panorama France HealthTech", url: "https://france-biotech.fr/" }
+    ]
+  },
+  {
+    slug: "medical-vet-sales-director",
+    title: "Directeur des Ventes Sante Animale",
+    seoTitle: "Directeur des ventes santé animale : salaire et missions",
+    seoDescription:
+      "Fiche métier Directeur.rice des ventes santé animale : réseau distributeurs, prescription vétérinaire, force de vente terrain. Salaire, missions, parcours.",
+    publishDate: "2026-09-14",
+    salary: "85kEUR - 140kEUR + variable",
+    salarySource:
+      "Repere indicatif repris de la fiche Directeur des ventes generee sur ce site, coherent avec la fiche Key Account Manager EMEA Distributeurs Sante Animale. A calibrer selon la taille de la force de vente.",
+    sector: "Medical Vet",
+    category: "Commercial",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Dirige une force de vente qui ne vend pas a l'utilisateur final. En sante animale, le circuit passe par la centrale, le distributeur et le/la veterinaire prescripteur.rice : trois interlocuteurs aux interets divergents que le/la directeur.rice des ventes doit tenir ensemble.",
+    skills: [
+      "Management d'une force de vente terrain",
+      "Negociation centrales et distributeurs",
+      "Marketing de prescription veterinaire",
+      "Sectorisation et pilotage d'objectifs",
+      "Lecture des donnees de sell-out"
+    ],
+    successFactors: [
+      "Obtenir du sell-out reel, pas seulement du sell-in qui gonfle les stocks du distributeur.",
+      "Faire monter en competence des delegue.e.s issu.e.s du terrain sur la lecture chiffree de leur secteur.",
+      "Garder la credibilite scientifique dans la relation avec les veterinaires."
+    ],
+    path: [
+      "Delegue.e commercial.e sante animale",
+      "Responsable regional.e des ventes",
+      "Directeur.rice des ventes sante animale"
+    ],
+    missions: [
+      "Construire le plan commercial par espece et par canal, de la centrale au cabinet veterinaire.",
+      "Manager les responsables regionaux et la force de vente terrain, en general 10 a 40 personnes.",
+      "Negocier les accords annuels avec les centrales d'achat et les groupements.",
+      "Piloter le sell-out chez les distributeurs, et pas uniquement le sell-in.",
+      "Articuler la strategie de prescription avec les affaires medicales et le marketing."
+    ],
+    studies: [
+      "Ecole de commerce",
+      "Doctorat veterinaire complete d'une formation commerciale",
+      "Master agroalimentaire"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "Institut Agro Montpellier", "Audencia"],
+    relatedIndustries: [
+      "Medical Vet",
+      "Vet pharma",
+      "Vaccins veterinaires",
+      "Animal biotech"
+    ],
+    sources: [
+      { name: "Aon - Benchmarks de remuneration", url: "https://www.aon.com/" },
+      { name: "France Biotech - Panorama France HealthTech", url: "https://france-biotech.fr/" }
+    ]
+  },
+  {
+    slug: "petfood-emea-director",
+    title: "Directeur EMEA Petfood",
+    seoTitle: "Directeur EMEA petfood : salaire, missions, marchés",
+    seoDescription:
+      "Fiche métier Directeur.rice EMEA petfood : pilotage multi-pays, distribution spécialisée et GMS, réglementation feed européenne. Salaire et parcours.",
+    publishDate: "2026-09-14",
+    salary: "Base 71kEUR - 143kEUR + 15kEUR - 84kEUR de variable / complement",
+    salarySource:
+      "Repere indicatif repris de la fiche Directeur EMEA generee sur ce site. A calibrer selon le nombre de marches pilotes et la part de la zone dans le chiffre d'affaires.",
+    sector: "Petfood",
+    category: "Direction internationale",
+    shortageLevel: "Elevee",
+    summary:
+      "Pilote une zone Europe, Moyen-Orient et Afrique sur un marche ou les circuits de distribution changent completement d'un pays a l'autre : specialiste et vet channel au nord, GMS au sud, e-commerce en croissance partout.",
+    skills: [
+      "Pilotage multi-pays",
+      "Distribution specialisee et GMS",
+      "Reglementation feed europeenne",
+      "Gestion de distributeurs exclusifs",
+      "Pricing et positionnement premium"
+    ],
+    successFactors: [
+      "Adapter le mix par pays sans fragmenter la marque au point de perdre les economies d'echelle.",
+      "Choisir entre filiale et distributeur exclusif marche par marche, et savoir revenir sur ce choix.",
+      "Tenir le positionnement premium face a la pression promotionnelle de la GMS."
+    ],
+    path: [
+      "Country manager petfood",
+      "Directeur.rice regional.e",
+      "Directeur.rice EMEA petfood"
+    ],
+    missions: [
+      "Definir la strategie de couverture par marche : filiale, distributeur exclusif ou vente directe.",
+      "Piloter le compte de resultat de la zone et arbitrer les investissements marketing entre pays.",
+      "Adapter la gamme aux specificites reglementaires et culturelles de chaque marche.",
+      "Structurer le canal veterinaire la ou il porte la prescription des gammes therapeutiques.",
+      "Suivre la conformite des allegations produit, dont les regles varient d'un pays a l'autre."
+    ],
+    studies: [
+      "Ecole de commerce",
+      "Master agroalimentaire",
+      "Ingenieur.e agro complete d'une formation gestion"
+    ],
+    schools: [
+      "Institut Agro Montpellier",
+      "AgroParisTech",
+      "Sciences Agro Bordeaux",
+      "ISA Lille",
+      "Audencia"
+    ],
+    relatedIndustries: ["Petfood", "Nutrition animale", "Feed additives", "Agro-industrie"],
+    sources: [
+      { name: "Aon - Benchmarks de remuneration", url: "https://www.aon.com/" },
+      { name: "France Biotech - Panorama France HealthTech", url: "https://france-biotech.fr/" }
+    ]
+  },
+  {
+    slug: "petfood-export-manager-emea",
+    title: "Export Manager EMEA Petfood",
+    seoTitle: "Export Manager EMEA petfood : salaire et missions",
+    seoDescription:
+      "Fiche métier Export Manager EMEA petfood : ouverture de marchés, distributeurs, homologation feed et allégations produit. Salaire, missions, parcours.",
+    publishDate: "2026-09-14",
+    salary: "Base 40kEUR - 65kEUR + 5kEUR - 12kEUR de variable / complement",
+    salarySource:
+      "Repere indicatif repris de la fiche Export Manager EMEA generee sur ce site. A calibrer selon le nombre de marches ouverts et la part variable negociee.",
+    sector: "Petfood",
+    category: "Developpement international",
+    shortageLevel: "Elevee",
+    summary:
+      "Ouvre et developpe des marches petfood a l'export. La difficulte n'est pas commerciale mais reglementaire : chaque pays impose ses propres regles d'homologation feed, d'etiquetage et d'allegations, et un dossier bloque suffit a geler une annee de developpement.",
+    skills: [
+      "Prospection et selection de distributeurs",
+      "Homologation feed a l'export",
+      "Etiquetage et allegations produit",
+      "Negociation d'accords de distribution",
+      "Anglais professionnel et une seconde langue"
+    ],
+    successFactors: [
+      "Verifier la faisabilite reglementaire avant d'engager la negociation commerciale, pas apres.",
+      "Choisir des distributeurs pour leur acces au canal specialise, pas pour leur promesse de volume.",
+      "Accepter des cycles d'ouverture de marche longs sans relacher le suivi."
+    ],
+    path: [
+      "Area manager export",
+      "Export manager EMEA petfood",
+      "Directeur.rice export"
+    ],
+    missions: [
+      "Identifier et qualifier des distributeurs par marche, sur leur acces reel au canal specialise ou veterinaire.",
+      "Piloter les dossiers d'homologation feed et d'enregistrement produit avec les affaires reglementaires.",
+      "Adapter etiquetage et allegations aux exigences locales, qui different sensiblement de la reglementation europeenne.",
+      "Negocier les accords de distribution : exclusivite, objectifs, investissement marketing partage.",
+      "Accompagner le lancement sur le terrain, formation des equipes du distributeur comprise."
+    ],
+    studies: [
+      "Master commerce international",
+      "Ecole de commerce specialisation export",
+      "Master agroalimentaire"
+    ],
+    schools: [
+      "Institut Agro Montpellier",
+      "AgroParisTech",
+      "Sciences Agro Bordeaux",
+      "ISA Lille",
+      "Audencia"
+    ],
+    relatedIndustries: ["Petfood", "Nutrition animale", "Feed additives", "Agro-industrie"],
+    sources: [
+      { name: "Aon - Benchmarks de remuneration", url: "https://www.aon.com/" },
+      { name: "France Biotech - Panorama France HealthTech", url: "https://france-biotech.fr/" }
+    ]
+  },
+  {
+    slug: "medical-vet-application-engineer",
+    title: "Ingenieur d'Application Sante Animale",
+    seoTitle: "Ingénieur d'application santé animale : salaire, missions",
+    seoDescription:
+      "Fiche métier ingénieur.e d'application santé animale : mise en service d'analyseurs en clinique, formation des équipes, support technique. Salaire et parcours.",
+    publishDate: "2026-09-14",
+    salary: "45kEUR - 70kEUR + variable",
+    salarySource:
+      "Repere indicatif repris de la fiche Ingenieur d'application generee sur ce site. A calibrer selon la taille du parc installe et l'etendue de la zone.",
+    sector: "Medical Vet",
+    category: "Customer success / support technique",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Installe, parametre et fait adopter les automates de diagnostic dans les cliniques veterinaires. Le poste se joue autant sur la technique que sur la pedagogie : l'interlocuteur.rice est un.e veterinaire ou une ASV en pleine journee de consultation, pas un.e technicien.ne de laboratoire.",
+    skills: [
+      "Mise en service d'analyseurs de biologie veterinaire",
+      "Formation d'equipes en clinique",
+      "Depannage de premier niveau",
+      "Controle qualite et calibration",
+      "Pedagogie en environnement de soin"
+    ],
+    successFactors: [
+      "Former en trente minutes entre deux consultations, sans jamais bloquer l'activite de la clinique.",
+      "Faire adopter le controle qualite quotidien a des equipes qui n'ont pas de culture laboratoire.",
+      "Faire remonter au marketing produit ce que le terrain n'utilise jamais."
+    ],
+    path: [
+      "Technicien.ne support",
+      "Ingenieur.e d'application sante animale",
+      "Field application manager"
+    ],
+    missions: [
+      "Installer et parametrer les analyseurs sur site, en clinique et en laboratoire veterinaire.",
+      "Former les veterinaires et les auxiliaires specialise.e.s a l'usage quotidien et a l'interpretation des resultats.",
+      "Assurer le support technique de premier niveau et le suivi des interventions correctives.",
+      "Mettre en place le controle qualite et suivre la derive des calibrations sur le parc installe.",
+      "Appuyer l'equipe commerciale en demonstration et remonter les usages reels au marketing produit."
+    ],
+    studies: [
+      "BTS analyses de biologie medicale",
+      "Licence professionnelle biotechnologies",
+      "Ecole d'ingenieur.e biomedical"
+    ],
+    schools: ["Oniris", "VetAgro Sup", "ENVT", "EBI Cergy", "Institut Agro Rennes-Angers"],
+    relatedIndustries: [
+      "Medical Vet",
+      "Diagnostic vet",
+      "Vet pharma",
+      "Animal biotech"
+    ],
+    sources: [
+      { name: "Aon - Benchmarks de remuneration", url: "https://www.aon.com/" },
+      { name: "France Biotech - Panorama France HealthTech", url: "https://france-biotech.fr/" }
+    ]
+  }
+];
+
 const mergedJobRoles = [
+  ...differentiatedAnimalHealthRoles,
   ...strategicExtras,
   ...nuclearMedicineRoles,
   ...coreRoles,

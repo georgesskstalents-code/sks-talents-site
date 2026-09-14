@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { stripBrandSuffix } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CalendlyButton from "@/components/CalendlyButton";
@@ -28,7 +29,7 @@ export async function generateMetadata({
   const url = `https://www.skstalents.fr/guides/${guide.slug}`;
 
   return {
-    title: `${guide.title} | SKS TALENTS`,
+    title: stripBrandSuffix(guide.title),
     description: guide.description,
     alternates: {
       canonical: url

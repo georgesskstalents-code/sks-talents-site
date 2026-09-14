@@ -1,9 +1,30 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import { getSectorPage, lifeSciencesHub } from "@/data/sectors";
 
 const categorySlug = "biotech";
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const page = getSectorPage("life-sciences", categorySlug, slug);
+  if (!page) return {};
+  const url = `https://www.skstalents.fr/life-sciences/biotech/${slug}`;
+  const title = `${page.title} : recrutement biotech`;
+  const description = page.summary.slice(0, 155);
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, siteName: "SKS TALENTS" }
+  };
+}
+
 
 export function generateStaticParams() {
   return ["arn-therapies", "deeptech-startups"].map((slug) => ({ slug }));

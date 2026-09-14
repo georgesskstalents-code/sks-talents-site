@@ -1,9 +1,33 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import CalendlyButton from "@/components/CalendlyButton";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import { references } from "@/data/references";
 import { getNotionSiteContentBySlug, mapNotionEntryToReference } from "@/lib/notion";
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const reference = references.find((item) => item.slug === slug);
+  if (!reference) return {};
+  const url = `https://www.skstalents.fr/references/${slug}`;
+  return {
+    title: `${reference.company} : mission de recrutement`,
+    description: reference.summary.slice(0, 155),
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${reference.company} : mission de recrutement`,
+      description: reference.summary.slice(0, 155),
+      url,
+      siteName: "SKS TALENTS"
+    }
+  };
+}
+
 
 export const dynamic = "force-dynamic";
 
