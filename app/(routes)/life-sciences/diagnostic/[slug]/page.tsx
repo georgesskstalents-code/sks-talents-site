@@ -1,9 +1,30 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import { getSectorPage, lifeSciencesHub } from "@/data/sectors";
 
 const categorySlug = "diagnostic";
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const page = getSectorPage("life-sciences", categorySlug, slug);
+  if (!page) return {};
+  const url = `https://www.skstalents.fr/life-sciences/diagnostic/${slug}`;
+  const title = `${page.title} : recrutement diagnostic`;
+  const description = page.summary.slice(0, 155);
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, siteName: "SKS TALENTS" }
+  };
+}
+
 
 export function generateStaticParams() {
   return ["ivd-testing", "ai-diagnostics", "genomics-ngs"].map((slug) => ({ slug }));

@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import ListingCard from "@/components/ListingCard";
 import PageHero from "@/components/PageHero";
 import { newsHubs } from "@/data/resources";
 import { editorialMarketSources } from "@/data/newsSignals";
+
+export const metadata: Metadata = {
+  title: "Signaux de marché Life Sciences et santé animale",
+  description:
+    "Levées de fonds, mouvements de dirigeants et consolidation sectorielle : les signaux qui annoncent les recrutements à venir.",
+  alternates: { canonical: "https://www.skstalents.fr/news" }
+};
 
 export default function NewsPage() {
   return (

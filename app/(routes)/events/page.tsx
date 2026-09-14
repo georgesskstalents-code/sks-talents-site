@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import ListingCard from "@/components/ListingCard";
 import PageHero from "@/components/PageHero";
 import { events } from "@/data/resources";
 import { getNotionSiteContentList, mapNotionEntryToResourceItem } from "@/lib/notion";
+
+export const metadata: Metadata = {
+  title: "Événements Life Sciences et santé animale",
+  description:
+    "Congrès, salons et rendez-vous sectoriels en biotech, diagnostic, medtech, vétérinaire et petfood, avec les dates de la saison.",
+  alternates: { canonical: "https://www.skstalents.fr/events" }
+};
 
 export const dynamic = "force-dynamic";
 

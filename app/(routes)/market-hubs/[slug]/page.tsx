@@ -1,8 +1,32 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import ListingCard from "@/components/ListingCard";
 import PageHero from "@/components/PageHero";
 import { marketHubs } from "@/data/marketHubs";
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const hub = marketHubs.find((item) => item.slug === slug);
+  if (!hub) return {};
+  const url = `https://www.skstalents.fr/market-hubs/${slug}`;
+  return {
+    title: hub.title,
+    description: hub.description.slice(0, 155),
+    alternates: { canonical: url },
+    openGraph: {
+      title: hub.title,
+      description: hub.description.slice(0, 155),
+      url,
+      siteName: "SKS TALENTS"
+    }
+  };
+}
+
 
 export function generateStaticParams() {
   return marketHubs.map((hub) => ({ slug: hub.slug }));

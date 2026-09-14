@@ -1,9 +1,30 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import { animalHealthHub, getSectorPage } from "@/data/sectors";
 
 const categorySlug = "petfood";
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const page = getSectorPage("animal-health", categorySlug, slug);
+  if (!page) return {};
+  const url = `https://www.skstalents.fr/animal-health/petfood/${slug}`;
+  const title = `${page.title} : recrutement petfood`;
+  const description = page.summary.slice(0, 155);
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, siteName: "SKS TALENTS" }
+  };
+}
+
 
 export function generateStaticParams() {
   return ["premium", "innovation"].map((slug) => ({ slug }));

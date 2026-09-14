@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { jobRoleIndexing } from "@/lib/jobRoleIndexing";
+import { stripBrandSuffix } from "@/lib/seo";
 import { notFound, permanentRedirect } from "next/navigation";
 import FicheMetierPage from "@/components/landings/FicheMetierPage";
 import ChloeLiveBubble from "@/components/ChloeLiveBubble";
@@ -41,7 +42,7 @@ function buildAutoSeoTitle(role: { title: string; salary?: string } | null | und
   if (!role?.title) return undefined;
   const label = extractSalaryLabel(role.salary);
   const salaryPart = label ? ` : salaire ${label}, missions` : " : missions et formation";
-  return `${role.title}${salaryPart} | SKS`;
+  return `${role.title}${salaryPart}`;
 }
 
 /**
@@ -77,12 +78,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     ...(indexing.mode === "noindex" ? { robots: { index: false, follow: true } } : {}),
-    title:
+    title: stripBrandSuffix(
       notionRole?.seoTitle ||
-      role?.seoTitle ||
-      buildAutoSeoTitle(role) ||
-      notionRole?.title ||
-      role?.title,
+        role?.seoTitle ||
+        buildAutoSeoTitle(role) ||
+        notionRole?.title ||
+        role?.title ||
+        ""
+    ),
     description:
       notionRole?.metaDescription ||
       role?.seoDescription ||
