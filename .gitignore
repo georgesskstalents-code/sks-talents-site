@@ -7,8 +7,10 @@ node_modules
 .env.buffer
 .env.buffer.local
 
-# Vercel local mirror (deja pull avec `vercel env pull`)
-.vercel/.env*
+# Vercel : ne JAMAIS committer ce dossier.
+# S'il contient .vercel/output, Vercel passe en mode "prebuilt artifacts",
+# saute le build Next et deploie un output perime. Cas constate le 14/09/2026.
+.vercel/
 
 # Build outputs
 .next/
@@ -23,11 +25,26 @@ Thumbs.db
 .idea/
 .vscode/settings.json
 
+# Sorties de generation locales. Les carrousels de output/carousels-additional/
+# sont suivis, les couvertures generees ne le sont pas.
+output/blog-covers/
+
 # Logs / caches
 *.log
+*.tsbuildinfo
+data/site-analytics-log.jsonl
 .turbo/
 .eslintcache
 
 # Fichiers temporaires
 scratchpad/
 tmp/
+
+# Doublons crees par la synchronisation iCloud du dossier Documents
+# ("fichier 2.ts", "fichier 3.tsx"...). Ils ont fait echouer un deploiement
+# le 14/09/2026 en embarquant des copies mortes dans le build.
+* [0-9].ts
+* [0-9].tsx
+* [0-9].json
+* [0-9].txt
+* [0-9].md
