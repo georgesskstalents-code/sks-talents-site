@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { jobRoleIndexing } from "@/lib/jobRoleIndexing";
 import { notFound, permanentRedirect } from "next/navigation";
 import FicheMetierPage from "@/components/landings/FicheMetierPage";
 import ChloeLiveBubble from "@/components/ChloeLiveBubble";
@@ -68,9 +69,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { robots: { index: false, follow: true } };
   }
 
-  const canonical = `https://www.skstalents.fr/job-roles/${slug}`;
+  // Politique d'indexation des fiches generees en matrice : hors marche en
+  // noindex, doublons canonicalises vers leur fiche de reference.
+  const indexing = jobRoleIndexing(slug, (candidate) => Boolean(findJobRoleBySlug(candidate)));
+  const canonicalSlug = indexing.mode === "canonical" ? indexing.canonicalSlug : slug;
+  const canonical = `https://www.skstalents.fr/job-roles/${canonicalSlug}`;
 
   return {
+    ...(indexing.mode === "noindex" ? { robots: { index: false, follow: true } } : {}),
     title:
       notionRole?.seoTitle ||
       role?.seoTitle ||
