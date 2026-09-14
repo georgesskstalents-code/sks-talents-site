@@ -449,9 +449,9 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
     },
     finalNote: "Réponse sous 24h · Échange de cadrage 15 min · Même URL de booking sur toute la page",
     metadata: {
-      title: "Executive search Life Sciences et biotech",
+      title: "Cabinet de recrutement Life Sciences",
       description:
-        "Cabinet exécutif Life Sciences : biotech, diagnostic IVD/NGS, deeptech, e-santé et robotique. Recrutement, structuration, RPO et rôles CODIR.",
+        "Cabinet de recrutement Life Sciences : biotech, diagnostic IVD et NGS, deeptech, medtech. Dirigeants et cadres, de la série A au scale-up.",
       canonical: "https://www.skstalents.fr/life-sciences"
     }
   },
@@ -658,9 +658,9 @@ export const sectorLandingPages: Record<SectorLandingPageKey, SectorLandingPage>
     },
     finalNote: "Réponse sous 24h · Échange de cadrage 15 min · Même URL de booking sur toute la page",
     metadata: {
-      title: "Recrutement santé animale et petfood",
+      title: "Cabinet de recrutement santé animale",
       description:
-        "Cabinet exécutif Animal Health : diagnostic vétérinaire, groupes de cliniques et petfood. Recrutement, structuration, CODIR, opérations et croissance.",
+        "Cabinet de recrutement santé animale : groupements vétérinaires, laboratoires, petfood et nutrition animale. Dirigeants et cadres, shortlist en 10 jours.",
       canonical: "https://www.skstalents.fr/animal-health"
     }
   }

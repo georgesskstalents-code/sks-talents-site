@@ -9,26 +9,25 @@ import FAQSection from "@/components/FAQSection";
 import { faqsByPage } from "@/data/faqsByPage";
 
 export const metadata: Metadata = {
-  title: "Calcul salaire brut en net et coût employeur",
+  title: "Coût employeur et salaire brut en net",
   description:
-    "Calculez le salaire brut en net et le coût employeur avec une estimation France plus fine par statut, net imposable et salaire net apres prelevement a la source.",
+    "Combien coûte réellement un recrutement cadre ? Estimez le coût employeur, les charges patronales et le net perçu à partir du brut, statut par statut.",
   keywords: [
-    "calcul salaire brut net",
     "coût employeur",
-    "charges patronales",
-    "salaire net",
-    "salaire brut",
-    "simulateur salaire",
-    "prelevement a la source",
-    "simulateur cout employeur"
+    "calcul salaire employeur",
+    "simulateur coût employeur",
+    "charges patronales cadre",
+    "coût employeur cadre",
+    "salaire brut net coût employeur",
+    "calcul coût salarié"
   ],
   alternates: {
     canonical: "/calcul-salaire-brut-net"
   },
   openGraph: {
-    title: "Calcul salaire brut en net et coût employeur",
+    title: "Coût employeur et salaire brut en net",
     description:
-      "Simulateur France de salaire brut en net et coût employeur avec statut detaille, temps de travail, net imposable et estimation apres impots.",
+      "Estimez le coût employeur d'un recrutement cadre : charges patronales, net perçu, net imposable et prélèvement à la source.",
     url: "https://www.skstalents.fr/calcul-salaire-brut-net",
     type: "website"
   }
@@ -54,9 +53,9 @@ export default function SalaryCalculatorPage() {
         }}
       />
       <PageHero
-        kicker="Simulateur salaire"
-        title="Calcul du salaire brut en net et du coût employeur"
-        description="Un simulateur France pour estimer le net salarie, le net imposable, le prelevement a la source et le coût employeur selon plusieurs statuts."
+        kicker="Simulateur employeur"
+        title="Combien vous coûte réellement un recrutement cadre ?"
+        description="Estimez le coût employeur complet à partir du brut : charges patronales, net perçu par la personne recrutée, net imposable et prélèvement à la source, statut par statut."
       />
       <section className="container-shell pb-4">
         <div className="card-surface flex flex-wrap gap-3 p-5">

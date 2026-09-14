@@ -69,8 +69,8 @@ export type DirectionCSector = {
 export const lifeSciencesContent: DirectionCSector = {
   slug: "life-sciences",
   eyebrow: "Life Sciences",
-  titleLead: "Chasseur de têtes biotech, diagnostic, medtech",
-  titleTag: "pour CEO et DRH.",
+  titleLead: "Cabinet de recrutement Life Sciences :",
+  titleTag: "biotech, diagnostic, medtech.",
   subtitle: "Recruter, cadrer, structurer. Pour les CEO, COO, CPO et DRH en biotech, diagnostic, deeptech, e-santé et robotique.",
   description: "Nous intervenons au cœur des organisations des Life Sciences : rôles critiques clarifiés, décisions sécurisées, digitalisation des processus par l'automatisation, exécution fiabilisée. Chaque mois de retard coûte. Nous éliminons ce qui ralentit. Moins de délais. Moins d'erreurs. Plus d'impact.",
   primaryCta: { label: "Je réserve un call de 15 min →", url: "https://calendly.com/g-kengue/talentconsulting" },
@@ -187,8 +187,8 @@ export const lifeSciencesContent: DirectionCSector = {
 export const animalHealthContent: DirectionCSector = {
   slug: "animal-health",
   eyebrow: "Animal Health",
-  titleLead: "Chasseur de têtes santé animale :",
-  titleTag: "groupements vétérinaires, laboratoires, petfood.",
+  titleLead: "Cabinet de recrutement santé animale :",
+  titleTag: "vétérinaire, petfood, nutrition animale.",
   subtitle: "Recruter, cadrer, structurer. Pour les CEO, COO, CPO et DRH en diagnostic animal health, cliniques vétérinaires et petfood premium.",
   description: "Nous intervenons au cœur des organisations de la Santé Animale : rôles critiques clarifiés, décisions sécurisées, digitalisation des processus par l'automatisation, exécution fiabilisée. Chaque mois de retard coûte. Nous éliminons ce qui ralentit. Moins de délais. Moins d'erreurs. Plus d'impact.",
   primaryCta: { label: "Je réserve un call de 15 min →", url: "https://calendly.com/g-kengue/talentconsulting" },
