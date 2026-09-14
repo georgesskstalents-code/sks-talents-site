@@ -58,6 +58,8 @@ export default function TrustpilotLiveWidget({
         data-style-height="240px"
         data-style-width="100%"
         data-theme="light"
+        // data-stars est un filtre Trustpilot : afficher les avis 4 et 5
+        // etoiles. Ce n'est pas la note du cabinet, ne pas l'aligner sur proof.
         data-stars="4,5"
         data-review-languages="fr"
       >

@@ -73,8 +73,8 @@ export default function Hero() {
               ★★★★★
             </span>
             <span className="text-brand-ink">
-              4,5/5 <span className="text-brand-stone">·</span>{" "}
-              <span className="text-brand-stone">100+ placements</span>
+              {proofLabels.trustpilotRatingSlash} <span className="text-brand-stone">·</span>{" "}
+              <span className="text-brand-stone">{proof.placementsLabel}</span>
             </span>
           </a>
         </div>
