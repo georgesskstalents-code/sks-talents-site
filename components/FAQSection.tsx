@@ -10,13 +10,19 @@ type FAQSectionProps = {
   title: string;
   description?: string;
   items: FAQItem[];
+  /**
+   * Emettre le JSON-LD FAQPage. A passer a false quand la page porte deja la
+   * FAQ dans son propre @graph : une seule FAQPage par page, jamais deux.
+   */
+  emitJsonLd?: boolean;
 };
 
 export default function FAQSection({
   eyebrow = "FAQ",
   title,
   description,
-  items
+  items,
+  emitJsonLd = true
 }: FAQSectionProps) {
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -33,10 +39,12 @@ export default function FAQSection({
 
   return (
     <SectionShell eyebrow={eyebrow} title={title} description={description}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      {emitJsonLd ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      ) : null}
       <div className="mx-auto max-w-3xl divide-y divide-brand-teal/15 border-y border-brand-teal/15">
         {items.map((item) => (
           <details key={item.question} className="group py-1">

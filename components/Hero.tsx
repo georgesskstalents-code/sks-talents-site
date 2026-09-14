@@ -1,9 +1,10 @@
 import CalendlyButton from "@/components/CalendlyButton";
 import HeroBackgroundVideo from "@/components/HeroBackgroundVideo";
+import { proof, proofLabels } from "@/data/proof";
 
 const heroStats = [
   ["100+", "placements"],
-  ["10 j", "1re shortlist"],
+  [`${proof.firstShortlistDays} j ouvrés`, "1re shortlist"],
   ["seed → scale-up", "exec search"]
 ];
 
@@ -28,9 +29,13 @@ export default function Hero() {
             <span className="block lg:inline">Life Sciences &amp; Santé animale</span>
           </p>
           <h1 className="t-h1">
+            Cabinet executive search{" "}
+            <span className="text-brand-teal italic">Life Sciences et santé animale.</span>
+          </h1>
+          <p className="t-h2 max-w-2xl">
             Nous <span className="text-brand-teal">sécurisons</span> vos recrutements et{" "}
             <span className="text-brand-teal italic">structurons vos process.</span>
-          </h1>
+          </p>
           <p className="t-body-l max-w-2xl">
             Nous aidons les CEO, COO et DRH à recruter en{" "}
             <strong className="font-semibold">Life Sciences &amp; Santé animale</strong> (biotech, diagnostic, vétérinaire,

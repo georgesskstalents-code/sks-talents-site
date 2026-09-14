@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import ListingCard from "@/components/ListingCard";
 import { jobRoleCategories, jobRoleSectors, jobRoles } from "@/data/jobRoles";
 import { getNotionSiteContentList } from "@/lib/notion";
+
+export const metadata: Metadata = {
+  title: "Fiches métiers Life Sciences et santé animale",
+  description:
+    "Missions, compétences, parcours et fourchettes de rémunération des fonctions cadres en biotech, diagnostic, medtech, vétérinaire et petfood.",
+  alternates: { canonical: "https://www.skstalents.fr/job-roles" }
+};
 
 export const dynamic = "force-dynamic";
 

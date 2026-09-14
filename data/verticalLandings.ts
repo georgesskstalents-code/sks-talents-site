@@ -1,3 +1,5 @@
+import { proof } from "@/data/proof";
+
 type LandingCard = {
   title: string;
   description: string;
@@ -46,7 +48,7 @@ export const verticalLandings: Record<string, VerticalLandingConfig> = {
     stats: [
       { value: "100+", label: "placements reussis" },
       { value: "2.3 mois", label: "delai moyen" },
-      { value: "92%", label: "satisfaction" }
+      { value: `${proof.retention5y}%`, label: "retention a 5 ans" }
     ],
     services: [
       {
@@ -471,7 +473,7 @@ export const verticalLandings: Record<string, VerticalLandingConfig> = {
     stats: [
       { value: "3 segments", label: "medical vet, care, petfood" },
       { value: "100+", label: "placements multisectoriels" },
-      { value: "92%", label: "missions satisfaites" }
+      { value: `${proof.retention5y}%`, label: "retention a 5 ans" }
     ],
     services: [
       {

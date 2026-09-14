@@ -25,7 +25,7 @@ export const FAQ_HOME_SIMPLE_ITEMS: ReadonlyArray<FaqHomeSimpleItem> = [
     category: "Garanties",
     question: "Quelles garanties offre un cabinet d'executive search Life Sciences ?",
     answer:
-      "92% missions satisfaites. Si la prise de poste ne tient pas, nous relançons la recherche sans frais supplémentaires."
+      "Une recherche de remplacement offerte : si la prise de poste ne tient pas, nous relançons la recherche sans frais supplémentaires, dans les conditions prévues aux conditions générales de vente."
   },
   {
     num: "04",

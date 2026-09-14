@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { organizationSchema, websiteSchema } from "@/lib/seo";
+import { siteGraph } from "@/lib/seo";
 import { getApprovedKeywords } from "@/lib/seoKeywords";
 
 // Fonts:
@@ -139,12 +139,9 @@ export default function RootLayout({
           <FrontendErrorMonitor />
         </Suspense>
         <script
+          id="sks-site-jsonld"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraph) }}
         />
         <div className="relative overflow-hidden">
           <Header />

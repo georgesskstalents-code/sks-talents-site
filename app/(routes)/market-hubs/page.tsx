@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import ListingCard from "@/components/ListingCard";
 import PageHero from "@/components/PageHero";
 import { marketHubs } from "@/data/marketHubs";
+
+export const metadata: Metadata = {
+  title: "Bassins d'emploi Life Sciences en France",
+  description:
+    "Les pôles français de la biotech, de la medtech et de la santé animale : entreprises, écoles et dynamique de recrutement par territoire.",
+  alternates: { canonical: "https://www.skstalents.fr/market-hubs" }
+};
 
 export default function MarketHubsPage() {
   return (

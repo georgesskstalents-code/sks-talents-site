@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
 import CalendlyButton from "@/components/CalendlyButton";
+import { proof, proofLabels } from "@/data/proof";
+
+export const metadata: Metadata = {
+  title: "Georges Kengue, fondateur",
+  description:
+    "Georges Kengue a fondé SKS Talents, cabinet executive search Life Sciences et santé animale. Parcours, méthode et repères de satisfaction.",
+  alternates: { canonical: "https://www.skstalents.fr/team" }
+};
 
 export default function TeamPage() {
   const ecosystemPartners = [
@@ -49,10 +58,10 @@ export default function TeamPage() {
               conversion de candidats rares.
             </p>
             <ul className="mt-6 space-y-3 text-sm leading-7 text-brand-stone">
-              <li>100+ placements réussis sur des marchés spécialisés.</li>
-              <li>10 jours pour une première shortlist sur les missions bien cadrées.</li>
-              <li>3 à 4 semaines pour couvrir un poste prioritaire.</li>
-              <li>4,5/5 sur Trustpilot comme repère externe de satisfaction visible sur 13 avis publics.</li>
+              <li>{proof.placementsLabel} réussis sur des marchés spécialisés.</li>
+              <li>{proof.firstShortlistLabel} pour une première shortlist sur les missions bien cadrées.</li>
+              <li>De l’intake à la signature : {proof.intakeToSignature}.</li>
+              <li>{proofLabels.trustpilotSentence} publics, comme repère externe de satisfaction.</li>
             </ul>
             <div className="mt-6">
               <CalendlyButton label="Découvrir la page rejoignez-nous" href="/rejoignez-nous" tone="outline" />

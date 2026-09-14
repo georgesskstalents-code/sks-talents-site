@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { fileLastmod, notInFuture } from "@/lib/sitemapLastmod";
 import { articles } from "@/data/articles";
 import { jobRoles } from "@/data/jobRoles";
 import { references } from "@/data/references";
@@ -86,6 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/scorecard-dirigeant",
     "/senegal",
     "/services",
+    "/structuration-rh",
     "/team"
   ];
 
@@ -115,10 +117,54 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Defensive : strip duplicates AND any URL containing /404 (safety net).
   const cleaned = Array.from(new Set(allUrls)).filter((url) => !url.includes("/404"));
 
+  // Date de derniere modification par URL, issue du contenu quand il en porte
+  // une, sinon du dernier commit du fichier de donnees qui alimente la page.
+  const articleLastmod = new Map<string, string>(
+    articles.map((a) => [`/blog/${a.slug}`, notInFuture(a.date)])
+  );
+  const jobRoleLastmod = new Map<string, string>(
+    jobRoles.map((r) => [
+      `/job-roles/${r.slug}`,
+      notInFuture(r.publishDate || fileLastmod("data/jobRoles.ts"))
+    ])
+  );
+
+  const sourceLastmod: Array<[string, string]> = [
+    ["/references/", fileLastmod("data/references.ts")],
+    ["/investment-funds/", fileLastmod("data/investmentFunds.ts")],
+    ["/comparatifs/", fileLastmod("data/comparisons.ts")],
+    ["/market-hubs/", fileLastmod("data/marketHubs.ts")],
+    ["/life-sciences/", fileLastmod("data/sectors.ts")],
+    ["/animal-health/", fileLastmod("data/sectors.ts")]
+  ];
+
+  const staticLastmod = fileLastmod("app/(routes)");
+
+  function lastModifiedFor(url: string): string {
+    const article = articleLastmod.get(url);
+    if (article) return article;
+    const jobRole = jobRoleLastmod.get(url);
+    if (jobRole) return jobRole;
+    const matched = sourceLastmod.find(([prefix]) => url.startsWith(prefix));
+    if (matched) return matched[1];
+    return staticLastmod;
+  }
+
+  // Frequence differenciee : un job-role bouge une fois par an, un article
+  // rarement apres publication, une page service quelques fois par an.
+  function changeFrequencyFor(url: string): "daily" | "weekly" | "monthly" | "yearly" {
+    if (url === "" || url === "/blog") return "weekly";
+    if (url.startsWith("/blog/")) return "monthly";
+    if (url.startsWith("/job-roles")) return "yearly";
+    if (url.startsWith("/legal/")) return "yearly";
+    if (url.startsWith("/references/") || url.startsWith("/investment-funds/")) return "yearly";
+    return "monthly";
+  }
+
   return cleaned.map((url) => ({
     url: `${baseUrl}${url}`,
-    changeFrequency: "weekly",
+    changeFrequency: changeFrequencyFor(url),
     priority: url === "" ? 1 : url.endsWith("/structuration-ia") ? 0.9 : 0.8,
-    lastModified: new Date()
+    lastModified: lastModifiedFor(url)
   }));
 }

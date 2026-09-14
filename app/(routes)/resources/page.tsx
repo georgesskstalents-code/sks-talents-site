@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import FAQSection from "@/components/FAQSection";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
@@ -19,6 +20,13 @@ import {
 import { ecosystemStudy } from "@/data/ecosystemTargets";
 import { trackedInvestmentFundsDirectory } from "@/data/investmentFunds";
 import { getNotionSiteContentList } from "@/lib/notion";
+
+export const metadata: Metadata = {
+  title: "Ressources RH pour dirigeants Life Sciences",
+  description:
+    "Guides, benchmarks, calculateurs et études à l'usage des CEO, COO et DRH de biotech, medtech, diagnostic et santé animale.",
+  alternates: { canonical: "https://www.skstalents.fr/resources" }
+};
 
 export const dynamic = "force-dynamic";
 

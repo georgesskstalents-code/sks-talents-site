@@ -18,8 +18,9 @@ import FinancementsBloc from "@/components/landings/FinancementsBloc";
 import AILeadershipBriefing from "@/components/landings/AILeadershipBriefing";
 import { lifeSciencesScenes } from "./lifeSciencesScenes";
 import { lifeSciencesQuestions } from "./lifeSciencesQuestions";
+import { proof, proofLabels } from "@/data/proof";
 
-const trustSignals = ["★ 4,6/5 Trustpilot", "France Biotech", "Saclay", "100+ placements"];
+const trustSignals = [`★ ${proofLabels.trustpilot}`, "France Biotech", "Saclay", proof.placementsLabel];
 
 export default function LifeSciencesLanding() {
   return (
@@ -60,7 +61,7 @@ export default function LifeSciencesLanding() {
           agentsDetail: "(dont le duo Talent Intelligence & Rétention)",
           roi: "ROI mesuré sur vos propres données."
         }}
-        pourquoiSKS="8 ans d'expertise  ·  Commission RH France Biotech  ·  100+ placements  ·  4,6/5 Trustpilot"
+        pourquoiSKS={`${proofLabels.experience}  ·  Commission RH France Biotech  ·  ${proof.placementsLabel}  ·  ${proofLabels.trustpilot}`}
       />
 
       {/* ===== Section 2 - DÉMO ===== */}

@@ -8,6 +8,12 @@ type Props = {
   articles: Article[];
 };
 
+/** Normalise en AAAA-MM-JJ pour l'attribut datetime. */
+function isoDate(date: string) {
+  const d = new Date(date);
+  return Number.isNaN(d.getTime()) ? date : d.toISOString().slice(0, 10);
+}
+
 function formatDate(date: string) {
   try {
     const d = new Date(date);
@@ -50,7 +56,9 @@ function ArticleCard({ article, index, variant }: { article: Article; index: num
       </Link>
       <p>{article.excerpt}</p>
       <div className="bmag-card-meta">
-        <span>{article.author} · {formatDate(article.date)}</span>
+        <span>
+          {article.author} · <time dateTime={isoDate(article.date)}>{formatDate(article.date)}</time>
+        </span>
         <span>{article.readTime} min</span>
       </div>
     </article>
@@ -106,14 +114,14 @@ export default function BlogMagazine({ articles }: Props) {
           <div className="bmag-hero-art-top-fade" />
           <div className="bmag-hero-art-cap">
             <span>VOL. XII · N°01</span>
-            <span>{formatDate(featured.date).split(" ").slice(1).join(" · ")}</span>
+            <time dateTime={isoDate(featured.date)}>{formatDate(featured.date).split(" ").slice(1).join(" · ")}</time>
           </div>
         </div>
         <div>
           <div className="bmag-hero-meta">
             <span className="bmag-cat">{getArticleVerticalLabel(featured.vertical)}</span>
             <span className="bmag-dot" />
-            <span>{formatDate(featured.date)}</span>
+            <time dateTime={isoDate(featured.date)}>{formatDate(featured.date)}</time>
             <span className="bmag-dot" />
             <span>{featured.readTime} min de lecture</span>
           </div>
@@ -179,7 +187,9 @@ export default function BlogMagazine({ articles }: Props) {
               >
                 <span className="bmag-archive-cat">{getArticleVerticalLabel(article.vertical)}</span>
                 <span className="bmag-archive-title">{article.title}</span>
-                <span className="bmag-archive-meta">{formatDate(article.date)} · {article.readTime} min</span>
+                <span className="bmag-archive-meta">
+                  <time dateTime={isoDate(article.date)}>{formatDate(article.date)}</time> · {article.readTime} min
+                </span>
               </Link>
             ))}
           </div>

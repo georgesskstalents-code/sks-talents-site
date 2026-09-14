@@ -3,6 +3,7 @@ import InlineLeadForm from "@/components/InlineLeadForm";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
 import WebsiteServicesContent from "./components/content";
+import { proof, proofLabels } from "@/data/proof";
 
 export const metadata: Metadata = {
   title: "Service Website & Recrutement Digital",
@@ -108,9 +109,9 @@ export default function WebsiteServicesPage() {
         <div className="grid gap-4 md:grid-cols-4">
           {[
             ["100+", "placements réussis"],
-            ["10 jours", "1re shortlist"],
+            [proof.firstShortlistLabel, "1re shortlist"],
             ["2 sem.-3 mois", "mission prioritaire ou de direction"],
-            ["4,5/5", "Trustpilot · 13 avis"]
+            [proofLabels.trustpilotRatingSlash, `Trustpilot · ${proof.trustpilotCount} avis`]
           ].map(([value, label]) => (
             <div key={label} className="card-surface p-6">
               <p className="text-4xl font-semibold text-brand-teal">{value}</p>

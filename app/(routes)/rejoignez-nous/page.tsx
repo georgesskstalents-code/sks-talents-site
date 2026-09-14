@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import ReferenceMarquee from "@/components/ReferenceMarquee";
 import SectionShell from "@/components/SectionShell";
 import { references } from "@/data/references";
+import { proof, proofLabels } from "@/data/proof";
 
 export const metadata: Metadata = {
   title: "Rejoignez-nous | Recrutement Life Sciences, Diagnostic & Animal Health",
@@ -28,7 +29,7 @@ const faqItems = [
   {
     question: "En combien de temps recevez-vous une première shortlist ?",
     answer:
-      "Sur les missions bien cadrées, une première shortlist peut être présentée sous 10 jours. Le délai complet dépend ensuite du niveau de rareté du poste et de la rapidité de décision côté client."
+      "Sur les missions bien cadrées, une première shortlist peut être présentée sous 10 jours ouvrés. Le délai complet dépend ensuite du niveau de rareté du poste et de la rapidité de décision côté client."
   },
   {
     question: "Comment prendre contact avec SKS TALENTS ?",
@@ -109,9 +110,9 @@ export default function RejoignezNousPage() {
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {[
             ["100+", "placements réussis sur des marchés spécialisés"],
-            ["10 jours", "première shortlist sur les missions bien cadrées"],
-            ["3 à 4 semaines", "poste couvert sur les recherches prioritaires"],
-            ["4,5/5", "note Trustpilot visible sur 13 avis publics"]
+            [proof.firstShortlistLabel, "première shortlist sur les missions bien cadrées"],
+            [proof.intakeToSignature, "de l’intake à la signature sur les recherches prioritaires"],
+            [`${proofLabels.trustpilotRatingSlash}`, `note Trustpilot visible sur ${proof.trustpilotCount} avis publics`]
           ].map(([value, label]) => (
             <div key={label} className="card-surface p-8">
               <p className="font-display text-5xl text-brand-teal">{value}</p>

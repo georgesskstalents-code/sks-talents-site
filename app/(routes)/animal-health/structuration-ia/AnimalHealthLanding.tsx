@@ -18,8 +18,9 @@ import FinancementsBloc from "@/components/landings/FinancementsBloc";
 import AILeadershipBriefing from "@/components/landings/AILeadershipBriefing";
 import { animalHealthScenes } from "./animalHealthScenes";
 import { animalHealthQuestions } from "./animalHealthQuestions";
+import { proof, proofLabels } from "@/data/proof";
 
-const trustSignals = ["★ 4,6/5 Trustpilot", "France Biotech", "Saclay", "100+ placements"];
+const trustSignals = [`★ ${proofLabels.trustpilot}`, "France Biotech", "Saclay", proof.placementsLabel];
 
 export default function AnimalHealthLanding() {
   return (
@@ -60,7 +61,7 @@ export default function AnimalHealthLanding() {
           agentsDetail: "",
           roi: "ROI mesuré sur vos propres données."
         }}
-        pourquoiSKS="8 ans d'expertise vétérinaire  ·  Réseau vétérinaire national  ·  100+ placements  ·  4,6/5 Trustpilot"
+        pourquoiSKS={`${proofLabels.experience} vétérinaire  ·  Réseau vétérinaire national  ·  ${proof.placementsLabel}  ·  ${proofLabels.trustpilot}`}
       />
 
       {/* ===== Section 2 - DÉMO ===== */}

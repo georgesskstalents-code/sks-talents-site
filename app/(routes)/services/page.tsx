@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { faqNode, orgRef, pageGraph } from "@/lib/seo";
 import FounderCard from "@/components/FounderCard";
 import MethodNarrative from "@/components/MethodNarrative";
 import PageHero from "@/components/PageHero";
@@ -8,9 +9,9 @@ import FAQSection from "@/components/FAQSection";
 import { faqsByPage } from "@/data/faqsByPage";
 
 const CANONICAL = "https://www.skstalents.fr/services";
-const TITLE = "Executive search + digitalisation RH par l'IA - Life Sciences";
+const TITLE = "Executive search, RPO et structuration RH";
 const DESCRIPTION =
-  "Cabinet executive search Life Sciences et Animal Health + digitalisation RH par l'IA. Structuration RH, agents IA, automatisation. Accompagnement scale-up pour CEO biotech, medtech, veterinaire.";
+  "Executive search, RPO et structuration RH pour les CEO, COO et DRH de biotech, medtech, diagnostic, sante animale et petfood.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -26,18 +27,12 @@ export const metadata: Metadata = {
   }
 };
 
-const serviceJsonLd = {
-  "@context": "https://schema.org",
+const serviceNode = {
   "@type": "Service",
   "@id": `${CANONICAL}#service`,
   name: "Executive Search + Digitalisation RH par l'IA - Life Sciences",
   serviceType: "Executive Search + Digitalisation RH par l'IA",
-  provider: {
-    "@type": "Organization",
-    "@id": "https://www.skstalents.fr/#organization",
-    name: "SKS TALENTS",
-    url: "https://www.skstalents.fr"
-  },
+  provider: orgRef,
   areaServed: [
     { "@type": "Country", name: "France" },
     { "@type": "Country", name: "Europe" }
@@ -46,8 +41,7 @@ const serviceJsonLd = {
   url: CANONICAL
 };
 
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
+const breadcrumbJsonLdNode = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Accueil", item: "https://www.skstalents.fr" },
@@ -58,8 +52,15 @@ const breadcrumbJsonLd = {
 export default function ServicesPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script
+        id="services-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            pageGraph([breadcrumbJsonLdNode, serviceNode, faqNode(faqsByPage["services"].items)])
+          )
+        }}
+      />
 
       {/* 1. Hero */}
       <PageHero
@@ -84,7 +85,7 @@ export default function ServicesPage() {
       <RevealOnScroll delayMs={100}>
         <FounderCard />
       </RevealOnScroll>
-          <FAQSection eyebrow="FAQ" title={faqsByPage["services"].title} description={faqsByPage["services"].description} items={faqsByPage["services"].items} />
+          <FAQSection eyebrow="FAQ" title={faqsByPage["services"].title} description={faqsByPage["services"].description} items={faqsByPage["services"].items} emitJsonLd={false} />
     </>
   );
 }

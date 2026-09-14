@@ -4,6 +4,7 @@ import { animalHealthContent } from "@/components/landings/directionCContent";
 import { getSectorLandingPage } from "@/data/sectorLandingPages";
 import FAQSection from "@/components/FAQSection";
 import { faqsByPage } from "@/data/faqsByPage";
+import { faqNode, orgRef, pageGraph, WEBSITE_ID } from "@/lib/seo";
 
 const page = getSectorLandingPage("animal");
 
@@ -41,21 +42,7 @@ export const metadata: Metadata = {
   }
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: page.faqs.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer
-    }
-  }))
-};
-
-const professionalServiceJsonLd = {
-  "@context": "https://schema.org",
+const professionalServiceNode = {
   "@type": "ProfessionalService",
   "@id": `${page.metadata.canonical}#service`,
   name: "SKS TALENTS - Executive Search Animal Health",
@@ -67,16 +54,10 @@ const professionalServiceJsonLd = {
     { "@type": "Country", name: "Europe" }
   ],
   availableLanguage: ["French", "English"],
-  provider: {
-    "@type": "Organization",
-    "@id": "https://www.skstalents.fr/#organization",
-    name: "SKS TALENTS",
-    url: "https://www.skstalents.fr"
-  }
+  provider: orgRef
 };
 
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
+const breadcrumbNode = {
   "@type": "BreadcrumbList",
   itemListElement: [
     {
@@ -94,14 +75,13 @@ const breadcrumbJsonLd = {
   ]
 };
 
-const collectionPageJsonLd = {
-  "@context": "https://schema.org",
+const collectionPageNode = {
   "@type": "CollectionPage",
   name: "Recrutement Animal Health",
   url: page.metadata.canonical,
   description: page.metadata.description,
   about: page.verticals.map((item) => item.name),
-  isPartOf: "https://www.skstalents.fr",
+  isPartOf: { "@id": WEBSITE_ID },
   mainEntity: {
     "@type": "ItemList",
     itemListElement: page.strategicLinks.map((item, index) => ({
@@ -117,27 +97,16 @@ export default function AnimalHealthHubPage() {
   return (
     <>
       <script
-        id="animal-health-breadcrumb-jsonld"
+        id="animal-health-jsonld"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        id="animal-health-collectionpage-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageJsonLd) }}
-      />
-      <script
-        id="animal-health-professionalservice-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceJsonLd) }}
-      />
-      <script
-        id="animal-health-faq-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            pageGraph([breadcrumbNode, collectionPageNode, professionalServiceNode, faqNode(faqsByPage["animal-health"].items)])
+          )
+        }}
       />
       <DirectionCPage sector={animalHealthContent} />
-          <FAQSection eyebrow="FAQ" title={faqsByPage["animal-health"].title} description={faqsByPage["animal-health"].description} items={faqsByPage["animal-health"].items} />
+          <FAQSection eyebrow="FAQ" title={faqsByPage["animal-health"].title} description={faqsByPage["animal-health"].description} items={faqsByPage["animal-health"].items} emitJsonLd={false} />
     </>
   );
 }

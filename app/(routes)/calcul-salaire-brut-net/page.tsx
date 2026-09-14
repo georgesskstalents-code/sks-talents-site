@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { faqNode, pageGraph } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import PackageComparator from "@/components/PackageComparator";
 import SalaryCalculator from "@/components/SalaryCalculator";
@@ -34,7 +36,6 @@ export const metadata: Metadata = {
 
 export default function SalaryCalculatorPage() {
   const webPageSchema = {
-    "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Calcul du salaire brut en net",
     url: "https://www.skstalents.fr/calcul-salaire-brut-net",
@@ -42,46 +43,15 @@ export default function SalaryCalculatorPage() {
       "Simulateur pour convertir un salaire brut en net et estimer un coût employeur avec une logique France plus detaillee."
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Quelle difference entre salaire net et net imposable ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Le net imposable reintegre notamment la part non deductible de CSG-CRDS. Il sert de base au calcul du prelevement a la source et peut donc etre superieur au net verse."
-        }
-      },
-      {
-        "@type": "Question",
-        name: "Comment est estime le coût employeur ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Le coût employeur additionne le brut et les charges patronales estimees. Il varie selon le statut, l'effectif, le taux accidents du travail et d'eventuels alleegements."
-        }
-      },
-      {
-        "@type": "Question",
-        name: "Le resultat est-il identique a une fiche de paie ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Non. Le simulateur donne une estimation structuree et credible, mais une fiche de paie reelle depend de la convention collective, de l'entreprise, des exonérations et de la situation individuelle."
-        }
-      }
-    ]
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            pageGraph([webPageSchema, faqNode(faqsByPage["calcul-salaire-brut-net"].items)])
+          )
+        }}
       />
       <PageHero
         kicker="Simulateur salaire"
@@ -180,7 +150,42 @@ export default function SalaryCalculatorPage() {
           </article>
         </div>
       </SectionShell>
-          <FAQSection eyebrow="FAQ" title={faqsByPage["calcul-salaire-brut-net"].title} description={faqsByPage["calcul-salaire-brut-net"].description} items={faqsByPage["calcul-salaire-brut-net"].items} />
+      <SectionShell
+        eyebrow="Aller plus loin"
+        title="Vous recrutez en Life Sciences ou en santé animale ?"
+        description="Une estimation de salaire ne dit pas si votre offre tient face au marché. Ces trois pages le précisent."
+      >
+        <div className="grid gap-4 md:grid-cols-3">
+          <Link
+            href="/salary-benchmarks"
+            className="rounded-[28px] border border-brand-teal/12 bg-white p-6 transition hover:border-brand-teal/40"
+          >
+            <p className="font-display text-xl text-brand-ink">Benchmarks salaires</p>
+            <p className="mt-3 text-sm leading-7 text-brand-stone">
+              Les fourchettes observées par fonction et par secteur, pour situer votre offre.
+            </p>
+          </Link>
+          <Link
+            href="/life-sciences"
+            className="rounded-[28px] border border-brand-teal/12 bg-white p-6 transition hover:border-brand-teal/40"
+          >
+            <p className="font-display text-xl text-brand-ink">Recrutement Life Sciences</p>
+            <p className="mt-3 text-sm leading-7 text-brand-stone">
+              Biotech, diagnostic, medtech et deeptech : comment nous cadrons une recherche cadre.
+            </p>
+          </Link>
+          <Link
+            href="/animal-health"
+            className="rounded-[28px] border border-brand-teal/12 bg-white p-6 transition hover:border-brand-teal/40"
+          >
+            <p className="font-display text-xl text-brand-ink">Recrutement santé animale</p>
+            <p className="mt-3 text-sm leading-7 text-brand-stone">
+              Groupements vétérinaires, laboratoires et petfood premium.
+            </p>
+          </Link>
+        </div>
+      </SectionShell>
+          <FAQSection eyebrow="FAQ" title={faqsByPage["calcul-salaire-brut-net"].title} description={faqsByPage["calcul-salaire-brut-net"].description} items={faqsByPage["calcul-salaire-brut-net"].items} emitJsonLd={false} />
     </>
   );
 }

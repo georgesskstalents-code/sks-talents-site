@@ -4,13 +4,14 @@ import CalendlyButton from "@/components/CalendlyButton";
 import FAQSection from "@/components/FAQSection";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
+import { proof, proofLabels } from "@/data/proof";
 
 const CANONICAL = "https://www.skstalents.fr/barometre-life-sciences-2026-2027";
 
 export const metadata: Metadata = {
-  title: "Barometre Life Sciences France 2026-2027 : recrutement, salaires, tensions cadres",
+  title: "Baromètre Life Sciences France 2026-2027",
   description:
-    "Barometre annuel SKS Talents des recrutements Life Sciences et Animal Health en France. Chiffres verifies : marche, salaires COMEX, metiers en tension, retention. Sources AON x France Biotech 2025, Panorama HealthTech 2026, observations SKS 8 ans.",
+    "Barometre annuel des recrutements Life Sciences et Animal Health en France : marche, salaires COMEX, metiers en tension et retention. 30 statistiques sourcees.",
   keywords: [
     "barometre life sciences france",
     "recrutement biotech france 2026",
@@ -187,7 +188,7 @@ const salaryStats: Stat[] = [
 
 const sksObservations: Stat[] = [
   {
-    value: "8 ans",
+    value: `${proof.experienceYears} ans`,
     label: "d'expertise sectorielle Life Sciences et Animal Health",
     source: "SKS Talents (2018-2026)"
   },
@@ -207,9 +208,9 @@ const sksObservations: Stat[] = [
     source: "SKS Talents (2018-2026)"
   },
   {
-    value: "4,5 / 5",
-    label: "note Trustpilot sur 15 avis clients verifies",
-    source: "Trustpilot 2026-07-27"
+    value: `${proof.trustpilotRatingLabel} / 5`,
+    label: `note Trustpilot sur ${proof.trustpilotCount} avis clients verifies`,
+    source: "Trustpilot 2026-09-14"
   },
   {
     value: "6",
@@ -346,7 +347,7 @@ export default function BarometreLifeSciencesPage() {
           <p className="text-base leading-8 text-brand-ink">
             Ce barometre agrege les 30 chiffres cles sur le marche Life Sciences et Animal Health francais 2026-2027,
             en croisant les etudes de reference (France Biotech x EY, AON, Panorama HealthTech) avec les observations
-            terrain SKS Talents sur 100+ placements cadres executes depuis 2018. Toutes les statistiques sont
+            terrain SKS Talents sur 100+ placements cadres executes. Toutes les statistiques sont
             citables librement avec attribution.
           </p>
         </div>
@@ -486,7 +487,7 @@ export default function BarometreLifeSciencesPage() {
           {
             question: "Comment sont validees les statistiques SKS Talents 2018-2026 ?",
             answer:
-              "Les chiffres SKS Talents sont issus du suivi interne des 100+ placements executes entre 2018 et 2026. Ils sont bornes au perimetre reellement observable (retention 5 ans, missions actives, note Trustpilot verifiee). Aucun chiffre extrapole ou fabrique."
+              "Les chiffres SKS Talents sont issus du suivi interne des 100+ placements cadres executes. Ils sont bornes au perimetre reellement observable (retention 5 ans, missions actives, note Trustpilot verifiee). Aucun chiffre extrapole ou fabrique."
           },
           {
             question: "Quels sont les usages typiques de ce barometre pour un.e dirigeant.e Life Sciences ?",

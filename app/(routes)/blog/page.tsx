@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
 import BlogMagazine from "@/components/landings/BlogMagazine";
 import FAQSection from "@/components/FAQSection";
 import PageHero from "@/components/PageHero";
 import { articles, type Article } from "@/data/articles";
 import { getNotionSiteContentList } from "@/lib/notion";
+
+export const metadata: Metadata = {
+  title: "Blog : recrutement et RH en Life Sciences",
+  description:
+    "Analyses de marché, signaux de recrutement et pratiques RH pour dirigeants de biotech, medtech, diagnostic, santé animale et petfood.",
+  alternates: { canonical: "https://www.skstalents.fr/blog" }
+};
 
 export const dynamic = "force-dynamic";
 

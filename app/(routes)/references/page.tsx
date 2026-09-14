@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "References clients SKS Talents : 100+ placements biotech, medtech, veterinaire",
+  title: "Références clients : 100+ placements cadres",
   description:
     "Placements cadres executes pour scale-ups biotech Series A-C, diagnostic IVD, medtech, groupements veterinaires et petfood premium. 75 % de retention a 5 ans. References marche par SKS TALENTS.",
   alternates: { canonical: "/references" },
@@ -18,6 +18,7 @@ import PageHero from "@/components/PageHero";
 import ReferenceCardMarquee from "@/components/ReferenceCardMarquee";
 import SectionShell from "@/components/SectionShell";
 import TrustpilotWidget from "@/components/TrustpilotWidget";
+import { proofLabels } from "@/data/proof";
 import { Reference, references } from "@/data/references";
 import { getNotionSiteContentList, mapNotionEntryToReference } from "@/lib/notion";
 import FAQSection from "@/components/FAQSection";
@@ -113,7 +114,7 @@ export default async function ReferencesPage() {
       </section>
       <SectionShell
         eyebrow="Preuve externe"
-        title="4,6/5 sur Trustpilot, 17 avis vérifiés"
+        title={`${proofLabels.trustpilotSentence} vérifiés`}
         description="Les avis publics Trustpilot complètent nos références clients : la preuve sociale externe rassure avant la prise de contact."
       >
         <TrustpilotWidget />
