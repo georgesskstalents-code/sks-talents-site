@@ -58,8 +58,8 @@ HTML_TPL = """<!DOCTYPE html>
   html, body {{ width: {w}px; height: {h}px; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }}
   body {{
     font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: #EFEDE4;
-    color: #163334;
+    background: #1D5457;
+    color: #FFFFFF;
     overflow: hidden;
   }}
   .cover {{
@@ -71,13 +71,6 @@ HTML_TPL = """<!DOCTYPE html>
     flex-direction: column;
     justify-content: space-between;
   }}
-  .cover::before {{
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 90px;
-    background: #4A9B9B;
-  }}
   .cover-top {{
     display: flex;
     justify-content: space-between;
@@ -87,16 +80,14 @@ HTML_TPL = """<!DOCTYPE html>
     z-index: 1;
   }}
   .vertical-badge {{
-    color: #FFFFFF;
+    color: #E8E2D4;
     font-weight: 700;
     letter-spacing: 0.28em;
     font-size: 16px;
     text-transform: uppercase;
   }}
   .emoji {{
-    font-size: 48px;
-    line-height: 1;
-    color: #FFFFFF;
+    display: none;
   }}
   .cover-body {{
     flex: 1;
@@ -108,24 +99,24 @@ HTML_TPL = """<!DOCTYPE html>
   .title {{
     font-family: 'Playfair Display', Georgia, serif;
     font-weight: 700;
-    font-size: 48px;
-    line-height: 1.1;
-    color: #163334;
-    letter-spacing: -0.01em;
-    max-width: 1000px;
+    font-size: {title_size}px;
+    line-height: 1.14;
+    color: #FFFFFF;
+    letter-spacing: -0.008em;
+    max-width: 980px;
   }}
   .divider {{
-    width: 80px;
+    width: 90px;
     height: 5px;
-    background: #4A9B9B;
+    background: #E8E2D4;
     margin: 25px 0 15px;
   }}
   .subtitle {{
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 20px;
-    color: #17A7A0;
-    letter-spacing: 0.05em;
+    font-size: 21px;
+    color: #DED7C6;
+    letter-spacing: 0.03em;
   }}
   .cover-bottom {{
     display: flex;
@@ -136,11 +127,11 @@ HTML_TPL = """<!DOCTYPE html>
   .brand {{
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 22px;
-    color: #163334;
+    font-size: 24px;
+    color: #FFFFFF;
   }}
   .tagline {{
-    color: #17A7A0;
+    color: #E8E2D4;
     font-weight: 600;
     font-size: 16px;
     letter-spacing: 0.04em;
@@ -205,9 +196,25 @@ def generate_cover(fm, chrome_bin, out_dir):
     vertical = fm.get("vertical", "life-sciences")
     topic = fm.get("topic", "")
 
+    # Le corps de titre s'adapte a la longueur, pour que le cadrage reste
+    # constant d'un article a l'autre : un titre long ne doit pas deborder,
+    # un titre court ne doit pas flotter.
+    n = len(title)
+    if n > 95:
+        title_size = 42
+    elif n > 78:
+        title_size = 46
+    elif n > 60:
+        title_size = 51
+    elif n > 42:
+        title_size = 58
+    else:
+        title_size = 64
+
     html = HTML_TPL.format(
         w=W,
         h=H,
+        title_size=title_size,
         title=escape(title),
         vertical_label=escape(VERTICAL_LABEL.get(vertical, vertical.upper())),
         emoji=VERTICAL_EMOJI.get(vertical, "📄"),
@@ -237,6 +244,49 @@ def generate_cover(fm, chrome_bin, out_dir):
     return png_path, result
 
 
+
+ARTICLES_TS = PROJECT_ROOT / "data" / "articles.ts"
+
+
+def read_articles_dataset():
+    """Extrait slug, titre, verticale et sujet de chaque article de data/articles.ts.
+
+    On decoupe le fichier sur les lignes `    slug: "..."` plutot que sur les
+    accolades : le champ `content` contient du markdown qui casse tout decoupage
+    structurel naif.
+    """
+    if not ARTICLES_TS.exists():
+        return []
+    src = ARTICLES_TS.read_text(encoding="utf-8")
+    # On ancre sur `id:`, premier champ de chaque entree. Ancrer sur `slug:`
+    # decalait la fenetre d'une entree : le titre etait juste, mais le sujet et
+    # la verticale etaient ceux de l'article precedent.
+    anchors = [m for m in re.finditer(r'^    id: "([^"]+)"', src, re.M)]
+    out = []
+    for i, m in enumerate(anchors):
+        lo = m.start()
+        hi = anchors[i + 1].start() if i + 1 < len(anchors) else len(src)
+        window = src[lo:hi]
+
+        def field(name):
+            f = re.search(r'^    %s: "((?:[^"\\]|\\.)*)"' % name, window, re.M)
+            return f.group(1) if f else ""
+
+        vertical = field("vertical") or "life-sciences"
+        if vertical not in ("life-sciences", "animal-health"):
+            vertical = "animal-health" if ("vet" in vertical or "petfood" in vertical) else "life-sciences"
+        slug = field("slug")
+        if not slug:
+            continue
+        out.append({
+            "slug": slug,
+            "title": field("title"),
+            "vertical": vertical,
+            "topic": field("topic"),
+        })
+    return out
+
+
 def main():
     chrome_bin = find_chrome()
     if not chrome_bin:
@@ -247,14 +297,35 @@ def main():
     PUBLIC_DIR.mkdir(parents=True, exist_ok=True)
 
     files = sorted(NEWSLETTERS_DIR.glob("*.md"))
+    entries = []
+    for f in files:
+        fm = parse_frontmatter(f.read_text(encoding="utf-8"))
+        if fm and fm.get("slug"):
+            entries.append(fm)
+
+    # docs/newsletters ne couvre qu'une partie du blog. La source de verite des
+    # articles publies est data/articles.ts : on la lit pour generer une
+    # couverture par article, sans quoi les anciennes couvertures restent en
+    # place avec l'ancienne palette.
+    entries += read_articles_dataset()
+
+    seen = set()
+    unique = []
+    for fm in entries:
+        if fm["slug"] in seen:
+            continue
+        seen.add(fm["slug"])
+        unique.append(fm)
+    entries = unique
     print(f"=== SKS Blog Cover Generator ===\n")
     print(f"Chrome: {chrome_bin}")
     print(f"Output: {OUTPUT_DIR.relative_to(PROJECT_ROOT)}\n")
 
     ok, ko = 0, 0
-    for f in files:
-        fm = parse_frontmatter(f.read_text(encoding="utf-8"))
-        if not fm or not fm.get("slug"):
+    script_mtime = Path(__file__).stat().st_mtime
+    for fm in entries:
+        existing = PUBLIC_DIR / f"{fm['slug']}.png"
+        if existing.exists() and existing.stat().st_mtime > script_mtime:
             continue
         try:
             png_path, result = generate_cover(fm, chrome_bin, OUTPUT_DIR)

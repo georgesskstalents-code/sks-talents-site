@@ -77,9 +77,15 @@ describe("resolveJobRoleSlug", () => {
   });
 
   it("refuse de rediriger quand deux fiches sont equivalentes", () => {
-    // Aucune fiche "Chief Marketing Officer Petfood" n'existe : le score reste
-    // trop bas et trop serre pour justifier un 308.
-    expect(resolveJobRoleSlug("chief-marketing-officer-petfood").status).toBe("suggest");
+    // Aucune fiche "Chief Marketing Officer Animal Health" n'existe : le score
+    // reste trop bas et trop serre pour justifier un 308, le visiteur recoit des
+    // suggestions plutot qu'une redirection devinee.
+    // Note : "chief-marketing-officer-petfood" servait d'exemple ici jusqu'au
+    // 2026-09-07. Il a depuis un alias manuel explicite, parce que ce slug est
+    // imprime dans un carrousel LinkedIn deja diffuse. Un alias manuel est une
+    // decision humaine et prime volontairement sur le moteur de similarite,
+    // dont ce test verifie la prudence.
+    expect(resolveJobRoleSlug("chief-marketing-officer-animal-health").status).toBe("suggest");
   });
 });
 

@@ -3675,6 +3675,60 @@ const strategicExtras: JobRole[] = [
     ]
   },
   {
+    slug: "petfood-data-scientist",
+    title: "Data Scientist Petfood",
+    salary: "45kEUR - 80kEUR + bonus",
+    salarySource:
+      "Ordre de grandeur France, fixe brut annuel. La fourchette basse cible les profils de 2 a 3 ans, la haute les profils seniors capables de porter la gouvernance de la donnee. Le positionnement depend de trois criteres : la taille de l'entreprise, la localisation du poste et la part variable propre a chaque structure.",
+    sector: "Petfood",
+    category: "Data et analytics",
+    shortageLevel: "Tres elevee",
+    summary:
+      "Transforme les donnees du petfood (ventes retail et D2C, panels consommateurs, essais de palatabilite, qualite et procedes industriels) en decisions de formulation, de gamme et de prevision. Fonction recente dans la filiere : peu de profils combinent la comprehension de la nutrition animale et la maitrise statistique.",
+    skills: [
+      "Modelisation predictive et prevision de la demande",
+      "Analyse de donnees retail, D2C et panels consommateurs",
+      "Exploitation des donnees d'essais palatabilite et de qualite",
+      "Python, SQL, visualisation et industrialisation des modeles",
+      "Vulgarisation aupres de la R&D, du marketing et de la supply chain"
+    ],
+    successFactors: [
+      "Comprendre la formulation et la nutrition animale avant de modeliser.",
+      "Livrer des decisions actionnables plutot que des tableaux de bord.",
+      "Faire dialoguer des donnees dispersees entre R&D, industriel, retail et e-commerce."
+    ],
+    path: [
+      "Data analyst agroalimentaire",
+      "Data scientist petfood",
+      "Head of Data / Analytics petfood"
+    ],
+    missions: [
+      "Construire les modeles de prevision de la demande par segment (chiens, chats, premium, therapeutique) et par canal.",
+      "Analyser les donnees de ventes retail et D2C pour eclairer les decisions de gamme et de prix.",
+      "Exploiter les donnees d'essais de palatabilite et de panels pour accelerer les cycles de formulation.",
+      "Industrialiser les analyses qualite et procedes pour reduire la variabilite produit.",
+      "Structurer la gouvernance et la fiabilite des donnees entre R&D, industriel, marketing et supply chain.",
+      "Traduire les resultats en recommandations lisibles pour les equipes non techniques."
+    ],
+    studies: [
+      "Ingenieur.e agroalimentaire ou data",
+      "Master statistiques ou data science",
+      "Formation nutrition animale appreciee"
+    ],
+    schools: ["AgroParisTech", "Institut Agro Montpellier", "ENSAIA", "UniLaSalle"],
+    relatedIndustries: [
+      "Petfood",
+      "Nutrition animale",
+      "FMCG alimentaire",
+      "Retail et e-commerce specialise",
+      "Data et analytics agroalimentaire"
+    ],
+    sources: [
+      { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL },
+      { name: "FEDIAF - Federation europeenne de l'industrie petfood", url: "https://europeanpetfood.org/" }
+    ]
+  },
+  {
     slug: "petfood-procurement-manager-ingredients",
     title: "Procurement Manager Ingrédients Petfood",
     salary: "55kEUR - 95kEUR",

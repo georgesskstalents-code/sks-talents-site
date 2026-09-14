@@ -3,6 +3,7 @@ import path from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
+import ArticleBody, { headingId, parseArticle, splitSource } from "@/components/ArticleBody";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import EditorialContentLayout, { getEditorialHeroImage } from "@/components/EditorialContentLayout";
 import { articles, getArticleVerticalLabel } from "@/data/articles";
@@ -61,49 +62,6 @@ function buildHowToSchema(slug: string, title: string, paragraphs: string[], art
       text: s.text
     }))
   };
-}
-
-function renderInlineMarkdown(text: string, keyPrefix: string) {
-  const parts: Array<string | { href: string; label: string }> = [];
-  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)/g;
-  let lastIndex = 0;
-  let match: RegExpExecArray | null;
-  while ((match = pattern.exec(text)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push(text.slice(lastIndex, match.index));
-    }
-    parts.push({ label: match[1], href: match[2] });
-    lastIndex = match.index + match[0].length;
-  }
-  if (lastIndex < text.length) {
-    parts.push(text.slice(lastIndex));
-  }
-  if (parts.length === 1 && typeof parts[0] === "string") {
-    return text;
-  }
-  return parts.map((part, idx) =>
-    typeof part === "string" ? (
-      <span key={`${keyPrefix}-t-${idx}`}>{part}</span>
-    ) : part.href.startsWith("/") ? (
-      <Link
-        key={`${keyPrefix}-l-${idx}`}
-        href={part.href}
-        className="font-semibold text-brand-teal underline decoration-brand-teal/30 underline-offset-2 hover:decoration-brand-teal"
-      >
-        {part.label}
-      </Link>
-    ) : (
-      <a
-        key={`${keyPrefix}-l-${idx}`}
-        href={part.href}
-        target="_blank"
-        rel="noreferrer noopener"
-        className="font-semibold text-brand-teal underline decoration-brand-teal/30 underline-offset-2 hover:decoration-brand-teal"
-      >
-        {part.label}
-      </a>
-    )
-  );
 }
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || "https://www.skstalents.fr";
@@ -208,6 +166,30 @@ export default async function BlogDetailPage({
   const audienceLabel = article?.persona.join(", ") || "CEO, COO, CPO, DRH";
   const publishedAt = notionArticle?.publishDate || article?.date || new Date().toISOString().slice(0, 10);
   const articleUrl = `${siteUrl}/blog/${slug}`;
+
+  // Les titres sont ecrits "Sujet · phrase". Le sujet remonte en surtitre et la
+  // phrase devient le titre : le lecteur voit la thematique, puis l'accroche,
+  // au lieu d'un bloc unique qui se casse sur quatre lignes.
+  // Sommaire cliquable : construit a partir des titres de section reels de
+  // l'article, jamais d'une liste ecrite a la main.
+  const sections = parseArticle(body)
+    .flatMap((b) => {
+      if (b.kind === "heading" && b.level === 2) return [{ id: headingId(b.text), label: b.text }];
+      // Les sections metier sont regroupees en bloc : leur ancre porte le nom du metier.
+      if (b.kind === "metier") return [{ id: headingId(b.name), label: b.name }];
+      return [];
+    })
+    .map((b, i) => ({ ...b, num: String(i + 1).padStart(2, "0") }));
+
+  const titleParts = title.split(" · ");
+  const heroOverline = titleParts.length > 1 ? titleParts[0] : undefined;
+  const heroTitle =
+    titleParts.length > 1
+      ? (() => {
+          const rest = titleParts.slice(1).join(" · ");
+          return rest.charAt(0).toUpperCase() + rest.slice(1);
+        })()
+      : title;
   const paragraphs = body.split("\n\n").filter(Boolean);
   const internalLinks = article?.internalLinks ?? [];
   const answerFirst = article?.answerFirst;
@@ -316,33 +298,48 @@ export default async function BlogDetailPage({
         />
       ) : null}
       <EditorialContentLayout
-        badge={verticalLabel}
-        title={title}
+        badge={topicLabel || verticalLabel}
+        overline={heroOverline}
+        title={heroTitle}
         description={excerpt || kicker}
         imageSrc={heroVisual.src}
         imageAlt={heroVisual.alt}
+        variant="typographic"
+        sidebar={
+          sections.length > 2 ? (
+            <nav aria-label="Sommaire de l'article">
+              <p className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-brand-teal">
+                Sommaire
+              </p>
+              <ol className="mt-3 grid list-none gap-2 border-l border-brand-ink/10 p-0">
+                {sections.map((section) => (
+                  <li key={section.id} className="pl-4 text-sm leading-snug">
+                    <a
+                      href={`#${section.id}`}
+                      className="text-brand-stone transition hover:text-brand-teal"
+                    >
+                      <span className="font-mono text-[0.7rem] text-brand-teal">{section.num}</span>{" "}
+                      {section.label}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          ) : undefined
+        }
+        meta={[
+          "SKS Talents",
+          new Date(publishedAt).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }),
+          article?.readTime ? `${article.readTime} min de lecture` : ""
+        ].filter(Boolean)}
       >
         <div className="space-y-6 text-base leading-8 text-brand-stone">
-          <div className="rounded-[22px] border border-brand-teal/12 bg-white/80 p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
-              Repères
-            </p>
-            <p className="mt-3 text-sm leading-7 text-brand-stone">{audienceLabel}</p>
-            <p className="mt-2 text-sm leading-7 text-brand-stone">{kicker}</p>
-          </div>
           {answerFirst ? (
             <div className="rounded-[22px] border border-brand-teal/20 bg-brand-mint/30 p-6">
               <p className="text-base leading-8 text-brand-ink">{answerFirst}</p>
             </div>
           ) : null}
-          {paragraphs.map((paragraph, index) => (
-            <p
-              key={`${slug}-${index}`}
-              className={index === 0 ? "text-lg leading-9 text-brand-ink" : undefined}
-            >
-              {renderInlineMarkdown(paragraph, `${slug}-${index}`)}
-            </p>
-          ))}
+          <ArticleBody body={body} keyPrefix={slug} />
           {internalLinks.length ? (
             <div className="rounded-[24px] border border-brand-teal/10 bg-white/85 p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
@@ -362,23 +359,36 @@ export default async function BlogDetailPage({
             </div>
           ) : null}
           {sources.length ? (
-            <div className="rounded-[24px] border border-brand-teal/10 bg-brand-mint/35 p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
-                Sources
+            <div className="my-10 bg-[#1d5457] px-7 py-6">
+              <p className="mb-4 font-mono text-[0.64rem] uppercase tracking-[0.2em] text-[#e8e2d4]">
+                Méthodologie et sources
               </p>
-              <div className="mt-4 grid gap-3">
-                {sources.map((source) => (
-                  <a
-                    key={source.url}
-                    href={source.url}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="text-sm font-semibold text-brand-teal transition hover:opacity-80"
-                  >
-                    {source.name}
-                  </a>
-                ))}
-              </div>
+              <ul className="grid list-none gap-3 p-0 text-left">
+                {sources.map((source) => {
+                  const { org, doc } = splitSource(source.name);
+                  return (
+                    <li key={source.name} className="text-left text-[0.92rem] leading-relaxed text-white/90">
+                      {org ? (
+                        <span className="mr-2 font-mono text-[0.66rem] uppercase tracking-[0.12em] text-[#e8e2d4]">
+                          {org}
+                        </span>
+                      ) : null}
+                      {source.url ? (
+                        <a
+                          href={source.url}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="underline decoration-[#e8e2d4]/40 underline-offset-2 transition hover:decoration-[#e8e2d4]"
+                        >
+                          {doc}
+                        </a>
+                      ) : (
+                        <span>{doc}</span>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           ) : null}
         </div>

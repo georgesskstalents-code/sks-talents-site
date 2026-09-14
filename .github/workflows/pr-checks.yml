@@ -1,0 +1,59 @@
+name: Verification avant merge
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Installer les dependances
+        run: npm ci
+
+      # Ces tests sont le garde-fou principal. Le bug des 8 articles orphelins
+      # du 2026-08-25 passait le build sans erreur : le fichier compilait, mais
+      # les articles n'etaient exposes nulle part. Seuls des tests d'integrite
+      # peuvent attraper cette classe de probleme avant le merge.
+      - name: Integrite du contenu
+        run: npx vitest run lib/contentIntegrity.test.ts
+
+      - name: Suite de tests complete
+        run: npx vitest run
+
+      - name: Build de production
+        run: npx next build
+
+      - name: Aucun tiret cadratin dans le contenu publie
+        run: |
+          # Le tiret cadratin est la signature typographique n1 des textes
+          # generes par IA : il est proscrit dans tout ce que le lecteur voit.
+          # Perimetre : les donnees editoriales et les pages. Exclusions :
+          # - app/dashboard/typo : reference typographique interne, les tirets
+          #   longs y sont des echantillons
+          # - les fichiers *.test.ts : libelles de tests, jamais publies
+          # - les fichiers qui DEFINISSENT la regle doivent contenir le
+          #   caractere pour l'interdire ou le remplacer
+          FOUND=$(grep -rEn "—|–" --include="*.ts" --include="*.tsx" \
+                    --exclude="*.test.ts" --exclude-dir=typo \
+                    app components data 2>/dev/null \
+                  | grep -vE "chloe-chat/route\.ts|linkedin-content-gen/route\.ts" || true)
+          if [ -n "$FOUND" ]; then
+            echo "$FOUND"
+            echo "Tirets cadratins trouves dans du contenu publie. Utiliser un tiret simple ou un point median."
+            exit 1
+          fi
+          echo "Aucun tiret cadratin dans le contenu publie."
