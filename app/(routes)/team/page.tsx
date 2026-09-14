@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
 import CalendlyButton from "@/components/CalendlyButton";
 import { proof, proofLabels } from "@/data/proof";
+
+export const metadata: Metadata = {
+  title: "Georges Kengue, fondateur",
+  description:
+    "Georges Kengue a fondé SKS Talents, cabinet executive search Life Sciences et santé animale. Parcours, méthode et repères de satisfaction.",
+  alternates: { canonical: "https://www.skstalents.fr/team" }
+};
 
 export default function TeamPage() {
   const ecosystemPartners = [

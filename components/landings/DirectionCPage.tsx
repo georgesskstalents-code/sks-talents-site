@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Link from "next/link";
-import TestimonialMarquee from "@/components/TestimonialMarquee";
+import SectorInterlocutor from "@/components/landings/SectorInterlocutor";
+import ClientTestimonials from "@/components/landings/ClientTestimonials";
 import MarqueeLogoItem from "./MarqueeLogoItem";
 import { type DirectionCSector } from "./directionCContent";
 import "./direction-c.css";
@@ -318,37 +319,6 @@ function RHBoard({ d }: { d: DirectionCSector }) {
   );
 }
 
-function Testimonial() {
-  return (
-    <section className="c-tp-section">
-      <div className="c-container">
-        <div className="c-tp-head">
-          <div>
-            <span className="c-eyebrow">Avis vérifiés · Trustpilot</span>
-            <h2 className="c-h2">
-              Ce que nos clients et candidats <span className="c-italic">disent de nous.</span>
-            </h2>
-            <p className="c-section-lede">
-              Témoignages réels de candidats placés et de dirigeants accompagnés.
-            </p>
-          </div>
-          <a
-            className="c-link"
-            href="https://fr.trustpilot.com/review/skstalents.fr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Voir tous les avis Trustpilot →
-          </a>
-        </div>
-        <div className="mt-8">
-          <TestimonialMarquee embedded />
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function Paths({ d }: { d: DirectionCSector }) {
   return (
     <section className="c-section">
@@ -436,7 +406,8 @@ export default function DirectionCPage({ sector }: Props) {
       <Method d={sector} />
       <RHBoard d={sector} />
       <Differentiation d={sector} />
-      <Testimonial />
+      <SectorInterlocutor />
+      <ClientTestimonials />
       <Paths d={sector} />
       <Final d={sector} />
       <Switcher slug={sector.slug} />

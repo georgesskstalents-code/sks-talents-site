@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "References clients SKS Talents : 100+ placements biotech, medtech, veterinaire",
+  title: "Références clients : 100+ placements cadres",
   description:
     "Placements cadres executes pour scale-ups biotech Series A-C, diagnostic IVD, medtech, groupements veterinaires et petfood premium. 75 % de retention a 5 ans. References marche par SKS TALENTS.",
   alternates: { canonical: "/references" },

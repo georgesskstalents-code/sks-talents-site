@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
+
+export const metadata: Metadata = {
+  title: "Espace presse",
+  description:
+    "Ressources presse SKS Talents : présentation du cabinet, prises de parole et contact pour les journalistes.",
+  alternates: { canonical: "https://www.skstalents.fr/press" }
+};
 
 const publications = [
   {

@@ -4,7 +4,7 @@ import AnimalHealthLanding from "./AnimalHealthLanding";
 const CANONICAL = "https://www.skstalents.fr/animal-health/structuration-ia";
 const TITLE = "Digitalisation santé animale par l'IA - Groupements vet, petfood, diagnostic";
 const DESCRIPTION =
-  "Digitalisation santé animale par l'IA : groupements veterinaires, cliniques, petfood, diagnostic. 3 agents IA + automatisation reporting multi-sites. Demo 30 sec : 3 jours a 4 minutes. ROI 6 mois. RGPD by design.";
+  "Digitalisation RH par l'IA pour groupements veterinaires, cliniques et petfood : 3 agents IA et automatisation du reporting multi-sites. Demo de 30 secondes.";
 
 export const metadata: Metadata = {
   title: TITLE,

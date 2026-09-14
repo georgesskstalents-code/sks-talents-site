@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
 import CalendlyButton from "@/components/CalendlyButton";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
 import { proof, proofLabels } from "@/data/proof";
+
+export const metadata: Metadata = {
+  title: "Notre mission et notre méthode",
+  description:
+    "Comment SKS Talents cadre une recherche de dirigeant en Life Sciences et santé animale, de l'intake à la prise de poste.",
+  alternates: { canonical: "https://www.skstalents.fr/mission" }
+};
 
 export default function MissionPage() {
   return (

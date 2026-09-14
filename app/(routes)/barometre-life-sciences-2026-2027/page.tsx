@@ -9,9 +9,9 @@ import { proof, proofLabels } from "@/data/proof";
 const CANONICAL = "https://www.skstalents.fr/barometre-life-sciences-2026-2027";
 
 export const metadata: Metadata = {
-  title: "Barometre Life Sciences France 2026-2027 : recrutement, salaires, tensions cadres",
+  title: "Baromètre Life Sciences France 2026-2027",
   description:
-    "Barometre annuel SKS Talents des recrutements Life Sciences et Animal Health en France. Chiffres verifies : marche, salaires COMEX, metiers en tension, retention. Sources AON x France Biotech 2025, Panorama HealthTech 2026, observations SKS 8 ans.",
+    "Barometre annuel des recrutements Life Sciences et Animal Health en France : marche, salaires COMEX, metiers en tension et retention. 30 statistiques sourcees.",
   keywords: [
     "barometre life sciences france",
     "recrutement biotech france 2026",
