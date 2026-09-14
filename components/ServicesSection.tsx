@@ -44,7 +44,13 @@ export default function ServicesSection() {
                 </p>
               </div>
               <Link
-                href="/services"
+                href={
+                  service.slug === "structuration-rh"
+                    ? "/structuration-rh"
+                    : service.slug === "recrutement"
+                      ? "/life-sciences"
+                      : "/services"
+                }
                 className="button-premium mt-8 inline-flex rounded-full border border-brand-teal/20 px-5 py-3 text-sm font-semibold text-brand-teal"
               >
                 Explorer l’offre

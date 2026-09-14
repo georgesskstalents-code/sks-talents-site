@@ -188,7 +188,22 @@ export const serviceNodes = [
     audience: AUDIENCE,
     url: `${SITE_URL}/structuration-rh`,
     description:
-      "Audit RH, organisation cible, process de recrutement et d'onboarding, outillage, automatisation et gouvernance IA."
+      "Audit RH, organisation cible, process de recrutement et d'onboarding, outillage, automatisation et gouvernance IA.",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Livrables de structuration RH",
+      itemListElement: [
+        "Audit RH",
+        "Organigramme cible",
+        "Process de recrutement et d'onboarding",
+        "Grille de rémunération",
+        "Outillage et automatisation",
+        "Gouvernance IA"
+      ].map((name) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name }
+      }))
+    }
   }
 ];
 

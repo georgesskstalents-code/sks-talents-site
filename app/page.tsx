@@ -240,6 +240,16 @@ export default function HomePage() {
                   </p>
                 </Link>
               </div>
+              <p className="mt-6 text-sm leading-7 text-brand-stone">
+                Avant d&apos;automatiser, il faut un cadre.{" "}
+                <Link
+                  href="/structuration-rh"
+                  className="font-semibold text-brand-teal underline underline-offset-4"
+                >
+                  Voir la structuration RH et la digitalisation des process
+                </Link>
+                .
+              </p>
             </div>
 
           </div>

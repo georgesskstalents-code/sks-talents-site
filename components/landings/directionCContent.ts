@@ -171,7 +171,7 @@ export const lifeSciencesContent: DirectionCSector = {
       statValue: "15 jours à 1 mois selon le projet",
       statLabel: "intake → signature, en moyenne",
       cta: { label: "Programme Life Sciences", url: "/life-sciences/structuration-ia" },
-      secondary: { label: "Diagnostic agents →", url: "/diagnostic" },
+      secondary: { label: "Structuration RH →", url: "/structuration-rh" },
       icon: "chip"
     }
   ],
@@ -289,7 +289,7 @@ export const animalHealthContent: DirectionCSector = {
       statValue: "15 jours à 1 mois selon le projet",
       statLabel: "intake → signature, en moyenne",
       cta: { label: "Programme Animal Health", url: "/animal-health/structuration-ia" },
-      secondary: { label: "Diagnostic agents →", url: "/diagnostic" },
+      secondary: { label: "Structuration RH →", url: "/structuration-rh" },
       icon: "chip"
     }
   ],

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { faqNode, pageGraph } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import PackageComparator from "@/components/PackageComparator";
 import SalaryCalculator from "@/components/SalaryCalculator";
@@ -35,7 +36,6 @@ export const metadata: Metadata = {
 
 export default function SalaryCalculatorPage() {
   const webPageSchema = {
-    "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Calcul du salaire brut en net",
     url: "https://www.skstalents.fr/calcul-salaire-brut-net",
@@ -47,7 +47,11 @@ export default function SalaryCalculatorPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            pageGraph([webPageSchema, faqNode(faqsByPage["calcul-salaire-brut-net"].items)])
+          )
+        }}
       />
       <PageHero
         kicker="Simulateur salaire"
@@ -181,7 +185,7 @@ export default function SalaryCalculatorPage() {
           </Link>
         </div>
       </SectionShell>
-          <FAQSection eyebrow="FAQ" title={faqsByPage["calcul-salaire-brut-net"].title} description={faqsByPage["calcul-salaire-brut-net"].description} items={faqsByPage["calcul-salaire-brut-net"].items} />
+          <FAQSection eyebrow="FAQ" title={faqsByPage["calcul-salaire-brut-net"].title} description={faqsByPage["calcul-salaire-brut-net"].description} items={faqsByPage["calcul-salaire-brut-net"].items} emitJsonLd={false} />
     </>
   );
 }

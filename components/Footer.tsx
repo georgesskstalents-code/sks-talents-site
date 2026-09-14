@@ -11,7 +11,8 @@ const cabinetLinks = [
 ];
 
 const dirigeantLinks = [
-  { href: "/services", label: "Executive Search · Structuration RH" },
+  { href: "/services", label: "Executive Search · RPO" },
+  { href: "/structuration-rh", label: "Structuration RH" },
   { href: "/life-sciences/structuration-ia", label: "Programme IA Life Sciences", highlight: true },
   { href: "/animal-health/structuration-ia", label: "Programme IA Animal Health", highlight: true },
   { href: "/diagnostic", label: "Diagnostic" },

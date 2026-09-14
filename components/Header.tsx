@@ -33,7 +33,7 @@ const navGroups: NavGroup[] = [
     label: "Nos services",
     children: [
       { href: "/services", label: "Executive Search" },
-      { href: "/services", label: "Structuration RH" },
+      { href: "/structuration-rh", label: "Structuration RH" },
       { href: "/life-sciences/structuration-ia", label: "Programme IA Life Sciences" },
       { href: "/animal-health/structuration-ia", label: "Programme IA Animal Health" },
       { href: "/diagnostic", label: "Diagnostic gratuit" }

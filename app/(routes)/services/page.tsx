@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { orgRef, pageGraph } from "@/lib/seo";
+import { faqNode, orgRef, pageGraph } from "@/lib/seo";
 import FounderCard from "@/components/FounderCard";
 import MethodNarrative from "@/components/MethodNarrative";
 import PageHero from "@/components/PageHero";
@@ -56,7 +56,9 @@ export default function ServicesPage() {
         id="services-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(pageGraph([breadcrumbJsonLdNode, serviceNode]))
+          __html: JSON.stringify(
+            pageGraph([breadcrumbJsonLdNode, serviceNode, faqNode(faqsByPage["services"].items)])
+          )
         }}
       />
 
@@ -83,7 +85,7 @@ export default function ServicesPage() {
       <RevealOnScroll delayMs={100}>
         <FounderCard />
       </RevealOnScroll>
-          <FAQSection eyebrow="FAQ" title={faqsByPage["services"].title} description={faqsByPage["services"].description} items={faqsByPage["services"].items} />
+          <FAQSection eyebrow="FAQ" title={faqsByPage["services"].title} description={faqsByPage["services"].description} items={faqsByPage["services"].items} emitJsonLd={false} />
     </>
   );
 }
