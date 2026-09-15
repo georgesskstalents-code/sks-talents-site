@@ -60,14 +60,16 @@ describe("appendSiteAnalyticsLog — Supabase enabled", () => {
   });
 });
 
-describe("appendLeadEventLog — Supabase enabled", () => {
-  it("posts to lead_events table", async () => {
+describe("appendLeadEventLog - Supabase enabled", () => {
+  // Contrat inverse de la version precedente. appendLeadEventLog ecrivait dans
+  // lead_events alors que les huit routes appelantes appellent deja
+  // persistLeadDurably : chaque soumission creait deux lignes et le tableau de
+  // bord comptait chaque lead deux fois. Constate en recette le 15/09/2026.
+  it("n'ecrit plus dans Supabase, la durabilite revient a persistLeadDurably", async () => {
     process.env.SUPABASE_URL = "https://test.supabase.co";
     process.env.SUPABASE_SERVICE_ROLE_KEY = "test-key";
 
-    const fetchMock = vi.fn().mockResolvedValue(
-      new Response(null, { status: 201 })
-    );
+    const fetchMock = vi.fn().mockResolvedValue(new Response(null, { status: 201 }));
     vi.stubGlobal("fetch", fetchMock);
 
     const mod = await import("./siteIntelligence");
@@ -78,8 +80,7 @@ describe("appendLeadEventLog — Supabase enabled", () => {
       createdAt: "2026-05-04T10:00:00.000Z"
     });
 
-    const [calledUrl] = fetchMock.mock.calls[0];
-    expect(calledUrl).toBe("https://test.supabase.co/rest/v1/lead_events");
+    expect(fetchMock).not.toHaveBeenCalled();
   });
 });
 
