@@ -82,7 +82,7 @@ export const orientationRecommendations: OrientationRecommendation[] = [
     strengths: ["Biologie moléculaire", "Protocoles expérimentaux", "Culture data scientifique"],
     formations: ["Master biologie moléculaire", "PhD biotech", "Spécialisation ARN / génomique"],
     schools: ["universite-paris-saclay-biology", "universite-montpellier-pharma", "universite-lille-biotech"],
-    articleSlugs: ["arn-hiring-2025", "precision-medicine-biotech", "synthetic-biology-startups"],
+    articleSlugs: ["metiers-biotech-rd-bioproduction"],
     jobRoleSlug: "biotech-senior-scientist-arn-therapeutics",
     scoreTags: ["biotech", "research", "lab", "science", "entry", "junior", "specialist"],
     trending: true
@@ -97,7 +97,7 @@ export const orientationRecommendations: OrientationRecommendation[] = [
     strengths: ["Bioinformatique", "Pipelines NGS", "Analyse de données"],
     formations: ["Master bioinformatique", "Data science santé", "Génomique / NGS"],
     schools: ["esigen-bioinformatique", "utc-biomed", "centrale-supelec-health"],
-    articleSlugs: ["ngs-bioinformatician-demand", "molecular-diagnostics-pcr-ngs", "rwe-clinical-data-management"],
+    articleSlugs: ["metiers-diagnostic-ivd"],
     jobRoleSlug: "diagnostic-bioinformaticien-ngs",
     scoreTags: ["diagnostic", "data", "analysis", "science", "entry", "junior", "specialist"],
     trending: true
@@ -112,7 +112,7 @@ export const orientationRecommendations: OrientationRecommendation[] = [
     strengths: ["Coordination", "Relation terrain", "Organisation d’activité"],
     formations: ["Santé animale", "Business / management", "Parcours vétérinaire ou biotech animale"],
     schools: ["oniris", "vetagro-sup", "enva"],
-    articleSlugs: ["veterinarian-shortage-solutions", "pet-clinic-group-expansion", "vet-clinic-digital-transformation"],
+    articleSlugs: ["exercer-recruter-clinique-veterinaire", "metiers-petfood-nutrition-animale"],
     jobRoleSlug: "veterinary-developpement-performance-clinique",
     scoreTags: ["animal-health", "care", "field", "communication", "entry", "junior", "hybrid", "business"]
   },
@@ -126,7 +126,7 @@ export const orientationRecommendations: OrientationRecommendation[] = [
     strengths: ["Innovation produit", "Gestion de projet", "Coordination transverse"],
     formations: ["Nutrition", "Agro / formulation", "Marketing ou innovation food / petcare"],
     schools: ["isa-lille-nutrition", "agrocampus-ouest", "agroparistech"],
-    articleSlugs: ["pet-nutrition-science-trends", "petfood-product-development-innovation", "sustainable-proteins-petfood"],
+    articleSlugs: ["metiers-petfood-nutrition-animale"],
     jobRoleSlug: "head-of-innovation-petfood",
     scoreTags: ["petfood", "product", "business", "execution", "entry", "junior", "hybrid"]
   },
@@ -140,7 +140,7 @@ export const orientationRecommendations: OrientationRecommendation[] = [
     strengths: ["Rigueur documentaire", "Coordination multi-parties", "Qualité et conformité"],
     formations: ["Pharmacie", "Affaires réglementaires", "Qualité / clinique"],
     schools: ["universite-montpellier-pharma", "universite-paris-saclay-biology", "em-lyon-healthcare"],
-    articleSlugs: ["genomics-precision-medicine", "regulatory-affairs-vet-pharma", "ivd-testing-laboratory-roles"],
+    articleSlugs: ["metiers-biotech-rd-bioproduction", "regulatory-affairs-vet-pharma", "metiers-diagnostic-ivd"],
     jobRoleSlug: "biotech-clinical-operations-manager",
     scoreTags: ["biotech", "diagnostic", "product", "execution", "science", "junior", "specialist", "hybrid"]
   }
