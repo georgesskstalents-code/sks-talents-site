@@ -4,8 +4,7 @@ import {
   CREATED_AT_COLUMN,
   fromAnalyticsRow,
   fromLeadEventRow,
-  toAnalyticsRow,
-  toLeadEventRow
+  toAnalyticsRow
 } from "@/lib/supabaseRows";
 
 export type SiteAnalyticsEvent = {
@@ -137,14 +136,27 @@ export async function readSiteAnalyticsLog(): Promise<SiteAnalyticsEvent[]> {
   }
 }
 
+/**
+ * Trace locale d'un lead, pour le developpement.
+ *
+ * Cette fonction ecrivait aussi dans Supabase, alors que les huit routes qui
+ * l'appellent appellent deja persistLeadDurably. Chaque soumission creait donc
+ * deux lignes dans lead_events : une complete avec ses metadata, et une
+ * minimale. Le tableau de bord comptait chaque lead deux fois.
+ *
+ * Constate en recette le 15/09/2026. La durabilite est desormais assuree par
+ * persistLeadDurably seul, qui ecrit la ligne complete et alimente aussi le
+ * webhook. Il reste ici le journal fichier, utile en local ou Supabase n'est
+ * pas configure.
+ */
 export async function appendLeadEventLog(payload: LeadEventLog) {
-  await Promise.allSettled([
-    (async () => {
-      await mkdir(path.dirname(leadLogPath), { recursive: true });
-      await appendFile(leadLogPath, `${JSON.stringify(payload)}\n`, "utf8");
-    })(),
-    supabaseInsert(leadsTable, toLeadEventRow(payload.kind, payload))
-  ]);
+  try {
+    await mkdir(path.dirname(leadLogPath), { recursive: true });
+    await appendFile(leadLogPath, `${JSON.stringify(payload)}\n`, "utf8");
+  } catch {
+    // Systeme de fichiers en lecture seule en production : sans consequence,
+    // la ligne durable est ecrite par persistLeadDurably.
+  }
 }
 
 export async function readLeadEventLog(): Promise<LeadEventLog[]> {
