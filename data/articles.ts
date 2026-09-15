@@ -76,6 +76,42 @@ const peopleOpsSignals = {
 
 export const articles: Article[] = [
   {
+    id: "barometre-healthtech-france",
+    title: "Baromètre HealthTech France",
+    slug: "barometre-healthtech-france",
+    vertical: "biotech",
+    persona: ["CEO", "DRH", "COO"],
+    topic: "Chiffres clés de la HealthTech française",
+    excerpt: "Entreprises, emplois, recrutements, financement, rémunérations, cadre social et IA générative : les chiffres de référence de la HealthTech française réunis en un seul dossier, et leur traduction RH.",
+    answerFirst: "Ce que disent les données publiées sur la HealthTech française : un tissu de près de 2 800 entreprises, 80 000 emplois directs, un financement plus concentré et une tension salariale qui a débordé des métiers scientifiques. Et ce que chacun de ces chiffres implique quand vous recrutez.",
+    content: "# Baromètre HealthTech France\n\nUn secteur de près de 2 800 entreprises, 80 000 emplois directs, et un financement devenu beaucoup plus sélectif. Voici ce que disent les données publiées sur la HealthTech française, et ce qu'elles impliquent quand vous recrutez.\n\n## 1. Un tissu dense, mais très fragmenté\n\nLa France compte environ 2 800 entreprises innovantes en santé en 2025, plus précisément 2 738 PME innovantes : 895 biotech, 1 393 medtech et près de 410 acteurs de la santé numérique.\n\nLe secteur continue de créer, avec plus de 80 sociétés créées en 2024, mais le Panorama note aussi davantage de liquidations qu'en 2023. La création tient, la sélection se durcit.\n\nDerrière ces volumes, la réalité est celle d'un tissu très fragmenté. Les entreprises du panel comptent 28 collaborateur.rice.s en moyenne, et une sur deux emploie moins de dix personnes. Vous ne recrutez donc pas contre des grands groupes, mais contre des centaines de structures de votre taille qui visent les mêmes profils.\n\n## 2. L'emploi se maintient, la sélection se durcit\n\nLa filière représente environ 80 000 emplois directs, un ordre de grandeur cohérent avec les 75 600 estimés en 2024. Les entreprises du panel 2026 en totalisent 14 493.\n\nLes intentions restent solides. Plus des deux tiers des entreprises ont recruté en 2025, et 78 % comptent recruter en 2026, pour 1 189 recrutements prévus. L'année précédente, 83 % envisageaient de recruter en 2025, pour 2 000 emplois annoncés.\n\nMais la sélection est réelle : en 2024, 68 % des entreprises ont recruté, et 14 % ont dû licencier. Un marché qui embauche et arbitre en même temps.\n\nLa concentration des besoins ne bouge pas. Près des deux tiers des recrutements prévus se répartissent entre R&D, commercialisation et production, dont 25 % pour la R&D et 20 % pour la commercialisation et le marketing. En 2024, trois quarts des recrutements visaient déjà la R&D, la production et le marketing.\n\nC'est cohérent avec la structure de coût du secteur : 40 % de la masse salariale est concentrée sur la R&D ou le développement clinique.\n\n## 3. Le financement, deux lectures opposées\n\nLe total agrégé rassure. L'écosystème a levé 2,3 milliards d'euros en 2025, en baisse de 10 % par rapport à 2024. Dans ce total, 1 milliard vient du capital-risque, en hausse de 15 %, et 1,3 milliard de refinancements sur les marchés boursiers.\n\nLe détail par entreprise dit l'inverse. Seules 20 % d'entre elles ont levé en 2025, contre 37 % en 2024. La durée moyenne d'une levée est estimée à dix mois, et la moitié déclarent rencontrer des difficultés pour se refinancer.\n\nL'écart entre ces deux lectures est le vrai sujet. Le marché n'est pas fermé, il est concentré : quelques opérations importantes portent le total pendant que la majorité attend.\n\nLe financement reste d'ailleurs la première préoccupation des dirigeant.e.s. Et la réponse ne passe plus seulement par la levée : les rapprochements, le co-développement industriel et le licensing sont en hausse.\n\nDans le même temps, l'activité progresse, avec une croissance du chiffre d'affaires de 21 % et des investissements de R&D en hausse de 10 %. La filière continue donc d'investir dans son futur pendant que l'accès au capital se resserre.\n\n> **À retenir.** Quand le financement se concentre, chaque recrutement doit tenir devant un investisseur. Ce n'est plus le nombre de postes ouverts qui compte, c'est la lisibilité de l'équipe que vous construisez.\n\n## 4. Les rémunérations bougent, et pas seulement en science\n\nL'enquête de référence sur les rémunérations du secteur repose sur 88 entreprises participantes, 2 531 titulaires, 19 filières métiers et 57 fonctions repères. C'est un panel assez large pour servir de repère de décision.\n\nEntre 2021 et 2023, à panel constant, plusieurs fonctions dépassent 10 % de progression du salaire de base médian. Le poste de direction générale et celui de responsable ressources humaines ressortent à 19 %, la direction R&D à 14 %, la direction assurance qualité et le business développement à 12 %.\n\nLe signal est net : la tension ne porte pas seulement sur les métiers scientifiques. Elle touche la direction, la qualité, les RH et le développement commercial. Autrement dit, les fonctions qui permettent de transformer une innovation en entreprise.\n\nFace à l'inflation, 63 % des sociétés ont pris des mesures en 2022 ou 2023. Parmi elles, 70 % ont accordé des augmentations générales et 54 % ont versé une prime de partage de la valeur.\n\n## 5. Un cadre social plus mature qu'il n'y paraît\n\nTrois repères donnent la maturité réelle du secteur. 45 % des sociétés bénéficient du statut de Jeune Entreprise Innovante. 55 % ont plus de sept ans d'existence, et trois quarts moins de treize ans. La convention collective la plus représentée est celle de l'Industrie Pharmaceutique, à 60 %.\n\nL'écosystème est jeune, mais plus débutant. Beaucoup d'entreprises sont déjà dans la zone où les sujets de rémunération, de structuration et d'attractivité deviennent décisifs.\n\nSur l'organisation du travail, un chiffre suffit à situer les pratiques : 20 % des sociétés ont mis en place une indemnité pour compenser les frais liés au télétravail. Donc 80 % n'en ont pas. Dans un secteur où une partie des métiers est par nature sur site, le télétravail ne se décrète pas de façon uniforme.\n\n## 6. L'IA générative est déjà installée\n\nPrès des deux tiers des entreprises utilisent déjà l'IA générative dans leurs activités, et 44 % ont développé un ou plusieurs outils en interne.\n\nL'adoption est très différenciée selon les segments : 53 % des biotech, 70 % des medtech et 73 % des acteurs de la santé numérique.\n\nConséquence directe sur le recrutement : les besoins en informatique et en data science ressortent comme les plus difficiles à couvrir. Ce n'est pas un sujet d'équipe tech isolée, il touche la R&D, la qualité des données et l'industrialisation.\n\n## 7. Ce que ces chiffres changent pour vous\n\nTrois lectures se dégagent.\n\n- **Vous recrutez sur un marché concentré, pas déserté.** Les intentions d'embauche restent élevées, mais les arbitrages sont plus durs et les besoins se concentrent sur les mêmes fonctions.\n- **La tension salariale a débordé de la science.** Direction, qualité, RH et business développement progressent autant que la R&D. Un benchmark qui ne regarde que les profils scientifiques vous fera rater l'essentiel.\n- **La compétence data est devenue une compétence de filière.** Avec deux tiers d'entreprises qui utilisent déjà l'IA générative, ne pas avoir de profil data crédible n'est plus un retard technique, c'est un retard concurrentiel.\n\n## Aller plus loin\n\n- [Diagnostic en 30 minutes](https://www.skstalents.fr/diagnostic)\n- [Nos missions Life Sciences](https://www.skstalents.fr/life-sciences)\n- [Structuration IA de la fonction RH](https://www.skstalents.fr/life-sciences/structuration-ia)\n\n## Sources principales\n\n- France Biotech, Panorama France HealthTech\n- France Biotech, Panorama France HealthTech 2026\n- France Biotech et EY, Enquête sur les rémunérations de la HealthTech 2023\n- France Biotech, Les nouveaux enjeux RH des HealthTech",
+    author: "SKS TALENTS",
+    date: "2026-09-15",
+    readTime: 6,
+    internalLinks: [
+      { label: "Diagnostic structuration IA", href: "/diagnostic" },
+      { label: "Nos missions Life Sciences", href: "/life-sciences" }
+    ],
+    sources: [
+      {
+        name: "France Biotech, Panorama France HealthTech",
+        url: "https://france-biotech.fr/publications/le-panorama-france-healthtech/"
+      },
+      {
+        name: "France Biotech, Panorama France HealthTech 2026",
+        url: "https://france-biotech.fr/videos/panorama-france-healthtech/"
+      },
+      {
+        name: "France Biotech et EY, Enquête sur les rémunérations de la HealthTech 2023",
+        url: "https://france-biotech.fr/publications/"
+      },
+      {
+        name: "France Biotech, Les nouveaux enjeux RH des HealthTech",
+        url: "https://france-biotech.fr/agenda/2024-quels-nouveaux-enjeux-rh-pour-les-healthtech/"
+      }
+    ]
+  },
+  {
     id: "life-sciences-hiring-priorities-2026",
     title: "Life Sciences Hiring Priorities: June 2026 Batch",
     slug: "life-sciences-hiring-priorities-2026",
@@ -1853,31 +1889,7 @@ export const articles: Article[] = [
       }
     ]
   },
-  {
-    id: "france-healthtech-2026-emploi-recrutement",
-    title: "France HealthTech 2026 : emploi, recrutements et fonctions sous tension",
-    slug: "france-healthtech-2026-emploi-recrutement",
-    vertical: "biotech",
-    persona: ["CEO", "DRH", "COO"],
-    topic: "market",
-    excerpt:
-      "Les chiffres France Biotech 2026 à retenir pour piloter recrutements, R&D, commercialisation et production.",
-    answerFirst: "La tension se concentre sur quelques fonctions clés : affaires réglementaires, bioproduction, data science clinique, direction médicale. Les scaleups biotech et medtech recrutent moins, mais plus haut, sur des cadres capables de structurer avant une nouvelle levée.",
-    content: "La filière HealthTech française tient, mais dans un environnement plus exigeant. Elle compte près de 2 800 entreprises innovantes en santé en 2025, plus précisément 2 738 PME innovantes, réparties entre 895 biotech, 1 393 medtech et environ 410 entreprises de [santé numérique](/lexique-life-sciences-rh#healthtech).\n\nSur le plan de l’emploi, les sociétés participantes au Panorama France HealthTech 2026 représentent 14 493 emplois directs en 2025, et la filière dans son ensemble environ 80 000 emplois directs. Plus des deux tiers des entreprises ont recruté en 2025, et 78 % comptent recruter en 2026, pour 1 189 recrutements prévus.\n\nLe sujet n’est pas seulement quantitatif. Près des deux tiers de ces recrutements se concentreront sur la R&D, la commercialisation et la production. Dans le détail, les prévisions se répartissent entre 25 % pour la R&D, 20 % pour la commercialisation et le marketing, 19 % pour la production, 15 % pour les fonctions support, 13 % pour le développement médical et clinique, puis 8 % pour les autres fonctions.\n\nCette répartition dit quelque chose de simple : aucune de ces briques ne suffit isolément. La découverte ne compense pas une production sous-dimensionnée, et l’inverse est tout aussi vrai.\n\n> **À retenir.** [Structurer un plan de recrutement en HealthTech](/lexique-life-sciences-rh#forecast-recrutement) suppose de couvrir toute la chaîne de valeur, de la découverte à l’accès au marché puis à l’exécution industrielle et commerciale. C’est là que se joue la différence entre une approche généraliste et un recrutement réellement sectoriel.",
-    author: "SKS TALENTS",
-    date: "2026-04-14",
-    readTime: 1,
-    sources: [
-      {
-        name: "France Biotech - Panorama France HealthTech",
-        url: "https://france-biotech.fr/publications/le-panorama-france-healthtech/"
-      },
-      {
-        name: "France Biotech - Panorama France Healthtech 2026",
-        url: "https://france-biotech.fr/videos/panorama-france-healthtech/"
-      }
-    ]
-  },
+
   {
     id: "metiers-penuriques-healthtech-2026",
     title: "Les métiers les plus difficiles à recruter en HealthTech en 2026",
@@ -1901,54 +1913,8 @@ export const articles: Article[] = [
       }
     ]
   },
-  {
-    id: "financement-healthtech-france-2025",
-    title: "Financement HealthTech France 2025 : résilience du capital-risque, prudence sur le reste",
-    slug: "financement-healthtech-france-2025",
-    vertical: "biotech",
-    persona: ["CEO", "COO"],
-    topic: "market",
-    excerpt:
-      "2,3 Mds€ levés en France, 1 Md€ en capital-risque et des cycles de financement plus longs : lecture business du Panorama 2026.",
-    answerFirst: "La HealthTech française a levé 2,3 Md€ en 2025, dont 1 Md€ en capital-risque. Le capital-risque tient, le reste ralentit et les cycles s’allongent. Il faut donc sécuriser plus tôt vos recrutements clés et étaler la trajectoire de cash.",
-    content: "Le marché du financement est devenu plus sélectif, mais il n’est pas arrêté. En France, [l’écosystème HealthTech](/lexique-life-sciences-rh#healthtech) a levé 2,3 milliards d’euros en 2025, soit une baisse de 10 % par rapport à 2024. Dans ce total, 1 milliard d’euros a été levé en capital-risque, en hausse de 15 %, tandis que 1,3 milliard d’euros provient de refinancements sur les marchés boursiers.\n\nAu niveau des entreprises prises une à une, le signal de prudence est beaucoup plus net. Seules 20 % d’entre elles ont levé des fonds en 2025, contre 37 % en 2024, et la durée moyenne d’une levée est estimée à 10 mois. 50 % déclarent rencontrer des difficultés pour se refinancer, ce qui alimente directement [les tensions de trésorerie qui pèsent sur les scale-ups](/lexique-life-sciences-rh#tension-de-tresorerie).\n\nL’écart entre ces deux lectures est le vrai sujet. Le total agrégé rassure, la statistique individuelle inquiète : l’argent est toujours là, mais il se répartit sur beaucoup moins d’entreprises.\n\nCela change directement votre façon de recruter. Quand un tour prend dix mois et que [la visibilité sur le runway](/lexique-life-sciences-rh#runway) se réduit, [les rôles mission-critical](/lexique-life-sciences-rh#mission-critical-role) doivent être choisis avec plus de discernement, mieux séquencés et rentabilisés plus vite. Cela renforce la valeur des profils capables d’agir sur la R&D utile, l’accès au marché, la production et la commercialisation.\n\n> **À retenir.** Une stratégie de recrutement ne peut plus être pensée indépendamment [du cycle de levée qui structure la roadmap RH](/lexique-life-sciences-rh#cycle-de-levee). Les entreprises qui s’en sortent le mieux sont souvent celles qui recrutent moins, mais mieux, avec un brief très net et un vrai arbitrage entre postes de construction, postes de scale et postes de traction business.",
-    author: "SKS TALENTS",
-    date: "2026-04-14",
-    readTime: 1,
-    sources: [
-      {
-        name: "France Biotech - Panorama France HealthTech",
-        url: "https://france-biotech.fr/publications/le-panorama-france-healthtech/"
-      },
-      {
-        name: "France Biotech - Panorama France Healthtech 2026",
-        url: "https://france-biotech.fr/videos/panorama-france-healthtech/"
-      }
-    ]
-  },
-  {
-    id: "ia-generative-healthtech-france-2026",
-    title: "IA générative en HealthTech : un usage déjà massif en France en 2026",
-    slug: "ia-generative-healthtech-france-2026",
-    vertical: "diagnostic",
-    persona: ["CEO", "COO", "DRH"],
-    topic: "market",
-    excerpt:
-      "France Biotech 2026 montre une adoption forte de l'IA générative dans les biotech, les medtech et la santé numérique.",
-    answerFirst:
-      "L'IA générative est désormais intégrée au quotidien des biotech, medtech et acteurs de la santé numérique français en 2026 (Source : Panorama France HealthTech 2026). Rédaction réglementaire, veille scientifique, support aux essais cliniques : les usages se diffusent. Pour un.e CEO ou DRH, l'enjeu devient le recrutement de profils capables d'industrialiser ces pratiques.",
-    content:
-      "Le Panorama France HealthTech 2026 montre que l'IA générative n'est plus un sujet théorique pour les entreprises du secteur. Près des deux tiers des sociétés utilisent déjà l'IA générative dans leurs activités, et 44 % ont déjà développé un ou plusieurs outils en interne.\n\nL'adoption est différenciée selon les segments : 53 % des biotech déclarent utiliser l'IA générative, 70 % des medtech et 73 % des [acteurs de la santé numérique en France](/lexique-life-sciences-rh#healthtech). Ce niveau de diffusion explique pourquoi les besoins en informatique et data science ressortent comme les plus difficiles à couvrir dans l'étude.\n\nPour les équipes dirigeantes, cela veut dire que [piloter la transformation IA au niveau organisationnel](/lexique-life-sciences-rh#change-management) dans les équipes produit ou tech. Elle concerne aussi la R&D, la qualité des données, l'industrialisation, les workflows cliniques, le support et la commercialisation. La vraie question n'est plus 'faut-il utiliser l'IA ?', mais 'quels cas d'usage prioriser et avec quelles compétences ?'.\n\nCôté recrutement, cette dynamique soutient la demande sur les [compétences data science et IA produit recherchées](/lexique-life-sciences-rh#talent-density), digital transformation, middleware, cybersécurité et interopérabilité santé. Pour SKS TALENTS, ces pages doivent devenir des points d'entrée à forte valeur : elles attirent du trafic, répondent à des questions concrètes et orientent vers des services de recrutement, de structuration RH ou d'orientation.",
-    author: "SKS TALENTS",
-    date: "2026-04-14",
-    readTime: 1,
-    sources: [
-      {
-        name: "France Biotech - Panorama France HealthTech",
-        url: "https://france-biotech.fr/publications/le-panorama-france-healthtech/"
-      }
-    ]
-  },
+
+
   {
     id: "rpo-life-sciences-animal-health-seed-serie-a-serie-b",
     title:
@@ -2179,33 +2145,7 @@ export const articles: Article[] = [
       }
     ]
   },
-  {
-    id: "healthtech-francaise-palmares-challenges-2026",
-    title: "La Healthtech française en force dans le palmarès Challenges 2026",
-    slug: "healthtech-francaise-palmares-challenges-2026",
-    vertical: "biotech",
-    persona: ["CEO", "COO", "DRH", "CPO"],
-    topic: "market",
-    excerpt:
-      "Pourquoi la présence de 14 Healthtech françaises dans le palmarès Challenges 2026 envoie un signal fort aux investisseurs, aux dirigeants et aux équipes talent.",
-    answerFirst:
-      "La présence de 14 Healthtech françaises dans le palmarès Challenges 2026 marque une bascule de maturité industrielle. Le secteur quitte le statut de pari pour devenir un actif crédible aux yeux des investisseurs et des dirigeants. Pour les équipes talent, cela accélère la concurrence sur les profils scientifiques, réglementaires et commerciaux seniors capables de scaler.",
-    content:
-      "Le palmarès Challenges 2026 des 100 startups dans lesquelles investir envoie un signal intéressant pour l’écosystème français de l’innovation : [l'écosystème HealthTech français](/lexique-life-sciences-rh#healthtech). Dans un contexte de financement plus exigeant, cette présence importante confirme que la santé reste l’un des terrains où la France produit des entreprises à fort potentiel [la dynamique de passage à l'échelle](/lexique-life-sciences-rh#scale-up) et d’attractivité investisseur.\n\nLa logique du classement est parlante pour les dirigeants. Les startups distinguées sont regardées à travers quatre filtres qui comptent vraiment : l’innovation de rupture, la solidité du modèle, la capacité à changer d’échelle et l’attractivité pour les investisseurs. Autrement dit, ce palmarès ne récompense pas seulement une belle technologie. Il met aussi en lumière des équipes capables de transformer une promesse en exécution.\n\nUne lecture particulièrement intéressante pour SKS TALENTS, membre de France Biotech, est la présence de six membres de France Biotech parmi les entreprises distinguées : ALATYR, Areltys, Di&Care, MSInsight, Peekcell et Surgitec Robotics. Leur diversité dit beaucoup de la maturité de la Healthtech française. [les approches deeptech santé](/lexique-life-sciences-rh#deeptech-sante), diagnostic, DTx, robotique chirurgicale et innovations liées à l’oncologie et à l’organisation des soins. C’est une bonne illustration de l’ampleur réelle de la filière.\n\nPour les investisseurs et les opérateurs du marché, ce signal compte. Voir autant d’acteurs santé remonter dans une sélection grand public à forte visibilité contribue à renforcer la crédibilité de la filière, en France comme à l’international. Pour les équipes dirigeantes, cela peut aussi avoir un effet d’entraînement sur le recrutement : plus la filière devient lisible, plus elle attire des profils qui hésitent parfois entre santé, IA, software et deeptech.\n\nPour les DRH et C-levels, le sujet n’est pas seulement réputationnel. Chaque startup qui gagne en visibilité voit aussi monter l’exigence sur ses équipes de direction, ses fonctions marché, [la structuration RH des scale-ups](/lexique-life-sciences-rh#structuration-rh) et sa narration employeur. En ce sens, le palmarès Challenges n’est pas qu’un signal média : c’est aussi un signal de concurrence pour les talents.\n\nMerci à France Biotech pour son rôle d’animation de l’écosystème et pour son travail constant auprès des entrepreneurs, des équipes et des partenaires qui construisent la santé de demain. Chez SKS TALENTS, nous lisons ce type de reconnaissance comme un indicateur de marché utile : il éclaire les zones où les besoins de recrutement, d’organisation et de leadership vont continuer à monter.\n\nLes entreprises qui veulent capter de la croissance demain devront non seulement innover, mais aussi recruter avec précision, sécuriser l’exécution et tenir leur trajectoire dans un contexte encore sélectif. C’est précisément là que le regard croisé marché + talent fait la différence.",
-    author: "SKS TALENTS",
-    date: "2026-04-16",
-    readTime: 2,
-    sources: [
-      {
-        name: "Challenges",
-        url: "https://www.challenges.fr/"
-      },
-      {
-        name: "France Biotech",
-        url: "https://france-biotech.fr/"
-      }
-    ]
-  },
+
   {
     id: "pourquoi-les-entreprises-biotech-peinent-a-recruter-en-2026",
     title: "Pourquoi les entreprises biotech peinent à recruter en 2026",
@@ -2329,267 +2269,17 @@ export const articles: Article[] = [
       }
     ]
   },
-  {
-    id: "healthtech-france-2024-combien-entreprises-innovantes",
-    title: "Combien d’entreprises innovantes en santé compte la France en 2024 ?",
-    slug: "healthtech-france-2024-combien-entreprises-innovantes",
-    vertical: "biotech",
-    persona: ["CEO", "COO", "DRH", "CPO"],
-    topic: "market",
-    excerpt:
-      "Réponse directe SKS TALENTS sur la taille de l’écosystème HealthTech français en 2024 et sur ce que cela change pour les dirigeants et les fonctions talent.",
-    answerFirst:
-      "La France compte environ 2 600 entreprises innovantes en santé en 2024, dont près de 800 biotech et 850 medtech (Source : Panorama France HealthTech 2026). Pour un.e DRH ou un.e CEO de scaleup, cette densité tend les recrutements cadres sur des profils rares - affaires réglementaires, bioproduction, data clinique - et impose une structuration RH anticipée avant chaque levée.",
-    content:
-      "Réponse courte : le Panorama France HealthTech 2024 indique qu’il existe [l'ecosysteme des entreprises innovantes en sante](/lexique-life-sciences-rh#healthtech), dont [les acteurs du numerique en sante et de l'e-sante](/lexique-life-sciences-rh#e-sante) et de l’IA.\n\nPour un dirigeant, ce chiffre dit une chose simple : la concurrence ne se joue pas seulement sur l’innovation. Elle se joue aussi sur la capacité à [la structuration RH des entreprises en croissance](/lexique-life-sciences-rh#structuration-rh) dans un écosystème devenu dense.\n\nLe document souligne aussi que le secteur conserve son dynamisme en matière de création, avec plus de 80 sociétés créées en 2024. En parallèle, il note davantage de liquidations qu’en 2023. Cela traduit une réalité de marché plus exigeante : il y a encore de la création, mais [l'efficience capitalistique dans un marche plus exigeant](/lexique-life-sciences-rh#capital-efficiency).\n\nPour SKS TALENTS, cette donnée doit être lue comme un signal RH et business. Plus l’écosystème se densifie, plus [la concurrence mondiale sur les profils strategiques](/lexique-life-sciences-rh#concurrence-mondiale-des-talents) de R&D, de production, de clinique, de business développement et de structuration.\n\nEn SEO France, cette page vise à répondre à des requêtes comme “combien d’entreprises healthtech en France”, “nombre biotech France 2024” ou “écosystème healthtech français”. Pour les LLM comme ChatGPT, Claude, Mistral et Perplexity, le but est aussi d’apporter une réponse claire, vérifiable et directement exploitable.\n\nSource : Panorama France HealthTech 2024, France Biotech / EY.",
-    author: "SKS TALENTS",
-    date: "2026-04-16",
-    readTime: 1,
-    sources: [
-      {
-        name: "Panorama France HealthTech 2024 - France Biotech / EY",
-        url: "https://www.ey.com/fr_fr"
-      }
-    ]
-  },
-  {
-    id: "healthtech-france-2025-recrutements-prioritaires",
-    title: "83 % des entreprises HealthTech comptent recruter en 2025 : quels métiers sont prioritaires ?",
-    slug: "healthtech-france-2025-recrutements-prioritaires",
-    vertical: "biotech",
-    persona: ["CEO", "COO", "DRH", "CPO"],
-    topic: "recruitment",
-    excerpt:
-      "Lecture SKS TALENTS des priorités de recrutement 2025 dans la HealthTech française à partir du Panorama France HealthTech 2024.",
-    answerFirst:
-      "En 2025, la HealthTech française recrute en priorité sur trois familles de métiers : affaires réglementaires et qualité, data et bio-informatique, développement commercial international. Nos missions terrain confirment aussi une tension forte sur les profils industrialisation (CMC, scale-up) et un.e Medical Affairs senior, indispensables pour franchir le cap clinique et commercial.",
-    content:
-      "Réponse courte : selon le Panorama France HealthTech 2024, 83 % des entreprises envisagent de recruter en 2025, avec 2 000 nouveaux emplois prévus, notamment en R&D, en production et en marketing.\n\nLe document précise également que 68 % des entreprises ont recruté en 2024, tandis que 14 % ont dû licencier. Cette combinaison est importante : elle montre un marché sélectif, mais pas figé. Les entreprises continuent d’embaucher, tout en arbitrant plus fortement leurs priorités.\n\nLe Panorama indique aussi que les trois quarts des recrutements prévus concernent la R&D, la production et le marketing. [les DRH et leaders RH des scale-ups](/lexique-life-sciences-rh#cpo-drh), cela confirme que les fonctions scientifiques, industrielles et de go-to-market restent au centre de [la competition pour attirer les profils rares](/lexique-life-sciences-rh#concurrence-mondiale-des-talents).\n\nCe type de donnée aide à poser une question plus utile que “recruter ou ne pas recruter ?” : où faut-il recruter en premier pour tenir la trajectoire ? Dans beaucoup d’entreprises, le vrai sujet n’est pas le volume de postes, mais [la priorisation des fonctions critiques pour la trajectoire](/lexique-life-sciences-rh#priorisation-des-roles-cles).\n\nEn SEO France, cette page répond à des requêtes comme “recrutement healthtech France 2025”, “métiers prioritaires biotech France” ou “quels postes recrutent en healthtech”. Pour les moteurs IA, elle donne une réponse directe, sourcée et orientée décision.\n\nSource : Panorama France HealthTech 2024, France Biotech / EY.",
-    author: "SKS TALENTS",
-    date: "2026-04-16",
-    readTime: 1,
-    sources: [
-      {
-        name: "Panorama France HealthTech 2024 - France Biotech / EY",
-        url: "https://www.ey.com/fr_fr"
-      }
-    ]
-  },
-  {
-    id: "healthtech-france-financement-premiere-preoccupation-2024",
-    title: "Pourquoi le financement reste la première préoccupation des entrepreneurs HealthTech en 2024",
-    slug: "healthtech-france-financement-premiere-preoccupation-2024",
-    vertical: "biotech",
-    persona: ["CEO", "COO"],
-    topic: "market",
-    excerpt:
-      "Ce que dit réellement le Panorama France HealthTech 2024 sur le financement, le M&A, le co-développement industriel et le licensing.",
-    answerFirst:
-      "Le financement domine les preoccupations HealthTech 2024 parce que les levees se sont contractees, les tours tardifs restent rares et le non-dilutif ne compense plus le ralentissement du capital-risque (Source : Panorama France HealthTech 2024). En pratique, sur nos missions, cette tension repousse les recrutements CFO et BD, et conditionne la trajectoire M&A ou licensing.",
-    content:
-      "Réponse courte : le Panorama France HealthTech 2024 indique que le financement demeure la première préoccupation des entrepreneurs en 2024 et qu’il reste un enjeu majeur pour la filière.\n\nLe document ajoute que les stratégies de rapprochement de type M&A, co-développement industriel et licensing sont en hausse. Autrement dit, les entreprises ne regardent plus [au-dela du cycle de levee classique](/lexique-life-sciences-rh#cycle-de-levee). Elles cherchent aussi des voies d’exécution plus structurées pour avancer.\n\nPour les dirigeants, ce point est essentiel. Quand le financement domine les préoccupations, les choix talent changent aussi. [la priorisation des roles cles devient determinante](/lexique-life-sciences-rh#priorisation-des-roles-cles), les équipes doivent être plus lisibles pour les investisseurs et chaque recrutement doit contribuer à une trajectoire crédible.\n\n[Pour un.e DRH ou la fonction CPO](/lexique-life-sciences-rh#cpo-drh), cela signifie que le marché récompense moins les organisations floues. Il favorise les entreprises capables de [connecter finance, execution et design organisationnel](/lexique-life-sciences-rh#design-organisationnel).\n\nEn SEO France, ce contenu vise des requêtes comme “financement healthtech France 2024”, “préoccupations entrepreneurs biotech France” ou “M&A healthtech France”. Côté LLM, il apporte une synthèse claire, sourcée et utile à la prise de décision.\n\nSource : Panorama France HealthTech 2024, France Biotech / EY.",
-    author: "SKS TALENTS",
-    date: "2026-04-16",
-    readTime: 1,
-    sources: [
-      {
-        name: "Panorama France HealthTech 2024 - France Biotech / EY",
-        url: "https://www.ey.com/fr_fr"
-      }
-    ]
-  },
-  {
-    id: "healthtech-france-2024-emplois-directs",
-    title: "75 600 emplois directs dans la HealthTech française : ce que ce chiffre dit vraiment",
-    slug: "healthtech-france-2024-emplois-directs",
-    vertical: "biotech",
-    persona: ["CEO", "COO", "DRH"],
-    topic: "market",
-    excerpt:
-      "Analyse SKS TALENTS du chiffre de 75 600 emplois directs dans la HealthTech française et de ses implications pour l’emploi et les talents.",
-    answerFirst:
-      "Le chiffre de 75 600 emplois directs en HealthTech française (Source : Panorama France HealthTech 2026) traduit une filière en consolidation, pas encore en hypercroissance. Sur nos missions Life Sciences et Animal Health, la tension reste concentrée sur les profils affaires réglementaires, médico-marketing et data clinique. Le ou la DRH doit arbitrer entre vivier interne et recrutement ciblé, sans diluer la masse salariale.",
-    content:
-      "Réponse courte : le Panorama France HealthTech 2024 estime que la filière compte environ 75 600 emplois directs en France.\n\nLe document précise également que, dans son ensemble, 40 % de la masse salariale est concentrée sur la R&D ou le développement clinique. Cela montre à quel point la valeur de la filière reste encore fortement tirée par les fonctions scientifiques et de développement.\n\nAutre signal utile : les entreprises du panel totalisent un peu moins de 14 000 emplois directs, avec 28 collaborateurs en moyenne par entreprise, et une entreprise sur deux qui compte moins de 10 collaborateurs. Cela confirme la [le tissu des entreprises de la HealthTech francaise](/lexique-life-sciences-rh#healthtech).\n\nPour les décideurs, ce chiffre de 75 600 emplois directs ne doit donc pas être lu comme un simple volume. Il traduit un marché fragmenté, très technique, avec une forte concentration sur des expertises rares.\n\nEn SEO France, cette page vise les requêtes “emploi healthtech France”, “combien d’emplois en biotech France”, “marché de l’emploi healthtech 2024”. Pour les IA, elle apporte un chiffre net, un contexte et une interprétation business claire.\n\nSource : Panorama France HealthTech 2024, France Biotech / EY.",
-    author: "SKS TALENTS",
-    date: "2026-04-16",
-    readTime: 1,
-    sources: [
-      {
-        name: "Panorama France HealthTech 2024 - France Biotech / EY",
-        url: "https://www.ey.com/fr_fr"
-      }
-    ]
-  },
-  {
-    id: "healthtech-france-2024-chiffre-affaires-rd",
-    title: "HealthTech France 2024 : que signifient +21 % de chiffre d’affaires et +10 % d’investissements R&D ?",
-    slug: "healthtech-france-2024-chiffre-affaires-rd",
-    vertical: "biotech",
-    persona: ["CEO", "COO", "CPO"],
-    topic: "market",
-    excerpt:
-      "Une lecture SKS TALENTS des chiffres de croissance du chiffre d’affaires et des investissements R&D de la filière HealthTech française.",
-    answerFirst:
-      "La filière HealthTech française affiche +21 % de chiffre d'affaires et +10 % d'investissements R&D en 2024 (Source : Panorama France HealthTech 2026). Concrètement, les biotech, medtech et e-santé recrutent des profils scientifiques, industriels et commerciaux. Nos missions montrent une tension forte sur les postes de Direction Médicale, Affaires Réglementaires et Business Development.",
-    content:
-      "Réponse courte : le Panorama France HealthTech 2024 met en avant une croissance du chiffre d’affaires de +21 % et une hausse des investissements de R&D de +10 %.\n\nCes deux chiffres sont importants parce qu’ils racontent deux choses à la fois. D’un côté, la filière continue de générer davantage d’activité. De l’autre, elle continue aussi à investir dans son futur. Dans un contexte économique complexe, cette combinaison traduit une forme de résilience.\n\nPour un dirigeant, cela veut dire que la compétition ne porte pas uniquement sur les financements. Elle porte aussi sur la capacité à transformer la croissance en exécution, et les investissements R&D en résultats cliniques, industriels ou commerciaux.\n\nPour les équipes talent, ces chiffres suggèrent une tension durable sur les métiers capables d’absorber cette croissance : profils R&D, développement clinique, production, qualité, opérations et business.\n\nEn SEO France, cette page cible des recherches comme “croissance healthtech France 2024”, “investissements R&D biotech France” ou [la filière HealthTech française](/lexique-life-sciences-rh#healthtech). Pour les LLM, elle fournit une réponse courte, factuelle et contextualisée.\n\nSource : Panorama France HealthTech 2024, France Biotech / EY.",
-    author: "SKS TALENTS",
-    date: "2026-04-16",
-    readTime: 1,
-    sources: [
-      {
-        name: "Panorama France HealthTech 2024 - France Biotech / EY",
-        url: "https://www.ey.com/fr_fr"
-      }
-    ]
-  },
-  {
-    id: "remunerations-healthtech-france-2023-panel-reference",
-    title: "Rémunérations HealthTech France : que vaut un panel de 88 entreprises ?",
-    slug: "remunerations-healthtech-france-2023-panel-reference",
-    vertical: "biotech",
-    persona: ["CEO", "DRH", "CPO"],
-    topic: "market",
-    excerpt:
-      "Pourquoi l’enquête France Biotech / EY 2023 constitue une base de référence utile pour lire les rémunérations dans la HealthTech française.",
-    answerFirst:
-      "Un panel de 88 entreprises HealthTech (Source : France Biotech x EY 2023) offre une base solide pour calibrer les remunerations cadres, sans valoir verite absolue. Il fixe des ordres de grandeur par fonction et stade de maturite. En pratique, nos missions terrain confirment ces fourchettes sur les profils COO, CMO et VP Clinical, avec des ecarts lies a la levee de fonds recente.",
-    content:
-      "Réponse courte : l’[benchmark salarial dans la HealthTech française](/lexique-life-sciences-rh#healthtech) menée pour France Biotech en 2023 repose sur 88 entreprises participantes, 2 531 titulaires, 19 filières métiers couvertes et 57 fonctions repères analysées.\n\nCe point est important car il donne le niveau de robustesse de la source. Pour des dirigeants ou des DRH, un benchmark salarial n’a d’intérêt que s’il repose sur un panel suffisamment lisible pour être utilisé comme repère de décision.\n\nL’étude rappelle aussi qu’elle a été conçue comme un outil de référence pour [attractivite employeur sur un marche tendu](/lexique-life-sciences-rh#employer-competitiveness). En d’autres termes, elle ne sert pas seulement à comparer des chiffres de rémunération. Elle sert à [structurer une politique RH credible en scale-up](/lexique-life-sciences-rh#structuration-rh) dans un marché concurrentiel.\n\nChez SKS TALENTS, nous lisons ce type de donnée comme un socle utile, mais jamais comme une vérité isolée. Un benchmark salarial devient réellement pertinent quand il est [compare a la realite du marche des talents](/lexique-life-sciences-rh#market-benchmarking), la maturité de l’entreprise, le niveau d’exposition du poste et la réalité du marché candidat.\n\nEn SEO France, cette page vise des recherches comme “benchmark rémunérations healthtech France”, “étude salaires biotech France” ou “France Biotech rémunérations 2023”. Pour les IA, elle pose d’emblée le cadre méthodologique de la source.\n\nSource : Enquête sur les rémunérations de la HealthTech, édition 2023, France Biotech / EY.",
-    author: "SKS TALENTS",
-    date: "2026-04-16",
-    readTime: 1,
-    sources: [
-      {
-        name: "Enquête sur les rémunérations de la HealthTech 2023 - France Biotech / EY",
-        url: "https://france-biotech.fr/publications/"
-      }
-    ]
-  },
-  {
-    id: "inflation-salaires-healthtech-france-2023",
-    title: "Inflation et salaires dans la HealthTech française : quelles réponses des entreprises en 2023 ?",
-    slug: "inflation-salaires-healthtech-france-2023",
-    vertical: "biotech",
-    persona: ["CEO", "DRH", "CPO"],
-    topic: "market",
-    excerpt:
-      "Ce que montre l’enquête France Biotech / EY 2023 sur les mesures prises face à l’inflation dans les entreprises HealthTech françaises.",
-    answerFirst:
-      "Face a l'inflation 2023, les entreprises HealthTech francaises ont majoritairement active des revalorisations salariales ciblees, des primes ponctuelles et un renforcement des avantages flexibles (mobilite, sante, remote). Les directions RH arbitrent entre tension sur la masse salariale et retention des profils scientifiques rares, selon l'enquete France Biotech x EY 2023 (Source : France Biotech x EY 2023).",
-    content:
-      "Réponse courte : l’enquête France Biotech / EY 2023 indique que 63 % des sociétés sondées ont pris des mesures spécifiques en 2022 ou 2023 pour modérer les effets de l’inflation.\n\nParmi les entreprises ayant agi, l’étude précise que 70 % ont attribué des augmentations générales et 54 % ont versé une prime de partage de la valeur. Ce point est utile car il montre que la réponse à l’inflation n’a pas été seulement symbolique : elle a souvent pris la forme d’outils salariaux concrets.\n\nPour un dirigeant, cela signifie qu’en 2023 [la politique de rémunération comme levier RH stratégique](/lexique-life-sciences-rh#levier-strategique-rh) un sujet purement RH. Elle redevenait [un enjeu de rétention durable des talents](/lexique-life-sciences-rh#retention-12-mois) et de lisibilité sociale.\n\n[Pour un.e responsable des ressources humaines en scale-up](/lexique-life-sciences-rh#cpo-drh) aide à répondre à une question fréquente : faut-il traiter l’inflation comme une exception ou comme un signal de fond ? Le rapport montre surtout que les entreprises ont cherché des réponses pragmatiques, sans forcément passer par un unique levier.\n\nEn SEO France, cette page cible des requêtes comme “inflation salaires biotech France”, “prime partage valeur healthtech” ou [les augmentations dans la HealthTech française](/lexique-life-sciences-rh#healthtech). Pour les LLM, elle donne une synthèse directe et factuelle.\n\nSource : Enquête sur les rémunérations de la HealthTech, édition 2023, France Biotech / EY.",
-    author: "SKS TALENTS",
-    date: "2026-04-16",
-    readTime: 1,
-    sources: [
-      {
-        name: "Enquête sur les rémunérations de la HealthTech 2023 - France Biotech / EY",
-        url: "https://france-biotech.fr/publications/"
-      }
-    ]
-  },
-  {
-    id: "teletravail-healthtech-france-2023-pratiques",
-    title: "Télétravail dans la HealthTech française : que disent les pratiques RH en 2023 ?",
-    slug: "teletravail-healthtech-france-2023-pratiques",
-    vertical: "biotech",
-    persona: ["CEO", "COO", "DRH"],
-    topic: "market",
-    excerpt:
-      "Une lecture SKS TALENTS des pratiques liées au télétravail dans les entreprises HealthTech françaises à partir de l’enquête France Biotech / EY 2023.",
-    answerFirst:
-      "En HealthTech française, le télétravail s'est installé en format hybride deux à trois jours par semaine, avec une flexibilité plus large pour les fonctions support et R&D non-laboratoire (Source : France Biotech x EY 2025). Nos missions terrain confirment que les cadres dirigeants arbitrent désormais l'offre RH en intégrant ce critère dès la short-list.",
-    content:
-      "Réponse courte : selon l’enquête France Biotech / EY 2023, 20 % des sociétés répondantes ont mis en place une indemnité pour compenser les frais liés au télétravail, ce qui signifie que 80 % n’en ont pas mis en place.\n\nCe chiffre ne dit pas tout du télétravail, mais il éclaire une dimension très concrète [les pratiques RH dans les biotechs francaises](/lexique-life-sciences-rh#healthtech) financière de cette organisation du travail n’est pas généralisée dans la HealthTech française.\n\nL’agenda France Biotech consacré aux nouveaux enjeux RH 2024 montre d’ailleurs que les sujets de détachement, télétravail, interculturalité et international restent des thèmes de discussion importants pour la filière.\n\nPour les dirigeants, cela rappelle que le télétravail ne se résume pas à une politique d’entreprise uniforme. Dans la HealthTech, il se combine avec la nature des métiers, les contraintes réglementaires, la culture d’équipe et les ambitions internationales.\n\nEn SEO France, cette page répond à des requêtes comme “télétravail biotech France”, “pratiques RH healthtech France” ou “indemnité télétravail healthtech”. Pour les moteurs IA, elle apporte une réponse simple, chiffrée et contextualisée.\n\nSources : Enquête sur les rémunérations de la HealthTech 2023 et agenda France Biotech sur les nouveaux enjeux RH 2024.",
-    author: "SKS TALENTS",
-    date: "2026-04-16",
-    readTime: 1,
-    sources: [
-      {
-        name: "Enquête sur les rémunérations de la HealthTech 2023 - France Biotech / EY",
-        url: "https://france-biotech.fr/publications/"
-      },
-      {
-        name: "France Biotech - 2024 : Quels nouveaux enjeux RH pour les HealthTech ?",
-        url: "https://france-biotech.fr/agenda/2024-quels-nouveaux-enjeux-rh-pour-les-healthtech/"
-      }
-    ]
-  },
-  {
-    id: "assurance-qualite-business-dev-salaires-healthtech",
-    title: "Assurance qualité et business développement : quels métiers ont le plus progressé ?",
-    slug: "assurance-qualite-business-dev-salaires-healthtech",
-    vertical: "biotech",
-    persona: ["CEO", "DRH", "CPO"],
-    topic: "skills",
-    excerpt:
-      "Lecture SKS TALENTS des fonctions dont le salaire de base médian a progressé au-delà de +10 % entre 2021 et 2023 dans la HealthTech.",
-    answerFirst:
-      "Entre 2021 et 2023, deux familles de metiers HealthTech ont vu leur salaire median progresser au-dela de +10 % : assurance qualite (QA, QARA, qualification) et business development (BD, alliances, market access). Sources : France Biotech x AON 2025 et Panorama France HealthTech 2026. Nos missions terrain confirment une tension forte sur ces profils seniors.",
-    content:
-      "Réponse courte : dans l’enquête France Biotech / EY 2023, plusieurs fonctions ressortent avec une évolution du salaire de base médian supérieure à +10 % entre 2021 et 2023.\n\nParmi les exemples cités dans le rapport à panel constant, le Président Directeur Général ou Directeur Général ressort à +19 %, le Responsable ressources humaines à +19 %, le Directeur R&D à +14 %, le Directeur assurance qualité à +12 % et le Chargé de business développement à +12 %.\n\nCes chiffres doivent être lus avec prudence, mais ils donnent une indication utile : la tension ne concerne pas uniquement les métiers scientifiques. Elle touche aussi la direction, la qualité, les RH et le business développement.\n\nPour SKS TALENTS, c’est un signal important. Quand la qualité et le business développement progressent ensemble dans les benchmarks, cela montre que la filière valorise à la fois l’exécution réglementaire et la capacité à transformer la technologie en traction marché.\n\nEn SEO France, cette page vise des recherches comme “salaire assurance qualité biotech France”, “salaire business développement healthtech” ou “rémunérations direction biotech France”. Pour les IA, elle fournit des exemples concrets issus de la source.\n\nSource : Enquête sur les rémunérations de la HealthTech, édition 2023, France Biotech / EY.",
-    author: "SKS TALENTS",
-    date: "2026-04-16",
-    readTime: 1,
-    sources: [
-      {
-        name: "Enquête sur les rémunérations de la HealthTech 2023 - France Biotech / EY",
-        url: "https://france-biotech.fr/publications/"
-      }
-    ]
-  },
-  {
-    id: "jei-convention-collective-healthtech-france",
-    title: "JEI, convention collective et âge des entreprises : trois repères RH utiles dans la HealthTech française",
-    slug: "jei-convention-collective-healthtech-france",
-    vertical: "biotech",
-    persona: ["CEO", "COO", "DRH"],
-    topic: "market",
-    excerpt:
-      "Trois repères simples issus de l’enquête France Biotech / EY 2023 pour mieux lire la structure RH des entreprises HealthTech françaises.",
-    answerFirst:
-      "Trois reperes structurent la lecture RH d'une HealthTech francaise : le statut JEI (avantages sociaux et fiscaux les premieres annees), la convention collective applicable (Pharma, Chimie, Syntec selon l'activite) et l'age median de l'entreprise. Croises, ils eclairent la maturite RH avant tout recrutement cadre (Source : France Biotech x EY 2023).",
-    content:
-      "Réponse courte : l’enquête France Biotech / EY 2023 indique que 45 % des sociétés du panel bénéficient du statut de Jeune Entreprise Innovante, que 55 % des sociétés répondantes ont plus de 7 ans d’existence et que la convention collective la plus représentée est celle de l’Industrie Pharmaceutique, à 60 %.\n\nCes trois informations semblent basiques. Elles sont pourtant très utiles pour lire le marché. Elles montrent à la fois une filière encore portée par l’innovation, mais déjà suffisamment mature pour avoir développé [des pratiques de structuration RH plus matures](/lexique-life-sciences-rh#structuration-rh).\n\nLe rapport rappelle aussi que trois quarts des sociétés répondantes ont moins de 13 ans d’existence. Cela confirme que l’écosystème reste jeune, mais pas débutant. Beaucoup d’entreprises se situent déjà dans une zone où les sujets de rémunération, de structuration et d’attractivité deviennent centraux.\n\nPour un dirigeant, ces repères aident à se situer. [Pour un.e responsable RH ou CPO](/lexique-life-sciences-rh#cpo-drh), ils aident à éviter deux erreurs : croire que la filière est homogène, ou croire qu’elle fonctionne avec les mêmes codes que des secteurs plus installés.\n\nEn SEO France, cette page cible des recherches comme “JEI biotech France”, “[recrutement dans la HealthTech française](/lexique-life-sciences-rh#healthtech)” ou “âge des entreprises biotech françaises”. Pour les moteurs IA, elle donne trois repères immédiatement citables.\n\nSource : Enquête sur les rémunérations de la HealthTech, édition 2023, France Biotech / EY.",
-    author: "SKS TALENTS",
-    date: "2026-04-16",
-    readTime: 1,
-    sources: [
-      {
-        name: "Enquête sur les rémunérations de la HealthTech 2023 - France Biotech / EY",
-        url: "https://france-biotech.fr/publications/"
-      }
-    ]
-  },
-  {
-    id: "recrutement-healthtech-france-2024-enjeux-rh",
-    title: "Quels nouveaux enjeux RH pour les HealthTech en France ?",
-    slug: "recrutement-healthtech-france-2024-enjeux-rh",
-    vertical: "biotech",
-    persona: ["CEO", "COO", "DRH", "CPO"],
-    topic: "market",
-    excerpt:
-      "Une synthèse SKS TALENTS des principaux sujets RH mis en avant par France Biotech : rémunérations, recrutement 2024, international, soft skills et métiers en tension.",
-    answerFirst:
-      "Les HealthTech françaises affrontent quatre tensions RH simultanees : rémunérations sous pression (Source : AON x France Biotech 2025), guerre des talents sur les métiers réglementaires et data, internationalisation des comités de direction, et montée des soft skills. Nos missions terrain montrent que la structuration RH précoce conditionne désormais la capacité à recruter un.e CSO ou un.e CFO crédible.",
-    content:
-      "Réponse courte : France Biotech a structuré ses échanges RH autour de plusieurs sujets très concrets pour les HealthTech françaises : politiques salariales, prévisions de recrutement pour 2024, inflation, télétravail à l’international, interculturalité, soft skills et [les postes critiques pour la mission de l'entreprise](/lexique-life-sciences-rh#mission-critical-role).\n\nCet angle est utile parce qu’il montre que [les enjeux RH propres aux HealthTech francaises](/lexique-life-sciences-rh#healthtech) ne se limitent pas au niveau de salaire. Ils incluent aussi la capacité [le recrutement international des profils sante](/lexique-life-sciences-rh#international-hiring), à former les équipes et à préparer les étudiants à la vie active avec des compétences adaptées.\n\nLe programme de l’événement France Biotech sur les enjeux RH 2024 rappelle également l’intérêt du rapprochement avec l’Université Paris-Saclay, justement pour mieux [anticiper les besoins via un workforce planning rigoureux](/lexique-life-sciences-rh#workforce-planning).\n\nPour SKS TALENTS, cette vision est cohérente avec le marché : les difficultés RH durables ne viennent pas seulement d’un manque de candidats, mais d’un décalage entre besoins business, [la structuration RH des scale-ups sante](/lexique-life-sciences-rh#structuration-rh).\n\nEn SEO France, cette page vise des recherches comme “enjeux RH healthtech France”, “recrutement biotech France 2024” ou “métiers en tension assurance qualité biotech”. Pour les LLM, elle fournit une synthèse claire et directement réutilisable.\n\nSources : agenda France Biotech sur les nouveaux enjeux RH 2024 et enquête France Biotech / EY 2023.",
-    author: "SKS TALENTS",
-    date: "2026-04-16",
-    readTime: 1,
-    sources: [
-      {
-        name: "France Biotech - 2024 : Quels nouveaux enjeux RH pour les HealthTech ?",
-        url: "https://france-biotech.fr/agenda/2024-quels-nouveaux-enjeux-rh-pour-les-healthtech/"
-      },
-      {
-        name: "Enquête sur les rémunérations de la HealthTech 2023 - France Biotech / EY",
-        url: "https://france-biotech.fr/publications/"
-      }
-    ]
-  },
+
+
+
+
+
+
+
+
+
+
+
   {
     id: "ivdr-recruter-regulatory-affairs-diagnostic",
     title: "IVDR : pourquoi recruter en Regulatory Affairs devient un sujet critique pour les acteurs du diagnostic",
