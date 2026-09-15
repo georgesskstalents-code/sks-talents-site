@@ -202,25 +202,33 @@ export async function sendLeadNotificationEmail({
   from: string;
   payload: ContactLeadPayload;
 }) {
-  const subject = `Nouvelle demande SKS TALENTS - ${payload.firstName} ${payload.lastName}`;
+  // Le formulaire inline ne demande ni nom de famille ni telephone : on evite
+  // les lignes vides et les "undefined" dans la notification.
+  const fullName = [payload.firstName, payload.lastName].filter(Boolean).join(" ").trim();
+  const subject = `Nouvelle demande SKS TALENTS - ${fullName || payload.email}`;
+
+  const optionalLine = (label: string, value: string) =>
+    value && value.trim().length > 0 ? `${label}: ${escapeBody(value)}` : null;
 
   const body = [
     "",
     "Nouvelle demande de rappel / contact depuis le site SKS TALENTS",
     "",
-    `Nom: ${escapeBody(payload.firstName)} ${escapeBody(payload.lastName)}`,
-    `Poste: ${escapeBody(payload.role)}`,
+    `Nom: ${escapeBody(fullName) || "non renseigne"}`,
+    optionalLine("Poste", payload.role),
     `Email: ${escapeBody(payload.email)}`,
-    `Telephone: ${escapeBody(payload.phone)}`,
-    `Entreprise: ${escapeBody(payload.company)}`,
-    `Secteur: ${escapeBody(payload.sector)}`,
-    `Urgence: ${escapeBody(payload.urgency)}`,
+    optionalLine("Telephone", payload.phone),
+    optionalLine("Entreprise", payload.company),
+    optionalLine("Secteur", payload.sector),
+    optionalLine("Urgence", payload.urgency),
     "",
     "Message:",
-    escapeBody(payload.message),
+    escapeBody(payload.message) || "aucun message",
     "",
     `Envoye le: ${new Date().toISOString()}`
-  ].join("\n");
+  ]
+    .filter((line) => line !== null)
+    .join("\n");
 
   await sendPlainTextEmail({
     recipient,
