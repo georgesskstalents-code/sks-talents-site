@@ -1,7 +1,8 @@
 import Link from "next/link";
+import DashboardAccessNotice from "@/components/DashboardAccessNotice";
 import { headers } from "next/headers";
-import { redirect } from "next/navigation";
 import {
+  getDataSourceStatus,
   readLeadEventLog,
   readSiteAnalyticsLog,
   type LeadEventLog,
@@ -71,7 +72,7 @@ export default async function SuiviPage({
     const headerToken = headerStore.get("x-dashboard-token");
     const queryToken = params.token;
     if (queryToken !== expectedToken && headerToken !== expectedToken) {
-      redirect("/");
+      return <DashboardAccessNotice page="/dashboard/suivi" />;
     }
   }
 
@@ -87,6 +88,9 @@ export default async function SuiviPage({
   } catch {
     /* ignore */
   }
+
+  // Distinguer "aucune donnee" de "la lecture a echoue".
+  const dataSource = getDataSourceStatus();
 
   const today = isoDay(new Date());
   const yesterday = isoDay(new Date(Date.now() - 24 * 60 * 60 * 1000));
@@ -206,6 +210,17 @@ export default async function SuiviPage({
             </a>
           </div>
         </header>
+
+        {dataSource.lastError || !dataSource.supabaseConfigured ? (
+          <section className="rounded-[24px] border border-amber-300 bg-amber-50 p-5 text-sm leading-7 text-amber-900">
+            <p className="font-semibold">Les chiffres ci-dessous ne sont pas fiables.</p>
+            <p className="mt-1">
+              {dataSource.supabaseConfigured
+                ? `La lecture de la base a échoué (${dataSource.lastError}). Les compteurs affichent zéro parce que la source est injoignable, pas parce qu'il ne s'est rien passé.`
+                : "Supabase n'est pas configuré sur cet environnement. Les compteurs sont lus depuis un fichier local, qui est vide en production."}
+            </p>
+          </section>
+        ) : null}
 
         {/* KPIs aujourd'hui */}
         <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

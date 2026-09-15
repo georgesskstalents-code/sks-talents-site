@@ -104,16 +104,30 @@ export async function POST(request: Request) {
     consent: Boolean(body.consent)
   };
 
-  if (
+  // La validation exigeait un nom de famille et un telephone que le formulaire
+  // ne demande pas : components/InlineLeadForm.tsx affiche prenom, email,
+  // entreprise, et un telephone explicitement optionnel. Il n'a jamais eu de
+  // champ nom. Chaque envoi repartait donc en 422, sur les douze pages ou le
+  // formulaire est monte. Le contrat serveur est aligne sur ce que le
+  // formulaire envoie reellement.
+  const missingRequired =
     payload.role.length < 2 ||
     payload.firstName.length < 2 ||
-    payload.lastName.length < 2 ||
+    payload.company.length < 2 ||
     !isValidEmail(payload.email) ||
-    !isValidPhone(payload.phone) ||
-    !payload.consent
-  ) {
+    !payload.consent;
+
+  // Le telephone reste facultatif, mais s'il est renseigne il doit etre plausible.
+  const phoneProvidedButInvalid = payload.phone.length > 0 && !isValidPhone(payload.phone);
+
+  if (missingRequired || phoneProvidedButInvalid) {
     return noStoreJson(
-      { ok: false, message: "Merci de compléter les champs requis avec des données valides." },
+      {
+        ok: false,
+        message: phoneProvidedButInvalid
+          ? "Le numéro de téléphone saisi ne semble pas valide."
+          : "Merci de compléter le prénom, l'email professionnel et l'entreprise."
+      },
       422
     );
   }

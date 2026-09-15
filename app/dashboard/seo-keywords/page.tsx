@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
 import SeoKeywordsClient from "./SeoKeywordsClient";
+import DashboardAccessNotice from "@/components/DashboardAccessNotice";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -39,7 +39,7 @@ async function fetchProposals(token: string, status: string): Promise<Proposal[]
 export default async function SeoKeywordsPage({ searchParams }: Props) {
   const expected = process.env.DASHBOARD_PRIVATE_TOKEN;
   const { token, status } = await searchParams;
-  if (expected && token !== expected) redirect("/");
+  if (expected && token !== expected) return <DashboardAccessNotice page="/dashboard/seo-keywords" />;
 
   const activeStatus = status ?? "pending";
   const proposals = await fetchProposals(token ?? "", activeStatus);

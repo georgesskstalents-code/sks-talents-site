@@ -1,3 +1,5 @@
+import { toLeadEventRow } from "@/lib/supabaseRows";
+
 type JsonRecord = Record<string, unknown>;
 
 async function postJson(url: string, payload: JsonRecord, extraHeaders?: Record<string, string>) {
@@ -57,10 +59,9 @@ export async function persistLeadDurably(kind: string, payload: JsonRecord) {
   if (supabaseUrl && supabaseKey) {
     await postJson(
       `${supabaseUrl.replace(/\/$/, "")}/rest/v1/${leadsTable}`,
-      {
-        kind,
-        ...payload
-      },
+      // Les cles inconnues de lead_events partent en metadata plutot que de
+      // faire rejeter l'insertion entiere par PostgREST.
+      toLeadEventRow(kind, payload),
       {
         apikey: supabaseKey,
         Authorization: `Bearer ${supabaseKey}`,
