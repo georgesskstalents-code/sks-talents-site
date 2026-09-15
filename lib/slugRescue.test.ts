@@ -97,9 +97,13 @@ describe("resolveArticleSlug", () => {
   });
 
   it("rattrape un slug accentue", () => {
-    const result = resolveArticleSlug("devenir-v%C3%A9t%C3%A9rinaire-france");
+    // L'exemple precedent, devenir-veterinaire-france, a ete fusionne dans le
+    // dossier exercer-recruter-clinique-veterinaire le 2026-09-15 : son slug
+    // n'existe plus comme cible, la redirection est desormais portee par
+    // next.config.mjs. On teste la cesure accentuee sur un article vivant.
+    const result = resolveArticleSlug("m%C3%A9decine-nucl%C3%A9aire-radioth%C3%A9rapie-interne");
     expect(result.status).toBe("redirect");
-    expect(result.status === "redirect" && result.slug).toBe("devenir-veterinaire-france");
+    expect(result.status === "redirect" && result.slug).toBe("medecine-nucleaire-radiotherapie-interne");
   });
 });
 
