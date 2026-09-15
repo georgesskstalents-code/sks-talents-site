@@ -18,7 +18,7 @@ function jsonResponse(body: Record<string, unknown>, status = 200) {
   });
 }
 
-function getRedisRestEnv() {
+export function getRedisRestEnv() {
   const url = process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL;
   const token = process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.KV_REST_API_TOKEN;
 
