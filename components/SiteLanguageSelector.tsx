@@ -15,6 +15,7 @@ type TextEntry = {
 
 type SiteTranslateResponse = {
   ok: boolean;
+  partial?: boolean;
   translations?: Record<string, string>;
   message?: string;
 };
@@ -235,7 +236,14 @@ async function requestPageTranslations(pathname: string, texts: string[]) {
         throw new Error(payload.message ?? "Translation failed.");
       }
 
-      storeCachedTranslations(pathname, payload.translations);
+      // A partial answer (upstream throttled) is applied but not persisted, so
+      // the next attempt re-fetches the missing strings instead of freezing
+      // untranslated text in localStorage for 30 days.
+      if (!payload.partial) {
+        storeCachedTranslations(pathname, payload.translations);
+      } else {
+        translationMemoryCache.set(getCacheKey(pathname), payload.translations);
+      }
       return payload.translations;
     })
     .finally(() => {
@@ -327,8 +335,12 @@ async function translateCurrentPage(pathname: string, allowNetwork = true) {
     const missing = uniqueTexts.filter((text) => !(text in translations!));
     if (missing.length > 0) {
       const fresh = await fetchTranslationsForTexts(pathname, missing);
-      translations = { ...translations, ...fresh };
-      storeCachedTranslations(pathname, translations);
+      translations = { ...translations, ...fresh.translations };
+      if (fresh.partial) {
+        translationMemoryCache.set(getCacheKey(pathname), translations);
+      } else {
+        storeCachedTranslations(pathname, translations);
+      }
     }
   }
 
@@ -339,7 +351,7 @@ async function translateCurrentPage(pathname: string, allowNetwork = true) {
 }
 
 async function fetchTranslationsForTexts(pathname: string, texts: string[]) {
-  if (texts.length === 0) return {} as Record<string, string>;
+  if (texts.length === 0) return { translations: {} as Record<string, string>, partial: false };
   const response = await fetch("/api/site-translate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -354,7 +366,7 @@ async function fetchTranslationsForTexts(pathname: string, texts: string[]) {
   if (!response.ok || !payload.ok || !payload.translations) {
     throw new Error(payload.message ?? "Translation failed.");
   }
-  return payload.translations;
+  return { translations: payload.translations, partial: Boolean(payload.partial) };
 }
 
 export default function SiteLanguageSelector() {
@@ -383,7 +395,11 @@ export default function SiteLanguageSelector() {
 
     const activePath = pathname ?? window.location.pathname;
 
-    if (activePath !== "/search") {
+    // Prefetch only for visitors who already read the site in English. Warming
+    // for every FR visitor on every page view multiplied upstream calls ~50x and
+    // got the translate endpoint rate-limited (429 → 5xx alerts). FR visitors
+    // get the prefetch on hover/focus of the EN button instead (see below).
+    if (activePath !== "/search" && preferredLanguage === "en") {
       warmTranslationCache(activePath);
     }
 
@@ -493,6 +509,13 @@ export default function SiteLanguageSelector() {
     };
   }, [isTranslating, pathname, preferredLanguage, router, searchParams]);
 
+  const handleEnglishIntent = () => {
+    const activePath = pathname ?? window.location.pathname;
+    if (activePath !== "/search" && preferredLanguage !== "en") {
+      warmTranslationCache(activePath);
+    }
+  };
+
   const handleLanguageChange = (language: SiteLanguage) => {
     const activePath = pathname ?? window.location.pathname;
     persistPreferredLanguage(language);
@@ -561,6 +584,9 @@ export default function SiteLanguageSelector() {
         <button
           type="button"
           onClick={() => handleLanguageChange("en")}
+          onMouseEnter={handleEnglishIntent}
+          onFocus={handleEnglishIntent}
+          onTouchStart={handleEnglishIntent}
           className={`rounded-full px-2.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] transition sm:px-3 sm:py-2 sm:tracking-[0.18em] ${
             preferredLanguage === "en"
               ? "bg-brand-teal text-white"

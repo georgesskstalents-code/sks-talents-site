@@ -5,6 +5,7 @@ import {
   parseJsonBody,
   validateSameOriginRequest
 } from "@/lib/requestSecurity";
+import { readCachedTranslations, writeCachedTranslations } from "@/lib/translationCache";
 
 type SiteTranslateBody = {
   texts?: unknown;
@@ -18,9 +19,24 @@ const BATCH_SEPARATOR = "__SKS_BREAK_123__";
 // at 320 chars/text avg this is ~7700 chars (still safe). Net effect: 3x fewer
 // roundtrips. Combined with parallel dispatch below = 6-9x faster overall.
 const BATCH_SIZE = 24;
-// Run up to this many batches in parallel (was sequential). Mobile networks
-// benefit most from concurrency since each request has high RTT overhead.
-const PARALLEL_BATCHES = 6;
+// Concurrency lowered 6 → 2: the unofficial translate endpoint rate-limits
+// (429) aggressively per source IP, and Vercel egress IPs are shared. Most
+// strings now come from the Redis cache, so latency stays low anyway.
+const PARALLEL_BATCHES = 2;
+const UPSTREAM_TIMEOUT_MS = 6000;
+const UPSTREAM_RETRY_DELAY_MS = 400;
+
+class UpstreamError extends Error {
+  status: number;
+  constructor(status: number) {
+    super(`Translation upstream error: ${status}`);
+    this.status = status;
+  }
+}
+
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 const CUSTOM_TRANSLATIONS: Record<string, Partial<Record<"fr" | "en", string>>> = {
   Chercher: { en: "Search" },
   "Être rappelé": { en: "Get a callback" },
@@ -75,27 +91,50 @@ function resolveCustomTranslation(text: string, targetLanguage: "fr" | "en") {
   return CUSTOM_TRANSLATIONS[text]?.[targetLanguage] ?? null;
 }
 
-async function translateBatch(texts: string[], sourceLanguage: "fr" | "en", targetLanguage: "fr" | "en") {
+async function fetchUpstream(texts: string[], sourceLanguage: "fr" | "en", targetLanguage: "fr" | "en") {
   const query = encodeURIComponent(texts.join(` ${BATCH_SEPARATOR} `));
-  const response = await fetch(
-    `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLanguage}&tl=${targetLanguage}&dt=t&q=${query}`,
-    {
-      cache: "no-store"
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), UPSTREAM_TIMEOUT_MS);
+  try {
+    const response = await fetch(
+      `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLanguage}&tl=${targetLanguage}&dt=t&q=${query}`,
+      { cache: "no-store", signal: controller.signal }
+    );
+
+    if (!response.ok) {
+      throw new UpstreamError(response.status);
     }
-  );
 
-  if (!response.ok) {
-    throw new Error(`Translation upstream error: ${response.status}`);
+    const payload = (await response.json()) as unknown[];
+    const translatedText = Array.isArray(payload?.[0])
+      ? (payload[0] as unknown[][])
+          .map((part) => (Array.isArray(part) && typeof part[0] === "string" ? part[0] : ""))
+          .join("")
+      : "";
+
+    return translatedText.split(BATCH_SEPARATOR).map((value) => value.trim());
+  } finally {
+    clearTimeout(timer);
   }
+}
 
-  const payload = (await response.json()) as unknown[];
-  const translatedText = Array.isArray(payload?.[0])
-    ? (payload[0] as unknown[][])
-        .map((part) => (Array.isArray(part) && typeof part[0] === "string" ? part[0] : ""))
-        .join("")
-    : "";
-
-  return translatedText.split(BATCH_SEPARATOR).map((value) => value.trim());
+// Returns null when the upstream is unavailable (429 / 5xx / timeout) after one
+// retry. Callers degrade gracefully instead of surfacing a 5xx to the browser.
+async function translateBatch(texts: string[], sourceLanguage: "fr" | "en", targetLanguage: "fr" | "en") {
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    try {
+      return await fetchUpstream(texts, sourceLanguage, targetLanguage);
+    } catch (error) {
+      const status = error instanceof UpstreamError ? error.status : 0;
+      const retryable = status === 429 || status >= 500 || status === 0;
+      if (!retryable || attempt === 1) {
+        console.warn("site-translate upstream unavailable", { status, attempt, batchSize: texts.length });
+        return null;
+      }
+      await sleep(UPSTREAM_RETRY_DELAY_MS * (attempt + 1));
+    }
+  }
+  return null;
 }
 
 export async function POST(request: Request) {
@@ -159,15 +198,34 @@ export async function POST(request: Request) {
     upstreamTexts.push(text);
   });
 
+  // Serve everything we can from the shared cache before touching the upstream.
+  const cached = await readCachedTranslations(upstreamTexts, sourceLanguage, targetLanguage);
+  const toFetch: string[] = [];
+  upstreamTexts.forEach((text) => {
+    const hit = cached.get(text);
+    if (hit) {
+      translations.set(text, hit);
+    } else {
+      toFetch.push(text);
+    }
+  });
+
   // Run batches in waves of PARALLEL_BATCHES concurrent requests. Each wave
   // waits for its batches to finish before launching the next, preventing
   // unbounded concurrency that could trigger Google Translate's rate limiting.
   const batches: string[][] = [];
-  for (let index = 0; index < upstreamTexts.length; index += BATCH_SIZE) {
-    batches.push(upstreamTexts.slice(index, index + BATCH_SIZE));
+  for (let index = 0; index < toFetch.length; index += BATCH_SIZE) {
+    batches.push(toFetch.slice(index, index + BATCH_SIZE));
   }
 
+  let partial = false;
+  const freshlyTranslated = new Map<string, string>();
+
   for (let waveStart = 0; waveStart < batches.length; waveStart += PARALLEL_BATCHES) {
+    if (partial) {
+      // Upstream is throttling us: stop hammering it, return what we have.
+      break;
+    }
     const wave = batches.slice(waveStart, waveStart + PARALLEL_BATCHES);
     const waveResults = await Promise.all(
       wave.map((batch) => translateBatch(batch, sourceLanguage, targetLanguage))
@@ -175,14 +233,35 @@ export async function POST(request: Request) {
 
     wave.forEach((batch, waveIndex) => {
       const translatedBatch = waveResults[waveIndex];
+      if (!translatedBatch) {
+        partial = true;
+        return;
+      }
       batch.forEach((text, batchIndex) => {
-        translations.set(text, translatedBatch[batchIndex] ?? text);
+        const translated = translatedBatch[batchIndex];
+        if (translated) {
+          translations.set(text, translated);
+          freshlyTranslated.set(text, translated);
+        }
       });
     });
   }
 
+  if (freshlyTranslated.size > 0) {
+    await writeCachedTranslations(freshlyTranslated, sourceLanguage, targetLanguage);
+  }
+
+  // Never answer 5xx because of the upstream: return the strings we have (the
+  // browser keeps the original for the rest) and flag the response as partial so
+  // the client does not persist an incomplete map.
   return noStoreJson({
     ok: true,
-    translations: Object.fromEntries(uniqueTexts.map((text) => [text, translations.get(text) ?? text]))
+    partial,
+    translations: Object.fromEntries(
+      uniqueTexts.flatMap((text) => {
+        const translated = translations.get(text);
+        return translated ? [[text, translated] as const] : [];
+      })
+    )
   });
 }
