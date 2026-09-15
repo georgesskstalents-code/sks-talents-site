@@ -87,6 +87,25 @@ const nextConfig = {
       { source: "/legal/cgv-CGV", destination: "/legal/cgv", permanent: true },
       { source: "/legal/cgu-CGU", destination: "/legal/cgu", permanent: true },
       { source: "/offres_emploi", destination: "/job-roles", permanent: true },
+      // Fusion editoriale du 2026-09-15 : 15 fragments du Panorama France
+      // HealthTech, tous sous 430 mots et aucun indexe, reunis dans un seul
+      // dossier. Redirection permanente pour ne pas perdre le referencement
+      // acquis ni recreer des 404.
+      { source: "/blog/assurance-qualite-business-dev-salaires-healthtech", destination: "/blog/barometre-healthtech-france", permanent: true },
+      { source: "/blog/financement-healthtech-france-2025", destination: "/blog/barometre-healthtech-france", permanent: true },
+      { source: "/blog/france-healthtech-2026-emploi-recrutement", destination: "/blog/barometre-healthtech-france", permanent: true },
+      { source: "/blog/healthtech-francaise-palmares-challenges-2026", destination: "/blog/barometre-healthtech-france", permanent: true },
+      { source: "/blog/healthtech-france-2024-chiffre-affaires-rd", destination: "/blog/barometre-healthtech-france", permanent: true },
+      { source: "/blog/healthtech-france-2024-combien-entreprises-innovantes", destination: "/blog/barometre-healthtech-france", permanent: true },
+      { source: "/blog/healthtech-france-2024-emplois-directs", destination: "/blog/barometre-healthtech-france", permanent: true },
+      { source: "/blog/healthtech-france-2025-recrutements-prioritaires", destination: "/blog/barometre-healthtech-france", permanent: true },
+      { source: "/blog/healthtech-france-financement-premiere-preoccupation-2024", destination: "/blog/barometre-healthtech-france", permanent: true },
+      { source: "/blog/ia-generative-healthtech-france-2026", destination: "/blog/barometre-healthtech-france", permanent: true },
+      { source: "/blog/inflation-salaires-healthtech-france-2023", destination: "/blog/barometre-healthtech-france", permanent: true },
+      { source: "/blog/jei-convention-collective-healthtech-france", destination: "/blog/barometre-healthtech-france", permanent: true },
+      { source: "/blog/recrutement-healthtech-france-2024-enjeux-rh", destination: "/blog/barometre-healthtech-france", permanent: true },
+      { source: "/blog/remunerations-healthtech-france-2023-panel-reference", destination: "/blog/barometre-healthtech-france", permanent: true },
+      { source: "/blog/teletravail-healthtech-france-2023-pratiques", destination: "/blog/barometre-healthtech-france", permanent: true },
       // Variantes de navigation legacy "/{page}-{Libelle}" et "/{page}-{Libelle}-m"
       // (GSC 404, 2026-09-07). Les regles exactes precedentes echouaient sur les
       // accents percent-encodes envoyes par Googlebot, ex. /references-R%C3%A9f%C3%A9rences.
