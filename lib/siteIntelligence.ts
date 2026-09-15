@@ -1,5 +1,12 @@
 import { appendFile, mkdir, readFile } from "node:fs/promises";
 import path from "node:path";
+import {
+  CREATED_AT_COLUMN,
+  fromAnalyticsRow,
+  fromLeadEventRow,
+  toAnalyticsRow,
+  toLeadEventRow
+} from "@/lib/supabaseRows";
 
 export type SiteAnalyticsEvent = {
   type:
@@ -40,6 +47,17 @@ const analyticsTable = process.env.SUPABASE_ANALYTICS_TABLE ?? "site_analytics";
 const leadsTable = process.env.SUPABASE_LEADS_TABLE ?? "lead_events";
 const supabaseEnabled = Boolean(supabaseUrl && supabaseKey);
 
+/** Derniere erreur Supabase rencontree, affichee par /dashboard/suivi. */
+let lastSupabaseError: string | null = null;
+
+/** Etat de la source de donnees, pour distinguer 'vide' de 'casse'. */
+export function getDataSourceStatus() {
+  return {
+    supabaseConfigured: supabaseEnabled,
+    lastError: lastSupabaseError
+  };
+}
+
 async function supabaseInsert(table: string, row: Record<string, unknown>): Promise<void> {
   if (!supabaseEnabled) return;
   try {
@@ -65,7 +83,7 @@ async function supabaseInsert(table: string, row: Record<string, unknown>): Prom
 async function supabaseSelect<T>(table: string, since: string): Promise<T[] | null> {
   if (!supabaseEnabled) return null;
   try {
-    const url = `${supabaseUrl}/rest/v1/${table}?createdAt=gte.${encodeURIComponent(since)}&order=createdAt.asc&limit=10000`;
+    const url = `${supabaseUrl}/rest/v1/${table}?${CREATED_AT_COLUMN}=gte.${encodeURIComponent(since)}&order=${CREATED_AT_COLUMN}.asc&limit=10000`;
     const response = await fetch(url, {
       headers: {
         apikey: supabaseKey as string,
@@ -73,7 +91,16 @@ async function supabaseSelect<T>(table: string, since: string): Promise<T[] | nu
       },
       cache: "no-store"
     });
-    if (!response.ok) return null;
+    if (!response.ok) {
+      // Cause la plus frequente : table absente ou colonne mal nommee. On le
+      // trace, sinon le tableau de bord affiche zero sans rien expliquer.
+      console.error(
+        `Supabase select ${table} a echoue : ${response.status} ${await response.text().catch(() => "")}`
+      );
+      lastSupabaseError = `${table}: ${response.status}`;
+      return null;
+    }
+    lastSupabaseError = null;
     return (await response.json()) as T[];
   } catch {
     return null;
@@ -87,16 +114,16 @@ export async function appendSiteAnalyticsLog(payload: SiteAnalyticsEvent) {
       await mkdir(path.dirname(analyticsLogPath), { recursive: true });
       await appendFile(analyticsLogPath, `${JSON.stringify(payload)}\n`, "utf8");
     })(),
-    supabaseInsert(analyticsTable, payload)
+    supabaseInsert(analyticsTable, toAnalyticsRow(payload))
   ]);
 }
 
-export async function readSiteAnalyticsLog() {
+export async function readSiteAnalyticsLog(): Promise<SiteAnalyticsEvent[]> {
   // Prefer Supabase (durable) when configured; last 90d. Fallback to filesystem (dev).
   if (supabaseEnabled) {
     const since = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000).toISOString();
-    const remote = await supabaseSelect<SiteAnalyticsEvent>(analyticsTable, since);
-    if (remote) return remote;
+    const remote = await supabaseSelect<Record<string, unknown>>(analyticsTable, since);
+    if (remote) return remote.map(fromAnalyticsRow);
   }
   try {
     const raw = await readFile(analyticsLogPath, "utf8");
@@ -116,15 +143,15 @@ export async function appendLeadEventLog(payload: LeadEventLog) {
       await mkdir(path.dirname(leadLogPath), { recursive: true });
       await appendFile(leadLogPath, `${JSON.stringify(payload)}\n`, "utf8");
     })(),
-    supabaseInsert(leadsTable, payload)
+    supabaseInsert(leadsTable, toLeadEventRow(payload.kind, payload))
   ]);
 }
 
-export async function readLeadEventLog() {
+export async function readLeadEventLog(): Promise<LeadEventLog[]> {
   if (supabaseEnabled) {
     const since = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000).toISOString();
-    const remote = await supabaseSelect<LeadEventLog>(leadsTable, since);
-    if (remote) return remote;
+    const remote = await supabaseSelect<Record<string, unknown>>(leadsTable, since);
+    if (remote) return remote.map(fromLeadEventRow);
   }
   try {
     const raw = await readFile(leadLogPath, "utf8");

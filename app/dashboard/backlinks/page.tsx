@@ -1,4 +1,3 @@
-import { redirect } from "next/navigation";
 import {
   backlinkTargets,
   topTierBacklinkTargets,
@@ -8,6 +7,7 @@ import {
 } from "@/data/backlinkTargets";
 import BacklinksClient from "./BacklinksClient";
 import { generateBacklinkEmail } from "@/lib/backlinkTemplates";
+import DashboardAccessNotice from "@/components/DashboardAccessNotice";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -42,7 +42,7 @@ const CATEGORY_LABELS: Record<BacklinkCategory, string> = {
 export default async function BacklinksPage({ searchParams }: Props) {
   const expected = process.env.DASHBOARD_PRIVATE_TOKEN;
   const { token } = await searchParams;
-  if (expected && token !== expected) redirect("/");
+  if (expected && token !== expected) return <DashboardAccessNotice page="/dashboard/backlinks" />;
 
   const grouped = CATEGORY_ORDER.reduce(
     (acc, cat) => {

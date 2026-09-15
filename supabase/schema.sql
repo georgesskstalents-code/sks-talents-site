@@ -57,6 +57,38 @@ to anon
 using (false)
 with check (false);
 
+-- Evenements d'usage du site (pages vues, requetes a l'agent, clics CTA,
+-- soumissions de formulaire, erreurs front). Alimente /dashboard/suivi.
+--
+-- Cette table manquait : le code interrogeait `site_analytics` depuis le
+-- 04/05/2026 alors qu'elle n'avait jamais ete creee. PostgREST repondait 404,
+-- l'erreur etait avalee, et le tableau de bord affichait zero sans explication.
+create table if not exists public.site_analytics (
+  id bigserial primary key,
+  created_at timestamptz not null default timezone('utc', now()),
+  type text not null,
+  path text not null,
+  title text,
+  query text,
+  target text,
+  message text,
+  session_id text
+);
+
+create index if not exists site_analytics_created_at_idx on public.site_analytics (created_at desc);
+create index if not exists site_analytics_type_idx on public.site_analytics (type);
+create index if not exists site_analytics_path_idx on public.site_analytics (path);
+
+alter table public.site_analytics enable row level security;
+
+drop policy if exists "deny_anonymous_site_analytics" on public.site_analytics;
+create policy "deny_anonymous_site_analytics"
+on public.site_analytics
+for all
+to anon
+using (false)
+with check (false);
+
 -- SEO keyword proposals (weekly TF-IDF generation, operator approval flow).
 -- Populated by /api/cron/seo-keywords every Monday 5h UTC. Approved entries
 -- are merged into root metadata via getApprovedKeywords() in app/layout.tsx.

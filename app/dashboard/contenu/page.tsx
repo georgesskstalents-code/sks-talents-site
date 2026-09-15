@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
 import { buildContentInventory } from "@/lib/contentInventory";
+import DashboardAccessNotice from "@/components/DashboardAccessNotice";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -30,7 +30,7 @@ export default async function ContentDashboardPage({ searchParams }: Props) {
   const expected = process.env.DASHBOARD_PRIVATE_TOKEN;
   const { token } = await searchParams;
   if (expected && token !== expected) {
-    redirect("/");
+    return <DashboardAccessNotice page="/dashboard/contenu" />;
   }
 
   const inv = await buildContentInventory();
