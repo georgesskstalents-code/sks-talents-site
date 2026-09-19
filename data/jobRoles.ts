@@ -6260,7 +6260,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
     title: "Président.e du Conseil d'Administration Scale-up Life Sciences",
     salary: "Retainer 15kEUR - 40kEUR/an + BSPCE + D&O",
     salarySource:
-      "Package de gouvernance : retainer annuel en numéraire 15-40 k€ + dotation en equity (BSPCE ou actions, % et vesting à définir avec le conseil) alignée sur la création de valeur, prise en charge des frais et assurance responsabilité des mandataires sociaux (RCMS / D&O). Le poids cash vs equity est adapté au stade de la société et à l'implication attendue.",
+      "Repères publics : l'enquête IFA PME-ETI (mars 2015) mesure environ 1 000 € par journée consacrée au mandat et une médiane de 12 k€/an dans le non coté, soit 15-40 k€/an pour une présidence engagée 15 à 40 jours par an. Non coté américain : retainer médian 38 800 $ + prime de présidence médiane de 25 000 $ (Compensation Advisory Partners, 2025). Equity : 0,20 à 0,50 % du capital fully diluted par mandat pre-IPO, vesting 3-4 ans (Semler Brossy) ; en France via BSPCE, ouverts aux membres du conseil depuis la loi PACTE (art. 163 bis G CGI). Frais et assurance RCMS/D&O systématiques.",
     sector: "Biotech",
     category: "Gouvernance Chairperson scale-up",
     shortageLevel: "Tres elevee",
@@ -6302,9 +6302,11 @@ const august2026AnimalHealthBatch: JobRole[] = [
       "Réseau IFA - Institut Français des Administrateurs"
     ],
     sources: [
-      { name: "IFA - Institut Français des Administrateurs", url: "https://www.ifa-asso.com/" },
-      { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" },
-      { name: "France Invest - Governance VC/PE santé", url: "https://www.franceinvest.eu/" }
+      { name: "IFA, Commission ETI - Statut et rémunération des administrateurs d'ETI (mars 2015)", url: "https://www.ifa-asso.com/mediatheques/statut-et-remuneration-des-administrateurs-deti/" },
+      { name: "Compensation Advisory Partners - Private Company Board Compensation and Governance Survey 2025", url: "https://www.capartners.com/cap-thinking/private-company-board-compensation-and-governance-survey-2025/" },
+      { name: "Semler Brossy - Trends Around Director Compensation in Pre-IPO Companies", url: "https://semlerbrossy.com/insights/trends-director-compensation-pre-ipo/" },
+      { name: "Code général des impôts, art. 163 bis G - BSPCE ouverts aux membres du conseil (loi PACTE)", url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041464358/" },
+      { name: "France Biotech - Panorama HealthTech", url: "https://france-biotech.fr/" }
     ]
   },
   {
