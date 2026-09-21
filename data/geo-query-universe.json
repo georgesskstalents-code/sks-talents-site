@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T10:48:46.748Z",
+  "generated_at": "2026-09-21T10:52:30.597Z",
   "counts": {
     "layer1_observed": 0,
     "layer2_extrapolated": 30,
@@ -997,6 +997,6 @@
       "is_stable_core": false
     }
   ],
-  "last_learning_update": "2026-09-14T10:48:46.904Z",
+  "last_learning_update": "2026-09-21T10:52:30.747Z",
   "last_learning_additions": 0
 }
