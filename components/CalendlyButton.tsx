@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 type Props = {
   label: string;
@@ -32,9 +33,16 @@ export default function CalendlyButton({
 
   if (isExternal) {
     return (
-      <a href={targetHref} target="_blank" rel="noreferrer noopener" className={className}>
+      <TrackedExternalLink
+        href={targetHref}
+        target="_blank"
+        rel="noreferrer noopener"
+        className={className}
+        ctaTarget="calendly"
+        ctaMessage={label}
+      >
         {label}
-      </a>
+      </TrackedExternalLink>
     );
   }
 

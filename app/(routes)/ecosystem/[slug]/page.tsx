@@ -5,6 +5,7 @@ import ContentPageSignature from "@/components/ContentPageSignature";
 import InlineLeadForm from "@/components/InlineLeadForm";
 import PageHero from "@/components/PageHero";
 import SectionShell from "@/components/SectionShell";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { ecosystemCategories, ecosystemDetailedPages, ecosystemStudy } from "@/data/ecosystemTargets";
 
 type Props = {
@@ -177,14 +178,16 @@ export default async function EcosystemDetailPage({ params }: Props) {
               >
                 Demander un rappel
               </Link>
-              <a
+              <TrackedExternalLink
                 href="https://calendly.com/g-kengue/talentconsulting"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="inline-flex rounded-full border border-brand-teal/20 px-5 py-3 text-sm font-semibold text-brand-teal transition hover:bg-brand-mint"
+                ctaTarget="calendly"
+                ctaMessage="ecosystem_detail_cta"
               >
                 Réserver un call
-              </a>
+              </TrackedExternalLink>
             </div>
           </div>
         </div>

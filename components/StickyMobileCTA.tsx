@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCookieConsent } from "@/lib/useCookieConsent";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 const visiblePrefixes = [
   "/",
@@ -37,14 +38,16 @@ export default function StickyMobileCTA() {
     >
       {/* Floating segmented pill (per CEO mockup) - no full-width bar, lighter visual */}
       <div className="mx-auto inline-flex w-full max-w-md overflow-hidden rounded-full border border-brand-ink/10 bg-white shadow-[0_18px_40px_rgba(15,23,42,0.18)]">
-        <a
+        <TrackedExternalLink
           href="https://calendly.com/g-kengue/talentconsulting"
           target="_blank"
           rel="noreferrer noopener"
           className="flex flex-1 items-center justify-center px-4 py-3 text-sm font-semibold text-brand-ink transition active:bg-brand-mint/45"
+          ctaTarget="calendly"
+          ctaMessage="sticky_mobile_bar"
         >
           Réserver un call
-        </a>
+        </TrackedExternalLink>
         <Link
           href="/contact#rappel"
           className="flex flex-1 items-center justify-center bg-brand-ink px-4 py-3 text-sm font-semibold text-white transition active:opacity-80"

@@ -5,6 +5,7 @@ import { ChevronDown, Search, X, Briefcase, Cpu, GraduationCap, Target } from "l
 import { Suspense, useEffect, useState } from "react";
 import NavDropdown from "@/components/NavDropdown";
 import SiteLanguageSelector from "@/components/SiteLanguageSelector";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 type NavChild = { href: string; label: string };
 
@@ -211,14 +212,16 @@ export default function Header() {
         </div>
 
         {/* Mobile-only: quick 'Réserver' CTA next to hamburger (per CEO mockup) */}
-        <a
+        <TrackedExternalLink
           href="https://calendly.com/g-kengue/talentconsulting"
           target="_blank"
           rel="noreferrer noopener"
           className="ml-1 inline-flex shrink-0 items-center justify-center rounded-full bg-brand-teal px-3 py-2 text-xs font-semibold text-white transition active:scale-95 sm:px-4 sm:py-2.5 sm:text-sm lg:hidden"
+          ctaTarget="calendly"
+          ctaMessage="header_mobile_quick"
         >
           Réserver
-        </a>
+        </TrackedExternalLink>
 
         <button
           type="button"
@@ -389,15 +392,17 @@ export default function Header() {
             style={{ paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 0.75rem)" }}
           >
             <div className="grid gap-2.5">
-              <a
+              <TrackedExternalLink
                 href="https://calendly.com/g-kengue/talentconsulting"
                 target="_blank"
                 rel="noreferrer noopener"
                 onClick={() => setMenuOpen(false)}
                 className="inline-flex items-center justify-center gap-1 rounded-full bg-brand-teal px-5 py-3.5 text-sm font-semibold text-white transition active:scale-95"
+                ctaTarget="calendly"
+                ctaMessage="header_mobile_menu"
               >
                 Réserver 15 min
-              </a>
+              </TrackedExternalLink>
               <Link
                 href="/diagnostic"
                 onClick={() => setMenuOpen(false)}

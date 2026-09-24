@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 import "./fiche-metier.css";
 
 export type FicheMetierRole = {
@@ -466,9 +467,16 @@ export default function FicheMetierPage({ role, relatedRoles, relatedArticles = 
             </h2>
           </div>
           <div className="fm-cta-buttons">
-            <a className="fm-btn primary" href="https://calendly.com/g-kengue/talentconsulting" target="_blank" rel="noopener noreferrer">
+            <TrackedExternalLink
+              className="fm-btn primary"
+              href="https://calendly.com/g-kengue/talentconsulting"
+              target="_blank"
+              rel="noopener noreferrer"
+              ctaTarget="calendly"
+              ctaMessage="fiche_metier_cta"
+            >
               Réserver 30 min de cadrage <span className="arrow-tail">→</span>
-            </a>
+            </TrackedExternalLink>
             <Link className="fm-btn ghost" href="/contact#rappel">
               Demander un rappel <span className="arrow-tail">↗</span>
             </Link>

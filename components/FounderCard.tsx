@@ -1,4 +1,5 @@
 import { CalendarClock, Star } from "lucide-react";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 function LinkedinIcon({ size = 14 }: { size?: number }) {
   return (
@@ -34,15 +35,17 @@ export default function FounderCard({ embedded = false }: { embedded?: boolean }
                 Fondateur SKS TALENTS · Executive Search Life Sciences &amp; Santé animale
               </p>
               <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-                <a
+                <TrackedExternalLink
                   href="https://calendly.com/g-kengue/talentconsulting"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="inline-flex items-center gap-1.5 font-semibold text-brand-teal transition hover:opacity-80"
+                  ctaTarget="calendly"
+                  ctaMessage="founder_card"
                 >
                   <CalendarClock size={14} />
                   Réserver 15 min
-                </a>
+                </TrackedExternalLink>
                 <a
                   href="https://www.linkedin.com/in/georges-kengue-81988b36/"
                   target="_blank"

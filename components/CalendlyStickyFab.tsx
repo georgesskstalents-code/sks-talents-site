@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { CalendarClock } from "lucide-react";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/g-kengue/talentconsulting";
 
@@ -31,7 +32,7 @@ export default function CalendlyStickyFab() {
   }
 
   return (
-    <a
+    <TrackedExternalLink
       href={CALENDLY_URL}
       target="_blank"
       rel="noopener noreferrer"
@@ -39,9 +40,11 @@ export default function CalendlyStickyFab() {
       className={`fixed left-4 bottom-4 z-40 inline-flex items-center gap-2 rounded-full bg-brand-ink px-4 py-3 text-sm font-semibold text-white shadow-soft transition-all duration-300 hover:opacity-90 sm:left-6 sm:bottom-6 sm:px-5 sm:py-3.5 ${
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
       }`}
+      ctaTarget="calendly"
+      ctaMessage="sticky_fab"
     >
       <CalendarClock size={16} aria-hidden />
       <span>Réserver 15 min</span>
-    </a>
+    </TrackedExternalLink>
   );
 }

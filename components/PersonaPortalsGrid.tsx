@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Briefcase, Cpu, GraduationCap, Target, type LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 type IconKey = "target-arrow" | "cpu" | "briefcase" | "school";
 
@@ -36,9 +37,16 @@ function PrimaryCTA({ href, label }: CTA) {
     "inline-flex w-full items-center justify-center rounded-full bg-brand-ink px-2 py-2 text-[11px] font-semibold text-white transition hover:opacity-90 sm:w-auto sm:px-5 sm:py-3.5 sm:text-caption md:px-6";
   if (isExternal(href)) {
     return (
-      <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+      <TrackedExternalLink
+        href={href}
+        className={className}
+        target="_blank"
+        rel="noopener noreferrer"
+        ctaTarget="calendly"
+        ctaMessage={`persona_primary:${label}`}
+      >
         {label}
-      </a>
+      </TrackedExternalLink>
     );
   }
   return (

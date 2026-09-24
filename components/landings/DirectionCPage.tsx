@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import Link from "next/link";
 import SectorInterlocutor from "@/components/landings/SectorInterlocutor";
 import ClientTestimonials from "@/components/landings/ClientTestimonials";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 import MarqueeLogoItem from "./MarqueeLogoItem";
 import { type DirectionCSector } from "./directionCContent";
 import "./direction-c.css";
@@ -23,9 +24,16 @@ function CtaLink({
 }) {
   if (isExternal(href)) {
     return (
-      <a className={className} href={href} target="_blank" rel="noopener noreferrer">
+      <TrackedExternalLink
+        className={className}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        ctaTarget="calendly"
+        ctaMessage="direction_c_cta"
+      >
         {children}
-      </a>
+      </TrackedExternalLink>
     );
   }
   return (

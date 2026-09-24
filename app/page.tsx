@@ -5,6 +5,7 @@ import FAQHomeSimple from "@/components/FAQHomeSimple";
 import { FAQ_HOME_SIMPLE_ITEMS } from "@/data/faqHomeSimpleContent";
 import { faqNode, orgRef, pageGraph } from "@/lib/seo";
 import Hero from "@/components/Hero";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 import PersonaPortalsGrid, { type PersonaPortal } from "@/components/PersonaPortalsGrid";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import ReferenceCardMarquee from "@/components/ReferenceCardMarquee";
@@ -279,15 +280,17 @@ export default function HomePage() {
                     Fondateur SKS TALENTS · Executive Search Life Sciences &amp; Santé animale
                   </p>
                   <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-                    <a
+                    <TrackedExternalLink
                       href="https://calendly.com/g-kengue/talentconsulting"
                       target="_blank"
                       rel="noreferrer noopener"
                       className="inline-flex items-center gap-1.5 font-semibold text-brand-teal transition hover:opacity-80"
+                      ctaTarget="calendly"
+                      ctaMessage="home_founder_card"
                     >
                       <CalendarClock size={14} />
                       Réserver 15 min
-                    </a>
+                    </TrackedExternalLink>
                     <a
                       href="https://www.linkedin.com/in/georges-kengue-81988b36/"
                       target="_blank"

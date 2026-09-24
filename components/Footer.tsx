@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CookiePreferencesButton from "@/components/CookiePreferencesButton";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 const cabinetLinks = [
   { href: "/about", label: "Qui sommes-nous" },
@@ -147,7 +148,7 @@ export default function Footer() {
               </a>
             </address>
             <div className="flex flex-wrap gap-3 pt-2">
-              <a
+              <TrackedExternalLink
                 href={
                   process.env.NEXT_PUBLIC_CALENDLY_URL && process.env.NEXT_PUBLIC_CALENDLY_URL.length > 0
                     ? process.env.NEXT_PUBLIC_CALENDLY_URL
@@ -156,9 +157,11 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer noopener"
                 className="inline-flex rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white/90 transition hover:bg-white/10"
+                ctaTarget="calendly"
+                ctaMessage="footer"
               >
                 Prendre rendez-vous
-              </a>
+              </TrackedExternalLink>
               <a
                 href="https://www.linkedin.com/company/sks-talents/"
                 target="_blank"
