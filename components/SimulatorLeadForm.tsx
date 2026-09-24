@@ -12,6 +12,10 @@ export type SimulatorLeadFormProps = {
   simulatorContext: Record<string, string | number | boolean | null | undefined>;
   /** Slug court identifiant le simulateur d'origine (ex: "cout-mauvais-recrutement"). */
   simulatorId: string;
+  /** Titre de la carte, adapte au contenu propose par ce simulateur. */
+  title?: string;
+  /** Description du rapport propose, adaptee au simulateur. */
+  description?: string;
 };
 
 const MODE_LABELS: Record<Mode, string> = {
@@ -28,7 +32,9 @@ const MODE_HINTS: Record<Mode, string> = {
 
 export default function SimulatorLeadForm({
   simulatorContext,
-  simulatorId
+  simulatorId,
+  title = "Recevez le rapport complet en PDF",
+  description = "Detail des postes de cout, sources marche, checklist cadrage 30 jours et grille de priorisation. Un email de SKS Talents, aucun formulaire commercial derriere."
 }: SimulatorLeadFormProps) {
   const [mode, setMode] = useState<Mode>("entreprise");
   const [email, setEmail] = useState<string>("");
@@ -94,13 +100,8 @@ export default function SimulatorLeadForm({
       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
         Rapport detaille par email
       </p>
-      <h3 className="mt-3 font-display text-2xl text-brand-ink">
-        Recevez le rapport complet en PDF
-      </h3>
-      <p className="mt-3 text-sm leading-6 text-brand-stone">
-        Detail des postes de cout, sources marche, checklist cadrage 30 jours et grille de
-        priorisation. Un email de SKS Talents, aucun formulaire commercial derriere.
-      </p>
+      <h3 className="mt-3 font-display text-2xl text-brand-ink">{title}</h3>
+      <p className="mt-3 text-sm leading-6 text-brand-stone">{description}</p>
 
       {done ? (
         <div

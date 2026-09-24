@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import SimulatorLeadForm from "@/components/SimulatorLeadForm";
 
 const MONTHLY_BASE_HOURS = 151.67;
 const PMSS_MONTHLY_2026 = 4005;
@@ -537,6 +538,29 @@ export default function SalaryCalculator() {
     workPercentage
   ]);
 
+  const simulatorContext = useMemo(
+    () => ({
+      statut: activeStatus.label,
+      mode_affiche: viewMode === "employee" ? "salarie" : "entreprise",
+      brut_mensuel: Math.round(result.monthlyGross),
+      net_mensuel_avant_impot: Math.round(result.monthlyNet),
+      net_mensuel_apres_impot: Math.round(result.monthlyNetAfterTax),
+      cout_employeur_mensuel: Math.round(result.monthlyEmployerCost),
+      temps_travail_pct: workPercentage,
+      mois_prime: bonusMonths
+    }),
+    [
+      activeStatus.label,
+      viewMode,
+      result.monthlyGross,
+      result.monthlyNet,
+      result.monthlyNetAfterTax,
+      result.monthlyEmployerCost,
+      workPercentage,
+      bonusMonths
+    ]
+  );
+
   function resetFields() {
     setSource("monthly");
     setGrossHourly("");
@@ -1036,6 +1060,13 @@ export default function SalaryCalculator() {
               CSG/CRDS et PAS sur net imposable.
             </div>
           </div>
+
+          <SimulatorLeadForm
+            simulatorId="calcul-salaire-brut-net"
+            simulatorContext={simulatorContext}
+            title="Recevez la grille de remuneration complete"
+            description="Fourchettes par fonction et par seniorite en Life Sciences et sante animale, avec la logique de calibrage d'un package. Un email de SKS Talents, aucun formulaire commercial derriere."
+          />
         </div>
       </div>
 
