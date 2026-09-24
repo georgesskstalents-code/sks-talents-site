@@ -406,13 +406,13 @@ export default async function ResourcesPage() {
         <ExternalLinkGrid items={veterinaryOfficialResources} />
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           <ListingCard
-            href="/blog/devenir-veterinaire-france"
+            href="/blog/exercer-recruter-clinique-veterinaire"
             title="Devenir vétérinaire en France"
             description="Un article de synthèse relié aux écoles, aux conditions d’exercice et aux parcours officiels."
             meta="Orientation vétérinaire"
           />
           <ListingCard
-            href="/blog/ecoles-metiers-animaliers"
+            href="/blog/exercer-recruter-clinique-veterinaire"
             title="Écoles des métiers animaliers"
             description="Une page éditoriale pensée pour capter les recherches autour des formations animalières, des diplômes et des débouchés."
             meta="Animal careers SEO"
