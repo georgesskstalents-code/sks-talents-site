@@ -9,9 +9,9 @@ import FAQSection from "@/components/FAQSection";
 import { faqsByPage } from "@/data/faqsByPage";
 
 export const metadata: Metadata = {
-  title: "Coût employeur et salaire brut en net",
+  title: "Calcul salaire brut net et coût employeur 2026 : simulateur",
   description:
-    "Combien coûte réellement un recrutement cadre ? Estimez le coût employeur, les charges patronales et le net perçu à partir du brut, statut par statut.",
+    "Simulateur 2026 : passez du brut au net et calculez le coût employeur (charges patronales, net imposable, prélèvement à la source). Cadre, non-cadre et fonction publique.",
   keywords: [
     "coût employeur",
     "calcul salaire employeur",
@@ -19,13 +19,15 @@ export const metadata: Metadata = {
     "charges patronales cadre",
     "coût employeur cadre",
     "salaire brut net coût employeur",
-    "calcul coût salarié"
+    "calcul coût salarié",
+    "calcul salaire brut net",
+    "brut net fonction publique"
   ],
   alternates: {
     canonical: "/calcul-salaire-brut-net"
   },
   openGraph: {
-    title: "Coût employeur et salaire brut en net",
+    title: "Calcul salaire brut net et coût employeur 2026 : simulateur",
     description:
       "Estimez le coût employeur d'un recrutement cadre : charges patronales, net perçu, net imposable et prélèvement à la source.",
     url: "https://www.skstalents.fr/calcul-salaire-brut-net",
