@@ -659,9 +659,9 @@ export const seoGrowthPages: SeoGrowthPage[] = [
         description: "Approche RPO dédiée aux phases Seed, Série A, Série B et scale-up."
       }
     ],
-    metaTitle: "Recrutement après levée de fonds | SKS TALENTS",
+    metaTitle: "Recrutement après levée de fonds : quels postes, dans quel ordre | SKS TALENTS",
     metaDescription:
-      "Comment structurer ses recrutements après une levée de fonds en biotech, healthtech ou santé. Priorités, RPO, structuration RH et exécution."
+      "Après une levée de fonds en biotech, medtech ou santé animale : quels postes recruter en premier, à quel niveau, et comment tenir le rythme sans casser l'équipe."
   },
   {
     slug: "recrutement-serie-a-biotech",
