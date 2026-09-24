@@ -518,9 +518,9 @@ export const seoGrowthPages: SeoGrowthPage[] = [
         description: "Hub santé animale, cliniques vétérinaires et petfood."
       }
     ],
-    metaTitle: "Cabinet de recrutement Petfood France | SKS TALENTS",
+    metaTitle: "Cabinet de recrutement petfood et nutrition animale : executive search | SKS TALENTS",
     metaDescription:
-      "Cabinet de recrutement petfood en France : nutrition animale, innovation produit, opérations et direction. Executive search et RPO."
+      "Executive search petfood et nutrition animale en France : direction, innovation produit, opérations, qualité et sales. Chasse de tête de dirigeants et cadres, et RPO."
   },
   {
     slug: "recrutement-nutrition-animale-france",
@@ -937,9 +937,9 @@ export const seoGrowthPages: SeoGrowthPage[] = [
         description: "Absorber un volume d’embauche critique."
       }
     ],
-    metaTitle: "Recrutement scale-up santé | SKS TALENTS",
+    metaTitle: "Cabinet de recrutement scale-up santé : biotech, healthtech, santé animale | SKS TALENTS",
     metaDescription:
-      "Recrutement scale-up santé : executive search, RPO, structuration RH et automatisation des process pour biotech, healthtech et animal health."
+      "Cabinet de recrutement pour scale-ups santé : executive search, RPO et structuration RH pour biotech, healthtech et santé animale en croissance."
   },
   {
     slug: "recrutement-biotech-paris",
@@ -1372,9 +1372,9 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       { label: "Recrutement Série A biotech", href: "/recrutement-serie-a-biotech", description: "Contexte Série A biotech." },
       { label: "Life Sciences", href: "/life-sciences", description: "Page sectorielle Life Sciences." }
     ],
-    metaTitle: "Recruter un COO biotech | SKS TALENTS",
+    metaTitle: "Recruter un COO biotech : cabinet de recrutement et chasse de tête | SKS TALENTS",
     metaDescription:
-      "Comment recruter un COO biotech. Executive search, calibration du rôle, signaux marché et décisions de croissance pour startups et scale-ups biotech."
+      "Cabinet de recrutement de COO biotech : calibrage du rôle, chasse de tête et sécurisation de la prise de poste, pour startups et scale-ups biotech."
   },
   {
     slug: "recruter-drh-sante",
