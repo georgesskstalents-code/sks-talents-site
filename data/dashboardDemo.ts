@@ -144,7 +144,7 @@ export const dashboardDemoData = {
       convRate: 0.062
     },
     {
-      path: "/blog/deeptech-startup-talent-war",
+      path: "/blog/metiers-biotech-rd-bioproduction",
       title: "DeepTech Startup Talent War",
       sessions: 14240,
       avgTime: 246,
