@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { faqNode, pageGraph } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
+import RibbonCTA from "@/components/RibbonCTA";
 import PackageComparator from "@/components/PackageComparator";
 import SalaryCalculator from "@/components/SalaryCalculator";
 import SectionShell from "@/components/SectionShell";
@@ -186,6 +187,13 @@ export default function SalaryCalculatorPage() {
           </Link>
         </div>
       </SectionShell>
+      <RibbonCTA
+        eyebrow="Vous recrutez un cadre ou un dirigeant ?"
+        title="Calibrons le package et le vivier avant d’ouvrir le poste."
+        primaryLabel="Réserver 15 min"
+        secondaryHref="/salary-benchmarks"
+        secondaryLabel="Voir les benchmarks salaires"
+      />
           <FAQSection eyebrow="FAQ" title={faqsByPage["calcul-salaire-brut-net"].title} description={faqsByPage["calcul-salaire-brut-net"].description} items={faqsByPage["calcul-salaire-brut-net"].items} emitJsonLd={false} />
     </>
   );
