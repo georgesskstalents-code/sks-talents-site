@@ -156,7 +156,7 @@ export default function CoutMauvaisRecrutementPage() {
       >
         <div className="grid gap-6 md:grid-cols-3">
           <Link
-            href="/blog/cout-rate-ceo-biotech-series-b"
+            href="/blog/cout-reel-recrutement-rate"
             className="card-surface block p-6 transition hover:-translate-y-0.5"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
@@ -170,7 +170,7 @@ export default function CoutMauvaisRecrutementPage() {
             </p>
           </Link>
           <Link
-            href="/blog/cout-rate-cto-deeptech-series-a"
+            href="/blog/cout-reel-recrutement-rate"
             className="card-surface block p-6 transition hover:-translate-y-0.5"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
@@ -184,7 +184,7 @@ export default function CoutMauvaisRecrutementPage() {
             </p>
           </Link>
           <Link
-            href="/blog/cout-rate-cmo-medtech-scale-up"
+            href="/blog/cout-reel-recrutement-rate"
             className="card-surface block p-6 transition hover:-translate-y-0.5"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
@@ -241,7 +241,7 @@ export default function CoutMauvaisRecrutementPage() {
               runway ne se tende.
             </p>
             <Link
-              href="/blog/quel-est-le-vrai-cout-mauvais-recrutement"
+              href="/blog/cout-reel-recrutement-rate"
               className="mt-4 inline-block text-sm font-semibold text-brand-teal underline"
             >
               Article complet
