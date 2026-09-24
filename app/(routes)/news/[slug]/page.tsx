@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
@@ -6,6 +7,25 @@ import { newsHubDetails } from "@/data/newsSignals";
 
 export function generateStaticParams() {
   return newsHubs.map((item) => ({ slug: item.slug }));
+}
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const item = newsHubs.find((entry) => entry.slug === slug);
+  if (!item) {
+    return {};
+  }
+  const canonical = `https://www.skstalents.fr/news/${item.slug}`;
+  return {
+    title: item.title,
+    description: item.summary,
+    alternates: { canonical },
+    openGraph: { title: item.title, description: item.summary, url: canonical, type: "website", siteName: "SKS TALENTS" }
+  };
 }
 
 export default async function NewsDetailPage({

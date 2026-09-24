@@ -21,7 +21,7 @@ export const marketHubs: MarketHub[] = [
     summary: "Un hub pour relier profession, formation, exercice et recrutement en santé animale.",
     angles: ["écoles vétérinaires", "conditions d'exercice", "groupes de cliniques", "métiers connexes"],
     internalLinks: [
-      { label: "Devenir vétérinaire", href: "/blog/devenir-veterinaire-france" },
+      { label: "Devenir vétérinaire", href: "/blog/exercer-recruter-clinique-veterinaire" },
       { label: "Écoles", href: "/schools" },
       { label: "Animal Health", href: "/animal-health" }
     ]
@@ -36,7 +36,6 @@ export const marketHubs: MarketHub[] = [
     summary: "Un hub SEO pour capter les recherches sur les métiers autour des animaux et leurs écoles.",
     angles: ["auxiliaire vétérinaire", "soigneur animalier", "toilettage", "éthologie"],
     internalLinks: [
-      { label: "Article métiers animaliers", href: "/blog/ecoles-metiers-animaliers" },
       { label: "Orientation", href: "/orientation" },
       { label: "Écoles", href: "/schools" }
     ]
@@ -57,7 +56,7 @@ export const marketHubs: MarketHub[] = [
       { label: "Angels Santé", href: "/angels-sante-business-angels-sante" },
       { label: "Seventure Partners", href: "/seventure-partners-life-sciences" },
       { label: "EIC Fund", href: "/eic-fund-deeptech-biotech" },
-      { label: "Article France Biotech", href: "/blog/france-biotech-cartographie-fonds-sante-2024" },
+      { label: "Article France Biotech", href: "/blog/fonds-dispositifs-financement-sante-france" },
       { label: "Actualités", href: "/news" }
     ]
   },

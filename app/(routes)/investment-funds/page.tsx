@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cartographie des fonds sante France 2026 : biotech, medtech, healthtech",
+  title: "Venture capital biotech France : fonds santé actifs en 2026",
   description:
-    "Fonds d'investissement sante actifs en France : biotech, medtech, healthtech, animal health. Signaux hiring post-levee, theses d'investissement, contexte scale-up. Cartographie SKS TALENTS.",
+    "Cartographie des fonds d'investissement santé en France : venture capital biotech, medtech, healthtech et santé animale. Thèses, étapes de financement et besoins de recrutement après levée.",
   alternates: { canonical: "/investment-funds" },
   openGraph: {
-    title: "Cartographie fonds sante France 2026 : biotech, medtech, healthtech",
+    title: "Venture capital biotech France : fonds santé actifs en 2026",
     description:
-      "Fonds sante actifs France : biotech, medtech, healthtech, animal health. Signaux hiring et theses par SKS TALENTS.",
+      "Fonds d'investissement santé en France : biotech, medtech, healthtech, santé animale. Thèses et signaux de recrutement par SKS TALENTS.",
     url: "https://www.skstalents.fr/investment-funds",
     type: "website"
   }
 };
 
 import ListingCard from "@/components/ListingCard";
+import RibbonCTA from "@/components/RibbonCTA";
 import SectionShell from "@/components/SectionShell";
 import { investmentFunds, trackedInvestmentFundsDirectory } from "@/data/investmentFunds";
 import FAQSection from "@/components/FAQSection";
@@ -180,6 +181,13 @@ export default function InvestmentFundsPage() {
           ))}
         </div>
       </SectionShell>
+      <RibbonCTA
+        eyebrow="Vous venez de lever ?"
+        title="Priorisons les recrutements clés des douze prochains mois."
+        primaryLabel="Réserver 15 min"
+        secondaryHref="/recrutement-apres-levee-de-fonds"
+        secondaryLabel="Recruter après une levée de fonds"
+      />
           <FAQSection eyebrow="FAQ" title={faqsByPage["investment-funds"].title} description={faqsByPage["investment-funds"].description} items={faqsByPage["investment-funds"].items} />
     </>
   );

@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import GEOAnswerCard from "@/components/GEOAnswerCard";
 import PageHero from "@/components/PageHero";
+import RibbonCTA from "@/components/RibbonCTA";
 import SectionShell from "@/components/SectionShell";
 import { jobRoles } from "@/data/jobRoles";
 
 export const metadata: Metadata = {
-  title: "Benchmarks salaires",
+  title: "Salaires biotech, medtech et santé animale 2026 : benchmarks par poste",
   description:
-    "Benchmarks salaires SKS TALENTS par métier et secteur pour Life Sciences, diagnostic, medtech, santé animale, veterinary et petfood, avec un angle Seed, Série A et Série B."
+    "Fourchettes de salaire brut annuel par poste en biotech, diagnostic, medtech, santé animale et petfood, en France. Écarts Seed, Série A, Série B et scale-up.",
+  alternates: { canonical: "https://www.skstalents.fr/salary-benchmarks" }
 };
 
 function parseSalaryRange(salary: string): { min: number; max: number } | null {
@@ -257,6 +259,13 @@ export default function SalaryBenchmarksPage() {
           </ul>
         </div>
       </SectionShell>
+      <RibbonCTA
+        eyebrow="Un poste à pourvoir ?"
+        title="Validons la fourchette sur le marché réel avant de publier l’offre."
+        primaryLabel="Réserver 15 min"
+        secondaryHref="/calcul-salaire-brut-net"
+        secondaryLabel="Calculer le coût employeur"
+      />
     </>
   );
 }

@@ -33,7 +33,7 @@ export default async function StudiesPage() {
       <section className="container-shell -mt-2 pb-2">
         <div className="flex flex-wrap gap-3">
           <Link
-            href="/blog/recrutement-apres-seed-serie-a-serie-b"
+            href="/blog/structurer-fonction-rh-scale-up"
             className="rounded-full border border-brand-teal/15 bg-white px-4 py-2 text-sm font-semibold text-brand-stone transition hover:border-brand-teal/40 hover:text-brand-teal"
           >
             Seed / Série A / Série B
@@ -71,7 +71,7 @@ export default async function StudiesPage() {
             <h2 className="font-display text-4xl text-brand-ink">{ecosystemStudy.title}</h2>
             <p className="mt-4 text-lg leading-8 text-brand-stone">{ecosystemStudy.subtitle}</p>
           </Link>
-          <Link href="/blog/recrutement-apres-seed-serie-a-serie-b" className="card-surface block p-8 transition hover:-translate-y-1">
+          <Link href="/blog/structurer-fonction-rh-scale-up" className="card-surface block p-8 transition hover:-translate-y-1">
             <p className="eyebrow">Growth</p>
             <h2 className="font-display text-4xl text-brand-ink">Quels recrutements après une levée Seed, Série A ou Série B ?</h2>
             <p className="mt-4 text-lg leading-8 text-brand-stone">

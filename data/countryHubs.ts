@@ -63,22 +63,22 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
     contentLinks: [
       {
         label: "HealthTech France 2026 : emploi et recrutement",
-        href: "/blog/france-healthtech-2026-emploi-recrutement",
+        href: "/blog/barometre-healthtech-france",
         description: "Une lecture claire des chiffres emploi et recrutements à venir en France."
       },
       {
         label: "Business France : services, webinaires et V.I.E",
-        href: "/blog/business-france-services-webinaires-export-vie",
+        href: "/blog/life-sciences-afrique-export-structurer",
         description: "Pour l’export, le recrutement international et la lecture marché depuis la France."
       },
       {
         label: "Bpifrance Le Hub : services et événements",
-        href: "/blog/bpifrance-le-hub-services-evenements-startups-investies",
+        href: "/blog/fonds-dispositifs-financement-sante-france",
         description: "Un angle recrutement et croissance pour startups et scale-ups françaises."
       },
       {
         label: "Médecine nucléaire : repères utiles en France",
-        href: "/blog/medecine-nucleaire-riv-france-france-biotech",
+        href: "/blog/medecine-nucleaire-radiotherapie-interne",
         description: "Une porte d’entrée forte sur un sujet très recherché en santé et healthtech."
       }
     ],
@@ -163,7 +163,7 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
     contentLinks: [
       {
         label: "Institut Pasteur de Dakar et bioproduction",
-        href: "/blog/institut-pasteur-dakar-vaccinopole-bioproduction",
+        href: "/blog/life-sciences-afrique-export-structurer",
         description: "Un contenu éditorial fort sur Dakar, la production vaccinale et les partenaires impliqués."
       },
       {
@@ -262,13 +262,8 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
       "Ces pages créent déjà une base sérieuse pour capter des recherches Côte d’Ivoire sur vos domaines d’intervention.",
     contentLinks: [
       {
-        label: "Centre de médecine nucléaire d’Abidjan",
-        href: "/blog/centre-medecine-nucleaire-abidjan-cote-divoire",
-        description: "Un contenu SEO dédié à l’ouverture annoncée de cette infrastructure stratégique."
-      },
-      {
         label: "Qu’est-ce que la médecine nucléaire ?",
-        href: "/blog/qu-est-ce-que-la-medecine-nucleaire",
+        href: "/blog/medecine-nucleaire-radiotherapie-interne",
         description: "Une page explicative utile pour la France comme pour la Côte d’Ivoire, sans confondre les deux angles."
       },
       {
@@ -283,7 +278,7 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
       },
       {
         label: "Abidjanaises In Tech : réseau à suivre en Côte d’Ivoire",
-        href: "/blog/abidjanaises-in-tech-cote-divoire-ecosysteme-sante",
+        href: "/blog/life-sciences-afrique-export-structurer",
         description: "Une lecture SKS TALENTS d’un réseau tech ivoirien important pour les viviers, l’inclusion et les passerelles utiles à la santé."
       }
     ],
@@ -388,7 +383,7 @@ export const countryHubs: Record<CountryHub["slug"], CountryHub> = {
       },
       {
         label: "Bpifrance et Business France : mission Agri-Agro Bénin",
-        href: "/blog/bpifrance-business-france-agri-agro-benin",
+        href: "/blog/fonds-dispositifs-financement-sante-france",
         description: "Une lecture SKS TALENTS d’une mission officielle sur le marché béninois et ses opportunités."
       }
     ],

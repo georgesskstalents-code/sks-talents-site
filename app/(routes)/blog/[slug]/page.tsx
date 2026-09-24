@@ -5,6 +5,7 @@ import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import ArticleBody, { headingId, parseArticle, splitSource } from "@/components/ArticleBody";
 import ContentPageSignature from "@/components/ContentPageSignature";
+import RibbonCTA from "@/components/RibbonCTA";
 import EditorialContentLayout, { getEditorialHeroImage } from "@/components/EditorialContentLayout";
 import { articles, getArticleVerticalLabel } from "@/data/articles";
 import { getNotionSiteContentBySlug } from "@/lib/notion";
@@ -393,6 +394,13 @@ export default async function BlogDetailPage({
           ) : null}
         </div>
       </EditorialContentLayout>
+      <RibbonCTA
+        eyebrow="Un recrutement clé à sécuriser ?"
+        title="Parlons de votre prochain recrutement en Life Sciences ou santé animale."
+        primaryLabel="Réserver 15 min"
+        secondaryHref="/services"
+        secondaryLabel="Voir nos services"
+      />
       <ContentPageSignature description="Article édité par SKS TALENTS pour aider dirigeants, DRH et équipes opérationnelles à lire les marchés, les talents et les signaux utiles à la prise de décision." />
     </>
   );

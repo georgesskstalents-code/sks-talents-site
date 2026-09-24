@@ -438,14 +438,14 @@ export default function BarometreLifeSciencesPage() {
               Outil interactif : chiffrez search, onboarding, vacance et impact projet en 30 secondes.
             </p>
           </Link>
-          <Link href="/blog/metiers-tension-healthtech-france-2026" className="card-surface block p-6 transition hover:-translate-y-0.5">
+          <Link href="/blog/metiers-tension-healthtech-france" className="card-surface block p-6 transition hover:-translate-y-0.5">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">Analyse</p>
             <h3 className="mt-3 font-display text-2xl text-brand-ink">7 fonctions critiques HealthTech 2026</h3>
             <p className="mt-3 text-sm leading-7 text-brand-stone">
               Deep-dive sur les 7 metiers les plus tendus : R&D, medical, IT, data science, regulatory, IA, commercial.
             </p>
           </Link>
-          <Link href="/blog/salaire-ceo-biotech-france-2026" className="card-surface block p-6 transition hover:-translate-y-0.5">
+          <Link href="/blog/salaires-dirigeants-biotech-france" className="card-surface block p-6 transition hover:-translate-y-0.5">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">Hub</p>
             <h3 className="mt-3 font-display text-2xl text-brand-ink">Salaire CEO biotech France 2026</h3>
             <p className="mt-3 text-sm leading-7 text-brand-stone">
