@@ -245,6 +245,8 @@ const nextConfig = {
       { source: "/flUW7AcgBiicCMqb4JgItuKPidWEQMIY0B9v9jLFYk=", destination: "/", permanent: true },
       { source: "/blogArticles", destination: "/blog", permanent: true },
       { source: "/lexique-life-sciences-rhLexique", destination: "/lexique-life-sciences-rh", permanent: true },
+      // Variante legacy "/lexique-life-sciences-rh-{Libelle}-m" (GSC 404, 2026-09-24).
+      { source: "/lexique-life-sciences-rh-:suffix", destination: "/lexique-life-sciences-rh", permanent: true },
       // Contenu /article/* legacy (WordPress) = supprime, hors positionnement.
       // On consolide vers l'index /blog : les anciens slugs (accents/apostrophes,
       // ex. agroindustrie-cote-d'ivoire) n'ont pas d'equivalent /blog/{slug} => re-404.
