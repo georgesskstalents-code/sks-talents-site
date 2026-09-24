@@ -257,7 +257,7 @@ export const assistantTopics: AssistantTopic[] = [
       },
       {
         label: "Article France Biotech 2024",
-        href: "/blog/france-biotech-cartographie-fonds-sante-2024",
+        href: "/blog/fonds-dispositifs-financement-sante-france",
         description: "Synthèse éditoriale à partir de la cartographie France Biotech."
       }
     ],
@@ -306,7 +306,7 @@ export const assistantTopics: AssistantTopic[] = [
       },
       {
         label: "Devenir vétérinaire",
-        href: "/blog/devenir-veterinaire-france",
+        href: "/blog/exercer-recruter-clinique-veterinaire",
         description: "Article repère sur le parcours et les écoles."
       }
     ],
