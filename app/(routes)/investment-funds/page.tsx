@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 };
 
 import ListingCard from "@/components/ListingCard";
+import RibbonCTA from "@/components/RibbonCTA";
 import SectionShell from "@/components/SectionShell";
 import { investmentFunds, trackedInvestmentFundsDirectory } from "@/data/investmentFunds";
 import FAQSection from "@/components/FAQSection";
@@ -180,6 +181,13 @@ export default function InvestmentFundsPage() {
           ))}
         </div>
       </SectionShell>
+      <RibbonCTA
+        eyebrow="Vous venez de lever ?"
+        title="Priorisons les recrutements clés des douze prochains mois."
+        primaryLabel="Réserver 15 min"
+        secondaryHref="/recrutement-apres-levee-de-fonds"
+        secondaryLabel="Recruter après une levée de fonds"
+      />
           <FAQSection eyebrow="FAQ" title={faqsByPage["investment-funds"].title} description={faqsByPage["investment-funds"].description} items={faqsByPage["investment-funds"].items} />
     </>
   );
