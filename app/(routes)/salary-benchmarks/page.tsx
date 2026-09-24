@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import GEOAnswerCard from "@/components/GEOAnswerCard";
 import PageHero from "@/components/PageHero";
+import RibbonCTA from "@/components/RibbonCTA";
 import SectionShell from "@/components/SectionShell";
 import { jobRoles } from "@/data/jobRoles";
 
@@ -258,6 +259,13 @@ export default function SalaryBenchmarksPage() {
           </ul>
         </div>
       </SectionShell>
+      <RibbonCTA
+        eyebrow="Un poste à pourvoir ?"
+        title="Validons la fourchette sur le marché réel avant de publier l’offre."
+        primaryLabel="Réserver 15 min"
+        secondaryHref="/calcul-salaire-brut-net"
+        secondaryLabel="Calculer le coût employeur"
+      />
     </>
   );
 }
