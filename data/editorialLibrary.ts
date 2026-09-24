@@ -70,17 +70,17 @@ export const editorialTracks: EditorialTrack[] = [
     items: [
       {
         title: "Business France : services et V.I.E",
-        href: "/blog/business-france-services-webinaires-export-vie",
+        href: "/blog/life-sciences-afrique-export-structurer",
         summary: "Lecture export, V.I.E et internationalisation pour les dirigeants."
       },
       {
         title: "Bpifrance Le Hub",
-        href: "/blog/bpifrance-le-hub-services-evenements-startups-investies",
+        href: "/blog/fonds-dispositifs-financement-sante-france",
         summary: "Croissance, événements, communautés et accompagnement des startups."
       },
       {
         title: "Bpifrance / Business France au Bénin",
-        href: "/blog/bpifrance-business-france-agri-agro-benin",
+        href: "/blog/fonds-dispositifs-financement-sante-france",
         summary: "Un exemple concret d’action conjointe sur un marché ouest-africain."
       },
       {
@@ -240,17 +240,17 @@ export const editorialTracks: EditorialTrack[] = [
       },
       {
         title: "Business France",
-        href: "/blog/business-france-services-webinaires-export-vie",
+        href: "/blog/life-sciences-afrique-export-structurer",
         summary: "Source et point d’appui pour l’internationalisation."
       },
       {
         title: "Bpifrance / Le Hub",
-        href: "/blog/bpifrance-le-hub-services-evenements-startups-investies",
+        href: "/blog/fonds-dispositifs-financement-sante-france",
         summary: "Signal utile pour croissance, recrutement et accompagnement."
       },
       {
         title: "Abidjanaises In Tech",
-        href: "/blog/abidjanaises-in-tech-cote-divoire-ecosysteme-sante",
+        href: "/blog/life-sciences-afrique-export-structurer",
         summary: "Réseau ivoirien important pour les talents, l’inclusion et l’écosystème."
       }
     ]
