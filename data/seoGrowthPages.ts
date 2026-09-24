@@ -2135,7 +2135,7 @@ export const seoGrowthPages: SeoGrowthPage[] = [
       ...coreLinks,
       {
         label: "Article France Biotech 2024",
-        href: "/blog/france-biotech-cartographie-fonds-sante-2024",
+        href: "/blog/fonds-dispositifs-financement-sante-france",
         description: "Synthèse éditoriale à partir de la cartographie France Biotech."
       },
       {
