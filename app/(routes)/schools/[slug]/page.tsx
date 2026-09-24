@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import ContentPageSignature from "@/components/ContentPageSignature";
 import PageHero from "@/components/PageHero";
@@ -5,6 +7,48 @@ import ResourceLogo from "@/components/ResourceLogo";
 import { schools } from "@/data/resources";
 import { getNotionSiteContentBySlug, mapNotionEntryToResourceItem } from "@/lib/notion";
 import { resolveSchoolSlug } from "@/lib/slugRescueRegistry";
+import { getJobRolesForSchool, getOfficialProgramsForSchool } from "@/lib/schoolJobRoles";
+
+const ANIMAL_HEALTH_SECTORS = ["Animal Health", "Medical Vet", "Petfood", "Vet Services"];
+const LIFE_SCIENCES_SECTORS = ["Life Sciences", "Biotech", "Diagnostic", "MedTech", "Médecine nucléaire"];
+
+function sectorPillar(sector?: string): { href: string; label: string } | null {
+  if (!sector) return null;
+  if (ANIMAL_HEALTH_SECTORS.includes(sector)) {
+    return { href: "/animal-health", label: "Recrutement en santé animale" };
+  }
+  if (LIFE_SCIENCES_SECTORS.includes(sector)) {
+    return { href: "/life-sciences", label: "Recrutement en Life Sciences" };
+  }
+  return null;
+}
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const item = schools.find((entry) => entry.slug === slug);
+  if (!item) {
+    // Ecole issue de Notion uniquement ou slug inconnu : la page gere elle-meme
+    // redirection et 404, on garde les metadonnees par defaut.
+    return {};
+  }
+
+  const place =
+    item.location && !item.title.includes(item.location.split(/[ ,/]/)[0]) ? ` (${item.location})` : "";
+  const title = `${item.title}${place} : formations et débouchés`;
+  const description = `${item.summary} Formations, métiers visés et viviers de recrutement en ${item.sector}, par SKS TALENTS.`;
+  const canonical = `https://www.skstalents.fr/schools/${item.slug}`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: { title, description, url: canonical, type: "website", siteName: "SKS TALENTS" }
+  };
+}
 
 export const dynamic = "force-dynamic";
 
@@ -63,6 +107,10 @@ export default async function SchoolDetailPage({
     notFound();
   }
 
+  const relatedRoles = getJobRolesForSchool(item.slug);
+  const officialPrograms = getOfficialProgramsForSchool(item.slug);
+  const pillar = sectorPillar(item.sector);
+
   const isVeterinarySchool = ["enva", "envt", "oniris", "vetagro-sup", "unilasalle-rouen-veterinaire"].includes(
     item.slug
   );
@@ -84,8 +132,7 @@ export default async function SchoolDetailPage({
               technicité.
             </p>
             <p className="mt-4 text-base leading-8 text-brand-stone">
-              Cette page peut détailler les spécialisations les plus pertinentes, les stages,
-              alternances et premiers postes qui alimentent la chaîne de talents du secteur.
+              {item.summary}
             </p>
           </div>
           <div className="card-surface p-8">
@@ -145,6 +192,75 @@ export default async function SchoolDetailPage({
           </div>
         </section>
       ) : null}
+      {officialPrograms.length || relatedRoles.length ? (
+        <section className="container-shell py-4">
+          <div className="grid gap-6 lg:grid-cols-2">
+            {officialPrograms.length ? (
+              <div className="card-surface p-8">
+                <h2 className="font-display text-3xl">Formations suivies</h2>
+                <p className="mt-4 text-sm leading-7 text-brand-stone">
+                  Programmes de l’établissement que nous rapprochons de nos fiches métiers. Liens
+                  vers les pages officielles.
+                </p>
+                <ul className="mt-4 space-y-3 text-sm leading-7">
+                  {officialPrograms.map((program) => (
+                    <li key={program.url}>
+                      <a
+                        href={program.url}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="font-semibold text-brand-teal hover:underline"
+                      >
+                        {program.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+            {relatedRoles.length ? (
+              <div className="card-surface p-8">
+                <h2 className="font-display text-3xl">Métiers alimentés par cette école</h2>
+                <p className="mt-4 text-sm leading-7 text-brand-stone">
+                  Fiches métiers pour lesquelles {item.title} fait partie des viviers de
+                  recrutement : missions, compétences et fourchettes de rémunération.
+                </p>
+                <ul className="mt-4 space-y-3 text-sm leading-7">
+                  {relatedRoles.map((role) => (
+                    <li key={role.slug}>
+                      <Link
+                        href={`/job-roles/${role.slug}`}
+                        className="font-semibold text-brand-teal hover:underline"
+                      >
+                        {role.title}
+                      </Link>
+                      <span className="text-brand-stone"> · {role.sector}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+          </div>
+        </section>
+      ) : null}
+      <section className="container-shell py-4">
+        <div className="card-surface flex flex-wrap gap-3 p-6 text-sm">
+          <Link href="/schools" className="rounded-full border border-brand-line px-4 py-2 hover:bg-brand-mint/50">
+            Toutes les écoles
+          </Link>
+          <Link href="/job-roles" className="rounded-full border border-brand-line px-4 py-2 hover:bg-brand-mint/50">
+            Fiches métiers
+          </Link>
+          <Link href="/salary-benchmarks" className="rounded-full border border-brand-line px-4 py-2 hover:bg-brand-mint/50">
+            Benchmarks salaires
+          </Link>
+          {pillar ? (
+            <Link href={pillar.href} className="rounded-full border border-brand-line px-4 py-2 hover:bg-brand-mint/50">
+              {pillar.label}
+            </Link>
+          ) : null}
+        </div>
+      </section>
       <ContentPageSignature description="Page école éditée par SKS TALENTS pour relier viviers, parcours, métiers et besoins de recrutement dans les secteurs scientifiques, vétérinaires et techniques." />
     </>
   );
