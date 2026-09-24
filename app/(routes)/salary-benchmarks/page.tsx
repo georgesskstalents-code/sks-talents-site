@@ -6,9 +6,10 @@ import SectionShell from "@/components/SectionShell";
 import { jobRoles } from "@/data/jobRoles";
 
 export const metadata: Metadata = {
-  title: "Benchmarks salaires",
+  title: "Salaires biotech, medtech et santé animale 2026 : benchmarks par poste",
   description:
-    "Benchmarks salaires SKS TALENTS par métier et secteur pour Life Sciences, diagnostic, medtech, santé animale, veterinary et petfood, avec un angle Seed, Série A et Série B."
+    "Fourchettes de salaire brut annuel par poste en biotech, diagnostic, medtech, santé animale et petfood, en France. Écarts Seed, Série A, Série B et scale-up.",
+  alternates: { canonical: "https://www.skstalents.fr/salary-benchmarks" }
 };
 
 function parseSalaryRange(salary: string): { min: number; max: number } | null {
