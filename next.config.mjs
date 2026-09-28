@@ -366,6 +366,18 @@ const nextConfig = {
         source: "/mentions-legales",
         destination: "/legal/mentions-legales",
         permanent: true
+      },
+
+      // 2026-09-28 : ancien schema d'URL "/expertises/x" (site pre-refonte),
+      // toujours indexe par Google / cite dans d'anciens liens externes, ne
+      // pointe plus vers aucune route de ce repo (verifie : ni historique
+      // git, ni sitemap actuel). Redirect generique vers la racine : couvre
+      // /expertises/animal-health, /expertises/life-sciences, etc. sans
+      // maintenir une liste au cas par cas.
+      {
+        source: "/expertises/:path*",
+        destination: "/:path*",
+        permanent: true
       }
     ];
   },
