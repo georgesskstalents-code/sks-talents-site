@@ -844,7 +844,7 @@ export default function SectorLandingPage({ config }: Props) {
         <div className={styles.processSection}>
           <p className={styles.sectionLabel}>§ 03 · Comment ça marche</p>
           <h2 id={`${config.key}-how-title`} className={styles.processHeadline}>
-            De l’intake à la signature - <span className={styles.titleAccent}>15 jours à 1 mois selon le projet.</span>
+            De l’intake à la signature - <span className={styles.titleAccent}>60 jours.</span>
           </h2>
 
           <div className={styles.timeline}>

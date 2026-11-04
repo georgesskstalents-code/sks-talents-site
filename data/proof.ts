@@ -25,7 +25,7 @@ export const proof = {
   firstShortlistDays: 10,
   firstShortlistLabel: "10 jours ouvres",
   /** De l'intake a la signature. */
-  intakeToSignature: "15 jours a 1 mois selon le projet",
+  intakeToSignature: "60 jours",
 
   /**
    * Garantie de remplacement : une recherche de remplacement offerte, dans les
