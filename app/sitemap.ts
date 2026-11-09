@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { fileLastmod, notInFuture } from "@/lib/sitemapLastmod";
 import { jobRoleIndexing } from "@/lib/jobRoleIndexing";
+import { parseJobRoleContent } from "@/lib/jobRoleContent";
+import { getNotionSiteContentList } from "@/lib/notion";
 import { articles } from "@/data/articles";
 import { jobRoles } from "@/data/jobRoles";
 import { references } from "@/data/references";
@@ -51,7 +53,27 @@ function hasSubstantialJobRole(r: typeof jobRoles[number]): boolean {
   return jobRoleIndexing(r.slug, (slug) => jobRoleSlugs.has(slug)).mode === "index";
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+/**
+ * Fiches metiers creees uniquement dans Notion (Status = Published), retenues
+ * seulement si leur texte redige porte au moins 3 missions et une analyse :
+ * meme exigence de substance que pour les fiches du code.
+ */
+async function notionJobRoleRoutes(): Promise<string[]> {
+  try {
+    const entries = await getNotionSiteContentList("job_role", 100);
+    return entries
+      .filter((e) => e.slug && !jobRoleSlugs.has(e.slug))
+      .filter((e) => {
+        const content = parseJobRoleContent(e.mainContent);
+        return Boolean(content && content.missions.length >= 3 && content.body.length > 1500);
+      })
+      .map((e) => `/job-roles/${e.slug}`);
+  } catch {
+    return [];
+  }
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = [
     "",
     "/about",
@@ -109,6 +131,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const dynamicRoutes = [
     ...articles.filter(hasSubstantialArticle).map((a) => `/blog/${a.slug}`),
     ...jobRoles.filter(hasSubstantialJobRole).map((r) => `/job-roles/${r.slug}`),
+    ...(await notionJobRoleRoutes()),
     ...references.map((r) => `/references/${r.slug}`),
     ...investmentFunds.map((f) => `/investment-funds/${f.slug}`),
     ...comparisons.map((c) => `/comparatifs/${c.slug}`),
