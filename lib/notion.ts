@@ -50,7 +50,7 @@ type NotionPage = {
     string,
     {
       type?: string;
-      rich_text?: { plain_text?: string }[];
+      rich_text?: { plain_text?: string; href?: string | null }[];
       title?: { plain_text?: string }[];
       select?: { name?: string };
       status?: { name?: string };
@@ -218,6 +218,24 @@ function extractStatus(page: NotionPage, propertyName = "Status") {
 function extractRichText(page: NotionPage, propertyName: string) {
   const richText = page.properties?.[propertyName]?.rich_text ?? [];
   return richText.map((item) => item.plain_text ?? "").join("").trim();
+}
+
+/**
+ * Variante pour les textes longs rendus en markdown (Main Content) : un lien
+ * pose dans Notion est restitue en [texte](url), sinon seul son libelle
+ * survivait et le lien disparaissait du site.
+ */
+function extractRichTextMarkdown(page: NotionPage, propertyName: string) {
+  const richText = page.properties?.[propertyName]?.rich_text ?? [];
+  return richText
+    .map((item) => {
+      const text = item.plain_text ?? "";
+      const href = item.href?.trim();
+      if (!href || !text.trim() || text.trim() === href) return text;
+      return `[${text}](${href})`;
+    })
+    .join("")
+    .trim();
 }
 
 function extractDate(page: NotionPage, propertyName: string) {
@@ -636,7 +654,7 @@ function mapPageToSiteContentEntry(page: NotionPage): NotionSiteContentEntry {
     vertical: extractSelect(page, "Vertical"),
     category: extractSelect(page, "Category"),
     excerpt: extractRichText(page, "Excerpt"),
-    mainContent: extractRichText(page, "Main Content"),
+    mainContent: extractRichTextMarkdown(page, "Main Content"),
     publishDate: extractDate(page, "Publish date"),
     seoTitle: extractRichText(page, "SEO Title"),
     metaDescription: extractRichText(page, "Meta Description"),
