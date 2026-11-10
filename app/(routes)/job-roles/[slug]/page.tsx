@@ -11,6 +11,7 @@ import {
   isChloeActiveFor
 } from "@/data/chloe-fiches-priority";
 import { getNotionSiteContentBySlug } from "@/lib/notion";
+import { parseJobRoleContent } from "@/lib/jobRoleContent";
 import { resolveJobRoleSlug } from "@/lib/slugRescueRegistry";
 
 export const dynamic = "force-dynamic";
@@ -179,6 +180,8 @@ export default async function JobRoleDetailPage({
   const { slug } = await params;
   const role = findJobRoleBySlug(slug);
   const notionRole = await getNotionSiteContentBySlug(slug, "job_role");
+  // Fiche creee uniquement dans Notion : son texte redige est affiche, sans les notes internes.
+  const notionEditorial = !role && notionRole ? parseJobRoleContent(notionRole.mainContent) : null;
 
   if (!role && !notionRole) {
     // Filet de securite "slug devine" (LLM, backlink approximatif, faute de
@@ -220,7 +223,7 @@ export default async function JobRoleDetailPage({
           skills: [] as string[],
           successFactors: [] as string[],
           path: [] as string[],
-          missions: [] as string[],
+          missions: notionEditorial?.missions ?? ([] as string[]),
           studies: splitNotionList(notionRole.studies),
           schools: splitNotionList(notionRole.schools),
           relatedIndustries: splitNotionList(notionRole.industries)
@@ -245,7 +248,12 @@ export default async function JobRoleDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(occupationJsonLd) }}
       />
-      <FicheMetierPage role={resolvedRole} relatedRoles={relatedRoles} relatedArticles={relatedArticles} />
+      <FicheMetierPage
+        role={resolvedRole}
+        relatedRoles={relatedRoles}
+        relatedArticles={relatedArticles}
+        editorialBody={notionEditorial?.body || undefined}
+      />
       {isChloeActiveFor(resolvedRole.slug) ? (
         <ChloeLiveBubble
           ficheSlug={resolvedRole.slug}

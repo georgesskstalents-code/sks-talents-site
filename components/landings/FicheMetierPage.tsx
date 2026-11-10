@@ -1,5 +1,6 @@
 import Link from "next/link";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
+import ArticleBody from "@/components/ArticleBody";
 import "./fiche-metier.css";
 
 export type FicheMetierRole = {
@@ -29,6 +30,8 @@ type Props = {
   role: FicheMetierRole;
   relatedRoles: RelatedRole[];
   relatedArticles?: RelatedArticle[];
+  /** Texte redige dans Notion (notes internes deja retirees), en markdown. */
+  editorialBody?: string;
 };
 
 const TENSION_LEVELS: Record<FicheMetierRole["shortageLevel"], { bars: number; label: string }> = {
@@ -69,7 +72,7 @@ function getAxisRange(min: number, max: number): number[] {
   return steps.slice(0, 6);
 }
 
-export default function FicheMetierPage({ role, relatedRoles, relatedArticles = [] }: Props) {
+export default function FicheMetierPage({ role, relatedRoles, relatedArticles = [], editorialBody }: Props) {
   const tension = TENSION_LEVELS[role.shortageLevel];
   const band = parseSalaryToBand(role.salary);
   const axis = band ? getAxisRange(band.min, band.max) : [];
@@ -340,6 +343,21 @@ export default function FicheMetierPage({ role, relatedRoles, relatedArticles = 
           </div>
         </section>
       )}
+
+      {/* ANALYSE - texte redige dans Notion */}
+      {editorialBody ? (
+        <section className="fm-section" id="analyse">
+          <div className="fm-sec-head">
+            <div className="fm-sec-num">ANALYSE SKS TALENTS</div>
+            <div>
+              <h2 className="fm-sec-title">Le métier en <em>profondeur</em>.</h2>
+            </div>
+          </div>
+          <div style={{ maxWidth: 880 }}>
+            <ArticleBody body={editorialBody} keyPrefix={`fiche-${role.slug}`} />
+          </div>
+        </section>
+      ) : null}
 
       {/* CAREER PATH */}
       {role.path.length > 0 && (
