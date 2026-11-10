@@ -27,10 +27,16 @@
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
 }
-.fm-root, .fm-root * { box-sizing: border-box; margin: 0; padding: 0; }
-.fm-root a { color: inherit; text-decoration: none; }
+/*
+ * Remise a zero de la fiche. Le texte redige (.fm-prose, section Analyse)
+ * en est exclu : il porte ses propres marges, retraits, puces et
+ * soulignements de liens, sinon titres, numeros et puces se chevauchent.
+ * :where() garde la specificite d'origine des regles pour le reste de la page.
+ */
+.fm-root, .fm-root :where(:not(.fm-prose, .fm-prose *)) { box-sizing: border-box; margin: 0; padding: 0; }
+.fm-root a:where(:not(.fm-prose a)) { color: inherit; text-decoration: none; }
 .fm-root button { font: inherit; background: none; border: none; color: inherit; cursor: pointer; }
-.fm-root ul, .fm-root ol { list-style: none; }
+.fm-root ul:where(:not(.fm-prose ul)), .fm-root ol:where(:not(.fm-prose ol)) { list-style: none; }
 .fm-root ::selection { background: var(--fm-ink); color: var(--fm-bg); }
 
 /* --- breadcrumb --- */
