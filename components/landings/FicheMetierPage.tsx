@@ -353,7 +353,7 @@ export default function FicheMetierPage({ role, relatedRoles, relatedArticles = 
               <h2 className="fm-sec-title">Le métier en <em>profondeur</em>.</h2>
             </div>
           </div>
-          <div style={{ maxWidth: 880 }}>
+          <div className="fm-prose" style={{ maxWidth: 880 }}>
             <ArticleBody body={editorialBody} keyPrefix={`fiche-${role.slug}`} />
           </div>
         </section>
