@@ -217,6 +217,14 @@ export default async function JobRoleDetailPage({
           title: notionRole.title,
           summary: notionRole.excerpt || "",
           salary: notionRole.salaryRange || "Rémunération sur demande",
+          // Fourchette tiree d'offres ou d'etudes publiees : source affichee,
+          // bornes nommees sans pretendre a des percentiles.
+          ...(notionRole.salarySource
+            ? {
+                salarySource: notionRole.salarySource,
+                salaryLabels: { low: "Bas de fourchette", high: "Haut de fourchette" }
+              }
+            : {}),
           sector: notionRole.vertical || "Cross-sector",
           category: notionRole.category || "Fiche métier",
           shortageLevel: "Moderee" as const,

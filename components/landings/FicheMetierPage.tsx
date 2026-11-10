@@ -9,6 +9,11 @@ export type FicheMetierRole = {
   summary: string;
   salary: string;
   salarySource?: string;
+  /**
+   * Libelles des bornes. Par defaut p25 / p75 ; une fourchette tiree
+   * d'offres publiees n'est pas un percentile et prend des libelles neutres.
+   */
+  salaryLabels?: { low: string; high: string };
   sector: string;
   category: string;
   shortageLevel: "Moderee" | "Elevee" | "Tres elevee";
@@ -43,7 +48,7 @@ const TENSION_LEVELS: Record<FicheMetierRole["shortageLevel"], { bars: number; l
 function parseSalaryToBand(salary: string): { min: number; max: number; minLabel: string; maxLabel: string; isSingle: boolean } | null {
   if (!salary) return null;
   // Match "45kEUR - 60kEUR" or "45 - 60 k€" or "45-60" (any non-digit chars allowed around the dash)
-  const m = salary.match(/(\d+)[^\d-]*[-\u2013\u2014][^\d]*(\d+)/);
+  const m = salary.match(/(\d+)[^\d-]*(?:[-\u2013\u2014]|\sà\s)[^\d]*(\d+)/);
   if (m && m[1] !== m[2]) {
     const min = Number(m[1]);
     const max = Number(m[2]);
@@ -208,12 +213,12 @@ export default function FicheMetierPage({ role, relatedRoles, relatedArticles = 
                 ) : (
                   <>
                     <div>
-                      <span className="fm-salary-cap">p25 · entrée</span>
+                      <span className="fm-salary-cap">{role.salaryLabels?.low ?? "p25 · entrée"}</span>
                       <span className="fm-salary-num">{band.minLabel}</span>
                     </div>
                     <span className="fm-salary-headline-arrow" aria-hidden>→</span>
                     <div>
-                      <span className="fm-salary-cap">p75 · senior</span>
+                      <span className="fm-salary-cap">{role.salaryLabels?.high ?? "p75 · senior"}</span>
                       <span className="fm-salary-num">{band.maxLabel}</span>
                     </div>
                   </>
