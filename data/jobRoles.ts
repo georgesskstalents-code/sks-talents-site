@@ -5524,7 +5524,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
     sources: [
       { name: "ITAVI - Institut Technique de l'Aviculture", url: "https://www.itavi.asso.fr/" },
       { name: "SNGTV - Groupements Techniques Vétérinaires", url: "https://www.sngtv.org/" },
-      { name: "Anses - Grippe aviaire et surveillance", url: "https://www.anses.fr/fr/system/files/anses-grippe-aviaire.pdf" }
+      { name: "Anses - Grippe aviaire et surveillance", url: "https://www.anses.fr/fr/content/les-actions-de-lanses-pour-eviter-la-propagation-de-linfluenza-aviaire" }
     ]
   },
   {
