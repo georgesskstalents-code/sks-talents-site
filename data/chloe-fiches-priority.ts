@@ -35,10 +35,10 @@ export const chloePriorityFiches: ChloePriorityFiche[] = [
   { targetTitle: "National Sales Manager Petfood France", slug: "petfood-technical-services-manager", bloc: "petfood", matchNote: "approximation" },
 
   // Bloc B · Sante Animale (10)
-  { targetTitle: "Directeur.rice Regional Cliniques Veterinaires", slug: "veterinary-regional-clinic-director", bloc: "animal-health", matchNote: "exact" },
+  { targetTitle: "Directeur.rice Régional Cliniques Vétérinaires", slug: "veterinary-regional-clinic-director", bloc: "animal-health", matchNote: "exact" },
   { targetTitle: "Head of Regulatory Europe Sante Animale", slug: "medical-vet-head-of-regulatory-europe", bloc: "animal-health", matchNote: "exact" },
   { targetTitle: "Country Manager France Sante Animale", slug: "medical-vet-country-manager-france", bloc: "animal-health", matchNote: "exact" },
-  { targetTitle: "CEO Groupe Veterinaire", slug: "ceo-veterinary-group", bloc: "animal-health", matchNote: "exact" },
+  { targetTitle: "CEO Groupe Vétérinaire", slug: "ceo-veterinary-group", bloc: "animal-health", matchNote: "exact" },
   { targetTitle: "Head of R&D Sante Animale", slug: "head-of-rd-animal-health", bloc: "animal-health", matchNote: "exact" },
   { targetTitle: "Head of Marketing Sante Animale", slug: "medical-vet-channel-marketing-manager", bloc: "animal-health", matchNote: "approximation" },
   { targetTitle: "VP Commercial Sante Animale", slug: "medical-vet-commercial-director-france-animal-nutrition", bloc: "animal-health", matchNote: "approximation" },

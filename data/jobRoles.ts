@@ -35,7 +35,7 @@ const sectorConfigs: SectorConfig[] = [
     label: "Biotech",
     slugPrefix: "biotech",
     schoolPool: [
-      "Universite Paris-Saclay",
+      "Université Paris-Saclay",
       "ESBS Strasbourg",
       "EBI Cergy",
       "AgroParisTech",
@@ -45,7 +45,7 @@ const sectorConfigs: SectorConfig[] = [
       "Biopharma",
       "Cell therapy",
       "Medtech de rupture",
-      "CDMO specialisees",
+      "CDMO spécialisées",
       "Digital health"
     ]
   },
@@ -53,10 +53,10 @@ const sectorConfigs: SectorConfig[] = [
     label: "Diagnostic",
     slugPrefix: "diagnostic",
     schoolPool: [
-      "Universite Paris-Saclay",
+      "Université Paris-Saclay",
       "Grenoble INP - Ensimag",
       "Telecom Paris",
-      "Faculte de pharmacie Strasbourg",
+      "Faculté de pharmacie Strasbourg",
       "EPITA"
     ],
     relatedIndustries: [
@@ -73,7 +73,7 @@ const sectorConfigs: SectorConfig[] = [
     schoolPool: [
       "ISIPCA",
       "ICAP Montpellier",
-      "UCO Biotechnologies cosmetiques",
+      "UCO Biotechnologies cosmétiques",
       "Chimie ParisTech",
       "ESCOM Compiegne"
     ],
@@ -92,15 +92,15 @@ const sectorConfigs: SectorConfig[] = [
       "Oniris",
       "VetAgro Sup",
       "ENVT",
-      "Faculte de pharmacie Strasbourg",
-      "Universite d'Angers"
+      "Faculté de pharmacie Strasbourg",
+      "Université d'Angers"
     ],
     relatedIndustries: [
       "Vet pharma",
-      "Vaccins veterinaires",
+      "Vaccins vétérinaires",
       "Animal biotech",
-      "Nutrition therapeutique animale",
-      "Diagnostic veterinaire"
+      "Nutrition thérapeutique animale",
+      "Diagnostic vétérinaire"
     ]
   },
   {
@@ -110,7 +110,7 @@ const sectorConfigs: SectorConfig[] = [
       "Oniris",
       "VetAgro Sup",
       "ENVT",
-      "Universite de Liege Vet",
+      "Université de Liège Vet",
       "Institut Agro Rennes Angers"
     ],
     relatedIndustries: [
@@ -118,7 +118,7 @@ const sectorConfigs: SectorConfig[] = [
       "Diagnostic vet",
       "Telemedecine vet",
       "Pet insurance",
-      "Services veterinaires de specialite"
+      "Services vétérinaires de spécialité"
     ]
   },
   {
@@ -268,357 +268,357 @@ const glassdoorBenchmarks: Record<string, GlassdoorBenchmark> = {
   "application-engineer": {
     salary: "Base 43kEUR - 56kEUR + 1kEUR - 11kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Ingenieur d'application via le titre comparable Application Specialist. Derniere mise a jour constatee le 25 aout 2025, 14 salaires publies, indice de confiance tres eleve. A ajuster selon instrumentation, zone et exposition terrain.",
+      "Repère Glassdoor France utilisé comme proxy pour un Ingénieur d'application via le titre comparable Application Specialist. Dernière mise à jour constatée le 25 août 2025, 14 salaires publiés, indice de confiance très élevé. À ajuster selon instrumentation, zone et exposition terrain.",
     sourceName: "Glassdoor - Application Specialist France",
     sourceUrl: GLASSDOOR_APPLICATION_SPECIALIST_URL
   },
   "maintenance-engineer": {
     salary: "Base 40kEUR - 52kEUR + 3kEUR - 7kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Ingenieur de maintenance via le titre comparable Field Service Engineer. Derniere mise a jour constatee le 28 decembre 2025, 224 salaires publies, indice de confiance tres eleve.",
+      "Repère Glassdoor France utilisé comme proxy pour un Ingénieur de maintenance via le titre comparable Field Service Engineer. Dernière mise à jour constatée le 28 décembre 2025, 224 salaires publiés, indice de confiance très élevé.",
     sourceName: "Glassdoor - Field Service Engineer France",
     sourceUrl: GLASSDOOR_FIELD_SERVICE_ENGINEER_URL
   },
   "sales-director": {
     salary: "Base 60kEUR - 100kEUR + 10kEUR - 30kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Directeur commercial, utilise ici pour calibrer le package d'un Directeur des ventes. Derniere mise a jour constatee le 11 mars 2026, environ 2,5 k salaires publies, indice de confiance tres eleve.",
+      "Repère Glassdoor France pour un Directeur commercial, utilisé ici pour calibrer le package d'un Directeur des ventes. Dernière mise à jour constatée le 11 mars 2026, environ 2,5 k salaires publiés, indice de confiance très élevé.",
     sourceName: "Glassdoor - Directeur Commercial France",
     sourceUrl: GLASSDOOR_DIRECTEUR_COMMERCIAL_URL
   },
   "export-manager-emea": {
     salary: "Base 40kEUR - 65kEUR + 5kEUR - 12kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Manager export, utilise ici pour l'Export Manager EMEA. Derniere mise a jour constatee le 21 juillet 2025, 106 salaires publies, indice de confiance tres eleve. A majorer quand la zone couvre plusieurs pays ou distributeurs complexes.",
+      "Repère Glassdoor France pour un Manager export, utilisé ici pour l'Export Manager EMEA. Dernière mise à jour constatée le 21 juillet 2025, 106 salaires publiés, indice de confiance très élevé. À majorer quand la zone couvre plusieurs pays ou distributeurs complexes.",
     sourceName: "Glassdoor - Manager Export France",
     sourceUrl: GLASSDOOR_MANAGER_EXPORT_URL
   },
   "export-manager-afrique": {
     salary: "Base 40kEUR - 65kEUR + 5kEUR - 12kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Manager export, utilise ici pour l'Export Manager Afrique. Derniere mise a jour constatee le 21 juillet 2025, 106 salaires publies, indice de confiance tres eleve. A recalibrer selon travel mix, distribution locale et profondeur de zone.",
+      "Repère Glassdoor France pour un Manager export, utilisé ici pour l'Export Manager Afrique. Dernière mise à jour constatée le 21 juillet 2025, 106 salaires publiés, indice de confiance très élevé. À recalibrer selon travel mix, distribution locale et profondeur de zone.",
     sourceName: "Glassdoor - Manager Export France",
     sourceUrl: GLASSDOOR_MANAGER_EXPORT_URL
   },
   drh: {
     salary: "Base 60kEUR - 99kEUR + 6kEUR - 25kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Directeur Ressources Humaines. Derniere mise a jour constatee le 13 octobre 2025, 113 salaires publies, indice de confiance tres eleve. A ajuster selon taille d'effectif, exposition internationale et transformation RH.",
+      "Repère Glassdoor France pour un Directeur Ressources Humaines. Dernière mise à jour constatée le 13 octobre 2025, 113 salaires publiés, indice de confiance très élevé. À ajuster selon taille d'effectif, exposition internationale et transformation RH.",
     sourceName: "Glassdoor - Directeur Ressources Humaines France",
     sourceUrl: GLASSDOOR_DRH_URL
   },
   cfo: {
     salary: "Base 70kEUR - 120kEUR + 17kEUR - 46kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Chief Financial Officer. Derniere mise a jour constatee le 1 juillet 2025, 57 salaires publies, indice de confiance tres eleve. A raffiner selon taille de bilan, levee, dette, M&A et gouvernance investisseurs.",
+      "Repère Glassdoor France pour un Chief Financial Officer. Dernière mise à jour constatée le 1 juillet 2025, 57 salaires publiés, indice de confiance très élevé. À raffiner selon taille de bilan, levée, dette, M&A et gouvernance investisseurs.",
     sourceName: "Glassdoor - Chief Financial Officer France",
     sourceUrl: GLASSDOOR_CFO_URL
   },
   "biotech-medical-affairs-manager": {
     salary: "Base 55kEUR - 90kEUR + 200EUR - 16kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Medical Affairs Manager. Derniere mise a jour constatee le 16 juillet 2025, 10 salaires publies, indice de confiance eleve. A recouper avec Aon pour tenir compte du niveau therapeutique, du scope medical et du mix headquarters / terrain.",
+      "Repère Glassdoor France pour un Medical Affairs Manager. Dernière mise à jour constatée le 16 juillet 2025, 10 salaires publiés, indice de confiance élevé. À recouper avec Aon pour tenir compte du niveau thérapeutique, du scope medical et du mix headquarters / terrain.",
     sourceName: "Glassdoor - Medical Affairs Manager France",
     sourceUrl: GLASSDOOR_MEDICAL_AFFAIRS_MANAGER_URL
   },
   "biotech-market-access-manager": {
     salary: "Base 62kEUR - 85kEUR + 10kEUR - 24kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Market Access Manager. Derniere mise a jour constatee le 4 decembre 2025, 19 salaires publies, indice de confiance tres eleve. A ajuster selon exposition pricing, HTA, geographie et phase clinique.",
+      "Repère Glassdoor France pour un Market Access Manager. Dernière mise à jour constatée le 4 décembre 2025, 19 salaires publiés, indice de confiance très élevé. À ajuster selon exposition pricing, HTA, géographie et phase clinique.",
     sourceName: "Glassdoor - Market Access Manager France",
     sourceUrl: GLASSDOOR_MARKET_ACCESS_MANAGER_URL
   },
   "medical-vet-medical-science-liaison": {
     salary: "Base 62kEUR - 89kEUR + 7kEUR - 13kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor Ile-de-France utilise pour un Medical Science Liaison, car le marche France sur ce titre reste tres concentre en region parisienne. Derniere mise a jour constatee le 16 juillet 2025, 14 salaires publies, indice de confiance tres eleve.",
-    sourceName: "Glassdoor - Medical Science Liaison Ile-de-France",
+      "Repère Glassdoor Île-de-France utilise pour un Medical Science Liaison, car le marché France sur ce titre reste très concentre en region parisienne. Dernière mise à jour constatée le 16 juillet 2025, 14 salaires publiés, indice de confiance très élevé.",
+    sourceName: "Glassdoor - Medical Science Liaison Île-de-France",
     sourceUrl: GLASSDOOR_MEDICAL_SCIENCE_LIAISON_URL
   },
   "diagnostic-data-science-manager": {
     salary: "Base 61kEUR - 84kEUR + 3kEUR - 20kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Data Science Manager. Derniere mise a jour constatee le 28 novembre 2025, 16 salaires publies, indice de confiance tres eleve. A majorer si le scope couvre IA produit, management d'equipe et environnement medtech regule.",
+      "Repère Glassdoor France pour un Data Science Manager. Dernière mise à jour constatée le 28 novembre 2025, 16 salaires publiés, indice de confiance très élevé. À majorer si le scope couvre IA produit, management d'équipe et environnement medtech régulé.",
     sourceName: "Glassdoor - Data Science Manager France",
     sourceUrl: GLASSDOOR_DATA_SCIENCE_MANAGER_URL
   },
   "business-unit-director": {
     salary: "Base 60kEUR - 125kEUR + 23kEUR - 43kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Business Unit Director via le titre comparable Business Unit Manager. Derniere mise a jour constatee le 16 juillet 2025, 249 salaires publies, indice de confiance tres eleve. A recalibrer selon P&L, scope multi-pays et taille d'equipe.",
+      "Repère Glassdoor France utilisé comme proxy pour un Business Unit Director via le titre comparable Business Unit Manager. Dernière mise à jour constatée le 16 juillet 2025, 249 salaires publiés, indice de confiance très élevé. À recalibrer selon P&L, scope multi-pays et taille d'équipe.",
     sourceName: "Glassdoor - Business Unit Manager France",
     sourceUrl: GLASSDOOR_BUSINESS_UNIT_DIRECTOR_URL
   },
   "emea-director": {
     salary: "Base 71kEUR - 143kEUR + 15kEUR - 84kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Directeur EMEA via le titre comparable Regional Director. Derniere mise a jour constatee le 11 septembre 2025, 45 salaires publies, indice de confiance tres eleve.",
+      "Repère Glassdoor France utilisé comme proxy pour un Directeur EMEA via le titre comparable Regional Director. Dernière mise à jour constatée le 11 septembre 2025, 45 salaires publiés, indice de confiance très élevé.",
     sourceName: "Glassdoor - Regional Director France",
     sourceUrl: GLASSDOOR_REGIONAL_DIRECTOR_URL
   },
   coo: {
     salary: "Base 54kEUR - 111kEUR + 10kEUR - 45kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Chief Operating Officer. Derniere mise a jour constatee le 8 juillet 2025, 195 salaires publies, indice de confiance tres eleve. A ajuster selon maturite de la structure, sites et intensite operations.",
+      "Repère Glassdoor France pour un Chief Operating Officer. Dernière mise à jour constatée le 8 juillet 2025, 195 salaires publiés, indice de confiance très élevé. À ajuster selon maturité de la structure, sites et intensité operations.",
     sourceName: "Glassdoor - Chief Operating Officer France",
     sourceUrl: GLASSDOOR_COO_URL
   },
   ceo: {
     salary: "Base 45kEUR - 108kEUR + 15kEUR - 40kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Chief Executive Officer. Derniere mise a jour constatee le 14 decembre 2022, 25 salaires publies, indice de confiance tres eleve mais base plus ancienne. A utiliser comme ancrage bas France, puis a recouper avec la taille de l'entreprise, l'equity et le stade de financement.",
+      "Repère Glassdoor France pour un Chief Executive Officer. Dernière mise à jour constatée le 14 décembre 2022, 25 salaires publiés, indice de confiance très élevé mais base plus ancienne. À utiliser comme ancrage bas France, puis à recouper avec la taille de l'entreprise, l'equity et le stade de financement.",
     sourceName: "Glassdoor - Chief Executive Officer France",
     sourceUrl: GLASSDOOR_CEO_URL
   },
   "regulatory-affairs-manager": {
     salary: "Base 48kEUR - 81kEUR + 4kEUR - 12kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Regulatory Affairs Manager. Derniere mise a jour constatee le 21 novembre 2025, 57 salaires publies, indice de confiance tres eleve. A recouper avec la complexite produits, l'exposition internationale et le niveau d'autonomie.",
+      "Repère Glassdoor France pour un Regulatory Affairs Manager. Dernière mise à jour constatée le 21 novembre 2025, 57 salaires publiés, indice de confiance très élevé. À recouper avec la complexité produits, l'exposition internationale et le niveau d'autonomie.",
     sourceName: "Glassdoor - Regulatory Affairs Manager France",
     sourceUrl: GLASSDOOR_REGULATORY_AFFAIRS_MANAGER_URL
   },
   "supply-chain-manager": {
     salary: "Base 51kEUR - 69kEUR + 17kEUR - 22kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Supply Chain Manager. Derniere mise a jour constatee le 23 mars 2025, 12 salaires publies, indice de confiance tres eleve. A majorer sur les perimetres multisites ou fortement regulés.",
+      "Repère Glassdoor France pour un Supply Chain Manager. Dernière mise à jour constatée le 23 mars 2025, 12 salaires publiés, indice de confiance très élevé. À majorer sur les périmètres multisites ou fortement regulés.",
     sourceName: "Glassdoor - Supply Chain Manager France",
     sourceUrl: GLASSDOOR_SUPPLY_CHAIN_MANAGER_URL
   },
   "customer-service-manager": {
     salary: "Base 45kEUR - 65kEUR + 3kEUR - 11kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor Paris pour un Customer Service Manager. Derniere mise a jour constatee le 25 aout 2025, 57 salaires publies, indice de confiance tres eleve. A utiliser comme repere de marche tertiaire / support sur des fonctions service B2B.",
+      "Repère Glassdoor Paris pour un Customer Service Manager. Dernière mise à jour constatée le 25 août 2025, 57 salaires publiés, indice de confiance très élevé. À utiliser comme repère de marché tertiaire / support sur des fonctions service B2B.",
     sourceName: "Glassdoor - Customer Service Manager Paris",
     sourceUrl: GLASSDOOR_CUSTOMER_SERVICE_MANAGER_URL
   },
   "diagnostic-clinical-affairs-manager": {
     salary: "Base 44kEUR - 96kEUR + 3kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Clinical Affairs Manager. Derniere mise a jour constatee le 28 aout 2025, 4 salaires publies, indice de confiance faible. A croiser fortement avec Aon, le type de dispositif et la profondeur des etudes cliniques.",
+      "Repère Glassdoor France pour un Clinical Affairs Manager. Dernière mise à jour constatée le 28 août 2025, 4 salaires publiés, indice de confiance faible. À croiser fortement avec Aon, le type de dispositif et la profondeur des études cliniques.",
     sourceName: "Glassdoor - Clinical Affairs Manager France",
     sourceUrl: GLASSDOOR_CLINICAL_AFFAIRS_MANAGER_URL
   },
   "diagnostic-field-application-manager": {
     salary: "Base 53kEUR - 89kEUR + 15kEUR - 16kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Field Application Manager via le titre Field Application Specialist. Derniere mise a jour constatee en mars 2026, 5 salaires publies, indice de confiance eleve. A majorer quand il y a management d'equipe ou couverture multi-pays.",
+      "Repère Glassdoor France utilisé comme proxy pour un Field Application Manager via le titre Field Application Specialist. Dernière mise à jour constatée en mars 2026, 5 salaires publiés, indice de confiance élevé. À majorer quand il y a management d'équipe ou couverture multi-pays.",
     sourceName: "Glassdoor - Field Application Specialist France",
     sourceUrl: GLASSDOOR_FIELD_APPLICATION_SPECIALIST_URL
   },
   "diagnostic-cybersecurity-engineer": {
     salary: "Base 43kEUR - 70kEUR + 2kEUR - 10kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Cybersecurity Engineer via le titre Security Engineer. Derniere mise a jour constatee le 20 juin 2025, 96 salaires publies, indice de confiance tres eleve.",
+      "Repère Glassdoor France utilisé comme proxy pour un Cybersecurity Engineer via le titre Security Engineer. Dernière mise à jour constatée le 20 juin 2025, 96 salaires publiés, indice de confiance très élevé.",
     sourceName: "Glassdoor - Security Engineer France",
     sourceUrl: GLASSDOOR_SECURITY_ENGINEER_URL
   },
   "diagnostic-key-account-manager-ivd": {
     salary: "Base 45kEUR - 65kEUR + 7kEUR - 20kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Key Account Manager. Derniere mise a jour constatee le 11 aout 2025, 2,3 k salaires publies, indice de confiance tres eleve. Utilise ici pour calibrer un KAM IVD sur les comptes hospitaliers et laboratoires.",
+      "Repère Glassdoor France pour un Key Account Manager. Dernière mise à jour constatée le 11 août 2025, 2,3 k salaires publiés, indice de confiance très élevé. Utilise ici pour calibrer un KAM IVD sur les comptes hospitaliers et laboratoires.",
     sourceName: "Glassdoor - Key Account Manager France",
     sourceUrl: GLASSDOOR_KEY_ACCOUNT_MANAGER_URL
   },
   "biotech-sales-operations-director": {
     salary: "Base 45kEUR - 68kEUR + 3kEUR - 10kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Sales Operations Director via le titre comparable Sales Operations Manager. Derniere mise a jour constatee le 26 aout 2025, 102 salaires publies, indice de confiance tres eleve. A majorer pour un scope direction, RevOps ou perimetre multi-pays.",
+      "Repère Glassdoor France utilisé comme proxy pour un Sales Operations Director via le titre comparable Sales Operations Manager. Dernière mise à jour constatée le 26 août 2025, 102 salaires publiés, indice de confiance très élevé. À majorer pour un scope direction, RevOps ou périmètre multi-pays.",
     sourceName: "Glassdoor - Sales Operations Manager France",
     sourceUrl: GLASSDOOR_SALES_OPERATIONS_MANAGER_URL
   },
   "biotech-medical-director": {
     salary: "Base 100kEUR - 160kEUR + 18kEUR - 60kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Medical Director. Derniere mise a jour constatee le 22 octobre 2025, 16 salaires publies, indice de confiance tres eleve. A ajuster selon aire therapeutique, taille d'equipe medicale et exposition HQ / Europe.",
+      "Repère Glassdoor France pour un Medical Director. Dernière mise à jour constatée le 22 octobre 2025, 16 salaires publiés, indice de confiance très élevé. À ajuster selon aire thérapeutique, taille d'équipe médicale et exposition HQ / Europe.",
     sourceName: "Glassdoor - Medical Director France",
     sourceUrl: GLASSDOOR_MEDICAL_DIRECTOR_URL
   },
   "biotech-qa-manager": {
     salary: "Base 50kEUR - 65kEUR + 4kEUR - 10kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un QA Manager. Derniere mise a jour constatee le 24 juillet 2025, 67 salaires publies, indice de confiance tres eleve. A croiser avec les exigences GMP, release, audits et niveau de responsabilite equipe / site.",
+      "Repère Glassdoor France pour un QA Manager. Dernière mise à jour constatée le 24 juillet 2025, 67 salaires publiés, indice de confiance très élevé. À croiser avec les exigences GMP, release, audits et niveau de responsabilité équipe / site.",
     sourceName: "Glassdoor - QA Manager France",
     sourceUrl: GLASSDOOR_QA_MANAGER_URL
   },
   "biotech-msat-lead": {
     salary: "Base 59kEUR - 64kEUR + 5kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un MSAT Lead via le titre comparable MSAT Process Engineer. Derniere mise a jour constatee le 15 janvier 2025, 1 salaire publie, indice de confiance faible. A majorer nettement si management, pilotage multisites ou ownership industriel complet.",
+      "Repère Glassdoor France utilisé comme proxy pour un MSAT Lead via le titre comparable MSAT Process Engineer. Dernière mise à jour constatée le 15 janvier 2025, 1 salaire publie, indice de confiance faible. À majorer nettement si management, pilotage multisites ou ownership industriel complet.",
     sourceName: "Glassdoor - MSAT Process Engineer France",
     sourceUrl: GLASSDOOR_MSAT_PROCESS_ENGINEER_URL
   },
   "biotech-tech-transfer-manager": {
     salary: "Base 48kEUR - 52kEUR",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Tech Transfer Manager via le titre comparable Technology Transfer Specialist. Derniere mise a jour constatee le 12 fevrier 2023, 1 salaire publie, indice de confiance faible. A croiser avec Aon et la maturite industrielle du poste.",
+      "Repère Glassdoor France utilisé comme proxy pour un Tech Transfer Manager via le titre comparable Technology Transfer Specialist. Dernière mise à jour constatée le 12 février 2023, 1 salaire publie, indice de confiance faible. À croiser avec Aon et la maturité industrielle du poste.",
     sourceName: "Glassdoor - Technology Transfer Specialist France",
     sourceUrl: GLASSDOOR_TECH_TRANSFER_SPECIALIST_URL
   },
   "diagnostic-lims-product-owner": {
     salary: "Base 44kEUR - 55kEUR + 2kEUR - 6kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Product Owner. Derniere mise a jour constatee le 4 avril 2026, 3,7 k salaires publies, indice de confiance tres eleve. Utilise ici pour un Product Owner LIMS & Middleware avec ajustement possible selon contexte diagnostic, interopérabilité et contraintes réglementaires.",
+      "Repère Glassdoor France pour un Product Owner. Dernière mise à jour constatée le 4 avril 2026, 3,7 k salaires publiés, indice de confiance très élevé. Utilise ici pour un Product Owner LIMS & Middleware avec ajustement possible selon contexte diagnostic, interopérabilité et contraintes réglementaires.",
     sourceName: "Glassdoor - Product Owner France",
     sourceUrl: GLASSDOOR_PRODUCT_OWNER_URL
   },
   "medical-vet-area-sales-manager": {
     salary: "Base 55kEUR - 68kEUR + 9kEUR - 15kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor Ile-de-France pour un Area Sales Manager. Derniere mise a jour constatee le 24 mars 2025, 3 salaires publies, indice de confiance eleve. A utiliser comme ancrage pour les postes Medical Vet avec zone terrain, distributeurs et variable commerciale.",
-    sourceName: "Glassdoor - Area Sales Manager Ile-de-France",
+      "Repère Glassdoor Île-de-France pour un Area Sales Manager. Dernière mise à jour constatée le 24 mars 2025, 3 salaires publiés, indice de confiance élevé. À utiliser comme ancrage pour les postes Medical Vet avec zone terrain, distributeurs et variable commerciale.",
+    sourceName: "Glassdoor - Area Sales Manager Île-de-France",
     sourceUrl: GLASSDOOR_AREA_SALES_MANAGER_URL
   },
   "veterinary-clinic-operations-director": {
     salary: "Base 72kEUR - 115kEUR + 7kEUR - 17kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Clinic Operations Director via le titre comparable Operations Director. Derniere mise a jour constatee le 21 novembre 2025, 24 salaires publies, indice de confiance tres eleve.",
+      "Repère Glassdoor France utilisé comme proxy pour un Clinic Operations Director via le titre comparable Operations Director. Dernière mise à jour constatée le 21 novembre 2025, 24 salaires publiés, indice de confiance très élevé.",
     sourceName: "Glassdoor - Operations Director France",
     sourceUrl: GLASSDOOR_OPERATIONS_DIRECTOR_URL
   },
   "veterinary-finance-manager-clinic-group": {
     salary: "Base 50kEUR - 75kEUR + 5kEUR - 13kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Finance Manager. Derniere mise a jour constatee le 1 juillet 2025, 526 salaires publies, indice de confiance tres eleve. A ajuster selon dimension multi-sites, reporting investisseur et pression cash.",
+      "Repère Glassdoor France pour un Finance Manager. Dernière mise à jour constatée le 1 juillet 2025, 526 salaires publiés, indice de confiance très élevé. À ajuster selon dimension multi-sites, reporting investisseur et pression cash.",
     sourceName: "Glassdoor - Finance Manager France",
     sourceUrl: GLASSDOOR_FINANCE_MANAGER_URL
   },
   "diagnostic-account-manager": {
     salary: "Base 35kEUR - 51kEUR + 4kEUR - 18kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Account Manager. Derniere mise a jour constatee le 17 juin 2025, 5,4 k salaires publies, indice de confiance tres eleve. Utilise ici pour un Account Manager en diagnostic, avec ajustement possible selon complexite technique et taille de portefeuille.",
+      "Repère Glassdoor France pour un Account Manager. Dernière mise à jour constatée le 17 juin 2025, 5,4 k salaires publiés, indice de confiance très élevé. Utilise ici pour un Account Manager en diagnostic, avec ajustement possible selon complexité technique et taille de portefeuille.",
     sourceName: "Glassdoor - Account Manager France",
     sourceUrl: GLASSDOOR_ACCOUNT_MANAGER_URL
   },
   "diagnostic-tender-manager": {
     salary: "Base 45kEUR - 60kEUR + 2kEUR - 6kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Tender Manager. Derniere mise a jour constatee en mars 2026, 18 salaires publies, indice de confiance tres eleve. A recouper avec la complexite appels d'offres publics, hôpitaux et centrales d'achat.",
+      "Repère Glassdoor France pour un Tender Manager. Dernière mise à jour constatée en mars 2026, 18 salaires publiés, indice de confiance très élevé. À recouper avec la complexité appels d'offres publics, hôpitaux et centrales d'achat.",
     sourceName: "Glassdoor - Tender Manager France",
     sourceUrl: GLASSDOOR_TENDER_MANAGER_URL
   },
   "medical-vet-distributor-manager": {
     salary: "Base 50kEUR - 100kEUR + 10kEUR - 49kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Distributor Manager via le titre comparable Channel Manager. Derniere mise a jour constatee le 3 juillet 2025, 97 salaires publies, indice de confiance tres eleve. Pertinent pour les roles pilotant un reseau de distributeurs et partenaires.",
+      "Repère Glassdoor France utilisé comme proxy pour un Distributor Manager via le titre comparable Channel Manager. Dernière mise à jour constatée le 3 juillet 2025, 97 salaires publiés, indice de confiance très élevé. Pertinent pour les rôles pilotant un réseau de distributeurs et partenaires.",
     sourceName: "Glassdoor - Channel Manager France",
     sourceUrl: GLASSDOOR_CHANNEL_MANAGER_URL
   },
   "diagnostic-customer-success-manager": {
     salary: "Base 37kEUR - 51kEUR + 3kEUR - 10kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Customer Success Manager. Derniere mise a jour constatee le 30 juin 2025, 2,2 k salaires publies, indice de confiance tres eleve. A majorer si le poste couvre onboarding, adoption, renouvellement et upsell sur comptes complexes.",
+      "Repère Glassdoor France pour un Customer Success Manager. Dernière mise à jour constatée le 30 juin 2025, 2,2 k salaires publiés, indice de confiance très élevé. À majorer si le poste couvre onboarding, adoption, renouvellement et upsell sur comptes complexes.",
     sourceName: "Glassdoor - Customer Success Manager France",
     sourceUrl: GLASSDOOR_CUSTOMER_SUCCESS_MANAGER_URL
   },
   "biotech-commercial-excellence-manager": {
     salary: "Base 44kEUR - 88kEUR + 4kEUR - 25kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Commercial Excellence Manager. Derniere mise a jour constatee le 29 aout 2025, 6 salaires publies, indice de confiance eleve. A ajuster selon perimetre CRM, forecast, incentive design et pilotage multi-pays.",
+      "Repère Glassdoor France pour un Commercial Excellence Manager. Dernière mise à jour constatée le 29 août 2025, 6 salaires publiés, indice de confiance élevé. À ajuster selon périmètre CRM, forecast, incentive design et pilotage multi-pays.",
     sourceName: "Glassdoor - Commercial Excellence Manager France",
     sourceUrl: GLASSDOOR_COMMERCIAL_EXCELLENCE_MANAGER_URL
   },
   "biotech-pricing-market-access-manager": {
     salary: "Base 47kEUR - 68kEUR + 4kEUR - 10kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Pricing Manager, utilise ici en ancrage pour une fonction Pricing & Market Access. Derniere mise a jour constatee le 26 juin 2025, 108 salaires publies, indice de confiance tres eleve. A recouper avec nos benchmarks Aon et le scope HTA / remboursement.",
+      "Repère Glassdoor France pour un Pricing Manager, utilisé ici en ancrage pour une fonction Pricing & Market Access. Dernière mise à jour constatée le 26 juin 2025, 108 salaires publiés, indice de confiance très élevé. À recouper avec nos benchmarks Aon et le scope HTA / remboursement.",
     sourceName: "Glassdoor - Pricing Manager France",
     sourceUrl: GLASSDOOR_PRICING_MANAGER_URL
   },
   "diagnostic-vp-sales": {
     salary: "Base 100kEUR - 172kEUR + 30kEUR - 100kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un VP Sales. Derniere mise a jour constatee le 17 juin 2025, 102 salaires publies, indice de confiance tres eleve. A ajuster selon zone, structure directe / indirecte et poids du variable.",
+      "Repère Glassdoor France pour un VP Sales. Dernière mise à jour constatée le 17 juin 2025, 102 salaires publiés, indice de confiance très élevé. À ajuster selon zone, structure directe / indirecte et poids du variable.",
     sourceName: "Glassdoor - VP Sales France",
     sourceUrl: GLASSDOOR_VP_SALES_URL
   },
   "biotech-vp-operations": {
     salary: "Base 70kEUR - 130kEUR + 5kEUR - 30kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un VP Operations. Donnees crawlees en mars 2026, 7 salaires publies, indice de confiance eleve. A recouper avec le nombre de sites, la maturite industrielle et la profondeur de transformation attendue.",
+      "Repère Glassdoor France pour un VP Operations. Données crawlées en mars 2026, 7 salaires publiés, indice de confiance élevé. À recouper avec le nombre de sites, la maturité industrielle et la profondeur de transformation attendue.",
     sourceName: "Glassdoor - VP Operations France",
     sourceUrl: GLASSDOOR_VP_OPERATIONS_URL
   },
   "biotech-head-of-quality": {
     salary: "Base 64kEUR - 128kEUR",
     salarySource:
-      "Repere Glassdoor France pour un Head of Quality. Donnees crawlées en avril 2026, 4 salaires publies, indice de confiance faible. A utiliser comme ancrage avec prudence et a renforcer par benchmark Aon / maturite GMP du site.",
+      "Repère Glassdoor France pour un Head of Quality. Données crawlées en avril 2026, 4 salaires publiés, indice de confiance faible. À utiliser comme ancrage avec prudence et à renforcer par benchmark Aon / maturité GMP du site.",
     sourceName: "Glassdoor - Head of Quality France",
     sourceUrl: GLASSDOOR_HEAD_OF_QUALITY_URL
   },
   "medical-vet-head-of-regulatory": {
     salary: "Base 61kEUR - 65kEUR + 17kEUR - 18kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Head of Regulatory. Donnees crawlées en fevrier 2026, 1 salaire publie, indice de confiance faible. A recouper fortement avec le scope international, produits et equipe reglementaire.",
+      "Repère Glassdoor France pour un Head of Regulatory. Données crawlées en février 2026, 1 salaire publie, indice de confiance faible. À recouper fortement avec le scope international, produits et équipe réglementaire.",
     sourceName: "Glassdoor - Head of Regulatory France",
     sourceUrl: GLASSDOOR_HEAD_OF_REGULATORY_URL
   },
   "diagnostic-tender-excellence-director": {
     salary: "Base 45kEUR - 60kEUR + 2kEUR - 6kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Tender Excellence Director via le titre Tender Manager. Derniere mise a jour constatee en mars 2026, 18 salaires publies, indice de confiance tres eleve. A majorer pour un scope direction, process excellence et coverage multi-pays.",
+      "Repère Glassdoor France utilisé comme proxy pour un Tender Excellence Director via le titre Tender Manager. Dernière mise à jour constatée en mars 2026, 18 salaires publiés, indice de confiance très élevé. À majorer pour un scope direction, process excellence et coverage multi-pays.",
     sourceName: "Glassdoor - Tender Manager France",
     sourceUrl: GLASSDOOR_TENDER_MANAGER_URL
   },
   "medical-vet-channel-marketing-manager": {
     salary: "Base 48kEUR - 71kEUR + 1kEUR - 11kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Channel Marketing Manager. Derniere mise a jour constatee en fevrier 2026, 32 salaires publies, indice de confiance tres eleve. Utilise ici pour les environnements channel et distribution en sante animale.",
+      "Repère Glassdoor France pour un Channel Marketing Manager. Dernière mise à jour constatée en février 2026, 32 salaires publiés, indice de confiance très élevé. Utilise ici pour les environnements channel et distribution en santé animale.",
     sourceName: "Glassdoor - Channel Marketing Manager France",
     sourceUrl: GLASSDOOR_CHANNEL_MARKETING_MANAGER_URL
   },
   "medical-vet-distributor-excellence-manager": {
     salary: "Base 50kEUR - 100kEUR + 10kEUR - 49kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Distributor Excellence Manager via le titre comparable Channel Manager. Derniere mise a jour constatee le 3 juillet 2025, 97 salaires publies, indice de confiance tres eleve.",
+      "Repère Glassdoor France utilisé comme proxy pour un Distributor Excellence Manager via le titre comparable Channel Manager. Dernière mise à jour constatée le 3 juillet 2025, 97 salaires publiés, indice de confiance très élevé.",
     sourceName: "Glassdoor - Channel Manager France",
     sourceUrl: GLASSDOOR_CHANNEL_MANAGER_URL
   },
   "diagnostic-customer-experience-director": {
     salary: "Base 38kEUR - 72kEUR + 2kEUR - 8kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Customer Experience Director via le titre Customer Experience Manager. Derniere mise a jour constatee en mars 2026, 56 salaires publies, indice de confiance tres eleve. A majorer pour un scope direction, service design et multi-equipes.",
+      "Repère Glassdoor France utilisé comme proxy pour un Customer Experience Director via le titre Customer Experience Manager. Dernière mise à jour constatée en mars 2026, 56 salaires publiés, indice de confiance très élevé. À majorer pour un scope direction, service design et multi-équipes.",
     sourceName: "Glassdoor - Customer Experience Manager France",
     sourceUrl: GLASSDOOR_CUSTOMER_EXPERIENCE_MANAGER_URL
   },
   "diagnostic-service-operations-director": {
     salary: "Base 37kEUR - 81kEUR + 4kEUR - 8kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Service Operations Director via le titre Service Operations Manager. Derniere mise a jour constatee en avril 2026, 7 salaires publies, indice de confiance eleve. A rehausser selon taille d'equipe terrain et niveau de direction.",
+      "Repère Glassdoor France utilisé comme proxy pour un Service Operations Director via le titre Service Operations Manager. Dernière mise à jour constatée en avril 2026, 7 salaires publiés, indice de confiance élevé. À rehausser selon taille d'équipe terrain et niveau de direction.",
     sourceName: "Glassdoor - Service Operations Manager France",
     sourceUrl: GLASSDOOR_SERVICE_OPERATIONS_MANAGER_URL
   },
   "biotech-revenue-operations-manager": {
     salary: "Base 54kEUR - 70kEUR + 4kEUR - 10kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Revenue Operations Manager. Derniere mise a jour constatee en avril 2026, 36 salaires publies, indice de confiance tres eleve. Tres utile pour les organisations biotech qui structurent pipeline, CRM et forecast.",
+      "Repère Glassdoor France pour un Revenue Operations Manager. Dernière mise à jour constatée en avril 2026, 36 salaires publiés, indice de confiance très élevé. Très utile pour les organisations biotech qui structurent pipeline, CRM et forecast.",
     sourceName: "Glassdoor - Revenue Operations Manager France",
     sourceUrl: GLASSDOOR_REVENUE_OPERATIONS_MANAGER_URL
   },
   "diagnostic-bid-manager-international": {
     salary: "Base 50kEUR - 74kEUR + 4kEUR - 9kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Bid Manager. Derniere mise a jour constatee en mars 2026, 210 salaires publies, indice de confiance tres eleve. A ajuster pour un scope international, appels d'offres complexes et gestion multi-pays.",
+      "Repère Glassdoor France pour un Bid Manager. Dernière mise à jour constatée en mars 2026, 210 salaires publiés, indice de confiance très élevé. À ajuster pour un scope international, appels d'offres complexes et gestion multi-pays.",
     sourceName: "Glassdoor - Bid Manager France",
     sourceUrl: GLASSDOOR_BID_MANAGER_URL
   },
   "biotech-strategic-partnerships-manager": {
     salary: "Base 52kEUR - 95kEUR + 4kEUR - 18kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France pour un Strategic Partnerships Manager. Derniere mise a jour constatee en mars 2026, 13 salaires publies, indice de confiance tres eleve. A majorer si la fonction porte des alliances structurantes, licensing ou co-developpement.",
+      "Repère Glassdoor France pour un Strategic Partnerships Manager. Dernière mise à jour constatée en mars 2026, 13 salaires publiés, indice de confiance très élevé. À majorer si la fonction porte des alliances structurantes, licensing ou co-développement.",
     sourceName: "Glassdoor - Strategic Partnerships Manager France",
     sourceUrl: GLASSDOOR_STRATEGIC_PARTNERSHIPS_MANAGER_URL
   },
   "diagnostic-after-sales-director": {
     salary: "Base 40kEUR - 83kEUR + 2kEUR - 3kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un After-Sales Director via le titre After Sales Manager. Derniere mise a jour constatee en mars 2026, 9 salaires publies, indice de confiance tres eleve. A rehausser si le poste couvre une direction multi-sites ou EMEA.",
+      "Repère Glassdoor France utilisé comme proxy pour un After-Sales Director via le titre After Sales Manager. Dernière mise à jour constatée en mars 2026, 9 salaires publiés, indice de confiance très élevé. À rehausser si le poste couvre une direction multi-sites ou EMEA.",
     sourceName: "Glassdoor - After Sales Manager France",
     sourceUrl: GLASSDOOR_AFTER_SALES_MANAGER_URL
   },
   "medical-vet-commercial-training-manager": {
     salary: "Base 41kEUR - 103kEUR + 6kEUR - 13kEUR de variable / complement",
     salarySource:
-      "Repere Glassdoor France utilise comme proxy pour un Commercial Training Manager via le titre Sales Training Manager. Donnees crawlées en fevrier 2026, 4 salaires publies, indice de confiance faible. A croiser avec l'anciennete, la taille de force de vente et la complexite technique.",
+      "Repère Glassdoor France utilisé comme proxy pour un Commercial Training Manager via le titre Sales Training Manager. Données crawlées en février 2026, 4 salaires publiés, indice de confiance faible. À croiser avec l'ancienneté, la taille de force de vente et la complexité technique.",
     sourceName: "Glassdoor - Sales Training Manager France",
     sourceUrl: GLASSDOOR_SALES_TRAINING_MANAGER_URL
   }
@@ -627,72 +627,72 @@ const glassdoorBenchmarks: Record<string, GlassdoorBenchmark> = {
 const roleTemplates: RoleTemplate[] = [
   {
     key: "application-engineer",
-    title: (sector) => `Ingenieur d'application ${sector}`,
+    title: (sector) => `Ingénieur d'application ${sector}`,
     salary: "45kEUR - 70kEUR + variable",
     category: "Customer success / support technique",
     shortageLevel: "Tres elevee",
     summary: (sector) =>
       `Accompagne la mise en service, la formation client et l'adoption des solutions ${sector.toLowerCase()} sur des environnements techniques exigeants.`,
-    skills: ["Formation client", "Support terrain", "Diagnostic technique", "Ecoute besoin", "Anglais"],
+    skills: ["Formation client", "Support terrain", "Diagnostic technique", "Écoute besoin", "Anglais"],
     successFactors: (sector) => [
-      `Comprendre les usages clients du ${sector.toLowerCase()} au-dela du produit.`,
-      "Faire le lien entre expertise technique, pedagogie et reactivite terrain.",
+      `Comprendre les usages clients du ${sector.toLowerCase()} au-delà du produit.`,
+      "Faire le lien entre expertise technique, pédagogie et réactivité terrain.",
       "Savoir rassurer, former et remonter les signaux utiles aux ventes et au produit."
     ],
-    path: ["Ingenieur support", "Field application specialist", "Responsable applications"],
+    path: ["Ingénieur support", "Field application specialist", "Responsable applications"],
     missions: (sector) => [
-      `Former les utilisateurs et equipes clientes sur les solutions ${sector.toLowerCase()}.`,
-      "Assurer l'interface entre clients, ventes, qualite et support produit.",
-      "Faire remonter les besoins terrain vers les equipes produit et operations."
+      `Former les utilisateurs et équipes clientes sur les solutions ${sector.toLowerCase()}.`,
+      "Assurer l'interface entre clients, ventes, qualité et support produit.",
+      "Faire remonter les besoins terrain vers les équipes produit et operations."
     ],
     studies: [
-      "Master biotechnologies, biologie, diagnostic ou ingenierie",
-      "Diplome d'ingenieur en sciences de la vie ou instrumentation"
+      "Master biotechnologies, biologie, diagnostic ou ingénierie",
+      "Diplôme d'ingénieur en sciences de la vie ou instrumentation"
     ]
   },
   {
     key: "maintenance-engineer",
-    title: (sector) => `Ingenieur de maintenance ${sector}`,
+    title: (sector) => `Ingénieur de maintenance ${sector}`,
     salary: "42kEUR - 68kEUR + primes",
     category: "Operations / service",
     shortageLevel: "Elevee",
     summary: (sector) =>
-      `Garantit la disponibilite des equipements critiques en contexte ${sector.toLowerCase()}, de l'installation au troubleshooting avance.`,
+      `Garantit la disponibilité des équipements critiques en contexte ${sector.toLowerCase()}, de l'installation au troubleshooting avance.`,
     skills: ["Maintenance preventive", "GMAO", "Instrumentation", "Validation", "Relation client"],
     successFactors: () => [
-      "Travailler avec methode, rigueur documentaire et sens de l'urgence.",
-      "Savoir prioriser les incidents sans perdre la qualite d'execution.",
-      "Etre credible autant face aux operations qu'au client final."
+      "Travailler avec méthode, rigueur documentaire et sens de l'urgence.",
+      "Savoir prioriser les incidents sans perdre la qualité d'execution.",
+      "Être credible autant face aux operations qu'au client final."
     ],
-    path: ["Technicien expert", "Ingenieur service", "Service manager"],
+    path: ["Technicien expert", "Ingénieur service", "Service manager"],
     missions: (sector) => [
-      "Planifier la maintenance preventive et corrective des equipements.",
-      "Intervenir sur incidents critiques en lien avec qualite et production.",
-      `Securiser la continuite d'exploitation dans des environnements ${sector.toLowerCase()} sensibles.`
+      "Planifier la maintenance preventive et corrective des équipements.",
+      "Intervenir sur incidents critiques en lien avec qualité et production.",
+      `Sécuriser la continuité d'exploitation dans des environnements ${sector.toLowerCase()} sensibles.`
     ],
-    studies: ["Diplome d'ingenieur maintenance / instrumentation", "Master genie industriel ou biomedical"]
+    studies: ["Diplôme d'ingénieur maintenance / instrumentation", "Master genie industriel ou biomedical"]
   },
   {
     key: "middleware-engineer",
-    title: (sector) => `Ingenieur Middleware ${sector}`,
+    title: (sector) => `Ingénieur Middleware ${sector}`,
     salary: "50kEUR - 78kEUR",
     category: "Digital / interoperability",
     shortageLevel: "Tres elevee",
     summary: (sector) =>
-      `Concoit les briques d'interoperabilite entre instruments, LIMS, ERP et flux de donnees pour des environnements ${sector.toLowerCase()} fortement regules.`,
+      `Conçoit les briques d'interopérabilité entre instruments, LIMS, ERP et flux de données pour des environnements ${sector.toLowerCase()} fortement régulés.`,
     skills: ["APIs", "Interoperabilite", "HL7 / ASTM / middleware", "Securite", "Documentation technique"],
     successFactors: () => [
-      "Avoir une double lecture architecture SI et contraintes metier.",
-      "Documenter proprement pour garantir maintenance et conformite.",
-      "Anticiper performance, securite et evolutivite des integrations."
+      "Avoir une double lecture architecture SI et contraintes métier.",
+      "Documenter proprement pour garantir maintenance et conformité.",
+      "Anticiper performance, sécurité et evolutivite des integrations."
     ],
-    path: ["Developpeur integration", "Systems engineer", "Architecte solutions"],
+    path: ["Développeur integration", "Systems engineer", "Architecte solutions"],
     missions: (sector) => [
-      "Connecter les instruments et logiciels metiers aux SI clients.",
-      "Fiabiliser les flux de donnees et la tracabilite applicative.",
-      `Contribuer a la cybersecurite et a la disponibilite des plateformes ${sector.toLowerCase()}.`
+      "Connecter les instruments et logiciels métiers aux SI clients.",
+      "Fiabiliser les flux de données et la traçabilité applicative.",
+      `Contribuer à la cybersecurite et à la disponibilité des plateformes ${sector.toLowerCase()}.`
     ],
-    studies: ["Diplome d'ingenieur informatique", "Master informatique sante, data ou systemes industriels"]
+    studies: ["Diplôme d'ingénieur informatique", "Master informatique santé, data ou systèmes industriels"]
   },
   {
     key: "sales-director",
@@ -701,42 +701,42 @@ const roleTemplates: RoleTemplate[] = [
     category: "Commercial",
     shortageLevel: "Elevee",
     summary: (sector) =>
-      `Pilote la strategie commerciale, les equipes terrain et les cycles complexes dans le ${sector.toLowerCase()}.`,
-    skills: ["Leadership commercial", "Forecast", "KAM", "Negociation complexe", "Management"],
+      `Pilote la stratégie commerciale, les équipes terrain et les cycles complexes dans le ${sector.toLowerCase()}.`,
+    skills: ["Leadership commercial", "Forecast", "KAM", "Négociation complexe", "Management"],
     successFactors: (sector) => [
-      `Maitriser des cycles de vente longs et techniques dans le ${sector.toLowerCase()}.`,
-      "Savoir transformer une equipe en machine d'execution sans perdre la finesse terrain.",
-      "Tenir ensemble croissance, marge et qualite de relation client."
+      `Maîtriser des cycles de vente longs et techniques dans le ${sector.toLowerCase()}.`,
+      "Savoir transformer une équipe en machine d'execution sans perdre la finesse terrain.",
+      "Tenir ensemble croissance, marge et qualité de relation client."
     ],
     path: ["KAM senior", "Regional sales manager", "Directeur commercial"],
     missions: (sector) => [
-      `Construire et executer la strategie commerciale sur le marche ${sector.toLowerCase()}.`,
-      "Manager les equipes vente, distribution et support avant-vente.",
-      "Suivre pipeline, marge, previsions et priorites grands comptes."
+      `Construire et executer la stratégie commerciale sur le marché ${sector.toLowerCase()}.`,
+      "Manager les équipes vente, distribution et support avant-vente.",
+      "Suivre pipeline, marge, previsions et priorités grands comptes."
     ],
-    studies: ["Ecole de commerce", "Ingenieur avec experience business", "Master marketing / vente B2B"]
+    studies: ["École de commerce", "Ingénieur avec experience business", "Master marketing / vente B2B"]
   },
   {
     key: "business-unit-director",
     title: (sector) => `Directeur Business Unit ${sector}`,
     salary: "100kEUR - 170kEUR + bonus",
-    category: "Direction generale",
+    category: "Direction générale",
     shortageLevel: "Elevee",
     summary: (sector) =>
-      `Porte un P&L, une feuille de route de croissance et une execution transverse sur toute la chaine de valeur ${sector.toLowerCase()}.`,
+      `Porte un P&L, une feuille de route de croissance et une execution transverse sur toute la chaîne de valeur ${sector.toLowerCase()}.`,
     skills: ["P&L", "Go-to-market", "Operations", "Leadership transverse", "Strategie"],
     successFactors: () => [
-      "Arbitrer vite entre croissance, priorites operations et ressources.",
-      "Donner une direction claire a des fonctions tres differentes.",
+      "Arbitrer vite entre croissance, priorités operations et ressources.",
+      "Donner une direction claire à des fonctions très différentes.",
       "Mesurer la performance avec une vraie discipline de pilotage."
     ],
     path: ["Directeur commercial", "Operations director", "GM / BU head"],
     missions: (sector) => [
-      "Piloter chiffre d'affaires, rentabilite et feuille de route business.",
-      "Aligner ventes, marketing, supply, service et qualite.",
-      `Arbitrer les priorites de croissance sur la business unit ${sector.toLowerCase()}.`
+      "Piloter chiffre d'affaires, rentabilité et feuille de route business.",
+      "Aligner ventes, marketing, supply, service et qualité.",
+      `Arbitrer les priorités de croissance sur la business unit ${sector.toLowerCase()}.`
     ],
-    studies: ["Grande ecole de commerce", "Diplome d'ingenieur", "MBA ou executive education"]
+    studies: ["Grande école de commerce", "Diplôme d'ingénieur", "MBA ou executive education"]
   },
   {
     key: "emea-director",
@@ -745,64 +745,64 @@ const roleTemplates: RoleTemplate[] = [
     category: "Direction internationale",
     shortageLevel: "Elevee",
     summary: (sector) =>
-      `Coordonne la croissance regionale, les pays, les distributeurs et la gouvernance pour les activites ${sector.toLowerCase()} en zone EMEA.`,
+      `Coordonne la croissance régionale, les pays, les distributeurs et la gouvernance pour les activités ${sector.toLowerCase()} en zone EMEA.`,
     skills: ["Multi-country leadership", "Distribution", "Change management", "Finance", "Compliance"],
     successFactors: () => [
-      "Comprendre les differences pays sans casser la coherence regionale.",
+      "Comprendre les differences pays sans casser la coherence régionale.",
       "Piloter via les bons relais locaux et les bons indicateurs.",
-      "Etre solide sur la gouvernance, la distribution et l'execution."
+      "Être solide sur la gouvernance, la distribution et l'execution."
     ],
     path: ["Country manager", "Regional director", "VP EMEA"],
     missions: (sector) => [
-      "Definir la priorisation pays et les modeles go-to-market.",
+      "Définir la priorisation pays et les modèles go-to-market.",
       "Piloter les directeurs locaux et partenaires distribution.",
-      `Securiser execution, croissance et conformite sur le perimetre ${sector.toLowerCase()}.`
+      `Sécuriser execution, croissance et conformité sur le périmètre ${sector.toLowerCase()}.`
     ],
-    studies: ["Grande ecole", "Diplome d'ingenieur", "MBA international"]
+    studies: ["Grande école", "Diplôme d'ingénieur", "MBA international"]
   },
   {
     key: "export-manager-emea",
     title: (sector) => `Export Manager EMEA ${sector}`,
     salary: "65kEUR - 110kEUR + variable",
-    category: "Developpement international",
+    category: "Développement international",
     shortageLevel: "Elevee",
     summary: (sector) =>
-      `Developpe les ventes export, les distributeurs et la penetration de marche sur les activites ${sector.toLowerCase()} en zone EMEA.`,
+      `Développe les ventes export, les distributeurs et la penetration de marché sur les activités ${sector.toLowerCase()} en zone EMEA.`,
     skills: ["Distribution internationale", "Vente B2B", "Appels d'offres", "Negociation", "Anglais"],
     successFactors: (sector) => [
-      `Comprendre les differences reglementaires et commerciales du ${sector.toLowerCase()} selon les pays EMEA.`,
-      "Savoir piloter des distributeurs tout en gardant la maitrise de la performance.",
+      `Comprendre les differences réglementaires et commerciales du ${sector.toLowerCase()} selon les pays EMEA.`,
+      "Savoir piloter des distributeurs tout en gardant la maîtrise de la performance.",
       "Combiner rigueur de forecast, presence terrain et lecture politique des comptes."
     ],
     path: ["Area manager", "Regional sales manager", "Head of export"],
     missions: (sector) => [
-      "Structurer le reseau de distribution et les priorites pays sur la zone EMEA.",
+      "Structurer le réseau de distribution et les priorités pays sur la zone EMEA.",
       "Animer les comptes clefs, partenaires et plans d'action commerciaux.",
-      `Accelerer la croissance export des solutions ${sector.toLowerCase()} sur des cycles de vente complexes.`
+      `Accélérer la croissance export des solutions ${sector.toLowerCase()} sur des cycles de vente complexes.`
     ],
-    studies: ["Ecole de commerce", "Ingenieur avec fibre business", "Master commerce international"]
+    studies: ["École de commerce", "Ingénieur avec fibre business", "Master commerce international"]
   },
   {
     key: "export-manager-afrique",
     title: (sector) => `Export Manager Afrique ${sector}`,
     salary: "60kEUR - 105kEUR + variable",
-    category: "Developpement international",
+    category: "Développement international",
     shortageLevel: "Elevee",
     summary: (sector) =>
-      `Porte le developpement business, les partenariats locaux et les modeles de distribution pour les activites ${sector.toLowerCase()} en Afrique.`,
-    skills: ["Business development Afrique", "Distribution", "KAM", "Negociation", "Francais / anglais"],
+      `Porte le développement business, les partenariats locaux et les modèles de distribution pour les activités ${sector.toLowerCase()} en Afrique.`,
+    skills: ["Business development Afrique", "Distribution", "KAM", "Negociation", "Français / anglais"],
     successFactors: (sector) => [
-      `Adapter l'approche commerciale aux realites de terrain du ${sector.toLowerCase()} en Afrique.`,
+      `Adapter l'approche commerciale aux réalités de terrain du ${sector.toLowerCase()} en Afrique.`,
       "Identifier les bons relais locaux, les bons partenaires et les bons rythmes de decision.",
-      "Allier vision long terme, execution terrain et forte qualite relationnelle."
+      "Allier vision long terme, execution terrain et forte qualité relationnelle."
     ],
     path: ["Area manager Afrique", "Regional export manager", "Head of Africa"],
     missions: (sector) => [
       "Prioriser les pays, les distributeurs et les relais institutionnels de la zone.",
-      "Construire des plans de croissance adaptables selon maturite marche et infrastructure.",
-      `Porter les activites ${sector.toLowerCase()} en Afrique avec une approche commerciale et operationnelle robuste.`
+      "Construire des plans de croissance adaptables selon maturité marché et infrastructure.",
+      `Porter les activités ${sector.toLowerCase()} en Afrique avec une approche commerciale et opérationnelle robuste.`
     ],
-    studies: ["Ecole de commerce", "Ingenieur avec experience terrain", "Master commerce international"]
+    studies: ["École de commerce", "Ingénieur avec experience terrain", "Master commerce international"]
   },
   {
     key: "coo",
@@ -811,42 +811,42 @@ const roleTemplates: RoleTemplate[] = [
     category: "Direction operations",
     shortageLevel: "Elevee",
     summary: (sector) =>
-      `Structure l'execution globale entre R&D, production, supply, qualite, service et performance dans des environnements ${sector.toLowerCase()} en acceleration.`,
+      `Structure l'execution globale entre R&D, production, supply, qualité, service et performance dans des environnements ${sector.toLowerCase()} en acceleration.`,
     skills: ["Scale-up operations", "Execution", "KPI", "Industrialisation", "Leadership"],
     successFactors: () => [
-      "Passer d'une logique heroique a une logique systeme.",
-      "Savoir prioriser les goulots, rythmer l'execution et tenir les equipes.",
-      "Transformer la complexite en routines operationnelles robustes."
+      "Passer d'une logique héroïque à une logique système.",
+      "Savoir prioriser les goulots, rythmer l'execution et tenir les équipes.",
+      "Transformer la complexité en routines opérationnelles robustes."
     ],
     path: ["Operations director", "Site leader", "VP operations"],
     missions: (sector) => [
       "Aligner les fonctions critiques autour d'une execution robuste.",
-      "Mettre sous controle capacite, delais, qualite et service.",
+      "Mettre sous contrôle capacité, délais, qualité et service.",
       `Accompagner la croissance et la transformation des operations ${sector.toLowerCase()}.`
     ],
-    studies: ["Diplome d'ingenieur", "Formation operations / supply", "Executive education"]
+    studies: ["Diplôme d'ingénieur", "Formation operations / supply", "Executive education"]
   },
   {
     key: "ceo",
     title: (sector) => `CEO ${sector}`,
     salary: "160kEUR - 300kEUR + variable / equity",
-    category: "Direction generale",
+    category: "Direction générale",
     shortageLevel: "Moderee",
     summary: (sector) =>
-      `Porte la vision, la croissance, le financement et la structuration globale d'une organisation ${sector.toLowerCase()} a fort enjeu de marche.`,
-    skills: ["Vision strategique", "Leadership", "Investors", "Commercial", "Execution"],
+      `Porte la vision, la croissance, le financement et la structuration globale d'une organisation ${sector.toLowerCase()} à fort enjeu de marché.`,
+    skills: ["Vision stratégique", "Leadership", "Investors", "Commercial", "Execution"],
     successFactors: () => [
       "Donner une vision lisible et mobilisatrice.",
       "Savoir lever, vendre, recruter et arbitrer avec le meme niveau d'exigence.",
-      "Construire une equipe de direction capable d'executer sans vous ralentir."
+      "Construire une équipe de direction capable d'executer sans vous ralentir."
     ],
     path: ["BU director", "GM", "COO", "Founder / CEO"],
     missions: (sector) => [
-      "Definir la strategie et les priorites de croissance.",
+      "Définir la stratégie et les priorités de croissance.",
       "Porter la relation investisseurs, partenaires et instances clefs.",
-      `Arbitrer les grandes decisions de transformation pour l'activite ${sector.toLowerCase()}.`
+      `Arbitrer les grandes decisions de transformation pour l'activité ${sector.toLowerCase()}.`
     ],
-    studies: ["Ingenieur ou ecole de commerce", "Parcours entrepreneurial", "MBA optionnel"]
+    studies: ["Ingénieur ou école de commerce", "Parcours entrepreneurial", "MBA optionnel"]
   },
   {
     key: "cfo",
@@ -855,20 +855,20 @@ const roleTemplates: RoleTemplate[] = [
     category: "Finance",
     shortageLevel: "Moderee",
     summary: (sector) =>
-      `Cadre la trajectoire financiere, la performance et la gouvernance d'une entreprise ${sector.toLowerCase()} en croissance ou sous contrainte de cash.`,
-    skills: ["FP&A", "Cash management", "Controle de gestion", "M&A / fundraising", "Gouvernance"],
+      `Cadre la trajectoire financière, la performance et la gouvernance d'une entreprise ${sector.toLowerCase()} en croissance ou sous contrainte de cash.`,
+    skills: ["FP&A", "Cash management", "Contrôle de gestion", "M&A / fundraising", "Gouvernance"],
     successFactors: () => [
-      "Rendre la finance lisible pour les decideurs non financiers.",
-      "Combiner rigueur de controle, capacite d'anticipation et sens business.",
-      "Accompagner les phases de croissance sans perdre la maitrise du cash."
+      "Rendre la finance lisible pour les décideurs non financiers.",
+      "Combiner rigueur de contrôle, capacité d'anticipation et sens business.",
+      "Accompagner les phases de croissance sans perdre la maîtrise du cash."
     ],
     path: ["Finance manager", "Head of finance", "Finance director"],
     missions: (sector) => [
-      "Piloter budget, cash, scenario planning et rentabilite.",
+      "Piloter budget, cash, scenario planning et rentabilité.",
       "Fiabiliser le reporting pour board, investisseurs et direction.",
       `Accompagner les enjeux de scale-up ou de consolidation ${sector.toLowerCase()}.`
     ],
-    studies: ["Ecole de commerce", "DSCG / expertise comptable", "Master finance"]
+    studies: ["École de commerce", "DSCG / expertise comptable", "Master finance"]
   },
   {
     key: "drh",
@@ -877,10 +877,10 @@ const roleTemplates: RoleTemplate[] = [
     category: "Ressources humaines",
     shortageLevel: "Elevee",
     summary: (sector) =>
-      `Structure la politique RH, le recrutement, la performance et l'organisation d'une entreprise ${sector.toLowerCase()} dans un marche de talents penurique.`,
+      `Structure la politique RH, le recrutement, la performance et l'organisation d'une entreprise ${sector.toLowerCase()} dans un marché de talents penurique.`,
     skills: ["Talent acquisition", "Organisation", "Performance", "Dialogue social", "Leadership RH"],
     successFactors: (sector) => [
-      `Comprendre les contraintes metier et la realite terrain du ${sector.toLowerCase()}.`,
+      `Comprendre les contraintes métier et la réalité terrain du ${sector.toLowerCase()}.`,
       "Savoir recruter sur des profils rares tout en structurant les managers.",
       "Faire des RH un levier de croissance, pas seulement une fonction support."
     ],
@@ -888,9 +888,9 @@ const roleTemplates: RoleTemplate[] = [
     missions: (sector) => [
       "Construire la feuille de route RH: recrutement, onboarding, performance, retention.",
       "Accompagner les managers sur les recrutements et l'organisation.",
-      `Mettre sous controle les enjeux de talents, engagement et execution dans le ${sector.toLowerCase()}.`
+      `Mettre sous contrôle les enjeux de talents, engagement et execution dans le ${sector.toLowerCase()}.`
     ],
-    studies: ["Master RH", "Ecole de commerce", "Psychologie du travail", "Droit social / management"]
+    studies: ["Master RH", "École de commerce", "Psychologie du travail", "Droit social / management"]
   },
   {
     key: "regulatory-affairs-manager",
@@ -899,20 +899,20 @@ const roleTemplates: RoleTemplate[] = [
     category: "Reglementaire",
     shortageLevel: "Tres elevee",
     summary: (sector) =>
-      `Structure la strategie reglementaire et les submissions dans des environnements ${sector.toLowerCase()} fortement encadres.`,
+      `Structure la stratégie réglementaire et les submissions dans des environnements ${sector.toLowerCase()} fortement encadres.`,
     skills: ["Regulatory strategy", "Submissions", "Dossiers techniques", "Normes", "Coordination"],
     successFactors: () => [
       "Avoir une lecture business des contraintes réglementaires.",
-      "Savoir coordonner sans autorite hierarchique forte.",
-      "Traduire la complexite normative en decisions pratiques."
+      "Savoir coordonner sans autorité hiérarchique forte.",
+      "Traduire la complexité normative en decisions pratiques."
     ],
     path: ["RA specialist", "RA manager", "Head of RA"],
     missions: (sector) => [
-      "Construire la strategie d'enregistrement et de maintien sur le marche.",
-      "Coordonner R&D, qualite, clinique et operations sur les exigences reglementaires.",
-      `Anticiper les impacts des evolutions normatives sur les activites ${sector.toLowerCase()}.`
+      "Construire la stratégie d'enregistrement et de maintien sur le marché.",
+      "Coordonner R&D, qualité, clinique et operations sur les exigences réglementaires.",
+      `Anticiper les impacts des evolutions normatives sur les activités ${sector.toLowerCase()}.`
     ],
-    studies: ["Master affaires reglementaires", "Pharmacie", "Ingenieur ou master sciences"]
+    studies: ["Master affaires réglementaires", "Pharmacie", "Ingénieur ou master sciences"]
   },
   {
     key: "production-manager",
@@ -921,20 +921,20 @@ const roleTemplates: RoleTemplate[] = [
     category: "Production",
     shortageLevel: "Elevee",
     summary: (sector) =>
-      `Pilote la performance industrielle, la qualite et la capacite sur des lignes ${sector.toLowerCase()} sensibles.`,
-    skills: ["Lean", "Pilotage equipe", "GMP / qualite", "KPI", "Planification"],
+      `Pilote la performance industrielle, la qualité et la capacité sur des lignes ${sector.toLowerCase()} sensibles.`,
+    skills: ["Lean", "Pilotage équipe", "GMP / qualité", "KPI", "Planification"],
     successFactors: () => [
-      "Tenir la cadence sans sacrifier qualite ni securite.",
+      "Tenir la cadence sans sacrifier qualité ni sécurité.",
       "Piloter avec des indicateurs simples et visibles.",
-      "Faire monter les equipes en autonomie et en discipline."
+      "Faire monter les équipes en autonomie et en discipline."
     ],
     path: ["Ingénieur production", "Superviseur", "Responsable production"],
     missions: (sector) => [
       "Organiser la production et les ressources selon la charge.",
-      "Tenir les objectifs de delai, qualite et productivite.",
-      `Coordonner avec supply, qualite et maintenance sur les operations ${sector.toLowerCase()}.`
+      "Tenir les objectifs de délai, qualité et productivité.",
+      `Coordonner avec supply, qualité et maintenance sur les operations ${sector.toLowerCase()}.`
     ],
-    studies: ["Diplome d'ingenieur industriel", "Master production / qualite"]
+    studies: ["Diplôme d'ingénieur industriel", "Master production / qualité"]
   },
   {
     key: "supply-chain-manager",
@@ -943,20 +943,20 @@ const roleTemplates: RoleTemplate[] = [
     category: "Supply chain",
     shortageLevel: "Elevee",
     summary: (sector) =>
-      `Securise approvisionnements, planification et execution logistique dans des organisations ${sector.toLowerCase()} sous tension.`,
+      `Sécurise approvisionnements, planification et execution logistique dans des organisations ${sector.toLowerCase()} sous tension.`,
     skills: ["S&OP", "Planning", "Procurement", "Logistique", "Risk management"],
     successFactors: () => [
-      "Savoir gerer l'incertitude et les dependances critiques.",
+      "Savoir gérer l'incertitude et les dépendances critiques.",
       "Rendre la supply lisible pour les ventes, la production et la direction.",
-      "Anticiper plutot que subir les ruptures."
+      "Anticiper plutôt que subir les ruptures."
     ],
     path: ["Planner", "Supply lead", "Head of supply chain"],
     missions: (sector) => [
-      "Piloter les flux de matieres, produits et informations.",
-      "Reduire les risques de rupture et les surstocks.",
-      `Aligner les capacites supply avec la croissance des activites ${sector.toLowerCase()}.`
+      "Piloter les flux de matières, produits et informations.",
+      "Réduire les risques de rupture et les surstocks.",
+      `Aligner les capacités supply avec la croissance des activités ${sector.toLowerCase()}.`
     ],
-    studies: ["Master supply chain", "Diplome d'ingenieur", "Master operations"]
+    studies: ["Master supply chain", "Diplôme d'ingénieur", "Master operations"]
   },
   {
     key: "customer-service-manager",
@@ -965,20 +965,20 @@ const roleTemplates: RoleTemplate[] = [
     category: "Customer service",
     shortageLevel: "Elevee",
     summary: (sector) =>
-      `Coordonne l'experience client, le support et les escalades dans des environnements ${sector.toLowerCase()} ou la qualite de service est critique.`,
+      `Coordonne l'experience client, le support et les escalades dans des environnements ${sector.toLowerCase()} ou la qualité de service est critique.`,
     skills: ["Service client B2B", "Escalation management", "KPI service", "Coordination transverse"],
     successFactors: () => [
       "Garder une posture de service meme sous tension.",
       "Transformer les irritants clients en actions structurelles.",
-      "Piloter les SLA sans perdre la qualite relationnelle."
+      "Piloter les SLA sans perdre la qualité relationnelle."
     ],
     path: ["Customer support lead", "Service operations", "Customer success director"],
     missions: (sector) => [
       "Piloter les demandes clients, SLA et incidents majeurs.",
       "Coordonner support, logistique, qualité et équipes commerciales.",
-      `Ameliorer l'experience client sur des parcours ${sector.toLowerCase()} complexes.`
+      `Améliorer l'experience client sur des parcours ${sector.toLowerCase()} complexes.`
     ],
-    studies: ["Master management", "Licence scientifique + experience support", "Ecole de commerce"]
+    studies: ["Master management", "Licence scientifique + experience support", "École de commerce"]
   },
   {
     key: "ai-product-manager",
@@ -987,20 +987,20 @@ const roleTemplates: RoleTemplate[] = [
     category: "AI / produit",
     shortageLevel: "Tres elevee",
     summary: (sector) =>
-      `Traduit des besoins metier ${sector.toLowerCase()} en roadmap IA utile, explicable et deployable.`,
+      `Traduit des besoins métier ${sector.toLowerCase()} en roadmap IA utile, explicable et deployable.`,
     skills: ["Product discovery", "AI literacy", "Priorisation", "Regulation", "UX data"],
     successFactors: () => [
-      "Relier la valeur metier a la faisabilite technique.",
+      "Relier la valeur métier à la faisabilité technique.",
       "Arbitrer entre innovation, adoption et risque.",
       "Rendre l'IA utile, lisible et deployable pour le terrain."
     ],
     path: ["Product owner", "Data product manager", "AI lead"],
     missions: (sector) => [
-      "Identifier les cas d'usage IA a plus forte valeur metier.",
-      "Prioriser les evolutions produit avec equipes tech, data et metier.",
+      "Identifier les cas d'usage IA à plus forte valeur métier.",
+      "Prioriser les evolutions produit avec équipes tech, data et métier.",
       `Cadre l'adoption responsable de l'IA dans le contexte ${sector.toLowerCase()}.`
     ],
-    studies: ["Ingenieur ou master data", "Ecole de commerce + produit", "Master IA / sante numerique"]
+    studies: ["Ingénieur ou master data", "École de commerce + produit", "Master IA / santé numérique"]
   },
   {
     key: "cybersecurity-specialist",
@@ -1009,20 +1009,20 @@ const roleTemplates: RoleTemplate[] = [
     category: "Cybersecurite",
     shortageLevel: "Tres elevee",
     summary: (sector) =>
-      `Protege donnees, equipements et environnements critiques dans des organisations ${sector.toLowerCase()} ou la conformite et la continuite sont sensibles.`,
+      `Protège données, équipements et environnements critiques dans des organisations ${sector.toLowerCase()} ou la conformité et la continuité sont sensibles.`,
     skills: ["Risk assessment", "IAM", "Network security", "GxP / validation", "Incident response"],
     successFactors: () => [
-      "Comprendre les enjeux cyber sans perdre la realite operations.",
-      "Faire accepter les controles de securite par les metiers.",
-      "Prioriser les vrais risques plutot que multiplier les alertes."
+      "Comprendre les enjeux cyber sans perdre la réalité operations.",
+      "Faire accepter les contrôles de sécurité par les métiers.",
+      "Prioriser les vrais risques plutôt que multiplier les alertes."
     ],
     path: ["Security analyst", "Security engineer", "Cyber lead"],
     missions: (sector) => [
-      "Evaluer les risques cyber des SI, equipements et flux de donnees.",
-      "Mettre en oeuvre les controles de securite adaptes au secteur.",
-      `Contribuer a la resilience cyber des environnements ${sector.toLowerCase()} regulés ou sensibles.`
+      "Évaluer les risques cyber des SI, équipements et flux de données.",
+      "Mettre en oeuvre les contrôles de sécurité adaptes au secteur.",
+      `Contribuer à la resilience cyber des environnements ${sector.toLowerCase()} regulés ou sensibles.`
     ],
-    studies: ["Master cybersecurite", "Ingenieur informatique", "Master systemes d'information"]
+    studies: ["Master cybersecurite", "Ingénieur informatique", "Master systèmes d'information"]
   }
 ];
 
@@ -1041,7 +1041,7 @@ const createRole = (sector: SectorConfig, template: RoleTemplate): JobRole => ({
   title: template.title(sector.label),
   salary: template.salary,
   salarySource:
-    "Repere indicatif a calibrer selon le grade, la taille de l'entreprise, la localisation et le niveau d'exposition. A recouper avec Aon RMCD / benchmarks de remuneration et, quand disponible, avec Glassdoor.",
+    "Repère indicatif à calibrer selon le grade, la taille de l'entreprise, la localisation et le niveau d'exposition. À recouper avec Aon RMCD / benchmarks de remuneration et, quand disponible, avec Glassdoor.",
   sector: sector.label,
   category: template.category,
   shortageLevel: template.shortageLevel,
@@ -1066,30 +1066,30 @@ const strategicExtras: JobRole[] = [
     title: "Medical Affairs Manager Biotech",
     seoTitle: "Medical Affairs Manager Biotech : salaire 70-110 K€, missions MSL | SKS",
     seoDescription:
-      "Fiche metier Medical Affairs Manager Biotech : evidence scientifique, KOL, MSL, salaire 70-110 K€ + bonus, formations. Benchmark biotech 2026 SKS TALENTS.",
+      "Fiche métier Medical Affairs Manager Biotech : evidence scientifique, KOL, MSL, salaire 70-110 K€ + bonus, formations. Benchmark biotech 2026 SKS TALENTS.",
     publishDate: may2026EditorialBatchDate,
     salary: "70kEUR - 110kEUR + bonus",
     salarySource:
-      "Role cite parmi les fonctions sous tension par Aon en 2025. Le niveau exact depend du grade, du scope therapeutique et du mix medical / scientifique. A recouper avec Aon RMCD et Glassdoor quand disponible.",
+      "Rôle cite parmi les fonctions sous tension par Aon en 2025. Le niveau exact depend du grade, du scope thérapeutique et du mix medical / scientifique. À recouper avec Aon RMCD et Glassdoor quand disponible.",
     sector: "Biotech",
     category: "Medical Affairs",
     shortageLevel: "Tres elevee",
     summary:
-      "Structure la strategie medicale terrain, la relation KOL et la circulation de l'information scientifique dans des environnements biotech en forte acceleration.",
+      "Structure la stratégie médicale terrain, la relation KOL et la circulation de l'information scientifique dans des environnements biotech en forte acceleration.",
     skills: ["Medical affairs", "KOL engagement", "Communication scientifique", "Cross-functional leadership", "Anglais"],
     successFactors: [
-      "Savoir rester credibles face aux experts tout en gardant une lecture business.",
-      "Transformer des donnees scientifiques en messages utiles pour les equipes terrain et la direction.",
-      "Tenir ensemble medical, clinique, reglementaire et commercial sans confusion de roles."
+      "Savoir rester crédibles face aux experts tout en gardant une lecture business.",
+      "Transformer des données scientifiques en messages utiles pour les équipes terrain et la direction.",
+      "Tenir ensemble medical, clinique, réglementaire et commercial sans confusion de rôles."
     ],
     path: ["Medical advisor", "Medical affairs manager", "Head of medical affairs"],
     missions: [
-      "Construire la feuille de route medical affairs sur le perimetre produit ou portefeuille.",
-      "Animer les interactions avec les experts, centres investigateurs et parties prenantes medicales.",
-      "Outiller les equipes internes avec une information scientifique robuste et exploitable."
+      "Construire la feuille de route medical affairs sur le périmètre produit ou portefeuille.",
+      "Animer les interactions avec les experts, centres investigateurs et parties prenantes médicales.",
+      "Outiller les équipes internes avec une information scientifique robuste et exploitable."
     ],
-    studies: ["Pharmacie", "Doctorat sciences de la vie", "Medecine ou PhD avec exposition medical affairs"],
-    schools: ["Universite Paris-Saclay", "Institut Pasteur", "Faculte de pharmacie Strasbourg", "ESBS Strasbourg"],
+    studies: ["Pharmacie", "Doctorat sciences de la vie", "Médecine ou PhD avec exposition medical affairs"],
+    schools: ["Université Paris-Saclay", "Institut Pasteur", "Faculté de pharmacie Strasbourg", "ESBS Strasbourg"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -1111,26 +1111,26 @@ const strategicExtras: JobRole[] = [
     publishDate: may2026EditorialBatchDate,
     salary: "68kEUR - 105kEUR + bonus",
     salarySource:
-      "Aon cite le market access & pricing parmi les fonctions les plus difficiles a recruter et a retenir en 2025. Le package doit etre ajuste selon maturite clinique, geographie et exposition HTA / remboursement.",
+      "Aon cite le market access & pricing parmi les fonctions les plus difficiles à recruter et à retenir en 2025. Le package doit être ajuste selon maturité clinique, géographie et exposition HTA / remboursement.",
     sector: "Biotech",
     category: "Market access",
     shortageLevel: "Tres elevee",
     summary:
-      "Prepare la preuve de valeur, la strategie d'acces et les arbitrages prix/remboursement sur des innovations biotech a cycle long.",
+      "Prepare la preuve de valeur, la stratégie d'accès et les arbitrages prix/remboursement sur des innovations biotech à cycle long.",
     skills: ["Market access", "HEOR", "Pricing", "Stakeholder mapping", "Evidence generation"],
     successFactors: [
-      "Traduire la science en valeur medico-economique defendable.",
+      "Traduire la science en valeur medico-économique defendable.",
       "Savoir faire dialoguer medical, clinique, affaires publiques et direction.",
-      "Anticiper tres tot les points de friction a l'acces au marche."
+      "Anticiper très tot les points de friction à l'accès au marché."
     ],
     path: ["HEOR specialist", "Market access manager", "Head of market access"],
     missions: [
-      "Construire la strategie d'acces au marche et de valorisation du produit.",
+      "Construire la stratégie d'accès au marché et de valorisation du produit.",
       "Piloter les arguments prix, remboursement et preuve de valeur.",
       "Coordonner medical, clinique, affaires publiques et leadership sur les jalons clefs."
     ],
-    studies: ["Pharmacie", "Master sante publique", "Master economie de la sante", "Doctorat sciences de la vie"],
-    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "AgroParisTech"],
+    studies: ["Pharmacie", "Master santé publique", "Master économie de la santé", "Doctorat sciences de la vie"],
+    schools: ["Université Paris-Saclay", "Faculté de pharmacie Strasbourg", "AgroParisTech"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -1145,30 +1145,30 @@ const strategicExtras: JobRole[] = [
     title: "Medical Science Liaison Medical Vet",
     salary: "65kEUR - 98kEUR + bonus",
     salarySource:
-      "Les fonctions Medical Affairs sont identifiees comme penuriques par Aon. Pour la sante animale, le calibrage depend du territoire, du niveau scientifique attendu et de l'exposition terrain.",
+      "Les fonctions Medical Affairs sont identifiées comme penuriques par Aon. Pour la santé animale, le calibrage depend du territoire, du niveau scientifique attendu et de l'exposition terrain.",
     sector: "Medical Vet",
     category: "Medical Affairs",
     shortageLevel: "Elevee",
     summary:
-      "Porte la relation scientifique terrain avec les veterinaires experts, les comptes clefs et les equipes internes sur des portefeuilles sante animale.",
+      "Porte la relation scientifique terrain avec les vétérinaires experts, les comptes clefs et les équipes internes sur des portefeuilles santé animale.",
     skills: ["MSL", "Scientific exchange", "Veterinary market", "Training", "KOL management"],
     successFactors: [
-      "Rester credible scientifiquement tout en etant tres utile au terrain.",
+      "Rester credible scientifiquement tout en étant très utile au terrain.",
       "Donner de la valeur aux experts sans glisser vers une posture purement commerciale.",
-      "Faire remonter les bons signaux medicals et scientifiques a l'organisation."
+      "Faire remonter les bons signaux medicals et scientifiques à l'organisation."
     ],
     path: ["Scientific advisor", "MSL", "Medical affairs lead"],
     missions: [
-      "Animer les echanges scientifiques avec les KOL et reseaux veterinaries.",
-      "Former les equipes internes sur les messages et donnees produits.",
+      "Animer les échanges scientifiques avec les KOL et réseaux veterinaries.",
+      "Former les équipes internes sur les messages et données produits.",
       "Faire circuler les insights terrain vers medical, marketing et direction."
     ],
     studies: ["Veterinaire", "Pharmacie", "Doctorat sciences de la vie"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Université d'Angers"],
     relatedIndustries: [
       "Medical Vet",
       "Animal health",
-      "Vaccins veterinaires",
+      "Vaccins vétérinaires",
       "Diagnostic vet",
       "Scientific affairs"
     ],
@@ -1180,26 +1180,26 @@ const strategicExtras: JobRole[] = [
     publishDate: may2026EditorialBatchDate,
     salary: "72kEUR - 115kEUR",
     salarySource:
-      "Aon et France Biotech identifient la data science et l'informatique parmi les fonctions les plus difficiles a recruter. Le package depend du niveau de management, de la complexite produit et du poids de l'IA dans l'offre.",
+      "Aon et France Biotech identifient la data science et l'informatique parmi les fonctions les plus difficiles à recruter. Le package depend du niveau de management, de la complexité produit et du poids de l'IA dans l'offre.",
     sector: "Diagnostic",
     category: "Data / IA",
     shortageLevel: "Tres elevee",
     summary:
-      "Structure les equipes data, les cas d'usage analytiques et les standards de delivery pour des solutions diagnostic et medtech de plus en plus alimentees par l'IA.",
+      "Structure les équipes data, les cas d'usage analytiques et les standards de delivery pour des solutions diagnostic et medtech de plus en plus alimentées par l'IA.",
     skills: ["Data science", "Management", "AI", "Clinical data", "MLOps literacy"],
     successFactors: [
-      "Garder l'equipe tres proche du produit et des usages cliniques.",
-      "Prioriser les cas d'usage qui creent une vraie valeur metier.",
-      "Rendre la data science lisible pour des decideurs non techniques."
+      "Garder l'équipe très proche du produit et des usages cliniques.",
+      "Prioriser les cas d'usage qui créent une vraie valeur métier.",
+      "Rendre la data science lisible pour des décideurs non techniques."
     ],
     path: ["Senior data scientist", "Data lead", "Data science manager"],
     missions: [
-      "Piloter la roadmap data science et les priorites analytiques.",
-      "Manager les profils data et coordonner avec produit, clinique et qualite.",
-      "Faire de la data et de l'IA un levier concret de performance et de differenciation."
+      "Piloter la roadmap data science et les priorités analytiques.",
+      "Manager les profils data et coordonner avec produit, clinique et qualité.",
+      "Faire de la data et de l'IA un levier concret de performance et de différenciation."
     ],
-    studies: ["Master data science", "Ingenieur IA", "Bioinformatique", "PhD data / sante"],
-    schools: ["Grenoble INP - Ensimag", "EPITA", "Telecom Paris", "Universite Paris-Saclay"],
+    studies: ["Master data science", "Ingénieur IA", "Bioinformatique", "PhD data / santé"],
+    schools: ["Grenoble INP - Ensimag", "EPITA", "Telecom Paris", "Université Paris-Saclay"],
     relatedIndustries: [
       "Diagnostic",
       "Medtech",
@@ -1220,26 +1220,26 @@ const strategicExtras: JobRole[] = [
     title: "Senior Scientist ARN Therapeutics",
     salary: "55kEUR - 80kEUR",
     salarySource:
-      "Repere indicatif de marche SKS TALENTS, a recouper avec Aon RMCD, les benchmarks sectoriels et Glassdoor selon le grade et la maturite programme.",
+      "Repère indicatif de marché SKS TALENTS, à recouper avec Aon RMCD, les benchmarks sectoriels et Glassdoor selon le grade et la maturité programme.",
     sector: "Biotech",
     category: "R&D",
     shortageLevel: "Tres elevee",
     summary:
-      "Conduit les programmes ARN depuis la conception experimentale jusqu'aux preuves de faisabilite precliniques.",
-    skills: ["ARN therapeutics", "Biologie moleculaire", "Design experimental", "Data analysis", "Cross-functional work"],
+      "Conduit les programmes ARN depuis la conception expérimentale jusqu'aux preuves de faisabilité precliniques.",
+    skills: ["ARN therapeutics", "Biologie moléculaire", "Design experimental", "Data analysis", "Cross-functional work"],
     successFactors: [
-      "Relier excellence scientifique et priorites programme.",
+      "Relier excellence scientifique et priorités programme.",
       "Savoir prioriser les hypotheses les plus critiques.",
       "Collaborer avec CMC, analytique et leadership sans perdre le rythme experimental."
     ],
     path: ["Scientist", "Senior scientist", "Principal scientist"],
     missions: [
       "Concevoir et executer les plans d'experiences sur des plateformes ARN.",
-      "Interpreter les resultats et recommander les orientations de programme.",
-      "Collaborer avec CMC, analytique, qualite et leadership scientifique."
+      "Interpreter les résultats et recommander les orientations de programme.",
+      "Collaborer avec CMC, analytique, qualité et leadership scientifique."
     ],
-    studies: ["PhD biologie moleculaire", "PhD biotechnologies", "Master sciences du vivant avec experience"],
-    schools: ["Universite Paris-Saclay", "Institut Pasteur", "ESBS Strasbourg", "EBI Cergy"],
+    studies: ["PhD biologie moléculaire", "PhD biotechnologies", "Master sciences du vivant avec experience"],
+    schools: ["Université Paris-Saclay", "Institut Pasteur", "ESBS Strasbourg", "EBI Cergy"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -1256,7 +1256,7 @@ const strategicExtras: JobRole[] = [
     category: "Data / genomique",
     shortageLevel: "Tres elevee",
     summary:
-      "Transforme les donnees NGS en pipelines, analyses et livrables interpretable pour des usages diagnostic et precision medicine.",
+      "Transforme les données NGS en pipelines, analyses et livrables interpretable pour des usages diagnostic et precision medicine.",
     skills: ["NGS", "Python / R", "Pipelines bioinfo", "Omics", "Validation"],
     successFactors: [
       "Rendre les analyses fiables, robustes et compréhensibles par les équipes non data.",
@@ -1265,12 +1265,12 @@ const strategicExtras: JobRole[] = [
     ],
     path: ["Bioinformaticien", "Senior bioinformaticien", "Lead genomics data"],
     missions: [
-      "Developper et maintenir les pipelines NGS et les workflows d'analyse.",
+      "Développer et maintenir les pipelines NGS et les workflows d'analyse.",
       "Collaborer avec laboratoires, qualité et affaires réglementaires.",
-      "Ameliorer robustesse, automatisation et interpretation des resultats."
+      "Améliorer robustesse, automatisation et interpretation des résultats."
     ],
-    studies: ["Master bioinformatique", "PhD genomique", "Ingenieur data + biologie"],
-    schools: ["Universite Paris-Saclay", "Grenoble INP - Ensimag", "EPITA", "Telecom Paris"],
+    studies: ["Master bioinformatique", "PhD genomique", "Ingénieur data + biologie"],
+    schools: ["Université Paris-Saclay", "Grenoble INP - Ensimag", "EPITA", "Telecom Paris"],
     relatedIndustries: [
       "Diagnostic",
       "Genomique",
@@ -1281,30 +1281,30 @@ const strategicExtras: JobRole[] = [
   },
   {
     slug: "cosmetique-formulation-scientist",
-    title: "Formulation Scientist Cosmetique",
-    seoTitle: "R&D Cosmetique / Formulation : salaire 42-65 K€, missions | SKS",
+    title: "Formulation Scientist Cosmétique",
+    seoTitle: "R&D Cosmétique / Formulation : salaire 42-65 K€, missions | SKS",
     seoDescription:
-      "Fiche metier R&D Cosmetique - Formulation Scientist : missions cles (formulation, stabilite, industrialisation), salaire 42-65 K€, formations et ecoles. Benchmark 2026 SKS TALENTS.",
+      "Fiche métier R&D Cosmétique - Formulation Scientist : missions clés (formulation, stabilité, industrialisation), salaire 42-65 K€, formations et écoles. Benchmark 2026 SKS TALENTS.",
     publishDate: may2026EditorialBatchDate,
     salary: "42kEUR - 65kEUR",
     sector: "Cosmetique",
     category: "R&D",
     shortageLevel: "Elevee",
     summary:
-      "Developpe des formules performantes, stables et industrialisables pour des activites dermocosmetiques ou beauty tech.",
-    skills: ["Formulation", "Tests stabilite", "Ingredients", "Claims", "Industrialisation"],
+      "Développe des formules performantes, stables et industrialisables pour des activités dermocosmetiques ou beauty tech.",
+    skills: ["Formulation", "Tests stabilité", "Ingredients", "Claims", "Industrialisation"],
     successFactors: [
-      "Equilibrer innovation, faisabilité industrielle et attentes marketing.",
+      "Équilibrer innovation, faisabilité industrielle et attentes marketing.",
       "Avoir une discipline d'essais et de validation très rigoureuse.",
       "Travailler vite sans compromettre stabilité ni conformité."
     ],
     path: ["Formulateur", "Senior formulation scientist", "R&D manager"],
     missions: [
       "Concevoir et optimiser de nouvelles formules.",
-      "Valider la faisabilite industrielle avec production et qualité.",
+      "Valider la faisabilité industrielle avec production et qualité.",
       "Documenter les performances, claims et exigences réglementaires."
     ],
-    studies: ["Master formulation cosmetique", "Chimie", "Ingenierie cosmetique"],
+    studies: ["Master formulation cosmétique", "Chimie", "Ingénierie cosmétique"],
     schools: ["ISIPCA", "ICAP Montpellier", "Chimie ParisTech", "ESCOM Compiegne"],
     relatedIndustries: [
       "Cosmetique",
@@ -1316,14 +1316,14 @@ const strategicExtras: JobRole[] = [
   },
   {
     slug: "medical-vet-regulatory-affairs-vaccines",
-    title: "Regulatory Affairs Manager Vaccins Veterinaires",
+    title: "Regulatory Affairs Manager Vaccins Vétérinaires",
     salary: "60kEUR - 90kEUR",
     sector: "Medical Vet",
     category: "Reglementaire",
     shortageLevel: "Tres elevee",
     summary:
       "Cadre les enregistrements, variations et interactions autorités pour des portefeuilles vaccins en santé animale.",
-    skills: ["Vaccins", "Reglementation vet", "Dossiers", "Compliance", "Cross-functional leadership"],
+    skills: ["Vaccins", "Réglementation vet", "Dossiers", "Compliance", "Cross-functional leadership"],
     successFactors: [
       "Maîtriser les spécificités réglementaires vétérinaires.",
       "Savoir coordonner des interlocuteurs scientifiques, qualité et business.",
@@ -1336,7 +1336,7 @@ const strategicExtras: JobRole[] = [
       "Aligner qualité, clinique, CMC et business sur les enjeux de conformité."
     ],
     studies: ["Pharmacie", "Vétérinaire", "Master affaires réglementaires"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Université d'Angers"],
     relatedIndustries: [
       "Medical Vet",
       "Vaccins vétérinaires",
@@ -1352,7 +1352,7 @@ const strategicExtras: JobRole[] = [
     category: "Operations",
     shortageLevel: "Elevee",
     summary:
-      "Pilote la performance multi-sites d'un reseau veterinaire en equilibrant soins, operations, planning et experience client.",
+      "Pilote la performance multi-sites d'un réseau vétérinaire en equilibrant soins, operations, planning et experience client.",
     skills: ["Multi-site operations", "P&L", "Planning", "Excellence de service", "Leadership"],
     successFactors: [
       "Garder un niveau d'exigence homogène sur plusieurs sites.",
@@ -1362,7 +1362,7 @@ const strategicExtras: JobRole[] = [
     path: ["Practice manager", "Regional ops manager", "Operations director"],
     missions: [
       "Coordonner les cliniques, directeurs de site et indicateurs de performance.",
-      "Ameliorer capacité, parcours client, recrutement et rétention.",
+      "Améliorer capacité, parcours client, recrutement et rétention.",
       "Aligner qualité de soin et performance opérationnelle."
     ],
     studies: ["Management", "Vétérinaire avec expérience management", "Master operations"],
@@ -1383,7 +1383,7 @@ const strategicExtras: JobRole[] = [
     category: "Direction R&D",
     shortageLevel: "Elevee",
     summary:
-      "Porte la feuille de route innovation, formulation, qualite et différenciation scientifique dans le petfood premium.",
+      "Porte la feuille de route innovation, formulation, qualité et différenciation scientifique dans le petfood premium.",
     skills: ["Nutrition animale", "R&D leadership", "Claims", "Innovation", "Cross-functional management"],
     successFactors: [
       "Concilier ambition scientifique, time-to-market et contraintes industrielles.",
@@ -1392,11 +1392,11 @@ const strategicExtras: JobRole[] = [
     ],
     path: ["Nutrition scientist", "R&D manager", "R&D director"],
     missions: [
-      "Definir les priorités d'innovation produit et nutrition.",
+      "Définir les priorités d'innovation produit et nutrition.",
       "Coordonner formulation, qualité, affaires réglementaires et marketing.",
       "Accélérer la mise sur le marché de gammes premium et thérapeutiques."
     ],
-    studies: ["Ingenieur agro / nutrition", "Master nutrition animale", "Doctorat nutrition"],
+    studies: ["Ingénieur agro / nutrition", "Master nutrition animale", "Doctorat nutrition"],
     schools: ["AgroParisTech", "Institut Agro Montpellier", "ENSAIA", "Sciences Agro Bordeaux"],
     relatedIndustries: [
       "Petfood",
@@ -1411,7 +1411,7 @@ const strategicExtras: JobRole[] = [
     title: "MSAT Engineer Biotech",
     seoTitle: "MSAT Engineer Biotech : salaire 52-82 K€, missions bioproduction | SKS",
     seoDescription:
-      "Fiche metier MSAT Engineer Biotech : transfert tech, industrialisation, salaire 52-82 K€, formations et ecoles. Benchmark bioproduction 2026 SKS TALENTS.",
+      "Fiche métier MSAT Engineer Biotech : transfert tech, industrialisation, salaire 52-82 K€, formations et écoles. Benchmark bioproduction 2026 SKS TALENTS.",
     publishDate: may2026EditorialBatchDate,
     salary: "52kEUR - 82kEUR",
     sector: "Biotech",
@@ -1432,7 +1432,7 @@ const strategicExtras: JobRole[] = [
       "Sécuriser montée en échelle, robustesse et amélioration continue."
     ],
     studies: ["Diplôme d'ingénieur bioprocédés", "Master biotech", "PhD avec exposition industrielle"],
-    schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech"],
+    schools: ["Université Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -1446,7 +1446,7 @@ const strategicExtras: JobRole[] = [
     title: "CMC Project Manager Biotech",
     seoTitle: "CMC Project Manager Biotech : salaire 65-98 K€, missions | SKS",
     seoDescription:
-      "Fiche metier CMC Project Manager Biotech : chemistry manufacturing controls, dossiers reglementaires, salaire 65-98 K€, formations. Benchmark 2026 SKS TALENTS.",
+      "Fiche métier CMC Project Manager Biotech : chemistry manufacturing controls, dossiers réglementaires, salaire 65-98 K€, formations. Benchmark 2026 SKS TALENTS.",
     publishDate: may2026EditorialBatchDate,
     salary: "65kEUR - 98kEUR",
     sector: "Biotech",
@@ -1467,7 +1467,7 @@ const strategicExtras: JobRole[] = [
       "Sécuriser la préparation des lots, données et livrables CMC."
     ],
     studies: ["Ingénieur biotech", "Pharmacie", "Master gestion de projet scientifique"],
-    schools: ["Universite Paris-Saclay", "Institut Pasteur", "ESBS Strasbourg", "EBI Cergy"],
+    schools: ["Université Paris-Saclay", "Institut Pasteur", "ESBS Strasbourg", "EBI Cergy"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -1499,7 +1499,7 @@ const strategicExtras: JobRole[] = [
       "Améliorer la robustesse du système qualité avec la production."
     ],
     studies: ["Pharmacie", "Master qualité", "Ingénieur bioprocédés"],
-    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "ESBS Strasbourg", "EBI Cergy"],
+    schools: ["Université Paris-Saclay", "Faculté de pharmacie Strasbourg", "ESBS Strasbourg", "EBI Cergy"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -1531,7 +1531,7 @@ const strategicExtras: JobRole[] = [
       "Sécuriser données, documentation et readiness opérationnelle."
     ],
     studies: ["Ingénieur biotech", "Master génie des procédés", "PhD avec exposition industrielle"],
-    schools: ["Universite Paris-Saclay", "AgroParisTech", "ESBS Strasbourg", "EBI Cergy"],
+    schools: ["Université Paris-Saclay", "AgroParisTech", "ESBS Strasbourg", "EBI Cergy"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -1545,10 +1545,10 @@ const strategicExtras: JobRole[] = [
     title: "Medical Director Biotech",
     seoTitle: "Medical Director Biotech : salaire 100-170 K€, missions CMO | SKS",
     seoDescription:
-      "Fiche metier Medical Director Biotech : leadership medical, essais cliniques, KOL, salaire 100-170 K€ + variable, formations et parcours. Benchmark 2026 SKS TALENTS.",
+      "Fiche métier Medical Director Biotech : leadership medical, essais cliniques, KOL, salaire 100-170 K€ + variable, formations et parcours. Benchmark 2026 SKS TALENTS.",
     salary: "100kEUR - 170kEUR + variable",
     sector: "Biotech",
-    category: "Direction medicale",
+    category: "Direction médicale",
     shortageLevel: "Elevee",
     summary:
       "Porte la stratégie médicale, la crédibilité scientifique et l'alignement entre clinique, market access et leadership dans des biotechs à fort enjeu de développement.",
@@ -1565,7 +1565,7 @@ const strategicExtras: JobRole[] = [
       "Aligner les messages médicaux avec les enjeux de développement, de preuve et de commercialisation."
     ],
     studies: ["Médecine", "Pharmacie", "Doctorat sciences de la vie avec forte exposition clinique"],
-    schools: ["Universite Paris-Saclay", "Institut Pasteur", "Faculte de pharmacie Strasbourg", "Universite d'Angers", "Harvard Business School"],
+    schools: ["Université Paris-Saclay", "Institut Pasteur", "Faculté de pharmacie Strasbourg", "Université d'Angers", "Harvard Business School"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -1596,7 +1596,7 @@ const strategicExtras: JobRole[] = [
       "Accompagner les équipes opérationnelles sur les exigences GMP et la documentation."
     ],
     studies: ["Pharmacie", "Master qualité", "Ingénieur biotech / bioprocédés"],
-    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "ESBS Strasbourg", "EBI Cergy"],
+    schools: ["Université Paris-Saclay", "Faculté de pharmacie Strasbourg", "ESBS Strasbourg", "EBI Cergy"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -1627,7 +1627,7 @@ const strategicExtras: JobRole[] = [
       "Faire le lien entre développement, production, qualité et supply pour sécuriser la montée en échelle."
     ],
     studies: ["Diplôme d'ingénieur bioprocédés", "Master biotech", "PhD avec forte exposition industrielle"],
-    schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech"],
+    schools: ["Université Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -1658,7 +1658,7 @@ const strategicExtras: JobRole[] = [
       "Améliorer l'efficacité du service et la satisfaction des comptes."
     ],
     studies: ["Ingénieur biomédical", "Ingénieur instrumentation", "Master management technique"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "EPITA", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -1676,7 +1676,7 @@ const strategicExtras: JobRole[] = [
     category: "Applications / support terrain",
     shortageLevel: "Elevee",
     summary:
-      "Pilote la strategie applications, l'accompagnement terrain et la montée en compétence des équipes sur des solutions IVD et instrumentation.",
+      "Pilote la stratégie applications, l'accompagnement terrain et la montée en compétence des équipes sur des solutions IVD et instrumentation.",
     skills: ["Field applications", "Team leadership", "Customer enablement", "Instrumentation", "Escalation management"],
     successFactors: [
       "Maintenir une forte crédibilité technique tout en structurant les priorités du terrain.",
@@ -1690,7 +1690,7 @@ const strategicExtras: JobRole[] = [
       "Faire le lien entre clients, ventes, marketing, qualité et support produit."
     ],
     studies: ["Master biologie / diagnostic", "Ingénieur biomédical", "Sciences de la vie + expérience terrain"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "EPITA", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -1721,7 +1721,7 @@ const strategicExtras: JobRole[] = [
       "Sécuriser les preuves requises pour la mise sur le marché."
     ],
     studies: ["Pharmacie", "Master clinique", "Biologie médicale", "Ingénieur biomédical"],
-    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Grenoble INP - Ensimag"],
+    schools: ["Université Paris-Saclay", "Faculté de pharmacie Strasbourg", "Grenoble INP - Ensimag"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -1753,7 +1753,7 @@ const strategicExtras: JobRole[] = [
       "Aligner tech, support, commercial et qualité autour des priorités."
     ],
     studies: ["Ingénieur informatique", "Master bioinfo", "Ingénieur biomédical"],
-    schools: ["Telecom Paris", "EPITA", "Grenoble INP - Ensimag", "Universite Paris-Saclay"],
+    schools: ["Telecom Paris", "EPITA", "Grenoble INP - Ensimag", "Université Paris-Saclay"],
     relatedIndustries: [
       "Diagnostic",
       "Health data",
@@ -1784,7 +1784,7 @@ const strategicExtras: JobRole[] = [
       "Faire progresser marge, fidélisation et profondeur de relation client."
     ],
     studies: ["École de commerce", "Ingénieur avec expérience commerciale", "Master vente B2B"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "EPITA"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -1796,9 +1796,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "cosmetique-regulatory-affairs-manager",
     title: "Regulatory Affairs Manager Cosmétique",
-    seoTitle: "Regulatory Affairs Cosmetique : salaire 55-88 K€, missions | SKS",
+    seoTitle: "Regulatory Affairs Cosmétique : salaire 55-88 K€, missions | SKS",
     seoDescription:
-      "Fiche metier Regulatory Affairs Manager Cosmetique : dossiers CPSR, claims, CPNP, missions cles, salaire 55-88 K€, formations et parcours. Benchmark 2026 SKS TALENTS.",
+      "Fiche métier Regulatory Affairs Manager Cosmétique : dossiers CPSR, claims, CPNP, missions clés, salaire 55-88 K€, formations et parcours. Benchmark 2026 SKS TALENTS.",
     publishDate: may2026EditorialBatchDate,
     salary: "55kEUR - 88kEUR",
     sector: "Cosmetique",
@@ -1831,9 +1831,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "cosmetique-international-marketing-manager",
     title: "International Marketing Manager Cosmétique",
-    seoTitle: "Marketing Cosmetique International : salaire 58-92 K€ | SKS",
+    seoTitle: "Marketing Cosmétique International : salaire 58-92 K€ | SKS",
     seoDescription:
-      "Fiche metier International Marketing Manager Cosmetique : missions cles, salaire 58-92 K€ + variable, formations, ecoles, profils. Benchmark 2026 SKS TALENTS.",
+      "Fiche métier International Marketing Manager Cosmétique : missions clés, salaire 58-92 K€ + variable, formations, écoles, profils. Benchmark 2026 SKS TALENTS.",
     salary: "58kEUR - 92kEUR + variable",
     sector: "Cosmetique",
     category: "Marketing",
@@ -1884,7 +1884,7 @@ const strategicExtras: JobRole[] = [
       "Aligner les messages avec affaires réglementaires et marketing."
     ],
     studies: ["Vétérinaire", "Pharmacie", "Doctorat sciences de la vie"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Université d'Angers"],
     relatedIndustries: [
       "Medical Vet",
       "Vaccins vétérinaires",
@@ -1915,7 +1915,7 @@ const strategicExtras: JobRole[] = [
       "Réduire les risques de rupture sur des références critiques."
     ],
     studies: ["Master supply chain", "Ingénieur", "Master opérations"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Institut Agro Rennes Angers", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Institut Agro Rennes Angers", "Université d'Angers"],
     relatedIndustries: [
       "Medical Vet",
       "Animal biotech",
@@ -2101,7 +2101,7 @@ const strategicExtras: JobRole[] = [
       "Accompagner l'adoption par les équipes programme."
     ],
     studies: ["PhD bioinformatique", "Master IA", "PhD biologie computationnelle"],
-    schools: ["Universite Paris-Saclay", "EPITA", "Telecom Paris", "Grenoble INP - Ensimag"],
+    schools: ["Université Paris-Saclay", "EPITA", "Telecom Paris", "Grenoble INP - Ensimag"],
     relatedIndustries: [
       "Biotech",
       "Health data",
@@ -2132,7 +2132,7 @@ const strategicExtras: JobRole[] = [
       "Soutenir les équipes clinique, produit et réglementaire."
     ],
     studies: ["Master data", "Ingénieur informatique", "Bioinformatique"],
-    schools: ["Grenoble INP - Ensimag", "EPITA", "Telecom Paris", "Universite Paris-Saclay"],
+    schools: ["Grenoble INP - Ensimag", "EPITA", "Telecom Paris", "Université Paris-Saclay"],
     relatedIndustries: [
       "Diagnostic",
       "Health data",
@@ -2164,7 +2164,7 @@ const strategicExtras: JobRole[] = [
       "Renforcer la résilience des plateformes connectées."
     ],
     studies: ["Master cybersécurité", "Ingénieur informatique", "Master systèmes d'information"],
-    schools: ["Telecom Paris", "EPITA", "Grenoble INP - Ensimag", "Universite Paris-Saclay"],
+    schools: ["Telecom Paris", "EPITA", "Grenoble INP - Ensimag", "Université Paris-Saclay"],
     relatedIndustries: [
       "Diagnostic",
       "Medtech",
@@ -2195,7 +2195,7 @@ const strategicExtras: JobRole[] = [
       "Aider le leadership à mieux prioriser les efforts go-to-market."
     ],
     studies: ["École de commerce", "Ingénieur + business", "Master data / commercial"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "EPITA"],
     relatedIndustries: [
       "Biotech",
       "Healthtech",
@@ -2226,7 +2226,7 @@ const strategicExtras: JobRole[] = [
       "Faire remonter les signaux concurrence, usage et besoins clients."
     ],
     studies: ["Vétérinaire", "École de commerce", "Master business international"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Université d'Angers"],
     relatedIndustries: [
       "Medical Vet",
       "Animal health",
@@ -2269,13 +2269,13 @@ const strategicExtras: JobRole[] = [
   {
     slug: "cosmetique-export-manager-mena-afrique",
     title: "Export Manager Afrique & MENA Cosmétique",
-    seoTitle: "Export Manager Cosmetique MENA & Afrique : 65-108 K€ | SKS",
+    seoTitle: "Export Manager Cosmétique MENA & Afrique : 65-108 K€ | SKS",
     seoDescription:
-      "Fiche metier Export Manager Cosmetique Afrique & MENA : missions, salaire 65-108 K€ + variable, distributeurs, reglementation. Benchmark 2026 SKS TALENTS.",
+      "Fiche métier Export Manager Cosmétique Afrique & MENA : missions, salaire 65-108 K€ + variable, distributeurs, réglementation. Benchmark 2026 SKS TALENTS.",
     publishDate: may2026EditorialBatchDate,
     salary: "65kEUR - 108kEUR + variable",
     sector: "Cosmetique",
-    category: "Developpement international",
+    category: "Développement international",
     shortageLevel: "Elevee",
     summary:
       "Porte le développement export sur l'Afrique et le Moyen-Orient pour des marques et solutions cosmétiques.",
@@ -2323,7 +2323,7 @@ const strategicExtras: JobRole[] = [
       "Coordonner ventes, support, application et service pour fluidifier l'expérience client."
     ],
     studies: ["École de commerce", "Ingénieur avec fibre business", "Master vente B2B / sciences"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "EPITA", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -2354,7 +2354,7 @@ const strategicExtras: JobRole[] = [
       "Sécuriser la conformité documentaire et le pilotage des échéances."
     ],
     studies: ["École de commerce", "Master santé / affaires publiques", "Ingénieur avec expérience marché public"],
-    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Telecom Paris"],
+    schools: ["Université Paris-Saclay", "Faculté de pharmacie Strasbourg", "Telecom Paris"],
     relatedIndustries: [
       "Diagnostic",
       "Medtech",
@@ -2385,7 +2385,7 @@ const strategicExtras: JobRole[] = [
       "Faire le lien entre distributeurs, équipes internes et besoins terrain."
     ],
     studies: ["École de commerce", "Vétérinaire avec exposition business", "Master commerce international"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Université d'Angers"],
     relatedIndustries: [
       "Medical Vet",
       "Animal health",
@@ -2416,7 +2416,7 @@ const strategicExtras: JobRole[] = [
       "Faire remonter les besoins vers produit, service et commercial."
     ],
     studies: ["Master management", "Sciences de la vie + expérience service", "École de commerce"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "EPITA", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -2447,7 +2447,7 @@ const strategicExtras: JobRole[] = [
       "Travailler sur incentives, couverture des comptes et priorisation commerciale."
     ],
     studies: ["École de commerce", "Ingénieur + business", "Master data / commercial"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "EPITA"],
     relatedIndustries: [
       "Biotech",
       "Healthtech",
@@ -2478,7 +2478,7 @@ const strategicExtras: JobRole[] = [
       "Aligner médical, market access, réglementaire et direction sur la trajectoire marché."
     ],
     studies: ["Pharmacie", "HEOR / économie de la santé", "Sciences + business"],
-    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Institut Pasteur", "Universite d'Angers"],
+    schools: ["Université Paris-Saclay", "Faculté de pharmacie Strasbourg", "Institut Pasteur", "Université d'Angers"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -2492,7 +2492,7 @@ const strategicExtras: JobRole[] = [
     title: "VP Sales Diagnostic",
     seoTitle: "VP Sales Diagnostic : salaire 140-260 K€, missions IVD | SKS TALENTS",
     seoDescription:
-      "Fiche metier VP Sales Diagnostic : direction commerciale IVD, hopital-labo, salaire 140-260 K€ + variable, formations. Benchmark exec search 2026 SKS TALENTS.",
+      "Fiche métier VP Sales Diagnostic : direction commerciale IVD, hôpital-labo, salaire 140-260 K€ + variable, formations. Benchmark exec search 2026 SKS TALENTS.",
     salary: "140kEUR - 260kEUR + variable",
     sector: "Diagnostic",
     category: "Direction commerciale",
@@ -2512,7 +2512,7 @@ const strategicExtras: JobRole[] = [
       "Sécuriser croissance, marge et lisibilité business pour la direction."
     ],
     studies: ["École de commerce", "Ingénieur + forte exposition commerciale", "MBA optionnel"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "EPITA"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -2526,7 +2526,7 @@ const strategicExtras: JobRole[] = [
     title: "VP Operations Biotech",
     seoTitle: "VP Operations Biotech : salaire 120-210 K€, missions scale-up | SKS",
     seoDescription:
-      "Fiche metier VP Operations Biotech : industrialisation, GMP, supply chain, salaire 120-210 K€ + variable. Series B+ scale-up. Benchmark 2026 SKS TALENTS.",
+      "Fiche métier VP Operations Biotech : industrialisation, GMP, supply chain, salaire 120-210 K€ + variable. Series B+ scale-up. Benchmark 2026 SKS TALENTS.",
     salary: "120kEUR - 210kEUR + variable",
     sector: "Biotech",
     category: "Direction operations",
@@ -2546,7 +2546,7 @@ const strategicExtras: JobRole[] = [
       "Aligner les fonctions critiques autour d'une trajectoire de croissance tenable."
     ],
     studies: ["Diplôme d'ingénieur", "Formation opérations / supply", "Executive education"],
-    schools: ["Universite Paris-Saclay", "AgroParisTech", "ESBS Strasbourg", "EBI Cergy"],
+    schools: ["Université Paris-Saclay", "AgroParisTech", "ESBS Strasbourg", "EBI Cergy"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -2577,7 +2577,7 @@ const strategicExtras: JobRole[] = [
       "Aligner qualité, production, MSAT, supply et direction sur les vrais risques."
     ],
     studies: ["Pharmacie", "Master qualité", "Ingénieur bioprocédés / biotech"],
-    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "ESBS Strasbourg", "EBI Cergy"],
+    schools: ["Université Paris-Saclay", "Faculté de pharmacie Strasbourg", "ESBS Strasbourg", "EBI Cergy"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -2591,7 +2591,7 @@ const strategicExtras: JobRole[] = [
     title: "Head of Regulatory Medical Vet",
     seoTitle: "Head of Regulatory Medical Vet : salaire 78-110 K€, EMA/DGAL | SKS",
     seoDescription:
-      "Fiche metier Head of Regulatory Medical Vet : pharma veterinaire, EMA CVMP, DGAL, salaire 78-110 K€ + variable. Benchmark Animal Health 2026 SKS TALENTS.",
+      "Fiche métier Head of Regulatory Medical Vet : pharma vétérinaire, EMA CVMP, DGAL, salaire 78-110 K€ + variable. Benchmark Animal Health 2026 SKS TALENTS.",
     salary: "78kEUR - 110kEUR + variable",
     sector: "Medical Vet",
     category: "Reglementaire",
@@ -2611,7 +2611,7 @@ const strategicExtras: JobRole[] = [
       "Soutenir les lancements et la disponibilité marché avec une lecture réglementaire robuste."
     ],
     studies: ["Vétérinaire", "Pharmacie", "Master affaires réglementaires"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Medical Vet",
       "Animal health",
@@ -2642,7 +2642,7 @@ const strategicExtras: JobRole[] = [
       "Améliorer le taux de succès et la discipline d'exécution bid."
     ],
     studies: ["École de commerce", "Master santé / affaires publiques", "Sciences + gestion de projet"],
-    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Telecom Paris"],
+    schools: ["Université Paris-Saclay", "Faculté de pharmacie Strasbourg", "Telecom Paris"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -2673,7 +2673,7 @@ const strategicExtras: JobRole[] = [
       "Faire remonter les besoins terrain vers marketing, ventes et médical."
     ],
     studies: ["École de commerce", "Vétérinaire avec fibre business", "Master marketing"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Université d'Angers"],
     relatedIndustries: [
       "Medical Vet",
       "Animal health",
@@ -2704,7 +2704,7 @@ const strategicExtras: JobRole[] = [
       "Améliorer visibilité pipeline, animation commerciale et croissance réseau."
     ],
     studies: ["École de commerce", "Master commerce international", "Vétérinaire avec exposition business"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Université d'Angers"],
     relatedIndustries: [
       "Medical Vet",
       "Animal health",
@@ -2735,7 +2735,7 @@ const strategicExtras: JobRole[] = [
       "Prioriser les chantiers d'amélioration qui réduisent friction et churn."
     ],
     studies: ["École de commerce", "Master management", "Sciences + forte exposition service"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "EPITA", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -2767,7 +2767,7 @@ const strategicExtras: JobRole[] = [
       "Aligner service, supply pièces, commercial et application autour de la performance."
     ],
     studies: ["Ingénieur biomédical", "Ingénieur instrumentation", "Master management technique"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "EPITA", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -2798,7 +2798,7 @@ const strategicExtras: JobRole[] = [
       "Identifier les points de friction qui ralentissent la croissance commerciale."
     ],
     studies: ["École de commerce", "Ingénieur + business", "Master data / management"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "EPITA"],
     relatedIndustries: [
       "Biotech",
       "Healthtech",
@@ -2829,7 +2829,7 @@ const strategicExtras: JobRole[] = [
       "Sécuriser délais, conformité et qualité de réponse sur les dossiers stratégiques."
     ],
     studies: ["École de commerce", "Master santé / commerce international", "Sciences + gestion de projet"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "Faculte de pharmacie Strasbourg"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -2860,7 +2860,7 @@ const strategicExtras: JobRole[] = [
       "Transformer les partenariats en leviers concrets de croissance, crédibilité ou exécution."
     ],
     studies: ["École de commerce", "Doctorat / ingénieur avec exposition business", "MBA optionnel"],
-    schools: ["Universite Paris-Saclay", "Institut Pasteur", "AgroParisTech", "ESBS Strasbourg"],
+    schools: ["Université Paris-Saclay", "Institut Pasteur", "AgroParisTech", "ESBS Strasbourg"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -2891,7 +2891,7 @@ const strategicExtras: JobRole[] = [
       "Aligner l'après-vente avec les enjeux de renouvellement, satisfaction et profitabilité."
     ],
     studies: ["Ingénieur biomédical", "Master management", "Ingénieur instrumentation + leadership"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "EPITA", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -2922,7 +2922,7 @@ const strategicExtras: JobRole[] = [
       "Faire le lien entre besoins terrain, marketing, médical et direction commerciale."
     ],
     studies: ["École de commerce", "Vétérinaire avec exposition terrain", "Master formation / management"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Université d'Angers"],
     relatedIndustries: [
       "Medical Vet",
       "Animal health",
@@ -3068,7 +3068,7 @@ const strategicExtras: JobRole[] = [
     slug: "medical-vet-sales-developer-product-trainer-emea",
     title: "Sales Developer & Product Trainer EMEA",
     publishDate: may2026EditorialBatchDate,
-    salary: "A calibrer selon le périmètre, la zone et la part variable",
+    salary: "À calibrer selon le périmètre, la zone et la part variable",
     sector: "Medical Vet",
     category: "Sales / training / channel",
     shortageLevel: "Elevee",
@@ -3118,7 +3118,7 @@ const strategicExtras: JobRole[] = [
       "Accompagner les équipes lors d'audits, inspections et revues qualité."
     ],
     studies: ["Ingénieur informatique", "Ingénieur qualité / procédés", "Master systèmes d'information", "Master qualité"],
-    schools: ["Telecom Paris", "EPITA", "CentraleSupélec", "Universite Paris-Saclay"],
+    schools: ["Telecom Paris", "EPITA", "CentraleSupélec", "Université Paris-Saclay"],
     relatedIndustries: [
       "Biotech",
       "Bioproduction",
@@ -3150,7 +3150,7 @@ const strategicExtras: JobRole[] = [
       "Former les équipes et renforcer les routines aseptiques et la culture qualité."
     ],
     studies: ["Pharmacie", "Microbiologie", "Master qualité", "Ingénieur bioprocédés"],
-    schools: ["Faculte de pharmacie Strasbourg", "Universite Paris-Saclay", "Institut Pasteur", "AgroParisTech"],
+    schools: ["Faculté de pharmacie Strasbourg", "Université Paris-Saclay", "Institut Pasteur", "AgroParisTech"],
     relatedIndustries: [
       "Biotech",
       "Bioproduction",
@@ -3182,7 +3182,7 @@ const strategicExtras: JobRole[] = [
       "Contribuer aux changements techniques en respectant les exigences qualité/validation."
     ],
     studies: ["Ingénieur automatisme", "Ingénieur maintenance", "Ingénieur instrumentation", "Master systèmes industriels"],
-    schools: ["CentraleSupélec", "Mines Paris", "Grenoble INP", "Universite Paris-Saclay"],
+    schools: ["CentraleSupélec", "Mines Paris", "Grenoble INP", "Université Paris-Saclay"],
     relatedIndustries: [
       "Biotech",
       "Bioproduction",
@@ -3214,7 +3214,7 @@ const strategicExtras: JobRole[] = [
       "Sécuriser la continuité d'activité et la qualité des données durant le déploiement."
     ],
     studies: ["Ingénieur industriel", "Ingénieur informatique", "Master systèmes d'information", "Master qualité"],
-    schools: ["Telecom Paris", "CentraleSupélec", "EPITA", "Universite Paris-Saclay"],
+    schools: ["Telecom Paris", "CentraleSupélec", "EPITA", "Université Paris-Saclay"],
     relatedIndustries: [
       "Biotech",
       "Bioproduction",
@@ -3229,7 +3229,7 @@ const strategicExtras: JobRole[] = [
     title: "Clinical Operations Manager Biotech",
     seoTitle: "Clinical Operations Manager Biotech : 65-105 K€, essais cliniques | SKS",
     seoDescription:
-      "Fiche metier Clinical Operations Manager Biotech : essais cliniques Phase I-III, CRO, centres, salaire 65-105 K€. Benchmark 2026 SKS TALENTS.",
+      "Fiche métier Clinical Operations Manager Biotech : essais cliniques Phase I-III, CRO, centres, salaire 65-105 K€. Benchmark 2026 SKS TALENTS.",
     salary: "65kEUR - 105kEUR",
     sector: "Biotech",
     category: "Clinique / essais",
@@ -3249,7 +3249,7 @@ const strategicExtras: JobRole[] = [
       "Coordonner clinique, médical, data, réglementaire et équipes internes."
     ],
     studies: ["Pharmacie", "Master recherche clinique", "Master santé publique", "Sciences de la vie + clinique"],
-    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Sciences Po", "ESSEC"],
+    schools: ["Université Paris-Saclay", "Faculté de pharmacie Strasbourg", "Sciences Po", "ESSEC"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -3281,7 +3281,7 @@ const strategicExtras: JobRole[] = [
       "Assurer l'alignement entre PV, médical, clinique et réglementaire."
     ],
     studies: ["Pharmacie", "Médecine", "Master pharmacovigilance", "Master santé publique"],
-    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Universite de Montpellier pharmacie"],
+    schools: ["Université Paris-Saclay", "Faculté de pharmacie Strasbourg", "Université de Montpellier pharmacie"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -3313,7 +3313,7 @@ const strategicExtras: JobRole[] = [
       "Analyser données procédés et formaliser les recommandations."
     ],
     studies: ["Doctorat sciences de la vie", "Ingénieur bioprocédés", "Master biotechnologies"],
-    schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech"],
+    schools: ["Université Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech"],
     relatedIndustries: [
       "Biotech",
       "Bioproduction",
@@ -3345,7 +3345,7 @@ const strategicExtras: JobRole[] = [
       "Coordonner intégrations et échanges de données avec instruments et middleware."
     ],
     studies: ["Bioinformatique", "Ingénieur informatique", "Master systèmes d'information", "Sciences + informatique"],
-    schools: ["Telecom Paris", "EPITA", "Grenoble INP - Ensimag", "Universite Paris-Saclay"],
+    schools: ["Telecom Paris", "EPITA", "Grenoble INP - Ensimag", "Université Paris-Saclay"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -3400,7 +3400,7 @@ const strategicExtras: JobRole[] = [
     title: "Regulatory Affairs Specialist IVDR (IVD)",
     seoTitle: "Regulatory Affairs IVDR (IVD) : salaire 60-95 K€, dossiers | SKS TALENTS",
     seoDescription:
-      "Fiche metier Regulatory Affairs Specialist IVDR (IVD) : PRRC, dossiers techniques, post-market surveillance, salaire 60-95 K€. Benchmark diagnostic 2026.",
+      "Fiche métier Regulatory Affairs Specialist IVDR (IVD) : PRRC, dossiers techniques, post-market surveillance, salaire 60-95 K€. Benchmark diagnostic 2026.",
     salary: "60kEUR - 95kEUR",
     sector: "Diagnostic",
     category: "Affaires réglementaires (IVD)",
@@ -3420,7 +3420,7 @@ const strategicExtras: JobRole[] = [
       "Préparer audits, interactions et jalons critiques du cycle de vie réglementaire."
     ],
     studies: ["Pharmacie", "Ingénieur biomédical", "Master affaires réglementaires", "Master qualité"],
-    schools: ["Faculte de pharmacie Strasbourg", "Universite Paris-Saclay", "Telecom Paris"],
+    schools: ["Faculté de pharmacie Strasbourg", "Université Paris-Saclay", "Telecom Paris"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -3455,7 +3455,7 @@ const strategicExtras: JobRole[] = [
       "Préparer les exports et livrables data pour analyses, audits et dossiers."
     ],
     studies: ["Bioinformatique", "Biostatistiques", "Master data santé", "Sciences de la vie"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "Grenoble INP - Ensimag"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "Grenoble INP - Ensimag"],
     relatedIndustries: [
       "Diagnostic",
       "Medtech",
@@ -3554,12 +3554,12 @@ const strategicExtras: JobRole[] = [
       "Travailler avec médical, qualité, réglementaire et réseaux vétérinaires."
     ],
     studies: ["Vétérinaire", "Pharmacie", "Master pharmacovigilance", "Master santé publique"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Medical Vet",
       "Animal health",
       "Vet pharma",
-      "Vaccins veterinaires",
+      "Vaccins vétérinaires",
       "Drug safety"
     ],
     sources: [
@@ -3679,23 +3679,23 @@ const strategicExtras: JobRole[] = [
     title: "Data Scientist Petfood",
     salary: "45kEUR - 80kEUR + bonus",
     salarySource:
-      "Ordre de grandeur France, fixe brut annuel. La fourchette basse cible les profils de 2 a 3 ans, la haute les profils seniors capables de porter la gouvernance de la donnee. Le positionnement depend de trois criteres : la taille de l'entreprise, la localisation du poste et la part variable propre a chaque structure.",
+      "Ordre de grandeur France, fixe brut annuel. La fourchette basse cible les profils de 2 à 3 ans, la haute les profils seniors capables de porter la gouvernance de la donnée. Le positionnement depend de trois critères : la taille de l'entreprise, la localisation du poste et la part variable propre à chaque structure.",
     sector: "Petfood",
     category: "Data et analytics",
     shortageLevel: "Tres elevee",
     summary:
-      "Transforme les donnees du petfood (ventes retail et D2C, panels consommateurs, essais de palatabilite, qualite et procedes industriels) en decisions de formulation, de gamme et de prevision. Fonction recente dans la filiere : peu de profils combinent la comprehension de la nutrition animale et la maitrise statistique.",
+      "Transforme les données du petfood (ventes retail et D2C, panels consommateurs, essais de palatabilite, qualité et procédés industriels) en decisions de formulation, de gamme et de prevision. Fonction récente dans la filière : peu de profils combinent la comprehension de la nutrition animale et la maîtrise statistique.",
     skills: [
-      "Modelisation predictive et prevision de la demande",
-      "Analyse de donnees retail, D2C et panels consommateurs",
-      "Exploitation des donnees d'essais palatabilite et de qualite",
-      "Python, SQL, visualisation et industrialisation des modeles",
-      "Vulgarisation aupres de la R&D, du marketing et de la supply chain"
+      "Modélisation predictive et prevision de la demande",
+      "Analyse de données retail, D2C et panels consommateurs",
+      "Exploitation des données d'essais palatabilite et de qualité",
+      "Python, SQL, visualisation et industrialisation des modèles",
+      "Vulgarisation auprès de la R&D, du marketing et de la supply chain"
     ],
     successFactors: [
-      "Comprendre la formulation et la nutrition animale avant de modeliser.",
-      "Livrer des decisions actionnables plutot que des tableaux de bord.",
-      "Faire dialoguer des donnees dispersees entre R&D, industriel, retail et e-commerce."
+      "Comprendre la formulation et la nutrition animale avant de modéliser.",
+      "Livrer des decisions actionnables plutôt que des tableaux de bord.",
+      "Faire dialoguer des données dispersées entre R&D, industriel, retail et e-commerce."
     ],
     path: [
       "Data analyst agroalimentaire",
@@ -3703,29 +3703,29 @@ const strategicExtras: JobRole[] = [
       "Head of Data / Analytics petfood"
     ],
     missions: [
-      "Construire les modeles de prevision de la demande par segment (chiens, chats, premium, therapeutique) et par canal.",
-      "Analyser les donnees de ventes retail et D2C pour eclairer les decisions de gamme et de prix.",
-      "Exploiter les donnees d'essais de palatabilite et de panels pour accelerer les cycles de formulation.",
-      "Industrialiser les analyses qualite et procedes pour reduire la variabilite produit.",
-      "Structurer la gouvernance et la fiabilite des donnees entre R&D, industriel, marketing et supply chain.",
-      "Traduire les resultats en recommandations lisibles pour les equipes non techniques."
+      "Construire les modèles de prevision de la demande par segment (chiens, chats, premium, thérapeutique) et par canal.",
+      "Analyser les données de ventes retail et D2C pour éclairer les decisions de gamme et de prix.",
+      "Exploiter les données d'essais de palatabilite et de panels pour accélérer les cycles de formulation.",
+      "Industrialiser les analyses qualité et procédés pour réduire la variabilité produit.",
+      "Structurer la gouvernance et la fiabilité des données entre R&D, industriel, marketing et supply chain.",
+      "Traduire les résultats en recommandations lisibles pour les équipes non techniques."
     ],
     studies: [
-      "Ingenieur.e agroalimentaire ou data",
+      "Ingénieur.e agroalimentaire ou data",
       "Master statistiques ou data science",
-      "Formation nutrition animale appreciee"
+      "Formation nutrition animale appréciée"
     ],
     schools: ["AgroParisTech", "Institut Agro Montpellier", "ENSAIA", "UniLaSalle"],
     relatedIndustries: [
       "Petfood",
       "Nutrition animale",
       "FMCG alimentaire",
-      "Retail et e-commerce specialise",
+      "Retail et e-commerce spécialisé",
       "Data et analytics agroalimentaire"
     ],
     sources: [
       { name: "Aon - Benchmarks de remuneration", url: AON_REWARDS_URL },
-      { name: "FEDIAF - Federation europeenne de l'industrie petfood", url: "https://europeanpetfood.org/" }
+      { name: "FEDIAF - Federation européenne de l'industrie petfood", url: "https://europeanpetfood.org/" }
     ]
   },
   {
@@ -3768,7 +3768,7 @@ const strategicExtras: JobRole[] = [
     title: "Cosmetic Safety Assessor / Toxicologue Cosmétique",
     seoTitle: "Cosmetic Safety Assessor : salaire 55-95 K€, missions | SKS",
     seoDescription:
-      "Fiche metier Cosmetic Safety Assessor - Toxicologue Cosmetique : CPSR, DIP, evaluation securite produits, salaire 55-95 K€, formations. Benchmark 2026.",
+      "Fiche métier Cosmetic Safety Assessor - Toxicologue Cosmétique : CPSR, DIP, evaluation sécurité produits, salaire 55-95 K€, formations. Benchmark 2026.",
     salary: "55kEUR - 95kEUR",
     sector: "Cosmetique",
     category: "Sécurité / réglementation",
@@ -3803,9 +3803,9 @@ const strategicExtras: JobRole[] = [
   {
     slug: "cosmetique-packaging-development-engineer",
     title: "Packaging Development Engineer Cosmétique",
-    seoTitle: "Packaging Development Engineer Cosmetique : 50-85 K€ | SKS",
+    seoTitle: "Packaging Development Engineer Cosmétique : 50-85 K€ | SKS",
     seoDescription:
-      "Fiche metier Packaging Development Engineer Cosmetique : missions premium (materiaux, industrialisation), salaire 50-85 K€, formations. Benchmark 2026 SKS TALENTS.",
+      "Fiche métier Packaging Development Engineer Cosmétique : missions premium (matériaux, industrialisation), salaire 50-85 K€, formations. Benchmark 2026 SKS TALENTS.",
     salary: "50kEUR - 85kEUR",
     sector: "Cosmetique",
     category: "R&D / packaging",
@@ -3877,30 +3877,30 @@ const strategicExtras: JobRole[] = [
     title: "Data Integrity Lead (GxP) Biotech",
     salary: "70kEUR - 115kEUR + bonus",
     salarySource:
-      "Repere indicatif pour un role Data Integrity / CSV senior en environnement GxP. Le niveau depend du scope (site vs multi-sites), des audits cibles et du niveau de transformation digitale (LIMS, MES, eBR).",
+      "Repère indicatif pour un rôle Data Integrity / CSV senior en environnement GxP. Le niveau depend du scope (site vs multi-sites), des audits cibles et du niveau de transformation digitale (LIMS, MES, eBR).",
     sector: "Biotech",
-    category: "Qualite / compliance digitale",
+    category: "Qualité / compliance digitale",
     shortageLevel: "Tres elevee",
     summary:
-      "Structure et pilote la strategie data integrity (ALCOA+), la gouvernance des systemes critiques et la preparation audit sur des environnements biotech ou la confiance dans la donnee conditionne la libération.",
+      "Structure et pilote la stratégie data integrity (ALCOA+), la gouvernance des systèmes critiques et la preparation audit sur des environnements biotech ou la confiance dans la donnée conditionne la libération.",
     skills: ["Data integrity (ALCOA+)", "CSV / qualification", "GxP documentation", "Risk-based approach", "Change control"],
     successFactors: [
-      "Savoir prioriser les systemes et les risques plutot que multiplier les checklists.",
+      "Savoir prioriser les systèmes et les risques plutôt que multiplier les checklists.",
       "Rendre la compliance utilisable par le terrain (production, labo, IT).",
       "Transformer les findings audit en plan d'action pragmatique et mesurable."
     ],
     path: ["QA specialist", "CSV / validation lead", "Data integrity lead"],
     missions: [
-      "Cartographier les systemes critiques (LIMS, MES, ERP, instruments) et les risques data integrity.",
+      "Cartographier les systèmes critiques (LIMS, MES, ERP, instruments) et les risques data integrity.",
       "Mettre en place des standards (governance, logs, audit trails, periodic reviews) et des rituels de suivi.",
       "Piloter les plans d'action (CAPA, changes, formation) jusqu'a stabilisation et preuve audit."
     ],
-    studies: ["Pharmacie", "Ingenieur qualite / industriel", "Master systemes d'information", "Master data / compliance"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "ESBS Strasbourg"],
+    studies: ["Pharmacie", "Ingénieur qualité / industriel", "Master systèmes d'information", "Master data / compliance"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "EPITA", "ESBS Strasbourg"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
-      "CDMO specialisees",
+      "CDMO spécialisées",
       "Digital manufacturing",
       "GxP"
     ],
@@ -3914,31 +3914,31 @@ const strategicExtras: JobRole[] = [
     title: "Quality Systems Manager Biotech (GMP)",
     salary: "65kEUR - 105kEUR + bonus",
     salarySource:
-      "Repere indicatif pour un Quality Systems Manager (SOP, change control, deviations, CAPA, audits). A calibrer selon maturite GMP, portefeuille produits et niveau multi-sites.",
+      "Repère indicatif pour un Quality Systems Manager (SOP, change control, deviations, CAPA, audits). À calibrer selon maturité GMP, portefeuille produits et niveau multi-sites.",
     sector: "Biotech",
-    category: "Assurance qualite",
+    category: "Assurance qualité",
     shortageLevel: "Tres elevee",
     summary:
-      "Pilote les systemes qualite (SOP, change control, deviations, CAPA, audits) afin de rendre l'execution GMP stable, auditable et compatible avec la vitesse d'industrialisation.",
+      "Pilote les systèmes qualité (SOP, change control, deviations, CAPA, audits) afin de rendre l'execution GMP stable, auditable et compatible avec la vitesse d'industrialisation.",
     skills: ["Quality systems", "Change control", "Deviations / CAPA", "Audit readiness", "Process simplification"],
     successFactors: [
-      "Eviter le piege du systeme qualite trop lourd qui ralentit le terrain.",
-      "Construire des routines simples qui reduisent les ecarts et les reworks.",
-      "Etre credible a la fois face aux operations et aux auditeurs."
+      "Éviter le piège du système qualité trop lourd qui ralentit le terrain.",
+      "Construire des routines simples qui réduisent les écarts et les reworks.",
+      "Être credible à la fois face aux operations et aux auditeurs."
     ],
     path: ["QA specialist", "QA systems lead", "Quality systems manager"],
     missions: [
-      "Maintenir et faire evoluer les SOP, templates et standards qualite.",
+      "Maintenir et faire évoluer les SOP, templates et standards qualité.",
       "Structurer change control, deviations et CAPA avec une logique risk-based.",
       "Preparer les audits et accompagner la resolution des findings jusqu'a cloture."
     ],
-    studies: ["Ingenieur qualite", "Pharmacie", "Master sciences du vivant", "Master management qualite"],
-    schools: ["Universite Paris-Saclay", "EBI Cergy", "AgroParisTech", "Faculte de pharmacie Strasbourg"],
+    studies: ["Ingénieur qualité", "Pharmacie", "Master sciences du vivant", "Master management qualité"],
+    schools: ["Université Paris-Saclay", "EBI Cergy", "AgroParisTech", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
       "Cell therapy",
-      "CDMO specialisees",
+      "CDMO spécialisées",
       "GMP"
     ],
     sources: [
@@ -3951,26 +3951,26 @@ const strategicExtras: JobRole[] = [
     title: "Deviation & CAPA Manager Biotech",
     salary: "60kEUR - 95kEUR + bonus",
     salarySource:
-      "Repere indicatif pour une fonction QA Operations orientee investigations et CAPA. Le niveau varie selon volumetrie deviations, criticite des lots et pression de planning.",
+      "Repère indicatif pour une fonction QA Operations orientée investigations et CAPA. Le niveau varie selon volumetrie deviations, criticite des lots et pression de planning.",
     sector: "Biotech",
     category: "QA operations",
     shortageLevel: "Tres elevee",
     summary:
-      "Orchestre les investigations, deviations et CAPA afin de stabiliser les operations, reduire les recurrences et proteger la libération des lots en environnement biotech sous pression.",
+      "Orchestre les investigations, deviations et CAPA afin de stabiliser les operations, réduire les recurrences et protéger la libération des lots en environnement biotech sous pression.",
     skills: ["Root cause analysis", "Deviations", "CAPA governance", "Data trending", "Facilitation terrain"],
     successFactors: [
       "Savoir tenir la rigueur d'investigation sans bloquer la production.",
-      "Mettre fin aux recurrences (CAPA efficaces, pas juste des actions cosmetiques).",
-      "Faire converger qualite, production, MSAT et maintenance sur des decisions rapides."
+      "Mettre fin aux recurrences (CAPA efficaces, pas juste des actions cosmétiques).",
+      "Faire converger qualité, production, MSAT et maintenance sur des decisions rapides."
     ],
     path: ["QA officer", "QA operations lead", "Deviation & CAPA manager"],
     missions: [
       "Piloter le flux deviations / OOS / incidents et organiser les investigations.",
-      "Animer les comites CAPA et assurer le suivi des actions jusqu'a verification d'efficacite.",
+      "Animer les comités CAPA et assurer le suivi des actions jusqu'a verification d'efficacité.",
       "Mettre en place des analyses de tendance pour prioriser les vrais goulots d'execution."
     ],
-    studies: ["Ingenieur bioprocedes", "Master qualite", "Pharmacie", "Master genie industriel"],
-    schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "Institut Pasteur"],
+    studies: ["Ingénieur bioprocedes", "Master qualité", "Pharmacie", "Master genie industriel"],
+    schools: ["Université Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "Institut Pasteur"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -3988,26 +3988,26 @@ const strategicExtras: JobRole[] = [
     title: "Lab Automation Engineer Biotech",
     salary: "50kEUR - 82kEUR + bonus",
     salarySource:
-      "Repere indicatif pour un profil automatisation labo (robotique, liquid handling, integration data). A ajuster selon criticite (GxP), parc instruments et complexite interop.",
+      "Repère indicatif pour un profil automatisation labo (robotique, liquid handling, integration data). À ajuster selon criticite (GxP), parc instruments et complexité interop.",
     sector: "Biotech",
     category: "R&D / automation",
     shortageLevel: "Elevee",
     summary:
-      "Automatise les workflows laboratoire (robotique, liquid handling, integration data) pour accelerer la production de preuve, fiabiliser les assays et rendre la donnee exploitable.",
+      "Automatise les workflows laboratoire (robotique, liquid handling, integration data) pour accélérer la production de preuve, fiabiliser les assays et rendre la donnée exploitable.",
     skills: ["Lab automation", "Integration data", "Scripting / APIs", "Experiment design literacy", "Documentation"],
     successFactors: [
-      "Livrer des gains mesurables (throughput, qualite, reproductibilite) pas juste des demos.",
-      "Relier terrain labo, data et qualite sans frictions organisationnelles.",
-      "Documenter et maintenir les automations pour eviter la 'dette labo'."
+      "Livrer des gains mesurables (throughput, qualité, reproductibilite) pas juste des demos.",
+      "Relier terrain labo, data et qualité sans frictions organisationnelles.",
+      "Documenter et maintenir les automations pour éviter la 'dette labo'."
     ],
     path: ["Ingénieur instrumentation", "Automation engineer", "Lab automation lead"],
     missions: [
-      "Identifier les workflows prioritaires a automatiser et definir les criteres de succes.",
-      "Integrer robots, instruments et LIMS / data pipelines quand applicable.",
-      "Former les equipes et assurer la maintenance / evolution des scripts et standards."
+      "Identifier les workflows prioritaires à automatiser et définir les critères de succès.",
+      "Intégrer robots, instruments et LIMS / data pipelines quand applicable.",
+      "Former les équipes et assurer la maintenance / evolution des scripts et standards."
     ],
-    studies: ["Diplome d'ingenieur", "Master bioinformatique / data", "Master instrumentation", "Biotechnologies"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "Grenoble INP - Ensimag", "ESBS Strasbourg"],
+    studies: ["Diplôme d'ingénieur", "Master bioinformatique / data", "Master instrumentation", "Biotechnologies"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "Grenoble INP - Ensimag", "ESBS Strasbourg"],
     relatedIndustries: [
       "Biotech",
       "Digital health",
@@ -4025,26 +4025,26 @@ const strategicExtras: JobRole[] = [
     title: "GMP Training Manager Biotech",
     salary: "55kEUR - 90kEUR + bonus",
     salarySource:
-      "Repere indicatif pour un role formation GMP / compliance (training matrix, onboarding, refresh). A calibrer selon effectifs operations, exposition audit et maturite du site.",
+      "Repère indicatif pour un rôle formation GMP / compliance (training matrix, onboarding, refresh). À calibrer selon effectifs operations, exposition audit et maturité du site.",
     sector: "Biotech",
-    category: "Qualite / formation",
+    category: "Qualité / formation",
     shortageLevel: "Elevee",
     summary:
       "Structure la formation GMP (training matrix, onboarding, refresh) et rend la compliance praticable en production, QC et support, avec une logique de preuve audit.",
     skills: ["GMP training", "Training matrix", "Audit readiness", "Pedagogie", "Documentation"],
     successFactors: [
-      "Faire de la formation un levier d'execution (moins d'ecarts), pas un simple passage obligatoire.",
-      "Tenir la preuve (traçabilité) sans creer une usine a gaz.",
-      "Adapter les messages au terrain, aux shifts et aux profils multi-metiers."
+      "Faire de la formation un levier d'execution (moins d'écarts), pas un simple passage obligatoire.",
+      "Tenir la preuve (traçabilité) sans créer une usine à gaz.",
+      "Adapter les messages au terrain, aux shifts et aux profils multi-métiers."
     ],
     path: ["QA specialist", "Training coordinator", "GMP training manager"],
     missions: [
-      "Construire et maintenir la training matrix par role et par process critique.",
+      "Construire et maintenir la training matrix par rôle et par process critique.",
       "Mettre en place des modules pragmatiques (SOP, deviations, data integrity, aseptique).",
       "Assurer le suivi (completion, effectiveness checks) et la preparation audit."
     ],
-    studies: ["Master qualite", "Pharmacie", "Ingenieur", "Master RH / formation (avec exposé industrie)"],
-    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "EBI Cergy"],
+    studies: ["Master qualité", "Pharmacie", "Ingenieur", "Master RH / formation (avec exposé industrie)"],
+    schools: ["Université Paris-Saclay", "Faculté de pharmacie Strasbourg", "EBI Cergy"],
     relatedIndustries: [
       "Biotech",
       "Biopharma",
@@ -4062,12 +4062,12 @@ const strategicExtras: JobRole[] = [
     title: "Product Manager IVD (Diagnostic & Medtech)",
     salary: "65kEUR - 105kEUR + variable",
     salarySource:
-      "Repere indicatif pour un Product Manager IVD. A ajuster selon portefeuille, exposition IVDR, scope international et complexite (hardware + software + reagents).",
+      "Repère indicatif pour un Product Manager IVD. À ajuster selon portefeuille, exposition IVDR, scope international et complexité (hardware + software + reagents).",
     sector: "Diagnostic",
     category: "Produit / go-to-market",
     shortageLevel: "Tres elevee",
     summary:
-      "Pilote la roadmap produit IVD (besoins clients, evidence, pricing, documentation) et aligne R&D, regulatory, marketing et ventes pour accelerer l'adoption sans fragiliser la conformité.",
+      "Pilote la roadmap produit IVD (besoins clients, evidence, pricing, documentation) et aligne R&D, regulatory, marketing et ventes pour accélérer l'adoption sans fragiliser la conformité.",
     skills: ["Product management", "Voice of customer", "Regulatory literacy (IVDR)", "Pricing", "Cross-functional leadership"],
     successFactors: [
       "Traduire des besoins labo en decisions roadmap claires et tenables.",
@@ -4076,12 +4076,12 @@ const strategicExtras: JobRole[] = [
     ],
     path: ["Application specialist", "Product manager", "Head of product"],
     missions: [
-      "Recueillir les besoins terrain (labo, hopital, distributeurs) et formaliser les priorites produit.",
+      "Recueillir les besoins terrain (labo, hôpital, distributeurs) et formaliser les priorités produit.",
       "Coordonner launches, documentation, claims et supports de vente/formation.",
       "Suivre adoption, performance et retours incidents pour boucler la boucle produit."
     ],
-    studies: ["Ingenieur biomedical", "Pharmacie", "Master biologie / diagnostic", "Master marketing (avec base technique)"],
-    schools: ["Telecom Paris", "Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "EPITA"],
+    studies: ["Ingénieur biomedical", "Pharmacie", "Master biologie / diagnostic", "Master marketing (avec base technique)"],
+    schools: ["Telecom Paris", "Université Paris-Saclay", "Faculté de pharmacie Strasbourg", "EPITA"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -4099,7 +4099,7 @@ const strategicExtras: JobRole[] = [
     title: "Service Delivery Manager EMEA (Diagnostic & Medtech)",
     salary: "60kEUR - 100kEUR + variable",
     salarySource:
-      "Repere indicatif pour une fonction Service Delivery / Operations EMEA (support, installation, SLA). A calibrer selon footprint, complexite parc instruments et niveau multi-pays.",
+      "Repère indicatif pour une fonction Service Delivery / Operations EMEA (support, installation, SLA). À calibrer selon footprint, complexité parc instruments et niveau multi-pays.",
     sector: "Diagnostic",
     category: "Operations / service",
     shortageLevel: "Elevee",
@@ -4107,15 +4107,15 @@ const strategicExtras: JobRole[] = [
       "Garantit la performance de delivery service en EMEA (installation, support, SLA, escalade) sur des solutions diagnostic/medtech ou l'experience client conditionne le renouvellement et la reputation.",
     skills: ["Service delivery", "SLA management", "Escalation handling", "Operations metrics", "Stakeholder alignment"],
     successFactors: [
-      "Mettre sous controle les irritants (delais, pieces, planning, formation) plutot que 'courir' apres les incidents.",
-      "Aligner support, field service, IT et ventes sur une meme definition du succes client.",
-      "Piloter par les donnees (SLA, backlog, NPS) sans perdre le terrain."
+      "Mettre sous contrôle les irritants (délais, pieces, planning, formation) plutôt que 'courir' après les incidents.",
+      "Aligner support, field service, IT et ventes sur une meme definition du succès client.",
+      "Piloter par les données (SLA, backlog, NPS) sans perdre le terrain."
     ],
     path: ["Service coordinator", "Service operations manager", "Service delivery manager EMEA"],
     missions: [
       "Structurer le pilotage service (SLA, backlog, cadence d'escalade) sur les pays couverts.",
-      "Coordonner les equipes terrain et partenaires (distributeurs) sur l'installation et le support.",
-      "Contribuer a l'amelioration continue (process, pieces, formation) avec operations et produit."
+      "Coordonner les équipes terrain et partenaires (distributeurs) sur l'installation et le support.",
+      "Contribuer à l'amelioration continue (process, pieces, formation) avec operations et produit."
     ],
     studies: ["Ingenieur", "Master management industriel", "Supply chain", "Master service management"],
     schools: ["CentraleSupelec", "Telecom Paris", "EM Lyon"],
@@ -4136,25 +4136,25 @@ const strategicExtras: JobRole[] = [
     title: "Laboratory Informatics Manager (LIMS / Interop)",
     salary: "65kEUR - 110kEUR + bonus",
     salarySource:
-      "Repere indicatif pour un manager LIMS / informatics en environnement labo. A ajuster selon criticite (GxP), perimetre (LIMS + middleware + data) et niveau multi-sites.",
+      "Repère indicatif pour un manager LIMS / informatics en environnement labo. À ajuster selon criticite (GxP), périmètre (LIMS + middleware + data) et niveau multi-sites.",
     sector: "Diagnostic",
     category: "Digital / lab informatics",
     shortageLevel: "Tres elevee",
     summary:
-      "Pilote le SI laboratoire (LIMS, middleware, interfaces HL7/ASTM) afin d'assurer traçabilité, performance et securite des flux dans des environnements diagnostic/medtech fortement connectes.",
+      "Pilote le SI laboratoire (LIMS, middleware, interfaces HL7/ASTM) afin d'assurer traçabilité, performance et sécurité des flux dans des environnements diagnostic/medtech fortement connectes.",
     skills: ["LIMS", "Interoperabilite", "HL7 / ASTM", "Cyber hygiene", "Process mapping"],
     successFactors: [
-      "Eviter les integrations 'fragiles' et documenter pour rendre le systeme maintenable.",
-      "Relier exigences metier (labo) et contraintes IT sans decrochage.",
-      "Tenir ensemble performance, traçabilité et securite."
+      "Éviter les integrations 'fragiles' et documenter pour rendre le système maintenable.",
+      "Relier exigences métier (labo) et contraintes IT sans décrochage.",
+      "Tenir ensemble performance, traçabilité et sécurité."
     ],
     path: ["LIMS analyst", "LIMS administrator", "Laboratory informatics manager"],
     missions: [
       "Gouverner le cycle de vie LIMS/middleware (changes, releases, incidents).",
-      "Fiabiliser les interfaces et la qualite des donnees (mapping, logs, monitoring).",
-      "Coordonner IT, labo et fournisseurs sur priorites, roadmap et securite."
+      "Fiabiliser les interfaces et la qualité des données (mapping, logs, monitoring).",
+      "Coordonner IT, labo et fournisseurs sur priorités, roadmap et sécurité."
     ],
-    studies: ["Ingenieur informatique", "Master informatique sante", "Bioinformatique", "Master systemes d'information"],
+    studies: ["Ingénieur informatique", "Master informatique santé", "Bioinformatique", "Master systèmes d'information"],
     schools: ["Telecom Paris", "EPITA", "Grenoble INP - Ensimag"],
     relatedIndustries: [
       "Diagnostic",
@@ -4173,26 +4173,26 @@ const strategicExtras: JobRole[] = [
     title: "UDI & Labelling Specialist IVDR (IVD)",
     salary: "55kEUR - 90kEUR + bonus",
     salarySource:
-      "Repere indicatif pour un specialiste UDI/labeling en medtech/IVD. A calibrer selon volume references, geographies et maturite IVDR.",
+      "Repère indicatif pour un spécialiste UDI/labeling en medtech/IVD. À calibrer selon volume references, geographies et maturité IVDR.",
     sector: "Diagnostic",
-    category: "Reglementaire / quality",
+    category: "Réglementaire / quality",
     shortageLevel: "Elevee",
     summary:
-      "Securise UDI, etiquetage et claims en environnement IVDR, en lien avec regulatory, quality et operations, afin d'eviter des retards go-to-market et des non-conformites critiques.",
+      "Sécurise UDI, étiquetage et claims en environnement IVDR, en lien avec regulatory, quality et operations, afin d'éviter des retards go-to-market et des non-conformites critiques.",
     skills: ["UDI / labeling", "IVDR literacy", "Document control", "Change management", "Cross-functional coordination"],
     successFactors: [
-      "Tenir un systeme de documentation robuste et scalable.",
-      "Eviter les changements tardifs qui cassent la supply chain et les kits.",
-      "Etre capable d'expliquer les exigences aux equipes non-regulatory."
+      "Tenir un système de documentation robuste et scalable.",
+      "Éviter les changements tardifs qui cassent la supply chain et les kits.",
+      "Être capable d'expliquer les exigences aux équipes non-regulatory."
     ],
     path: ["Regulatory specialist", "Labeling specialist", "UDI & labeling lead"],
     missions: [
-      "Piloter les exigences UDI et etiquetage (formats, langues, claims) pour les produits IVD.",
+      "Piloter les exigences UDI et étiquetage (formats, langues, claims) pour les produits IVD.",
       "Coordonner les changes (packaging, IFU, fiches techniques) avec quality et supply.",
-      "Mettre en place des controles et rituels pour reduire les erreurs et accelerer les releases."
+      "Mettre en place des contrôles et rituels pour réduire les erreurs et accélérer les releases."
     ],
-    studies: ["Master affaires reglementaires", "Pharmacie", "Ingenieur biomedical", "Qualite"],
-    schools: ["Faculte de pharmacie Strasbourg", "Universite Paris-Saclay", "Telecom Paris"],
+    studies: ["Master affaires réglementaires", "Pharmacie", "Ingénieur biomedical", "Qualite"],
+    schools: ["Faculté de pharmacie Strasbourg", "Université Paris-Saclay", "Telecom Paris"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -4210,16 +4210,16 @@ const strategicExtras: JobRole[] = [
     title: "Key Account Manager EMEA (Distributeurs) Santé Animale",
     salary: "60kEUR - 105kEUR + variable",
     salarySource:
-      "Repere indicatif pour un KAM/channel manager oriente distributeurs en sante animale. A ajuster selon couverture EMEA, portefeuille produits et maturite channel.",
+      "Repère indicatif pour un KAM/channel manager oriente distributeurs en santé animale. À ajuster selon couverture EMEA, portefeuille produits et maturité channel.",
     sector: "Medical Vet",
     category: "Commercial / channel",
     shortageLevel: "Elevee",
     summary:
-      "Pilote la performance des distributeurs (sell-in/sell-out, plans d'activation, formation) sur un perimetre EMEA en sante animale, avec un enjeu critique de cohérence d'execution multi-pays.",
+      "Pilote la performance des distributeurs (sell-in/sell-out, plans d'activation, formation) sur un périmètre EMEA en santé animale, avec un enjeu critique de cohérence d'execution multi-pays.",
     skills: ["Channel management", "KAM", "Distributor enablement", "Negotiation", "Forecast / demand"],
     successFactors: [
-      "Savoir activer des partenaires sans perdre la maitrise du message ni des priorites.",
-      "Aligner pricing, supply et activations pour eviter les ruptures et l'erosion de marge.",
+      "Savoir activer des partenaires sans perdre la maîtrise du message ni des priorités.",
+      "Aligner pricing, supply et activations pour éviter les ruptures et l'erosion de marge.",
       "Construire une discipline de pilotage (KPIs) sans micro-management."
     ],
     path: ["Sales representative", "Key account manager", "Channel / distributor lead"],
@@ -4228,12 +4228,12 @@ const strategicExtras: JobRole[] = [
       "Assurer la formation et l'alignement produit/medical selon les pays et gammes.",
       "Coordonner supply, marketing et service client pour tenir la promesse terrain."
     ],
-    studies: ["Ecole de commerce", "Master sante animale", "Veterinaire avec orientation business", "Management"],
+    studies: ["École de commerce", "Master santé animale", "Vétérinaire avec orientation business", "Management"],
     schools: ["Audencia", "EM Lyon", "ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen"],
     relatedIndustries: [
       "Medical Vet",
       "Vet pharma",
-      "Vaccins veterinaires",
+      "Vaccins vétérinaires",
       "Distribution",
       "EMEA"
     ],
@@ -4247,31 +4247,31 @@ const strategicExtras: JobRole[] = [
     title: "Veterinary Services Strategy Manager (Groupes & Réseaux)",
     salary: "65kEUR - 115kEUR + bonus",
     salarySource:
-      "Repere indicatif pour une fonction strategie/operations a l'interface cliniques, services et partenaires. A ajuster selon taille du reseau, multi-sites et exposition P&L.",
+      "Repère indicatif pour une fonction stratégie/operations à l'interface cliniques, services et partenaires. À ajuster selon taille du réseau, multi-sites et exposition P&L.",
     sector: "Medical Vet",
     category: "Strategy / services",
     shortageLevel: "Elevee",
     summary:
-      "Structure des offres de services (qualite clinique, parcours, telemedecine, formation) pour des réseaux vétérinaires ou partenaires sante animale, afin d'augmenter la performance sans degrader l'experience praticien.",
+      "Structure des offres de services (qualité clinique, parcours, telemedecine, formation) pour des réseaux vétérinaires ou partenaires santé animale, afin d'augmenter la performance sans degrader l'experience praticien.",
     skills: ["Operations strategy", "Service design", "Change management", "Clinical literacy", "Stakeholder alignment"],
     successFactors: [
       "Traduire des objectifs business en routines utiles pour les cliniques.",
-      "Eviter la 'sur-organisation' qui detruit l'adhesion terrain.",
+      "Éviter la 'sur-organisation' qui détruit l'adhesion terrain.",
       "Construire une feuille de route priorisee et mesurable (impact, adoption)."
     ],
     path: ["Operations manager", "Clinic performance lead", "Veterinary services strategy manager"],
     missions: [
-      "Identifier les leviers a fort impact (parcours client, qualite, scheduling, equipements).",
+      "Identifier les leviers à fort impact (parcours client, qualité, scheduling, équipements).",
       "Mettre en place des standards et outils (playbooks, rituels, KPIs) avec les directeurs de sites.",
-      "Coordonner partenaires (pet insurance, referes, telemedecine) pour enrichir l'offre."
+      "Coordonner partenaires (pet insurance, référés, telemedecine) pour enrichir l'offre."
     ],
-    studies: ["Ecole veterinaire", "Ecole de commerce", "Master management sante", "MBA (option healthcare)"],
+    studies: ["École vétérinaire", "École de commerce", "Master management santé", "MBA (option healthcare)"],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "EM Lyon", "ESSEC"],
     relatedIndustries: [
       "Medical Vet",
       "Veterinary",
       "Groupes de cliniques",
-      "Services veterinaires",
+      "Services vétérinaires",
       "Telemedecine vet"
     ],
     sources: [
@@ -4284,30 +4284,30 @@ const strategicExtras: JobRole[] = [
     title: "Vétérinaire Urgences & Soins Intensifs (ECC)",
     salary: "55kEUR - 110kEUR + gardes",
     salarySource:
-      "Repere indicatif selon niveau (clinique generaliste vs centre refere) et intensite des gardes. La penurie se renforce avec la croissance des reseaux et l'exigence de continuité de service.",
+      "Repère indicatif selon niveau (clinique généraliste vs centre référé) et intensité des gardes. La pénurie se renforce avec la croissance des réseaux et l'exigence de continuité de service.",
     sector: "Veterinary",
-    category: "Clinique specialisee",
+    category: "Clinique spécialisée",
     shortageLevel: "Tres elevee",
     summary:
-      "Prend en charge les cas critiques (urgence, hospitalisation, stabilisation) et structure les protocoles ECC dans des centres veterinaires ou hopitaux ou la continuité de soins est un enjeu majeur.",
+      "Prend en charge les cas critiques (urgence, hospitalisation, stabilisation) et structure les protocoles ECC dans des centres vétérinaires ou hôpitaux ou la continuité de soins est un enjeu majeur.",
     skills: ["Triage & stabilization", "Critical care protocols", "Team coordination", "Client communication", "Stress management"],
     successFactors: [
-      "Tenir la qualite clinique sous pression et standardiser les routines critiques.",
-      "Travailler en equipe (ASV, autres specialites) avec une communication sans friction.",
-      "Savoir expliquer vite et bien des decisions difficiles aux proprietaires."
+      "Tenir la qualité clinique sous pression et standardiser les routines critiques.",
+      "Travailler en équipe (ASV, autres spécialités) avec une communication sans friction.",
+      "Savoir expliquer vite et bien des decisions difficiles aux propriétaires."
     ],
     path: ["Vétérinaire praticien", "Urgentiste / ECC", "Responsable ECC / medical lead"],
     missions: [
       "Assurer le triage, la stabilisation et la prise en charge des urgences.",
-      "Piloter l'hospitalisation et coordonner les examens / specialites selon priorites.",
-      "Contribuer a la formation et a la standardisation des protocoles d'urgence."
+      "Piloter l'hospitalisation et coordonner les examens / spécialités selon priorités.",
+      "Contribuer à la formation et à la standardisation des protocoles d'urgence."
     ],
-    studies: ["Diplome veterinaire", "Residency / formation ECC", "Formations continues urgences / reanimation"],
+    studies: ["Diplôme vétérinaire", "Residency / formation ECC", "Formations continues urgences / reanimation"],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
     relatedIndustries: [
       "Veterinary",
       "Groupes de cliniques",
-      "Services veterinaires de specialite",
+      "Services vétérinaires de spécialité",
       "Diagnostic vet",
       "Pet insurance"
     ],
@@ -4320,30 +4320,30 @@ const strategicExtras: JobRole[] = [
     title: "Vétérinaire Anesthésiste / Analgésie",
     salary: "55kEUR - 115kEUR + gardes",
     salarySource:
-      "Repere indicatif selon niveau (centre refere), volume chirurgie et organisation des gardes. La rarete est forte sur les profils capables de standardiser les protocoles et de former les equipes.",
+      "Repère indicatif selon niveau (centre référé), volume chirurgie et organisation des gardes. La rareté est forte sur les profils capables de standardiser les protocoles et de former les équipes.",
     sector: "Veterinary",
-    category: "Clinique specialisee",
+    category: "Clinique spécialisée",
     shortageLevel: "Tres elevee",
     summary:
-      "Securise l'anesthesie et l'analgesie sur des actes complexes, forme les equipes et met sous controle les risques peri-operatoires dans des centres veterinaires de reference.",
+      "Sécurise l'anesthésie et l'analgésie sur des actes complexes, forme les équipes et met sous contrôle les risques peri-opératoires dans des centres vétérinaires de reference.",
     skills: ["Anesthesia protocols", "Pain management", "Monitoring", "Team training", "Risk management"],
     successFactors: [
       "Standardiser sans rigidifier : protocoles clairs, adaptables et auditable en interne.",
-      "Former et rassurer les equipes chirurgicales et ASV.",
-      "Travailler au plus pres du terrain pour reduire les complications et la variabilite."
+      "Former et rassurer les équipes chirurgicales et ASV.",
+      "Travailler au plus pres du terrain pour réduire les complications et la variabilité."
     ],
-    path: ["Vétérinaire praticien", "Anesthesie / analgesie", "Responsable anesthesie"],
+    path: ["Vétérinaire praticien", "Anesthésie / analgésie", "Responsable anesthésie"],
     missions: [
-      "Evaluer le risque anesthesique et definir les protocoles par typologie de cas.",
-      "Assurer le monitoring et la gestion douleur peri-operatoire.",
-      "Former les equipes et mettre en place des rituels de retour d'experience."
+      "Évaluer le risque anesthésique et définir les protocoles par typologie de cas.",
+      "Assurer le monitoring et la gestion douleur peri-opératoire.",
+      "Former les équipes et mettre en place des rituels de retour d'experience."
     ],
-    studies: ["Diplome veterinaire", "Formation specialisee anesthesie", "Formations continues anesthesie / douleur"],
+    studies: ["Diplôme vétérinaire", "Formation spécialisée anesthésie", "Formations continues anesthésie / douleur"],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
     relatedIndustries: [
       "Veterinary",
       "Groupes de cliniques",
-      "Services veterinaires de specialite",
+      "Services vétérinaires de spécialité",
       "Diagnostic vet",
       "Telemedecine vet"
     ],
@@ -4356,32 +4356,32 @@ const strategicExtras: JobRole[] = [
     title: "Vétérinaire Pathologiste Clinique (Lab)",
     salary: "55kEUR - 110kEUR",
     salarySource:
-      "Repere indicatif selon niveau d'expertise (specialiste) et exposition (labo de reference vs reseau). La penurie est liee au besoin croissant d'interpretation et de qualite diagnostic.",
+      "Repère indicatif selon niveau d'expertise (spécialiste) et exposition (labo de reference vs réseau). La pénurie est liée au besoin croissant d'interpretation et de qualité diagnostic.",
     sector: "Veterinary",
     category: "Diagnostic / laboratoire",
     shortageLevel: "Elevee",
     summary:
-      "Interprete les resultats biologiques, structure les routines qualite et conseille les cliniciens pour accelerer les decisions medicales sur des parcours de soins de plus en plus outilles et data-driven.",
+      "Interprète les résultats biologiques, structure les routines qualité et conseille les cliniciens pour accélérer les decisions médicales sur des parcours de soins de plus en plus outillés et data-driven.",
     skills: ["Clinical pathology", "Interpretation", "Quality mindset", "Communication cliniciens", "Data literacy"],
     successFactors: [
-      "Transformer des resultats en decisions cliniques actionnables.",
-      "Fiabiliser la qualite labo (pre-analytique, analytique, post-analytique) avec pragmatisme.",
+      "Transformer des résultats en decisions cliniques actionnables.",
+      "Fiabiliser la qualité labo (pré-analytique, analytique, post-analytique) avec pragmatisme.",
       "Collaborer avec les cliniciens sans jargon inutile."
     ],
     path: ["Vétérinaire praticien", "Clinique / labo", "Pathologiste clinique / responsable plateau"],
     missions: [
-      "Interpréter les examens (hematologie, biochimie, coagulation) et conseiller les cliniciens.",
-      "Participer a la validation des methodes, controles qualite et investigations anomalies.",
-      "Contribuer a la formation et a la standardisation des comptes rendus."
+      "Interpréter les examens (hématologie, biochimie, coagulation) et conseiller les cliniciens.",
+      "Participer à la validation des méthodes, contrôles qualité et investigations anomalies.",
+      "Contribuer à la formation et à la standardisation des comptes rendus."
     ],
-    studies: ["Diplome veterinaire", "Formation clinique / biologie", "Specialisation pathologie clinique (si applicable)"],
+    studies: ["Diplôme vétérinaire", "Formation clinique / biologie", "Spécialisation pathologie clinique (si applicable)"],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "ENVA"],
     relatedIndustries: [
       "Veterinary",
-      "Diagnostic veterinaire",
+      "Diagnostic vétérinaire",
       "Laboratoires d'analyses",
       "Telemedecine vet",
-      "Services veterinaires de specialite"
+      "Services vétérinaires de spécialité"
     ],
     sources: [
       { name: "Ordre national des vétérinaires", url: "https://www.veterinaire.fr/" }
@@ -4392,25 +4392,25 @@ const strategicExtras: JobRole[] = [
     title: "Sensory Science Manager Petfood",
     salary: "55kEUR - 95kEUR + bonus",
     salarySource:
-      "Repere indicatif pour un role sensoriel/palatabilite senior. A ajuster selon portefeuille, ressources R&D et niveau d'internalisation des panels / tests.",
+      "Repère indicatif pour un rôle sensoriel/palatabilite senior. À ajuster selon portefeuille, ressources R&D et niveau d'internalisation des panels / tests.",
     sector: "Petfood",
     category: "R&D / sensory & palatability",
     shortageLevel: "Elevee",
     summary:
-      "Pilote les tests sensoriels et la strategie palatabilite pour aligner formulation, qualité et performance produit sur un marche petfood premiumise ou l'experience animal/proprietaire est decisive.",
+      "Pilote les tests sensoriels et la stratégie palatabilite pour aligner formulation, qualité et performance produit sur un marché petfood premiumise ou l'experience animal/propriétaire est decisive.",
     skills: ["Sensory science", "Panel / testing design", "Data analysis", "Cross-functional R&D", "Product strategy"],
     successFactors: [
-      "Relier les tests a des decisions formulation claires, pas juste des rapports.",
-      "Standardiser les methodes pour comparer les lots et les innovations dans le temps.",
-      "Travailler avec qualite et production pour stabiliser la variabilite."
+      "Relier les tests à des decisions formulation claires, pas juste des rapports.",
+      "Standardiser les méthodes pour comparer les lots et les innovations dans le temps.",
+      "Travailler avec qualité et production pour stabiliser la variabilité."
     ],
     path: ["R&D scientist", "Sensory lead", "Sensory science manager"],
     missions: [
-      "Definir les protocoles de tests (panels, home-use, preference) et la gouvernance des donnees.",
-      "Collaborer avec formulation, qualite et production sur l'amelioration continue.",
-      "Cadrer les objectifs palatabilite par segment (chiens/chats, premium, therapeutique)."
+      "Définir les protocoles de tests (panels, home-use, preference) et la gouvernance des données.",
+      "Collaborer avec formulation, qualité et production sur l'amelioration continue.",
+      "Cadrer les objectifs palatabilite par segment (chiens/chats, premium, thérapeutique)."
     ],
-    studies: ["Ingenieur agroalimentaire", "Master sciences sensorielles", "Nutrition", "Statistiques appliquees"],
+    studies: ["Ingénieur agroalimentaire", "Master sciences sensorielles", "Nutrition", "Statistiques appliquées"],
     schools: ["Institut Agro Montpellier", "AgroParisTech", "ENSAIA", "Sciences Agro Bordeaux"],
     relatedIndustries: [
       "Petfood",
@@ -4429,25 +4429,25 @@ const strategicExtras: JobRole[] = [
     title: "Regulatory & Compliance Lead Petfood",
     salary: "55kEUR - 95kEUR",
     salarySource:
-      "Repere indicatif pour un role compliance/regulatory petfood. A calibrer selon geographies, complexite matieres premieres et exigences claims / nutrition.",
+      "Repère indicatif pour un rôle compliance/regulatory petfood. À calibrer selon geographies, complexité matières premieres et exigences claims / nutrition.",
     sector: "Petfood",
-    category: "Compliance / qualite",
+    category: "Compliance / qualité",
     shortageLevel: "Elevee",
     summary:
-      "Securise la conformite des produits petfood (ingredients, etiquetage, claims, export) et structure la documentation utile pour accelerer lancements et audits sans fragiliser la supply chain.",
+      "Sécurise la conformité des produits petfood (ingredients, étiquetage, claims, export) et structure la documentation utile pour accélérer lancements et audits sans fragiliser la supply chain.",
     skills: ["Regulatory literacy", "Labeling / claims", "Risk assessment", "Document control", "Cross-border mindset"],
     successFactors: [
-      "Eviter les blocages tardifs (packaging, claims) en cadrant tres tot les risques.",
+      "Éviter les blocages tardifs (packaging, claims) en cadrant très tot les risques.",
       "Rendre la compliance compatible avec la vitesse go-to-market.",
-      "Travailler avec achats/qualite pour tenir les exigences sur les ingredients."
+      "Travailler avec achats/qualité pour tenir les exigences sur les ingredients."
     ],
     path: ["Quality specialist", "Regulatory specialist", "Regulatory & compliance lead"],
     missions: [
-      "Verifier ingredients, claims et etiquetage selon les marches cibles.",
+      "Verifier ingredients, claims et étiquetage selon les marchés cibles.",
       "Structurer les dossiers (specs, preuves, validations) et la gouvernance des changes.",
-      "Accompagner export, supply et marketing sur les arbitrages conformite."
+      "Accompagner export, supply et marketing sur les arbitrages conformité."
     ],
-    studies: ["Ingenieur agroalimentaire", "Master qualite", "Master affaires reglementaires", "Nutrition"],
+    studies: ["Ingénieur agroalimentaire", "Master qualité", "Master affaires réglementaires", "Nutrition"],
     schools: ["AgroParisTech", "Institut Agro Dijon", "Institut Agro Montpellier"],
     relatedIndustries: [
       "Petfood",
@@ -4466,25 +4466,25 @@ const strategicExtras: JobRole[] = [
     title: "Senior Supply Chain Planner Petfood",
     salary: "50kEUR - 85kEUR + bonus",
     salarySource:
-      "Repere indicatif pour un planner senior. A ajuster selon volatilite ingredients, complexite multi-usines et exigences service client (OTIF).",
+      "Repère indicatif pour un planner senior. À ajuster selon volatilité ingredients, complexité multi-usines et exigences service client (OTIF).",
     sector: "Petfood",
     category: "Supply chain",
     shortageLevel: "Elevee",
     summary:
-      "Pilote la planification (S&OP, capacites, stocks) sur des industriels petfood soumis a forte volatilite matieres, contraintes qualite et exigences de service, afin d'eviter ruptures et surstocks.",
+      "Pilote la planification (S&OP, capacités, stocks) sur des industriels petfood soumis à forte volatilité matières, contraintes qualité et exigences de service, afin d'éviter ruptures et surstocks.",
     skills: ["S&OP", "Demand planning", "Inventory management", "Scenario planning", "Supplier coordination"],
     successFactors: [
-      "Construire des scenarios clairs plutot que subir les urgences.",
-      "Arbitrer entre service, cout et qualite avec des decisions explicites.",
+      "Construire des scenarios clairs plutôt que subir les urgences.",
+      "Arbitrer entre service, coût et qualité avec des decisions explicites.",
       "Aligner achats, production et service client sur un plan unique."
     ],
     path: ["Supply chain analyst", "Planner", "Senior supply chain planner"],
     missions: [
-      "Construire le plan de production et les parametres stocks par gamme et site.",
-      "Animer les routines S&OP (demande, capacite, contraintes ingredients).",
-      "Mettre sous controle les ruptures (plans d'action, alternatives, priorites clients)."
+      "Construire le plan de production et les paramètres stocks par gamme et site.",
+      "Animer les routines S&OP (demande, capacité, contraintes ingredients).",
+      "Mettre sous contrôle les ruptures (plans d'action, alternatives, priorités clients)."
     ],
-    studies: ["Supply chain", "Ingenieur industriel", "Ecole de commerce", "Master logistique"],
+    studies: ["Supply chain", "Ingénieur industriel", "École de commerce", "Master logistique"],
     schools: ["Institut Agro Dijon", "AgroParisTech", "EM Lyon"],
     relatedIndustries: [
       "Petfood",
@@ -4501,30 +4501,30 @@ const strategicExtras: JobRole[] = [
   {
     slug: "cosmetique-qa-compliance-manager",
     title: "QA Compliance Manager Cosmétique",
-    seoTitle: "QA Compliance Manager Cosmetique : salaire 55-90 K€ | SKS",
+    seoTitle: "QA Compliance Manager Cosmétique : salaire 55-90 K€ | SKS",
     seoDescription:
-      "Fiche metier QA Compliance Manager Cosmetique : deviations, CAPA, audits, change control, salaire 55-90 K€, formations. Benchmark 2026 SKS TALENTS.",
+      "Fiche métier QA Compliance Manager Cosmétique : deviations, CAPA, audits, change control, salaire 55-90 K€, formations. Benchmark 2026 SKS TALENTS.",
     salary: "55kEUR - 90kEUR",
     salarySource:
-      "Repere indicatif pour un QA compliance manager (deviation/CAPA, audits, change). A calibrer selon sites, sous-traitance et exigences export.",
+      "Repère indicatif pour un QA compliance manager (deviation/CAPA, audits, change). À calibrer selon sites, sous-traitance et exigences export.",
     sector: "Cosmetique",
-    category: "Assurance qualite",
+    category: "Assurance qualité",
     shortageLevel: "Elevee",
     summary:
-      "Securise la conformite qualite des operations cosmetiques (process, deviations, CAPA, audits, change control) afin d'accelerer les lancements sans fragiliser la robustesse industrielle.",
+      "Sécurise la conformité qualité des operations cosmétiques (process, deviations, CAPA, audits, change control) afin d'accélérer les lancements sans fragiliser la robustesse industrielle.",
     skills: ["QA compliance", "Audit readiness", "CAPA", "Supplier quality", "Documentation"],
     successFactors: [
-      "Faire vivre la qualite sur le terrain plutot que dans des fichiers.",
-      "Savoir piloter des partenaires/CMO sans perdre la maitrise du standard.",
-      "Tenir l'equilibre vitesse de lancement / robustesse qualite."
+      "Faire vivre la qualité sur le terrain plutôt que dans des fichiers.",
+      "Savoir piloter des partenaires/CMO sans perdre la maîtrise du standard.",
+      "Tenir l'équilibre vitesse de lancement / robustesse qualité."
     ],
     path: ["QA specialist", "QA compliance lead", "QA compliance manager"],
     missions: [
-      "Piloter les deviations, CAPA et changes pour maintenir la stabilite d'execution.",
+      "Piloter les deviations, CAPA et changes pour maintenir la stabilité d'execution.",
       "Preparer et conduire audits internes/externes (sites, sous-traitants).",
-      "Structurer la documentation qualite (SOP, templates, rituels) utile au terrain."
+      "Structurer la documentation qualité (SOP, templates, rituels) utile au terrain."
     ],
-    studies: ["Master qualite", "Chimie", "Pharmacie", "Ingenieur"],
+    studies: ["Master qualité", "Chimie", "Pharmacie", "Ingenieur"],
     schools: ["ISIPCA", "Chimie ParisTech", "ICAP Montpellier", "ESCOM Compiegne"],
     relatedIndustries: [
       "Cosmetique",
@@ -4540,30 +4540,30 @@ const strategicExtras: JobRole[] = [
   {
     slug: "cosmetique-qhse-manager",
     title: "Responsable QHSE Cosmétique (Production)",
-    seoTitle: "Responsable Production Cosmetique / QHSE : 50-85 K€ | SKS",
+    seoTitle: "Responsable Production Cosmétique / QHSE : 50-85 K€ | SKS",
     seoDescription:
-      "Fiche metier Responsable Production Cosmetique (QHSE) : securite usine, standards terrain, salaire 50-85 K€, formations et parcours. Benchmark 2026 SKS TALENTS.",
+      "Fiche métier Responsable Production Cosmétique (QHSE) : sécurité usine, standards terrain, salaire 50-85 K€, formations et parcours. Benchmark 2026 SKS TALENTS.",
     salary: "50kEUR - 85kEUR",
     salarySource:
-      "Repere indicatif pour un responsable QHSE en environnement industriel. A ajuster selon taille usine, risques (chimie, solvants) et exposition audits / clients.",
+      "Repère indicatif pour un responsable QHSE en environnement industriel. À ajuster selon taille usine, risques (chimie, solvants) et exposition audits / clients.",
     sector: "Cosmetique",
     category: "QHSE / production",
     shortageLevel: "Moderee",
     summary:
-      "Pilote la securite, l'hygiene et l'environnement en usine cosmetique, structure les standards terrain et reduit les incidents tout en accompagnant la performance industrielle et la conformite.",
+      "Pilote la sécurité, l'hygiene et l'environnement en usine cosmétique, structure les standards terrain et réduit les incidents tout en accompagnant la performance industrielle et la conformité.",
     skills: ["HSE management", "Risk analysis", "Industrial culture", "Training", "Continuous improvement"],
     successFactors: [
-      "Etre present sur le terrain pour faire vivre les standards (pas seulement ecrire).",
+      "Être present sur le terrain pour faire vivre les standards (pas seulement écrire).",
       "Prioriser les risques concrets et mesurer les effets des actions.",
-      "Travailler avec production et qualite sans opposition sterile."
+      "Travailler avec production et qualité sans opposition sterile."
     ],
     path: ["HSE specialist", "QHSE manager", "QHSE lead multi-sites"],
     missions: [
-      "Evaluer les risques et deployer les plans d'action securite/environnement.",
+      "Évaluer les risques et déployer les plans d'action sécurité/environnement.",
       "Animer la formation et les routines terrain (audits, causeries, retours d'incidents).",
-      "Contribuer a la conformité et a l'amelioration continue en production."
+      "Contribuer à la conformité et à l'amelioration continue en production."
     ],
-    studies: ["Ingenieur HSE", "Master QHSE", "Chimie / genie industriel", "Master environnement"],
+    studies: ["Ingénieur HSE", "Master QHSE", "Chimie / genie industriel", "Master environnement"],
     schools: ["Chimie ParisTech", "ESCOM Compiegne", "ISIPCA"],
     relatedIndustries: [
       "Cosmetique",
@@ -4581,25 +4581,25 @@ const strategicExtras: JobRole[] = [
     title: "Chief Information Security Officer (CISO) Life Sciences",
     salary: "110kEUR - 180kEUR + bonus",
     salarySource:
-      "Repere indicatif pour une fonction CISO/Head of Security. A calibrer selon taille, exposition internationale, contraintes (GxP, data sante) et niveau de transformation cloud/IoT.",
+      "Repère indicatif pour une fonction CISO/Head of Security. À calibrer selon taille, exposition internationale, contraintes (GxP, data santé) et niveau de transformation cloud/IoT.",
     sector: "Cross-sector",
     category: "Executive / cybersecurity",
     shortageLevel: "Tres elevee",
     summary:
-      "Definit la strategie cyber (risk, IAM, resilience, gouvernance) et rend la securite compatible avec l'execution (labo, production, terrain) dans des organisations life sciences ou la confiance et la continuité sont critiques.",
+      "Définit la stratégie cyber (risk, IAM, resilience, gouvernance) et rend la sécurité compatible avec l'execution (labo, production, terrain) dans des organisations life sciences ou la confiance et la continuité sont critiques.",
     skills: ["Security strategy", "Risk governance", "IAM", "Incident response", "Stakeholder influence"],
     successFactors: [
-      "Prioriser les risques majeurs plutot que multiplier les controles inutiles.",
-      "Faire adopter la securite par les metiers sans casser la vitesse d'execution.",
-      "Mettre sous controle les incidents via preparation, exercices et rituels."
+      "Prioriser les risques majeurs plutôt que multiplier les contrôles inutiles.",
+      "Faire adopter la sécurité par les métiers sans casser la vitesse d'execution.",
+      "Mettre sous contrôle les incidents via preparation, exercices et rituels."
     ],
     path: ["Security manager", "Head of security", "CISO"],
     missions: [
-      "Construire et piloter la strategie cyber (policies, roadmap, budget, KPIs).",
-      "Mettre sous controle les risques cloud, data, OT et fournisseurs (tiers).",
-      "Orchestrer la reponse a incident et la gouvernance (comex, audits, compliance)."
+      "Construire et piloter la stratégie cyber (policies, roadmap, budget, KPIs).",
+      "Mettre sous contrôle les risques cloud, data, OT et fournisseurs (tiers).",
+      "Orchestrer la réponse à incident et la gouvernance (comex, audits, compliance)."
     ],
-    studies: ["Ingenieur informatique", "Master cybersecurite", "Master systemes d'information", "MBA (option leadership)"],
+    studies: ["Ingénieur informatique", "Master cybersecurite", "Master systèmes d'information", "MBA (option leadership)"],
     schools: ["Telecom Paris", "EPITA", "CentraleSupelec", "ESSEC"],
     relatedIndustries: [
       "Life Sciences",
@@ -4619,9 +4619,9 @@ const nuclearMedicineRoles: JobRole[] = [
   {
     slug: "diagnostic-nuclear-medicine-business-unit-director",
     title: "Business Unit Director Médecine Nucléaire",
-    seoTitle: "Business Unit Director Medecine Nucleaire : 110-165 K€ | SKS TALENTS",
+    seoTitle: "Business Unit Director Médecine Nucléaire : 110-165 K€ | SKS TALENTS",
     seoDescription:
-      "Fiche metier Business Unit Director Medecine Nucleaire : radiopharmacie, TEP, PMSI, salaire 110-165 K€ + variable. Benchmark medecine nucleaire 2026 SKS TALENTS.",
+      "Fiche métier Business Unit Director Médecine Nucléaire : radiopharmacie, TEP, PMSI, salaire 110-165 K€ + variable. Benchmark médecine nucléaire 2026 SKS TALENTS.",
     publishDate: may2026EditorialBatchDate,
     salary: "110kEUR - 165kEUR + variable",
     sector: "Diagnostic",
@@ -4850,7 +4850,7 @@ const may2026RoleBatch: JobRole[] = [
       "Mettre en place la gouvernance : règles de données, rôles, évolutions et amélioration continue."
     ],
     studies: ["Ingénieur", "Master bioinformatique / data", "Master systèmes d'information"],
-    schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
+    schools: ["Université Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
     relatedIndustries: [
       "Biotech",
       "Laboratoires",
@@ -4881,7 +4881,7 @@ const may2026RoleBatch: JobRole[] = [
       "Outiller l'organisation (templates, standards, formation) pour accélérer les projets digitaux."
     ],
     studies: ["Ingénieur", "Master qualité", "Master systèmes d'information"],
-    schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
+    schools: ["Université Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
     relatedIndustries: [
       "Biotech",
       "GxP",
@@ -4912,7 +4912,7 @@ const may2026RoleBatch: JobRole[] = [
       "Préparer le transfert et l'industrialisation : documentation, comparabilité, handover."
     ],
     studies: ["Master bioprocédés", "Ingénieur biotech", "Doctorat sciences de la vie"],
-    schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
+    schools: ["Université Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
     relatedIndustries: [
       "Biotech",
       "Bioproduction",
@@ -4943,7 +4943,7 @@ const may2026RoleBatch: JobRole[] = [
       "Préparer le transfert : batch records, paramètres critiques, troubleshooting et formation."
     ],
     studies: ["Master bioprocédés", "Ingénieur biotech", "Doctorat sciences de la vie"],
-    schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
+    schools: ["Université Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
     relatedIndustries: [
       "Biotech",
       "Bioproduction",
@@ -4974,7 +4974,7 @@ const may2026RoleBatch: JobRole[] = [
       "Assurer la conformité GMP et la préparation aux audits sur le périmètre microbio."
     ],
     studies: ["Master microbiologie", "Ingénieur biotech", "Master qualité"],
-    schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
+    schools: ["Université Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
     relatedIndustries: [
       "Biotech",
       "Sterility assurance",
@@ -5005,7 +5005,7 @@ const may2026RoleBatch: JobRole[] = [
       "Former et accompagner les équipes production/QC/QA pour tenir le niveau attendu."
     ],
     studies: ["Ingénieur biotech", "Master qualité pharma", "Master microbiologie"],
-    schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
+    schools: ["Université Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
     relatedIndustries: [
       "Biotech",
       "Aseptic manufacturing",
@@ -5036,7 +5036,7 @@ const may2026RoleBatch: JobRole[] = [
       "Résoudre les incidents : investigations, mitigation, documentation et prévention."
     ],
     studies: ["Ingénieur biotech", "Master bioprocédés", "Ingénieur procédés"],
-    schools: ["Universite Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
+    schools: ["Université Paris-Saclay", "ESBS Strasbourg", "EBI Cergy", "AgroParisTech", "Institut Pasteur"],
     relatedIndustries: [
       "Biotech",
       "Bioproduction",
@@ -5067,7 +5067,7 @@ const may2026RoleBatch: JobRole[] = [
       "Contribuer aux audits et à la gestion des changements sur les systèmes industriels."
     ],
     studies: ["Ingénieur informatique", "Master cybersecurite", "Ingénieur automatisme avec spécialisation"],
-    schools: ["Universite Paris-Saclay", "Telecom Paris", "EPITA", "Grenoble INP - Ensimag"],
+    schools: ["Université Paris-Saclay", "Telecom Paris", "EPITA", "Grenoble INP - Ensimag"],
     relatedIndustries: [
       "Biotech",
       "GMP manufacturing",
@@ -5098,7 +5098,7 @@ const may2026RoleBatch: JobRole[] = [
       "Documenter et industrialiser : CI, gestion versions, et support post-release."
     ],
     studies: ["Ingénieur logiciel", "Master informatique", "Ingénieur biomédical + software"],
-    schools: ["Universite Paris-Saclay", "Grenoble INP - Ensimag", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
+    schools: ["Université Paris-Saclay", "Grenoble INP - Ensimag", "Telecom Paris", "EPITA", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -5129,7 +5129,7 @@ const may2026RoleBatch: JobRole[] = [
       "Préparer et soutenir les audits : preuves, dossiers, et cohérence des décisions."
     ],
     studies: ["Ingénieur", "Master qualité", "Master informatique"],
-    schools: ["Universite Paris-Saclay", "Grenoble INP - Ensimag", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
+    schools: ["Université Paris-Saclay", "Grenoble INP - Ensimag", "Telecom Paris", "EPITA", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -5160,7 +5160,7 @@ const may2026RoleBatch: JobRole[] = [
       "Supporter la rédaction et la revue des livrables scientifiques/réglementaires liés aux performances."
     ],
     studies: ["Master biostatistiques", "Master data science santé", "Ingénieur statistique"],
-    schools: ["Universite Paris-Saclay", "Grenoble INP - Ensimag", "Telecom Paris", "EPITA", "Faculte de pharmacie Strasbourg"],
+    schools: ["Université Paris-Saclay", "Grenoble INP - Ensimag", "Telecom Paris", "EPITA", "Faculté de pharmacie Strasbourg"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -5191,7 +5191,7 @@ const may2026RoleBatch: JobRole[] = [
       "Structurer les retours terrain et contribuer à l'amélioration continue (docs, process, produit)."
     ],
     studies: ["Master biologie moléculaire", "Ingénieur biotech", "Master bioinformatique"],
-    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Telecom Paris", "Grenoble INP - Ensimag"],
+    schools: ["Université Paris-Saclay", "Faculté de pharmacie Strasbourg", "Telecom Paris", "Grenoble INP - Ensimag"],
     relatedIndustries: [
       "Diagnostic",
       "NGS",
@@ -5222,7 +5222,7 @@ const may2026RoleBatch: JobRole[] = [
       "Assurer la cohérence dossier : liens entre risques, performance, retours terrain et décisions de produit."
     ],
     studies: ["Pharmacie", "Master affaires réglementaires", "Ingénieur biomédical"],
-    schools: ["Universite Paris-Saclay", "Faculte de pharmacie Strasbourg", "Telecom Paris", "EPITA"],
+    schools: ["Université Paris-Saclay", "Faculté de pharmacie Strasbourg", "Telecom Paris", "EPITA"],
     relatedIndustries: [
       "Diagnostic",
       "IVD",
@@ -5253,11 +5253,11 @@ const may2026RoleBatch: JobRole[] = [
       "Assurer la conformité des déclarations et la préparation aux audits sur le périmètre safety."
     ],
     studies: ["Vétérinaire", "Pharmacie", "Doctorat sciences", "Master pharmacovigilance"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculté de pharmacie Strasbourg", "Université d'Angers"],
     relatedIndustries: [
       "Animal health",
       "Vet pharma",
-      "Vaccins veterinaires",
+      "Vaccins vétérinaires",
       "Compliance",
       "Product safety"
     ],
@@ -5291,10 +5291,10 @@ const may2026RoleBatch: JobRole[] = [
       "Contribuer à l'amélioration continue : rendement, robustesse, capacité et formation."
     ],
     studies: ["Ingénieur biotech", "Master bioprocédés", "Vétérinaire avec exposition industrialisation"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculté de pharmacie Strasbourg", "Université d'Angers"],
     relatedIndustries: [
       "Animal health",
-      "Vaccins veterinaires",
+      "Vaccins vétérinaires",
       "Bioproduction",
       "GMP manufacturing",
       "Supply chain"
@@ -5322,11 +5322,11 @@ const may2026RoleBatch: JobRole[] = [
       "Travailler avec marketing, qualité et regulatory pour maintenir un discours cohérent et conforme."
     ],
     studies: ["Vétérinaire", "Pharmacie", "Doctorat sciences de la vie"],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculte de pharmacie Strasbourg", "Universite d'Angers"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "UniLaSalle Rouen", "Faculté de pharmacie Strasbourg", "Université d'Angers"],
     relatedIndustries: [
       "Animal health",
       "Vet pharma",
-      "Vaccins veterinaires",
+      "Vaccins vétérinaires",
       "Medical communications",
       "Field support"
     ],
@@ -6260,7 +6260,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
     title: "Président.e du Conseil d'Administration Scale-up Life Sciences",
     salary: "Retainer 15kEUR - 40kEUR/an + BSPCE + D&O",
     salarySource:
-      "Repères publics : l'enquête IFA PME-ETI (mars 2015) mesure environ 1 000 € par journée consacrée au mandat et une médiane de 12 k€/an dans le non coté, soit 15-40 k€/an pour une présidence engagée 15 à 40 jours par an. Non coté américain : retainer médian 38 800 $ + prime de présidence médiane de 25 000 $ (Compensation Advisory Partners, 2025). Equity : 0,20 à 0,50 % du capital fully diluted par mandat pre-IPO, vesting 3-4 ans (Semler Brossy) ; en France via BSPCE, ouverts aux membres du conseil depuis la loi PACTE (art. 163 bis G CGI). Frais et assurance RCMS/D&O systématiques.",
+      "Repères publics : l'enquête IFA PME-ETI (mars 2015) mesure environ 1 000 € par journée consacrée au mandat et une médiane de 12 k€/an dans le non coté, soit 15-40 k€/an pour une présidence engagée 15 à 40 jours par an. Non coté américain : retainer médian 38 800 $ + prime de présidence médiane de 25 000 $ (Compensation Advisory Partners, 2025). Equity : 0,20 à 0,50 % du capital fully diluted par mandat pré-IPO, vesting 3-4 ans (Semler Brossy) ; en France via BSPCE, ouverts aux membres du conseil depuis la loi PACTE (art. 163 bis G CGI). Frais et assurance RCMS/D&O systématiques.",
     sector: "Biotech",
     category: "Gouvernance Chairperson scale-up",
     shortageLevel: "Tres elevee",
@@ -6683,7 +6683,7 @@ const august2026AnimalHealthBatch: JobRole[] = [
     category: "Développement international HealthTech",
     shortageLevel: "Elevee",
     summary:
-      "Pilote le développement international d'une scale-up medtech ou healthtech en phase d'expansion. Ouvre les nouveaux marchés (EU, UK, US, Middle East, Asia), structure les filiales ou partenariats distributeurs, adapte le go-to-market par géographie. Interface board sur la stratégie geographique.",
+      "Pilote le développement international d'une scale-up medtech ou healthtech en phase d'expansion. Ouvre les nouveaux marchés (EU, UK, US, Middle East, Asia), structure les filiales ou partenariats distributeurs, adapte le go-to-market par géographie. Interface board sur la stratégie géographique.",
     skills: [
       "Développement international multi-géographies",
       "Structuration filiales et partenariats distributeurs",
@@ -6943,25 +6943,25 @@ const august2026ChloeBatch: JobRole[] = [
     title: "Head of Marketing Petfood Premium",
     seoTitle: "Head of Marketing Petfood Premium : salaire 100-140 K€, missions | SKS",
     seoDescription:
-      "Fiche metier Head of Marketing Petfood Premium : brand building, trade, digital, salaire 100-140 K€, formations. Benchmark FR 2026 SKS TALENTS.",
+      "Fiche métier Head of Marketing Petfood Premium : brand building, trade, digital, salaire 100-140 K€, formations. Benchmark FR 2026 SKS TALENTS.",
     publishDate: august2026ChloeBatchDate,
     salary: "100kEUR - 140kEUR + variable",
     salarySource:
-      "Ordre de grandeur France, fixe brut annuel. Variable cible 15-20 % du fixe et LTI 5-10 % en supplement selon la taille du groupe et la trajectoire de la marque. Fourchette calibree pour un.e directeur.rice marketing petfood pilotant 5-10 personnes sur des marques premium (fresh food, sans cereales, insectes).",
+      "Ordre de grandeur France, fixe brut annuel. Variable cible 15-20 % du fixe et LTI 5-10 % en supplement selon la taille du groupe et la trajectoire de la marque. Fourchette calibrée pour un.e directeur.rice marketing petfood pilotant 5-10 personnes sur des marques premium (fresh food, sans céréales, insectes).",
     sector: "Petfood",
     category: "Direction marketing",
     shortageLevel: "Elevee",
     summary:
-      "Dirige la strategie marketing des marques premium petfood, orchestre brand building, trade et digital, et pilote une equipe marketing 5-10 personnes pour installer la preference d'achat.",
+      "Dirige la stratégie marketing des marques premium petfood, orchestre brand building, trade et digital, et pilote une équipe marketing 5-10 personnes pour installer la preference d'achat.",
     skills: [
-      "Brand building premium (fresh food, sans cereales, insectes)",
-      "Trade marketing GMS et retail specialise",
+      "Brand building premium (fresh food, sans céréales, insectes)",
+      "Trade marketing GMS et retail spécialisé",
       "Digital, e-commerce et data marketing",
       "P&L marque et pilotage media mix",
-      "Management d'equipe marketing 5-10 personnes"
+      "Management d'équipe marketing 5-10 personnes"
     ],
     successFactors: [
-      "Trouver l'equilibre entre logique premium et exigences retail multi-canal.",
+      "Trouver l'équilibre entre logique premium et exigences retail multi-canal.",
       "Faire dialoguer brand, trade, digital et R&D sans siloter les roadmaps.",
       "Transformer les insights animaux et humains en positionnement lisible en rayon."
     ],
@@ -6971,28 +6971,28 @@ const august2026ChloeBatch: JobRole[] = [
       "Head of marketing groupe petfood"
     ],
     missions: [
-      "Definir la strategie marketing des marques premium et arbitrer le portefeuille.",
+      "Définir la stratégie marketing des marques premium et arbitrer le portefeuille.",
       "Piloter brand building, trade GMS et animalerie, digital et e-commerce.",
-      "Manager une equipe 5-10 personnes (brand, trade, digital, insights).",
+      "Manager une équipe 5-10 personnes (brand, trade, digital, insights).",
       "Suivre le P&L marque, arbitrer media mix et innovations avec R&D et supply.",
-      "Preparer les revues comex et defendre les investissements marketing."
+      "Preparer les revues comex et défendre les investissements marketing."
     ],
     studies: [
-      "Ecole de commerce ou master marketing",
+      "École de commerce ou master marketing",
       "8-15 ans d'experience marketing FMCG premium ou petfood",
       "Anglais courant obligatoire pour groupes internationaux"
     ],
     schools: ["HEC Paris", "ESSEC", "ESCP", "EDHEC", "EM Lyon", "AgroParisTech", "Institut Agro Rennes-Angers", "Harvard Business School"],
     relatedIndustries: [
       "Groupes petfood premium",
-      "Marques challenger fresh food et sans cereales",
+      "Marques challenger fresh food et sans céréales",
       "FMCG premium alimentaire humain (transferts frequents)",
-      "Retail specialise animalerie et pure players e-commerce",
+      "Retail spécialisé animalerie et pure players e-commerce",
       "Agences media, brand et data marketing"
     ],
     sources: [
       { name: "FACCO - Federation des fabricants d'aliments pour animaux familiers", url: "https://www.facco.fr/" },
-      { name: "PROMOJARDIN - Marche petfood specialise", url: "https://www.promojardin.com/" }
+      { name: "PROMOJARDIN - Marché petfood spécialisé", url: "https://www.promojardin.com/" }
     ]
   },
   {
@@ -7000,27 +7000,27 @@ const august2026ChloeBatch: JobRole[] = [
     title: "Head of Innovation Petfood",
     seoTitle: "Head of Innovation Petfood : salaire 110-150 K€, missions R&D | SKS",
     seoDescription:
-      "Fiche metier Head of Innovation Petfood : pipeline produits premium, claims scientifiques, sourcing durable, salaire 110-150 K€. Benchmark FR 2026 SKS TALENTS.",
+      "Fiche métier Head of Innovation Petfood : pipeline produits premium, claims scientifiques, sourcing durable, salaire 110-150 K€. Benchmark FR 2026 SKS TALENTS.",
     publishDate: august2026ChloeBatchDate,
     salary: "110kEUR - 150kEUR + variable",
     salarySource:
-      "Ordre de grandeur France, fixe brut annuel. Variable cible 20 % du fixe. Fourchette dependante de la taille du groupe, du perimetre R&D + go-to-market et du nombre de marches couverts.",
+      "Ordre de grandeur France, fixe brut annuel. Variable cible 20 % du fixe. Fourchette dépendante de la taille du groupe, du périmètre R&D + go-to-market et du nombre de marchés couverts.",
     sector: "Petfood",
     category: "Direction innovation",
     shortageLevel: "Tres elevee",
     summary:
-      "Porte la strategie innovation petfood a l'articulation R&D et go-to-market : pipeline produits premium, claims scientifiques defendables, sourcing durable et pilotage transversal avec marketing, qualite et supply.",
+      "Porte la stratégie innovation petfood à l'articulation R&D et go-to-market : pipeline produits premium, claims scientifiques défendables, sourcing durable et pilotage transversal avec marketing, qualité et supply.",
     skills: [
-      "Pipeline innovation produit multi-annee",
+      "Pipeline innovation produit multi-année",
       "Nutrition animale et formulation premium",
-      "Claims scientifiques et defense reglementaire",
-      "Sourcing durable (proteines alternatives, insectes, sous-produits valorises)",
+      "Claims scientifiques et defense réglementaire",
+      "Sourcing durable (protéines alternatives, insectes, sous-produits valorises)",
       "Go-to-market et co-construction avec marketing"
     ],
     successFactors: [
-      "Etre a l'aise entre logique scientifique, contraintes industrielles et logique de marque.",
-      "Prioriser les projets a fort potentiel plutot que multiplier les initiatives.",
-      "Savoir defendre un claim face au marketing, aux autorites et aux distributeurs."
+      "Être à l'aise entre logique scientifique, contraintes industrielles et logique de marque.",
+      "Prioriser les projets à fort potentiel plutôt que multiplier les initiatives.",
+      "Savoir défendre un claim face au marketing, aux autorités et aux distributeurs."
     ],
     path: [
       "R&D manager ou nutrition scientist senior",
@@ -7028,15 +7028,15 @@ const august2026ChloeBatch: JobRole[] = [
       "Head of innovation ou VP innovation"
     ],
     missions: [
-      "Definir la roadmap innovation 3-5 ans et arbitrer le portefeuille projets.",
-      "Piloter la generation d'idees, la validation scientifique et le time-to-market.",
-      "Structurer une politique de sourcing durable (insectes, algues, proteines alternatives).",
-      "Aligner claims scientifiques avec marketing, reglementaire et service clients.",
-      "Manager une equipe innovation R&D transverse et piloter les partenariats externes."
+      "Définir la roadmap innovation 3-5 ans et arbitrer le portefeuille projets.",
+      "Piloter la generation d'idées, la validation scientifique et le time-to-market.",
+      "Structurer une politique de sourcing durable (insectes, algues, protéines alternatives).",
+      "Aligner claims scientifiques avec marketing, réglementaire et service clients.",
+      "Manager une équipe innovation R&D transverse et piloter les partenariats externes."
     ],
     studies: [
-      "Ingenieur.e agro ou nutrition",
-      "Doctorat nutrition animale ou sciences du vivant apprecie",
+      "Ingénieur.e agro ou nutrition",
+      "Doctorat nutrition animale ou sciences du vivant apprécié",
       "10-15 ans d'experience R&D ou innovation petfood / nutrition animale"
     ],
     schools: ["AgroParisTech", "Institut Agro Rennes-Angers", "Institut Agro Montpellier", "ENSAIA", "Oniris", "MIT Sloan", "Harvard Business School"],
@@ -7044,12 +7044,12 @@ const august2026ChloeBatch: JobRole[] = [
       "Petfood premium",
       "Marques fresh food et clean label",
       "Ingredientistes petfood",
-      "Startups proteines alternatives",
+      "Startups protéines alternatives",
       "Instituts techniques"
     ],
     sources: [
-      { name: "FACCO - Marche petfood France", url: "https://www.facco.fr/" },
-      { name: "FEFAC - Federation europeenne alimentation animale", url: "https://fefac.eu/" }
+      { name: "FACCO - Marché petfood France", url: "https://www.facco.fr/" },
+      { name: "FEFAC - Federation européenne alimentation animale", url: "https://fefac.eu/" }
     ]
   },
   {
@@ -7057,16 +7057,16 @@ const august2026ChloeBatch: JobRole[] = [
     title: "CFO Groupe Petfood",
     seoTitle: "CFO Groupe Petfood : salaire 130-180 K€, missions M&A IPO prep | SKS",
     seoDescription:
-      "Fiche metier CFO Groupe Petfood : pilotage finance groupe 100-500 M€, M&A, refinancement, reporting international. Salaire 130-180 K€. Benchmark FR 2026 SKS TALENTS.",
+      "Fiche métier CFO Groupe Petfood : pilotage finance groupe 100-500 M€, M&A, refinancement, reporting international. Salaire 130-180 K€. Benchmark FR 2026 SKS TALENTS.",
     publishDate: august2026ChloeBatchDate,
     salary: "130kEUR - 180kEUR + variable",
     salarySource:
-      "Ordre de grandeur France, fixe brut annuel. Variable STI cible 20-30 % du fixe et LTI 10-20 % (actions, phantom, MEP). Fourchette dependante de la taille du groupe (100-500 M€ CA), du perimetre international et de la trajectoire (M&A, refinancement, IPO prep).",
+      "Ordre de grandeur France, fixe brut annuel. Variable STI cible 20-30 % du fixe et LTI 10-20 % (actions, phantom, MEP). Fourchette dépendante de la taille du groupe (100-500 M€ CA), du périmètre international et de la trajectoire (M&A, refinancement, IPO prep).",
     sector: "Petfood",
-    category: "Direction financiere",
+    category: "Direction financière",
     shortageLevel: "Elevee",
     summary:
-      "Dirige la finance d'un groupe petfood 100-500 M€ de CA : pilotage P&L, cash et bilan consolide, gestion des operations M&A et refinancement, preparation IPO le cas echeant, reporting international et dialogue investisseurs.",
+      "Dirige la finance d'un groupe petfood 100-500 M€ de CA : pilotage P&L, cash et bilan consolide, gestion des operations M&A et refinancement, preparation IPO le cas échéant, reporting international et dialogue investisseurs.",
     skills: [
       "Direction finance groupe multi-sites",
       "M&A, integration et post-merger",
@@ -7075,9 +7075,9 @@ const august2026ChloeBatch: JobRole[] = [
       "Consolidation IFRS et reporting international"
     ],
     successFactors: [
-      "Concilier vision strategique groupe et rigueur d'execution operationnelle.",
-      "Batir une lecture financiere lisible pour un actionnariat souvent PE ou familial.",
-      "Anticiper le mur de refinancement plutot que le subir."
+      "Concilier vision stratégique groupe et rigueur d'execution opérationnelle.",
+      "Bâtir une lecture financière lisible pour un actionnariat souvent PE ou familial.",
+      "Anticiper le mur de refinancement plutôt que le subir."
     ],
     path: [
       "Directeur.rice financier.e BU ou pays",
@@ -7086,14 +7086,14 @@ const august2026ChloeBatch: JobRole[] = [
     ],
     missions: [
       "Piloter le P&L, le cash et le bilan consolide du groupe.",
-      "Structurer les operations M&A, refinancement et preparer une eventuelle IPO.",
-      "Superviser controlling, tresorerie, fiscalite, consolidation et audit interne.",
-      "Animer le reporting aupres du board, des actionnaires et des banques.",
+      "Structurer les operations M&A, refinancement et preparer une éventuelle IPO.",
+      "Superviser controlling, trésorerie, fiscalité, consolidation et audit interne.",
+      "Animer le reporting auprès du board, des actionnaires et des banques.",
       "Faire dialoguer finance, supply, commerce et marketing sur les grands arbitrages."
     ],
     studies: [
-      "Ecole de commerce ou ingenieur avec double competence finance",
-      "DSCG, master finance, MBA ou audit big four apprecie",
+      "École de commerce ou ingénieur avec double competence finance",
+      "DSCG, master finance, MBA ou audit big four apprécié",
       "12-20 ans d'experience finance dont directions groupe"
     ],
     schools: ["HEC Paris", "ESSEC", "ESCP", "EM Lyon", "EDHEC", "Sciences Po Paris", "Dauphine", "Harvard Business School", "MIT Sloan"],
@@ -7105,7 +7105,7 @@ const august2026ChloeBatch: JobRole[] = [
       "Audit et transaction services (Big Four)"
     ],
     sources: [
-      { name: "FACCO - Marche petfood France", url: "https://www.facco.fr/" },
+      { name: "FACCO - Marché petfood France", url: "https://www.facco.fr/" },
       { name: "France Invest - Statistiques PE", url: "https://www.franceinvest.eu/" }
     ]
   },
@@ -7114,56 +7114,56 @@ const august2026ChloeBatch: JobRole[] = [
     title: "Category Manager Petfood",
     seoTitle: "Category Manager Petfood : salaire 65-90 K€, missions GMS | SKS",
     seoDescription:
-      "Fiche metier Category Manager Petfood : pilotage categorie chien chat premium sans cereales snacks, relation acheteurs GMS. Salaire 65-90 K€. Benchmark FR 2026 SKS TALENTS.",
+      "Fiche métier Category Manager Petfood : pilotage catégorie chien chat premium sans céréales snacks, relation acheteurs GMS. Salaire 65-90 K€. Benchmark FR 2026 SKS TALENTS.",
     publishDate: august2026ChloeBatchDate,
     salary: "65kEUR - 90kEUR + variable",
     salarySource:
-      "Ordre de grandeur France, fixe brut annuel. Variable cible 15 % du fixe. Fourchette dependante de l'enseigne cliente, du portefeuille de categories et du niveau de seniorite.",
+      "Ordre de grandeur France, fixe brut annuel. Variable cible 15 % du fixe. Fourchette dépendante de l'enseigne cliente, du portefeuille de categories et du niveau de seniorite.",
     sector: "Petfood",
     category: "Category management",
     shortageLevel: "Elevee",
     summary:
-      "Pilote une categorie retail petfood (chien, chat, premium, sans cereales, snacks), entretient la relation avec les acheteur.rice.s GMS, structure le mix produit et anime l'innovation trade en collaboration avec la force de vente.",
+      "Pilote une catégorie retail petfood (chien, chat, premium, sans céréales, snacks), entretient la relation avec les acheteur.rice.s GMS, structure le mix produit et anime l'innovation trade en collaboration avec la force de vente.",
     skills: [
-      "Category management GMS et retail specialise",
+      "Category management GMS et retail spécialisé",
       "Analyse Nielsen, IRI, panels distributeurs",
       "Merchandising et assortiment",
-      "Negociation acheteur.rice enseignes",
+      "Négociation acheteur.rice enseignes",
       "Trade marketing et innovation retail"
     ],
     successFactors: [
-      "Croiser les insights shopper avec la mecanique reelle du rayon.",
+      "Croiser les insights shopper avec la mécanique réelle du rayon.",
       "Nourrir la relation acheteur.rice sans se laisser enfermer par le sell-in.",
-      "Traduire un plan categoriel en actions terrain executables par la force de vente."
+      "Traduire un plan catégoriel en actions terrain exécutables par la force de vente."
     ],
     path: [
-      "Chef.fe de secteur ou compte cle",
+      "Chef.fe de secteur ou compte clé",
       "Category analyst puis category manager",
       "Senior category manager ou trade marketing manager"
     ],
     missions: [
-      "Piloter une categorie petfood (chien, chat, premium, sans cereales, snacks) sur un perimetre enseignes.",
-      "Analyser panels et donnees shopper pour eclairer assortiment, prix et promo.",
-      "Construire les plans categoriels et les defendre avec les acheteur.rice.s.",
+      "Piloter une catégorie petfood (chien, chat, premium, sans céréales, snacks) sur un périmètre enseignes.",
+      "Analyser panels et données shopper pour éclairer assortiment, prix et promo.",
+      "Construire les plans catégoriels et les défendre avec les acheteur.rice.s.",
       "Coordonner marketing, force de vente et supply autour du plan promo et de l'innovation.",
-      "Piloter les revues d'assortiment et les temps forts categoriels."
+      "Piloter les revues d'assortiment et les temps forts catégoriels."
     ],
     studies: [
-      "Ecole de commerce ou master marketing / distribution",
+      "École de commerce ou master marketing / distribution",
       "5-10 ans d'experience GMS, category management ou trade marketing",
-      "Maitrise Nielsen / IRI appreciee"
+      "Maîtrise Nielsen / IRI appréciée"
     ],
     schools: ["ESSEC", "EDHEC", "NEOMA", "SKEMA", "Kedge", "Institut Agro Rennes-Angers"],
     relatedIndustries: [
       "Groupes petfood",
       "Enseignes GMS",
-      "Retail specialise",
+      "Retail spécialisé",
       "FMCG alimentaire (transferts frequents category management)",
       "Instituts d'études et panels consommateurs"
     ],
     sources: [
-      { name: "FACCO - Marche petfood France", url: "https://www.facco.fr/" },
-      { name: "LSA - Actualites distribution", url: "https://www.lsa-conso.fr/" }
+      { name: "FACCO - Marché petfood France", url: "https://www.facco.fr/" },
+      { name: "LSA - Actualités distribution", url: "https://www.lsa-conso.fr/" }
     ]
   },
   {
@@ -7171,11 +7171,11 @@ const august2026ChloeBatch: JobRole[] = [
     title: "Brand Manager Petfood Premium",
     seoTitle: "Brand Manager Petfood Premium : salaire 55-80 K€, missions | SKS",
     seoDescription:
-      "Fiche metier Brand Manager Petfood Premium : ownership marque, positionnement, communication, roadmap produit. Salaire 55-80 K€. Benchmark FR 2026 SKS TALENTS.",
+      "Fiche métier Brand Manager Petfood Premium : ownership marque, positionnement, communication, roadmap produit. Salaire 55-80 K€. Benchmark FR 2026 SKS TALENTS.",
     publishDate: august2026ChloeBatchDate,
     salary: "55kEUR - 80kEUR + variable",
     salarySource:
-      "Ordre de grandeur France, fixe brut annuel. Variable cible 15 % du fixe. Fourchette dependante de la marque geree (challenger vs marque leader), du budget medias et de l'exposition management.",
+      "Ordre de grandeur France, fixe brut annuel. Variable cible 15 % du fixe. Fourchette dépendante de la marque gérée (challenger vs marque leader), du budget medias et de l'exposition management.",
     sector: "Petfood",
     category: "Marketing brand",
     shortageLevel: "Elevee",
@@ -7186,12 +7186,12 @@ const august2026ChloeBatch: JobRole[] = [
       "Plateforme de marque et communication 360",
       "Pilotage agences (creation, media, digital, PR)",
       "P&L marque et pricing",
-      "Insights consommateur.rice et etudes qualitatives"
+      "Insights consommateur.rice et études qualitatives"
     ],
     successFactors: [
       "Tenir le cap du positionnement face aux tentations de sur-promotion.",
-      "Faire vivre la marque au-dela du 30 secondes TV, jusqu'au rayon et au SAV.",
-      "Aligner claim scientifique, claim marketing et perception reelle du.de la client.e."
+      "Faire vivre la marque au-delà du 30 secondes TV, jusqu'au rayon et au SAV.",
+      "Aligner claim scientifique, claim marketing et perception réelle du.de la client.e."
     ],
     path: [
       "Chef.fe de produit junior",
@@ -7199,28 +7199,28 @@ const august2026ChloeBatch: JobRole[] = [
       "Senior brand manager ou marketing manager"
     ],
     missions: [
-      "Detenir le positionnement, la plateforme de marque et le plan de communication.",
+      "Détenir le positionnement, la plateforme de marque et le plan de communication.",
       "Piloter les agences creation, media, digital et RP.",
       "Construire la roadmap produit avec R&D, packaging et supply.",
-      "Suivre le P&L de la marque et defendre les investissements marketing.",
+      "Suivre le P&L de la marque et défendre les investissements marketing.",
       "Nourrir la marque avec des insights consommateur.rice.s et animal.e.s de compagnie."
     ],
     studies: [
-      "Ecole de commerce ou master marketing",
+      "École de commerce ou master marketing",
       "4-8 ans d'experience FMCG ou petfood",
-      "Anglais courant apprecie"
+      "Anglais courant apprécié"
     ],
     schools: ["HEC Paris", "ESSEC", "ESCP", "EDHEC", "EM Lyon", "NEOMA", "SKEMA"],
     relatedIndustries: [
       "Groupes petfood premium",
       "Marques challenger fresh food et clean label",
       "FMCG premium (transferts frequents vers petfood)",
-      "Agences creation, media, PR specialisees",
-      "Retail specialise animalerie"
+      "Agences creation, media, PR spécialisées",
+      "Retail spécialisé animalerie"
     ],
     sources: [
-      { name: "FACCO - Marche petfood France", url: "https://www.facco.fr/" },
-      { name: "IREP - Marche publicitaire France", url: "https://www.irep.asso.fr/" }
+      { name: "FACCO - Marché petfood France", url: "https://www.facco.fr/" },
+      { name: "IREP - Marché publicitaire France", url: "https://www.irep.asso.fr/" }
     ]
   },
   {
@@ -7228,28 +7228,28 @@ const august2026ChloeBatch: JobRole[] = [
     title: "Head of Sustainability Petfood",
     seoTitle: "Head of Sustainability Petfood : salaire 90-130 K€, missions CSRD ESG | SKS",
     seoDescription:
-      "Fiche metier Head of Sustainability Petfood : empreinte carbone recettes, sourcing durable, CSRD, scope 1/2/3, ESG. Salaire 90-130 K€. Benchmark FR 2026 SKS TALENTS.",
+      "Fiche métier Head of Sustainability Petfood : empreinte carbone recettes, sourcing durable, CSRD, scope 1/2/3, ESG. Salaire 90-130 K€. Benchmark FR 2026 SKS TALENTS.",
     publishDate: august2026ChloeBatchDate,
     salary: "90kEUR - 130kEUR + variable",
     salarySource:
-      "Ordre de grandeur France, fixe brut annuel. Variable cible 15 % du fixe. Fonction jeune dans le petfood, avec un turnover eleve (environ 40 % de sortie sous 18 mois), la fourchette basse cible les profils monter-en-poste, la haute les seniors avec deja une premiere reussite CSRD.",
+      "Ordre de grandeur France, fixe brut annuel. Variable cible 15 % du fixe. Fonction jeune dans le petfood, avec un turnover élevé (environ 40 % de sortie sous 18 mois), la fourchette basse cible les profils monter-en-poste, la haute les seniors avec déjà une premiere réussite CSRD.",
     sector: "Petfood",
     category: "Direction RSE ESG",
     shortageLevel: "Tres elevee",
     summary:
-      "Structure la strategie sustainability petfood sur le double perimetre produit (empreinte carbone recettes, sourcing durable, packaging, claims) et corporate (CSRD, scope 1/2/3, gouvernance ESG). Fonction jeune dans le secteur, avec un turnover eleve estime a 40 % sous 18 mois, qu'un cadrage clair de mandat permet de reduire.",
+      "Structure la stratégie sustainability petfood sur le double périmètre produit (empreinte carbone recettes, sourcing durable, packaging, claims) et corporate (CSRD, scope 1/2/3, gouvernance ESG). Fonction jeune dans le secteur, avec un turnover élevé estime à 40 % sous 18 mois, qu'un cadrage clair de mandat permet de réduire.",
     skills: [
       "Bilan carbone produit et ACV (analyse cycle de vie)",
-      "Sourcing durable (proteines alternatives, cereales, packaging)",
+      "Sourcing durable (protéines alternatives, céréales, packaging)",
       "CSRD, ESRS, scope 1/2/3",
       "Gouvernance ESG et reporting extra-financier",
-      "Alliances filiere et lobbying responsable"
+      "Alliances filière et lobbying responsable"
     ],
     successFactors: [
-      "Obtenir un mandat clair sur le double perimetre produit et corporate des la prise de poste.",
-      "Ne pas confondre plan RSE affichage et transformation reelle des recettes ou de la supply.",
-      "Defendre les arbitrages carbone / cout / performance en comex sans perdre en credibilite.",
-      "Se premunir des ecueils qui alimentent le turnover secteur : mandat flou, pas de budget dedie, isolation dans la com corporate."
+      "Obtenir un mandat clair sur le double périmètre produit et corporate des la prise de poste.",
+      "Ne pas confondre plan RSE affichage et transformation réelle des recettes ou de la supply.",
+      "Défendre les arbitrages carbone / coût / performance en comex sans perdre en crédibilité.",
+      "Se prémunir des écueils qui alimentent le turnover secteur : mandat flou, pas de budget dédié, isolation dans la com corporate."
     ],
     path: [
       "Sustainability manager ou responsable ACV",
@@ -7257,15 +7257,15 @@ const august2026ChloeBatch: JobRole[] = [
       "Direction RSE ou VP sustainability groupe"
     ],
     missions: [
-      "Piloter la strategie sustainability sur perimetre produit (empreinte carbone recettes, packaging, sourcing).",
-      "Structurer la conformite CSRD, ESRS, scope 1/2/3 et le reporting extra-financier.",
-      "Construire la gouvernance ESG (board, comex, filiales) et animer les alliances filiere.",
-      "Manager une equipe RSE / ACV et coordonner R&D, supply, achats et communication.",
-      "Documenter les claims durabilite et securiser l'exposition greenwashing."
+      "Piloter la stratégie sustainability sur périmètre produit (empreinte carbone recettes, packaging, sourcing).",
+      "Structurer la conformité CSRD, ESRS, scope 1/2/3 et le reporting extra-financier.",
+      "Construire la gouvernance ESG (board, comex, filiales) et animer les alliances filière.",
+      "Manager une équipe RSE / ACV et coordonner R&D, supply, achats et communication.",
+      "Documenter les claims durabilite et sécuriser l'exposition greenwashing."
     ],
     studies: [
-      "Ingenieur.e agro ou environnement",
-      "Master specialise RSE, ESG, sustainability ou developpement durable",
+      "Ingénieur.e agro ou environnement",
+      "Master spécialisé RSE, ESG, sustainability ou développement durable",
       "8-15 ans d'experience RSE dont exposition FMCG ou nutrition"
     ],
     schools: ["AgroParisTech", "Mines ParisTech", "Institut Agro Rennes-Angers", "HEC Paris", "ESSEC", "Sciences Po Paris", "Yale SOM", "Harvard Business School"],
@@ -7273,100 +7273,100 @@ const august2026ChloeBatch: JobRole[] = [
       "Groupes petfood",
       "FMCG alimentaire",
       "Cabinets conseil ESG",
-      "Ingredientistes proteines alternatives",
-      "Autorites et referentiels (ADEME, EFRAG, SBTi, PEF)"
+      "Ingredientistes protéines alternatives",
+      "Autorités et référentiels (ADEME, EFRAG, SBTi, PEF)"
     ],
     sources: [
       { name: "ADEME - Bilan carbone et ACV agroalimentaire", url: "https://www.ademe.fr/" },
-      { name: "EFRAG - Referentiel CSRD ESRS", url: "https://www.efrag.org/" },
-      { name: "FACCO - Marche petfood France", url: "https://www.facco.fr/" }
+      { name: "EFRAG - Référentiel CSRD ESRS", url: "https://www.efrag.org/" },
+      { name: "FACCO - Marché petfood France", url: "https://www.facco.fr/" }
     ]
   },
   {
     slug: "ceo-veterinary-group",
-    title: "CEO Groupe Veterinaire",
-    seoTitle: "CEO Groupe Veterinaire : salaire 180-280 K€, missions multi-site | SKS",
+    title: "CEO Groupe Vétérinaire",
+    seoTitle: "CEO Groupe Vétérinaire : salaire 180-280 K€, missions multi-site | SKS",
     seoDescription:
-      "Fiche metier CEO Groupe Veterinaire : direction generale 100-500 cliniques, 200-800 collaborateur.rice.s, equity ou phantom. Salaire 180-280 K€. Benchmark FR 2026 SKS TALENTS.",
+      "Fiche métier CEO Groupe Vétérinaire : direction générale 100-500 cliniques, 200-800 collaborateur.rice.s, equity ou phantom. Salaire 180-280 K€. Benchmark FR 2026 SKS TALENTS.",
     publishDate: august2026ChloeBatchDate,
     salary: "180kEUR - 280kEUR + variable",
     salarySource:
-      "Ordre de grandeur France, fixe brut annuel. Variable STI cible 30-40 % du fixe et LTI significatif (equity ou phantom sur scale-up soutenue par private equity). Fourchette dependante de la taille du groupe (100-500 sites), du perimetre geographique et de la phase (build-up, integration, sortie).",
+      "Ordre de grandeur France, fixe brut annuel. Variable STI cible 30-40 % du fixe et LTI significatif (equity ou phantom sur scale-up soutenue par private equity). Fourchette dépendante de la taille du groupe (100-500 sites), du périmètre géographique et de la phase (build-up, integration, sortie).",
     sector: "Veterinary",
-    category: "Direction generale",
+    category: "Direction générale",
     shortageLevel: "Tres elevee",
     summary:
-      "Dirige un groupe de cliniques veterinaires 100-500 sites : posture d'operateur multi-site rigoureux et de leader people credible aupres des veterinaires et directeur.rice.s de clinique. Pilote 200-800 collaborateur.rice.s, la relation actionnaires et le plan de croissance.",
+      "Dirige un groupe de cliniques vétérinaires 100-500 sites : posture d'opérateur multi-site rigoureux et de leader people credible auprès des vétérinaires et directeur.rice.s de clinique. Pilote 200-800 collaborateur.rice.s, la relation actionnaires et le plan de croissance.",
     skills: [
-      "Direction generale groupe multi-site",
+      "Direction générale groupe multi-site",
       "Operating model retail medical et pilotage P&L par site",
-      "Leadership people credible face aux veterinaires et ASV",
-      "Strategie build-up et integration post-acquisition",
+      "Leadership people credible face aux vétérinaires et ASV",
+      "Stratégie build-up et integration post-acquisition",
       "Relation actionnaires PE ou industriels et gouvernance board"
     ],
     successFactors: [
-      "Tenir ensemble exigence economique et qualite de soin sans compromis dangereux.",
-      "Etre credible aupres des veterinaires : profil medical ou tres longue exposition sante.",
-      "Reussir la structuration RH d'un metier en tension et fideliser les directeur.rice.s de site.",
-      "Faire vivre une culture commune apres des acquisitions successives."
+      "Tenir ensemble exigence économique et qualité de soin sans compromis dangereux.",
+      "Être credible auprès des vétérinaires : profil medical ou très longue exposition santé.",
+      "Réussir la structuration RH d'un métier en tension et fidéliser les directeur.rice.s de site.",
+      "Faire vivre une culture commune après des acquisitions successives."
     ],
     path: [
       "Directeur.rice regional.e cliniques ou COO",
-      "Managing director pays sante animale ou retail medical",
-      "CEO groupe veterinaire"
+      "Managing director pays santé animale ou retail medical",
+      "CEO groupe vétérinaire"
     ],
     missions: [
-      "Definir et deployer la strategie du groupe : croissance organique, build-up et integration.",
+      "Définir et déployer la stratégie du groupe : croissance organique, build-up et integration.",
       "Piloter l'operating model multi-site, le P&L consolide et la performance par region.",
-      "Animer la gouvernance : board, actionnaires, comex et directions regionales.",
-      "Structurer la strategie RH d'un secteur en tension (attractivite, formation, retention).",
-      "Representer le groupe aupres des instances de la profession et du secteur sante animale."
+      "Animer la gouvernance : board, actionnaires, comex et directions régionales.",
+      "Structurer la stratégie RH d'un secteur en tension (attractivite, formation, retention).",
+      "Représenter le groupe auprès des instances de la profession et du secteur santé animale."
     ],
     studies: [
-      "Docteur.e veterinaire avec parcours management OU dirigeant.e experimente.e sante / retail medical",
-      "MBA ou executive education apprecie",
+      "Docteur.e vétérinaire avec parcours management OU dirigeant.e expérimenté.e santé / retail medical",
+      "MBA ou executive education apprécié",
       "15-25 ans d'experience dont directions multi-site significatives"
     ],
     schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "HEC Paris", "INSEAD", "ESSEC", "Harvard Business School", "Yale SOM"],
     relatedIndustries: [
-      "Groupes cliniques veterinaires",
+      "Groupes cliniques vétérinaires",
       "Retail medical humain",
       "Groupes dentaires ou opticiens (transferts operating model multi-site)",
       "Private equity buy-and-build",
-      "Instances profession (Ordre National des Veterinaires, SNVEL)"
+      "Instances profession (Ordre National des Vétérinaires, SNVEL)"
     ],
     sources: [
-      { name: "Ordre National des Veterinaires", url: "https://www.veterinaire.fr/" },
-      { name: "SNVEL - Syndicat National des Veterinaires d'Exercice Liberal", url: "https://www.snvel.fr/" }
+      { name: "Ordre National des Vétérinaires", url: "https://www.veterinaire.fr/" },
+      { name: "SNVEL - Syndicat National des Vétérinaires d'Exercice Liberal", url: "https://www.snvel.fr/" }
     ]
   },
   {
     slug: "head-of-rd-animal-health",
-    title: "Head of R&D Sante Animale",
-    seoTitle: "Head of R&D Sante Animale : salaire 140-190 K€, missions pipeline | SKS",
+    title: "Head of R&D Santé Animale",
+    seoTitle: "Head of R&D Santé Animale : salaire 140-190 K€, missions pipeline | SKS",
     seoDescription:
-      "Fiche metier Head of R&D Sante Animale : pipeline pharma biologiques vaccins diagnostic IA, 20-80 chercheur.se.s. Salaire 140-190 K€. Benchmark FR 2026 SKS TALENTS.",
+      "Fiche métier Head of R&D Santé Animale : pipeline pharma biologiques vaccins diagnostic IA, 20-80 chercheur.se.s. Salaire 140-190 K€. Benchmark FR 2026 SKS TALENTS.",
     publishDate: august2026ChloeBatchDate,
     salary: "140kEUR - 190kEUR + variable",
     salarySource:
-      "Ordre de grandeur France, fixe brut annuel. Variable cible 20-25 % du fixe et LTI selon groupe. Fourchette dependante du perimetre R&D (mono-technologie vs pharma + biologiques + vaccins + diagnostic + IA), de la taille des equipes et de l'exposition internationale.",
+      "Ordre de grandeur France, fixe brut annuel. Variable cible 20-25 % du fixe et LTI selon groupe. Fourchette dépendante du périmètre R&D (mono-technologie vs pharma + biologiques + vaccins + diagnostic + IA), de la taille des équipes et de l'exposition internationale.",
     sector: "Medical Vet",
     category: "Direction R&D",
     shortageLevel: "Tres elevee",
     summary:
-      "Dirige la R&D d'un laboratoire sante animale sur un perimetre elargi : pipeline pharmaceutique, biologiques, vaccins, diagnostic et applications IA. Manage 20-80 chercheur.se.s, arbitre les investissements et defend les projets face au comex et aux autorites.",
+      "Dirige la R&D d'un laboratoire santé animale sur un périmètre élargi : pipeline pharmaceutique, biologiques, vaccins, diagnostic et applications IA. Manage 20-80 chercheur.se.s, arbitre les investissements et defend les projets face au comex et aux autorités.",
     skills: [
       "Direction R&D multi-technologies (pharma, biologiques, vaccins, diagnostic, IA)",
       "Pipeline management et arbitrage portefeuille projets",
-      "Interface reglementaire EMA / ANMV, USDA, PMDA",
-      "Partenariats academiques et deals in-licensing",
-      "Management d'equipes 20-80 chercheur.se.s"
+      "Interface réglementaire EMA / ANMV, USDA, PMDA",
+      "Partenariats académiques et deals in-licensing",
+      "Management d'équipes 20-80 chercheur.se.s"
     ],
     successFactors: [
-      "Naviguer entre technologies tres differentes sans sur-investir dans une seule.",
-      "Arbitrer entre pipeline propre, partenariats externes et acquisitions ciblees.",
-      "Maintenir un dialogue scientifique credible avec les leaders d'opinion veterinaires.",
-      "Faire monter en competence les equipes sur l'IA sans caricaturer l'apport."
+      "Naviguer entre technologies très différentes sans sur-investir dans une seule.",
+      "Arbitrer entre pipeline propre, partenariats externes et acquisitions ciblées.",
+      "Maintenir un dialogue scientifique credible avec les leaders d'opinion vétérinaires.",
+      "Faire monter en competence les équipes sur l'IA sans caricaturer l'apport."
     ],
     path: [
       "R&D manager ou head of therapeutic area",
@@ -7376,26 +7376,26 @@ const august2026ChloeBatch: JobRole[] = [
     missions: [
       "Piloter la roadmap R&D et le portefeuille projets multi-technologies.",
       "Arbitrer les investissements pharma, biologiques, vaccins, diagnostic et IA.",
-      "Animer les partenariats academiques et securiser les deals in-licensing.",
-      "Manager une equipe 20-80 chercheur.se.s et structurer les centres de R&D.",
-      "Defendre les projets face au comex, aux autorites et aux KOL veterinaires."
+      "Animer les partenariats académiques et sécuriser les deals in-licensing.",
+      "Manager une équipe 20-80 chercheur.se.s et structurer les centres de R&D.",
+      "Défendre les projets face au comex, aux autorités et aux KOL vétérinaires."
     ],
     studies: [
-      "Docteur.e veterinaire, pharmacien.ne ou PhD sciences du vivant",
-      "MBA ou executive education en direction R&D apprecie",
-      "15-20 ans d'experience R&D sante animale ou pharma humaine transferable"
+      "Docteur.e vétérinaire, pharmacien.ne ou PhD sciences du vivant",
+      "MBA ou executive education en direction R&D apprécié",
+      "15-20 ans d'experience R&D santé animale ou pharma humaine transferable"
     ],
-    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "Institut Pasteur", "Universite Paris-Saclay", "Harvard Business School", "MIT Sloan"],
+    schools: ["ENVA (Maisons-Alfort)", "Oniris", "VetAgro Sup", "ENVT", "AgroParisTech", "Institut Pasteur", "Université Paris-Saclay", "Harvard Business School", "MIT Sloan"],
     relatedIndustries: [
       "Big Pharma Animal Health",
-      "Diagnostic veterinaire",
-      "Biotech animal health emergentes",
+      "Diagnostic vétérinaire",
+      "Biotech animal health émergentes",
       "R&D pharma humaine (transferts frequents)",
       "Instituts et laboratoires publics (INRAE, Anses, Institut Pasteur)"
     ],
     sources: [
-      { name: "AnimalhealthEurope - Federation industrie sante animale", url: "https://www.animalhealtheurope.eu/" },
-      { name: "Anses - Agence securite sanitaire alimentation environnement travail", url: "https://www.anses.fr/" }
+      { name: "AnimalhealthEurope - Federation industrie santé animale", url: "https://www.animalhealtheurope.eu/" },
+      { name: "Anses - Agence sécurité sanitaire alimentation environnement travail", url: "https://www.anses.fr/" }
     ]
   }
 ];
@@ -7410,7 +7410,7 @@ const withDefaultRoleMetadata = (role: JobRole): JobRole => {
     salarySource:
       benchmark?.salarySource ??
       role.salarySource ??
-      "Repere indicatif a calibrer selon le grade, la taille de l'entreprise, la localisation et le niveau d'exposition. A recouper avec Aon RMCD / benchmarks de remuneration et, quand disponible, avec Glassdoor.",
+      "Repère indicatif à calibrer selon le grade, la taille de l'entreprise, la localisation et le niveau d'exposition. À recouper avec Aon RMCD / benchmarks de remuneration et, quand disponible, avec Glassdoor.",
     sources: [
       ...(benchmark
         ? [
@@ -7441,46 +7441,46 @@ const withDefaultRoleMetadata = (role: JobRole): JobRole => {
 const differentiatedAnimalHealthRoles: JobRole[] = [
   {
     slug: "veterinary-drh",
-    title: "DRH Groupement Veterinaire",
+    title: "DRH Groupement Vétérinaire",
     seoTitle: "DRH groupement vétérinaire : salaire, missions, multisite",
     seoDescription:
       "Fiche métier DRH en groupement vétérinaire : pilotage multisite, rétention des ASV, convention collective, intégration post-acquisition. Salaire et parcours.",
     publishDate: "2026-09-14",
     salary: "Base 60kEUR - 99kEUR + 6kEUR - 25kEUR de variable / complement",
     salarySource:
-      "Repere indicatif aligne sur la fiche DRH generee et sur la fiche HR Business Partner Veterinary publiees sur ce site. A calibrer selon le nombre de sites pilotes et la taille des effectifs.",
+      "Repère indicatif aligne sur la fiche DRH générée et sur la fiche HR Business Partner Veterinary publiées sur ce site. À calibrer selon le nombre de sites pilotes et la taille des effectifs.",
     sector: "Veterinary",
     category: "Ressources humaines",
     shortageLevel: "Tres elevee",
     summary:
-      "Structure la fonction RH d'un groupement de cliniques : plusieurs sites, des conventions et des pratiques heritees de chaque rachat, et une tension permanente sur les auxiliaires specialise.e.s veterinaires. Le poste n'a presque rien de commun avec un.e DRH de siege.",
+      "Structure la fonction RH d'un groupement de cliniques : plusieurs sites, des conventions et des pratiques héritées de chaque rachat, et une tension permanente sur les auxiliaires spécialisé.e.s vétérinaires. Le poste n'a presque rien de commun avec un.e DRH de siege.",
     skills: [
       "Pilotage RH multisite",
-      "Convention collective des cabinets et cliniques veterinaires",
-      "Retention et fidelisation des ASV",
+      "Convention collective des cabinets et cliniques vétérinaires",
+      "Retention et fidélisation des ASV",
       "Integration RH post-acquisition",
       "Dialogue avec des associe.e.s praticien.ne.s"
     ],
     successFactors: [
-      "Tenir un cadre RH commun sans effacer l'identite de chaque clinique rachetee.",
-      "Etre credible face a des veterinaires associe.e.s qui jugent d'abord la comprehension du metier de soin.",
+      "Tenir un cadre RH commun sans effacer l'identité de chaque clinique rachetée.",
+      "Être credible face à des vétérinaires associe.e.s qui jugent d'abord la comprehension du métier de soin.",
       "Traiter le turnover des ASV comme un indicateur de direction, pas comme un sujet administratif."
     ],
     path: [
       "HR Business Partner multisite",
-      "DRH groupement veterinaire",
+      "DRH groupement vétérinaire",
       "Directeur.rice des ressources humaines groupe"
     ],
     missions: [
-      "Harmoniser contrats, grilles et plannings heritees des cliniques rachetees, sans declencher de depart en cascade.",
-      "Construire une politique de retention des auxiliaires specialise.e.s veterinaires, premier poste de fragilite operationnelle d'une clinique.",
-      "Piloter le volet RH des acquisitions : cartographie sociale avant signature, entretiens des personnes cles, plan des 90 premiers jours.",
+      "Harmoniser contrats, grilles et plannings héritées des cliniques rachetées, sans déclencher de depart en cascade.",
+      "Construire une politique de retention des auxiliaires spécialisé.e.s vétérinaires, premier poste de fragilité opérationnelle d'une clinique.",
+      "Piloter le volet RH des acquisitions : cartographie sociale avant signature, entretiens des personnes clés, plan des 90 premiers jours.",
       "Outiller la fonction RH sur plusieurs sites : dossiers centralises, reporting social consolide, process de recrutement commun.",
       "Accompagner les directeur.rice.s de site sur le management, souvent des praticien.ne.s sans formation d'encadrement."
     ],
     studies: [
       "Master ressources humaines",
-      "Ecole de commerce specialisation RH",
+      "École de commerce spécialisation RH",
       "Master droit social"
     ],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "IGS Paris", "Institut Agro Rennes-Angers"],
@@ -7497,53 +7497,53 @@ const differentiatedAnimalHealthRoles: JobRole[] = [
   },
   {
     slug: "medical-vet-business-unit-director",
-    title: "Directeur Business Unit Sante Animale",
+    title: "Directeur Business Unit Santé Animale",
     seoTitle: "Directeur Business Unit santé animale : salaire, missions",
     seoDescription:
       "Fiche métier Directeur.rice de Business Unit en santé animale : P&L, gamme pharma vétérinaire, réseau distributeurs et prescription. Salaire et parcours.",
     publishDate: "2026-09-14",
     salary: "100kEUR - 170kEUR + bonus",
     salarySource:
-      "Repere indicatif repris de la fiche Directeur Business Unit generee sur ce site. A calibrer selon la taille du P&L pilote et l'etendue geographique.",
+      "Repère indicatif repris de la fiche Directeur Business Unit générée sur ce site. À calibrer selon la taille du P&L pilote et l'étendue géographique.",
     sector: "Medical Vet",
-    category: "Direction generale",
+    category: "Direction générale",
     shortageLevel: "Tres elevee",
     summary:
-      "Porte le compte de resultat d'une gamme pharma veterinaire ou d'un segment espece. La difficulte propre au secteur : la decision d'achat passe par un.e prescripteur.rice veterinaire, pas par l'utilisateur final, et le circuit de distribution est un acteur a part entiere.",
+      "Porte le compte de résultat d'une gamme pharma vétérinaire ou d'un segment espèce. La difficulté propre au secteur : la decision d'achat passe par un.e prescripteur.rice vétérinaire, pas par l'utilisateur final, et le circuit de distribution est un acteur à part entière.",
     skills: [
       "Pilotage de P&L",
-      "Strategie de gamme pharma veterinaire",
-      "Animation d'un reseau de distributeurs",
+      "Stratégie de gamme pharma vétérinaire",
+      "Animation d'un réseau de distributeurs",
       "Marketing de prescription",
-      "Reglementation du medicament veterinaire"
+      "Réglementation du medicament vétérinaire"
     ],
     successFactors: [
       "Arbitrer entre volume distributeur et valeur de prescription sans casser l'un des deux canaux.",
-      "Parler le langage clinique aux veterinaires et le langage marge aux distributeurs.",
-      "Anticiper les fins de brevet et les generiques sur une gamme mature."
+      "Parler le langage clinique aux vétérinaires et le langage marge aux distributeurs.",
+      "Anticiper les fins de brevet et les génériques sur une gamme mature."
     ],
     path: [
-      "Chef.fe de produit sante animale",
-      "Directeur.rice Business Unit sante animale",
+      "Chef.fe de produit santé animale",
+      "Directeur.rice Business Unit santé animale",
       "Directeur.rice general.e filiale"
     ],
     missions: [
-      "Piloter le compte de resultat d'une gamme ou d'un segment espece, du prix de cession a la marge nette.",
-      "Definir la strategie de gamme : lancements, extensions d'indication, arbitrages de fin de cycle.",
-      "Animer le reseau de distributeurs et les centrales, qui pesent sur l'acces au marche autant que la qualite du produit.",
-      "Piloter la strategie de prescription aupres des veterinaires, en coordination avec les affaires medicales.",
-      "Integrer les contraintes reglementaires du medicament veterinaire dans le calendrier commercial."
+      "Piloter le compte de résultat d'une gamme ou d'un segment espèce, du prix de cession à la marge nette.",
+      "Définir la stratégie de gamme : lancements, extensions d'indication, arbitrages de fin de cycle.",
+      "Animer le réseau de distributeurs et les centrales, qui pèsent sur l'accès au marché autant que la qualité du produit.",
+      "Piloter la stratégie de prescription auprès des vétérinaires, en coordination avec les affaires médicales.",
+      "Intégrer les contraintes réglementaires du medicament vétérinaire dans le calendrier commercial."
     ],
     studies: [
-      "Ecole de commerce",
-      "Doctorat veterinaire complete d'une formation gestion",
-      "Master marketing sante"
+      "École de commerce",
+      "Doctorat vétérinaire complete d'une formation gestion",
+      "Master marketing santé"
     ],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "Audencia", "Institut Agro Montpellier"],
     relatedIndustries: [
       "Medical Vet",
       "Vet pharma",
-      "Vaccins veterinaires",
+      "Vaccins vétérinaires",
       "Animal biotech"
     ],
     sources: [
@@ -7553,53 +7553,53 @@ const differentiatedAnimalHealthRoles: JobRole[] = [
   },
   {
     slug: "medical-vet-sales-director",
-    title: "Directeur des Ventes Sante Animale",
+    title: "Directeur des Ventes Santé Animale",
     seoTitle: "Directeur des ventes santé animale : salaire et missions",
     seoDescription:
       "Fiche métier Directeur.rice des ventes santé animale : réseau distributeurs, prescription vétérinaire, force de vente terrain. Salaire, missions, parcours.",
     publishDate: "2026-09-14",
     salary: "85kEUR - 140kEUR + variable",
     salarySource:
-      "Repere indicatif repris de la fiche Directeur des ventes generee sur ce site, coherent avec la fiche Key Account Manager EMEA Distributeurs Sante Animale. A calibrer selon la taille de la force de vente.",
+      "Repère indicatif repris de la fiche Directeur des ventes générée sur ce site, coherent avec la fiche Key Account Manager EMEA Distributeurs Santé Animale. À calibrer selon la taille de la force de vente.",
     sector: "Medical Vet",
     category: "Commercial",
     shortageLevel: "Tres elevee",
     summary:
-      "Dirige une force de vente qui ne vend pas a l'utilisateur final. En sante animale, le circuit passe par la centrale, le distributeur et le/la veterinaire prescripteur.rice : trois interlocuteurs aux interets divergents que le/la directeur.rice des ventes doit tenir ensemble.",
+      "Dirige une force de vente qui ne vend pas à l'utilisateur final. En santé animale, le circuit passe par la centrale, le distributeur et le/la vétérinaire prescripteur.rice : trois interlocuteurs aux intérêts divergents que le/la directeur.rice des ventes doit tenir ensemble.",
     skills: [
       "Management d'une force de vente terrain",
-      "Negociation centrales et distributeurs",
-      "Marketing de prescription veterinaire",
+      "Négociation centrales et distributeurs",
+      "Marketing de prescription vétérinaire",
       "Sectorisation et pilotage d'objectifs",
-      "Lecture des donnees de sell-out"
+      "Lecture des données de sell-out"
     ],
     successFactors: [
       "Obtenir du sell-out reel, pas seulement du sell-in qui gonfle les stocks du distributeur.",
-      "Faire monter en competence des delegue.e.s issu.e.s du terrain sur la lecture chiffree de leur secteur.",
-      "Garder la credibilite scientifique dans la relation avec les veterinaires."
+      "Faire monter en competence des délégué.e.s issu.e.s du terrain sur la lecture chiffrée de leur secteur.",
+      "Garder la crédibilité scientifique dans la relation avec les vétérinaires."
     ],
     path: [
-      "Delegue.e commercial.e sante animale",
+      "Délégué.e commercial.e santé animale",
       "Responsable regional.e des ventes",
-      "Directeur.rice des ventes sante animale"
+      "Directeur.rice des ventes santé animale"
     ],
     missions: [
-      "Construire le plan commercial par espece et par canal, de la centrale au cabinet veterinaire.",
-      "Manager les responsables regionaux et la force de vente terrain, en general 10 a 40 personnes.",
-      "Negocier les accords annuels avec les centrales d'achat et les groupements.",
+      "Construire le plan commercial par espèce et par canal, de la centrale au cabinet vétérinaire.",
+      "Manager les responsables régionaux et la force de vente terrain, en general 10 à 40 personnes.",
+      "Négocier les accords annuels avec les centrales d'achat et les groupements.",
       "Piloter le sell-out chez les distributeurs, et pas uniquement le sell-in.",
-      "Articuler la strategie de prescription avec les affaires medicales et le marketing."
+      "Articuler la stratégie de prescription avec les affaires médicales et le marketing."
     ],
     studies: [
-      "Ecole de commerce",
-      "Doctorat veterinaire complete d'une formation commerciale",
+      "École de commerce",
+      "Doctorat vétérinaire complete d'une formation commerciale",
       "Master agroalimentaire"
     ],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "Institut Agro Montpellier", "Audencia"],
     relatedIndustries: [
       "Medical Vet",
       "Vet pharma",
-      "Vaccins veterinaires",
+      "Vaccins vétérinaires",
       "Animal biotech"
     ],
     sources: [
@@ -7616,23 +7616,23 @@ const differentiatedAnimalHealthRoles: JobRole[] = [
     publishDate: "2026-09-14",
     salary: "Base 71kEUR - 143kEUR + 15kEUR - 84kEUR de variable / complement",
     salarySource:
-      "Repere indicatif repris de la fiche Directeur EMEA generee sur ce site. A calibrer selon le nombre de marches pilotes et la part de la zone dans le chiffre d'affaires.",
+      "Repère indicatif repris de la fiche Directeur EMEA générée sur ce site. À calibrer selon le nombre de marchés pilotes et la part de la zone dans le chiffre d'affaires.",
     sector: "Petfood",
     category: "Direction internationale",
     shortageLevel: "Elevee",
     summary:
-      "Pilote une zone Europe, Moyen-Orient et Afrique sur un marche ou les circuits de distribution changent completement d'un pays a l'autre : specialiste et vet channel au nord, GMS au sud, e-commerce en croissance partout.",
+      "Pilote une zone Europe, Moyen-Orient et Afrique sur un marché ou les circuits de distribution changent complètement d'un pays à l'autre : spécialiste et vet channel au nord, GMS au sud, e-commerce en croissance partout.",
     skills: [
       "Pilotage multi-pays",
-      "Distribution specialisee et GMS",
-      "Reglementation feed europeenne",
+      "Distribution spécialisée et GMS",
+      "Réglementation feed européenne",
       "Gestion de distributeurs exclusifs",
       "Pricing et positionnement premium"
     ],
     successFactors: [
-      "Adapter le mix par pays sans fragmenter la marque au point de perdre les economies d'echelle.",
-      "Choisir entre filiale et distributeur exclusif marche par marche, et savoir revenir sur ce choix.",
-      "Tenir le positionnement premium face a la pression promotionnelle de la GMS."
+      "Adapter le mix par pays sans fragmenter la marque au point de perdre les economies d'échelle.",
+      "Choisir entre filiale et distributeur exclusif marché par marché, et savoir revenir sur ce choix.",
+      "Tenir le positionnement premium face à la pression promotionnelle de la GMS."
     ],
     path: [
       "Country manager petfood",
@@ -7640,16 +7640,16 @@ const differentiatedAnimalHealthRoles: JobRole[] = [
       "Directeur.rice EMEA petfood"
     ],
     missions: [
-      "Definir la strategie de couverture par marche : filiale, distributeur exclusif ou vente directe.",
-      "Piloter le compte de resultat de la zone et arbitrer les investissements marketing entre pays.",
-      "Adapter la gamme aux specificites reglementaires et culturelles de chaque marche.",
-      "Structurer le canal veterinaire la ou il porte la prescription des gammes therapeutiques.",
-      "Suivre la conformite des allegations produit, dont les regles varient d'un pays a l'autre."
+      "Définir la stratégie de couverture par marché : filiale, distributeur exclusif ou vente directe.",
+      "Piloter le compte de résultat de la zone et arbitrer les investissements marketing entre pays.",
+      "Adapter la gamme aux spécificités réglementaires et culturelles de chaque marché.",
+      "Structurer le canal vétérinaire la ou il porte la prescription des gammes thérapeutiques.",
+      "Suivre la conformité des allegations produit, dont les règles varient d'un pays à l'autre."
     ],
     studies: [
-      "Ecole de commerce",
+      "École de commerce",
       "Master agroalimentaire",
-      "Ingenieur.e agro complete d'une formation gestion"
+      "Ingénieur.e agro complete d'une formation gestion"
     ],
     schools: [
       "Institut Agro Montpellier",
@@ -7673,23 +7673,23 @@ const differentiatedAnimalHealthRoles: JobRole[] = [
     publishDate: "2026-09-14",
     salary: "Base 40kEUR - 65kEUR + 5kEUR - 12kEUR de variable / complement",
     salarySource:
-      "Repere indicatif repris de la fiche Export Manager EMEA generee sur ce site. A calibrer selon le nombre de marches ouverts et la part variable negociee.",
+      "Repère indicatif repris de la fiche Export Manager EMEA générée sur ce site. À calibrer selon le nombre de marchés ouverts et la part variable négociée.",
     sector: "Petfood",
-    category: "Developpement international",
+    category: "Développement international",
     shortageLevel: "Elevee",
     summary:
-      "Ouvre et developpe des marches petfood a l'export. La difficulte n'est pas commerciale mais reglementaire : chaque pays impose ses propres regles d'homologation feed, d'etiquetage et d'allegations, et un dossier bloque suffit a geler une annee de developpement.",
+      "Ouvre et développe des marchés petfood à l'export. La difficulté n'est pas commerciale mais réglementaire : chaque pays impose ses propres règles d'homologation feed, d'étiquetage et d'allegations, et un dossier bloque suffit à geler une année de développement.",
     skills: [
       "Prospection et selection de distributeurs",
-      "Homologation feed a l'export",
-      "Etiquetage et allegations produit",
-      "Negociation d'accords de distribution",
+      "Homologation feed à l'export",
+      "Étiquetage et allegations produit",
+      "Négociation d'accords de distribution",
       "Anglais professionnel et une seconde langue"
     ],
     successFactors: [
-      "Verifier la faisabilite reglementaire avant d'engager la negociation commerciale, pas apres.",
-      "Choisir des distributeurs pour leur acces au canal specialise, pas pour leur promesse de volume.",
-      "Accepter des cycles d'ouverture de marche longs sans relacher le suivi."
+      "Verifier la faisabilité réglementaire avant d'engager la négociation commerciale, pas après.",
+      "Choisir des distributeurs pour leur accès au canal spécialisé, pas pour leur promesse de volume.",
+      "Accepter des cycles d'ouverture de marché longs sans relâcher le suivi."
     ],
     path: [
       "Area manager export",
@@ -7697,15 +7697,15 @@ const differentiatedAnimalHealthRoles: JobRole[] = [
       "Directeur.rice export"
     ],
     missions: [
-      "Identifier et qualifier des distributeurs par marche, sur leur acces reel au canal specialise ou veterinaire.",
-      "Piloter les dossiers d'homologation feed et d'enregistrement produit avec les affaires reglementaires.",
-      "Adapter etiquetage et allegations aux exigences locales, qui different sensiblement de la reglementation europeenne.",
-      "Negocier les accords de distribution : exclusivite, objectifs, investissement marketing partage.",
-      "Accompagner le lancement sur le terrain, formation des equipes du distributeur comprise."
+      "Identifier et qualifier des distributeurs par marché, sur leur accès reel au canal spécialisé ou vétérinaire.",
+      "Piloter les dossiers d'homologation feed et d'enregistrement produit avec les affaires réglementaires.",
+      "Adapter étiquetage et allegations aux exigences locales, qui different sensiblement de la réglementation européenne.",
+      "Négocier les accords de distribution : exclusivité, objectifs, investissement marketing partage.",
+      "Accompagner le lancement sur le terrain, formation des équipes du distributeur comprise."
     ],
     studies: [
       "Master commerce international",
-      "Ecole de commerce specialisation export",
+      "École de commerce spécialisation export",
       "Master agroalimentaire"
     ],
     schools: [
@@ -7723,47 +7723,47 @@ const differentiatedAnimalHealthRoles: JobRole[] = [
   },
   {
     slug: "medical-vet-application-engineer",
-    title: "Ingenieur d'Application Sante Animale",
+    title: "Ingénieur d'Application Santé Animale",
     seoTitle: "Ingénieur d'application santé animale : salaire, missions",
     seoDescription:
       "Fiche métier ingénieur.e d'application santé animale : mise en service d'analyseurs en clinique, formation des équipes, support technique. Salaire et parcours.",
     publishDate: "2026-09-14",
     salary: "45kEUR - 70kEUR + variable",
     salarySource:
-      "Repere indicatif repris de la fiche Ingenieur d'application generee sur ce site. A calibrer selon la taille du parc installe et l'etendue de la zone.",
+      "Repère indicatif repris de la fiche Ingénieur d'application générée sur ce site. À calibrer selon la taille du parc installe et l'étendue de la zone.",
     sector: "Medical Vet",
     category: "Customer success / support technique",
     shortageLevel: "Tres elevee",
     summary:
-      "Installe, parametre et fait adopter les automates de diagnostic dans les cliniques veterinaires. Le poste se joue autant sur la technique que sur la pedagogie : l'interlocuteur.rice est un.e veterinaire ou une ASV en pleine journee de consultation, pas un.e technicien.ne de laboratoire.",
+      "Installe, paramètre et fait adopter les automates de diagnostic dans les cliniques vétérinaires. Le poste se joue autant sur la technique que sur la pédagogie : l'interlocuteur.rice est un.e vétérinaire ou une ASV en pleine journée de consultation, pas un.e technicien.ne de laboratoire.",
     skills: [
-      "Mise en service d'analyseurs de biologie veterinaire",
-      "Formation d'equipes en clinique",
-      "Depannage de premier niveau",
-      "Controle qualite et calibration",
-      "Pedagogie en environnement de soin"
+      "Mise en service d'analyseurs de biologie vétérinaire",
+      "Formation d'équipes en clinique",
+      "Dépannage de premier niveau",
+      "Contrôle qualité et calibration",
+      "Pédagogie en environnement de soin"
     ],
     successFactors: [
-      "Former en trente minutes entre deux consultations, sans jamais bloquer l'activite de la clinique.",
-      "Faire adopter le controle qualite quotidien a des equipes qui n'ont pas de culture laboratoire.",
+      "Former en trente minutes entre deux consultations, sans jamais bloquer l'activité de la clinique.",
+      "Faire adopter le contrôle qualité quotidien à des équipes qui n'ont pas de culture laboratoire.",
       "Faire remonter au marketing produit ce que le terrain n'utilise jamais."
     ],
     path: [
       "Technicien.ne support",
-      "Ingenieur.e d'application sante animale",
+      "Ingénieur.e d'application santé animale",
       "Field application manager"
     ],
     missions: [
-      "Installer et parametrer les analyseurs sur site, en clinique et en laboratoire veterinaire.",
-      "Former les veterinaires et les auxiliaires specialise.e.s a l'usage quotidien et a l'interpretation des resultats.",
+      "Installer et paramétrer les analyseurs sur site, en clinique et en laboratoire vétérinaire.",
+      "Former les vétérinaires et les auxiliaires spécialisé.e.s à l'usage quotidien et à l'interpretation des résultats.",
       "Assurer le support technique de premier niveau et le suivi des interventions correctives.",
-      "Mettre en place le controle qualite et suivre la derive des calibrations sur le parc installe.",
-      "Appuyer l'equipe commerciale en demonstration et remonter les usages reels au marketing produit."
+      "Mettre en place le contrôle qualité et suivre la derive des calibrations sur le parc installe.",
+      "Appuyer l'équipe commerciale en demonstration et remonter les usages reels au marketing produit."
     ],
     studies: [
-      "BTS analyses de biologie medicale",
+      "BTS analyses de biologie médicale",
       "Licence professionnelle biotechnologies",
-      "Ecole d'ingenieur.e biomedical"
+      "École d'ingénieur.e biomedical"
     ],
     schools: ["Oniris", "VetAgro Sup", "ENVT", "EBI Cergy", "Institut Agro Rennes-Angers"],
     relatedIndustries: [
