@@ -80,7 +80,7 @@ export const lifeSciencesContent: DirectionCSector = {
   metricsEyebrow: "Résultats observés",
   metrics: [
     { value: `${proof.firstShortlistDays} j ouvrés`, label: "1re shortlist qualifiée" },
-    { value: "15j → 1M", label: "De l'intake à la signature (selon projet)" },
+    { value: "60 j", label: "De l'intake à la signature" },
     { value: `${proof.retention5y}%`, label: "Rétention à 5 ans" },
     { value: "100+", label: "Placements cadres" }
   ],
@@ -124,7 +124,7 @@ export const lifeSciencesContent: DirectionCSector = {
   ],
 
   methodEyebrow: "Notre méthode",
-  methodTitle: "De l'intake à la signature, en 15 jours à 1 mois selon le projet.",
+  methodTitle: "De l'intake à la signature, en 60 jours.",
   method: [
     { n: 1, title: "Intake stratégique", body: "Cadrage du rôle, contexte, profil-cible et critères éliminatoires. Pas de brief écrit exigé.", time: "Jour 0 · 45 min" },
     { n: 2, title: "Mapping & shortlist", body: "Cartographie du marché, approche directe, qualification. Vous recevez 4 à 6 profils référencés.", time: "Jour 1 → 10" },
@@ -168,7 +168,7 @@ export const lifeSciencesContent: DirectionCSector = {
       eyebrow: "Voie B · 02",
       title: "Vos process RH ne suivent plus votre croissance",
       body: "Nos agents IA Life Sciences automatisent reporting investisseurs, CEO Copilot stratégique, talent intelligence, onboarding & rétention.",
-      statValue: "15 jours à 1 mois selon le projet",
+      statValue: "60 jours",
       statLabel: "intake → signature, en moyenne",
       cta: { label: "Programme Life Sciences", url: "/life-sciences/structuration-ia" },
       secondary: { label: "Structuration RH →", url: "/structuration-rh" },
@@ -198,7 +198,7 @@ export const animalHealthContent: DirectionCSector = {
   metricsEyebrow: "Résultats observés",
   metrics: [
     { value: `${proof.firstShortlistDays} j ouvrés`, label: "1re shortlist qualifiée" },
-    { value: "15j → 1M", label: "De l'intake à la signature (selon projet)" },
+    { value: "60 j", label: "De l'intake à la signature" },
     { value: `${proof.retention5y}%`, label: "Rétention à 5 ans" },
     { value: "100+", label: "Placements cadres" }
   ],
@@ -242,7 +242,7 @@ export const animalHealthContent: DirectionCSector = {
   ],
 
   methodEyebrow: "Notre méthode",
-  methodTitle: "De l'intake à la signature, en 15 jours à 1 mois selon le projet.",
+  methodTitle: "De l'intake à la signature, en 60 jours.",
   method: [
     { n: 1, title: "Intake stratégique", body: "Cadrage du rôle, contexte, profil-cible et critères éliminatoires. Pas de brief écrit exigé.", time: "Jour 0 · 45 min" },
     { n: 2, title: "Mapping & shortlist", body: "Cartographie du marché, approche directe, qualification. Vous recevez 4 à 6 profils référencés.", time: "Jour 1 → 10" },
@@ -286,7 +286,7 @@ export const animalHealthContent: DirectionCSector = {
       eyebrow: "Voie B · 02",
       title: "Vos process RH ne suivent plus votre croissance",
       body: "Nos agents IA Animal Health automatisent reporting dirigeant, CFO Copilot, M&A pipeline vétérinaire, lead catcher 24/7, sales closer vétérinaire.",
-      statValue: "15 jours à 1 mois selon le projet",
+      statValue: "60 jours",
       statLabel: "intake → signature, en moyenne",
       cta: { label: "Programme Animal Health", url: "/animal-health/structuration-ia" },
       secondary: { label: "Structuration RH →", url: "/structuration-rh" },

@@ -133,7 +133,7 @@ export type SectorLandingPage = {
 
 const sharedMetrics: SectorLandingMetric[] = [
   { value: `${proof.firstShortlistDays} j ouvrés`, label: "1re shortlist qualifiée" },
-  { value: "15j → 1M", label: "De l’intake à la signature (selon projet)" },
+  { value: "60 j", label: "De l’intake à la signature" },
   { value: `${proof.retention5y}%`, label: "Rétention à 5 ans" },
   { value: "100+", label: "Placements / mandats" }
 ];
