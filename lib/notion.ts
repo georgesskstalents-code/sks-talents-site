@@ -93,6 +93,8 @@ export type NotionSiteContentEntry = {
   seoTitle: string;
   metaDescription: string;
   salaryRange: string;
+  /** Source verifiable de la fourchette (offres, etude, date). */
+  salarySource: string;
   studies: string;
   schools: string;
   industries: string;
@@ -659,6 +661,7 @@ function mapPageToSiteContentEntry(page: NotionPage): NotionSiteContentEntry {
     seoTitle: extractRichText(page, "SEO Title"),
     metaDescription: extractRichText(page, "Meta Description"),
     salaryRange: extractRichText(page, "Salary Range"),
+    salarySource: extractRichText(page, "Salary Source"),
     studies: extractRichText(page, "Studies"),
     schools: extractRichText(page, "Schools"),
     industries: extractRichText(page, "Industries"),
