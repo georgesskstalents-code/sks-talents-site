@@ -153,7 +153,28 @@ function getHeaders() {
   };
 }
 
-async function notionRequest<T>(
+function isRetryableNotionError(error: unknown): boolean {
+  if (error instanceof Error) {
+    if (error.name === "AbortError" || error.message.includes("timeout")) return true;
+    // Erreur reseau (fetch rejette avant d'obtenir une reponse) : TypeError en runtime Node/Edge.
+    if (error.name === "TypeError") return true;
+    const status = error.message.match(/Notion API error (\d+)/)?.[1];
+    if (status) {
+      const code = Number(status);
+      return code === 429 || code >= 500;
+    }
+  }
+  return false;
+}
+
+/**
+ * Un seul essai echoue parfois sans que la page Notion n'ait disparu : un
+ * timeout de 2.5s sous une rafale de crawl (sitemap + sentinelle) suffit a
+ * faire passer une fiche publiee pour "introuvable" et a declencher un faux
+ * 404/308 sur /job-roles/[slug]. On retente donc les lectures idempotentes
+ * (GET, requetes /query) avant d'abandonner.
+ */
+async function notionRequestOnce<T>(
   path: string,
   init?: RequestInit,
   timeoutMs = 10000,
@@ -191,6 +212,30 @@ async function notionRequest<T>(
   }
 
   return (await response.json()) as T;
+}
+
+async function notionRequest<T>(
+  path: string,
+  init?: RequestInit,
+  timeoutMs = 10000,
+  fetchOptions?: NotionFetchOptions,
+  retries = 0
+): Promise<T> {
+  let lastError: unknown;
+
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      return await notionRequestOnce<T>(path, init, timeoutMs, fetchOptions);
+    } catch (error) {
+      lastError = error;
+      if (attempt === retries || !isRetryableNotionError(error)) {
+        throw error;
+      }
+      await new Promise((resolve) => setTimeout(resolve, 300 * (attempt + 1)));
+    }
+  }
+
+  throw lastError;
 }
 
 async function getDatabaseSchema(databaseId: string) {
@@ -305,7 +350,9 @@ async function findPageBySlug(databaseId: string, slug: string, timeoutMs = 1000
         page_size: 1
       })
     },
-    timeoutMs
+    timeoutMs,
+    undefined,
+    2
   );
 
   return payload.results.find((entry) => extractSlug(entry) === slug) ?? null;
@@ -747,7 +794,8 @@ export async function getNotionSiteContentList(
         })
       },
       fetchOptions?.timeoutMs ?? NOTION_READ_TIMEOUT_MS,
-      fetchOptions
+      fetchOptions,
+      2
     );
 
     return payload.results
