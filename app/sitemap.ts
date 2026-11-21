@@ -16,6 +16,13 @@ import {
   lifeSciencesHub
 } from "@/data/sectors";
 
+// Les fiches metiers Notion (notionJobRoleRoutes) changent de statut ou de
+// slug cote client sans deploiement : sans ce flag le sitemap restait figé
+// au dernier build et continuait d'annoncer des URLs depubliees ou renommees
+// (meme regime que sitemap-images.xml et sitemap-videos.xml).
+export const dynamic = "force-dynamic";
+export const revalidate = 3600;
+
 const baseUrl = "https://www.skstalents.fr";
 
 /**
